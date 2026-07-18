@@ -6,10 +6,28 @@
 !README.md
 !requirements.txt
 
-# Inference implementation.
-!inference/
-!inference/**
+# Python package.
+!src/
+!src/**
 
-# Evaluation scripts.
-!scripts-judge/
-!scripts-judge/**
+# Command-line entry points and workflow placeholders.
+!scripts/
+scripts/*
+!scripts/evaluate/
+!scripts/evaluate/**
+!scripts/prepare/
+!scripts/prepare/**
+!scripts/inference/
+!scripts/inference/**
+
+# Shareable examples only. Local config and manifest files remain ignored.
+!configs/
+configs/*
+!configs/paths.example.yaml
+!manifests/
+manifests/*
+!manifests/example.yaml
+
+# Generated Python cache must remain excluded inside whitelisted folders.
+**/__pycache__/
+*.pyc

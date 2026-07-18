@@ -1,0 +1,1 @@
+# Shared generator interface placeholder.

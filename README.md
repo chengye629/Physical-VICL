@@ -2,6 +2,21 @@
 
 This repository evaluates whether video-generation models can use a demonstration video as in-context evidence for predicting the physical evolution of a new scene.
 
+## Repository layout
+
+```text
+Physical-VICL/
+├── configs/paths.example.yaml       # shareable path template
+├── manifests/example.yaml           # one inference-item example
+├── src/physical_vicl/inference/     # shared model adapter code
+└── scripts/
+    ├── prepare/                     # build condition-specific manifests
+    ├── inference/                   # Video-As-Prompt and UniVideo entry points
+    └── evaluate/                    # automatic judge entry points
+```
+
+Keep reusable implementation in `src/physical_vicl/` and keep `scripts/` as thin command-line entry points. Real datasets, generated videos, local path configs, checkpoints, and full manifests are intentionally excluded from Git.
+
 ## Next step
 
 Run [`physiq_prelim`](https://huggingface.co/datasets/Vincwng/Physical-ICL/tree/main/data/physiq_prelim) with:
@@ -174,8 +189,8 @@ Reason first, then score. Output a JSON object with two keys: `reasoning` (strin
 Existing judge entry points are:
 
 ```bash
-python scripts-judge/run_physicl_videoscore2_by_type.py --help
-python scripts-judge/run_physicl_videophy2_by_type.py --help
+python scripts/evaluate/run_videoscore2.py --help
+python scripts/evaluate/run_videophy2.py --help
 ```
 
 They expect an older type-grouped layout and do not currently discover `outputs/generations/`; update their collectors or add a conversion step first.
