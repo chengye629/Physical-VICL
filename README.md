@@ -8,10 +8,11 @@ This repository evaluates whether video-generation models can use a demonstratio
 Physical-VICL/
 ├── configs/paths.example.yaml       # shareable path template
 ├── manifests/example.yaml           # one inference-item example
-├── src/physical_vicl/inference/     # shared model adapter code
+├── docs/video_icl_models.md         # VAP/VACE/VINO/UniVideo setup and status
+├── src/physical_vicl/               # manifest and shared adapter helpers
 └── scripts/
     ├── prepare/                     # build condition-specific manifests
-    ├── inference/                   # Video-As-Prompt and UniVideo entry points
+    ├── inference/                   # VAP, VACE, VINO, and UniVideo entry points
     └── evaluate/                    # automatic judge entry points
 ```
 
@@ -23,6 +24,12 @@ Run [`physiq_prelim`](https://huggingface.co/datasets/Vincwng/Physical-ICL/tree/
 
 - [Video-As-Prompt](https://github.com/bytedance/Video-As-Prompt)
 - [UniVideo](https://github.com/KlingAIResearch/UniVideo), using its in-context video-generation path
+- [VINO](https://github.com/SOTAMak1r/VINO-code), using its native video-conditioned path
+- [VACE](https://github.com/ali-vilab/VACE), using its motion/control composition path
+
+The precise conditioning route and current validation status differ by model. See
+[`docs/video_icl_models.md`](docs/video_icl_models.md); only VAP is currently marked as
+locally end-to-end validated.
 
 For every query, give the model one video from that task's `demos/` directory, the query `init_frame.png`, and the prompt paired with that demo condition. Generate a continuation of the **query image**, not of the demo. The initial benchmark is inference-only; no training or fine-tuning is needed.
 
