@@ -17,7 +17,30 @@ Physical-VICL/
 
 Keep reusable implementation in `src/physical_vicl/` and keep `scripts/` as thin command-line entry points. Real datasets, generated videos, local path configs, checkpoints, and full manifests are intentionally excluded from Git.
 
-## Next step
+## Status update — 2026-08-03
+
+No-demo **Wan2.2-I2V-A14B 720p** baseline generations have been uploaded to the [Physical-ICL Hugging Face dataset](https://huggingface.co/datasets/Vincwng/Physical-ICL/tree/main/data) for three benchmarks:
+
+| Benchmark | Cases | Baseline path |
+| --- | ---: | --- |
+| MME-CoF Pro Physical | 56 | `data/mme_cof_pro_physical/generated_data/wan22_i2v_a14b/` |
+| Physics-IQ I2V 720p | 66 | `data/physiq_i2v720/generated_data/wan22_i2v_a14b/` |
+| VBVR Physics | 60 | `data/vbvr_physics/generated_data/wan22_i2v_a14b/` |
+
+Each case follows this layout:
+
+```text
+<benchmark>/generated_data/wan22_i2v_a14b/
+└── task_xxxx/episode_0001/1/
+    ├── task_xxxx_episode_0001.mp4
+    └── prompt/
+        ├── init_frame.png
+        └── prompt.txt
+```
+
+These videos are the current no-demo reference point. The immediate next step is to judge all three baseline sets with one fixed judge model, frame-sampling policy, prompt version, and decoding configuration before comparing them with demo-conditioned generations.
+
+## Demo-conditioned generation
 
 Run [`physiq_prelim`](https://huggingface.co/datasets/Vincwng/Physical-ICL/tree/main/data/physiq_prelim) with:
 
@@ -157,34 +180,57 @@ delta(condition) = score(query, condition) - score(query, no_demo)
 
 Evaluate physical plausibility, physical-outcome correctness, prompt consistency, query-scene preservation, temporal/visual quality, and unwanted following of irrelevant, opposite, or bad demos. Use `gt_path` only for evaluation. Match the query `duration` where supported by both models.
 
-For the main physics judge, uniformly sample each generated video at **4 FPS** and pass the frames in temporal order to **Qwen3-8B-VL-Instruct or a comparable vision-language model**. Also provide the exact generation prompt / task instruction used for that output: it gives the judge the intended event and relevant physical context. Do not provide the demonstration video or ground-truth query video to the judge.
+For the main physics judge, uniformly sample each generated video at **4 FPS** and pass the frames in temporal order together with the exact saved `prompt/prompt.txt`.
+
+Use a strong video-capable vision-language model as the judge. Prefer a model with reliable temporal understanding, physical reasoning, and structured-output instruction following. Use the same judge checkpoint for every benchmark and experimental condition; do not mix judge models within one comparison table.
+
+Use deterministic decoding (greedy or temperature 0), save the exact judge checkpoint revision and prompt version, and retry malformed JSON without changing the video score criteria. The judge receives the generation prompt because it defines the intended event. Do not provide the demonstration video or ground-truth query video.
 
 Use this general-purpose judge prompt:
 
 ```text
-You are a strict, calibrated evaluator of the PHYSICAL REALISM of AI-generated videos.
+You are a strict, calibrated evaluator of the PHYSICAL REALISM and EVENT REALIZATION of AI-generated videos.
 
-You are given the generation prompt / task instruction and uniformly sampled frames from one generated video in temporal order. Use the prompt to understand the intended scene, event, and physical interaction. Judge whether the visible video realizes that event with physically realistic behavior. Focus the score on physical realism rather than visual style or general text-video similarity. Be conservative: reserve 5 for clearly flawless and temporally consistent physics, and 1 for severe or pervasive physical violations.
+You are given the generation prompt / task instruction and uniformly sampled frames from one generated video in temporal order. First identify the intended physical event from the prompt. Then judge whether the event visibly occurs, progresses in the correct causal order, and has a physically plausible outcome.
+
+Score the observable video, not the likely real-world outcome. Do not give credit merely because the initial scene looks realistic or remains visually stable. If the required event never occurs, is replaced by a different event, or cannot be verified in the sampled frames, this must substantially lower the score. Do not penalize visual style, camera aesthetics, or minor appearance errors unless they obscure the event or create a physical inconsistency.
 
 Generation prompt / task instruction:
 {generation_prompt}
 
-Task: Judge the PHYSICAL REALISM of this AI-generated video with respect to the intended event described above.
+Task: Judge how completely and physically realistically the generated video realizes the intended event.
 
-Criteria (address each criterion and note any other physical issue):
+Criteria (address each criterion with concrete temporal evidence and note any other physical issue):
 
-1. Entity and material consistency: objects, bodies, and materials remain structurally coherent; they do not inexplicably melt, fuse, split, stretch, or deform.
+1. Event realization and completeness: the prompted physical event visibly starts, develops, and reaches the expected type of outcome. Required objects participate in the event, and lack of motion or an incomplete event is not treated as success.
 
-2. Scene and object continuity: the environment and objects remain temporally stable, without unexplained flicker, teleportation, morphing, duplication, disappearance, or identity changes.
+2. Entity and material consistency: objects, bodies, and materials remain structurally coherent; they do not inexplicably melt, fuse, split, stretch, or deform.
 
-3. Interaction and contact realism: collisions, support, grasping, containment, cutting, tearing, pouring, and other contacts behave plausibly. Objects do not interpenetrate, pass through barriers, float without support, or react before contact.
+3. Scene and object continuity: the environment and objects remain temporally stable, without unexplained flicker, teleportation, morphing, duplication, disappearance, or identity changes.
 
-4. Motion and physical-law consistency: motion follows applicable gravity, inertia, momentum, friction, rigidity/deformation, and fluid behavior. Causes precede effects, trajectories are continuous, and outcomes are physically plausible.
+4. Interaction and causal realism: collisions, support, grasping, containment, cutting, tearing, pouring, and other contacts behave plausibly. Objects do not interpenetrate, pass through barriers, float without support, react before contact, or produce effects without a visible cause.
 
-Score (integer 1-5): 1 = gross or pervasive violations; 2 = major violations; 3 = noticeable local inconsistencies; 4 = minor issues only; 5 = no visible violation.
+5. Motion and physical-law consistency: motion follows applicable gravity, inertia, momentum, friction, rigidity/deformation, and fluid behavior. Trajectories are continuous and the final outcome is plausible for the visible materials and interactions.
 
-Reason first, then score. Output a JSON object with two keys: `reasoning` (string) and `physical_adherence` (integer 1-5).
+Score (integer 1-5):
+1 = the intended event is absent/unrecognizable, or the video contains gross and pervasive physical violations;
+2 = the event substantially fails or remains incomplete, or major violations break the physical outcome;
+3 = the event is recognizable, but noticeable local inconsistencies or an uncertain/incomplete outcome remain;
+4 = the event is complete and physically plausible overall, with only minor issues;
+5 = the event is clearly complete, causally correct, temporally coherent, and has no visible physical violation.
+
+Reason first, explicitly stating whether the intended event occurred and completed. Then score. Output JSON only with two keys: `reasoning` (string) and `physical_adherence` (integer 1-5).
 ```
+
+### Baseline judging checklist
+
+1. Download or mount the three uploaded `generated_data/wan22_i2v_a14b/` directories.
+2. Verify that 56 MME-CoF, 66 Physics-IQ, and 60 VBVR videos are discoverable.
+3. Read the task instruction from the `prompt/prompt.txt` stored beside each video.
+4. Sample frames uniformly at 4 FPS and preserve their temporal order.
+5. Run the same judge checkpoint and the prompt above for every video.
+6. Save one JSONL record per video with `benchmark`, `task_name`, `video_path`, `prompt_path`, `judge_model`, `judge_revision`, `judge_prompt_version`, `reasoning`, `physical_adherence`, and any parse/error status.
+7. Manually inspect a small stratified sample across scores 1–5 before treating the judge scores as final.
 
 Existing judge entry points are:
 
@@ -193,7 +239,7 @@ python scripts/evaluate/run_videoscore2.py --help
 python scripts/evaluate/run_videophy2.py --help
 ```
 
-They expect an older type-grouped layout and do not currently discover `outputs/generations/`; update their collectors or add a conversion step first.
+These VideoScore2 and VideoPhy2 scripts are auxiliary reference evaluators. The primary prompt-based VLM judge entry point still needs to be implemented under `scripts/evaluate/`. Reuse their item discovery and resume-safe JSONL pattern where useful, but do not substitute their scores for the prompt-based physical-adherence score.
 
 Report model x demo type, model x demo type x prompt mode, physical-category slices, and per-task deltas. Include representative qualitative comparisons for all five demo types.
 
