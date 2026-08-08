@@ -17,6 +17,20 @@ Physical-VICL/
 
 Keep reusable implementation in `src/physical_vicl/` and keep `scripts/` as thin command-line entry points. Real datasets, generated videos, local path configs, checkpoints, and full manifests are intentionally excluded from Git.
 
+## Physics Card annotation and demo retrieval
+
+The self-contained [`physical_icl/`](physical_icl/) module documents and runs the Physics Card v7 / alpha-3 workflow used to construct the current physical demonstration pool:
+
+```text
+video -> Pass A observation -> Pass B physical abstraction
+      -> deterministic normalization/audit
+      -> embedding recall + O/P/I/M matching + confidence filtering + MMR
+```
+
+It includes Qwen3-VL annotation entry points, the frozen ontology, retrieval and mapping builders, split guidance, validation tools, environment templates, and calibration evidence. The corresponding unpacked data artifacts are released under [`data/physics_cards_v7/`](https://huggingface.co/datasets/Vincwng/Physical-ICL/tree/main/data/physics_cards_v7) in the Physical-ICL Hugging Face dataset.
+
+Current frozen artifact counts are 5,000 targets, 4,861 successful Physics Cards, 139 recorded annotation failures, 4,151 retrieval-eligible videos, and 39,260 directed query-demo relations. Copy-risk labeling is still pending, so these relations must not be used for leakage-sensitive evaluation until videos are split by near-duplicate cluster.
+
 ## Status update — 2026-08-03
 
 No-demo **Wan2.2-I2V-A14B 720p** baseline generations have been uploaded to the [Physical-ICL Hugging Face dataset](https://huggingface.co/datasets/Vincwng/Physical-ICL/tree/main/data) for three benchmarks:

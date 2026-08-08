@@ -1,0 +1,1746 @@
+ontology_version: physics_ontology_v7_alpha3
+design:
+  core_dimensions:
+  - object
+  - process
+  - impact
+  - mechanism
+  representation: closed_families_open_subtypes
+  principles:
+  - Object, Process, Impact, and Mechanism remain semantically distinct.
+  - Coarse process family, impact axis, and mechanism family are closed.
+  - Canonical subtype is optional and open-vocabulary text is always preserved.
+  - Static is represented by special/none plus temporal fields, not a process family.
+  - Combustion and explosive release are distinct process families.
+  - Object roles are completed deterministically from action, process, and impact references.
+  - Explicit object relation triples are excluded from the Physics Card because they were unstable.
+  - Camera-only changes are separated from scene physics by deterministic rules.
+object:
+  axes:
+  - name: entity_kind
+    definition: Physical form of an entity; event function belongs to event_roles instead.
+    cardinality: single
+    required: true
+    labels:
+    - label: agent
+      definition: Person, animal, or autonomous robot that can initiate an action.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: rigid_solid
+      definition: Solid object with no visually significant deformation at the video scale.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: deformable_solid
+      definition: Solid object that visibly changes shape continuously.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: articulated_object
+      definition: Object composed of rigid parts connected by joints.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: liquid_body
+      definition: Continuous liquid volume with flow or a free surface.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: gas_or_vapor
+      definition: Continuous gaseous substance or vapor.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: aerosol_or_smoke
+      definition: Visible particles suspended in a gas, including smoke, mist, and spray clouds.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: granular_material
+      definition: Collection of many discrete grains or particles such as sand, powder, or snow.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: surface_or_region
+      definition: Surface or spatial region mainly serving as support, boundary, or interaction area.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: unknown
+      definition: Physical form cannot be determined reliably.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - name: event_roles
+    definition: Functional roles of an entity in the annotated event. Multiple roles are allowed.
+    cardinality: multi
+    required: true
+    labels:
+    - label: actor
+      definition: Entity that visibly performs or initiates an intervention.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: target
+      definition: Entity receiving the main action or undergoing the main state change.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: tool
+      definition: Intermediate object used by an actor to apply an action.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: support
+      definition: Entity or surface that supports another entity or provides an interaction surface.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: container
+      definition: Entity that spatially contains or bounds another object or material.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: medium
+      definition: Material or region through which another entity moves or in which the process occurs.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: source
+      definition: Entity from which material, light, heat, gas, particles, or energy is released.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: product
+      definition: Entity or material newly formed, separated, or emitted by the event.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - name: material_phase
+    definition: Coarse material phase visible or strongly supported by the video.
+    cardinality: single
+    required: false
+    labels:
+    - label: solid
+      definition: Material retains a persistent shape at the observed scale.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: liquid
+      definition: Material flows and conforms to boundaries while maintaining a free surface or volume.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: gas
+      definition: Material is gaseous or vapor-like.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: granular
+      definition: Material consists of many discrete grains.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: mixed
+      definition: Entity contains multiple materially distinct phases that cannot be separated for this event.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: not_applicable
+      definition: Material phase is not meaningful for this entity, such as a spatial region.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: unknown
+      definition: Material phase cannot be determined reliably.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - name: physical_properties
+    definition: Behavioral or optical properties supported by visible evidence; do not infer unsupported properties.
+    cardinality: multi
+    required: false
+    labels:
+    - label: rigid
+      definition: Shows negligible visible deformation under the observed interaction.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: flexible
+      definition: Can bend or fold visibly; recoverability is not implied.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: elastic
+      definition: Visible deformation is substantially recovered after unloading.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: plastically_deformable
+      definition: Visible deformation persists after loading is removed.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: brittle
+      definition: Fractures with little visible plastic deformation.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: viscous
+      definition: Flows slowly or resists shape change under sustained loading.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: adhesive
+      definition: Forms persistent adhesion with another surface.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: transparent
+      definition: Transmits light with clear visibility through the material.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: translucent
+      definition: Transmits light but obscures detailed visibility.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: reflective
+      definition: Produces clear or strong reflected light patterns.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: emissive
+      definition: Acts as a visible source of light or thermal glow.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: combustible
+      definition: Visible evidence shows that the material can burn in this event.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - name: initial_motion_state
+    definition: Motion state before the primary process begins.
+    cardinality: single
+    required: true
+    labels:
+    - label: stationary
+      definition: No discernible object motion before the event.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: translating
+      definition: Object position changes without rotation being dominant.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: rotating
+      definition: Angular motion is dominant.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: oscillating
+      definition: Object repeatedly moves around an equilibrium state.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: falling
+      definition: Object is already moving downward without support.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: flowing
+      definition: Continuous material is already flowing.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: dispersing
+      definition: Gas, aerosol, or particles are already spreading.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: unknown
+      definition: Initial motion cannot be determined.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - name: initial_integrity_state
+    definition: Structural integrity before the primary process begins.
+    cardinality: single
+    required: false
+    labels:
+    - label: intact
+      definition: Object is whole with no visible major fracture.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: deformed
+      definition: Object already has a visible shape deformation.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: cracked
+      definition: Object contains visible cracks but remains largely connected.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: fragmented
+      definition: Object already consists of multiple fragments.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: separated
+      definition: Previously connected parts are visibly separate.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: not_applicable
+      definition: Integrity is not meaningful for this entity.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: unknown
+      definition: Integrity cannot be determined.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+process:
+  action_families:
+  - label: release
+    definition: Actions that remove support or impart free motion.
+    types:
+    - label: release
+      definition: Remove restraint or support without a clearly intentional downward placement.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: drop
+      definition: Release an object so that it begins downward free motion.
+      include_when: []
+      exclude_when: []
+      confusable_with:
+      - release
+      - throw
+    - label: throw
+      definition: Impart an initial velocity and release the object.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: transport
+    definition: Actions that move or reorient an object.
+    types:
+    - label: push
+      definition: Apply force away from the actor.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: pull
+      definition: Apply force toward the actor.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: lift
+      definition: Move an object upward while supporting it.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: lower
+      definition: Move an object downward while maintaining support.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: move
+      definition: Move an object when a more specific transport action is not supported.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: rotate
+      definition: Actively turn an object around an axis.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: loading
+    definition: Actions that apply mechanical loading.
+    types:
+    - label: strike
+      definition: Apply a brief high-rate contact action.
+      include_when: []
+      exclude_when: []
+      confusable_with:
+      - press
+    - label: press
+      definition: Apply sustained predominantly one-directional loading.
+      include_when: []
+      exclude_when: []
+      confusable_with:
+      - squeeze
+    - label: squeeze
+      definition: Apply opposing compressive actions from two sides.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: shape_manipulation
+    definition: Actions intended to change shape.
+    types:
+    - label: bend
+      definition: Apply an action that changes curvature.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: twist
+      definition: Apply relative rotation to different sections.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: stretch
+      definition: Apply tensile action that increases length.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: separation
+    definition: Actions intended to separate material.
+    types:
+    - label: cut
+      definition: Use a sharp edge to separate material.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: pierce
+      definition: Drive a narrow object through a surface.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: tear
+      definition: Pull flexible material apart along a propagating tear.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: shred
+      definition: Repeatedly cut or tear material into many small strips or pieces.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: assembly
+    definition: Actions that establish or remove spatial connections.
+    types:
+    - label: insert
+      definition: Place one entity into another object or opening.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: remove
+      definition: Take an entity out of a container, support, or assembly.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: attach
+      definition: Establish a persistent connection.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: detach
+      definition: Break a persistent connection.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: place
+      definition: Set an entity at a target location or onto a support.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: fluid_handling
+    definition: Actions that manipulate fluids or granular material.
+    types:
+    - label: pour
+      definition: Tilt or position a source to transfer material under gravity.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: stir
+      definition: Move a tool through material to induce mixing or circulation.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: spray
+      definition: Expel material as a dispersed stream or droplets.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: dispense
+      definition: Release a controlled quantity from a source or device.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: immerse
+      definition: Move an object into a liquid or granular medium.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: thermal
+    definition: Actions that add or remove thermal or radiative energy.
+    types:
+    - label: heat
+      definition: Apply a visible or explicit heat source.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: cool
+      definition: Apply a visible or explicit cooling source.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: irradiate
+      definition: Expose an object to visible radiation as an intervention.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: ignition
+    definition: Actions that initiate combustion.
+    types:
+    - label: ignite
+      definition: Apply a flame, spark, or ignition source to begin burning.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: special
+    definition: Fallback action labels.
+    types:
+    - label: none
+      definition: No visible external intervention.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: other
+      definition: A visible intervention exists but is outside the current ontology.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: unknown
+      definition: A visible intervention may exist but cannot be classified reliably.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  primary_families:
+  - label: rigid_motion
+    definition: Macroscopic motion of a largely shape-preserving object.
+    types:
+    - label: translation
+      definition: Object position changes while rotation is not dominant.
+      include_when: []
+      exclude_when:
+      - Only camera motion changes the view.
+      confusable_with:
+      - camera_only
+    - label: rotation
+      definition: Angular motion around an axis is the dominant process.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: rolling
+      definition: Translation and rotation are coupled by contact with a surface.
+      include_when: []
+      exclude_when: []
+      confusable_with:
+      - sliding
+    - label: sliding
+      definition: Object translates along a support while contact points slip.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: free_fall
+      definition: Unsupported downward motion dominated by gravity.
+      include_when: []
+      exclude_when:
+      - The object is actively lowered or supported.
+      confusable_with:
+      - translation
+    - label: projectile_motion
+      definition: Free motion after release with a visible curved or ballistic trajectory.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: oscillation
+      definition: Repeated motion around an equilibrium configuration.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: toppling
+      definition: Loss of stability followed by rotation around a support edge or base.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: bouncing
+      definition: Repeated or dominant contact-and-rebound motion of an object, such as a dribbled ball.
+      include_when: []
+      exclude_when: []
+      confusable_with:
+      - oscillation
+      - collision
+  - label: contact_loading
+    definition: Mechanical contact and loading between entities.
+    types:
+    - label: collision
+      definition: Previously separated entities undergo brief contact causing a visible response.
+      include_when: []
+      exclude_when: []
+      confusable_with:
+      - sustained_contact
+      - compression_loading
+    - label: sustained_contact
+      definition: Contact persists and is central, without a brief collision dominating.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: compression_loading
+      definition: Predominant loading reduces separation along the load direction.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: tension_loading
+      definition: Predominant loading pulls parts apart along a tensile direction.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: shear_loading
+      definition: Tangential loading drives relative motion between neighboring regions.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: penetration
+      definition: One entity enters another object or material interior.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: deformation
+    definition: Continuous visible change of object geometry.
+    types:
+    - label: compression_deformation
+      definition: Object dimension decreases along a compressive direction.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: bending_deformation
+      definition: Object centerline or surface curvature changes.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: stretching_deformation
+      definition: Object length increases under tension.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: twisting_deformation
+      definition: Different sections undergo relative angular displacement.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: shear_deformation
+      definition: Material layers undergo tangential displacement.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: buckling
+      definition: Compressive instability produces lateral bending or collapse.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: fracture_separation
+    definition: Loss of structural integrity or material separation.
+    types:
+    - label: cracking
+      definition: Visible crack forms while the object remains largely connected.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: breaking
+      definition: Object loses overall integrity and separates into a small number of parts.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: shattering
+      definition: Brittle object rapidly separates into many fragments.
+      include_when: []
+      exclude_when: []
+      confusable_with:
+      - fragmentation
+    - label: fragmentation
+      definition: Object forms multiple fragments without requiring brittle behavior.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: tearing
+      definition: Flexible material separates along a propagating tear.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: shredding
+      definition: Repeated cutting or tearing creates many small strips or pieces.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: cutting_separation
+      definition: A cutting action visibly separates material.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: rupture
+      definition: A membrane, shell, soft enclosure, or pressurized object loses integrity and opens or bursts, often releasing
+        contents.
+      include_when: []
+      exclude_when: []
+      confusable_with:
+      - breaking
+      - fragmentation
+      - explosion
+  - label: fluid_motion
+    definition: Motion or redistribution of a continuous liquid.
+    types:
+    - label: bulk_flow
+      definition: Liquid undergoes sustained macroscopic flow without a more specific dominant mode.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: pouring
+      definition: Liquid transfers from a source under gravity, usually from a container edge.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: dripping
+      definition: Discrete droplets form and detach intermittently.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: jetting
+      definition: Directed, relatively coherent high-speed liquid stream.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: spraying
+      definition: Liquid disperses into many small droplets over an angular region.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: splashing
+      definition: Impact or disturbance ejects liquid outward or upward.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: droplet_motion
+      definition: Motion of distinct droplets is the main process.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: free_surface_motion
+      definition: Waves, ripples, foam, or surface variation without dominant transfer.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: viscous_spreading
+      definition: High-viscosity liquid slowly spreads, sags, or levels.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: mixing
+      definition: Distinct liquid regions or constituents visibly interpenetrate or homogenize.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: gas_particulate_motion
+    definition: Motion, emission, or redistribution of gas, aerosol, or grains.
+    types:
+    - label: gas_flow
+      definition: Macroscopic gas motion without a distinct source plume dominating.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: plume_motion
+      definition: An already formed gas, smoke, or aerosol plume moves or evolves.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: gas_emission
+      definition: Gas, vapor, smoke, or aerosol is visibly produced from a localized source.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: aerosol_dispersion
+      definition: Visible suspended particles spread through a gas.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: granular_flow
+      definition: Granular material flows collectively without a more specific mode.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: granular_pouring
+      definition: Granular material transfers in a gravity-driven stream.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: granular_scattering
+      definition: Particles are ejected or dispersed in multiple directions.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: granular_rearrangement
+      definition: Particles locally rearrange without strong outward scattering.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: deposition
+      definition: Moving gas-borne or granular material settles or accumulates on a surface.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: thermal_transfer
+    definition: Visible process dominated by heating, cooling, or thermal radiation.
+    types:
+    - label: heating
+      definition: Object or material visibly undergoes heating-related change without phase change dominating.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: cooling
+      definition: Object or material visibly undergoes cooling-related change without phase change dominating.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: radiative_heating
+      definition: Radiative energy visibly heats a target or contributes to a thermal, phase, or reaction change.
+      include_when:
+      - a target shows a visible thermal or phase response
+      exclude_when:
+      - sunset or ambient illumination change only
+      - visible light beams without target heating
+      confusable_with:
+      - illumination_change
+      - light_emission
+  - label: phase_transition
+    definition: Change between macroscopic material phases.
+    types:
+    - label: melting
+      definition: Solid becomes liquid.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: solidification
+      definition: Liquid becomes solid, including freezing.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: vaporization
+      definition: Liquid becomes gas or vapor.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: condensation
+      definition: Gas or vapor becomes liquid.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: boiling
+      definition: Vapor bubbles form within a liquid and rise or escape, indicating liquid-to-gas transition.
+      include_when: []
+      exclude_when: []
+      confusable_with:
+      - vaporization
+      - gas_emission
+    - label: crystallization
+      definition: An ordered solid or crystalline structure visibly forms or grows from another phase or solution.
+      include_when: []
+      exclude_when: []
+      confusable_with:
+      - solidification
+      - deposition
+  - label: combustion
+    definition: Ignition and sustained exothermic burning processes.
+    types:
+    - label: ignition
+      definition: Transition from non-burning to burning is the primary event.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: sustained_burning
+      definition: Combustion continues over an observable interval after ignition.
+      include_when:
+      - visible flame or burning front persists
+      exclude_when:
+      - a brief non-combustive pressure burst
+      - light emission without burning
+      confusable_with:
+      - ignition
+      - explosion
+  - label: explosive_release
+    definition: A rapid release of stored energy or pressure that produces abrupt expansion, propulsion, fragmentation, or
+      a blast-like event; combustion is not implied.
+    types:
+    - label: explosion
+      definition: Rapid energy release produces abrupt expansion, debris, shock-like motion, or intense emission.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: optical_interaction
+    definition: Scene-level optical interaction rather than camera focus behavior.
+    types:
+    - label: reflection
+      definition: Light redirects from a surface and produces a visible reflected pattern or image.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: refraction
+      definition: Light changes direction at an interface or through an optical element.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: scattering
+      definition: Light redirects from particles or irregular structures into multiple directions.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: diffraction
+      definition: Wave spreading or interference occurs around apertures or structures.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: absorption
+      definition: Visible attenuation is dominated by material absorption.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: light_emission
+      definition: A scene entity visibly produces light.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: illumination_change
+      definition: Visible illumination, brightness, shadow, or scene color changes without evidence of target heating.
+      include_when:
+      - sunset, shadow motion, changing artificial illumination
+      exclude_when:
+      - radiation visibly heats or transforms a target
+      confusable_with:
+      - light_emission
+      - radiative_heating
+  - label: relation_reconfiguration
+    definition: The main event establishes, removes, or changes spatial relations.
+    types:
+    - label: attachment
+      definition: A persistent connection is established.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: detachment
+      definition: A persistent connection is removed.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: insertion
+      definition: One entity enters a container, opening, or assembly.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: removal
+      definition: One entity exits a container, opening, support, or assembly.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: support_change
+      definition: Support is gained, lost, or transferred.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: containment_transfer
+      definition: Material or object changes which container bounds it.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: assembly
+      definition: Multiple parts are combined into a persistent structure.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: rearrangement
+      definition: Relative arrangement changes without a more specific process dominating.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: special
+    definition: Fallback primary process labels.
+    types:
+    - label: none
+      definition: No scene-level physical process is present, including camera-only videos.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: other
+      definition: A clear physical process exists but is not represented in the current ontology.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: unknown
+      definition: A physical process exists but cannot be classified reliably.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  temporal_axes:
+  - name: temporal_extent
+    definition: How much of the video is occupied by the primary process.
+    cardinality: single
+    required: true
+    labels:
+    - label: static
+      definition: No discernible scene-level physical process.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: brief
+      definition: Primary process is localized to a relatively short interval.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: extended
+      definition: Primary process persists over a substantial portion of the video.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - name: temporal_structure
+    definition: Event organization over time.
+    cardinality: single
+    required: true
+    labels:
+    - label: single
+      definition: One main event or one main process chain.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: repeated
+      definition: The same main process repeats or cycles multiple times.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: multi_stage
+      definition: Two or more qualitatively different important stages occur in sequence.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: not_applicable
+      definition: No scene-level process is present.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - name: change_profile
+    definition: Temporal profile of visible change.
+    cardinality: single
+    required: true
+    labels:
+    - label: none
+      definition: No visible scene-level state change.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: abrupt
+      definition: Major change occurs within a short interval.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: gradual
+      definition: State accumulates or evolves progressively.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: steady
+      definition: Process continues with approximately stable character or rate.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: mixed
+      definition: Distinct stages have different change profiles.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - name: process_scope
+    definition: Whether observed changes belong to scene physics or only to image formation/camera motion.
+    cardinality: single
+    required: true
+    labels:
+    - label: scene_physics
+      definition: Independent scene entities or materials undergo a physical process.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: camera_only
+      definition: Only camera motion, zoom, or focus changes; no scene-level process is visible.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: mixed
+      definition: Both scene physics and camera/image changes are important.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: unclear
+      definition: Scope cannot be determined reliably.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  secondary_process_uses_primary_ontology: true
+  max_actions: 3
+  max_secondary_processes: 3
+  open_subtype_allowed: true
+impact:
+  transition_axes:
+  - label: motion
+    definition: Changes in translational or rotational motion.
+    types:
+    - label: motion_onset
+      definition: Entity changes from stationary to moving.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: motion_arrest
+      definition: Entity changes from moving to stationary.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: speed_increase
+      definition: Entity speed visibly increases.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: speed_decrease
+      definition: Entity speed visibly decreases.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: direction_change
+      definition: Entity motion direction changes.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: rebound
+      definition: After contact, relative motion reverses from approach to separation.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: rotation_onset
+      definition: Entity begins rotating.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: rotation_arrest
+      definition: Entity stops rotating.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: toppling
+      definition: Entity transitions from stable support to falling rotation.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: settling
+      definition: Distributed material or object motion decays into a stable configuration.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: relation
+    definition: Changes in contact, support, attachment, or containment.
+    types:
+    - label: contact_gain
+      definition: A new contact is established.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: contact_loss
+      definition: An existing contact is removed.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: support_gain
+      definition: Entity becomes supported against gravity.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: support_loss
+      definition: Entity loses support.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: attachment_gain
+      definition: A persistent attachment is established.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: attachment_loss
+      definition: A persistent attachment is removed.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: containment_gain
+      definition: Entity becomes contained in a boundary or container.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: containment_loss
+      definition: Entity leaves a containing boundary or container.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: geometry
+    definition: Changes in size or shape without necessarily losing integrity.
+    types:
+    - label: compressed
+      definition: Dimension decreases along a loading direction.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: stretched
+      definition: Length increases along a tensile direction.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: bent
+      definition: Curvature increases or changes.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: twisted
+      definition: Sections rotate relative to one another.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: flattened
+      definition: Geometry becomes substantially flatter.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: expanded
+      definition: Overall occupied size or volume visibly increases.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: contracted
+      definition: Overall occupied size or volume visibly decreases.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: integrity
+    definition: Changes in structural connectedness or damage.
+    types:
+    - label: cracked
+      definition: A crack forms while the object remains largely connected.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: broken
+      definition: Object separates into a small number of parts.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: fragmented
+      definition: Object becomes multiple fragments.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: torn
+      definition: Flexible material separates along a tear.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: shredded
+      definition: Material becomes many small strips or pieces.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: penetrated
+      definition: A new opening or penetration path is formed.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: ruptured
+      definition: A shell, membrane, soft enclosure, or pressurized object opens or bursts and loses containment.
+      include_when: []
+      exclude_when: []
+      confusable_with:
+      - broken
+      - fragmented
+  - label: phase
+    definition: Changes between material phases.
+    types:
+    - label: solid_to_liquid
+      definition: Solid becomes liquid.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: liquid_to_solid
+      definition: Liquid becomes solid.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: liquid_to_gas
+      definition: Liquid becomes gas or vapor.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: gas_to_liquid
+      definition: Gas or vapor becomes liquid.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: crystallized
+      definition: A visibly ordered solid or crystalline structure forms or grows.
+      include_when: []
+      exclude_when: []
+      confusable_with:
+      - liquid_to_solid
+  - label: thermal_reaction
+    definition: Visible thermal or reaction-state changes.
+    types:
+    - label: temperature_increase
+      definition: Visible evidence supports increasing temperature.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: temperature_decrease
+      definition: Visible evidence supports decreasing temperature.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: unburned_to_burning
+      definition: Material begins burning.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: burning_to_extinguished
+      definition: Burning stops.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: material_to_charred
+      definition: Material visibly chars or blackens due to reaction.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: optical_visibility
+    definition: Changes in illumination, color, visibility, or scene optical state.
+    types:
+    - label: illumination_gain
+      definition: Previously unilluminated region becomes illuminated.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: illumination_loss
+      definition: Illumination disappears from a region.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: intensity_increase
+      definition: Visible optical intensity increases.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: intensity_decrease
+      definition: Visible optical intensity decreases.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: color_change
+      definition: Object or scene color visibly changes.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: visibility_increase
+      definition: An entity or region becomes more visible.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: visibility_decrease
+      definition: An entity or region becomes more obscured.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: emission_transport
+    definition: Onset or redistribution of emitted or transported matter or light.
+    types:
+    - label: light_emission_onset
+      definition: Visible light emission begins.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: smoke_emission_onset
+      definition: Smoke emission begins.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: spark_emission_onset
+      definition: Spark emission begins.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: particle_emission_onset
+      definition: Solid or granular particle emission begins.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: liquid_emission_onset
+      definition: Liquid emission begins.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: material_transfer
+      definition: Material moves from one container, region, or entity to another.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: mixing
+      definition: Previously distinct materials visibly mix.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: dispersion
+      definition: Material spreads over a larger region.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: deposition
+      definition: Moving material settles or adheres to a surface.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: accumulation
+      definition: Material amount visibly increases in a region.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: free_surface_change
+      definition: Liquid free-surface geometry changes.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  response_description_is_free_text: true
+  open_subtype_allowed: true
+mechanism:
+  families:
+  - label: mechanical_forcing
+    definition: Mechanical drivers connecting process and impact.
+    types:
+    - label: gravity
+      definition: Gravity drives unsupported or buoyancy-relative motion.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: contact_impulse
+      definition: Brief contact transfers momentum and changes velocity or direction.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: sustained_pressure
+      definition: Sustained distributed contact force drives deformation or flow.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: tension
+      definition: Tensile force pulls material or parts apart.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: shear
+      definition: Tangential force drives relative displacement between neighboring regions.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: friction
+      definition: Contact resistance opposes relative tangential motion.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: torque
+      definition: A moment of force drives or changes angular motion.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: buoyancy
+      definition: Fluid pressure produces an upward resultant force.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: drag
+      definition: Fluid resistance opposes relative motion.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: pressure_gradient
+      definition: Spatial pressure differences drive fluid or gas motion.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: airflow_forcing
+      definition: Moving air exerts distributed aerodynamic force that drives or perturbs visible motion.
+      include_when: []
+      exclude_when: []
+      confusable_with:
+      - drag
+      - pressure_gradient
+  - label: material_response
+    definition: Material properties that determine response.
+    types:
+    - label: elasticity
+      definition: Stored deformation energy supports recovery or rebound.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: plasticity
+      definition: Material yields and retains permanent deformation.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: brittleness
+      definition: Material fractures with little plastic deformation.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: viscosity
+      definition: Internal resistance controls fluid deformation and flow rate.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: surface_tension
+      definition: Interface energy controls droplets, bubbles, and free surfaces.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: adhesion
+      definition: Interfacial attraction produces persistent attachment.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: energy_reaction
+    definition: Energy transfer or release mechanisms.
+    types:
+    - label: heat_transfer
+      definition: Thermal energy transfer drives temperature or phase change.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: radiative_transfer
+      definition: Radiation transfers energy to or from an object.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: chemical_energy_release
+      definition: Chemical reaction releases energy, as in combustion or explosion.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: mass_transport
+      definition: Material transport carries species or mass between regions.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: diffusion
+      definition: Random molecular or particulate transport reduces concentration gradients.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+  - label: optical_electromagnetic
+    definition: Optical or electromagnetic explanatory mechanisms.
+    types:
+    - label: surface_reflection
+      definition: Light reflects from a surface according to its orientation and optical properties.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: refraction_at_interface
+      definition: Light direction changes across an interface.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: volumetric_scattering
+      definition: Particles or inhomogeneities scatter light through a volume.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: diffraction
+      definition: Wave propagation around structures produces spreading or interference.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: absorption
+      definition: Material absorbs incident light or radiation.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: light_emission
+      definition: Material or a device produces visible light.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: magnetic_attraction
+      definition: Magnetic interaction produces attraction or alignment.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: electrostatic_interaction
+      definition: Electric charge interaction produces attraction, repulsion, or alignment.
+      include_when: []
+      exclude_when: []
+      confusable_with: []
+    - label: light_transmission
+      definition: Light passes through a material or opening without reflection, refraction, or scattering being the sole
+        dominant explanation.
+      include_when: []
+      exclude_when: []
+      confusable_with:
+      - refraction_at_interface
+      - volumetric_scattering
+      - absorption
+  basis_values: []
+  max_mechanisms: 4
+  open_subtype_allowed: true
+  basis_deprecated: true
+boundary_examples:
+- scenario: A soda can bursts and sprays liquid without visible burning.
+  primary_process: explosive_release/explosion
+  impact:
+  - integrity/ruptured
+  - emission_transport/liquid_emission_onset
+  mechanism:
+  - mechanical_forcing/pressure_gradient
+- scenario: Dry grass burns and the flame front continues to propagate.
+  primary_process: combustion/sustained_burning
+  impact:
+  - thermal_reaction/unburned_to_burning
+  - emission_transport/smoke_emission_onset
+  mechanism:
+  - energy_reaction/chemical_energy_release
+- scenario: The sky darkens during sunset with no visible target heating.
+  primary_process: optical_interaction/illumination_change
+  impact:
+  - optical_visibility/intensity_decrease
+  - optical_visibility/color_change
+  mechanism: []
+- scenario: A stationary forest scene shows no object or scene-state change.
+  primary_process: special/none
+  temporal: static/not_applicable/none
+  impact: []
+matching_policy:
+  strict_fields:
+  - object.entity_kind
+  - object.event_roles
+  - process.primary_process.family
+  - impact.state_transitions.axis
+  - mechanism.family
+  - process.scope
+  optional_canonical_fields:
+  - process.primary_process.type
+  - process.secondary_processes.type
+  - impact.state_transitions.type
+  - mechanism.type
+  open_text_fields:
+  - process.primary_process.raw_type
+  - process.primary_process.description
+  - impact.state_transitions.raw_transition
+  - impact.response_description
+  - mechanism.raw_mechanism
+  - mechanism.description
+  removed_fields:
+  - object.initial_state.relations
+  - mechanism.basis
+aliases:
+  process_family:
+    rigid_body_motion: rigid_motion
+    contact_interaction: contact_loading
+    fracture: fracture_separation
+    fluid_dynamics: fluid_motion
+    gas_motion: gas_particulate_motion
+    particulate_motion: gas_particulate_motion
+    thermal: thermal_transfer
+    phase_change: phase_transition
+    combustion: combustion_energetic
+    optical: optical_interaction
+    relation_change: relation_reconfiguration
+    static: special
+    combustion_energetic: combustion
+    burning: combustion
+    explosive: explosive_release
+    explosion: explosive_release
+    static_persistent: special
+  process_type:
+    freefall: free_fall
+    bounce: bouncing
+    bouncing_motion: bouncing
+    dribbling: bouncing
+    burst: rupture
+    bursting: rupture
+    popping: rupture
+    rupturing: rupture
+    stirring: mixing
+    freeze: solidification
+    freezing: solidification
+    boil: boiling
+    boiling_water: boiling
+    crystal_growth: crystallization
+    frost_formation: crystallization
+    burning: sustained_burning
+    explode: explosion
+    combustion: sustained_burning
+    sustained_combustion: sustained_burning
+    thermal_radiation: radiative_heating
+    radiation_heating: radiative_heating
+    lighting_change: illumination_change
+    light_change: illumination_change
+    brightness_change: illumination_change
+    sunset: illumination_change
+    static_configuration: none
+    persistent_optical_effect: illumination_change
+    persistent_emission: gas_emission
+  action_family:
+    manipulation: transport
+    fluid_manipulation: fluid_handling
+    heat_input: thermal
+  action_type:
+    rotate_object: rotate
+    move_object: move
+    compress: press
+    puncture: pierce
+    mix: stir
+  impact_axis:
+    contact: relation
+    spatial_relation: relation
+    shape: geometry
+    structural_integrity: integrity
+    optical: optical_visibility
+    visibility: optical_visibility
+    emission: emission_transport
+    transport: emission_transport
+  impact_type:
+    fragmentation: fragmented
+    rupture: ruptured
+    burst: ruptured
+    bursting: ruptured
+    expansion: expanded
+    compression: compressed
+    bending: bent
+    stretching: stretched
+    free_surface_motion: free_surface_change
+    attachment: attachment_gain
+    detachment: attachment_loss
+    crystallization: crystallized
+  mechanism_family:
+    mechanical: mechanical_forcing
+    material: material_response
+    energy_transfer: energy_reaction
+    optical_interaction: optical_electromagnetic
+    electromagnetic: optical_electromagnetic
+  mechanism_type:
+    reflection: surface_reflection
+    refraction: refraction_at_interface
+    thermal_radiation: radiative_transfer
+    air_resistance: drag
+    wind: airflow_forcing
+    air_currents: airflow_forcing
+    atmospheric_scattering: volumetric_scattering
+    transmission: light_transmission

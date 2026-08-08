@@ -1,0 +1,67 @@
+PHYSICS-CARD RETRIEVAL THRESHOLD CALIBRATION — LLM-ASSISTED QUALITATIVE REVIEW
+
+PROVENANCE NOTE
+The 180 judgments in the accompanying artifact are explicitly stored as
+ASSISTANT LABEL / ASSISTANT REASON. They are not human annotations. The
+historical assistant model/revision was not recorded, so these labels should
+be treated as heuristic threshold-development evidence rather than ground truth.
+
+Reviewed pairs: 180
+GOOD: 5
+ACCEPTABLE: 38
+BAD: 137
+
+For this exploratory threshold analysis, GOOD + ACCEPTABLE are treated as retainable pairs.
+The calibration set is deliberately score-stratified, so retained fractions below are NOT estimates of production-data prevalence.
+
+Recommended conservative global thresholds:
+  tau_language = 0.825
+  tau_process  = 0.55
+  tau_physical = 0.45
+
+Rule:
+  retain(q,d) iff
+      language_score >= tau_language
+  AND process_score  >= tau_process
+  AND physical_score >= tau_physical
+
+On this 180-pair stratified calibration set:
+  retained pairs: 11
+  retained GOOD: 4
+  retained ACCEPTABLE: 7
+  retained BAD: 0
+  observed retainable precision: 1.000
+
+For comparison, a slightly looser language threshold of 0.820 with the same process/physical thresholds:
+  retained pairs: 15
+  retained BAD: 3
+  observed retainable precision: 0.800
+
+Interpretation:
+1. Language score is the strongest guard against high-scoring but semantically wrong broad-category matches.
+2. Process score provides a second guard against surface-semantic similarity with different physical evolution.
+3. Physical score should remain a modest global floor rather than a very high cutoff, because several genuinely useful
+   cross-ontology pairs have imperfect structured annotations but correct underlying events.
+4. Use one global threshold triplet; do not tune family-specific thresholds.
+5. Select up to K demos after filtering. Do not force every query to have K demos.
+6. After running the full selector with these thresholds, inspect the per-query retained-demo-count distribution.
+   If too many queries receive zero demos, expand the source pool before relaxing thresholds; only relax thresholds
+   after another calibration round.
+
+Notable annotation/retrieval observations from manual review:
+- Some useful pairs cross ontology labels because the underlying event is the same (e.g. fireworks, resistance-band stretching).
+- Some high-score BAD pairs share a broad motion signature but not a useful causal process (e.g. head turn vs drifting object,
+  basketball bounce vs projectile launch, shoreline waves vs rain).
+- This supports retaining the current Physics Card schema while using confidence filtering for robustness to annotation noise.
+
+Current frozen operating point (language=0.84, process=0.55, physical=0.55)
+on the same 180 assistant-labeled pairs:
+  retained pairs: 8
+  retained GOOD: 3
+  retained ACCEPTABLE: 5
+  retained BAD: 0
+
+The later threshold increases were conservative operational choices informed
+by full-pool edge-case inspection. Those later inspections are not included as
+labeled calibration artifacts in this package and should not be presented as
+human-validated evidence.

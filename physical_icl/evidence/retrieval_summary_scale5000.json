@@ -1,0 +1,103 @@
+{
+  "method": "semantic_recall -> reliability_aware_physics_matching -> confidence_filtering -> MMR",
+  "query_count": 4151,
+  "language_top_k": 500,
+  "demo_count_max": 10,
+  "mmr_lambda": 0.85,
+  "thresholds": {
+    "language": 0.84,
+    "process": 0.55,
+    "physical": 0.55
+  },
+  "weights": {
+    "dimension": {
+      "object": 0.2,
+      "process": 0.45,
+      "impact": 0.3,
+      "mechanism": 0.05
+    },
+    "structured_semantic": {
+      "object": [
+        0.6,
+        0.4
+      ],
+      "process_canonical": [
+        0.75,
+        0.25
+      ],
+      "process_open_vocab": [
+        0.4,
+        0.6
+      ],
+      "impact": [
+        0.8,
+        0.2
+      ],
+      "mechanism": [
+        0.8,
+        0.2
+      ]
+    },
+    "final_rank": {
+      "physical": 0.9,
+      "language": 0.1
+    }
+  },
+  "selection": {
+    "queries_with_any_demo": 4116,
+    "queries_with_full_demo_count": 3727,
+    "queries_with_zero_demo": 35,
+    "mean_demo_count": 9.457961936882679,
+    "median_demo_count": 10.0,
+    "min_demo_count": 0,
+    "max_demo_count": 10,
+    "mean_candidates_before_filter": 500.0,
+    "mean_candidates_after_filter": 87.05059021922429,
+    "rejection_reason_counts": {
+      "physical": 1176020,
+      "process": 999813,
+      "language": 1467808
+    }
+  },
+  "selected_pair_metrics": {
+    "pair_count": 39260,
+    "same_family_rate": 0.9916709118695873,
+    "exact_type_rate_all": 0.6831380539989812,
+    "exact_type_rate_when_both_known": 0.9255935946990613,
+    "mean_language_score": 0.8969741343859805,
+    "mean_process_score": 0.8348419888046344,
+    "mean_physical_score": 0.7663681462475126,
+    "mean_impact_axis_overlap": 0.8970283066802814,
+    "mean_mechanism_family_overlap": 0.8496262804470656
+  },
+  "selected_pair_metrics_by_query_mode": {
+    "canonical": {
+      "pair_count": 32254,
+      "same_family_rate": 1.0,
+      "exact_type_rate_all": 0.8315247721212873,
+      "exact_type_rate_when_both_known": 0.9255935946990613,
+      "mean_language_score": 0.8977728136008084,
+      "mean_process_score": 0.8319061576292934,
+      "mean_physical_score": 0.7653422652476134,
+      "mean_impact_axis_overlap": 0.8958699588546866,
+      "mean_mechanism_family_overlap": 0.8508834020553568
+    },
+    "open_vocab": {
+      "pair_count": 7006,
+      "same_family_rate": 0.9533257208107336,
+      "exact_type_rate_all": 0.0,
+      "exact_type_rate_when_both_known": null,
+      "mean_language_score": 0.8932972004158035,
+      "mean_process_score": 0.8483578750063826,
+      "mean_physical_score": 0.7710910645704858,
+      "mean_impact_axis_overlap": 0.9023610715627722,
+      "mean_mechanism_family_overlap": 0.8438387839649327
+    }
+  },
+  "notes": [
+    "No hard process-family gate is used.",
+    "No exact-type bonus, family bonus, same-family augmentation, or exact-type augmentation is used.",
+    "Canonical/open-vocabulary status only controls the reliability interpolation between structured and semantic Process similarity.",
+    "A query may return fewer than K demos, including zero, when candidates fail calibrated confidence thresholds."
+  ]
+}
