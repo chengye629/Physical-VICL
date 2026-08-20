@@ -1,0 +1,152 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "transparent bubble",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "transparent",
+        "translucent",
+        "reflective"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "cloudy sky background",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e6"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "optical_interaction",
+      "type": null,
+      "raw_type": "shifting iridescent optical patterns on a transparent bubble surface",
+      "participants": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": null,
+        "raw_type": "small apparent drift of the intact bubble relative to the cloudy background",
+        "participants": [
+          "obj_1",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e1",
+          "e7"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the bubble is already present at the start",
+      "actor_id": null,
+      "target_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "iridescent green, purple, blue, and reddish surface highlights change position and intensity over time"
+      },
+      "evidence_refs": [
+        "e4",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "bubble outline and internal band appearance gradually become more uniformly round"
+      },
+      "evidence_refs": [
+        "e3",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "bubble shows small gradual apparent position changes while remaining near the central area"
+      },
+      "evidence_refs": [
+        "e1",
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "optical_electromagnetic",
+      "type": null,
+      "raw_mechanism": "thin transparent bubble film redirects and transmits background light, producing changing iridescent color bands and highlights",
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "surface tension maintains the closed rounded bubble film while its outline remains intact",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e8"
+      ]
+    }
+  ]
+}

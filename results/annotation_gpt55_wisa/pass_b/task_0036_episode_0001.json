@@ -1,0 +1,297 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "runner",
+      "entity_kind": "agent",
+      "event_roles": [
+        "actor",
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "paved path",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support",
+        "medium"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "water body",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "grassy bank",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "pavement reflection",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "runner jogging away from the camera along the paved path",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e8",
+        "e12"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "deformation",
+        "type": null,
+        "raw_type": "runner hair repeatedly swings and changes shape during jogging",
+        "participant_object_ids": [
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e7"
+        ]
+      },
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "faint ripples on the water surface",
+        "participant_object_ids": [
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e10"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "runner image reflected on wet-looking pavement patches",
+        "participant_object_ids": [
+          "obj_1",
+          "obj_2",
+          "obj_5"
+        ],
+        "evidence_refs": [
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; runner is already jogging when first visible",
+      "actor_object_ids": [
+        "obj_1"
+      ],
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "repeated",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "runner position shifts progressively farther away along the path"
+      },
+      "evidence_refs": [
+        "e4",
+        "e8",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "runner body configuration changes cyclically through alternating leg positions and arm swings"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "loose hair repeatedly swings outward and changes shape during the jog"
+      },
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "water free surface shows faint rippled line changes"
+      },
+      "evidence_refs": [
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "reflected image of the runner becomes visible on wet-looking pavement"
+      },
+      "evidence_refs": [
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "reflected shape changes position together with the runner's position"
+      },
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "friction",
+      "raw_mechanism": "shoe contact with the paved path provides traction for the runner's forward locomotion",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "airflow_forcing",
+      "raw_mechanism": "motion of the runner through air perturbs loose hair during the jog",
+      "participant_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "loose flexible hair changes shape in response to runner motion",
+      "participant_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "wet-looking reflective pavement redirects light from the runner to form a mirrored image",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A transparent iridescent bubble remains visible against a cloudy sky while its outline, internal color bands, and position change gradually.",
+  "raw_event_description": "The video shows a single round translucent bubble in front of a blue sky with scattered white clouds. At the start, the bubble is near the upper central area of the frame with a visible circular rim and darker curved band inside. Over time, it stays intact while its rim becomes more circular and the colored highlights on its surface shift. The bubble remains near the central area with small gradual changes in its apparent position relative to the cloud background. No bursting or contact with another object is visible.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The main bubble is already present at the beginning.",
+      "No release point or preceding setup is visible.",
+      "The bubble outline and internal colored reflections are visible against the sky."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "transparent bubble",
+      "visible_form": "single nearly spherical translucent object with a thin circular outline and internal curved color bands",
+      "material_description": "transparent or translucent surface with iridescent rainbow-like color patches and a faint rim",
+      "visible_properties": [
+        "round outline",
+        "thin visible boundary",
+        "see-through interior",
+        "shifting colored highlights",
+        "intact throughout the visible sequence"
+      ],
+      "initial_motion_description": "already visible near the upper central portion of the frame with no abrupt motion at the start",
+      "initial_integrity_description": "intact closed bubble shape with continuous visible rim",
+      "event_role_hints": [
+        "main visible object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "cloudy sky background",
+      "visible_form": "blue sky field with scattered pale cloud patches",
+      "material_description": "distant sky and clouds visible through and around the bubble",
+      "visible_properties": [
+        "blue background",
+        "white and gray cloud patches",
+        "visible through the bubble"
+      ],
+      "initial_motion_description": "no distinct independent motion is clearly separable in the first frame",
+      "initial_integrity_description": "continuous background with no visible break or cut",
+      "event_role_hints": [
+        "background reference"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the bubble is seen in front of the cloudy sky background",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A single translucent round bubble is visible against a blue sky with white cloud patches."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The bubble has a darker curved internal band near its lower-left interior."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "The bubble remains intact with a continuous outer rim."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "Iridescent green, purple, blue, and reddish color areas are visible on the bubble surface."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The internal curved band becomes less prominent as the bubble appears more uniformly round."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "Cloud patches are visible through the bubble interior."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The bubble remains near the center of the frame with a faint colored rim."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "No rupture, splitting, or disappearance of the bubble occurs within the visible sequence."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The bubble's colored highlights change position and intensity over time."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e4"
+      ],
+      "observations": [
+        "The bubble is already present at the start.",
+        "The bubble has a visible rim and internal colored regions."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "appears as an intact translucent round bubble with a darker curved internal band"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "appears as a blue sky with scattered white cloud patches behind the bubble"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e6",
+        "e9"
+      ],
+      "observations": [
+        "The bubble remains intact.",
+        "The internal color pattern changes while clouds remain visible through it."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "shows gradual changes in outline regularity and surface color pattern"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The bubble is still visible near the center of the frame.",
+        "The bubble does not burst before the sequence ends."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "continues as a closed translucent bubble with faint iridescent rim and shifting color patches"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "unknown",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "Small changes in the bubble's position relative to the frame and cloud background are visible, but the video alone does not separate bubble motion from possible camera framing changes."
+  ]
+}

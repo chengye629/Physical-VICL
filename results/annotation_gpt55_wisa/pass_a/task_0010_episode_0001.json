@@ -1,0 +1,288 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "Several pale ice pieces enter a stemmed glass from above, displace the existing ice, and the contents then settle while the glass stays upright.",
+  "raw_event_description": "A transparent stemmed cocktail glass sits centered against a black background with pale ice pieces and cloudy liquid inside. For the early portion, the arrangement is still. Later, additional pale block-like pieces appear from the top of the frame and move downward into the bowl area. During their entry, the ice inside the glass shifts, and at least one pale piece moves outward over the left side of the rim and leaves the bowl area. After this brief motion, the contents come to rest in a new arrangement with several ice pieces visible near the top of the glass.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The glass, ice pieces, and cloudy contents are visible before the later incoming pieces appear.",
+      "The background is dark and uncluttered, making the central objects distinguishable."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "stemmed glass",
+      "visible_form": "transparent wide conical bowl with thin stem and small foot",
+      "material_description": "clear glossy material with bright edge highlights",
+      "visible_properties": [
+        "transparent",
+        "rigid-looking",
+        "upright",
+        "open at top"
+      ],
+      "initial_motion_description": "stationary in the center of the frame",
+      "initial_integrity_description": "intact and upright with no visible cracks or breaks",
+      "event_role_hints": [
+        "holds the visible ice pieces and cloudy liquid"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "ice pieces inside glass",
+      "visible_form": "multiple pale semi-transparent block-like pieces with rounded edges",
+      "material_description": "whitish translucent pieces with glossy highlights and frosted-looking surfaces",
+      "visible_properties": [
+        "semi-transparent",
+        "pale",
+        "block-like",
+        "clustered"
+      ],
+      "initial_motion_description": "no visible motion before the incoming pieces appear",
+      "initial_integrity_description": "separate intact pieces clustered inside the bowl",
+      "event_role_hints": [
+        "shifts position during the brief impact-like disturbance"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "cloudy liquid",
+      "visible_form": "cloudy pale content occupying the lower portion of the glass bowl",
+      "material_description": "translucent to milky fluid-looking region with bright reflections and small bubbles or speckles visible near the lower bowl",
+      "visible_properties": [
+        "cloudy",
+        "translucent",
+        "contained within glass"
+      ],
+      "initial_motion_description": "no clear visible motion before the incoming pieces appear",
+      "initial_integrity_description": "continuous contained region in the lower bowl",
+      "event_role_hints": [
+        "its visible boundary and highlights change during the disturbance"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "incoming ice pieces",
+      "visible_form": "pale block-like pieces, some elongated by motion blur while moving through the frame",
+      "material_description": "whitish semi-transparent pieces with glossy highlights",
+      "visible_properties": [
+        "pale",
+        "semi-transparent",
+        "block-like",
+        "motion-blurred during entry"
+      ],
+      "initial_motion_description": "not visible in the first frames; later appears moving downward from above the glass",
+      "initial_integrity_description": "appears as separate intact pieces when visible",
+      "event_role_hints": [
+        "enters the bowl area from above"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "clustered inside the open bowl of the stemmed glass",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "contained in the lower portion of the glass bowl beneath and around the ice pieces",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "upright and centered against a black background",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Multiple pale block-like pieces are visible inside the bowl of the glass."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A cloudy pale region is visible in the lower part of the glass bowl."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The stemmed glass is upright and centered against a black background."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The initial arrangement of the glass and contents remains visually still for several frames."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A pale block-like piece appears above the glass near the top center of the frame."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A vertically blurred pale piece is visible moving into the upper bowl area."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The ice pieces inside the bowl change positions during the brief entry of the new pieces."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "One pale piece is visible outside the left side of the glass near the rim area."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "A pale piece is visible lower left of the glass, outside the bowl area."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "Bright highlights and cloudy regions inside the glass shift during the disturbance."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "Several ice pieces are visible resting near the top of the glass after the disturbance."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The glass remains upright with no visible breakage."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "No obvious liquid stream is visible leaving the rim after the motion ends."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The glass and its contents are already present at the start.",
+        "The visible setup remains still before the incoming pieces appear."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The stemmed glass stays upright and stationary."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The ice pieces inside the glass remain clustered without visible motion."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The cloudy liquid remains contained in the lower bowl."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "Additional pale pieces enter the scene from above.",
+        "The contents inside the glass shift briefly.",
+        "At least one pale piece moves outside the left side of the bowl area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The incoming ice pieces appear above the glass and move downward into the bowl area."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The ice pieces already in the glass change positions and show motion blur during the disturbance."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The cloudy region and internal highlights visibly shift while the ice pieces move."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The glass remains upright during the contents' motion."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The visible motion subsides.",
+        "The ice pieces are arranged differently than at the start.",
+        "The glass remains intact and upright."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The ice pieces settle into a new visible arrangement near the top and inside the bowl."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The cloudy contents remain visible in the lower bowl."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The glass shows no visible change in shape or integrity."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e3",
+      "e4",
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact number of incoming pieces is difficult to count because several are motion-blurred and overlap with the existing ice.",
+    "The exact path of the piece moving outside the left side of the glass is only partially visible."
+  ]
+}

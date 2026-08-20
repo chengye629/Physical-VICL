@@ -1,0 +1,233 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "large overhead cloud layer",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "dark lower cloud band",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "gray vertical veil",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "desert foreground",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "distant hills",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "lighter sky gap",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e8"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "gas_particulate_motion",
+      "type": null,
+      "raw_type": "atmospheric cloud layer and gray veil motion with gradual reshaping",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; cloud changes occur in the landscape view",
+      "actor_object_ids": [],
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e12"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "rounded cloud outlines and textured regions reshape over time"
+      },
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "dark lower cloud band appears thicker and broader across the center and right sky"
+      },
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "gray vertical veil changes apparent width and outline beneath the cloud base"
+      },
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "gray vertical veil varies in darkness"
+      },
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "pale sky gap becomes more visible below the dark cloud shelf near the center-right horizon"
+      },
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "small darker cloud fragments remain visible beneath the main cloud band"
+      },
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "airflow_forcing",
+      "raw_mechanism": "ambient atmospheric airflow advects and deforms the visible cloud and veil structures",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "cloud and veil particles scatter and attenuate light, producing changing apparent darkness and exposure of the brighter sky gap as the cloud shapes shift",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8"
+      ]
+    }
+  ]
+}

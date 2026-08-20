@@ -1,0 +1,209 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "shallow bowl",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "liquid pool",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "translucent",
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "blue mound",
+      "entity_kind": "granular_material",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "granular",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "yellow mound",
+      "entity_kind": "granular_material",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "granular",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "red mound",
+      "entity_kind": "granular_material",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "granular",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "gray mound",
+      "entity_kind": "granular_material",
+      "event_roles": [],
+      "material_phase": "granular",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e10",
+        "e11"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "mixing",
+      "raw_type": "slow spreading and blending of colored regions in a shallow liquid pool",
+      "object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; no hands or tools enter the scene",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e12"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "colored material in the liquid spreads over slightly broader regions"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "mixing",
+        "raw_transition": "previously distinct blue, orange-red, and yellow-green liquid regions become softer and more blended at their boundaries"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "diffusion",
+      "raw_mechanism": "diffusive transport of colored constituents through the liquid reduces sharp concentration boundaries",
+      "object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "family": "energy_reaction",
+      "type": "mass_transport",
+      "raw_mechanism": "material transport within the liquid carries color into neighboring regions without visible external stirring",
+      "object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e12"
+      ]
+    }
+  ]
+}

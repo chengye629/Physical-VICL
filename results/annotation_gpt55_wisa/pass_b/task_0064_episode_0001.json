@@ -1,0 +1,174 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "faceted green object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "translucent",
+        "reflective"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e4",
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "glossy black surface",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e10",
+        "e11"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "rotation",
+      "raw_type": "continuous change in orientation of a rigid faceted object",
+      "participants": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e7",
+        "e8"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "shifting reflected image and highlights as the faceted object changes orientation",
+        "participants": [
+          "obj_1",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e2",
+          "e5",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; object is already changing orientation at the start",
+      "participants": [],
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e11"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "visible orientation changes continuously through upright, side, and lower profiles"
+      },
+      "raw_impact": "The faceted object changes orientation while remaining intact and near the same area of the frame.",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "apparent highlight and color patch locations shift across and within the object"
+      },
+      "raw_impact": "White highlights and green, yellow, and occasional orange patches move across the facets as the object turns.",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "the reflected image on the glossy surface changes shape and colors"
+      },
+      "raw_impact": "The surface remains stationary but shows a changing reflection of the rotating faceted object.",
+      "evidence_refs": [
+        "e2",
+        "e10",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "Light reflects from the glossy black surface and faceted object surfaces, so the reflected image and highlights shift with object orientation.",
+      "participants": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e11"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "refraction_at_interface",
+      "raw_mechanism": "Light changes direction through the transparent or translucent faceted material, contributing to changing internal-looking color patches as viewing angles change.",
+      "participants": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e6"
+      ]
+    }
+  ]
+}

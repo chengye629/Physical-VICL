@@ -1,0 +1,251 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "upper striped cylinder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "brown mound",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "lower platform",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "background",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": []
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "deformation",
+      "type": "compression_deformation",
+      "raw_type": "compression flattening of the brown mound under the descending cylinder",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "role": "tool"
+        },
+        {
+          "object_id": "obj_2",
+          "role": "target"
+        },
+        {
+          "object_id": "obj_3",
+          "role": "support"
+        }
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "contact_loading",
+        "type": "compression_loading",
+        "raw_type": "sustained downward compressive contact between the upper cylinder, mound, and platform",
+        "participants": [
+          {
+            "object_id": "obj_1",
+            "role": "tool"
+          },
+          {
+            "object_id": "obj_2",
+            "role": "target"
+          },
+          {
+            "object_id": "obj_3",
+            "role": "support"
+          }
+        ],
+        "evidence_refs": [
+          "e4",
+          "e6",
+          "e7",
+          "e9"
+        ]
+      },
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "downward translation of the upper cylinder toward the mound",
+        "participants": [
+          {
+            "object_id": "obj_1",
+            "role": "tool"
+          }
+        ],
+        "evidence_refs": [
+          "e2",
+          "e3",
+          "e4"
+        ]
+      }
+    ],
+    "action": {
+      "family": "loading",
+      "type": "press",
+      "raw_action": "the upper striped cylinder presses downward onto the brown mound",
+      "actor_object_id": "obj_1",
+      "target_object_id": "obj_2",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6",
+        "e7"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "geometry",
+        "type": "flattened",
+        "raw_transition": "upright curled mound becomes a shorter, wider, flatter rounded stack"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "geometry",
+        "type": "bent",
+        "raw_transition": "the curled top bends sideways beneath the upper cylinder"
+      },
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "the upper cylinder changes from separated above the mound to touching it"
+      },
+      "evidence_refs": [
+        "e2",
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "the upper cylinder moves downward and then remains low over the flattened brown object"
+      },
+      "evidence_refs": [
+        "e3",
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "sustained_pressure",
+      "raw_mechanism": "sustained downward contact force from the upper cylinder compresses the brown mound against the rigid platform",
+      "linked_process_family": "deformation",
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "the brown material yields by bending and spreading outward instead of cracking or separating",
+      "linked_process_family": "deformation",
+      "object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    }
+  ]
+}

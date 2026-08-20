@@ -1,0 +1,289 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "orange ball",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "combustible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e4",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "torch-like nozzle",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e11",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "yellow-orange flame",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "product",
+        "source"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e6",
+        "e7",
+        "e10",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "blue flame",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "source",
+        "tool"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "outdoor ground",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "combustion",
+      "type": "sustained_burning",
+      "raw_type": "sustained yellow-orange burning along the ball's right side",
+      "object_refs": [
+        "obj_1",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e6",
+        "e10",
+        "e14"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "gas_particulate_motion",
+        "type": "plume_motion",
+        "raw_type": "flame plume flickers, rises, and leans while changing shape",
+        "object_refs": [
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6",
+          "e7",
+          "e10"
+        ]
+      },
+      {
+        "family": "rigid_motion",
+        "type": null,
+        "raw_type": "slight nozzle tip repositioning near the ball",
+        "object_refs": [
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e13"
+        ]
+      }
+    ],
+    "action": {
+      "family": "thermal",
+      "type": "heat",
+      "raw_action": "torch-like nozzle with a small blue flame is held aimed toward the ball",
+      "actor_refs": [],
+      "tool_refs": [
+        "obj_2",
+        "obj_4"
+      ],
+      "target_refs": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e11",
+        "e13"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e9",
+        "e10",
+        "e12",
+        "e14"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "axis": "thermal_reaction",
+      "type": "material_to_charred",
+      "raw_transition": "lower-right/front printed area develops dark vertical marks during burning",
+      "evidence_refs": [
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "axis": "optical_visibility",
+      "type": "visibility_decrease",
+      "raw_transition": "right-front surface becomes intermittently obscured by the flame",
+      "evidence_refs": [
+        "e8",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "axis": "emission_transport",
+      "type": "dispersion",
+      "raw_transition": "yellow-orange flame plume spreads upward and covers a wider area of the ball's right side",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e10",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "axis": "geometry",
+      "type": "expanded",
+      "raw_transition": "flame grows taller and extends above the top of the ball",
+      "evidence_refs": [
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "axis": "motion",
+      "type": null,
+      "raw_transition": "nozzle tip shifts slightly relative to the ball's right edge",
+      "evidence_refs": [
+        "e13"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "chemical_energy_release",
+      "raw_mechanism": "combustion releases heat and visible light in the yellow-orange flame",
+      "object_refs": [
+        "obj_1",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "family": "energy_reaction",
+      "type": "heat_transfer",
+      "raw_mechanism": "the blue torch flame supplies thermal energy toward the ball-side burning region",
+      "object_refs": [
+        "obj_2",
+        "obj_4",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e11"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "buoyancy",
+      "raw_mechanism": "hot flame gases rise, producing the upward plume above the ball",
+      "object_refs": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "the yellow-orange and blue flame regions emit visible light",
+      "object_refs": [
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e10"
+      ]
+    }
+  ]
+}

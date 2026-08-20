@@ -1,0 +1,345 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "metal pot",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_description": "large round open reflective metal vessel with a raised rim, filled close to the rim",
+      "evidence_refs": [
+        "e1",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "cloudy liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium",
+        "source"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "raw_description": "pale opaque liquid surface that is already churning with rounded bulges and small bubbles",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "edge foam",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "raw_description": "white frothy patches and bubble clusters along portions of the liquid perimeter",
+      "evidence_refs": [
+        "e3",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "pale clumps",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "unknown",
+      "physical_properties": [],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "unknown",
+      "raw_description": "irregular pale solid-looking or semi-solid-looking pieces partly submerged and intermittently obscured by cloudy liquid",
+      "evidence_refs": [
+        "e4",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "mist plume",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "product",
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "raw_description": "translucent whitish haze above and behind the pot, drifting mostly behind and to the right of the rim",
+      "evidence_refs": [
+        "e5",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "background wall and equipment",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "raw_description": "static wall and equipment region behind the pot, partly obscured by mist",
+      "evidence_refs": [
+        "e8",
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "phase_transition",
+      "type": "boiling",
+      "raw_type": "continuous bubbling and churning of cloudy liquid with visible mist above the pot",
+      "object_refs": [
+        "obj_2",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e6",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "repeated liquid free-surface bulging, waving, and foam motion near the rim",
+        "object_refs": [
+          "obj_2",
+          "obj_3",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e2",
+          "e3",
+          "e6",
+          "e7",
+          "e9"
+        ]
+      },
+      {
+        "family": "gas_particulate_motion",
+        "type": "plume_motion",
+        "raw_type": "mist plume rises, drifts, changes shape, and extends higher behind the pot rim",
+        "object_refs": [
+          "obj_5"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e8"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the liquid motion and mist are already ongoing at the start",
+      "actor_object_refs": [],
+      "target_object_refs": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "repeated",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "raw_temporal": "the process is already in progress in the first frame and continues throughout, with repeated surface bulges, bubbles, persistent foam, and drifting mist"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "phase",
+        "type": "liquid_to_gas",
+        "raw_transition": "cloudy liquid forms bubbles and supplies visible vapor or mist above the open pot"
+      },
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "liquid free surface repeatedly swells upward into rounded mounds, lowers, remains wavy, and shows small surface bubbles"
+      },
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "foam patches shift slightly with the surrounding moving liquid while remaining near the perimeter"
+      },
+      "evidence_refs": [
+        "e3",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "pale clumps rise into view, shift position with the moving central surface, and sink or become hidden again"
+      },
+      "evidence_refs": [
+        "e4",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "a pale clump becomes partly obscured by the cloudy liquid"
+      },
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "mist plume drifts behind the pot rim and spreads upward and to the right, appearing thicker late in the clip"
+      },
+      "evidence_refs": [
+        "e5",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "background region behind the pot is partly obscured by the translucent mist plume"
+      },
+      "evidence_refs": [
+        "e8"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "heat_transfer",
+      "raw_mechanism": "thermal energy drives liquid-to-vapor transition, producing surface bubbling and visible mist",
+      "object_refs": [
+        "obj_2",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "pressure_gradient",
+      "raw_mechanism": "pressure differences associated with vapor bubble formation drive the churning liquid surface and rounded upward bulges",
+      "object_refs": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "buoyancy",
+      "raw_mechanism": "upward fluid forces carry bubbles, mist, and intermittently visible clumps toward the surface",
+      "object_refs": [
+        "obj_2",
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "liquid-gas interfaces form and maintain surface bubbles and frothy foam patches along the perimeter",
+      "object_refs": [
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e9"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "suspended mist droplets scatter light, making the plume visible and partially obscuring the background",
+      "object_refs": [
+        "obj_5",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e8"
+      ]
+    }
+  ]
+}

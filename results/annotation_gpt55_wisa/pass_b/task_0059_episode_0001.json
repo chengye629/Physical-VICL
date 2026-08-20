@@ -1,0 +1,244 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "small dog",
+      "entity_kind": "agent",
+      "event_roles": [
+        "actor",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "pool water",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "medium",
+        "target"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "pool tile floor",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "bright water reflection",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "oscillating",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "dog swimming leftward through pool water",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e9",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "pool surface ripples and wake around the moving dog",
+        "participant_object_ids": [
+          "obj_2",
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e6",
+          "e7"
+        ]
+      },
+      {
+        "family": "fluid_motion",
+        "type": "splashing",
+        "raw_type": "small intermittent splashes near the dog's shoulder and side",
+        "participant_object_ids": [
+          "obj_2",
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e8"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "bright reflected patch wavering on the rippling water surface",
+        "participant_object_ids": [
+          "obj_4",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the dog is already in the pool and moving at the start",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the dog changes position leftward across the tiled pool background and becomes closer to the bright reflected patch"
+      },
+      "evidence_refs": [
+        "e5",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "the pool water surface develops ripples, a narrow disturbed trail, and small splashes around and behind the dog"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "the reflected patch changes outline as the water surface ripples"
+      },
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "buoyancy",
+      "raw_mechanism": "fluid support from the water is associated with the dog remaining partly submerged while its head stays above the surface",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e4"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "drag",
+      "raw_mechanism": "relative motion between the dog and water disturbs the surrounding liquid and forms a trailing wake",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "the liquid free surface organizes the small ripples and splashes produced by the disturbance",
+      "object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "light reflecting from the moving water surface produces the bright patch whose outline wavers with the ripples",
+      "object_ids": [
+        "obj_2",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ]
+}

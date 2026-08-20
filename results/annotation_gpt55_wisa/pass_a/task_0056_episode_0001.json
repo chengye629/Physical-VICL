@@ -1,0 +1,272 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A partially visible person on green turf changes posture while holding a red band that runs from a shoe area up to the hands.",
+  "raw_event_description": "At the start, the view is close on a bent lower leg, a turquoise shoe, a red two-strand band, and one hand holding the band. The red band runs from the shoe area upward to the hand. The visible supporting leg becomes straighter, the band shifts from a diagonal angle to a more vertical line, and the camera reframes upward. Later, one leg is raised backward to the left while the torso leans forward. The hands hold the red band near the front of the body and then move lower as the arms become straighter. The camera continues to show a higher portion of the body, including hip, torso, arm, and part of the head.",
+  "observed_scope": "mixed",
+  "first_frame": {
+    "phase": "mid_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "Only the lower body, one forearm or hand, one shoe, the red band, and turf are visible.",
+      "The upper body and head are cropped out in the first frame.",
+      "The red band is already positioned near the shoe and held by the hand at the beginning."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "person",
+      "visible_form": "Partially visible adult human body wearing black leggings, a black sleeveless top, turquoise athletic shoes, and a dark wristwatch.",
+      "material_description": "Visible skin, dark fabric clothing, turquoise shoe material, and dark wristwatch.",
+      "visible_properties": [
+        "articulated body",
+        "black clothing",
+        "turquoise footwear",
+        "one leg later raised backward",
+        "hands grip red band"
+      ],
+      "initial_motion_description": "The person is already in a bent-leg posture and holding the red band when the video begins.",
+      "initial_integrity_description": "The visible body, clothing, shoes, and wristwatch appear intact.",
+      "event_role_hints": [
+        "posture changes",
+        "hand position changes",
+        "one shoe remains near the lower end of the red band"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red band",
+      "visible_form": "Narrow red band or cord visible as two parallel red strands running from the shoe area upward to the person's hands.",
+      "material_description": "Red, thin, flexible-looking strip or cord with a looped or doubled appearance.",
+      "visible_properties": [
+        "red",
+        "thin",
+        "two parallel visible strands",
+        "angle and visible length change during the clip"
+      ],
+      "initial_motion_description": "The red band is already angled upward from the shoe area to the hand at the start.",
+      "initial_integrity_description": "The visible red strands appear continuous with no visible break.",
+      "event_role_hints": [
+        "held by the person",
+        "runs near or under the visible shoe",
+        "changes orientation as the person changes posture"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "green turf floor",
+      "visible_form": "Flat green textured floor surface filling most of the background early in the clip.",
+      "material_description": "Green artificial-turf-like surface with fine texture.",
+      "visible_properties": [
+        "green",
+        "textured",
+        "flat surface"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "The visible floor surface appears continuous.",
+      "event_role_hints": [
+        "person and shoe are positioned on it"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wall and baseboard",
+      "visible_form": "Light-colored wall and tan baseboard visible later in the background.",
+      "material_description": "Light wall surface with tan wooden-looking trim.",
+      "visible_properties": [
+        "stationary background",
+        "appears later as framing changes"
+      ],
+      "initial_motion_description": "Not visible in the first close framing.",
+      "initial_integrity_description": "Appears continuous when visible.",
+      "event_role_hints": [
+        "background reference visible in later frames"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The person's hand is holding the red band.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "The red band runs from the visible shoe area upward toward the person's hand.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The visible shoe is on the green turf floor.",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A turquoise athletic shoe is visible on a green textured floor."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A hand grips a red band above the shoe area."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The red band runs diagonally from near the turquoise shoe upward to the hand."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The visible knee is bent at the beginning."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The visible supporting leg becomes straighter than it was at the beginning."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The red band appears more vertical beside the lower leg."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "One leg is extended backward to the left side of the frame."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The person's torso is angled forward while the rear leg remains raised."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "Both hands are visible holding the red band near the front of the body."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The person's arms become straighter and the hands move lower while holding the red band."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The framing changes from a close view of the shoe and lower leg to a higher view including hip, torso, arm, and part of the head."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "A light wall and tan baseboard become visible in the background."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene begins with a close view of the lower body and red band."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The person is in a bent-knee posture with one hand holding the red band."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The red band is angled from the shoe area to the hand."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The green turf floor is visible under the shoe."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The person's posture changes from a lower bent position to a forward-leaning position with one leg raised backward."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The supporting leg becomes straighter, the torso angles forward, and the other leg extends backward."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The red band changes from a diagonal angle to a more vertical orientation beside the body."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e12"
+      ],
+      "observations": [
+        "The person remains forward-leaning while holding the red band."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The hands move lower and the arms become straighter while the rear leg remains raised."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The red band remains held in both hands and extends downward out of the lower portion of the frame."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The wall and baseboard are visible behind the person."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "mixed",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11",
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "medium"
+  },
+  "unresolved_observations": [
+    "The upper end of the red band and parts of the hands are cropped at several moments.",
+    "The full body is not visible at once during most of the clip."
+  ]
+}

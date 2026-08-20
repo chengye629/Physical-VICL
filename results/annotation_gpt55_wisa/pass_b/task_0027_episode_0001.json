@@ -1,0 +1,208 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "gray round disk",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "reflective"
+        ],
+        "initial_motion_state": "translating",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e7",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "triangular wheeled frame",
+      "axes": {
+        "entity_kind": "articulated_object",
+        "event_roles": [
+          "container",
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "thin white line",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [],
+        "initial_motion_state": "translating",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "white floor surface",
+      "axes": {
+        "entity_kind": "surface_or_region",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "not_applicable",
+        "physical_properties": [],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "not_applicable"
+      },
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e7"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": null,
+      "raw_type": "round disk descends through the frame, reaches the floor, and rolls rightward away",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "object_ids": [],
+      "evidence_refs": []
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "disk motion changes from downward through the frame to rightward travel along the floor"
+      },
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "rotation_onset",
+        "raw_transition": "disk remains upright and its face markings change orientation as it moves on the floor"
+      },
+      "evidence_refs": [
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "support_gain",
+        "raw_transition": "disk reaches the floor surface and continues moving while supported by it"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "containment_loss",
+        "raw_transition": "disk leaves the triangular frame area and becomes separated from the frame"
+      },
+      "evidence_refs": [
+        "e1",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "wheeled frame shifts slightly left relative to the floor markings"
+      },
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the disk's downward motion toward the floor",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e6"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "friction",
+      "raw_mechanism": "contact friction with the floor couples the disk's translation and rotation during rolling",
+      "object_ids": [
+        "obj_1",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e9"
+      ]
+    }
+  ]
+}

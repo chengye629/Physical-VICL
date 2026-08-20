@@ -1,0 +1,274 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A handheld camera moves away from and back toward a toy track setup while visible scene objects show no independent motion.",
+  "raw_event_description": "The video begins with a close view of an orange multi-level toy track on a red box near dark furniture. The camera viewpoint shifts forward and left so the toy track moves out of frame and a carpeted hallway with gray walls, white doors, outlets, and a lit room at the far end becomes centered. The camera continues along or toward the hallway, then pivots right, bringing the wall outlet and the toy track setup back into view near the right side of the frame. No visible scene object independently changes shape, position, or state.",
+  "observed_scope": "camera_only",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The toy track is visible but partly cropped by the frame.",
+      "Dark furniture on the right partially blocks the view of the surrounding setup.",
+      "The view is close and slightly blurred from camera motion."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "orange toy track",
+      "visible_form": "multi-level circular and spiral-like orange rails with vertical support pieces",
+      "material_description": "smooth brightly colored plastic-looking rails and supports in orange, yellow, green, white, and dark colors",
+      "visible_properties": [
+        "bright orange rails",
+        "stacked circular loops",
+        "upright support columns"
+      ],
+      "initial_motion_description": "no independent motion visible",
+      "initial_integrity_description": "appears assembled and intact",
+      "event_role_hints": [
+        "stationary scene object repeatedly entering and leaving the camera view"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red box",
+      "visible_form": "rectangular red box or container with printed graphics on top",
+      "material_description": "red glossy or semi-gloss surface with printed paper/cardboard-like graphics",
+      "visible_properties": [
+        "rectangular",
+        "red border",
+        "printed top surface"
+      ],
+      "initial_motion_description": "no independent motion visible",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supporting surface for the toy track"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "dark furniture",
+      "visible_form": "dark vertical posts and horizontal shelf-like elements beside the track",
+      "material_description": "dark wood-like or painted rigid surfaces",
+      "visible_properties": [
+        "dark color",
+        "vertical posts",
+        "shelf or bed-frame-like structure"
+      ],
+      "initial_motion_description": "no independent motion visible",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "foreground/background stationary structure"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "carpeted hallway",
+      "visible_form": "long hallway with beige carpet, gray walls, white baseboards, and white doors",
+      "material_description": "soft-looking carpet, painted walls, white trim and doors",
+      "visible_properties": [
+        "long narrow passage",
+        "beige carpet",
+        "gray walls",
+        "white doors",
+        "white baseboards"
+      ],
+      "initial_motion_description": "no independent motion visible",
+      "initial_integrity_description": "appears unchanged and intact",
+      "event_role_hints": [
+        "stationary background revealed by camera movement"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "wall outlet",
+      "visible_form": "white electrical outlet plate on the right hallway wall",
+      "material_description": "white plastic-looking wall plate",
+      "visible_properties": [
+        "rectangular plate",
+        "white color",
+        "mounted on wall"
+      ],
+      "initial_motion_description": "no independent motion visible",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "stationary wall feature becoming larger in frame as the camera moves"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "distant room furniture",
+      "visible_form": "small furniture and lamp-like shapes visible through the open hallway end",
+      "material_description": "wood-toned and light-colored surfaces are visible but details are limited",
+      "visible_properties": [
+        "small table or stand shape",
+        "lamp-like vertical shape",
+        "located in lit room beyond hallway"
+      ],
+      "initial_motion_description": "no independent motion visible",
+      "initial_integrity_description": "appears intact where visible",
+      "event_role_hints": [
+        "stationary distant background object"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "sits on top of",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned beside",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is mounted on",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e6"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The orange toy track is visible on top of the red box."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Dark furniture stands immediately to the right of the toy track setup."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The camera view shifts so the toy track moves toward the lower right edge of the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "A long carpeted hallway becomes centered in the frame."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "White doors are visible along the left side of the hallway."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A white wall outlet is visible on the right hallway wall."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "A lit room with small furniture is visible at the far end of the hallway."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The camera view pivots right and the toy track setup reappears at the right side of the frame."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "No visible scene object independently translates, deforms, opens, closes, emits material, or changes state."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The view starts close to the toy track setup.",
+        "The toy track and red box are partly cropped as the camera viewpoint shifts."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The toy track remains visibly assembled and stationary relative to the red box."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The red box remains under the toy track."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The hallway occupies most of the frame.",
+        "Doors, baseboards, wall outlets, carpet, and the distant lit room are visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The hallway surfaces and fixtures show no independent visible change."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The wall outlet remains mounted on the right wall."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The view turns back toward the toy track setup near the right edge of the frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The toy track is again visible and remains assembled."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The dark furniture remains beside the toy track setup."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "mixed",
+    "focus_change": "variable",
+    "evidence_refs": [
+      "e3",
+      "e4",
+      "e8"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "high"
+  },
+  "unresolved_observations": []
+}

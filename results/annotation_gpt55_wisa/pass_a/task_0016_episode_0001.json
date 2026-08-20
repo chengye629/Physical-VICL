@@ -1,0 +1,289 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A distant rail vehicle remains on the tracks while a large white plume above it changes shape and spreads upward and leftward.",
+  "raw_event_description": "The view shows railway tracks running from the foreground toward a distant rail vehicle near the right side of the scene. A large white plume is already present above the vehicle at the start. Over time the plume grows wider, its outline changes, and its upper portion extends upward and toward the left. The rail vehicle remains small and distant, with only slight visible change in its position and size. The surrounding hillside, house, poles, overhead wires, tracks, gravel, grass, and trees remain visually stable.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The rail vehicle is distant and partly visually overlapped by the white plume and nearby vegetation.",
+      "The tracks, landscape, and plume source area are visible from the beginning.",
+      "The plume is already present in the first visible frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "rail vehicle",
+      "visible_form": "small dark vehicle on railway tracks in the distance, with a darker front area and small bright highlights",
+      "material_description": "dark exterior surfaces with small red and bright light-colored details visible at distance",
+      "visible_properties": [
+        "distant",
+        "dark colored",
+        "compact visible front",
+        "partly obscured by plume"
+      ],
+      "initial_motion_description": "appears on the distant track at the start; any positional change is slight because it is far away",
+      "initial_integrity_description": "visible as one intact rail vehicle form",
+      "event_role_hints": [
+        "located directly below the white plume"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "white plume",
+      "visible_form": "large irregular white cloud-like column and mass above the distant rail vehicle",
+      "material_description": "bright white, semi-soft edged, cloud-like visible mass",
+      "visible_properties": [
+        "amorphous",
+        "bright white",
+        "changing outline",
+        "large relative to the distant rail vehicle"
+      ],
+      "initial_motion_description": "already extends upward from the rail vehicle area at the start",
+      "initial_integrity_description": "continuous irregular plume with no fixed solid outline",
+      "event_role_hints": [
+        "visibly connected to the area above the rail vehicle"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "railway tracks",
+      "visible_form": "two dark rails with cross ties and gray ballast, extending diagonally from the lower left foreground toward the distant right",
+      "material_description": "dark rail surfaces and gray stone ballast",
+      "visible_properties": [
+        "linear",
+        "fixed in scene",
+        "foreground to background perspective"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "continuous visible track structure",
+      "event_role_hints": [
+        "rail vehicle is positioned on or beside the distant track alignment"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "house",
+      "visible_form": "small building with reddish roof and light walls on the left side near the tracks",
+      "material_description": "red-brown roof and light-colored wall surfaces",
+      "visible_properties": [
+        "stationary",
+        "rectangular building form",
+        "near trees and grass"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact building form",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_5",
+      "name": "hillside trees",
+      "visible_form": "forested hillside with green, yellow, and orange foliage in the background",
+      "material_description": "leafy and forested visible surfaces in mixed autumn colors",
+      "visible_properties": [
+        "stationary background",
+        "multi-colored foliage",
+        "large continuous hillside area"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "continuous wooded hillside",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_6",
+      "name": "overhead wires",
+      "visible_form": "many thin parallel lines running diagonally across the upper right sky area, supported by poles near the track",
+      "material_description": "thin dark line-like elements and pale poles",
+      "visible_properties": [
+        "parallel",
+        "fixed in scene",
+        "diagonal across frame"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "continuous visible wire lines",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_7",
+      "name": "grass and shrubs",
+      "visible_form": "green vegetation along the right side and near the tracks",
+      "material_description": "green leafy and grassy visible surfaces",
+      "visible_properties": [
+        "stationary",
+        "dense vegetation",
+        "foreground and midground"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "continuous vegetation patches",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is located near the distant right side along the railway track alignment",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "extends upward from the area directly above the distant rail vehicle",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "stands to the left of the tracks in the midground",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "runs above and to the right of the track area",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A small dark rail vehicle is visible near the distant right side on the track alignment."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A white plume is already present above the distant rail vehicle."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A house with a reddish roof is visible left of the tracks."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "Thin overhead wires remain fixed across the upper right portion of the frame."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The white plume becomes broader than it was at the start."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The upper part of the white plume extends farther left than earlier."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The outline of the white plume is different from its earlier outline."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The rail vehicle remains visible below the plume near the distant track."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The tracks, house, hillside, vegetation, poles, and wires keep stable positions in the frame."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The camera framing remains steady without visible panning, tilting, or zooming."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene opens with the rail vehicle already distant on the track alignment and the plume already above it."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "appears as a small dark form on the distant tracks"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "is already extended upward above the rail vehicle area"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The plume changes size and lateral extent."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "widens and extends farther leftward in its upper portion"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The plume remains large and irregular while the distant rail vehicle remains visible beneath it."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "has a changed irregular outline compared with the start"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains near the distant track area below the plume"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The rail vehicle is too distant to clearly resolve detailed parts or exact positional change."
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A large translucent iridescent bubble moves across an outdoor field scene while changing outline and remaining visible until the end.",
+  "raw_event_description": "The video shows a grassy field with trees, a white tent-like structure on the left, and a clear sky. A large transparent iridescent bubble is already visible near the center of the frame at the start. Over time it becomes more prominent, shifts across the sky relative to the trees and tent, changes from nearly round to wavy and slightly elongated shapes, and displays changing colored bands and highlights on its surface. Later it appears smaller and farther left relative to the frame, near the trees above the tent, while remaining intact through the final visible frames.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The bubble is already present at the start rather than first appearing in the first frame.",
+      "The bubble is transparent and faint in the earliest view.",
+      "The surrounding field, trees, sky, and tent are visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "large bubble",
+      "visible_form": "large thin transparent rounded film with iridescent colored edges, bands, and highlights",
+      "material_description": "transparent surface with visible rainbow-like color patches and glossy reflections",
+      "visible_properties": [
+        "transparent",
+        "iridescent",
+        "rounded",
+        "thin outline",
+        "changing outline"
+      ],
+      "initial_motion_description": "already suspended above the field and trees, with visible position changing relative to the background over the sequence",
+      "initial_integrity_description": "appears as one continuous enclosed film without visible rupture at the start",
+      "event_role_hints": [
+        "main moving and deforming visible object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "grassy field",
+      "visible_form": "sloped yellow-green grass surface occupying the lower part of the frame",
+      "material_description": "grass-like textured ground surface",
+      "visible_properties": [
+        "stationary background",
+        "sloped surface"
+      ],
+      "initial_motion_description": "no visible independent motion",
+      "initial_integrity_description": "continuous ground surface",
+      "event_role_hints": [
+        "background reference"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "tree line",
+      "visible_form": "clusters of leafy green trees across the middle and right portions of the scene",
+      "material_description": "leafy vegetation with dark trunks or shaded interiors not clearly separated",
+      "visible_properties": [
+        "green foliage",
+        "stationary background"
+      ],
+      "initial_motion_description": "no visible independent motion",
+      "initial_integrity_description": "continuous clusters of trees",
+      "event_role_hints": [
+        "background reference",
+        "partial visual overlap with bubble at times"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "white tent",
+      "visible_form": "white triangular or conical tent-like structure on the left side of the field",
+      "material_description": "light-colored fabric-like surface with straight sloping sides",
+      "visible_properties": [
+        "white",
+        "triangular silhouette",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible independent motion",
+      "initial_integrity_description": "intact tent-like shape",
+      "event_role_hints": [
+        "background reference"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "sky",
+      "visible_form": "large blue sky area occupying the upper part of the frame with a small pale cloud-like streak visible in some frames",
+      "material_description": "open blue background with pale cloud-like feature",
+      "visible_properties": [
+        "blue",
+        "stationary background"
+      ],
+      "initial_motion_description": "no visible independent motion",
+      "initial_integrity_description": "continuous sky region",
+      "event_role_hints": [
+        "background behind bubble"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the bubble is above the tree line and to the right of the white tent in the early view",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "the tent is positioned on the left side of the field below the bubble's early position",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A faint large transparent bubble is visible above the tree tops near the center of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A white triangular tent-like structure is visible on the left side of the grassy slope."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The bubble has pink, blue, green, and purple iridescent patches along parts of its surface."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The bubble appears larger and more centrally placed against the sky."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The bubble outline changes from nearly circular to uneven and wavy."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The bubble visually overlaps the tree crowns in the background."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "Bright colored bands and highlights shift across different parts of the bubble surface."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The bubble is smaller in apparent size than during the middle portion."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The bubble is positioned farther left in the frame, near the trees above the tent."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The bubble remains a continuous enclosed visible outline through the final frames."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The field, tent, and trees keep fixed positions in the frame."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "No scene cut is visible."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The outdoor field scene is already established.",
+        "The bubble is visible above the trees with faint colored surface features."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "appears as a large transparent iridescent rounded film above the tree line"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The bubble becomes the dominant visible object in the central sky area.",
+        "Its outline and colored highlights change over time."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "shifts position relative to the background while changing from rounder to more uneven outlines"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "shows moving or changing iridescent patches and glossy highlights on its surface"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The bubble appears smaller and nearer the left-side trees and tent than before.",
+        "The bubble remains visible and unbroken at the end."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "continues moving relative to the field, tent, and trees while retaining a continuous enclosed outline"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11",
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The bubble is already present at the beginning, so its creation is not visible.",
+    "The bubble does not visibly disappear or rupture within the shown sequence."
+  ]
+}

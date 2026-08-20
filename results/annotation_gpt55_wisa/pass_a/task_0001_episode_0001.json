@@ -1,0 +1,304 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A black rod passes horizontally through three suspended colored teardrop pouches as the yellow, green, and then blue pouches tear open with colored splashes.",
+  "raw_event_description": "The scene begins with three suspended teardrop-shaped colored pouches in a row against a black background, with a black rod already entering the left yellow pouch. The yellow pouch opens first, producing expanding yellow sheets, strands, and droplets to the left and around the rod. The rod then appears farther right through the row as the green pouch opens and releases green sheets and spray. Near the end, the blue pouch at the right shows deformation and blue splashing at its left side while yellow and green fragments and droplets remain spread across the frame.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The colored pouches and black rod are clearly visible.",
+      "The rod is already contacting or entering the yellow pouch.",
+      "Small spray and surface disruption are already visible on the yellow pouch."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow pouch",
+      "visible_form": "bright yellow teardrop-shaped suspended pouch with a tapered top and rounded lower body",
+      "material_description": "smooth colored outer surface; after opening, thin sheet-like yellow material and yellow fluid-like droplets are visible",
+      "visible_properties": [
+        "bright yellow",
+        "teardrop-shaped",
+        "suspended",
+        "surface becomes torn and sheet-like during event"
+      ],
+      "initial_motion_description": "No separate motion is visible before the rod is already entering it.",
+      "initial_integrity_description": "Partly intact teardrop form with a visible disruption at the left side in the first frame.",
+      "event_role_hints": [
+        "first colored pouch visibly opened"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "green pouch",
+      "visible_form": "green teardrop-shaped suspended pouch in the middle, with a tapered top and rounded lower body",
+      "material_description": "smooth green upper surface; lower area appears textured or covered with fine droplets; green sheet-like material and droplets appear after opening",
+      "visible_properties": [
+        "green",
+        "teardrop-shaped",
+        "suspended",
+        "partly overlapping adjacent pouches"
+      ],
+      "initial_motion_description": "No visible motion at the start.",
+      "initial_integrity_description": "Initially appears mostly intact.",
+      "event_role_hints": [
+        "second colored pouch visibly opened"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "blue pouch",
+      "visible_form": "blue teardrop-shaped suspended pouch at the right, with a tapered top and rounded lower body",
+      "material_description": "smooth blue surface; blue fragments, sheets, and spray appear late in the event",
+      "visible_properties": [
+        "blue",
+        "teardrop-shaped",
+        "suspended",
+        "initially intact in most frames"
+      ],
+      "initial_motion_description": "No visible motion at the start.",
+      "initial_integrity_description": "Initially appears intact.",
+      "event_role_hints": [
+        "third colored pouch visibly affected"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "black rod",
+      "visible_form": "thin straight black cylindrical rod extending horizontally from the left",
+      "material_description": "dark, smooth, rigid-looking surface",
+      "visible_properties": [
+        "black",
+        "straight",
+        "horizontal",
+        "thin compared with the pouches"
+      ],
+      "initial_motion_description": "Position changes from left-side contact with the yellow pouch to farther right across later frames.",
+      "initial_integrity_description": "Appears continuous and intact throughout the visible sequence.",
+      "event_role_hints": [
+        "passes through the row of pouches"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "colored spray and sheets",
+      "visible_form": "expanding droplets, strands, and irregular sheet-like splashes in yellow, green, and blue",
+      "material_description": "glossy fluid-like colored material visible as droplets, threads, and thin sheets",
+      "visible_properties": [
+        "multicolored",
+        "droplet-like",
+        "sheet-like",
+        "strand-like",
+        "expands outward during event"
+      ],
+      "initial_motion_description": "Small yellow spray is already visible at the start.",
+      "initial_integrity_description": "Initially present as small dispersed yellow droplets near the yellow pouch.",
+      "event_role_hints": [
+        "visible material expelled from opened pouches"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned to the left of the green pouch",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is positioned between the yellow pouch and the blue pouch",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "extends horizontally from the left into the left side of the yellow pouch",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Three suspended teardrop-shaped pouches are visible in a left-to-right row: yellow, green, and blue."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A black horizontal rod extends from the left into the yellow pouch."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The yellow pouch has a visible opening and small yellow droplets near its left side."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "Yellow sheet-like material spreads outward to the left of the yellow pouch."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "Yellow strands and droplets form an irregular web around the rod."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The green pouch remains mostly teardrop-shaped while yellow splash material expands in front of it."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The rod is visible farther right, aligned through the area of the yellow and green pouches."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "Green sheet-like material and green droplets appear around the middle pouch."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The green pouch shows a large torn opening with green material spread across the center of the frame."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The blue pouch is still mostly intact while green splash material reaches toward it."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "Blue splash and blue sheet-like material appear at the left side of the blue pouch."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "Yellow and green droplets are dispersed across much of the left and center of the frame."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The black background and overall framing remain consistent throughout the sequence."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The row of three colored pouches is visible with the rod already entering the yellow pouch."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The yellow pouch shows an opening at its left side."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The black rod is positioned horizontally through the left side of the yellow pouch."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Small yellow droplets are visible near the yellow pouch."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "Yellow splash material expands while the rod appears farther right across the row."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The yellow pouch changes from a rounded form into torn sheet-like portions and irregular edges."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Yellow sheets, strands, and droplets spread leftward and across the center."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The rod remains visible as a horizontal line through the expanding yellow material."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The green pouch begins showing green sheet-like material and droplets around it."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "Green splash material occupies the center, and blue splash appears at the right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The green pouch shows a large torn opening and spread-out green sheet material."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The blue pouch develops visible blue splash and sheet-like material at its left side."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Yellow, green, and blue droplets and sheets are simultaneously visible across the frame."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The rod remains visible horizontally through the colored splash field."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact state of the yellow pouch before the rod reached it is not shown.",
+    "Parts of the pouches and splashes overlap, making some boundaries between yellow and green material difficult to separate late in the sequence."
+  ]
+}

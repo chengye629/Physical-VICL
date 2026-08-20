@@ -1,0 +1,281 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A wide camera view moves across a shallow reflective flat landscape with clouds, a distant horizon strip, small far objects, and no distinct independent scene-object event.",
+  "raw_event_description": "The video begins with a broad reflective wet-looking flat surface filling the foreground and middle ground, a blue sky with scattered white clouds above, and a thin distant horizontal land or embankment line near the horizon. Throughout the clip, the foreground mottled surface patterns and cloud reflections slide through the frame while the horizon stays nearly level. Small bright white specks and a few darker distant specks remain near the horizon, and low bluish hills are visible far to the right. No object visibly breaks, collides, emits material, changes shape, or shows clear independent motion apart from apparent frame changes from the camera.",
+  "observed_scope": "camera_only",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The landscape, horizon, sky, and reflective surface are visible from the start.",
+      "No discrete onset event is visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "reflective flat surface",
+      "visible_form": "broad nearly level foreground and middle-ground expanse with glossy reflective areas and mottled pale brown, white, gray, and blue patches",
+      "material_description": "wet-looking reflective surface with pale crust-like or sediment-like patches visible",
+      "visible_properties": [
+        "broad",
+        "flat",
+        "reflective",
+        "mottled",
+        "partly glossy"
+      ],
+      "initial_motion_description": "No independent surface motion is clearly discernible; its visible patterns shift in the frame with camera movement.",
+      "initial_integrity_description": "Continuous broad surface with no visible break or deformation event.",
+      "event_role_hints": [
+        "dominant visible foreground and reflection area"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "sky and clouds",
+      "visible_form": "blue sky with many scattered white cloud clusters across the upper half of the frame",
+      "material_description": "visible atmospheric sky and white cloud forms",
+      "visible_properties": [
+        "blue",
+        "white cloud patches",
+        "high in frame"
+      ],
+      "initial_motion_description": "No independent cloud motion is clearly discernible over the clip.",
+      "initial_integrity_description": "Cloud clusters remain intact in visible form.",
+      "event_role_hints": [
+        "reflected in the flat surface"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "distant horizon strip",
+      "visible_form": "thin dark and tan horizontal strip extending across much of the frame near the horizon",
+      "material_description": "distant land-like or embankment-like visual band; material not directly resolvable",
+      "visible_properties": [
+        "thin",
+        "horizontal",
+        "distant",
+        "dark-toned"
+      ],
+      "initial_motion_description": "No independent motion visible; remains near the horizon while the camera view changes.",
+      "initial_integrity_description": "Continuous horizontal strip with no visible disruption.",
+      "event_role_hints": [
+        "separates reflective foreground from far sky and hills"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "small white distant specks",
+      "visible_form": "several tiny bright white points or short marks near the horizon line",
+      "material_description": "too distant to identify material; bright white visible surfaces",
+      "visible_properties": [
+        "tiny",
+        "bright",
+        "white",
+        "distant"
+      ],
+      "initial_motion_description": "No clear independent motion visible; positions remain near the distant horizon.",
+      "initial_integrity_description": "Individual specks remain visually small and intact.",
+      "event_role_hints": [
+        "distant visible objects along or near the horizon"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "distant hills",
+      "visible_form": "low bluish-gray landforms along the far right horizon",
+      "material_description": "distant hill or mountain silhouettes; material not directly resolvable",
+      "visible_properties": [
+        "low",
+        "bluish-gray",
+        "distant",
+        "horizon-level"
+      ],
+      "initial_motion_description": "No independent motion visible.",
+      "initial_integrity_description": "Continuous distant silhouette remains visible.",
+      "event_role_hints": [
+        "background landmark"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "small dark distant specks",
+      "visible_form": "tiny dark marks near the horizon, especially around the central to right-central area",
+      "material_description": "too distant to identify material; dark visible silhouettes",
+      "visible_properties": [
+        "tiny",
+        "dark",
+        "distant"
+      ],
+      "initial_motion_description": "No clear independent motion visible; apparent position changes are not separable from camera movement.",
+      "initial_integrity_description": "Remain as small dark marks with no visible shape change.",
+      "event_role_hints": [
+        "distant visible objects near the horizon"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "occupies the foreground and middle ground below the sky",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "shows visible cloud-like reflections matching the sky area above",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "lies between the reflective foreground and the sky near the horizon",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "appears as tiny bright marks near the horizon strip",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "appears beyond or along the far right horizon region",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e6"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A broad glossy mottled surface fills the lower portion of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Blue sky with scattered white clouds fills the upper portion of the frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "Cloud-shaped light and blue areas are visible as reflections on the flat surface."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "A thin horizontal dark and tan strip remains near the horizon."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "Several tiny bright white specks are visible near the horizon line."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "Low bluish-gray hills are visible along the far right horizon."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "Foreground mottled patches shift position in the frame across the clip."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The horizon stays nearly level while the foreground changes its frame position."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "No abrupt scene cut is visible."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "No distinct object visibly deforms, separates, or collides with another object."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The view remains a wide landscape shot of a reflective flat area under a clouded sky.",
+        "Visible changes are dominated by frame-relative shifts of foreground patterns and reflections."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The surface reflections and mottled patches remain visible while their positions shift within the frame."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The sky and cloud forms remain visible with no clear independent shape change."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The horizon strip remains near the same vertical area of the frame and stays nearly horizontal."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The tiny white distant specks remain near the horizon with no clear independent motion."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The distant hills remain visible on the far right horizon."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The tiny dark distant specks remain near the horizon with no clear independent motion."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "tracking",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e7",
+      "e8",
+      "e9"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The tiny white and dark distant specks are too small to identify.",
+    "Any independent motion of distant specks is not separable from camera movement in the visible clip."
+  ]
+}

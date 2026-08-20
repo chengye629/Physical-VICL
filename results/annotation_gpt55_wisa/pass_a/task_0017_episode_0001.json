@@ -1,0 +1,296 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A clear liquid stream enters an upright glass, accumulates at the bottom, and rises while a card with arrows remains visible behind the glass.",
+  "raw_event_description": "At the start, a tall transparent glass stands upright on a red surface with a white card showing two dark left-pointing arrows visible through or behind the glass. A narrow transparent liquid stream then appears from above the glass, enters through the opening at a diagonal angle, and continues pouring into the glass. Clear liquid accumulates at the bottom, with bubbles and bright swirling shapes visible. The liquid level rises over time, and the lower arrow on the card becomes visually altered where it is seen through the liquid.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The glass, red surface, red background, and arrow card are clearly visible.",
+      "No entering liquid stream is visible in the first frame.",
+      "The glass interior appears mostly empty at the start."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "glass",
+      "visible_form": "tall upright cylindrical drinking glass with open top and thicker circular base",
+      "material_description": "transparent, glossy, clear solid-looking container",
+      "visible_properties": [
+        "transparent",
+        "cylindrical",
+        "upright",
+        "open at top",
+        "reflective highlights"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact, with no visible cracks or breaks",
+      "event_role_hints": [
+        "receives the entering transparent liquid"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "arrow card",
+      "visible_form": "white rectangular sheet or card with two dark left-pointing arrows arranged vertically",
+      "material_description": "matte white surface with dark printed arrow shapes",
+      "visible_properties": [
+        "white rectangle",
+        "two dark arrows",
+        "flat",
+        "partly visible through the glass outline"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact, flat, and unbroken",
+      "event_role_hints": [
+        "its arrow shapes remain visible behind or through the glass during the pouring"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "transparent liquid",
+      "visible_form": "narrow clear stream followed by accumulated clear liquid inside the bottom of the glass",
+      "material_description": "transparent fluid-like appearance with bright highlights, bubbles, and curved surface shapes",
+      "visible_properties": [
+        "transparent",
+        "glossy highlights",
+        "forms a stream",
+        "forms a rising pool",
+        "contains visible bubbles"
+      ],
+      "initial_motion_description": "not visible at the start",
+      "initial_integrity_description": "not visible at the start; later appears as a continuous stream and accumulated liquid",
+      "event_role_hints": [
+        "enters the glass and accumulates inside it"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "red surface and backdrop",
+      "visible_form": "flat red tabletop with red fabric-like background behind it",
+      "material_description": "red surfaces; backdrop has soft folds or wrinkles",
+      "visible_properties": [
+        "red",
+        "tabletop horizontal surface",
+        "fabric-like background",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "continuous visible background and surface",
+      "event_role_hints": [
+        "supports the glass and provides the background"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "stands upright on the red surface",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is visible in the central area behind or through the transparent glass, with part of its left edge extending outside the glass outline",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is not visible inside the glass at the start",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A tall transparent glass stands upright on a red tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A white rectangular card with two dark left-pointing arrows is visible in the central area of the glass."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "No accumulated transparent liquid is visible inside the glass at the start."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "No liquid stream is visible above the glass at the start."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A narrow transparent stream appears from above the glass."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The transparent stream enters the open top of the glass at a diagonal angle."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "Transparent liquid becomes visible at the bottom of the glass."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "Small bright bubbles or speckles are visible in the liquid near the bottom of the glass."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "Bright curved shapes and moving-looking bands are visible within the lower liquid."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The visible liquid level inside the glass becomes higher over time."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The lower arrow is viewed through the accumulated liquid and appears visually displaced or distorted."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The upper arrow remains visible above the main accumulated liquid region."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The glass and card remain in approximately the same positions in the frame."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The camera framing remains steady with no visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The setup is visible before the liquid stream appears."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The glass is upright and stationary."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The arrow card is stationary and visible through or behind the glass."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "No visible stream or accumulated liquid is present."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The pouring process begins and liquid accumulates in the glass."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "A narrow transparent stream enters the glass from above at a diagonal angle."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Transparent liquid appears at the bottom and the visible level increases."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Bubbles and bright curved internal shapes are visible in the lower liquid."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The glass remains upright and stationary."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The arrow card remains stationary behind or through the glass."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The accumulated liquid occupies more of the lower portion of the glass."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The visible liquid level is higher than earlier in the event."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The lower arrow appears altered where it is seen through the liquid, while the upper arrow remains visible above the main liquid region."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The glass remains intact and stationary."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13",
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact attachment or placement of the arrow card relative to the glass is not fully visible.",
+    "The source container or spout producing the liquid stream is mostly outside the frame."
+  ]
+}

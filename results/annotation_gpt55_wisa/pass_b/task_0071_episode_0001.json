@@ -1,0 +1,235 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "beige liquid mass",
+      "axes": {
+        "entity_kind": "liquid_body",
+        "event_roles": [
+          "target",
+          "medium"
+        ],
+        "material_phase": "liquid",
+        "physical_properties": [
+          "viscous",
+          "reflective"
+        ],
+        "initial_motion_state": "flowing",
+        "initial_integrity_state": "not_applicable"
+      },
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "small beige droplets",
+      "axes": {
+        "entity_kind": "liquid_body",
+        "event_roles": [
+          "product",
+          "target"
+        ],
+        "material_phase": "liquid",
+        "physical_properties": [
+          "viscous",
+          "reflective"
+        ],
+        "initial_motion_state": "unknown",
+        "initial_integrity_state": "separated"
+      },
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "tiny colored specks",
+      "axes": {
+        "entity_kind": "unknown",
+        "event_roles": [],
+        "material_phase": "unknown",
+        "physical_properties": [],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "unknown"
+      },
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "free_surface_motion",
+      "raw_type": "disturbed viscous liquid surface reshaping from raised folds into a rim and tall sheet",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "event_roles": [
+            "target",
+            "medium"
+          ]
+        },
+        {
+          "object_id": "obj_2",
+          "event_roles": [
+            "product",
+            "target"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e8",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "fluid_motion",
+        "type": "droplet_motion",
+        "raw_type": "small liquid droplets and bead-like tips remain and shift around the raised surface forms",
+        "participants": [
+          {
+            "object_id": "obj_2",
+            "event_roles": [
+              "target",
+              "product"
+            ]
+          },
+          {
+            "object_id": "obj_1",
+            "event_roles": [
+              "medium"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e2",
+          "e7",
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention or initiating object",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e12"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e6",
+        "e8",
+        "e11",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "liquid free surface changes from raised folded sheets and strands into a larger smooth cup-like rim, then into a taller broad curled sheet with surrounding mounds and dimples"
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "central raised liquid geometry reshapes from irregular folds to rounded rim and then a leaf-like raised sheet"
+      },
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "small droplets and bead-like tips show changing positions around the central raised liquid forms"
+      },
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "material_response",
+      "type": "viscosity",
+      "raw_mechanism": "viscous liquid behavior supports smooth sheets, strands, rims, and slow-looking surface reshaping",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "surface tension shapes rounded droplets, bead tips, smooth rims, and dimples on the liquid surface",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e7",
+        "e9",
+        "e11"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "blue faceted object",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective",
+        "translucent"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "target"
+      ],
+      "raw_description": "Upright deep blue round gem-like faceted solid with glossy bright white highlights; remains whole while visible facets and highlights change.",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "dark reflective surface",
+      "entity_kind": "surface_or_region",
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "support",
+        "medium"
+      ],
+      "raw_description": "Flat glossy dark surface beneath the blue object, showing a mirrored optical pattern.",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "reflected image",
+      "entity_kind": "unknown",
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "event_roles": [
+        "target"
+      ],
+      "raw_description": "Inverted blue-and-white optical reflection visible below the faceted object, changing with the object's visible highlights.",
+      "evidence_refs": [
+        "e2",
+        "e7"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "optical_interaction",
+      "type": "reflection",
+      "raw_type": "gradual shifting reflected and specular highlight patterns on a faceted object and glossy surface",
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_object_id": null,
+      "target_object_ids": [],
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "visible blue and white facet-highlight pattern changes gradually across the object's face"
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "reflected light pattern visible on the glossy dark surface changes during the sequence"
+      },
+      "evidence_refs": [
+        "e2",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "the inverted reflected image changes in blue and white areas corresponding to the changing visible highlights"
+      },
+      "evidence_refs": [
+        "e2",
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "light reflecting from faceted glossy surfaces and the dark reflective support produces changing visible highlights and a changing mirrored image",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    }
+  ]
+}

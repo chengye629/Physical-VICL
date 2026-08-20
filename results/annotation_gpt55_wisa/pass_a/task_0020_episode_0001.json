@@ -1,0 +1,342 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A static coastal sunset view shows small waves repeatedly reaching the pebbled shore while a bright band of sunlight flickers on the water.",
+  "raw_event_description": "The video begins with the sun low above the horizon over a calm-looking sea, a dark cliff and building on the right, and a pebbled beach in the foreground. Throughout the clip, the sea surface continuously ripples, small wave fronts move toward the lower and right shoreline, thin white foam lines appear where the water reaches the beach, and those foam lines later thin or break apart as the waterline shifts back. The bright vertical band on the water below the sun changes shape and intensity from frame to frame. The cliff, building, horizon, and beach remain in stable positions in the frame.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The sea, sun, shoreline, cliff, and building are visible from the first frame.",
+      "The visible wave motion is already underway at the start."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "sea water",
+      "visible_form": "broad water surface extending from the foreground shoreline to the horizon",
+      "material_description": "dark blue-gray surface with glossy highlights and pale foam near the shore",
+      "visible_properties": [
+        "rippling surface",
+        "small wave fronts",
+        "shimmering bright patches",
+        "thin white foam near shoreline"
+      ],
+      "initial_motion_description": "surface ripples and small wave fronts are already moving at the start",
+      "initial_integrity_description": "appears as one continuous water surface",
+      "event_role_hints": [
+        "moving surface",
+        "reaches shoreline",
+        "forms visible foam lines"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "beach",
+      "visible_form": "sloped curved strip along the lower and right foreground",
+      "material_description": "dark pebbled or sandy-looking surface with small bright specks",
+      "visible_properties": [
+        "curved shoreline edge",
+        "dark granular texture",
+        "partly wet-looking darker band near water"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous exposed beach surface",
+      "event_role_hints": [
+        "shoreline surface alternately bordered by water and foam"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "sun",
+      "visible_form": "bright circular glow low above the horizon near the center of the view",
+      "material_description": "yellow-white luminous disk and surrounding glow",
+      "visible_properties": [
+        "very bright center",
+        "warm yellow-orange surrounding light",
+        "positioned above horizon"
+      ],
+      "initial_motion_description": "no perceptible displacement over the visible interval",
+      "initial_integrity_description": "single bright disk or glow remains visible",
+      "event_role_hints": [
+        "source of visible bright band on water"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "bright water band",
+      "visible_form": "vertical column of bright shimmering patches on the sea below the sun",
+      "material_description": "gold-white light patches visible on the water surface",
+      "visible_properties": [
+        "vertical alignment below sun",
+        "flickering brightness",
+        "broken shimmering texture"
+      ],
+      "initial_motion_description": "brightness pattern changes with the moving water surface",
+      "initial_integrity_description": "appears as a broken but continuous-looking bright path",
+      "event_role_hints": [
+        "visible optical pattern on water"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "right cliff",
+      "visible_form": "large dark steep landform rising from the water on the right side",
+      "material_description": "mostly black silhouette with uneven rocky or vegetated outline",
+      "visible_properties": [
+        "steep vertical edge",
+        "irregular outline",
+        "dark silhouette"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "solid continuous cliff silhouette",
+      "event_role_hints": [
+        "stationary background boundary"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "building",
+      "visible_form": "light-colored structure on top of the right cliff",
+      "material_description": "pale walls and dark roof outline",
+      "visible_properties": [
+        "rectangular building shape",
+        "roofline visible",
+        "positioned above cliff edge"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "intact building silhouette remains visible",
+      "event_role_hints": [
+        "stationary background object"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "cloudy sky",
+      "visible_form": "layered cloud cover across the upper portion of the frame",
+      "material_description": "gray and dark cloud bands with warmer light near the sun",
+      "visible_properties": [
+        "layered cloud shapes",
+        "darker upper cloud areas",
+        "brighter area surrounding sun"
+      ],
+      "initial_motion_description": "no distinct cloud motion is trackable",
+      "initial_integrity_description": "continuous cloud cover visible",
+      "event_role_hints": [
+        "background sky"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "dark shoreline object",
+      "visible_form": "small dark flat object near the waterline on the right side of the beach",
+      "material_description": "dark, low, elongated visible shape",
+      "visible_properties": [
+        "flat-looking outline",
+        "near surf line",
+        "partly bordered by water at times"
+      ],
+      "initial_motion_description": "no clear independent motion",
+      "initial_integrity_description": "single dark shape remains visible when not obscured by wave edge",
+      "event_role_hints": [
+        "stationary object near moving water"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "water borders the curved edge of the beach",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "sun is low above the horizon over the sea",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "bright band lies on the sea surface below the sun",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2",
+        "e13"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "building is positioned on top of the right cliff",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "subject_id": "obj_8",
+      "relation_description": "dark object is near the waterline on the right side of the beach",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The sun appears low above the horizon near the center of the scene."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "A vertical bright band is visible on the water below the sun."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "The sea surface shows many small moving ripples."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "Small wave fronts move toward the lower and right shoreline."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "Thin white foam lines appear along the beach edge when waves reach the shore."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "Foam lines along the shore become thinner or discontinuous after appearing."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "Dark pebbled beach remains visible in the lower and right foreground."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "A large dark cliff silhouette occupies the right edge of the frame."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "A light-colored building remains visible on top of the right cliff."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "A small dark flat object lies near the waterline on the right side."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The horizon, cliff, and building stay at fixed image positions throughout the clip."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "Layered gray clouds remain visible across the upper portion of the frame."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The bright patches within the vertical water band change shape and brightness from frame to frame."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "No scene cut is visible."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The scene remains a continuous coastal view while water motion and light-pattern changes persist."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The water surface ripples continuously and sends small wave fronts toward the shoreline."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "White foam appears along the beach edge and then thins or breaks apart."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The visible beach edge is alternately bordered by advancing water and exposed dark pebbled surface."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The sun remains low above the horizon with no perceptible position change."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The bright band on the water flickers and changes its patch pattern."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The cliff remains stationary in the right side of the frame."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The building remains stationary on top of the cliff."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "The cloud shapes remain visible with no distinct trackable motion."
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "The dark shoreline object remains near the waterline while wave edges pass close to it."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11",
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

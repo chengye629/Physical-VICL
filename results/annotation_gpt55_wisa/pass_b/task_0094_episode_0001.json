@@ -1,0 +1,258 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "shiny circular disc",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target",
+        "product"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e7",
+        "e8",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "scissors",
+      "entity_kind": "articulated_object",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e5",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "left hand",
+      "entity_kind": "agent",
+      "event_roles": [
+        "actor",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "right hand",
+      "entity_kind": "agent",
+      "event_roles": [
+        "actor"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "teal fabric surface",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fracture_separation",
+      "type": "cutting_separation",
+      "raw_type": "scissors cut a slit through the disc until a sector-shaped piece separates",
+      "participants": {
+        "actors": [
+          "obj_3",
+          "obj_4"
+        ],
+        "tools": [
+          "obj_2"
+        ],
+        "targets": [
+          "obj_1"
+        ],
+        "supports": [
+          "obj_3",
+          "obj_5"
+        ]
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": null,
+        "raw_type": "scissors advance across the disc and then move away",
+        "participants": {
+          "actors": [
+            "obj_4"
+          ],
+          "tools": [
+            "obj_2"
+          ],
+          "targets": []
+        },
+        "evidence_refs": [
+          "e5",
+          "e13"
+        ]
+      }
+    ],
+    "action": {
+      "family": "separation",
+      "type": "cut",
+      "raw_action": "right hand operates scissors to cut the disc from the central opening to the outer edge",
+      "actor_object_ids": [
+        "obj_4"
+      ],
+      "tool_object_ids": [
+        "obj_2"
+      ],
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "support_object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e10",
+        "e11"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "integrity",
+        "type": "penetrated",
+        "raw_transition": "a narrow diagonal slit forms and lengthens from the central opening toward the outer rim"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "a sector-shaped portion tilts away from the rest of the disc while still near the cutting path"
+      },
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "integrity",
+        "type": "broken",
+        "raw_transition": "the slit reaches the outer edge and a curved sector-shaped piece separates from the remaining disc"
+      },
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "the scissors move away to the right after the disc piece separates"
+      },
+      "evidence_refs": [
+        "e13"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "shear",
+      "raw_mechanism": "the scissor blades apply localized opposing shear forces along the cut path through the disc",
+      "linked_process_family": "fracture_separation",
+      "linked_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "the disc material loses structural connectedness along the advancing blade path, allowing the sector-shaped piece to separate",
+      "linked_process_family": "fracture_separation",
+      "linked_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  ]
+}

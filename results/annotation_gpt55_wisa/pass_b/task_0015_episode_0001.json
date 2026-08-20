@@ -1,0 +1,313 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "illuminated parade float",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "emissive",
+        "reflective"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e6",
+        "e10",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "red crowned figure",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "emissive",
+        "reflective"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "blue arched decoration",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "emissive"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "teal front decorations",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "emissive"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "spectators",
+      "entity_kind": "agent",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "overhead hanging lights",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "dark parade route",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support",
+        "target"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_8",
+      "name": "lower float lamps",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "slow translation of the illuminated parade float along the parade route",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "event_roles": [
+            "target"
+          ]
+        },
+        {
+          "object_id": "obj_7",
+          "event_roles": [
+            "support"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e4",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "illumination_change",
+        "raw_type": "colored decorative lights blink and change brightness",
+        "participants": [
+          {
+            "object_id": "obj_1",
+            "event_roles": [
+              "source"
+            ]
+          },
+          {
+            "object_id": "obj_8",
+            "event_roles": [
+              "source"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "colored light from the float reflects on the dark pavement",
+        "participants": [
+          {
+            "object_id": "obj_1",
+            "event_roles": [
+              "source"
+            ]
+          },
+          {
+            "object_id": "obj_7",
+            "event_roles": [
+              "target"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e14"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the float is already present and moving during the clip",
+      "evidence_refs": [
+        "e1",
+        "e4"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e10",
+        "e13"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the float changes position relative to the spectator rows and route edges, ending farther along the route"
+      },
+      "evidence_refs": [
+        "e4",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "magenta, blue, teal, orange, and white light elements on the float change brightness during the clip"
+      },
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "colored reflections from the float lights appear on the pavement near the moving float"
+      },
+      "evidence_refs": [
+        "e14"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "supported mechanical transport along the paved route, with the driving source not visible in the record",
+      "linked_process_family": "rigid_motion",
+      "evidence_refs": [
+        "e4",
+        "e10"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "float lamps and decorative light elements produce visible colored light",
+      "linked_process_family": "optical_interaction",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "light from the illuminated float reflects from the dark pavement surface",
+      "linked_process_family": "optical_interaction",
+      "evidence_refs": [
+        "e14"
+      ]
+    }
+  ]
+}

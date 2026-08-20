@@ -1,0 +1,372 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A static time-lapse view shows the sun shifting lower toward a cloud bank while clouds and mist change over forested mountain ridges.",
+  "raw_event_description": "The video begins with a bright sun disk above layered clouds and distant ridges, with evergreen trees in the foreground and a large tree on the right. Across the sequence, the sun's apparent position moves lower and slightly right toward the top of a long horizontal cloud bank. The cloud bank changes shape and position, with brighter edges near the sun. Thin mist or cloud patches appear and fade along the valleys and ridge slopes. The foreground trees and mountain ridges remain fixed in frame, and the camera framing appears static.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The landscape, sun, clouds, ridges, and foreground trees are visible from the start.",
+      "The visible changes are already in progress at the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "sun disk",
+      "visible_form": "small bright circular disk in the sky",
+      "material_description": "not visually resolved beyond intense bright light",
+      "visible_properties": [
+        "bright",
+        "round",
+        "yellow-white",
+        "surrounded by glow"
+      ],
+      "initial_motion_description": "already visible above the cloud bank with no abrupt motion at the start",
+      "initial_integrity_description": "appears as a continuous circular bright disk",
+      "event_role_hints": [
+        "changes apparent position relative to clouds and ridge line",
+        "produces visible glare and bright cloud edges"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "right foreground evergreen",
+      "visible_form": "tall conical tree occupying the right side of the frame",
+      "material_description": "dark green needle-like foliage and branching silhouette",
+      "visible_properties": [
+        "tall",
+        "dark",
+        "branchy",
+        "stationary in frame"
+      ],
+      "initial_motion_description": "no visible independent motion",
+      "initial_integrity_description": "tree outline remains intact",
+      "event_role_hints": [
+        "foreground reference object"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "foreground forest trees",
+      "visible_form": "multiple smaller conical evergreen trees and leafy green vegetation near the lower frame",
+      "material_description": "green foliage with dark tree silhouettes",
+      "visible_properties": [
+        "green",
+        "dark silhouettes",
+        "clustered",
+        "stationary in frame"
+      ],
+      "initial_motion_description": "no visible independent motion",
+      "initial_integrity_description": "tree group remains intact",
+      "event_role_hints": [
+        "foreground reference objects"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "mountain ridges",
+      "visible_form": "layered dark ridgelines extending across the middle and background",
+      "material_description": "distant landforms visible as dark blue-gray and green silhouettes",
+      "visible_properties": [
+        "layered",
+        "distant",
+        "dark",
+        "stationary in frame"
+      ],
+      "initial_motion_description": "no visible independent motion",
+      "initial_integrity_description": "ridge outlines remain continuous",
+      "event_role_hints": [
+        "background reference objects"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "horizontal cloud bank",
+      "visible_form": "long uneven band of clouds stretching across the sky above the ridges",
+      "material_description": "white, gray, and golden cloud forms with soft edges",
+      "visible_properties": [
+        "soft-edged",
+        "elongated",
+        "gray-white",
+        "gold-lit edges",
+        "shape-changing"
+      ],
+      "initial_motion_description": "cloud forms are already present and gradually changing",
+      "initial_integrity_description": "appears as a continuous uneven cloud band with broken contours",
+      "event_role_hints": [
+        "changes shape and position relative to the sun",
+        "partly aligns with the sun near the end"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "upper sky clouds",
+      "visible_form": "patches and streaks of cloud spread across the upper sky",
+      "material_description": "gray and pale cloud patches with soft boundaries",
+      "visible_properties": [
+        "patchy",
+        "streaked",
+        "soft-edged",
+        "shape-changing"
+      ],
+      "initial_motion_description": "cloud patches are already visible and gradually changing",
+      "initial_integrity_description": "cloud patches remain present but their shapes vary",
+      "event_role_hints": [
+        "background changing sky element"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "valley mist",
+      "visible_form": "thin pale patches and plumes near valleys and ridge slopes",
+      "material_description": "whitish translucent mist-like forms",
+      "visible_properties": [
+        "pale",
+        "translucent",
+        "soft-edged",
+        "appearing and fading"
+      ],
+      "initial_motion_description": "small mist patches are visible near ridge gaps and lower left areas",
+      "initial_integrity_description": "diffuse, discontinuous patches",
+      "event_role_hints": [
+        "changes visibility and shape over time"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "lens flare spots",
+      "visible_form": "small greenish circular light spots near the lower middle-right portion of the image",
+      "material_description": "visible optical spots with green coloration",
+      "visible_properties": [
+        "small",
+        "greenish",
+        "semi-transparent",
+        "circular"
+      ],
+      "initial_motion_description": "not prominent in the earliest view, later visible near the lower central area",
+      "initial_integrity_description": "appears as faint circular spots when visible",
+      "event_role_hints": [
+        "image-plane light artifact"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the sun disk is above the long horizontal cloud bank",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "the large evergreen stands in the foreground on the right side, overlapping the sky and distant ridges",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "the cloud bank lies above the distant mountain ridges",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The bright circular sun disk is positioned above the long horizontal cloud bank."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A tall evergreen tree occupies the right side of the frame and overlaps the sky and distant ridges."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A long uneven cloud band stretches across the sky above the mountain ridges."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "The foreground trees keep the same positions in the image throughout the video."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The mountain ridge outlines keep the same positions in the image throughout the video."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The sun disk appears lower relative to the upper sky clouds than it did at the beginning."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The horizontal cloud bank has changed contour, with brighter golden edges near the sun."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "A pale mist patch is visible along a valley or ridge slope near the center-right background."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "Small greenish circular light spots appear near the lower middle-right area of the image."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The sun disk is close to the top edge of the horizontal cloud bank."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The cloud bank extends beneath the sun and has a brighter orange rim near the sun."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The sky color near the sun appears more orange than the upper sky."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "Upper sky cloud patches change shape across the sequence."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "Thin mist or cloud patches appear and fade near the valleys and ridge slopes."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "continuous",
+      "observation": "No scene cut is visible."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The landscape is already established with foreground evergreens, layered ridges, a long cloud bank, and the sun above it."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The sun disk is visible above the cloud bank."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The horizontal cloud bank spans the sky above the ridges."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The right evergreen remains still in the frame."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e13",
+        "e14"
+      ],
+      "observations": [
+        "The sun's apparent position shifts lower while the cloud bank and upper clouds change shape.",
+        "Mist patches become visible in parts of the valleys and along ridge slopes."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The sun disk appears lower relative to surrounding clouds."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The horizontal cloud bank changes contour and shows brighter edging near the sun."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "Upper sky cloud patches change shape."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "Mist patches appear and fade near the ridges."
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "Greenish circular light spots become visible in the lower middle-right image area."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The sun is close to the upper edge of the cloud bank, and the nearby cloud rim is orange and bright."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The sun disk is near the cloud bank."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The cloud bank lies beneath the sun and shows a bright orange rim."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The mountain ridges remain unchanged in position in the frame."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The right evergreen remains unchanged in position in the frame."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e4",
+      "e5",
+      "e15"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact source of the greenish circular light spots is not resolved from visible evidence alone."
+  ]
+}

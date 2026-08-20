@@ -1,0 +1,294 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A cloudy liquid in a large metal pot continuously churns with surface bulges, edge foam, pale partially submerged clumps, and rising mist.",
+  "raw_event_description": "The video begins with an open metal pot filled near the rim with cloudy pale liquid. The liquid surface is already moving, with rounded bulges and small bubbles appearing and collapsing near the center. White froth remains around parts of the perimeter. Pale irregular clumps intermittently rise into view, shift, and become obscured again by the cloudy liquid. A translucent white mist plume remains above the pot and drifts mostly behind and to the right of the rim throughout the clip. No clear beginning or end of the process is shown.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The pot, rim, cloudy liquid, foam, and mist are visible in the first frame.",
+      "The liquid surface is already active in the first frame.",
+      "Some contents below the surface are obscured by the cloudy liquid and mist."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "metal pot",
+      "visible_form": "large round open vessel with a wide raised rim",
+      "material_description": "gray reflective metallic surface",
+      "visible_properties": [
+        "circular opening",
+        "wide rim",
+        "stationary relative to background",
+        "filled close to rim"
+      ],
+      "initial_motion_description": "no visible motion of the pot",
+      "initial_integrity_description": "appears intact with continuous rim and side wall",
+      "event_role_hints": [
+        "contains the moving liquid"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "cloudy liquid",
+      "visible_form": "pale opaque liquid surface filling the pot",
+      "material_description": "milky gray-white liquid appearance",
+      "visible_properties": [
+        "opaque",
+        "wavy surface",
+        "rounded surface bulges",
+        "small bubbles visible at surface"
+      ],
+      "initial_motion_description": "surface is already churning with bubbles and bulges",
+      "initial_integrity_description": "continuous liquid surface with no visible separation from the pot contents",
+      "event_role_hints": [
+        "main moving surface in the scene"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "edge foam",
+      "visible_form": "white frothy patches and small bubble clusters around parts of the liquid perimeter",
+      "material_description": "white foam-like surface layer",
+      "visible_properties": [
+        "clustered bubbles",
+        "thin ring-like patches",
+        "concentrated near pot wall"
+      ],
+      "initial_motion_description": "foam patches shift slightly with the surrounding liquid surface",
+      "initial_integrity_description": "present as separated patches rather than one complete ring",
+      "event_role_hints": [
+        "moves along the liquid edge"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "pale clumps",
+      "visible_form": "irregular pale masses partly visible at or below the liquid surface",
+      "material_description": "wet pale white solid-looking or semi-solid-looking pieces",
+      "visible_properties": [
+        "irregular shapes",
+        "partially submerged",
+        "intermittently obscured"
+      ],
+      "initial_motion_description": "pieces appear within the moving central surface and shift with it",
+      "initial_integrity_description": "visible as uneven clumps with no clear full outline",
+      "event_role_hints": [
+        "rise into view and sink or become hidden again"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "mist plume",
+      "visible_form": "translucent whitish haze above and behind the pot",
+      "material_description": "visible vapor-like mist",
+      "visible_properties": [
+        "semi-transparent",
+        "soft-edged",
+        "drifting plume"
+      ],
+      "initial_motion_description": "mist is already rising and drifting behind the pot",
+      "initial_integrity_description": "diffuse plume with changing shape",
+      "event_role_hints": [
+        "visible emission-like plume above the liquid"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "background wall and equipment",
+      "visible_form": "green-brown wall area and metallic rectangular object behind the pot",
+      "material_description": "painted wall-like surface and gray metallic surface",
+      "visible_properties": [
+        "static background",
+        "partly obscured by mist"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "unchanged visible background surfaces",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "cloudy liquid is inside the open metal pot",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "foam patches lie along the perimeter of the liquid near the pot wall",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "pale clumps are partially submerged in the cloudy liquid",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "mist is visible above and behind the open pot",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "The open metal pot remains filled near the rim with cloudy pale liquid."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The liquid surface is already agitated with rounded central bulges."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "White foam patches line portions of the liquid perimeter along the pot wall."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "Pale irregular clumps appear partly submerged near the central liquid surface."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "Translucent whitish mist is visible above and behind the pot rim."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A central mound of cloudy liquid swells upward and then lowers back into the surface."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "A pale clump near the center shifts position and becomes partly hidden by cloudy liquid."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The mist behind the right side of the rim appears thicker and extends higher in the frame."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The liquid surface remains cloudy and wavy with foam still present at the edges."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The pot rim and background stay in fixed positions within the frame."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The scene starts during an already ongoing liquid-surface process."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "cloudy liquid surface churns with central bulges and small surface bubbles"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "foam remains gathered around parts of the liquid edge"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "pale clumps are intermittently visible near the moving surface"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "mist drifts above and behind the pot"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The central surface repeatedly rises and falls while pale material appears and disappears."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "central liquid mound swells upward and lowers"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "pale clump shifts and becomes partially obscured"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The same surface motion continues with persistent edge foam and visible mist."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "cloudy liquid continues waving and bubbling at the surface"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "foam patches persist along the perimeter"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "mist behind the right rim appears denser and higher in the frame"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The full shapes and identities of the pale clumps below the cloudy surface are not visible."
+  ]
+}

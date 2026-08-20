@@ -1,0 +1,279 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "city district",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e7",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "checkered building",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "park",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "distant tower",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "rooftop antennas",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "cloud layer",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e6",
+        "e8",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "gray distant veil",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e7"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "id": "proc_1",
+      "family": "gas_particulate_motion",
+      "type": null,
+      "raw_type": "gradual cloud-layer and atmospheric veil evolution",
+      "participant_object_ids": [
+        "obj_6",
+        "obj_7"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "id": "proc_2",
+        "family": "optical_interaction",
+        "type": "illumination_change",
+        "raw_type": "gradual scene brightness and visibility change under changing cloud cover",
+        "participant_object_ids": [
+          "obj_1",
+          "obj_6",
+          "obj_7"
+        ],
+        "evidence_refs": [
+          "e6",
+          "e7",
+          "e8",
+          "e9",
+          "e12"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_object_ids": [],
+      "target_object_ids": [],
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "id": "imp_1",
+      "object_id": "obj_6",
+      "process_id": "proc_1",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "cloud edges and underside shapes change, with more broken-looking cloud patches toward the upper right"
+      },
+      "evidence_refs": [
+        "e5",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "id": "imp_2",
+      "object_id": "obj_6",
+      "process_id": "proc_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "intensity_increase",
+        "raw_transition": "brighter white cloud areas become more visible and a small blue sky patch appears near the upper right"
+      },
+      "evidence_refs": [
+        "e6",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "id": "imp_3",
+      "object_id": "obj_7",
+      "process_id": "proc_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "the gray distant veil remains semi-opaque over the left and central distance and varies in apparent visibility"
+      },
+      "evidence_refs": [
+        "e4",
+        "e7"
+      ]
+    },
+    {
+      "id": "imp_4",
+      "object_id": "obj_1",
+      "process_id": "proc_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "overall city illumination increases while distant skyline areas behind the gray veil remain muted"
+      },
+      "evidence_refs": [
+        "e7",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "id": "mech_1",
+      "process_id": "proc_1",
+      "family": "mechanical_forcing",
+      "type": "airflow_forcing",
+      "raw_mechanism": "airflow advects and reshapes the visible cloud and aerosol masses across the sky",
+      "object_ids": [
+        "obj_6",
+        "obj_7"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "id": "mech_2",
+      "process_id": "proc_2",
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "cloud and veil volumes scatter and transmit daylight, producing brighter cloud areas and muted skyline visibility",
+      "object_ids": [
+        "obj_1",
+        "obj_6",
+        "obj_7"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e12"
+      ]
+    }
+  ]
+}

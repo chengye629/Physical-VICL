@@ -1,0 +1,327 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "Two hands hold a forked wooden handle and a black pouch joined by yellow strands while the strands are gradually rearranged from loose wavy loops into straighter parallel lengths.",
+  "raw_event_description": "At the start, a left hand holds a small black pouch-like piece at the left side of the frame, and a right hand holds a brown forked wooden handle at the right side. Multiple yellow strands run between them, with several visible loose loops and crossings along the span. Over time the right hand slightly rotates and shifts the forked handle, making both top tips more visible, while the yellow strands visibly change shape: the loops narrow, slide, and reduce in number, and the span becomes more aligned into straighter side-by-side strands. The left hand continues holding the black piece with small adjustments. No release, break, or separation is visible by the end.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "Both hands and the connected objects are already visible at the first frame.",
+      "The yellow strands are already extended between the black pouch-like piece and the forked wooden handle.",
+      "The visible change is a gradual manipulation continuing through the clip rather than a single abrupt onset."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "left hand",
+      "visible_form": "human hand entering from the left, fingers pinching a small black piece",
+      "material_description": "skin-toned hand with visible fingers and fingernails",
+      "visible_properties": [
+        "light skin color",
+        "fingers partially curled around object",
+        "small hand motions"
+      ],
+      "initial_motion_description": "mostly holds position with slight finger and wrist adjustments",
+      "initial_integrity_description": "hand appears intact and unobstructed except where fingers overlap the black piece",
+      "event_role_hints": [
+        "holds the left end of the yellow strand assembly"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "right hand",
+      "visible_form": "human hand entering from the right, gripping a brown forked handle",
+      "material_description": "skin-toned hand with visible fingers wrapped around the handle",
+      "visible_properties": [
+        "light skin color",
+        "fingers curved around handle",
+        "visible wrist-side motion"
+      ],
+      "initial_motion_description": "holds the handle and makes small rotations and position changes",
+      "initial_integrity_description": "hand appears intact and mostly visible, partly overlapped by the handle",
+      "event_role_hints": [
+        "holds and reorients the forked wooden handle"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "black pouch piece",
+      "visible_form": "small black folded or block-like piece at the left end of the yellow strands",
+      "material_description": "dark matte-looking material; exact material not directly identifiable",
+      "visible_properties": [
+        "black",
+        "small",
+        "partly hidden by left fingers",
+        "attached to or held with yellow strands"
+      ],
+      "initial_motion_description": "moves slightly with the left hand",
+      "initial_integrity_description": "appears intact as a single small black piece",
+      "event_role_hints": [
+        "left-side end piece for the yellow strands"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "yellow strands",
+      "visible_form": "multiple thin yellow-orange flexible strands spanning between the black piece and the forked handle, with loops and crossings",
+      "material_description": "bright yellow-orange narrow strands; smooth surface appearance",
+      "visible_properties": [
+        "thin",
+        "flexible-looking",
+        "multiple parallel and crossing segments",
+        "visible loops",
+        "yellow-orange color"
+      ],
+      "initial_motion_description": "already extended between the two held ends; strand shapes shift gradually during the clip",
+      "initial_integrity_description": "appears continuous with no visible break at the start",
+      "event_role_hints": [
+        "spans between the black pouch piece and forked handle",
+        "changes visible shape during manipulation"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "forked wooden handle",
+      "visible_form": "brown Y-shaped or forked stick-like handle with two pale cut tips near the top",
+      "material_description": "brown wood-like surface with lighter circular cut ends",
+      "visible_properties": [
+        "brown cylindrical handle",
+        "two top prongs become clearly visible",
+        "pale cut ends",
+        "held in right hand"
+      ],
+      "initial_motion_description": "slightly rotates and shifts in the right hand",
+      "initial_integrity_description": "appears intact with both top tips visible at least during part of the clip",
+      "event_role_hints": [
+        "right-side support around which yellow strands are looped"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "white background",
+      "visible_form": "plain light surface behind the hands and objects",
+      "material_description": "white or light gray flat-looking background",
+      "visible_properties": [
+        "plain",
+        "light colored",
+        "featureless"
+      ],
+      "initial_motion_description": "no visible independent motion",
+      "initial_integrity_description": "continuous background surface",
+      "event_role_hints": [
+        "stationary visual backdrop"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "left hand is pinching or holding the black pouch piece",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "right hand is gripping the forked wooden handle",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "yellow strands span from the black pouch piece toward the forked wooden handle",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "yellow strands are looped around the upper part of the forked wooden handle",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The left hand holds a small black piece at the left end of the yellow strands."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The right hand grips a brown forked handle on the right side of the frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Multiple yellow strands extend from the black piece toward the right side."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "Yellow strands are visibly wrapped or looped around the upper part of the forked handle."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "Several loose loop shapes and crossings are visible along the yellow strand span."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The forked handle rotates slightly so that two pale-topped prongs become more clearly visible."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The yellow strand loops change position and become narrower along the span."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "Several yellow strand segments align more closely side by side."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The visible yellow span appears straighter with fewer large loop shapes than at the start."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "A remaining loop shape is still visible near the middle-left portion of the yellow strands."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The black piece remains in the left hand and the forked handle remains in the right hand."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "No visible break or complete separation occurs in the yellow strands."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The plain white background remains nearly fixed in the frame while the hands and held objects move."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The connected hand-held setup is already present.",
+        "The yellow strands show multiple loose loops and crossings."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "holds the black pouch piece at the left side"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "holds the forked handle at the right side"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "spans between the black pouch piece and the forked handle with visible loops"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "is angled diagonally with its top near the yellow strand wrap"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The right-side handle is reoriented slightly.",
+        "The yellow strands visibly rearrange along the span."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "moves the forked handle slightly and rotates it in the hand"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "shows both top prongs more clearly after rotation"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "loose loop shapes narrow and shift along the strand span"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The strand span is more visually aligned than earlier.",
+        "A smaller remaining loop is still visible.",
+        "The two held ends remain in the two hands."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "appears as straighter side-by-side yellow segments with fewer large loops"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains held by the left hand"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "remains held by the right hand"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact attachment details of the yellow strands to the black piece are partly hidden by the left fingers.",
+    "The exact number of individual yellow strands is difficult to count because they overlap and cross."
+  ]
+}

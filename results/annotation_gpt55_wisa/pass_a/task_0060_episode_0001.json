@@ -1,0 +1,304 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A transparent spherical shell on a dark base shows pale star-shaped patches gradually changing position and distribution while the shell and background remain visually still.",
+  "raw_event_description": "The video begins with a large transparent spherical shell centered in the frame, partly hidden along its bottom by a dark uneven foreground. Pale translucent folded star-like patches are already visible within the shell silhouette, especially near the upper and central areas. Over the sequence, these pale patches shift in visible placement and grouping: the central area becomes more open, while many patches appear nearer the left, right, and upper rim regions. By the end, a broad clear central region is visible, with pale star-like patches mostly around the perimeter and a few blurred patches still inside the shell silhouette.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The transparent spherical shell is visible from the start.",
+      "The pale star-like patches are already present in the first frame.",
+      "The bottom of the shell and some lower patches are partly hidden by the dark foreground."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "transparent sphere",
+      "visible_form": "large clear rounded spherical shell or dome with a dark thin rim and reflective edges",
+      "material_description": "transparent glossy-looking surface with faint reflections and refracted background colors",
+      "visible_properties": [
+        "transparent",
+        "round",
+        "thin visible outline",
+        "partly occluded at bottom"
+      ],
+      "initial_motion_description": "No visible translation or rotation of the sphere is seen at the start.",
+      "initial_integrity_description": "The sphere appears continuous and unbroken in the first frame.",
+      "event_role_hints": [
+        "main visible enclosure where the changing pale patterns are seen"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "pale star-like patches",
+      "visible_form": "multiple translucent folded star or leaf-shaped forms with radial crease-like lines",
+      "material_description": "pale whitish translucent shapes with soft edges; some appear sharper and some blurred",
+      "visible_properties": [
+        "translucent",
+        "star-shaped",
+        "radial folded markings",
+        "varying size",
+        "varying sharpness"
+      ],
+      "initial_motion_description": "The patches are already present and begin a slow visible change in placement across the sphere silhouette.",
+      "initial_integrity_description": "Individual visible patches appear as intact star-like forms at the start, though some are blurred or partly overlapped.",
+      "event_role_hints": [
+        "main changing visible entities in the scene"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "dark foreground base",
+      "visible_form": "dark uneven lumpy band across the lower frame with small pale irregular pieces near the sphere bottom",
+      "material_description": "dark matte-looking foreground with pale whitish irregular fragments or patches",
+      "visible_properties": [
+        "dark",
+        "uneven",
+        "low in frame",
+        "partly occluding sphere bottom"
+      ],
+      "initial_motion_description": "No visible motion at the start.",
+      "initial_integrity_description": "The foreground appears continuous as an uneven band.",
+      "event_role_hints": [
+        "stationary lower occluding foreground"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "gradient sky background",
+      "visible_form": "smooth color gradient background from orange near the horizon to blue higher up",
+      "material_description": "distant smooth colored backdrop with no visible solid surface texture",
+      "visible_properties": [
+        "orange lower band",
+        "blue upper band",
+        "smooth gradient"
+      ],
+      "initial_motion_description": "No visible motion at the start.",
+      "initial_integrity_description": "The background appears continuous and unobstructed except where covered by the sphere and foreground.",
+      "event_role_hints": [
+        "stationary visual backdrop"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The transparent sphere is centered in the frame and its lower edge is partly hidden behind the dark foreground base.",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "The pale star-like patches are visible within the circular outline of the transparent sphere.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The transparent sphere is silhouetted against the orange-blue gradient background.",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1",
+        "e11"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A large transparent round shell is centered in the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Several pale translucent star-like patches are visible in the upper and central parts of the shell silhouette."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The lower edge of the shell is partly covered by a dark uneven foreground band."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The background shows an orange band near the bottom and a blue band near the top."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The pale star-like patches appear in different positions than at the start."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A clearer open area becomes visible near the central part of the shell silhouette."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "Several pale star-like patches are visible near the upper rim region."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "A large pale star-like patch is visible on the right side of the shell silhouette."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The central part of the shell silhouette is mostly clear compared with the start."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Pale star-like patches are concentrated along the left, right, and upper perimeter regions."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The transparent sphere remains centered with no visible scene translation across the clip."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The orange-blue background gradient remains aligned and unchanged across the clip."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The dark lower foreground band remains in the same frame region across the clip."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "late",
+      "observation": "A small pale star-like patch remains visible in the lower right interior area of the shell silhouette."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The sphere, foreground, background, and already-present pale patches are visible at the start."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The transparent spherical shell appears intact and stationary."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Multiple pale star-like patches are already visible within the shell outline."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The dark uneven foreground partly hides the bottom of the sphere."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The smooth orange-blue gradient background is visible behind the sphere."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The distribution of pale star-like patches changes while the sphere remains in place."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The pale patches shift in visible placement and group more around the upper and side regions."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The transparent shell continues to show a continuous round outline."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e14"
+      ],
+      "observations": [
+        "The shell interior appears more open in the middle than earlier."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "Most visible pale star-like patches are near the perimeter, with a few remaining inside the shell silhouette."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The shell remains visually intact and centered."
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The camera view and stationary scene elements remain steady."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The dark foreground band remains fixed in the lower frame region."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The background gradient remains stable throughout."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11",
+      "e12",
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact depth placement of the pale star-like patches relative to the transparent shell surface is not visually resolvable.",
+    "Some individual pale patches are blurred or overlapped, making continuous tracking of each separate patch difficult.",
+    "The lower edge of the sphere and lower pale patches are partly hidden by the dark foreground."
+  ]
+}

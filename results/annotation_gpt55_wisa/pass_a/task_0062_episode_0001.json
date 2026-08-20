@@ -1,0 +1,377 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A man outdoors holds the camera on himself while moving his head, changing mouth shapes, and gesturing with one hand.",
+  "raw_event_description": "The video begins with a close upper-body view of a man outdoors beside a stone wall, shrubs, grass, and a wooden fence. He faces partly toward the camera, then turns his head toward the right side of the frame while his mouth changes shape. Later he turns more toward the camera, raises his right hand into view, holds it near chest height with fingers extended, and makes small hand-position changes while continuing to change mouth shapes. The camera viewpoint shifts throughout, causing the background to slide within the frame.",
+  "observed_scope": "mixed",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The visible action is already underway in the first frame.",
+      "The man's head and upper torso are clearly visible.",
+      "The outdoor background elements are visible enough to describe."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "man",
+      "visible_form": "adult human upper body and head visible in close view",
+      "material_description": "skin, facial hair, and fabric-covered body areas are visible",
+      "visible_properties": [
+        "wearing dark outer clothing",
+        "wearing tinted glasses",
+        "wearing a fur-trimmed winter hat",
+        "facial hair visible"
+      ],
+      "initial_motion_description": "head and mouth are already changing position at the start",
+      "initial_integrity_description": "body and clothing appear whole where visible",
+      "event_role_hints": [
+        "central visible actor",
+        "makes head and hand gestures"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "winter hat",
+      "visible_form": "gray hat with ear flaps and thick fur-like trim around the face",
+      "material_description": "gray fabric and gray-brown fur-like surface are visible",
+      "visible_properties": [
+        "covers top and sides of head",
+        "ear flaps hang down on both sides"
+      ],
+      "initial_motion_description": "moves together with the man's head",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "worn on the man's head"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "sunglasses",
+      "visible_form": "wraparound-style tinted glasses on the man's face",
+      "material_description": "brown tinted lenses and light-colored frame edges are visible",
+      "visible_properties": [
+        "covers the eye area",
+        "reflective/tinted lens appearance"
+      ],
+      "initial_motion_description": "moves together with the man's head",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "worn on the man's face"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "jacket",
+      "visible_form": "dark zippered outer jacket covering torso and arms",
+      "material_description": "dark fabric with some blue panels or straps visible",
+      "visible_properties": [
+        "loose outerwear shape",
+        "zipper area visible",
+        "blue strip or strap visible near shoulder"
+      ],
+      "initial_motion_description": "moves with the man's torso and arm",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "worn by the man"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "right hand",
+      "visible_form": "human hand entering and leaving the lower right portion of the frame",
+      "material_description": "skin visible on fingers and palm",
+      "visible_properties": [
+        "fingers visible",
+        "palm sometimes visible",
+        "hand changes pose"
+      ],
+      "initial_motion_description": "not clearly visible in the first frame",
+      "initial_integrity_description": "appears intact when visible",
+      "event_role_hints": [
+        "used for visible gesturing"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "stone wall",
+      "visible_form": "low wall made of irregular stones behind and beside the man",
+      "material_description": "gray and tan rock-like surfaces are visible",
+      "visible_properties": [
+        "uneven stone shapes",
+        "extends diagonally through the background"
+      ],
+      "initial_motion_description": "no independent motion visible",
+      "initial_integrity_description": "appears continuous where visible",
+      "event_role_hints": [
+        "background reference object"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "shrubs",
+      "visible_form": "leafless or sparse reddish-brown plants along the wall",
+      "material_description": "thin branch-like plant surfaces visible",
+      "visible_properties": [
+        "dense small branches",
+        "reddish-brown tones"
+      ],
+      "initial_motion_description": "no independent motion visible",
+      "initial_integrity_description": "appear intact",
+      "event_role_hints": [
+        "background vegetation"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "grass area",
+      "visible_form": "open patch of short grass or dry lawn on the right side of the frame",
+      "material_description": "yellow-green and tan ground texture visible",
+      "visible_properties": [
+        "flat open surface",
+        "dry color tones"
+      ],
+      "initial_motion_description": "no independent motion visible",
+      "initial_integrity_description": "continuous ground surface visible",
+      "event_role_hints": [
+        "background ground surface"
+      ]
+    },
+    {
+      "id": "obj_9",
+      "name": "wooden fence",
+      "visible_form": "horizontal wooden rails and vertical posts in the upper background",
+      "material_description": "wood-like tan and gray surfaces visible",
+      "visible_properties": [
+        "long horizontal rails",
+        "repeated posts"
+      ],
+      "initial_motion_description": "no independent motion visible",
+      "initial_integrity_description": "appears continuous where visible",
+      "event_role_hints": [
+        "background boundary object"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is on the man's head",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is on the man's face",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "covers the man's torso and arms",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "is behind and to the side of the man in the frame",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The first visible frame shows the man's head and upper torso in close view."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A gray fur-trimmed hat with ear flaps is on the man's head."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Tinted glasses cover the man's eye area."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A dark jacket covers the man's torso and visible arms."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A low stone wall and shrubs are visible behind the man."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "early",
+      "observation": "The man turns his face more toward the right side of the frame."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The man's mouth opens and closes repeatedly."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The background shifts position within the frame while the man remains close to the camera."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The man turns his face more toward the camera."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The man's right hand enters the lower right area of the frame."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "middle",
+      "observation": "The right hand is held near chest height with fingers extended."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "middle",
+      "observation": "The right hand makes small up-and-down and side-to-side position changes."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The man's right hand moves partly out of the frame."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "late",
+      "observation": "The man again faces more toward the right side of the frame."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "continuous",
+      "observation": "A wooden fence remains visible in the upper background."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The man is already in close view outdoors.",
+        "He wears a fur-trimmed hat, tinted glasses, and a dark jacket.",
+        "He turns his head toward the right side of the frame while his mouth changes shape."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Head orientation changes from partly toward the camera to more toward the right side of the frame."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "Mouth shape changes repeatedly."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Hat moves together with the man's head."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Sunglasses move together with the man's head."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The man turns more toward the camera.",
+        "His right hand appears and is held in front of his body.",
+        "The background position changes within the frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Face orientation changes more toward the camera."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Right hand enters the frame and is held near chest height."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Right hand changes position in small gestures with fingers extended."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e13",
+        "e14",
+        "e15"
+      ],
+      "observations": [
+        "The man continues changing mouth shape.",
+        "His right hand becomes less visible.",
+        "The stone wall, shrubs, grass, and fence remain background elements."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "Right hand moves partly out of the frame."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "Head orientation shifts again toward the right side of the frame."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "handheld",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e8"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "medium"
+  },
+  "unresolved_observations": []
+}

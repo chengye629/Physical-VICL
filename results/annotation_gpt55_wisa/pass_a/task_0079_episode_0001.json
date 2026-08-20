@@ -1,0 +1,278 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A clear upright container of pink liquid shows a bright white cloudy vertical column inside that continuously changes shape.",
+  "raw_event_description": "The video shows an upright transparent container filled with vivid pink liquid, lit strongly from the left and/or behind. From the first frame onward, a bright white cloudy column is visible near the center of the liquid. Across the sequence, the column remains generally vertical while its edges ripple, widen, narrow, and form uneven lobes; bright clustered regions within it shift along the column. Numerous small bright specks remain visible throughout the surrounding pink liquid. The container and background stay in nearly the same position in the frame.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The main container and internal cloudy column are already visible in the first frame.",
+      "The top and bottom edges of the setup are partially cropped or obscured by lighting.",
+      "The internal process appears already underway at the start."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "clear container",
+      "visible_form": "upright faceted bottle-like vessel with flat sides and a narrower upper section",
+      "material_description": "transparent glossy rigid-looking walls",
+      "visible_properties": [
+        "transparent",
+        "glossy",
+        "upright",
+        "faceted outline"
+      ],
+      "initial_motion_description": "no visible motion of the container before or during the main visible process",
+      "initial_integrity_description": "appears intact with continuous visible walls",
+      "event_role_hints": [
+        "contains the pink liquid and the central cloudy feature"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "pink liquid",
+      "visible_form": "bright magenta-pink volume filling most of the container interior",
+      "material_description": "transparent to translucent colored fluid appearance with suspended bright specks",
+      "visible_properties": [
+        "pink",
+        "translucent",
+        "fills container interior",
+        "contains many small bright specks"
+      ],
+      "initial_motion_description": "no whole-volume displacement is visible; small internal specks and cloudy regions are visible",
+      "initial_integrity_description": "continuous liquid volume inside the container",
+      "event_role_hints": [
+        "surrounds the central white cloudy column"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "white cloudy column",
+      "visible_form": "bright irregular vertical plume-like cloud near the center of the container",
+      "material_description": "opaque to semi-opaque white bright cloudy appearance",
+      "visible_properties": [
+        "white",
+        "bright",
+        "irregular edges",
+        "vertically elongated",
+        "shape-changing"
+      ],
+      "initial_motion_description": "already present and changing shape at the start",
+      "initial_integrity_description": "appears as a continuous irregular cloudy column with uneven edges",
+      "event_role_hints": [
+        "main visibly changing feature"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "bright left-side light/reflection",
+      "visible_form": "magenta-white bright area and reflections at the left side of the frame",
+      "material_description": "bright luminous-looking reflected or emitted light areas",
+      "visible_properties": [
+        "bright",
+        "magenta",
+        "white highlights",
+        "partly off-frame"
+      ],
+      "initial_motion_description": "no independent visible motion",
+      "initial_integrity_description": "remains visible as a bright area at the left edge",
+      "event_role_hints": [
+        "illuminates or reflects on the container"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "dark background",
+      "visible_form": "dark surrounding area behind and around the container",
+      "material_description": "mostly black and shadowed surfaces with limited detail",
+      "visible_properties": [
+        "dark",
+        "low detail",
+        "contrasts with bright container"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "unchanged background region",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is visibly inside the clear container",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is visibly within the pink liquid near the center of the container",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "appears at the left side of the frame adjacent to the container",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "An upright transparent container remains centered in the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "Bright pink liquid fills most of the visible interior of the container."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A bright white irregular vertical cloudy column is already present near the center of the liquid in the first visible moment."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "The white cloudy column keeps a generally vertical orientation."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The edges of the white cloudy column change shape repeatedly."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "Bright clustered patches appear within the central cloudy column."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "Many small bright specks are visible throughout the surrounding pink liquid."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "Near the end, the central cloudy feature remains visible but appears narrower in some sections than at earlier moments."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "A bright magenta-white illuminated area is visible along the left side of the frame."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The container position relative to the frame changes little across the sequence."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "No scene cut is visible."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e7",
+        "e9"
+      ],
+      "observations": [
+        "The container is upright and filled with pink liquid.",
+        "The white cloudy column is already visible near the center."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The central white cloudy feature is present and irregular from the start."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Small bright specks are visible in the liquid around the central cloud."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The central white cloudy feature persists.",
+        "Its outline varies with uneven protrusions and narrower sections."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The cloudy column repeatedly widens and narrows along its length."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Bright clustered patches shift within the column."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e8",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The central cloudy column remains visible near the center.",
+        "The container and background remain similarly framed."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The cloudy column continues changing edge shape while staying generally vertical."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The container shows no visible displacement or deformation."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10",
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact source and material identity of the white cloudy feature are not visible.",
+    "The top and bottom details of the container setup are partly obscured by framing and bright illumination."
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A turtle slowly changes position on a fallen log over still pond water while small water-surface ripples and reflections remain visible.",
+  "raw_event_description": "The scene shows a fallen log extending diagonally across greenish pond water. A turtle is visible on the lower portion of the log. Across the video, the turtle slowly advances a short distance along the log toward the lower end of the frame, with small changes in the position of its head and body. Thin branches beside the log remain in place. The water surface shows reflected trees and sky with subtle ripple changes.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The turtle, log, surrounding water, and nearby branches are visible at the start.",
+      "The turtle is already on the log when the visible sequence begins."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "turtle",
+      "visible_form": "small oval-shelled animal with head and limbs visible at times",
+      "material_description": "dark green-gray and brown shell-like surface with lighter body areas",
+      "visible_properties": [
+        "compact body",
+        "rounded shell outline",
+        "low profile on log"
+      ],
+      "initial_motion_description": "appears nearly still at the start, then begins a very slow shift along the log",
+      "initial_integrity_description": "body appears intact",
+      "event_role_hints": [
+        "main moving scene object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "fallen log",
+      "visible_form": "long cylindrical tree trunk extending diagonally from lower center toward upper right",
+      "material_description": "light tan exposed wood with rough bark patches and knots",
+      "visible_properties": [
+        "elongated",
+        "rough surface",
+        "partly above water"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears continuous and intact along the visible length",
+      "event_role_hints": [
+        "surface supporting the turtle"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "pond water",
+      "visible_form": "broad greenish water surface surrounding the log",
+      "material_description": "glossy reflective liquid surface with tree and sky reflections",
+      "visible_properties": [
+        "green tint",
+        "reflective surface",
+        "small ripples"
+      ],
+      "initial_motion_description": "subtle surface ripple changes are visible",
+      "initial_integrity_description": "continuous visible water surface",
+      "event_role_hints": [
+        "background surface with changing reflections"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "thin branches",
+      "visible_form": "slender sticks and twigs crossing near the lower portion of the log",
+      "material_description": "pale dry woody stems",
+      "visible_properties": [
+        "thin",
+        "irregular",
+        "branch-like"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appear intact",
+      "event_role_hints": [
+        "nearby stationary scene elements"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned on the upper surface of the fallen log near the lower part of the frame",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "extends over the pond water",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "lies beside and across the lower portion of the log near the turtle",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The turtle is visible on the lower section of the diagonal log."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "The log spans across greenish reflective water."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Thin branches are visible near the turtle and the lower part of the log."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The turtle's body position is slightly farther down the log than at the start."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The turtle's head area appears shifted relative to the branch beside it."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "late",
+      "observation": "The turtle is positioned close to the lower end of the visible log."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "Tree and sky reflections remain visible on the water surface."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "Small ripple patterns on the water surface change over time."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The log remains in the same image position throughout the sequence."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The thin branches near the turtle remain in the same positions."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "A turtle is already present on the fallen log.",
+        "The log lies diagonally over the pond water.",
+        "Thin branches are visible near the turtle."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The turtle is positioned on the lower portion of the log with little visible movement at first."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The fallen log remains stationary in the frame."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The water surface shows reflections and faint ripples."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e8"
+      ],
+      "observations": [
+        "The turtle's position changes gradually along the log.",
+        "The water ripple pattern changes subtly."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The turtle slowly advances along the log and shifts its head area relative to nearby branches."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The reflective water surface continues showing small changing ripples."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The turtle is closer to the lower visible end of the log than earlier.",
+        "The log and branches remain visually fixed.",
+        "Reflections remain visible in the water."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The turtle ends the sequence near the lower end of the visible log."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The fallen log shows no visible translation or deformation."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The thin branches show no visible displacement."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e9",
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "Fine details of the turtle's feet and exact contact points with the log are not consistently visible."
+  ]
+}

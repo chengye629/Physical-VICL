@@ -1,0 +1,192 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "wind chime",
+      "entity_kind": "articulated_object",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "oscillating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "tree branch",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "tree trunk",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "building edge",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "sky and clouds",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e12"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "oscillation",
+      "raw_type": "swaying motion of the suspended wind chime tubes and central dangling piece",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention on the scene objects",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "repeated",
+      "change_profile": "steady",
+      "process_scope": "mixed",
+      "raw_temporal_description": "The wind chime components continue swaying while the camera framing shifts upward and sideways until the chime leaves the frame.",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "the metal tubes and central dangling piece repeatedly change angles and relative positions while remaining connected"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "the wind chime becomes partially visible near the upper frame edge and then disappears from view as the camera framing changes"
+      },
+      "evidence_refs": [
+        "e8",
+        "e10",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "tension",
+      "raw_mechanism": "the visible suspension cord constrains the hanging chime while its parts swing",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity acts on the suspended chime parts during the observed swaying motion",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e7"
+      ]
+    }
+  ]
+}

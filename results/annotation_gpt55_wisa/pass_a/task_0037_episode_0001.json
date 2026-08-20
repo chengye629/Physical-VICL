@@ -1,0 +1,269 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A tan liquid in a metal pot bubbles continuously while a pale foam patch changes shape, and a utensil enters from above near the end.",
+  "raw_event_description": "The video shows a cylindrical metal pot containing tan liquid. From the first frame, the liquid surface is covered with many small bubbles and ripples. A pale foam-like patch near the lower center changes outline and position over time. Dark specks remain visible on the inner wall of the pot. Near the end, a broad utensil enters from the upper right, moves downward toward the liquid, and contacts or approaches the right side of the surface.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The pot and liquid surface are visible from the start.",
+      "The bubbling process is already underway in the first frame.",
+      "The lower outside of the pot and surrounding stove area are only partly visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "metal pot",
+      "visible_form": "open cylindrical vessel with a rounded rim and tall inner wall",
+      "material_description": "dull gray metallic-looking surface",
+      "visible_properties": [
+        "open top",
+        "rigid-looking shape",
+        "dark specks on inner wall"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "intact visible rim and wall",
+      "event_role_hints": [
+        "contains the visible liquid"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "tan liquid",
+      "visible_form": "opaque tan liquid surface filling the lower part of the pot interior",
+      "material_description": "tan fluid with glossy highlights and many visible bubbles",
+      "visible_properties": [
+        "opaque",
+        "bubbly surface",
+        "rippling surface",
+        "variable foam areas"
+      ],
+      "initial_motion_description": "surface already moving with bubbles and ripples",
+      "initial_integrity_description": "continuous liquid surface with bubbles and foam patches",
+      "event_role_hints": [
+        "main visibly changing substance"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "pale foam patch",
+      "visible_form": "irregular pale patch floating on or within the liquid surface",
+      "material_description": "light cream-colored frothy-looking area",
+      "visible_properties": [
+        "irregular outline",
+        "deforming shape",
+        "lighter color than surrounding liquid"
+      ],
+      "initial_motion_description": "moves and changes outline with the surrounding liquid surface",
+      "initial_integrity_description": "present as a connected irregular patch near the lower center",
+      "event_role_hints": [
+        "visible surface feature on the liquid"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "utensil",
+      "visible_form": "broad flat end attached to a handle, entering from above",
+      "material_description": "gray metallic-looking handle with a darker broad end partly coated or wet with tan liquid",
+      "visible_properties": [
+        "rigid-looking",
+        "handheld kitchen-tool shape",
+        "enters late in the clip"
+      ],
+      "initial_motion_description": "not visible at the start",
+      "initial_integrity_description": "not visible initially; later appears intact",
+      "event_role_hints": [
+        "late-entering object near the liquid surface"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "dark wall specks",
+      "visible_form": "small irregular dark spots scattered on the inner wall of the pot",
+      "material_description": "dark brown to black marks or particles visible against the pot wall",
+      "visible_properties": [
+        "small",
+        "irregular",
+        "scattered"
+      ],
+      "initial_motion_description": "stationary relative to the pot wall",
+      "initial_integrity_description": "many separate visible specks",
+      "event_role_hints": [
+        "background surface marks inside the vessel"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "inside the open pot and below the rim",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "located on the visible surface of the tan liquid",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "distributed on the inner wall of the pot above the liquid surface",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The open metal pot contains tan liquid below the rim."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "Many small bubbles are visible across the tan liquid surface."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A pale irregular foam patch is visible near the lower center of the liquid surface."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "The liquid surface shows moving ripples and changing bubble patterns."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "Dark specks remain visible on the inner wall of the pot."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The pale foam patch changes outline while remaining near the lower half of the liquid surface."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "A broad utensil enters the frame from the upper right."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The utensil moves downward toward the right side of the liquid surface."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The liquid surface near the utensil shows disturbed ripples."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The pot rim stays nearly fixed in the frame."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e5"
+      ],
+      "observations": [
+        "The pot is already filled with visibly active tan liquid.",
+        "A pale foam patch is present near the lower center."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The pot remains stationary and open."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The liquid surface displays many bubbles."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The pale foam patch is visible on the surface."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e6"
+      ],
+      "observations": [
+        "Bubbling and rippling continue across the surface.",
+        "The pale foam patch changes shape and shifts slightly within the lower half of the pot."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The bubble pattern repeatedly changes over the liquid surface."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The foam patch deforms and changes outline."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "A utensil appears from above at the upper right and lowers toward the liquid.",
+        "Surface ripples continue around the area near the utensil."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The utensil enters the frame and moves downward near the right side of the pot."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The liquid surface remains bubbly and rippled as the utensil approaches."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact identity of the tan liquid is not visually determinable.",
+    "The exact identity of the dark specks on the pot wall is not visually determinable."
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "upper metal jaws",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support",
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "vertical metal tool",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "orange rounded piece",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "unknown",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "bright streaks",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "unknown",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "black background",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": []
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "thermal_transfer",
+      "type": "heating",
+      "raw_type": "visible heating of the orange piece with brightening and growth into a rounded mass",
+      "participants": {
+        "targets": [
+          "obj_3"
+        ],
+        "supports": [
+          "obj_1",
+          "obj_2"
+        ],
+        "products": [
+          "obj_4"
+        ]
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "deformation",
+        "type": null,
+        "raw_type": "orange piece widens and rounds while remaining continuous",
+        "participants": {
+          "targets": [
+            "obj_3"
+          ],
+          "supports": [
+            "obj_2"
+          ]
+        },
+        "evidence_refs": [
+          "e5",
+          "e9"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "light_emission",
+        "raw_type": "intermittent bright streaks and stronger yellow-orange glow appear near the contact area",
+        "participants": {
+          "sources": [
+            "obj_3"
+          ],
+          "products": [
+            "obj_4"
+          ]
+        },
+        "evidence_refs": [
+          "e4",
+          "e6",
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the tool, jaws, and orange piece are already arranged at the start",
+      "actor_ids": [],
+      "target_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e7",
+        "e8"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "changes from a small capsule-like outline into a wider rounded bulb-like mass around the tool tip"
+      },
+      "evidence_refs": [
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "intensity_increase",
+        "raw_transition": "becomes brighter with a yellow-orange central area"
+      },
+      "evidence_refs": [
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "visible color shifts from darker orange toward brighter yellow-orange"
+      },
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "light_emission_onset",
+        "raw_transition": "thin bright streaks begin appearing intermittently around both sides of the orange piece"
+      },
+      "evidence_refs": [
+        "e4",
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "heat_transfer",
+      "raw_mechanism": "thermal energy accumulation or transfer is indicated by the orange piece becoming brighter and changing shape",
+      "object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "the heated orange material visibly yields or softens enough to widen and round while staying continuous",
+      "object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "the glowing orange mass and transient bright streaks produce visible emitted light",
+      "object_ids": [
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e10"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,334 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "Two hands lower a parallel-wire slicer frame onto a white food piece in a tabletop slicer, leaving the food visibly divided by parallel cuts.",
+  "raw_event_description": "A white tabletop slicer sits on a wooden surface with a rounded white food piece positioned in its circular slotted cradle. A shiny metal frame containing many parallel wires and a blue handle is held above the food at an angle. The right hand moves the blue-handled wire frame downward while the left hand steadies the base. As the frame descends, the parallel wires cross the food piece, and parallel cut lines appear across its visible surface. By the end, the frame is much lower over the base, and the food shows multiple adjacent thin sections while a short smooth white end portion remains visible on the right.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The slicer, wire frame, food piece, and both hands are visible.",
+      "The wire frame is already positioned above the food and appears ready to descend.",
+      "Some edges of the base and frame are partly covered by hands."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "white food piece",
+      "visible_form": "rounded white solid piece with a short cylindrical-looking end section and a larger rounded section",
+      "material_description": "matte white to cream surface with a few darker specks or lines",
+      "visible_properties": [
+        "opaque",
+        "light-colored",
+        "solid-looking",
+        "rounded"
+      ],
+      "initial_motion_description": "stationary in the slicer cradle at the start",
+      "initial_integrity_description": "visible as one continuous piece before the wires descend through it",
+      "event_role_hints": [
+        "parallel wires move across it",
+        "parallel cuts become visible on it"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "slicer base",
+      "visible_form": "white oval base with a raised circular slotted cradle",
+      "material_description": "smooth glossy white plastic-looking material",
+      "visible_properties": [
+        "opaque",
+        "rigid-looking",
+        "slotted cradle"
+      ],
+      "initial_motion_description": "resting on the tabletop with no visible movement",
+      "initial_integrity_description": "appears whole with no visible damage",
+      "event_role_hints": [
+        "supports the food piece",
+        "is steadied by the left hand"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wire slicing frame",
+      "visible_form": "U-shaped shiny metal frame holding many thin parallel wires, with a blue grip on one side",
+      "material_description": "shiny chrome-colored metal wires and frame with a blue plastic-looking handle",
+      "visible_properties": [
+        "parallel wires",
+        "reflective metal",
+        "rigid frame",
+        "blue handle"
+      ],
+      "initial_motion_description": "held above the food at a diagonal angle and then moved downward",
+      "initial_integrity_description": "all visible wires and frame portions appear intact",
+      "event_role_hints": [
+        "moves downward across the food piece",
+        "creates visible parallel divisions on the food"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "left hand",
+      "visible_form": "light-skinned hand at the left side of the slicer",
+      "material_description": "skin with visible fingers and fingernails",
+      "visible_properties": [
+        "human hand",
+        "light skin tone"
+      ],
+      "initial_motion_description": "positioned around the left side of the base with little visible movement",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "steadies the slicer base"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "right hand",
+      "visible_form": "light-skinned hand at the right side holding the blue handle",
+      "material_description": "skin with visible thumb, fingers, and fingernail",
+      "visible_properties": [
+        "human hand",
+        "light skin tone"
+      ],
+      "initial_motion_description": "holds the blue handle and moves with it downward",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "moves the wire frame"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "wooden tabletop",
+      "visible_form": "flat brown surface beneath the slicer",
+      "material_description": "brown surface with visible wood grain pattern",
+      "visible_properties": [
+        "flat",
+        "brown",
+        "wood-grain appearance"
+      ],
+      "initial_motion_description": "no visible movement",
+      "initial_integrity_description": "appears continuous within the visible area",
+      "event_role_hints": [
+        "supports the slicer"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "sits inside the raised circular slotted cradle",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is positioned diagonally above the food piece",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "contacts the left side of the slicer base",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "holds the blue handle of the wire frame",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "rests on the wooden tabletop",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The white slicer base rests on a brown wood-grain tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A rounded white food piece is positioned in the circular slotted cradle of the slicer."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The metal wire frame is raised at a diagonal angle above the food piece."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "The left hand remains near and in contact with the left side of the slicer base."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The right hand grips the blue handle attached to the wire frame."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The wire frame moves downward toward the slicer base."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The parallel wires cross the visible surface of the white food piece."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "Parallel dark lines appear on the visible white food surface where the wires cross it."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The wire frame is lower and closer to horizontal over the base than at the start."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The larger left portion of the food shows multiple thin adjacent sections."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "A short smooth white cylindrical section remains visible on the right side of the food piece."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The camera view remains mostly fixed without a scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The food is already placed in the slicer cradle.",
+        "The wire frame is angled above the food.",
+        "Both hands are positioned on the slicer or handle."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The food piece remains stationary in the cradle."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The slicer base stays on the tabletop."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The wire frame is held above the food at an angle."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The left hand steadies the base."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The right hand holds the blue handle."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The wire frame descends toward the base.",
+        "The wires cross the food surface.",
+        "Parallel markings become visible on the food."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The wire frame moves downward over the food piece."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The food surface shows newly visible parallel lines as the wires pass across it."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The right hand moves downward with the handle."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The left hand remains near the base."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The wire frame is near the base.",
+        "The food has visible parallel divisions.",
+        "A short smooth end section remains visible to the right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The wire frame rests lower over the slicer than at the beginning."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The food piece appears divided into multiple adjacent thin sections along part of its length."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The slicer base remains on the tabletop."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

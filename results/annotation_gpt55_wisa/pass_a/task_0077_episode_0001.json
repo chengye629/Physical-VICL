@@ -1,0 +1,374 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "Small white and blue balls move along a red tabletop toy track while the track, supports, and surrounding tabletop objects stay in place.",
+  "raw_event_description": "The video shows a red toy track structure on a wooden table, supported by white columns with yellow tops and black circular bases. At first the setup is visible without an obvious moving ball. A small white ball later appears on the right-side track near a yellow-topped support, moves downward along the right-side curved track area, then is seen on the front lower track moving leftward across the table view in front of a calculator. Other white ball appearances occur on upper and middle red track segments, moving from right-to-left or across the frame. Near the end, a blue ball appears on the lower-left curved part of the track, while a white ball is again visible on the right-side track section. The surrounding calculator, remote control, silver rectangular object, chairs, table, and supports remain visually stationary.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The red track layout and support columns are clearly visible.",
+      "No moving ball is apparent in the first frame.",
+      "The tabletop and surrounding objects are visible enough to establish the scene."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "red toy track",
+      "visible_form": "red interconnected plastic rail structure with straight, curved, sloped, and elevated sections",
+      "material_description": "bright red smooth plastic-looking rails",
+      "visible_properties": [
+        "ladder-like rail pattern",
+        "multiple curves",
+        "elevated above table in places"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "assembled and continuous-looking across visible sections",
+      "event_role_hints": [
+        "moving balls are seen on or beside its rail paths"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "track supports",
+      "visible_form": "vertical white columns with yellow caps and black circular bases",
+      "material_description": "plastic-looking white, yellow, and black parts",
+      "visible_properties": [
+        "upright",
+        "repeated around the track",
+        "resting on the tabletop"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "upright and assembled",
+      "event_role_hints": [
+        "red track sections are attached near them"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wooden table",
+      "visible_form": "flat wooden tabletop occupying the scene foreground and middle",
+      "material_description": "light brown wood surface",
+      "visible_properties": [
+        "flat",
+        "large surface",
+        "supports the toy setup and loose objects"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact visible tabletop",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_4",
+      "name": "calculator",
+      "visible_form": "black rectangular calculator with many buttons and a small display",
+      "material_description": "black plastic-looking casing with gray and colored buttons",
+      "visible_properties": [
+        "rectangular",
+        "lying flat on table",
+        "inside the foreground track area"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_5",
+      "name": "remote control",
+      "visible_form": "dark elongated remote-like object with many buttons",
+      "material_description": "dark plastic-looking body with lighter buttons",
+      "visible_properties": [
+        "elongated",
+        "lying flat",
+        "located behind the calculator"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_6",
+      "name": "white balls",
+      "visible_form": "small white spherical balls appearing at different points on the track",
+      "material_description": "smooth white visible surface",
+      "visible_properties": [
+        "small",
+        "round",
+        "bright white"
+      ],
+      "initial_motion_description": "not visibly present in the first frame; later appearances show motion along track sections",
+      "initial_integrity_description": "intact spherical form when visible",
+      "event_role_hints": [
+        "main moving objects in several track segments"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "blue ball",
+      "visible_form": "small blue spherical ball appearing near the lower-left curved track late in the video",
+      "material_description": "smooth blue visible surface",
+      "visible_properties": [
+        "small",
+        "round",
+        "blue"
+      ],
+      "initial_motion_description": "not visible at the start; appears late on the lower-left track area",
+      "initial_integrity_description": "intact spherical form when visible",
+      "event_role_hints": [
+        "late moving object on the track"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "silver rectangular object",
+      "visible_form": "shiny rectangular object lying on the table left of center",
+      "material_description": "reflective silver surface with dark edges",
+      "visible_properties": [
+        "flat",
+        "rectangular",
+        "reflective"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is elevated above and around the tabletop on multiple support columns",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "stands on the wooden tabletop",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "lies inside the foreground area enclosed by red track curves",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "lies behind the calculator within the visible track setup",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_8",
+      "relation_description": "lies on the tabletop left of the central track area",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The red rail structure is mounted across several white columns with yellow tops."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Black circular bases of the support columns rest on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A black calculator lies flat inside the foreground loop of red track."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A dark remote control lies behind the calculator on the tabletop."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A shiny silver rectangular object lies on the tabletop to the left of center."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A small white ball is visible on the right-side red track near a yellow-topped support."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The small white ball is visible lower on the right-side curved red track section."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "A white ball is visible on the front lower red track to the right of the calculator."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "A white ball is visible farther left on the front lower red track in front of the calculator."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "A white ball is visible near the lower-left edge of the red track area."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "A white ball is visible on an upper horizontal red track line toward the left side of the scene."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "A blue ball is visible on the lower-left curved red track section."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The red track, support columns, calculator, remote control, and silver rectangular object remain in the same visible positions."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The frame composition remains stable with no visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The tabletop toy track setup is visible before any obvious moving ball appears."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The red track remains stationary."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The support columns remain upright and stationary."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The calculator remains lying flat on the table."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The remote control remains lying flat on the table."
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "The silver rectangular object remains lying flat on the table."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "A white ball appears on the right side and is later seen on lower and front red track sections."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_6",
+          "observation": "A white ball changes visible position from the right-side track area to the front lower track area."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "A white ball is seen moving leftward across the front lower red track in front of the calculator."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "Additional ball appearances occur on the left and upper visible track areas."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_6",
+          "observation": "A white ball is visible near the lower-left side of the track area."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "A white ball is visible on an upper horizontal red track line toward the left side."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "A blue ball appears on the lower-left curved red track section."
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e13"
+      ],
+      "observations": [
+        "The fixed tabletop objects and toy supports do not visibly change position."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The red track remains assembled and stationary throughout the visible event."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The support columns remain stationary throughout the visible event."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "Multiple white balls look similar, so individual white balls cannot be reliably distinguished across all appearances.",
+    "Some track sections and ball positions are partially blocked by foreground rails, supports, or tabletop objects."
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "orange balloon-like object",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target",
+        "source",
+        "product"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible",
+        "translucent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_description": "glossy orange inflated object that opens into a thin translucent sheet with orange specks",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "black tube",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_description": "dark angled cylindrical tube at the orange object's narrow end",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e11",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "base device",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_description": "small stationary support device at the lower left connected with the tube",
+      "evidence_refs": [
+        "e2",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "pale central plume",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "product",
+        "medium"
+      ],
+      "material_phase": "unknown",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "raw_description": "pale whitish semi-transparent streak or plume visible during the orange object's opening",
+      "evidence_refs": [
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "outdoor background",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "raw_description": "stationary outdoor patio background providing a stable visual reference",
+      "evidence_refs": [
+        "e3",
+        "e14"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fracture_separation",
+      "type": "rupture",
+      "raw_type": "inflated orange membrane opens and loses containment near the tube-side neck",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e12"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "deformation",
+        "type": null,
+        "raw_type": "thin orange material spreads outward into a broad translucent sheet",
+        "participant_object_ids": [
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e6",
+          "e7",
+          "e10"
+        ]
+      },
+      {
+        "family": "gas_particulate_motion",
+        "type": "granular_scattering",
+        "raw_type": "small orange specks scatter around the expanding sheet edge",
+        "participant_object_ids": [
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e9",
+          "e12"
+        ]
+      },
+      {
+        "family": "gas_particulate_motion",
+        "type": null,
+        "raw_type": "pale whitish plume appears from the tube area through the opening",
+        "participant_object_ids": [
+          "obj_4",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the visible change begins at the orange object's tube-side neck",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e13",
+        "e14"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "single",
+      "change_profile": "abrupt",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e10",
+        "e14"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "integrity",
+        "type": "ruptured",
+        "raw_transition": "initially intact inflated orange form opens near the narrow end and loses membrane continuity"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "orange material changes from a rounded teardrop shape into a broad translucent sheet occupying much of the frame"
+      },
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "flattened",
+        "raw_transition": "part of the orange inflated body becomes a thin sheet-like membrane"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "particle_emission_onset",
+        "raw_transition": "small orange specks appear along and outside the edge of the expanding sheet"
+      },
+      "evidence_refs": [
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "pale whitish plume becomes visible from the tube area through the central opening"
+      },
+      "evidence_refs": [
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "pale whitish streak or plume extends from the tube area into the opened orange sheet region"
+      },
+      "evidence_refs": [
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "pressure_gradient",
+      "raw_mechanism": "pressure difference associated with the inflated orange object and tube-side opening drives outward expansion and visible plume transport",
+      "linked_processes": [
+        "primary",
+        "secondary"
+      ],
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6",
+        "e7",
+        "e11"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "tension",
+      "raw_mechanism": "stretched membrane material separates as the opening widens from the narrow end",
+      "linked_processes": [
+        "primary"
+      ],
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "thin flexible orange material loses integrity and forms a sheet plus small separated specks",
+      "linked_processes": [
+        "primary",
+        "secondary"
+      ],
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e9",
+        "e12"
+      ]
+    }
+  ]
+}

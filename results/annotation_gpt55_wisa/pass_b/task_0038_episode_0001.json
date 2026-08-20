@@ -1,0 +1,256 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "green oval item",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "circular burner",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "flame",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "medium",
+        "source"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [
+        "emissive",
+        "translucent"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "stovetop surface",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e12"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "combustion",
+      "type": "sustained_burning",
+      "raw_type": "sustained visible burner flame around the item",
+      "participants": [
+        {
+          "object_id": "obj_3",
+          "event_roles": [
+            "medium",
+            "source"
+          ]
+        },
+        {
+          "object_id": "obj_2",
+          "event_roles": [
+            "support",
+            "source"
+          ]
+        },
+        {
+          "object_id": "obj_1",
+          "event_roles": [
+            "target"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e6",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "thermal_transfer",
+        "type": "heating",
+        "raw_type": "heating of the green oval item while it remains in the flame",
+        "participants": [
+          {
+            "object_id": "obj_3",
+            "event_roles": [
+              "source",
+              "medium"
+            ]
+          },
+          {
+            "object_id": "obj_1",
+            "event_roles": [
+              "target"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e2",
+          "e3",
+          "e7",
+          "e8",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the item and flames are already present at the start",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e13"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "flame outline and height repeatedly change, including a taller right-side orange flame tongue"
+      },
+      "evidence_refs": [
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "thermal_reaction",
+        "type": null,
+        "raw_transition": "visible darkened patches and pale or red-orange exposed areas on the item change slightly while in the flame"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e7",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "pale lower/front area and red-orange exposed surface become more apparent"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "chemical_energy_release",
+      "raw_mechanism": "combustion in the visible flame releases heat and light around the burner",
+      "applies_to": {
+        "process": "primary",
+        "object_ids": [
+          "obj_2",
+          "obj_3"
+        ]
+      },
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "family": "energy_reaction",
+      "type": "heat_transfer",
+      "raw_mechanism": "thermal energy from the flame is transferred to the green oval item, associated with visible surface darkening and exposure changes",
+      "applies_to": {
+        "process": "secondary",
+        "object_ids": [
+          "obj_3",
+          "obj_1"
+        ]
+      },
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e7",
+        "e8",
+        "e11"
+      ]
+    }
+  ]
+}

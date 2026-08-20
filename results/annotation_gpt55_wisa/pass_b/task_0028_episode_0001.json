@@ -1,0 +1,285 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "white food piece",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target",
+        "product"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e8",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "slicer base",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support",
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "wire slicing frame",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e6",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "left hand",
+      "entity_kind": "agent",
+      "event_roles": [
+        "actor"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "right hand",
+      "entity_kind": "agent",
+      "event_roles": [
+        "actor"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fracture_separation",
+      "type": "cutting_separation",
+      "raw_type": "parallel wire slicing separates the food into thin sections",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_3",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": null,
+        "raw_type": "wire slicing frame moves downward from an angled raised position",
+        "participant_object_ids": [
+          "obj_3",
+          "obj_5"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e6",
+          "e9"
+        ]
+      },
+      {
+        "family": "contact_loading",
+        "type": "penetration",
+        "raw_type": "parallel wires enter and pass through the food surface",
+        "participant_object_ids": [
+          "obj_1",
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e7",
+          "e8"
+        ]
+      }
+    ],
+    "action": {
+      "primary": {
+        "family": "separation",
+        "type": "cut",
+        "raw_action": "right hand uses the blue-handled wire frame to slice the food",
+        "actor_object_ids": [
+          "obj_5"
+        ],
+        "tool_object_ids": [
+          "obj_3"
+        ],
+        "target_object_ids": [
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6",
+          "e7",
+          "e8"
+        ]
+      },
+      "supporting": [
+        {
+          "family": "loading",
+          "type": null,
+          "raw_action": "left hand steadies the slicer base during the cut",
+          "actor_object_ids": [
+            "obj_4"
+          ],
+          "target_object_ids": [
+            "obj_2"
+          ],
+          "evidence_refs": [
+            "e4"
+          ]
+        }
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "integrity",
+        "type": "fragmented",
+        "raw_transition": "food changes from one continuous visible piece to multiple adjacent thin sections divided by parallel cuts"
+      },
+      "evidence_refs": [
+        "e2",
+        "e8",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "wire frame begins descending and ends lower over the slicer base"
+      },
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "new parallel cut lines and thin-section geometry appear across the visible food surface"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "sustained_pressure",
+      "raw_mechanism": "hand-applied downward force presses the parallel wires into the food",
+      "object_ids": [
+        "obj_3",
+        "obj_5",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "the food material separates along the narrow wire paths, leaving persistent parallel divisions",
+      "object_ids": [
+        "obj_1",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e10"
+      ]
+    }
+  ]
+}

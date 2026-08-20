@@ -1,0 +1,344 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A large workboat or barge assembly moves across a river under a bridge while white disturbed water trails and changes around its hull.",
+  "raw_event_description": "The video shows a large multi-part vessel in the foreground on a river with a steel truss bridge in the background. From the first frame, the vessel is already moving, shifting gradually rightward and farther from the camera relative to the bridge and shoreline. White, foamy water is visible along the rear and side of the hulls, changing shape continuously as the vessel advances. The red flag and deck structures remain attached and visible, and the bridge and distant shore stay nearly fixed in the frame.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The vessel, water surface, wake, and background bridge are visible from the start.",
+      "The vessel is already in motion at the first frame.",
+      "No separate pre-event state is shown."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "large vessel assembly",
+      "visible_form": "multi-section boat or barge-like craft with dark lower hulls, white and red cabin structures, railings, deck equipment, and cylindrical side fenders",
+      "material_description": "painted exterior surfaces, dark worn hull surfaces, rust-colored patches, white canopy-like roof, black cylindrical fender shapes",
+      "visible_properties": [
+        "large",
+        "multi-level",
+        "painted white and red",
+        "dark lower hull",
+        "rectangular deck areas",
+        "attached railings",
+        "visible side fenders"
+      ],
+      "initial_motion_description": "already moving gradually rightward and away relative to the bridge and shoreline",
+      "initial_integrity_description": "visible as an intact connected vessel assembly with no visible breakage or separation",
+      "event_role_hints": [
+        "main moving object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "river water",
+      "visible_form": "broad gray-green water surface with ripples, waves, and white disturbed patches near the vessel",
+      "material_description": "liquid-looking surface with reflective highlights and foam-like white regions",
+      "visible_properties": [
+        "gray-green",
+        "rippling",
+        "wavy",
+        "white foamy areas near vessel"
+      ],
+      "initial_motion_description": "surface ripples and white disturbed areas are already changing at the start",
+      "initial_integrity_description": "continuous water surface surrounding the vessel",
+      "event_role_hints": [
+        "surrounding medium with visible surface changes"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "steel bridge",
+      "visible_form": "large horizontal truss bridge spanning the background",
+      "material_description": "greenish-gray painted truss members and darker deck structure",
+      "visible_properties": [
+        "fixed background structure",
+        "long horizontal span",
+        "triangular truss pattern"
+      ],
+      "initial_motion_description": "no visible motion relative to the frame",
+      "initial_integrity_description": "appears intact and continuous across the background",
+      "event_role_hints": [
+        "stationary background reference"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "white wake and foam",
+      "visible_form": "irregular white frothy patches and streaks on the water adjacent to and behind the vessel",
+      "material_description": "white aerated-looking water texture",
+      "visible_properties": [
+        "bright white",
+        "irregular edges",
+        "changing shape",
+        "clustered near hull and behind vessel"
+      ],
+      "initial_motion_description": "already present and changing shape at the start",
+      "initial_integrity_description": "fragmented into uneven patches and streaks",
+      "event_role_hints": [
+        "visible water disturbance associated spatially with vessel movement"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "red flag",
+      "visible_form": "small red flag mounted on a vertical pole near the rear upper deck area",
+      "material_description": "red flexible-looking sheet on a pole",
+      "visible_properties": [
+        "red",
+        "thin",
+        "mounted high",
+        "slightly changing outline"
+      ],
+      "initial_motion_description": "minor visible fluttering or shape variation while attached to the pole",
+      "initial_integrity_description": "attached and unbroken",
+      "event_role_hints": [
+        "small moving appendage on vessel"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "deck boom equipment",
+      "visible_form": "yellow and black angled boom-like structure on the upper deck",
+      "material_description": "painted yellow and black rigid-looking components",
+      "visible_properties": [
+        "angled",
+        "mounted on deck",
+        "striped yellow and black"
+      ],
+      "initial_motion_description": "moves only with the vessel assembly; no independent motion is visible",
+      "initial_integrity_description": "attached and intact",
+      "event_role_hints": [
+        "visible deck equipment"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "distant shoreline",
+      "visible_form": "tree-lined and industrial-looking distant bank behind the vessel and below the bridge",
+      "material_description": "muted brown, gray, and green distant surfaces",
+      "visible_properties": [
+        "background",
+        "partially obscured by vessel",
+        "stationary in frame"
+      ],
+      "initial_motion_description": "no visible motion relative to the frame",
+      "initial_integrity_description": "continuous distant background",
+      "event_role_hints": [
+        "stationary background reference"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "lower portions of the vessel intersect the visible water surface",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "white foamy water is adjacent to and behind the vessel hulls",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "bridge is behind the vessel in the background",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "flag is attached to a pole on the vessel",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "boom equipment is mounted on the vessel deck",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The dark lower hulls of the vessel meet the gray-green water surface."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "White frothy water is visible along the right and rear side of the vessel assembly."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A steel truss bridge spans the background behind the vessel."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A red flag is visible on a vertical pole near the upper rear deck area."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A yellow and black angled boom-like structure is visible on the upper deck."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The vessel shifts rightward in the frame relative to the bridge structure."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The visible white water patches behind the vessel change shape over time."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "More of the vessel's rear right side becomes visible as the vessel progresses."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The bridge remains nearly fixed in the frame throughout the clip."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The vessel appears farther to the right and slightly farther away than at the start."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The red flag outline varies slightly while staying attached to the pole."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "Surface ripples move and change across the foreground water."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The vessel is already underway on the river.",
+        "The bridge and distant shoreline are visible behind it.",
+        "White disturbed water is already present near the hulls."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The vessel is visible in the foreground with intact superstructure, hulls, railings, and deck equipment."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The water surface shows waves and ripples around the vessel."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "White frothy patches are present behind and beside the vessel."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The vessel continues shifting rightward relative to the bridge.",
+        "White water patterns change continuously around the rear and side.",
+        "Small details on the upper deck remain attached."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The vessel translates rightward and slightly away within the scene."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The white frothy water stretches and breaks into changing patches."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The red flag shows small outline changes while remaining on the pole."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e12"
+      ],
+      "observations": [
+        "The vessel is positioned farther right than at the beginning.",
+        "The background bridge remains in approximately the same frame position.",
+        "The water surface continues to show moving ripples and white disturbed areas."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The vessel remains intact and continues moving rightward and away."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The foreground water ripples continue changing."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "White water remains visible behind and beside the vessel with changing edges."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e9"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

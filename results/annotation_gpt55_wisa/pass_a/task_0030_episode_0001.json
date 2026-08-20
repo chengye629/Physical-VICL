@@ -1,0 +1,291 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A bright circular ground fixture remains stationary while a white plume above it changes shape and spreads over time.",
+  "raw_event_description": "The video shows a low nighttime view of a round rim set into a dark wet surface. A very bright white area fills the circle, and a translucent white plume is already rising above it at the start. The plume curls upward in tall, narrow folds, then becomes thicker and more opaque around the circle. Later it spreads outward, especially toward the right side, forming a broader low cloud while the bright circular area remains visible beneath it. The surrounding wet surface stays in place and reflects orange and white light throughout.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The bright circular area and rim are visible at the start.",
+      "The white plume is already present and changing at the start.",
+      "The very bright center obscures interior detail.",
+      "The dark surrounding scene limits background visibility."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "circular ground fixture",
+      "visible_form": "round shallow-looking circular rim set into the ground, with an intensely bright white interior area",
+      "material_description": "rim appears smooth and metallic or glossy; interior appears as saturated white light with little visible surface detail",
+      "visible_properties": [
+        "circular",
+        "stationary",
+        "bright interior",
+        "thin raised rim"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "rim appears continuous and intact",
+      "event_role_hints": [
+        "white plume is visually located directly above this circular area"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "white plume",
+      "visible_form": "translucent to opaque white cloud-like shapes with curling edges and folds",
+      "material_description": "soft, semi-transparent white material with changing density and no fixed outline",
+      "visible_properties": [
+        "diffuse",
+        "shape-changing",
+        "partly translucent",
+        "brightly illuminated"
+      ],
+      "initial_motion_description": "already moving and curling above the circular fixture",
+      "initial_integrity_description": "no fixed solid boundary; continuous cloudy mass",
+      "event_role_hints": [
+        "changes shape continuously above the bright circular fixture"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wet ground surface",
+      "visible_form": "dark flat surface with seams or texture and glossy reflections",
+      "material_description": "black or dark surface with wet-looking shine and orange-white reflected highlights",
+      "visible_properties": [
+        "flat",
+        "textured",
+        "reflective",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "surface appears continuous around the fixture",
+      "event_role_hints": [
+        "surrounds the circular fixture and reflects its light"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "orange reflections",
+      "visible_form": "irregular orange highlights on the wet ground, mostly along the left and far areas",
+      "material_description": "colored light patches reflected on the glossy surface",
+      "visible_properties": [
+        "orange",
+        "irregular",
+        "stationary relative to the ground"
+      ],
+      "initial_motion_description": "no distinct independent motion visible",
+      "initial_integrity_description": "appears as scattered reflected light patches",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is embedded within or surrounded by the dark wet ground surface",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is positioned directly above the bright circular fixture",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "appears on the surface of the wet ground",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A circular rim sits in the dark wet ground near the center of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The inside of the circular rim is filled with saturated white brightness."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A tall white translucent plume extends upward from the area above the circle."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "Orange reflected highlights are visible on the wet ground to the left."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The plume has narrow curling folds above the left and central parts of the circle."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The white plume becomes denser over the circular fixture."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The plume spreads toward the right side of the frame."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The upper edge of the plume forms rounded cloud-like lobes."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The circular rim remains visible below the white plume."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The plume forms a broader low cloud above the circular fixture."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "A small brighter central white vertical shape is visible within the bright circular area."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The wet ground texture remains visible in front of the circle."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The circular fixture stays in the same image position throughout the sequence."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "No scene cut is visible."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "continuous",
+      "observation": "The plume outline changes continuously from frame to frame."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The scene begins with the event already underway."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary with a saturated white interior"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "rises and curls in tall translucent folds above the circular fixture"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains stationary and glossy with visible reflections"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "appears as orange highlights on the wet ground"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The white material above the circle becomes visually thicker."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "continues to show a bright white circular interior below the plume"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "expands laterally and forms rounded cloud-like edges"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "continues to reflect white and orange light"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The plume is broader and lower than the tall curls seen early in the clip."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains in the same position with its rim still visible"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "forms a wide cloudy mass above the circular fixture"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains visible in the foreground with wet-looking texture"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13",
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The interior of the circular fixture is too bright to see detailed contents.",
+    "The dark background contains little visible detail."
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "person",
+      "entity_kind": "agent",
+      "event_roles": [
+        "actor"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "translucent bottle",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool",
+        "container",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "translucent"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e7",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "clear liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "medium",
+        "product"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "white mound",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "translucent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e8",
+        "e10",
+        "e13"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "white base object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e13",
+        "e14"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "countertop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "pouring",
+      "raw_type": "gravity-driven pouring of clear liquid from a tilted bottle onto a white mound",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "role": "actor"
+        },
+        {
+          "object_id": "obj_2",
+          "role": "source"
+        },
+        {
+          "object_id": "obj_3",
+          "role": "flowing_material"
+        },
+        {
+          "object_id": "obj_4",
+          "role": "target"
+        }
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e7",
+        "e8",
+        "e11"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "fluid_handling",
+      "type": "pour",
+      "raw_action": "person holds the bottle tilted so liquid transfers from the bottle toward the mound",
+      "actor_object_id": "obj_1",
+      "tool_object_id": "obj_2",
+      "target_object_id": "obj_4",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e7",
+        "e8"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "material_transfer",
+        "raw_transition": "clear liquid moves as a narrow stream from the bottle opening to the mound surface"
+      },
+      "evidence_refs": [
+        "e3",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "deposition",
+        "raw_transition": "liquid is deposited on the upper mound surface near the contact region"
+      },
+      "evidence_refs": [
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "intensity_increase",
+        "raw_transition": "wet reflective patches appear brighter and shinier on the mound surface near the liquid contact area"
+      },
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "tilting the bottle allows gravity to drive the liquid downward from the opening onto the mound",
+      "linked_process": "primary",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e8"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "liquid cohesion and free-surface effects support the observed narrow stream and droplets",
+      "linked_process": "primary",
+      "evidence_refs": [
+        "e3",
+        "e8"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "light reflects from wet liquid-coated areas, producing shiny highlights on the mound surface",
+      "linked_impact_object_id": "obj_4",
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ]
+}

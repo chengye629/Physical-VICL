@@ -1,0 +1,275 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "decorated translucent sheet",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible",
+        "translucent",
+        "reflective"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "deformed",
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e7",
+        "e8",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "clear tray",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "clear liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "medium",
+        "target"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "left hand",
+      "entity_kind": "agent",
+      "event_roles": [
+        "actor"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "right hand",
+      "entity_kind": "agent",
+      "event_roles": [
+        "actor"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "deformation",
+      "type": "bending_deformation",
+      "raw_type": "manual bending and folding of a thin translucent sheet",
+      "participants": [
+        "obj_1",
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "sheet is lifted and repositioned upward relative to the tray",
+        "participants": [
+          "obj_1",
+          "obj_4",
+          "obj_5"
+        ],
+        "evidence_refs": [
+          "e7",
+          "e11",
+          "e12"
+        ]
+      },
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "small visible changes in the liquid free surface beneath the sheet",
+        "participants": [
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "transport",
+      "type": null,
+      "raw_action": "two hands grip, pull, lift, and reposition the translucent sheet",
+      "actors": [
+        "obj_4",
+        "obj_5"
+      ],
+      "target": "obj_1",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e7",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10",
+        "e11",
+        "e12",
+        "e14"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "bent",
+        "raw_transition": "the sheet develops changing folds, curved wrinkles, and a tighter raised fold"
+      },
+      "evidence_refs": [
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the sheet shifts upward and ends more raised and sloped relative to the tray rim"
+      },
+      "evidence_refs": [
+        "e7",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "more of the white printed area becomes upright and visible"
+      },
+      "evidence_refs": [
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "the liquid surface shows shifting highlights and rippled outlines"
+      },
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "tension",
+      "raw_mechanism": "hand grips pull on separated regions of the flexible sheet, producing raised folds and curvature changes",
+      "participants": [
+        "obj_4",
+        "obj_5",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "the thin flexible sheet accommodates the manual loading by bending and wrinkling without visible tearing",
+      "participants": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e8",
+        "e10",
+        "e12"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "reflections from the clear liquid surface change as the sheet and surface appearance shift",
+      "participants": [
+        "obj_3",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ]
+}

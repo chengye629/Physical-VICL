@@ -1,0 +1,246 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small black line figure on a plain light background changes position and orientation while its thin appendages swing through different angles.",
+  "raw_event_description": "The video shows a small, black, articulated-looking line figure against a mostly blank light background. At the start it is near the upper part of the frame with a circular loop near its center, a near-vertical paired segment above/right, and several thin segments extending leftward and downward. Across the sequence, the figure shifts within the frame and changes orientation; the long paired segment alternates between near-vertical and diagonal positions, while other thin appendages extend and retract visually into different angles. Several frames show the figure blurred during these changes. Near the end, the figure is still intact as a connected cluster of black line segments and loops, with appendages spread in multiple directions on the same light background.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The small black line figure is visible against a plain light background.",
+      "The surrounding scene contains little context beyond the background surface.",
+      "The figure appears already present and arranged in a pose at the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "black line figure",
+      "visible_form": "Small cluster of thin black line segments with one or more circular loops and several long appendage-like lines.",
+      "material_description": "Thin dark visible lines; some segments appear sharp and some appear blurred during motion.",
+      "visible_properties": [
+        "black",
+        "thin",
+        "line-like",
+        "small relative to frame",
+        "connected-looking",
+        "includes circular loop shapes",
+        "includes long straight or slightly curved segments"
+      ],
+      "initial_motion_description": "No separate pre-event motion is visible before the figure begins changing pose and orientation within the sequence.",
+      "initial_integrity_description": "Appears as one connected line assembly with no detached pieces visible.",
+      "event_role_hints": [
+        "Main changing visible object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "light background",
+      "visible_form": "Plain, light-colored flat-looking field filling the frame.",
+      "material_description": "Uniform pale surface with slight tonal variation.",
+      "visible_properties": [
+        "light colored",
+        "mostly featureless",
+        "stationary-looking"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Continuous unbroken background visible across the frame.",
+      "event_role_hints": [
+        "Static visual backdrop"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The black line figure is seen in front of or on the plain light background.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A small black line figure is visible near the upper area of a plain light background."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The figure includes a circular loop near its central area."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A paired thin segment extends upward from the figure in a near-vertical orientation."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "Thin line segments extend from the figure toward the left and down-left."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The circular loop remains visible while the figure changes orientation."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The long paired segment is seen angled diagonally rather than vertical."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "One long thin segment extends downward from the central loop area."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "A short thin segment extends to the right from the central area."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "Some frames show the black figure blurred while the light background remains plain."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The figure appears lower in the frame than at the beginning."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The long paired segment is again seen extending upward from the central area."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "Two or more thin appendage-like lines spread away from the central loop in different directions."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "No detached fragment is visible separate from the main black line figure."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The light background stays visually uniform throughout the sequence."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "continuous",
+      "observation": "No scene cut is visible."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The figure starts as a compact black line assembly near the upper portion of the frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Visible with a central circular loop, an upward paired segment, and thin segments extending leftward and down-left."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Remains a plain light background."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The figure changes orientation and pose while remaining visually connected."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Rotates or reorients visibly; the long paired segment appears diagonal, and other thin segments shift into downward and rightward directions."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "Appears blurred in several frames during pose changes."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The figure remains present as one main black line assembly with appendages spread in multiple directions."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Appears lower in the frame than at the start and continues changing the angles of its thin appendage-like segments."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "No separate detached piece is visible by the end."
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e14",
+        "e15"
+      ],
+      "observations": [
+        "The background remains plain and the shot remains continuous."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "Shows no visible independent change."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e14",
+      "e15"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact nature of the black line figure is not visually resolved from the video alone.",
+    "The exact contact or attachment relation between the figure and the light background is not visually resolved."
+  ]
+}

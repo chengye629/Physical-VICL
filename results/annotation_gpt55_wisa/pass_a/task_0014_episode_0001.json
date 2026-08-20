@@ -1,0 +1,200 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A white overhanging mass stays nearly fixed while dark rippling liquid moves beneath it and intermittent small clear drops or streaks appear at its lower edge.",
+  "raw_event_description": "The view remains close on the underside edge of a white, uneven, speckled mass occupying the upper part of the frame. Beneath it, a dark liquid surface continuously ripples and shows shifting lighter foam-like streaks. The white edge maintains its overall shape and position. During the sequence, small transparent droplets or narrow vertical streaks intermittently appear near the lower edge, especially near the center and right side, then disappear from view.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The white overhanging object is cropped by the frame edges.",
+      "The dark moving surface below is visible but its broader surroundings are not shown.",
+      "The visible process is already underway in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "white overhanging mass",
+      "visible_form": "Irregular white slab-like edge spanning the upper frame, with a rounded protruding underside near the center.",
+      "material_description": "White opaque to slightly translucent surface with small dark specks, dirt-like marks, and a granular or wet-looking texture.",
+      "visible_properties": [
+        "white",
+        "irregular edge",
+        "speckled",
+        "partly translucent underside",
+        "stationary relative to frame"
+      ],
+      "initial_motion_description": "No visible translation or rotation at the start.",
+      "initial_integrity_description": "The visible edge appears continuous and intact, with uneven contours.",
+      "event_role_hints": [
+        "intermittent small clear drops or streaks appear at its lower edge"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "dark moving liquid surface",
+      "visible_form": "Dark, uneven surface occupying the lower frame with ripples and moving lighter streaks.",
+      "material_description": "Glossy dark surface with white or gray streaks and highlights consistent with visible liquid appearance.",
+      "visible_properties": [
+        "dark",
+        "glossy",
+        "rippling",
+        "shifting highlights",
+        "lighter streaks"
+      ],
+      "initial_motion_description": "The surface pattern moves continuously beneath the white edge.",
+      "initial_integrity_description": "The visible surface remains continuous across the lower frame.",
+      "event_role_hints": [
+        "moves beneath the overhanging mass throughout the clip"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "small clear drops or streaks",
+      "visible_form": "Tiny bright or transparent beads and thin vertical lines appearing intermittently below the white edge.",
+      "material_description": "Clear, reflective, and faintly visible against the dark background.",
+      "visible_properties": [
+        "small",
+        "transparent",
+        "reflective",
+        "intermittent",
+        "short-lived"
+      ],
+      "initial_motion_description": "Not continuously visible at the start; occasional small glints and faint streaks appear near the underside.",
+      "initial_integrity_description": "Appear as separate small beads or narrow streaks when visible.",
+      "event_role_hints": [
+        "briefly appear below the lower edge of the white mass"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The white overhanging mass is positioned above the dark moving liquid surface in the frame.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "Small clear drops or streaks appear adjacent to the lower edge of the white overhanging mass.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "A white irregular edge spans the upper portion of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "A dark rippling surface occupies the lower portion of the frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "Light gray and white streaks on the dark surface shift position over time."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "The outline of the white overhanging edge remains nearly unchanged across the sequence."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A thin clear vertical streak appears briefly below the right underside of the white edge."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "Small bright points intermittently appear near the lower edge of the white mass."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "Dark specks and dirt-like marks are visible on the white surface."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The camera framing remains close on the same edge and liquid area without a scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The white overhanging mass remains in the upper frame while the dark liquid surface moves below it.",
+        "The dark surface patterns change continuously.",
+        "Small bright or clear marks appear intermittently near the underside."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Maintains a nearly fixed visible outline and position."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Shows continuous visible surface motion with shifting ripples and pale streaks."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Appears intermittently as tiny clear beads or short streaks near the lower edge."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5"
+      ],
+      "observations": [
+        "A brief thin vertical clear streak is visible below the right underside of the white edge."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "A narrow transparent streak appears briefly and then is no longer visible."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e8"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The full size and surroundings of the white overhanging mass are outside the frame.",
+    "The exact origin and endpoint of the intermittent clear drops or streaks are not fully visible."
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "Two men move within a large blue indoor arena while the camera moves through the space.",
+  "raw_event_description": "At the start, a man in a gray hoodie is partially visible at the right edge, facing into a large blue arena, while another man in black clothing is farther ahead on the blue floor. The distant man changes position across the floor with changing arm and foot positions. The foreground man turns his head and later shows an open-mouth facial expression while remaining near the right side of the frame. The camera viewpoint moves and pans through the arena, causing the blue walls, seating, and black wall opening to shift in the image.",
+  "observed_scope": "mixed",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The foreground person is cropped by the right edge of the frame.",
+      "The distant person, blue floor, walls, seating, and overhead lights are visible.",
+      "The clip begins with ongoing camera movement and people already present."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "foreground man",
+      "visible_form": "Adult human figure partially visible from the side, wearing a light gray hooded sweatshirt.",
+      "material_description": "Fabric-like gray hoodie; visible skin and dark hair.",
+      "visible_properties": [
+        "right-edge position in frame",
+        "dark short hair",
+        "light gray upper clothing",
+        "face becomes more visible later"
+      ],
+      "initial_motion_description": "Initially near the right edge of the frame, facing leftward into the arena; head and upper body change orientation during the clip.",
+      "initial_integrity_description": "Body and clothing appear intact with no visible damage or separation.",
+      "event_role_hints": [
+        "foreground moving person",
+        "reacting/looking toward the other person and arena"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "distant man",
+      "visible_form": "Adult human figure at mid-distance wearing dark clothing and white footwear.",
+      "material_description": "Dark fabric-like clothing; white shoe-like footwear.",
+      "visible_properties": [
+        "black top",
+        "black pants",
+        "white footwear",
+        "arms visible changing positions"
+      ],
+      "initial_motion_description": "Initially farther ahead on the blue floor, already standing or moving with a slight forward-facing posture.",
+      "initial_integrity_description": "Body, clothing, and footwear appear intact with no visible damage or separation.",
+      "event_role_hints": [
+        "background moving person"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "blue arena floor",
+      "visible_form": "Large smooth blue floor surface spanning most of the lower frame.",
+      "material_description": "Glossy, reflective-looking blue surface.",
+      "visible_properties": [
+        "large continuous surface",
+        "blue color",
+        "visible reflections or highlights"
+      ],
+      "initial_motion_description": "Stationary relative to the arena structure; apparent image position changes with camera motion.",
+      "initial_integrity_description": "Surface appears continuous and unbroken.",
+      "event_role_hints": [
+        "surface under both visible people"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "blue arena walls and seating",
+      "visible_form": "Large blue walls with angled architectural panels and rows of blue seats above.",
+      "material_description": "Painted or coated blue structural surfaces; rows of seat-like forms.",
+      "visible_properties": [
+        "blue walls",
+        "angled wall sections",
+        "tiered seating",
+        "large indoor arena scale"
+      ],
+      "initial_motion_description": "Stationary relative to the arena; shifts in frame due to camera movement.",
+      "initial_integrity_description": "Structure appears intact with no visible deformation.",
+      "event_role_hints": [
+        "stationary background reference"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "black wall opening",
+      "visible_form": "Large black rectangular opening or grille on the left blue wall.",
+      "material_description": "Dark flat or slatted-looking rectangular surface.",
+      "visible_properties": [
+        "black color",
+        "rectangular shape",
+        "mounted within blue wall"
+      ],
+      "initial_motion_description": "Stationary relative to the wall; image position changes as the camera moves.",
+      "initial_integrity_description": "Appears intact and unchanged.",
+      "event_role_hints": [
+        "stationary landmark"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "overhead lights",
+      "visible_form": "Rows of bright circular or oval lights mounted high above the arena.",
+      "material_description": "Bright illuminated fixtures on ceiling structure.",
+      "visible_properties": [
+        "bright white/yellow light spots",
+        "overhead placement",
+        "arranged in rows"
+      ],
+      "initial_motion_description": "Stationary relative to the ceiling; apparent image position changes with camera movement.",
+      "initial_integrity_description": "Lights appear intact and steadily illuminated.",
+      "event_role_hints": [
+        "stationary background lighting"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The foreground man is closer to the camera and partly cropped at the right edge.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The foreground man is on or adjacent to the blue arena floor.",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "The distant man is positioned on the blue arena floor at mid-distance.",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "The black rectangular opening is embedded in or aligned with the left blue wall.",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A man in a gray hoodie is partially visible at the right edge of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A man in dark clothing with white footwear is visible at mid-distance on the blue floor."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "A large glossy blue floor spans the lower part of the scene."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A large black rectangular opening or grille is visible on the left blue wall."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "Rows of blue seats and blue wall panels are visible along the far side of the arena."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The distant man changes position across the floor while his arm positions change."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The distant man's white footwear changes spacing and orientation between frames."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The foreground man turns his head so more of his face becomes visible."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The foreground man's mouth is open while his eyes are directed toward the arena area."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The distant man remains upright at mid-distance with dark clothing and white footwear visible."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The arena walls, seating, and black wall opening shift position in the image as the viewpoint moves."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "No scene cut is visible during the provided sequence."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "No visible object breaks, separates, or changes shape."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The clip opens inside a large blue arena with two visible people, blue floor, blue walls, seating, overhead lights, and a black wall opening."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The foreground man is partially cropped at the right edge and faces into the arena."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The distant man is visible on the floor at mid-distance."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The black rectangular opening is visible on the left wall."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e11"
+      ],
+      "observations": [
+        "The camera viewpoint continues moving through the arena while both people remain visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The distant man changes position across the floor with changing arm and foot placement."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The foreground man turns his head, bringing more of his face into view."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The arena seating and wall panels shift in the image due to camera movement."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The two people remain separated on the blue floor, and the arena background remains intact."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The foreground man shows an open-mouth expression while still near the right side of the frame."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The distant man remains upright and visible at mid-distance."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The blue floor remains continuous with no visible break or deformation."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "mixed",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11",
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "medium"
+  },
+  "unresolved_observations": []
+}

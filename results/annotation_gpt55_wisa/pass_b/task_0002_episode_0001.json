@@ -1,0 +1,222 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "water surface",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "oscillating",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "tree trunks",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "floating leaves and debris",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "muddy bank",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "foreground vegetation",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": []
+    },
+    {
+      "id": "obj_6",
+      "name": "water reflections",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "oscillating",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e6"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "free_surface_motion",
+      "raw_type": "continuous small rippling of the flooded water surface",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "roles": [
+            "target",
+            "medium"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "tree and foliage reflections shimmer and distort on the rippled water",
+        "participants": [
+          {
+            "object_id": "obj_1",
+            "roles": [
+              "medium"
+            ]
+          },
+          {
+            "object_id": "obj_6",
+            "roles": [
+              "target"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e3",
+          "e6"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_object_id": null,
+      "target_object_ids": [],
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "mixed",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8",
+        "e11"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "the liquid free-surface geometry continuously varies as small ripples pass across it"
+      },
+      "evidence_refs": [
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "reflected tree, sky, and foliage shapes shimmer and change shape over time"
+      },
+      "evidence_refs": [
+        "e3",
+        "e6"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "liquid free-surface wave response produces low-amplitude ripples without visible transfer of the water body",
+      "linked_processes": [
+        "primary"
+      ],
+      "linked_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "light from trees, sky, and foliage reflects from the water surface, and changing surface orientation distorts the reflected pattern",
+      "linked_processes": [
+        "secondary[0]"
+      ],
+      "linked_object_ids": [
+        "obj_1",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e6"
+      ]
+    }
+  ]
+}

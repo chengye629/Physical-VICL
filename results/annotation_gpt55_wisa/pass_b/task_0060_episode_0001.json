@@ -1,0 +1,160 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "transparent sphere",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "pale star-like patches",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "unknown",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "dark foreground base",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "gradient sky background",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e12"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "relation_reconfiguration",
+      "type": "rearrangement",
+      "raw_type": "gradual redistribution of pale star-like patches within the sphere silhouette",
+      "participants": [
+        {
+          "object_id": "obj_2",
+          "event_roles": [
+            "target"
+          ]
+        },
+        {
+          "object_id": "obj_1",
+          "event_roles": [
+            "container"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e14"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_object_id": null,
+      "evidence_refs": [
+        "e11",
+        "e12",
+        "e13"
+      ]
+    },
+    "temporal": {
+      "scope": "scene_physics",
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual"
+    }
+  },
+  "impacts": [
+    {
+      "impact_id": "imp_1",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": null,
+        "raw_transition": "visible arrangement changes from upper and central placement to concentration along the left, right, and upper perimeter regions"
+      },
+      "initial_state": "several pale star-like patches are visible in the upper and central parts of the shell silhouette",
+      "final_state": "pale star-like patches are mostly around the perimeter, with a few remaining inside",
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e7",
+        "e8",
+        "e10",
+        "e14"
+      ]
+    },
+    {
+      "impact_id": "imp_2",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "the central part of the sphere silhouette becomes more visually open and clear"
+      },
+      "initial_state": "pale patches are visible across upper and central areas of the sphere silhouette",
+      "final_state": "the central part of the sphere silhouette is mostly clear compared with the start",
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": []
+}

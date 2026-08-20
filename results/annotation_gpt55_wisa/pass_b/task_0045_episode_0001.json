@@ -1,0 +1,170 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "black line figure",
+      "entity_kind": "articulated_object",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "raw_description": "Small connected-looking black assembly of thin line segments, circular loop shapes, and appendage-like lines.",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "light background",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "raw_description": "Plain light-colored background field that remains visually uniform.",
+      "evidence_refs": [
+        "e1",
+        "e14",
+        "e15"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": null,
+      "raw_type": "connected line figure shifts position and reorients while appendage-like segments swing through different angles",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "role": "target"
+        },
+        {
+          "object_id": "obj_2",
+          "role": "medium"
+        }
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "relation_reconfiguration",
+        "type": "rearrangement",
+        "raw_type": "relative arrangement of connected appendage-like segments changes during the motion",
+        "participants": [
+          {
+            "object_id": "obj_1",
+            "role": "target"
+          }
+        ],
+        "evidence_refs": [
+          "e6",
+          "e7",
+          "e8",
+          "e11",
+          "e12"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e14",
+        "e15"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e9",
+        "e10",
+        "e12",
+        "e15"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "figure changes position and orientation, appearing lower in the frame later than at the beginning"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "appendage-like line segments change their visible angles and spread directions while the assembly remains connected"
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6",
+        "e7",
+        "e8",
+        "e11",
+        "e12",
+        "e13"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "unresolved mechanical forcing associated with the observed translation, reorientation, and appendage swinging",
+      "applies_to_object_ids": [
+        "obj_1"
+      ],
+      "supports_process": "primary",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e9",
+        "e10",
+        "e12"
+      ]
+    }
+  ]
+}

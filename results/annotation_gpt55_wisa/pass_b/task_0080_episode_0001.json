@@ -1,0 +1,300 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "dancer",
+      "entity_kind": "agent",
+      "event_roles": [
+        "actor",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "mirror wall",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "ballet barre",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e11",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "studio floor",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "white column",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "small dark floor object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "ceiling lights",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e11"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": null,
+      "raw_type": "articulated body and limb pose motion",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "mirror reflection of the dancer's front view during movement",
+        "object_ids": [
+          "obj_1",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e2",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "transport",
+      "type": "move",
+      "raw_action": "the dancer actively moves and repositions her own arms, torso, head, and feet",
+      "actor_ids": [
+        "obj_1"
+      ],
+      "target_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e13"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "the dancer's visible body configuration changes from open arms to overhead arms, then to a side-bent pose with one arm high and one arm lowered"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "the dancer's foot placement changes from close together to a wider staggered stance"
+      },
+      "evidence_refs": [
+        "e3",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the dancer's arms, upper body, head, and feet undergo continuous repositioning through the movement sequence"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "the mirror continues showing the dancer's front reflection as the reflected pose changes with her movement"
+      },
+      "evidence_refs": [
+        "e2",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "torque",
+      "raw_mechanism": "self-generated joint torques drive rotations and repositioning of the dancer's articulated body segments",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "friction",
+      "raw_mechanism": "contact with the studio floor provides support and friction during the dancer's foot-placement change",
+      "object_ids": [
+        "obj_1",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e8"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "light reflects from the mirror wall surface to form the visible front image of the dancer",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e11"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A blue faceted object on a dark reflective surface shows changing visible facets and highlights while staying near the same place in the frame.",
+  "raw_event_description": "The video shows a deep blue, round, faceted object upright against a black background on a glossy dark surface. From the beginning, the pattern of white and blue facets on the object changes gradually. Bright white facet regions shift across the visible face, and the mirrored image below changes with it. The object remains near the lower center of the frame, with no scene cut visible.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The main faceted object is visible at the start.",
+      "The surrounding scene is very dark, with only the object and its reflection clearly discernible.",
+      "The changing facet pattern appears already in progress rather than beginning from a distinct onset."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "blue faceted object",
+      "visible_form": "upright round gem-like faceted body with many flat triangular and polygonal faces",
+      "material_description": "deep blue transparent or translucent appearance with glossy bright white specular-looking highlights",
+      "visible_properties": [
+        "blue coloration",
+        "faceted surface",
+        "bright white highlights",
+        "rounded outline",
+        "dark internal areas"
+      ],
+      "initial_motion_description": "At the start, the object is already showing gradual changes in visible facet pattern while its center remains near the same image location.",
+      "initial_integrity_description": "The object appears whole and intact with no visible breakage or separation.",
+      "event_role_hints": [
+        "main visible changing object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "dark reflective surface",
+      "visible_form": "flat dark horizontal-looking surface beneath the faceted object",
+      "material_description": "black glossy appearance with a visible mirrored image of the blue object",
+      "visible_properties": [
+        "dark color",
+        "glossy reflection",
+        "flat appearance"
+      ],
+      "initial_motion_description": "No visible motion of the surface.",
+      "initial_integrity_description": "The visible surface appears continuous and unbroken.",
+      "event_role_hints": [
+        "surface showing reflection of the object"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "reflected image",
+      "visible_form": "inverted blue and white mirrored shape below the faceted object",
+      "material_description": "optical reflection visible on the glossy dark surface",
+      "visible_properties": [
+        "blue mirrored regions",
+        "white mirrored highlights",
+        "dimmer than the main object"
+      ],
+      "initial_motion_description": "The reflected image changes as the visible facets and highlights of the main object change.",
+      "initial_integrity_description": "The reflection is continuous but dark and partially limited by the frame bottom.",
+      "event_role_hints": [
+        "visible optical counterpart of the main object"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The faceted object is positioned directly above the dark reflective surface, with its lower edge adjacent to the surface.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "The reflected image appears below the faceted object on the dark reflective surface.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A blue faceted object is visible near the lower center of a black scene."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A dim inverted blue-and-white reflection is visible directly below the faceted object."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Small bright white highlights appear on the front and left portions of the faceted object."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The visible facet pattern on the blue object changes while the object remains near the same frame position."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "Large bright white polygonal facets become prominent on both left and right sides of the object."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "late",
+      "observation": "A broad pale white polygonal region occupies much of the left-front visible face of the object."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The reflection below shows corresponding blue and white areas that change during the sequence."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The black background remains visually stable with no visible scene cut."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The main object keeps a whole, unbroken outline throughout the visible sequence."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The blue faceted object is already upright on the dark reflective surface.",
+        "Its mirrored image is visible below.",
+        "Bright highlights are distributed across its visible face."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The object shows a blue faceted face with scattered white highlights."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The reflected image appears below the object and is dimmer than the object."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The visible arrangement of facets and highlights changes gradually.",
+        "Large white facet regions become more noticeable on the sides of the object."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The object's visible face changes, with bright white polygonal regions shifting in prominence."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The dark surface continues to show the object's reflection."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e9"
+      ],
+      "observations": [
+        "A broad pale white polygonal region becomes dominant on the left-front visible area.",
+        "The reflection below changes in shape and brightness pattern.",
+        "The object remains visually intact."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The object continues showing changing blue and white facets without visible separation or breakage."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The reflected image changes along with the visible bright regions of the object."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e8"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The dark setting makes the exact contact region between the object and the surface hard to distinguish.",
+    "Only the visible surface pattern changes are available; the reason for the changing facets is not directly shown."
+  ]
+}

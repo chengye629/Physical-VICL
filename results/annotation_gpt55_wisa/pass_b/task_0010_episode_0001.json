@@ -1,0 +1,296 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "stemmed glass",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "ice pieces inside glass",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "translucent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e7",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "cloudy liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "translucent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e10",
+        "e13"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "incoming ice pieces",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "translucent",
+        "reflective"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "contact_loading",
+      "type": "collision",
+      "raw_type": "incoming ice pieces collide with and disturb the ice and liquid contents in the glass",
+      "object_refs": [
+        "obj_2",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "free_fall",
+        "raw_type": "pale ice pieces move downward from above into the bowl area",
+        "object_refs": [
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6"
+        ]
+      },
+      {
+        "family": "relation_reconfiguration",
+        "type": "insertion",
+        "raw_type": "incoming ice pieces enter the open glass bowl",
+        "object_refs": [
+          "obj_1",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6"
+        ]
+      },
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "cloudy liquid boundary and highlights shift during the disturbance",
+        "object_refs": [
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "unknown",
+      "raw_action": "unseen external release or addition of ice pieces from above",
+      "object_refs": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "single",
+      "change_profile": "abrupt",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e11"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "incoming ice pieces appear moving downward from above"
+      },
+      "result_state": "moving into the bowl area",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "relation",
+        "type": "containment_gain",
+        "raw_transition": "incoming ice pieces enter the glass bowl area"
+      },
+      "result_state": "present among the contents near the top of the glass",
+      "evidence_refs": [
+        "e6",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "previously still ice pieces inside the glass begin shifting during the disturbance"
+      },
+      "result_state": "ice pieces move from their initial clustered arrangement",
+      "evidence_refs": [
+        "e4",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "containment_loss",
+        "raw_transition": "at least one pale ice piece moves outside the left side of the bowl area near the rim"
+      },
+      "result_state": "one piece is visible outside and lower left of the glass",
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "settling",
+        "raw_transition": "ice motion decays and the pieces come to rest in a new arrangement"
+      },
+      "result_state": "several ice pieces rest near the top of the glass",
+      "evidence_refs": [
+        "e7",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "cloudy liquid boundary and internal highlights shift while the ice moves"
+      },
+      "result_state": "cloudy liquid remains visible in the lower bowl with no obvious stream leaving the rim",
+      "evidence_refs": [
+        "e10",
+        "e13"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the unsupported downward motion of the incoming ice pieces",
+      "object_refs": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "brief contact transfers momentum from incoming pieces to the existing ice and liquid contents",
+      "object_refs": [
+        "obj_2",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "drag",
+      "raw_mechanism": "resistance from surrounding liquid and contacting pieces helps dissipate motion as the contents settle",
+      "object_refs": [
+        "obj_2",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    }
+  ]
+}

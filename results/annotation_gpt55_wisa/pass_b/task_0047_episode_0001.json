@@ -1,0 +1,337 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "metal rails",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "dark side structure",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "gravel ground",
+      "entity_kind": "granular_material",
+      "event_roles": [
+        "support",
+        "medium"
+      ],
+      "material_phase": "granular",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "flames and bright fireball",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "smoke cloud",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "product",
+        "medium"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "outdoor background",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e8"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "combustion",
+      "type": "sustained_burning",
+      "raw_type": "rapid flame growth into a bright fireball followed by sustained ground-level burning",
+      "participants": [
+        "obj_4",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e9",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "gas_particulate_motion",
+        "type": "gas_emission",
+        "raw_type": "smoke production and plume growth from the burning region",
+        "participants": [
+          "obj_5",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e7",
+          "e8",
+          "e11"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "light_emission",
+        "raw_type": "bright visible light emitted by the enlarged flames and fireball",
+        "participants": [
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e4",
+          "e5"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; a small flame-like region is already present in the first visible stage",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e6",
+        "e7",
+        "e9",
+        "e10",
+        "e11",
+        "e13"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "small orange flame-like region rapidly expands into a large orange-yellow and bright yellow-white fireball"
+      },
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "intensity_increase",
+        "raw_transition": "luminous flame region becomes much brighter, with a yellow-white center during the enlarged fireball stage"
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "geometry",
+        "type": "contracted",
+        "raw_transition": "large bright fireball reduces from filling much of the frame to lower flickering flames along the gravel"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "thermal_reaction",
+        "type": null,
+        "raw_transition": "burning continues as a long low band of orange flames along the gravel after the larger fireball subsides"
+      },
+      "evidence_refs": [
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "gray-white and orange-tinted smoke grows and spreads upward and to the side of the flames"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "smoke cloud increases from faint haze near the flame area to a large dense plume"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "distant trees and sky become partly obscured by gray-white smoke"
+      },
+      "evidence_refs": [
+        "e8",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "chemical_energy_release",
+      "raw_mechanism": "combustion releases energy visible as bright orange-yellow flames and a yellow-white fireball",
+      "object_ids": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "family": "energy_reaction",
+      "type": "mass_transport",
+      "raw_mechanism": "combustion products are transported away from the burning region as a growing smoke plume",
+      "object_ids": [
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "buoyancy",
+      "raw_mechanism": "hot gas and smoke rise relative to the surrounding air, forming an upward plume",
+      "object_ids": [
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e11"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "suspended smoke particles scatter and block light through the plume, reducing visibility of the background",
+      "object_ids": [
+        "obj_5",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e11"
+      ]
+    }
+  ]
+}

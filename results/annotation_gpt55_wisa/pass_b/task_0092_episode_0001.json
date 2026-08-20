@@ -1,0 +1,259 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "white roll",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "combustible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "flame",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [
+        "translucent",
+        "emissive"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "smoke",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "support",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "background surface",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e11",
+        "e12"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "combustion",
+      "type": "sustained_burning",
+      "raw_type": "sustained flame burning on the roll's top surface",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e6",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "gas_particulate_motion",
+        "type": "gas_emission",
+        "raw_type": "pale smoke emitted from the burning area and curling upward or sideways",
+        "object_ids": [
+          "obj_1",
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e5"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "light_emission",
+        "raw_type": "visible orange-yellow light emitted by the flame",
+        "object_ids": [
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e2",
+          "e4",
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the flame is already present at the first frame",
+      "actor_ids": [],
+      "target_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e9",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "thermal_reaction",
+        "type": "material_to_charred",
+        "raw_transition": "the top surface dark patch enlarges and darkens beneath the flame"
+      },
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "the flame outline and height change repeatedly, later appearing as a taller plume"
+      },
+      "evidence_refs": [
+        "e4",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "pale smoke wisps appear near the flame and curl upward or sideways"
+      },
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "chemical_energy_release",
+      "raw_mechanism": "combustion at the roll surface releases energy visible as a flame",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e9"
+      ]
+    },
+    {
+      "family": "energy_reaction",
+      "type": "heat_transfer",
+      "raw_mechanism": "heat from the burning region drives blackening and charring of the roll's top surface",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "family": "energy_reaction",
+      "type": "mass_transport",
+      "raw_mechanism": "combustion products are transported away from the burning area as visible smoke wisps",
+      "object_ids": [
+        "obj_1",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "buoyancy",
+      "raw_mechanism": "hot gases and smoke rise above the burning surface",
+      "object_ids": [
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e9"
+      ]
+    }
+  ]
+}

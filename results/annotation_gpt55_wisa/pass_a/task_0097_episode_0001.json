@@ -1,0 +1,281 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A dark corrugated tabletop structure has multiple flickering flames that change size and shape while it rests on a tan sheet on a wooden table.",
+  "raw_event_description": "The clip begins with an already ongoing fire on a small folded, ribbed structure placed on a tan rectangular sheet. Bright yellow, orange, and white flames are visible on the left, center, upper, and right portions of the structure. Over time the flames repeatedly lengthen, narrow, bend, split, and shrink; the right-side flame is initially tall and bright, later becoming lower and closer to the right curved edge, while the left and central flames continue flickering. The structure stays in the same tabletop position, with dark and orange glowing areas visible along parts of it. The camera view remains essentially unchanged.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The first frame already shows visible flames on the object.",
+      "The burning object, tan sheet, and wooden tabletop are clearly visible.",
+      "The start of ignition is not shown."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "corrugated structure",
+      "visible_form": "small folded serpentine or wave-shaped ribbed structure with several raised and curved sections",
+      "material_description": "dark brown to black ribbed surface with grid-like or corrugated texture and some orange glowing areas",
+      "visible_properties": [
+        "dark",
+        "ribbed",
+        "folded",
+        "irregular outline",
+        "orange glowing spots and lines"
+      ],
+      "initial_motion_description": "no visible whole-object motion at the start",
+      "initial_integrity_description": "already darkened in places and supporting visible flames; overall folded form remains present",
+      "event_role_hints": [
+        "visible flames are located on and immediately above this structure"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "flames",
+      "visible_form": "multiple changing tongues and patches of yellow, orange, and white light",
+      "material_description": "luminous yellow-orange-white regions with translucent edges",
+      "visible_properties": [
+        "bright",
+        "flickering",
+        "changing height",
+        "changing outline",
+        "semi-transparent edges"
+      ],
+      "initial_motion_description": "flames are already flickering and changing shape in the first frame",
+      "initial_integrity_description": "several separate flame regions are visible at the start",
+      "event_role_hints": [
+        "visible active moving regions in the scene"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "tan sheet",
+      "visible_form": "flat rectangular sheet underneath the burning structure",
+      "material_description": "matte tan or cardboard-like visible surface",
+      "visible_properties": [
+        "flat",
+        "rectangular",
+        "tan"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears flat and continuous where visible",
+      "event_role_hints": [
+        "supports the corrugated structure"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wooden table",
+      "visible_form": "large rectangular tabletop with visible wood grain",
+      "material_description": "brown wood-grain surface",
+      "visible_properties": [
+        "large",
+        "flat",
+        "wood-grain pattern"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact where visible",
+      "event_role_hints": [
+        "supports the tan sheet"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "partial dark figure",
+      "visible_form": "partly visible dark vertical shape near the left edge of the frame",
+      "material_description": "dark fabric-like visible area",
+      "visible_properties": [
+        "partial",
+        "dark",
+        "near frame edge"
+      ],
+      "initial_motion_description": "no clear independent motion visible",
+      "initial_integrity_description": "only partially visible",
+      "event_role_hints": [
+        "not visibly interacting with the burning object"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on top of the tan rectangular sheet",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "rests on the wooden tabletop",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "located on and immediately above the corrugated structure",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "appears at the far left edge of the scene, separated from the tabletop object",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A folded dark ribbed structure is centered on a tan rectangular sheet."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The tan rectangular sheet lies on a large wooden tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Multiple yellow-orange flames are visible on the left, center, upper, and right parts of the structure."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The right-side flame is tall and bright with a white central area."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A central upper flame becomes a narrow vertical tongue."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The left-front flame extends sideways toward the left in several frames."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "Orange glowing points and lines are visible along parts of the dark ribbed structure."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The right-side flame is lower and closer to the curved right portion of the structure than it was early in the clip."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The tan sheet and tabletop remain in the same visible positions throughout the clip."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "A partial dark vertical figure or shape is intermittently visible at the far left edge of the frame."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The camera viewpoint remains fixed with no visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The visible process is already underway at the start."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The corrugated structure remains positioned on the tan sheet with flames on several parts."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Several flames flicker, including a tall bright flame on the right side."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The tan sheet stays flat beneath the structure."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "Flame shapes vary across the structure."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The central flame narrows upward while the left flame stretches sideways in some frames."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "Orange glowing areas remain visible on portions of the dark ribbed surface."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The burning structure remains on the sheet near the center of the table."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The right-side flame appears lower and more compact than earlier, while other flames continue flickering."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The folded structure remains visibly present with darkened and glowing sections."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The moment when the flames first appeared is not shown.",
+    "The final end state of the burning object is not shown."
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "pot",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "foamy bubble layer",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "viscous",
+        "transparent",
+        "translucent",
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "left handle assembly",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "dark support surface",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "tiled wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "green package",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "free_surface_motion",
+      "raw_type": "continuous churning and reshaping of a foamy bubble surface",
+      "participants": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e10"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "repeated",
+      "change_profile": "steady",
+      "process_scope": "mixed",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "foamy free surface repeatedly changes local bubble size, outline, peaks, and depressions"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "local bubbles enlarge, shrink, merge, collapse, and reappear while the overall foam mound remains near the rim"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "bubble interfaces and foam films change shape while maintaining rounded glossy cells",
+      "applies_to_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "viscosity",
+      "raw_mechanism": "the foamy material resists rapid bulk drainage or spilling, with only local surface fluctuations visible",
+      "applies_to_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10"
+      ]
+    }
+  ]
+}

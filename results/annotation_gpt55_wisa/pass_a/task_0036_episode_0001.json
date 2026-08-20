@@ -1,0 +1,278 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A woman jogs away from the camera along a paved path beside a calm water body.",
+  "raw_event_description": "At the start, the woman is already jogging on the paved riverside path near the left side of the frame. She continues moving farther away along the path, with alternating leg steps and arm swings. Her hair repeatedly swings outward and settles as she runs. As she gets farther from the camera, more of the long path, grassy slope, and water surface remain visible, while her body becomes smaller in the frame. A faint reflection of her lower body and shoes appears on wet sections of the pavement during the later part of the clip.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The runner is already in motion at the first visible frame.",
+      "The runner is close to the left edge of the frame, with part of the body near the frame boundary.",
+      "The path, water body, and grassy bank are visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "runner",
+      "visible_form": "adult person seen mostly from behind and side while jogging",
+      "material_description": "wears a pink hooded top, tan padded vest, black leggings, and gray athletic shoes; has dark hair",
+      "visible_properties": [
+        "upright posture",
+        "alternating leg positions",
+        "bent arms",
+        "loose dark hair"
+      ],
+      "initial_motion_description": "already jogging away from the camera along the paved path",
+      "initial_integrity_description": "body and clothing appear intact and continuous",
+      "event_role_hints": [
+        "main moving subject"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "paved path",
+      "visible_form": "long light-colored walkway running beside the water and curving into the distance",
+      "material_description": "smooth pale hard surface with some darker wet-looking reflective areas",
+      "visible_properties": [
+        "flat walkway",
+        "long continuous surface",
+        "visible seams or panel lines",
+        "reflective patches"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "continuous and unbroken visible path surface",
+      "event_role_hints": [
+        "surface used by runner"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "water body",
+      "visible_form": "broad water surface along the left side of the path",
+      "material_description": "gray reflective liquid surface with faint ripples",
+      "visible_properties": [
+        "smooth surface",
+        "subtle ripples",
+        "reflections of distant shoreline elements"
+      ],
+      "initial_motion_description": "no large visible displacement; small surface pattern changes are visible",
+      "initial_integrity_description": "continuous visible water surface",
+      "event_role_hints": [
+        "adjacent background surface"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "grassy bank",
+      "visible_form": "green sloped grass area on the right side of the path",
+      "material_description": "short green vegetation covering a sloped ground surface",
+      "visible_properties": [
+        "green color",
+        "sloped surface",
+        "continuous grassy texture"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "continuous grassy area",
+      "event_role_hints": [
+        "static boundary beside path"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "pavement reflection",
+      "visible_form": "faint mirrored shape below the runner on wet-looking pavement",
+      "material_description": "darkened reflective image on shiny pavement patches",
+      "visible_properties": [
+        "elongated vertical reflection",
+        "moves with the runner's position on the path"
+      ],
+      "initial_motion_description": "not prominent at the very start; becomes more visible as the runner moves farther along wet patches",
+      "initial_integrity_description": "appears as a faint continuous reflected shape when visible",
+      "event_role_hints": [
+        "visible optical counterpart of runner on pavement"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "runner is positioned on the paved path",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "paved path runs alongside the water body",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "paved path borders the grassy bank on the opposite side from the water",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The runner is on the paved path near the water-side edge."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "A broad water surface is visible to the left of the path."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "A green grassy bank is visible to the right of the path."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The runner moves away from the camera while facing generally along the path."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The runner's legs alternate between forward and rearward positions."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The runner's arms swing with bent elbows."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The runner's dark hair swings outward and changes shape during the jog."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The runner appears smaller in the frame than at the start."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "A faint reflection of the runner appears on the wet-looking pavement below and behind her feet."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The water surface shows faint rippled lines."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The frame composition remains steady with the path, water, and grass in consistent positions."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The runner continues along the path toward the distant curve."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The runner is already jogging when first visible.",
+        "The runner is close to the camera compared with later frames."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "moves away from the camera along the paved path with alternating steps"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains fixed as the surface under the runner"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e10"
+      ],
+      "observations": [
+        "The runner is farther along the path.",
+        "The water body and grassy bank remain visible on opposite sides of the path."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "continues jogging with repeated leg alternation and arm swing"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "hair swings side-to-side and outward while the runner moves"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "shows faint surface ripples"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e12"
+      ],
+      "observations": [
+        "The runner is smaller and farther down the path than earlier.",
+        "The path curves ahead in the distance."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "continues moving away along the path"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "visible reflected shape on the pavement changes position together with the runner's visible position"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

@@ -1,0 +1,343 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "Two hands arrange six reflective optical discs into a rough circular ring on a tabletop.",
+  "raw_event_description": "An overhead view shows a light tabletop with a reflective disc near the upper center and tools at the upper right. A left hand holds or touches the disc, then both hands bring in and separate additional reflective discs. The hands move discs into upper, side, and lower positions, gradually forming a ring-like layout with an open center. Near the end, both hands make small adjustments to the two lower discs and then move away, leaving six discs arranged on the table.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The scene is dark in the first frame.",
+      "One hand and one reflective disc are visible.",
+      "Some later-used discs are not yet visible.",
+      "Tools at the upper right are visible but partly dim."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "left hand and forearm",
+      "visible_form": "human left hand and forearm entering from the lower-left side",
+      "material_description": "visible skin, a wristwatch or bracelet, a ring visible in later frames, and a light-colored sleeve visible in middle to late frames",
+      "visible_properties": [
+        "articulated fingers",
+        "wears wrist accessory",
+        "moves across tabletop"
+      ],
+      "initial_motion_description": "The hand is already moving or positioned while touching a reflective disc near the upper center.",
+      "initial_integrity_description": "No visible injury, separation, or deformation.",
+      "event_role_hints": [
+        "touches discs",
+        "moves discs",
+        "adjusts final positions"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "right hand and forearm",
+      "visible_form": "human right hand and forearm entering mainly from the right and lower-right side",
+      "material_description": "visible skin and fingers",
+      "visible_properties": [
+        "articulated fingers",
+        "moves across tabletop"
+      ],
+      "initial_motion_description": "Not clearly present in the first frame; later enters and grips or touches discs.",
+      "initial_integrity_description": "No visible injury, separation, or deformation.",
+      "event_role_hints": [
+        "touches discs",
+        "moves discs",
+        "adjusts final positions"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "reflective optical discs",
+      "visible_form": "six separate flat circular discs with central holes",
+      "material_description": "shiny silver-gray reflective surfaces with visible rainbow-colored highlights",
+      "visible_properties": [
+        "flat circular faces",
+        "central holes",
+        "iridescent reflections",
+        "no visible cracks",
+        "no visible bending"
+      ],
+      "initial_motion_description": "One disc is visible near the upper center at the start; additional discs are introduced, separated, and repositioned by the hands.",
+      "initial_integrity_description": "The visible discs appear intact throughout.",
+      "event_role_hints": [
+        "primary moved objects",
+        "arranged into a ring-like layout"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "tabletop",
+      "visible_form": "flat light-colored horizontal surface filling the background",
+      "material_description": "matte light surface with small specks or marks visible",
+      "visible_properties": [
+        "stationary",
+        "supports visible objects"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "No visible breakage or deformation.",
+      "event_role_hints": [
+        "surface on which discs and tools are located"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "scissors",
+      "visible_form": "black-handled scissors lying at the upper right",
+      "material_description": "dark handles with lighter metallic-looking blades",
+      "visible_properties": [
+        "stationary",
+        "partly visible near edge of frame"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "background object"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "corded handheld tool",
+      "visible_form": "elongated blue, white, and red handheld tool with a cord near the upper right",
+      "material_description": "colored plastic-looking body and dark cord",
+      "visible_properties": [
+        "stationary",
+        "partly visible near edge of frame"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "background object"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "left hand is touching or holding a reflective disc",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "a reflective disc is on or immediately above the tabletop near the upper center",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "scissors lie on the tabletop at the upper right",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "corded handheld tool lies on the tabletop at the upper right",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A left hand touches a reflective circular disc near the upper center of the tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Black-handled scissors and a corded colored handheld tool are visible at the upper right."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A second reflective disc becomes visible overlapping or adjacent to the first disc."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "Two reflective discs are separated horizontally, one toward the left and one toward the right."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "Two reflective discs are placed near the top area with their circular edges close to each other."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A reflective disc is held near the lower center by both hands."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "Additional reflective discs are moved into lower-left and lower-right positions."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "Six reflective discs are visible in a rough ring with an open central area."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "Both hands make small position changes to the two lower discs."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The hands move away from the arranged discs."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The scissors and corded handheld tool remain at the upper right without visible displacement."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The camera view remains overhead and fixed relative to the tabletop."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The scene begins with a reflective disc near the upper center and the left hand touching it.",
+        "Tools are present at the upper right.",
+        "Another disc appears and overlaps or sits close to the first disc."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Left hand grips or touches a disc near the upper center."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Right hand enters later and moves toward the discs."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "One visible disc becomes two visible overlapping or adjacent discs."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Scissors remain still at the upper right."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "Corded handheld tool remains still at the upper right."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The hands separate discs and position them in different parts of the tabletop.",
+        "Two discs are placed near the top area.",
+        "More discs are moved into lower and side positions."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Left hand moves discs toward the left, upper-left, and lower-left areas."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Right hand moves discs toward the right and lower-right areas."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The number of visible arranged discs increases until several discs occupy upper, side, and lower positions."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "Six discs form a rough circular arrangement.",
+        "The two lower discs receive small adjustments.",
+        "The hands withdraw, leaving the discs arranged."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Left hand briefly adjusts a lower-left disc and then moves away."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Right hand briefly adjusts a lower-right disc and then moves away."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Six discs remain visible in a ring-like layout with a central gap."
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e11"
+      ],
+      "observations": [
+        "The background tools do not visibly move during the disc arrangement."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "Scissors remain in the same upper-right area."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "Corded handheld tool remains in the same upper-right area."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "Some discs are partly outside the frame or overlapped before they are fully separated, so individual disc identity is not always trackable from first appearance to final position."
+  ]
+}

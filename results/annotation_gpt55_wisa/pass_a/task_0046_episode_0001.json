@@ -1,0 +1,305 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A static wide shot shows a mountain, sky, and lake reflection while the lake surface ripples and the bright reflected light shimmers.",
+  "raw_event_description": "The video begins with a dark conical mountain centered above a calm lake, a bright light source near the mountain summit, and an inverted reflection of the mountain on the water. Across the clip, the framing stays nearly unchanged. The lake surface shows small horizontal ripples that shift continuously, causing the reflected mountain outline and bright reflected light patch to wobble and change shape slightly. The mountain, shoreline, sky, and clouds remain visually stable.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The mountain silhouette, lake surface, sky, clouds, and bright light near the summit are visible from the first frame.",
+      "The lake reflection and ripple pattern are already present at the start."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "mountain",
+      "visible_form": "large dark conical landform with a centered peak and sloping sides",
+      "material_description": "dark solid-looking silhouette with no visible surface detail in shadow",
+      "visible_properties": [
+        "large",
+        "dark",
+        "centered",
+        "roughly symmetrical"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous unbroken silhouette",
+      "event_role_hints": [
+        "visible above the lake",
+        "also visible as an inverted reflection on the water"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "lake surface",
+      "visible_form": "broad horizontal reflective water surface occupying the lower half of the frame",
+      "material_description": "dark glossy surface with visible ripples and reflected sky tones",
+      "visible_properties": [
+        "reflective",
+        "rippled",
+        "mostly calm",
+        "dark gray-blue"
+      ],
+      "initial_motion_description": "small surface ripples are visible and shifting",
+      "initial_integrity_description": "continuous water surface across the frame",
+      "event_role_hints": [
+        "carries the reflected image of the mountain and bright light"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "bright sky light",
+      "visible_form": "intense white glare positioned at or just behind the mountain peak",
+      "material_description": "bright luminous area with glare rays; no solid surface detail visible",
+      "visible_properties": [
+        "very bright",
+        "white",
+        "glare-producing",
+        "near mountain summit"
+      ],
+      "initial_motion_description": "no clear independent motion visible",
+      "initial_integrity_description": "continuous bright glare region",
+      "event_role_hints": [
+        "appears above the mountain and has a bright reflection on the lake"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "reflected mountain image",
+      "visible_form": "dark inverted triangular reflection below the shoreline on the lake",
+      "material_description": "dark mirror-like image on the water surface",
+      "visible_properties": [
+        "inverted",
+        "dark",
+        "wavy-edged",
+        "centered below mountain"
+      ],
+      "initial_motion_description": "edges show slight wavering with the water ripples",
+      "initial_integrity_description": "continuous reflected shape, though distorted by ripples",
+      "event_role_hints": [
+        "visible on the lake surface"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "bright water reflection",
+      "visible_form": "small bright white glare patch on the lake below the mountain reflection",
+      "material_description": "luminous reflection on glossy water with no solid surface detail",
+      "visible_properties": [
+        "bright",
+        "white",
+        "shimmering",
+        "compact"
+      ],
+      "initial_motion_description": "flickers and changes shape slightly with the water surface",
+      "initial_integrity_description": "visible as a continuous bright patch, with changing outline",
+      "event_role_hints": [
+        "located along the vertical line below the bright sky light"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "clouds",
+      "visible_form": "thin pale cloud streaks across the sky",
+      "material_description": "soft light gray and white vapor-like forms",
+      "visible_properties": [
+        "pale",
+        "wispy",
+        "spread across upper frame"
+      ],
+      "initial_motion_description": "no visible motion over the clip",
+      "initial_integrity_description": "continuous cloud patches",
+      "event_role_hints": [
+        "background sky features"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "shoreline band",
+      "visible_form": "thin dark horizontal strip between mountain and lake",
+      "material_description": "dark land-like band with little detail",
+      "visible_properties": [
+        "horizontal",
+        "dark",
+        "thin"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous separating band across the scene",
+      "event_role_hints": [
+        "marks the boundary between above-water scenery and lake reflection"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the mountain is centered above the lake surface",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "the bright sky light is positioned at or just behind the mountain summit",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "the reflected mountain image appears directly below the mountain on the lake",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "the bright water reflection appears below the bright sky light on the lake surface",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "subject_id": "obj_7",
+      "relation_description": "the shoreline band lies between the mountain silhouette and the lake reflection",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e6"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "A dark conical mountain occupies the center of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "A broad reflective lake surface occupies the lower part of the frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "A very bright white glare is visible at or just behind the mountain peak."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "An inverted dark image of the mountain is visible on the lake surface."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "A compact bright reflected glare patch is visible on the lake below the mountain reflection."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "A thin dark horizontal band separates the mountain from the lake surface."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "Small horizontal ripple lines are visible across the lake surface."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The lake ripple pattern shifts over time."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The reflected mountain outline wavers slightly over time."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The bright reflected glare patch on the lake changes shape and brightness distribution over time."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "Thin pale clouds remain visible across the sky."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The framing of the mountain, lake, and sky remains steady with no visible pan, tilt, or zoom."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "No scene cut is visible during the clip."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The scene remains a wide view of the mountain, lake, sky, and reflections.",
+        "The lake surface continues to show changing ripples.",
+        "The reflected dark mountain shape and bright reflected glare continue to shimmer slightly."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The visible ripple pattern on the lake surface shifts continuously."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The inverted mountain reflection wavers along its edges."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The bright water reflection flickers and changes outline."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The mountain silhouette remains fixed in the frame."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The bright sky light remains near the mountain peak."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12",
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

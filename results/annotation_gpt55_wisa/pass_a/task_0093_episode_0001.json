@@ -1,0 +1,322 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "An orange basketball-like ball on outdoor ground has yellow-orange flames along its right side while a metal nozzle with a small blue flame points toward it.",
+  "raw_event_description": "The video begins with the ball already in view on soil and pine needles, with a yellow-orange flame on its right side and a torch-like nozzle at the right edge aimed toward it. Over time the yellow-orange flame flickers, grows taller, and extends above the top of the ball, sometimes leaning toward the upper left. The ball stays in roughly the same position and keeps an overall round outline, while the right-front surface is repeatedly obscured by flame. Later, dark vertical marks become visible on the lower-right/front printed area of the ball. The nozzle remains near the right edge with a small blue flame at its tip, with slight visible shifts in its position.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The ball, surrounding ground, right-side flame, and nozzle are visible in the first frame.",
+      "The flame is already present at the start, so no pre-flame state is shown."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "orange ball",
+      "visible_form": "round basketball-like ball with orange pebbled surface, black seams, and large printed lettering",
+      "material_description": "orange textured outer surface with black printed graphics and seams",
+      "visible_properties": [
+        "round",
+        "orange",
+        "pebbled texture",
+        "black seams",
+        "printed lettering"
+      ],
+      "initial_motion_description": "no visible translation or rotation at the start",
+      "initial_integrity_description": "overall round outline appears intact, with the right edge partly obscured by flame",
+      "event_role_hints": [
+        "flame overlaps the right side",
+        "later dark marks appear on the lower-right/front surface"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "torch-like nozzle",
+      "visible_form": "slender metal tube with a brass-colored section at the right side of the frame",
+      "material_description": "metallic silver tube and brass/gold-colored fitting",
+      "visible_properties": [
+        "tubular",
+        "metallic",
+        "right-edge position",
+        "aimed toward ball"
+      ],
+      "initial_motion_description": "mostly still at the start",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "small blue flame visible at its tip"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "yellow-orange flame",
+      "visible_form": "bright irregular flame plume overlapping the right side of the ball",
+      "material_description": "visible luminous yellow, orange, and white regions with changing edges",
+      "visible_properties": [
+        "bright",
+        "flickering",
+        "changing shape",
+        "partly transparent at edges"
+      ],
+      "initial_motion_description": "flickers upward and changes outline",
+      "initial_integrity_description": "non-solid changing shape",
+      "event_role_hints": [
+        "obscures part of the ball surface",
+        "extends above the ball later"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "blue flame",
+      "visible_form": "small blue luminous cone at the tip of the nozzle",
+      "material_description": "visible blue luminous region",
+      "visible_properties": [
+        "blue",
+        "small",
+        "near nozzle tip"
+      ],
+      "initial_motion_description": "held near the same direction as the nozzle, with minor visible variation",
+      "initial_integrity_description": "non-solid changing shape",
+      "event_role_hints": [
+        "located between nozzle and ball-side flame"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "outdoor ground",
+      "visible_form": "soil surface with pine needles, leaves, small plants, and surrounding vegetation",
+      "material_description": "dark soil, brown needles, leaves, and green plant matter",
+      "visible_properties": [
+        "uneven ground",
+        "brown debris",
+        "green plants"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "unchanged visible ground surface",
+      "event_role_hints": [
+        "ball is positioned on it"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the ball is in contact with the outdoor ground",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "the yellow-orange flame overlaps the right side of the ball",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "the nozzle is positioned to the right of the ball and points toward the ball",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "the blue flame is at the tip of the nozzle",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "An orange round ball is centered on dark outdoor ground with pine needles and leaves."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A yellow-orange flame is already visible on the ball's right edge."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A metal nozzle at the right side points toward the ball and has a small blue flame at its tip."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "The ball's circular outline remains in nearly the same place relative to the ground and frame."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The yellow-orange flame changes shape from frame to frame."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The yellow-orange flame extends above the top of the ball."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The upper part of the flame leans toward the upper left in several frames."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The ball's right-front surface is intermittently hidden behind the flame."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "Dark vertical marks are visible on the lower-right/front printed area of the ball."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "A tall yellow-orange flame plume rises from the ball's right/top area."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The nozzle remains near the right edge with its blue flame directed toward the ball."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "No scene cut or major viewpoint change is visible."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The nozzle tip shifts slightly relative to the ball's right edge."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "middle",
+      "observation": "The flame covers a wider area of the ball's right side than at the start."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The event is already underway when the video begins."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The ball is stationary on the outdoor ground."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The yellow-orange flame overlaps the ball's right edge."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The nozzle is visible at the right side aimed toward the ball."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The blue flame is visible at the nozzle tip."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e11",
+        "e13",
+        "e14"
+      ],
+      "observations": [
+        "The flame grows and varies in height and shape while the ball remains in place."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The flame flickers, extends above the ball, and leans toward the upper left in several moments."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The ball's right-front surface is repeatedly obscured by the flame."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The nozzle remains near the right edge and shifts slightly."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The blue flame remains visible near the nozzle tip."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e4",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The ball remains mostly centered while the flame continues to occupy the right side and rise above it."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Dark vertical marks are visible on the lower-right/front printed area."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "A tall yellow-orange plume rises from the ball's right/top area."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The nozzle stays visible near the right edge."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The blue flame remains near the nozzle tip."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "No pre-flame state is shown before the first visible frame."
+  ]
+}

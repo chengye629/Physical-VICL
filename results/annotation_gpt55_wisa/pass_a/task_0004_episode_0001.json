@@ -1,0 +1,273 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small orange rounded piece on a vertical metal tool sits between two metal jaws while bright streaks appear and the orange piece becomes larger and brighter.",
+  "raw_event_description": "The view starts tightly framed on two opposing metal faces with a narrow central gap and a vertical metal tool rising from below. A small orange rounded piece is centered at the tool tip near the lower edges of the metal faces. Thin bright streaks intermittently appear around the contact area, mostly shooting outward and downward to the sides. Over time the orange piece changes from a narrow capsule-like shape into a wider, brighter yellow-orange rounded mass around the top of the tool, while the surrounding metal faces remain in nearly the same visible position.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The main objects are visible but the first frame is soft-focused.",
+      "The orange piece is partly bordered or occluded by the upper metal faces.",
+      "The lower tool is visible but blurred in the foreground."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "upper metal jaws",
+      "visible_form": "two large opposing curved or beveled metal faces forming a narrow vertical gap",
+      "material_description": "dark gray reflective metal with scratches, smudges, and bright highlights",
+      "visible_properties": [
+        "rigid-looking",
+        "reflective",
+        "symmetrical arrangement around the central gap"
+      ],
+      "initial_motion_description": "no clear motion visible at the start",
+      "initial_integrity_description": "surfaces appear continuous and intact",
+      "event_role_hints": [
+        "adjacent to the orange piece",
+        "forms the surrounding gap where the visible changes occur"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "vertical metal tool",
+      "visible_form": "narrow cylindrical shaft rising from a wider blurred base",
+      "material_description": "silver-gray reflective metal",
+      "visible_properties": [
+        "slender",
+        "upright",
+        "partly out of focus near the lower foreground"
+      ],
+      "initial_motion_description": "no clear motion visible at the start",
+      "initial_integrity_description": "appears continuous and intact",
+      "event_role_hints": [
+        "supports or holds the orange piece at its top"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "orange rounded piece",
+      "visible_form": "small rounded capsule-like piece at the top of the vertical tool, later becoming a wider rounded mass",
+      "material_description": "orange to yellow-orange visible surface with bright highlights",
+      "visible_properties": [
+        "glowing appearance",
+        "rounded outline",
+        "color changes from darker orange to brighter yellow-orange"
+      ],
+      "initial_motion_description": "centered and nearly stationary at the tool tip",
+      "initial_integrity_description": "initially appears as one continuous rounded piece",
+      "event_role_hints": [
+        "main visibly changing object",
+        "located between the metal jaws and on top of the tool"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "bright streaks",
+      "visible_form": "thin short lines and arcs appearing around the central contact area",
+      "material_description": "orange-white bright traces against a black background",
+      "visible_properties": [
+        "intermittent",
+        "thin",
+        "radiating outward from near the orange piece"
+      ],
+      "initial_motion_description": "not prominent in the earliest visible frame; intermittent streaks appear soon after",
+      "initial_integrity_description": "appears as transient separate streaks rather than one continuous object",
+      "event_role_hints": [
+        "visible emission-like traces around the changing orange piece"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "black background",
+      "visible_form": "dark surrounding area behind and below the objects",
+      "material_description": "featureless black visual field",
+      "visible_properties": [
+        "high contrast with bright streaks and orange piece"
+      ],
+      "initial_motion_description": "no motion visible",
+      "initial_integrity_description": "unchanged dark background",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is centered at the top of the vertical metal tool",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is positioned in the narrow gap between the two upper metal faces",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "appears near the orange piece and the lower edges of the metal jaws",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A small orange rounded piece is visible on the top end of a vertical silver-gray tool."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Two large metal faces form a narrow dark vertical gap around the orange piece."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The lower foreground tool appears blurred while the orange piece and upper jaws become sharper after the first frames."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "Thin bright streaks appear around both sides of the orange piece."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The orange piece becomes wider than its initial capsule-like outline."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The orange piece shows a brighter yellow-orange central area."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The two upper metal faces remain in nearly the same visible position throughout the sequence."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The vertical metal tool remains centered below the orange piece throughout the sequence."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The orange piece appears as a rounded bulb-like mass around the top of the vertical tool."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Intermittent fine bright streaks continue near the lower sides of the orange piece."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The central setup is already assembled in view.",
+        "The orange piece is small and capsule-like."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "is stationary-looking at the top of the vertical metal tool"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "frames the orange piece with two opposing metal faces"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "extends upward from the lower foreground to the orange piece"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "Bright streaks appear intermittently around the central area.",
+        "The orange piece changes shape and brightness."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "widens and changes from darker orange to brighter yellow-orange"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "appears as thin bright lines radiating from near the orange piece"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains visually fixed around the changing orange piece"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains centered below the orange piece"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The orange piece is now wider and more bulb-like than at the start.",
+        "A few fine bright streaks continue to appear near the central area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "appears as a bright rounded mass around the top of the metal tool"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "continues intermittent brief appearances near the lower sides of the orange mass"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "variable",
+    "evidence_refs": [
+      "e3"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact contact boundaries between the orange piece, the vertical tool, and the upper metal faces are partly hidden by the tight framing and overlap."
+  ]
+}

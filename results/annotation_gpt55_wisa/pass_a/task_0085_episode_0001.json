@@ -1,0 +1,343 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A dark upper head stays in contact with a smooth white rounded mass while small crumbs, white fragments, and dark specks move around the base and then become less airborne.",
+  "raw_event_description": "The view begins with a close-up of a dark ridged upper component already positioned against the top of a white rounded mass on a tan surface. Brown-orange crumbly material, white bits, and dark specks are visible around the lower edge of the white mass. In the early part, many small particles are suspended or moving near the base, especially along the lower and right sides. Through the sequence, the white mass remains broad, smooth, and flattened-looking beneath the dark central protrusion, while the debris around the base shifts slightly and the amount of airborne particulate decreases. By the end, most visible particles are near the surface, with an orange-brown crumb cluster still present along the lower right edge.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "mid_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The dark upper component is cropped by the top edge of the frame.",
+      "The white mass is already in contact with or directly beneath the dark central protrusion at the first visible moment.",
+      "Small debris and suspended particles are already visible around the base."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "dark upper head",
+      "visible_form": "dark ridged upper assembly with a central downward protruding part",
+      "material_description": "dark, mostly opaque surface with glossy highlights and metallic or hard-plastic visual cues",
+      "visible_properties": [
+        "dark colored",
+        "ridged upper edge",
+        "cropped at top",
+        "central protrusion visible"
+      ],
+      "initial_motion_description": "No clear independent motion is visible at the start; it is already positioned over the white mass.",
+      "initial_integrity_description": "Appears intact with no visible breakage.",
+      "event_role_hints": [
+        "positioned directly above and against the white mass"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "white rounded mass",
+      "visible_form": "smooth, rounded, flattened white oval or dome-like mass",
+      "material_description": "white, smooth, glossy surface with slightly translucent beige-toned lower side in places",
+      "visible_properties": [
+        "white",
+        "smooth surface",
+        "rounded edges",
+        "flattened broad profile",
+        "glossy highlights"
+      ],
+      "initial_motion_description": "Already located beneath the dark upper head with no clear independent translation at the first frame.",
+      "initial_integrity_description": "Appears continuous and unbroken, though surrounded by loose fragments and crumbs.",
+      "event_role_hints": [
+        "directly contacted by the dark upper head",
+        "overlies or borders debris at its lower edge"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "tan surface",
+      "visible_form": "flat horizontal surface filling the lower background",
+      "material_description": "tan, matte-looking surface",
+      "visible_properties": [
+        "flat",
+        "tan",
+        "supports visible debris and white mass"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears continuous in the visible area.",
+      "event_role_hints": [
+        "surface on which the white mass and debris are located"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "orange-brown crumbs",
+      "visible_form": "irregular crumbly pieces and clusters near the base of the white mass",
+      "material_description": "orange-brown granular and crumb-like visible texture",
+      "visible_properties": [
+        "irregular shapes",
+        "granular texture",
+        "clustered near lower right"
+      ],
+      "initial_motion_description": "Some crumbs or small pieces are visibly disturbed near the base at the start.",
+      "initial_integrity_description": "Already fragmented into many pieces.",
+      "event_role_hints": [
+        "located under and around the lower edge of the white mass"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "white fragments and powder",
+      "visible_form": "small white chips, flakes, and powder-like bits near the lower edge",
+      "material_description": "white small solid-looking fragments and fine particulate",
+      "visible_properties": [
+        "small",
+        "white",
+        "scattered",
+        "some pieces brighter than surrounding surface"
+      ],
+      "initial_motion_description": "Several white bits are visibly moving or suspended near the base in the early frames.",
+      "initial_integrity_description": "Already separated into small pieces.",
+      "event_role_hints": [
+        "scattered around the lower edge of the white mass"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "dark specks",
+      "visible_form": "tiny dark particles visible in the air and on the surface",
+      "material_description": "small black or dark dots with no further material detail visible",
+      "visible_properties": [
+        "tiny",
+        "dark",
+        "scattered",
+        "some suspended above the surface"
+      ],
+      "initial_motion_description": "Some specks are visible away from the surface and appear displaced between frames.",
+      "initial_integrity_description": "Discrete specks, already separate.",
+      "event_role_hints": [
+        "visible around the white mass and debris field"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The dark central protrusion is directly above and visually touching or overlapping the top of the white rounded mass.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "The white rounded mass rests on or immediately above the tan surface.",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "Orange-brown crumbs are clustered around the lower right edge of the white mass.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "White fragments and powder are scattered along the lower edge of the white mass.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e6"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "A dark ridged component is visible across the top of the frame and is cropped by the frame edge."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "A dark central protrusion is positioned against the top area of the white rounded mass."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "The white mass has a smooth rounded upper surface with glossy highlights."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "A tan flat surface is visible beneath the white mass and debris."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "Orange-brown crumbly material is visible at the lower right edge of the white mass."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "early",
+      "observation": "Small white fragments and powder-like bits are visible along the lower edge of the white mass."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "early",
+      "observation": "Several small particles are suspended above the surface near the base of the white mass."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "Fine particles and specks remain visible around the lower edge of the white mass."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The orange-brown crumb cluster remains concentrated along the lower right side."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Fewer particles are visibly suspended away from the surface than in the early frames."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "Scattered white fragments and dark specks remain on the tan surface near the lower edge."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The white mass remains beneath the dark protrusion with a similar broad flattened outline throughout the sequence."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The scene opens with the dark upper component already close to or touching the white mass.",
+        "Loose crumbs, white fragments, and dark specks are already present near the base."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The dark upper head remains positioned over the white mass."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The white rounded mass remains broad and flattened-looking beneath the head."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Orange-brown crumbs are visible at the lower right edge."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Small white fragments are visible and some appear displaced near the lower edge."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "Tiny dark specks are visible suspended around the white mass."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e2",
+        "e8",
+        "e9",
+        "e12"
+      ],
+      "observations": [
+        "The main objects keep approximately the same positions in the frame.",
+        "Fine debris remains active around the lower edge."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The dark protrusion remains aligned with the upper middle of the white mass."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The white mass keeps a smooth rounded upper surface and flattened profile."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The orange-brown crumb cluster remains along the lower right side."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "Dark specks continue to appear around the mass, with some changing positions between frames."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The amount of visibly suspended particulate is reduced compared with the beginning.",
+        "Debris remains scattered on the surface near the base."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The dark upper head remains in place above the white mass."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The white mass remains beneath the dark protrusion with a similar visible outline."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Orange-brown crumbs remain gathered near the lower right edge."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "White fragments remain scattered along the lower edge on the tan surface."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "Fewer dark specks are visible away from the surface."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e1",
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The upper part of the dark component is outside the frame.",
+    "The exact origin of the small fragments and specks is not visually resolved.",
+    "The contact boundary between the dark protrusion and the white mass is partly obscured by close framing and shallow depth of field."
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A dark layered cloud mass changes shape and extends across a flat landscape while an orange horizon glow remains visible and small dark specks appear late in the scene.",
+  "raw_event_description": "The video shows a fixed view over a flat field with a dark sky above and a bright orange band near the right horizon. From the beginning, a large dark cloud mass occupies most of the sky. Over time, layered cloud bands on the left become more pronounced and extend farther toward the center and right. A dark vertical curtain-like region near the center-right horizon remains visible and changes width and edge shape. The orange horizon glow stays visible on the right but becomes increasingly bordered by the dark cloud base. Near the end, several small dark specks appear above the field near the right side and move through the sky.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The large cloud mass, field, horizon, and orange sky band are already visible in the first frame.",
+      "The visible cloud-shape changes appear to be ongoing from the start rather than beginning from a still setup."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "dark cloud mass",
+      "visible_form": "large continuous dark cloud body filling most of the upper frame",
+      "material_description": "opaque dark blue-gray to black vapor-like visual texture",
+      "visible_properties": [
+        "dark",
+        "broad",
+        "layered",
+        "soft-edged",
+        "irregular outline"
+      ],
+      "initial_motion_description": "Already present; later frames show visible shape change and extension across the sky.",
+      "initial_integrity_description": "Continuous cloud body with no separated solid pieces visible.",
+      "event_role_hints": [
+        "main changing sky feature"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left layered cloud bands",
+      "visible_form": "stacked horizontal bands projecting from the left side under the larger cloud mass",
+      "material_description": "dark gray, smooth to streaked vapor-like bands",
+      "visible_properties": [
+        "layered",
+        "elongated",
+        "curved",
+        "soft-edged"
+      ],
+      "initial_motion_description": "Initially present as less prominent dark bands on the left; later frames show the bands extending farther right and becoming more defined.",
+      "initial_integrity_description": "Continuous with the surrounding cloud mass.",
+      "event_role_hints": [
+        "prominent moving and reshaping feature"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "dark vertical curtain",
+      "visible_form": "dark vertical to slightly slanted column or curtain near the center-right horizon",
+      "material_description": "dark semi-opaque gray-black streaked region",
+      "visible_properties": [
+        "vertical",
+        "diffuse",
+        "dark",
+        "soft-edged"
+      ],
+      "initial_motion_description": "Visible near the horizon from the beginning; later frames show changes in width and edge position.",
+      "initial_integrity_description": "Continuous diffuse region connected visually to the cloud base.",
+      "event_role_hints": [
+        "changing dark region near the orange horizon"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "orange horizon glow",
+      "visible_form": "bright orange-yellow band along the right side of the horizon",
+      "material_description": "luminous sky-colored region with orange, yellow, and reddish gradients",
+      "visible_properties": [
+        "bright",
+        "horizontal",
+        "warm-colored",
+        "partly bordered by dark cloud"
+      ],
+      "initial_motion_description": "No independent motion visible; apparent visible area changes as cloud edges change around it.",
+      "initial_integrity_description": "Continuous bright band near the horizon.",
+      "event_role_hints": [
+        "background region whose visible outline changes"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "flat field",
+      "visible_form": "wide flat ground strip occupying the lower part of the frame",
+      "material_description": "tan and green textured ground surface",
+      "visible_properties": [
+        "flat",
+        "horizontal",
+        "textured",
+        "stationary"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Continuous ground plane across the lower frame.",
+      "event_role_hints": [
+        "stationary foreground reference"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "small dark specks",
+      "visible_form": "tiny dark moving dots or silhouettes near the horizon in late frames",
+      "material_description": "black silhouettes with no visible surface detail",
+      "visible_properties": [
+        "small",
+        "dark",
+        "separate",
+        "moving"
+      ],
+      "initial_motion_description": "Not visible at the beginning.",
+      "initial_integrity_description": "Absent in the first frame.",
+      "event_role_hints": [
+        "late appearing moving entities"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "occupies the sky above the field",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "lies along the right horizon below the dark cloud mass",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "stands between the dark cloud base and the orange horizon glow near center-right",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "A flat tan-green field spans the bottom of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A dark cloud mass fills most of the upper frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A bright orange-yellow band is visible along the right horizon."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A dark vertical curtain-like region is visible near the center-right horizon."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "Layered dark cloud bands on the left become more sharply defined."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The left layered cloud bands extend farther toward the center of the frame."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The lower dark cloud edge near the orange band becomes thicker and more curved."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The dark cloud base covers more of the sky above the right horizon."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The orange horizon glow remains visible as a bright strip on the right."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Several small dark specks appear above the field near the right side."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The small dark specks change position between late frames."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The horizon line and field remain fixed in the frame."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene begins with the field at the bottom, dark cloud mass above, and orange glow on the right horizon.",
+        "A dark vertical curtain-like region is already present near the center-right horizon."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "occupies most of the sky"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "is visible as a dark diffuse vertical region near the horizon"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "is visible as a bright orange-yellow band on the right"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "remains stationary at the bottom of the frame"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The cloud structure becomes more layered and pronounced on the left.",
+        "The lower cloud edge near the orange horizon changes shape."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "extends farther from the left toward the center"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "changes outline and develops a thicker lower edge"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "changes width and edge shape near the horizon"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The dark cloud base occupies more of the upper right sky while the orange strip remains visible below it.",
+        "Small dark specks appear and move above the field."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "covers more of the visible sky above the right horizon"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains visible as a bright strip near the horizon"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "appears late and changes position between frames"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The small late dark specks are too small to identify by visible detail alone."
+  ]
+}

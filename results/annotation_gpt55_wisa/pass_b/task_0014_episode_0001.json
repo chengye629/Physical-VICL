@@ -1,0 +1,181 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "white overhanging mass",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "translucent"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "dark moving liquid surface",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "small clear drops or streaks",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "product",
+        "target"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "free_surface_motion",
+      "raw_type": "continuous rippling of the dark liquid free surface",
+      "object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "fluid_motion",
+        "type": "dripping",
+        "raw_type": "intermittent appearance of small clear drops or narrow liquid streaks below the overhanging edge",
+        "object_ids": [
+          "obj_1",
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_object_ids": [],
+      "target_object_ids": [],
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e5",
+        "e6",
+        "e8"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "dark liquid surface patterns, ripples, and pale streaks shift continuously"
+      },
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "liquid_emission_onset",
+        "raw_transition": "small clear drops or vertical streaks intermittently appear below the lower edge of the white mass"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "individual clear drops or streaks disappear from view after brief appearance"
+      },
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "liquid interface behavior forming small beads or thin streaks and supporting free-surface ripples",
+      "object_ids": [
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "downward motion of clear liquid streaks below the overhanging edge",
+      "object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ]
+}

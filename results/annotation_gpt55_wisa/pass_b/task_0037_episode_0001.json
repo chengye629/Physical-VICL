@@ -1,0 +1,265 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "metal pot",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "tan liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "viscous"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e4",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "pale foam patch",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "utensil",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "unknown",
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "dark wall specks",
+      "entity_kind": "unknown",
+      "event_roles": [],
+      "material_phase": "unknown",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "separated",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "phase_transition",
+      "type": "boiling",
+      "raw_type": "continuous bubbling of tan liquid in the pot",
+      "participants": {
+        "target_object_ids": [
+          "obj_2"
+        ],
+        "container_object_ids": [
+          "obj_1"
+        ],
+        "surface_feature_object_ids": [
+          "obj_3"
+        ]
+      },
+      "evidence_refs": [
+        "e2",
+        "e4"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "rippling liquid surface with changing foam and bubble patterns",
+        "participants": {
+          "target_object_ids": [
+            "obj_2",
+            "obj_3"
+          ],
+          "container_object_ids": [
+            "obj_1"
+          ]
+        },
+        "evidence_refs": [
+          "e4",
+          "e6",
+          "e9"
+        ]
+      },
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "utensil moves downward into the frame toward the liquid surface",
+        "participants": {
+          "target_object_ids": [
+            "obj_4"
+          ]
+        },
+        "evidence_refs": [
+          "e7",
+          "e8"
+        ]
+      }
+    ],
+    "action": {
+      "family": "transport",
+      "type": "lower",
+      "raw_action": "a utensil is lowered from above toward the right side of the liquid surface",
+      "actor_object_id": null,
+      "tool_object_ids": [
+        "obj_4"
+      ],
+      "target_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "phase",
+        "type": "liquid_to_gas",
+        "raw_transition": "many bubbles are visible across the tan liquid surface during continuous bubbling"
+      },
+      "evidence_refs": [
+        "e2",
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "the liquid free surface ripples and its bubble pattern repeatedly changes"
+      },
+      "evidence_refs": [
+        "e4",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "the pale foam patch changes outline while remaining on the lower half of the liquid surface"
+      },
+      "evidence_refs": [
+        "e3",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "the utensil appears from the upper right and moves downward toward the liquid"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "heat_transfer",
+      "raw_mechanism": "thermal energy input to the liquid drives vapor bubble formation associated with the observed bubbling",
+      "linked_process_family": "phase_transition",
+      "linked_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e4"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "liquid interface behavior controls the visible bubbles, foam patch outline, and free-surface changes",
+      "linked_process_family": "fluid_motion",
+      "linked_object_ids": [
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "sustained_pressure",
+      "raw_mechanism": "the late-approaching utensil disturbs the nearby liquid surface and produces local ripples",
+      "linked_process_family": "fluid_motion",
+      "linked_object_ids": [
+        "obj_2",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    }
+  ]
+}

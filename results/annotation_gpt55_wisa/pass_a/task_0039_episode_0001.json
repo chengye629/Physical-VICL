@@ -1,0 +1,325 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "Low white-gray fog and cloud patches move and thin over a mountainous valley, revealing green fields and a village.",
+  "raw_event_description": "At the start, most of the valley is covered by pale fog, with only faint hills visible. As the video progresses, fog patches shift across the frame and become thinner in several areas, exposing green hillsides, dark wooded slopes, scattered houses, and a clustered village in the valley. A larger gray-white cloud mass remains along the upper right hillside and sky area while smaller fog patches continue passing through the lower and middle portions of the view.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "poor",
+    "setup_clarity": "partial",
+    "reasons": [
+      "Dense pale fog covers most of the landscape.",
+      "Only a dark distant ridge shape is faintly visible.",
+      "Foreground and valley details are mostly obscured."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "fog patches",
+      "visible_form": "irregular pale white and gray semi-transparent masses spread across the lower and middle parts of the view",
+      "material_description": "soft-edged cloud-like visual texture with variable opacity",
+      "visible_properties": [
+        "pale white-gray",
+        "semi-transparent in thinner areas",
+        "soft edges",
+        "changing outline"
+      ],
+      "initial_motion_description": "visible as broad obscuring masses with gradual position and shape changes across the frame",
+      "initial_integrity_description": "continuous and dense in many areas at the beginning, later separated into smaller patches",
+      "event_role_hints": [
+        "obscures and reveals parts of the valley"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "large right cloud bank",
+      "visible_form": "large gray-white cloud mass along the upper right side above and against the hillside",
+      "material_description": "soft-edged cloud-like body with bright and darker gray areas",
+      "visible_properties": [
+        "large",
+        "gray-white",
+        "soft-edged",
+        "horizontally extended"
+      ],
+      "initial_motion_description": "present near the upper right and appears to shift slowly while retaining a broad mass",
+      "initial_integrity_description": "remains mostly continuous throughout the video",
+      "event_role_hints": [
+        "partly covers the upper right hillside and sky"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "mountain ridges",
+      "visible_form": "layered dark blue and green ridge lines across the background",
+      "material_description": "distant land surfaces with dark wooded-looking areas and blue atmospheric appearance",
+      "visible_properties": [
+        "layered",
+        "dark blue-green",
+        "broad curved ridge profiles"
+      ],
+      "initial_motion_description": "stationary relative to the frame",
+      "initial_integrity_description": "continuous landforms; initially partly hidden by fog",
+      "event_role_hints": [
+        "become more visible as fog thins"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "green fields",
+      "visible_form": "green open hillside and valley patches with sloped boundaries",
+      "material_description": "green ground surfaces with smooth grassy appearance",
+      "visible_properties": [
+        "green",
+        "open",
+        "sloped",
+        "patch-like"
+      ],
+      "initial_motion_description": "stationary relative to the frame",
+      "initial_integrity_description": "partly hidden at first and increasingly visible later",
+      "event_role_hints": [
+        "revealed by clearing fog"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "village buildings",
+      "visible_form": "cluster of small light-colored structures with roofs in the valley and on hillsides",
+      "material_description": "light-toned building surfaces and darker roof shapes visible at a distance",
+      "visible_properties": [
+        "small",
+        "clustered",
+        "light-colored",
+        "rectangular roof and wall shapes"
+      ],
+      "initial_motion_description": "stationary relative to the frame",
+      "initial_integrity_description": "mostly obscured early, then visible as separate structures",
+      "event_role_hints": [
+        "revealed as fog moves and thins"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "dark wooded areas",
+      "visible_form": "dark green to nearly black bands and patches on hillsides",
+      "material_description": "dense dark vegetation-like texture",
+      "visible_properties": [
+        "dark green",
+        "irregular edges",
+        "dense texture"
+      ],
+      "initial_motion_description": "stationary relative to the frame",
+      "initial_integrity_description": "partly hidden by fog at the beginning",
+      "event_role_hints": [
+        "forms contrast with fog and fields"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "overcast sky",
+      "visible_form": "broad gray and pale blue sky area above the ridges",
+      "material_description": "layered cloud cover with muted gray and pale blue tones",
+      "visible_properties": [
+        "gray",
+        "pale blue gaps",
+        "layered cloud texture"
+      ],
+      "initial_motion_description": "upper cloud textures show slow shape and position changes",
+      "initial_integrity_description": "continuous sky region throughout the video",
+      "event_role_hints": [
+        "background for moving cloud masses"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "fog patches cover much of the valley and obscure most lower landscape details",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "fog patches obscure most of the village area at the beginning",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "large cloud bank lies along the upper right hillside and sky region",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e8"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Dense pale fog covers most of the lower and middle frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Village buildings are not distinctly visible at the start."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A distant dark ridge is faintly visible through the fog on the left."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "Green hillside patches appear through openings in the fog."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "Small light-colored buildings become visible in the valley."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "Several fog patches have separated into distinct soft-edged masses."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "Fog patches in the lower frame change position and outline between frames."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "A broad gray-white cloud bank remains along the upper right portion of the view."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The clustered village is clearly visible near the center-right valley."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Layered blue-green ridges are visible across the background."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "Only smaller fog remnants remain near the lower frame and side areas."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The camera viewpoint remains fixed on the same valley composition."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The scene begins with heavy fog obscuring the valley."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Fog patches occupy most of the lower and middle view."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Only faint ridge shapes are visible through the fog."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Buildings are largely hidden."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "Openings appear in the fog and the valley becomes more visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Fog patches shift, thin, and separate into smaller visible masses."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Green fields appear through gaps in the fog."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Small buildings become visible in the valley."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The large right cloud bank remains broad near the upper right hillside."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The valley landscape is mostly visible while small fog remnants remain."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Smaller fog remnants continue to occupy parts of the lower and side areas."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The village cluster is clearly visible."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Multiple background ridges are visible."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Green fields remain exposed across the hillsides and valley."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

@@ -1,0 +1,180 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "fog layer",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "ridgeline",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "bright sun glow",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "sky",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "gas_particulate_motion",
+      "type": "plume_motion",
+      "raw_type": "fog layer drifting and wispy boundary reshaping",
+      "participants": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "mixed",
+      "camera_motion": {
+        "present": true,
+        "raw_description": "overall framing drifts slowly without an abrupt scene cut",
+        "evidence_refs": [
+          "e9",
+          "e10"
+        ]
+      }
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "wispy upper fog boundary changes shape, with local upward bulging and increased diffuseness"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "fog redistributes subtly through the lower scene while remaining a broad soft layer"
+      },
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6",
+        "e8"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "airflow_forcing",
+      "raw_mechanism": "ambient air movement perturbs and advects the visible fog wisps",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "fog droplets or particles scatter light and partially obscure the ridge",
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    }
+  ]
+}

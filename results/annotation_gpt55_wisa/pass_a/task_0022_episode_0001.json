@@ -1,0 +1,226 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "In a monochrome mountain landscape, cloud shapes and bright light beams visibly change while the ridgelines remain fixed.",
+  "raw_event_description": "The video opens on dark mountain silhouettes beneath a layered cloudy sky with bright streaks of light descending through openings in the clouds. Across the sequence, the bright openings along the cloud layer shift in shape and brightness, and the vertical-to-diagonal light beams become more concentrated over the center-right valley area. The dark cloud ceiling covers much of the upper frame throughout, while the lower ridgelines and valley silhouettes stay in the same positions.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "Cloud layers, light beams, and mountain ridgelines are visible from the start.",
+      "The lower valley area is dark and partly veiled, limiting surface detail.",
+      "The visible process is already underway in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "cloud layer",
+      "visible_form": "broad, soft-edged gray and dark gray masses spanning the upper and middle sky",
+      "material_description": "diffuse cloud-like visible texture with no hard surface detail",
+      "visible_properties": [
+        "soft-edged",
+        "layered",
+        "dark upper portions",
+        "brighter lower openings"
+      ],
+      "initial_motion_description": "already part of an ongoing gradual shape and brightness change",
+      "initial_integrity_description": "continuous cloud masses with irregular openings",
+      "event_role_hints": [
+        "changing sky form",
+        "contains visible bright gaps"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "light beams",
+      "visible_form": "bright vertical and diagonal streaks extending downward from cloud openings",
+      "material_description": "luminous gray-white streaks without a solid surface",
+      "visible_properties": [
+        "semi-transparent",
+        "soft-edged",
+        "varying brightness",
+        "varying width"
+      ],
+      "initial_motion_description": "visible from the start with gradual changes in placement, width, and brightness across the sequence",
+      "initial_integrity_description": "multiple separate streaks and bands are visible",
+      "event_role_hints": [
+        "changing illumination pattern"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "mountain ridgelines",
+      "visible_form": "dark layered silhouettes across the lower portion of the frame",
+      "material_description": "opaque dark landform silhouettes with minimal surface detail",
+      "visible_properties": [
+        "fixed outline",
+        "layered depth",
+        "high contrast against brighter sky"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous unbroken ridgeline silhouettes",
+      "event_role_hints": [
+        "stationary landscape reference"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "valley haze",
+      "visible_form": "soft gray veiling in the lower middle and right distance",
+      "material_description": "diffuse atmospheric-looking gray veil with no sharp boundary",
+      "visible_properties": [
+        "translucent",
+        "low contrast",
+        "partly obscures distant terrain"
+      ],
+      "initial_motion_description": "no distinct independent motion visible at the start",
+      "initial_integrity_description": "continuous diffuse veil",
+      "event_role_hints": [
+        "partly obscures background terrain"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "cloud layer occupies the sky above the mountain ridgelines",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "light beams extend downward from bright cloud openings toward the valley area",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "valley haze lies in front of distant lower terrain",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Dark mountain ridgelines form silhouettes along the lower portion of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A dark cloud layer spans most of the upper frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Bright streaks descend through openings in the clouds near the upper-left and central sky."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "The mountain silhouettes retain the same screen position and outline."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "Bright cloud openings along the middle sky change shape."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A wide bright band is visible from left-center toward right-center above the ridgelines."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "Several light beams over the center-right valley appear brighter and broader than earlier."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The upper sky appears darker across much of the frame."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The brightest beam cluster is concentrated near the center-right portion of the frame."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The distant valley area remains partly veiled by a soft gray layer."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The frame edges and landscape alignment do not visibly shift."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "Cloud forms and bright openings change gradually across the sequence.",
+        "Light beams vary in brightness, width, and apparent placement.",
+        "Mountain silhouettes remain fixed while the sky appearance changes."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The cloud layer changes visible shape and brightness patterns."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The light beams shift in width and brightness, with a later concentration near center-right."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The mountain ridgelines remain stationary in the frame."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The valley haze remains visible as a soft veil over distant terrain."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e4",
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

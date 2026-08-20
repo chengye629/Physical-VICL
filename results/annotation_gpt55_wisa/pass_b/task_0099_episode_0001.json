@@ -1,0 +1,160 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "luminous oval ring",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "unknown",
+      "physical_properties": [
+        "emissive",
+        "translucent"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "dark background",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e12"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "optical_interaction",
+      "type": "light_emission",
+      "raw_type": "ongoing flickering light emission with changing brightness distribution",
+      "participants": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e6",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "gas_particulate_motion",
+        "type": "plume_motion",
+        "raw_type": "wispy plume-like boundary extends, retracts, and changes shape",
+        "participants": [
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e4",
+          "e5",
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; luminous structure is already present",
+      "participants": [],
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "oval outline and central opening change shape, becoming taller and later more rounded while the wispy boundary deforms"
+      },
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "intensity_increase",
+        "raw_transition": "bright yellow-orange regions broaden and shift, especially on the right and upper portions"
+      },
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "pink-purple to pink-orange wispy veil spreads outward around the upper and right sides"
+      },
+      "evidence_refs": [
+        "e4",
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "the visible ring acts as an emissive region producing the observed glow and brightness changes",
+      "participants": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "translucent wispy regions scatter or distribute light through a volume, giving the ring a veil-like changing edge",
+      "participants": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e10"
+      ]
+    }
+  ]
+}

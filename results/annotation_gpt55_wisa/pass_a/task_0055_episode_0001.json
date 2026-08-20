@@ -1,0 +1,269 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A metal knife blade moves into a green leafy herb pile on a wooden cutting surface, while loose leaves and stems become spread around the blade.",
+  "raw_event_description": "At the start, a dense green leafy herb pile rests on a wooden cutting surface, with blurred garlic and yellow citrus pieces in the background. A shiny metal knife blade then becomes visible near the herb pile and moves into the leaves. As the blade passes through the herbs, leaves and stems shift, bend, and appear as separated loose pieces on the board, especially to the left and front of the main pile. The camera remains close to the board with a shallow-focus view.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The herb pile and cutting surface are visible at the beginning.",
+      "The knife blade is not yet clearly visible in the first frame.",
+      "Background items are blurred."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "leafy herb pile",
+      "visible_form": "dense pile of green flat leaves with thin stems",
+      "material_description": "green plant material with matte to slightly glossy leaf surfaces",
+      "visible_properties": [
+        "green",
+        "leafy",
+        "thin stems",
+        "irregular edges",
+        "flexible-looking leaves"
+      ],
+      "initial_motion_description": "resting with no visible independent motion before the blade appears",
+      "initial_integrity_description": "appears as a connected or closely bundled leafy mass",
+      "event_role_hints": [
+        "main visible material contacted by the blade"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "knife blade",
+      "visible_form": "large curved-edged blade entering from the upper/right area of the frame",
+      "material_description": "smooth reflective silver metal surface",
+      "visible_properties": [
+        "silver",
+        "reflective",
+        "broad",
+        "sharp-edged appearance"
+      ],
+      "initial_motion_description": "not clearly visible in the first frame; later moves into the herb pile",
+      "initial_integrity_description": "appears intact throughout the visible sequence",
+      "event_role_hints": [
+        "moves through the herb pile"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "cutting board",
+      "visible_form": "flat wooden surface under the herbs",
+      "material_description": "light brown wood with visible grain and scratch marks",
+      "visible_properties": [
+        "flat",
+        "wood-grain texture",
+        "light brown",
+        "scratched surface"
+      ],
+      "initial_motion_description": "stationary throughout the visible sequence",
+      "initial_integrity_description": "appears intact throughout",
+      "event_role_hints": [
+        "supporting surface for the herbs and blade"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "garlic clove",
+      "visible_form": "small pale pinkish clove shape in the background",
+      "material_description": "smooth pale outer surface, blurred",
+      "visible_properties": [
+        "small",
+        "pale pink",
+        "out of focus"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "background object"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "yellow citrus pieces",
+      "visible_form": "yellow rounded and cut surfaces in the background",
+      "material_description": "yellow rind and pale yellow cut interior, blurred",
+      "visible_properties": [
+        "yellow",
+        "round",
+        "out of focus"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appear as cut citrus pieces before the event begins",
+      "event_role_hints": [
+        "background objects"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is behind the herb pile and out of focus",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is behind the herb pile and out of focus",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A dense green leafy herb pile lies on a light wooden cutting surface."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A pale garlic clove and yellow citrus pieces are visible blurred in the background."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "middle",
+      "observation": "A broad shiny metal knife blade becomes visible near the upper side of the herb pile."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The metal blade moves into the green leaves."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "Leaves and stems next to the blade change position and shape as the blade passes."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "Several leafy stems extend outward toward the left and front of the main pile."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "Loose green leaves and small herb pieces are visible on the board to the left of the blade."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The metal blade remains close to the cutting board with herbs surrounding its lower edge."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The viewpoint stays close to the cutting surface while the background remains blurred."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ],
+      "observations": [
+        "The herb pile is stationary on the wooden board.",
+        "Background food items are visible but blurred."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "rests as a dense leafy pile on the board"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains stationary beneath the herbs"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains blurred in the background"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "remains blurred in the background"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The metal blade enters the visible herb area.",
+        "Leaves and stems shift near the blade."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "moves into the herb pile"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "leaves and stems bend, shift, and spread outward around the blade"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "Loose herb pieces are visible on the board near the main pile.",
+        "The blade remains close to the board among the herbs."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "appears as both a main leafy mass and scattered loose leaves and stems"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "stays visibly positioned through the herb area near the board"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e9"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The handle or hand controlling the knife is not visible.",
+    "Some contact details between the blade edge and the herbs are partly hidden by leaves."
+  ]
+}

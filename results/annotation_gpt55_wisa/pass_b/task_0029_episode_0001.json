@@ -1,0 +1,312 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "left hand and forearm",
+      "axes": {
+        "entity_kind": "agent",
+        "event_roles": [
+          "actor"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [],
+        "initial_motion_state": "unknown",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "right hand and forearm",
+      "axes": {
+        "entity_kind": "agent",
+        "event_roles": [
+          "actor"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [],
+        "initial_motion_state": "unknown",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "reflective optical discs",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "reflective"
+        ],
+        "initial_motion_state": "unknown",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "tabletop",
+      "axes": {
+        "entity_kind": "surface_or_region",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "not_applicable",
+        "physical_properties": [],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "not_applicable"
+      },
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "scissors",
+      "axes": {
+        "entity_kind": "articulated_object",
+        "event_roles": [],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e2",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "corded handheld tool",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e2",
+        "e11"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "relation_reconfiguration",
+      "type": "rearrangement",
+      "raw_type": "manual rearrangement of separate reflective discs into a rough circular ring",
+      "participants": {
+        "actors": [
+          "obj_1",
+          "obj_2"
+        ],
+        "targets": [
+          "obj_3"
+        ],
+        "supports": [
+          "obj_4"
+        ]
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "translation of rigid discs as the hands move them to new tabletop positions",
+        "participants": {
+          "actors": [
+            "obj_1",
+            "obj_2"
+          ],
+          "targets": [
+            "obj_3"
+          ],
+          "supports": [
+            "obj_4"
+          ]
+        },
+        "evidence_refs": [
+          "e4",
+          "e6",
+          "e7",
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "assembly",
+      "type": "place",
+      "raw_action": "hands place and adjust reflective discs on the tabletop into a ring-like layout",
+      "actors": [
+        "obj_1",
+        "obj_2"
+      ],
+      "targets": [
+        "obj_3"
+      ],
+      "event_roles": {
+        "support": [
+          "obj_4"
+        ]
+      },
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "relation",
+        "type": null,
+        "raw_transition": "disc group changes from one or two visible overlapping or adjacent discs to six separated discs arranged in a rough ring with an open center"
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "after small manual adjustments, the discs stop moving and remain in the final tabletop arrangement"
+      },
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_loss",
+        "raw_transition": "left hand withdraws from contact with the arranged discs"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_loss",
+        "raw_transition": "right hand withdraws from contact with the arranged discs"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "shear",
+      "raw_mechanism": "tangential contact forces from the hands drive the discs to translate across or just above the tabletop into new relative positions",
+      "participants": {
+        "actors": [
+          "obj_1",
+          "obj_2"
+        ],
+        "targets": [
+          "obj_3"
+        ],
+        "supports": [
+          "obj_4"
+        ]
+      },
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e6",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "friction",
+      "raw_mechanism": "contact resistance with the tabletop helps the placed discs come to rest and remain in the final ring-like layout",
+      "participants": {
+        "targets": [
+          "obj_3"
+        ],
+        "supports": [
+          "obj_4"
+        ]
+      },
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ]
+    }
+  ]
+}

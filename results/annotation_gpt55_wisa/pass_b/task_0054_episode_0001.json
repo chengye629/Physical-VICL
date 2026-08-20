@@ -1,0 +1,188 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "turtle",
+      "entity_kind": "agent",
+      "event_roles": [
+        "actor",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "fallen log",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "pond water",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "thin branches",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "slow turtle movement along the fallen log",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "small changing ripple patterns on the pond surface",
+        "participant_object_ids": [
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e8"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "tree and sky reflections visible on the water surface",
+        "participant_object_ids": [
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e7"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_object_ids": [],
+      "target_object_ids": [],
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "turtle gradually changes position along the log toward the lower visible end"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "water surface ripple pattern changes subtly over time"
+      },
+      "evidence_refs": [
+        "e8"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "friction",
+      "raw_mechanism": "contact traction between the turtle and the log supports the turtle's slow motion along the surface",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "the reflective water surface redirects light from trees and sky into visible reflection patterns",
+      "object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e7"
+      ]
+    }
+  ]
+}

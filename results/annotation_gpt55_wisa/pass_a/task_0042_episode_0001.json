@@ -1,0 +1,227 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A pot on a stovetop contains a dark liquid surface with continuous bubbling and a pale vapor-like plume rising above it.",
+  "raw_event_description": "The view shows an open pot centered on a stovetop. From the start, the liquid surface inside the pot is active with many small bright bubbles and intermittent larger openings. A pale vapor-like cloud rises from the central area above the liquid, changes shape, and at times partially hides the surface. The pot, handles, stovetop, and visible burner area remain stationary relative to the frame throughout.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The pot and stovetop setup are visible.",
+      "The liquid surface is partly obscured by a pale vapor-like cloud.",
+      "The bubbling and rising plume are already ongoing in the first visible frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "pot",
+      "visible_form": "round open cooking pot with a bright rim, dark interior, long handle on the left, and loop handle on the right",
+      "material_description": "shiny metallic-looking exterior rim and handles with dark inner surface",
+      "visible_properties": [
+        "open top",
+        "circular rim",
+        "stationary position"
+      ],
+      "initial_motion_description": "no visible motion relative to the stovetop or frame",
+      "initial_integrity_description": "appears intact with continuous rim and attached handles",
+      "event_role_hints": [
+        "contains the visible liquid",
+        "surrounds the bubbling surface"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "liquid",
+      "visible_form": "dark reflective surface filling the visible interior of the pot",
+      "material_description": "dark glossy liquid-like surface with bright bubble highlights",
+      "visible_properties": [
+        "surface covered with small bubbles",
+        "intermittent larger circular openings",
+        "changing surface texture"
+      ],
+      "initial_motion_description": "surface is already moving with many bubbles appearing and disappearing",
+      "initial_integrity_description": "continuous liquid surface visible inside the pot, though partly hidden by vapor-like cloud",
+      "event_role_hints": [
+        "bubbling surface is the main visible activity"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "vapor-like plume",
+      "visible_form": "pale gray-white cloud above the pot opening",
+      "material_description": "semi-transparent, soft-edged, cloud-like visual form",
+      "visible_properties": [
+        "changes shape",
+        "partly translucent",
+        "partially obscures pot interior"
+      ],
+      "initial_motion_description": "visible upward motion from above the liquid surface",
+      "initial_integrity_description": "diffuse and non-solid, with no fixed boundary",
+      "event_role_hints": [
+        "rises above the bubbling liquid"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "stovetop",
+      "visible_form": "light-colored flat stove surface surrounding the pot",
+      "material_description": "smooth light enamel-like surface with darker circular burner area",
+      "visible_properties": [
+        "stationary",
+        "supports visible pot area"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact in the visible area",
+      "event_role_hints": [
+        "background support surface for the pot"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "burner area",
+      "visible_form": "dark circular ring or element partially visible below the pot",
+      "material_description": "dark circular stove component partly hidden by the pot",
+      "visible_properties": [
+        "partially visible",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "visible as a continuous partial circular area around the pot base",
+      "event_role_hints": [
+        "located directly below the pot"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "the liquid is visible inside the open top of the pot",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "the vapor-like plume is above the pot opening and over the liquid surface",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the pot is positioned over the visible circular burner area",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e7"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "An open round pot is centered in the frame on a light-colored stovetop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "A dark liquid surface is visible inside the pot."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "Many small bright bubble spots appear across the liquid surface."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "Larger circular bubble openings intermittently appear and disappear on the liquid surface."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "A pale vapor-like plume rises from the central area above the liquid surface."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The vapor-like plume changes outline and density over time."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The vapor-like plume partially obscures the liquid surface at times."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The pot remains in the same position relative to the stovetop and frame."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "A dark circular burner area is partially visible below the pot."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The event is already ongoing at the first visible moment and continues through the final visible moment."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The pot stays stationary while its open top exposes the active liquid surface."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The liquid surface repeatedly forms and loses small bright bubbles and larger circular openings."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The vapor-like plume rises above the pot and continuously changes shape."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The stovetop remains visually unchanged and stationary."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The partially visible burner area remains fixed below the pot."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e8"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

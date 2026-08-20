@@ -1,0 +1,287 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "charred debris pile",
+      "entity_kind": "granular_material",
+      "event_roles": [
+        "source",
+        "support"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "combustible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "fragmented",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "smoke plume",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "product",
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "right-side flame",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "product",
+        "source",
+        "target"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "oscillating",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "dark cylinder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "background rods and rubble",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "fragmented",
+      "evidence_refs": [
+        "e7"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "combustion",
+      "type": "sustained_burning",
+      "raw_type": "ongoing small flame burning on charred debris with smoke present",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_3",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e10",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "gas_particulate_motion",
+        "type": "plume_motion",
+        "raw_type": "smoke plume drifts, thickens, and changes shape above the debris",
+        "participant_object_ids": [
+          "obj_2",
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e2",
+          "e5",
+          "e10"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "light_emission",
+        "raw_type": "small flame emits visible orange-yellow light while flickering",
+        "participant_object_ids": [
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e4",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; smoke and flame are already active at the start",
+      "actor_object_ids": [],
+      "target_object_ids": [],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e9"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "multi_stage": false,
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e9",
+        "e11"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "smoke wisps shift position, drift across the upper center, and spread through the visible air region"
+      },
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "central smoke becomes denser and covers more of the upper middle area"
+      },
+      "evidence_refs": [
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "smoke partially obscures the upper central scene as it thickens"
+      },
+      "evidence_refs": [
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "flame height and outline repeatedly change while remaining near the right side of the debris"
+      },
+      "evidence_refs": [
+        "e4",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "orange-yellow luminous flame flickers with changing visible shape"
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "chemical_energy_release",
+      "raw_mechanism": "ongoing combustion in the charred debris produces the visible flame and smoke",
+      "linked_processes": [
+        "primary"
+      ],
+      "linked_object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e11"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "airflow_forcing",
+      "raw_mechanism": "air motion perturbs the smoke plume and flame tongues, causing drifting and flickering shapes",
+      "linked_processes": [
+        "secondary"
+      ],
+      "linked_object_ids": [
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "family": "energy_reaction",
+      "type": "mass_transport",
+      "raw_mechanism": "combustion products are transported away from the debris as visible smoke",
+      "linked_processes": [
+        "primary",
+        "secondary"
+      ],
+      "linked_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e10"
+      ]
+    }
+  ]
+}

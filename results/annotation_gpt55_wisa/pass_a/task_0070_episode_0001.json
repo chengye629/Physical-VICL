@@ -1,0 +1,281 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A translucent sphere remains stationary while pale crystalline patterns inside or on it visibly expand and make the sphere more cloudy over time.",
+  "raw_event_description": "The video shows a centered translucent spherical object on a dark granular surface against a blue-to-orange sky. At the start, leaf-like pale crystalline patches are already visible in the upper and lower parts of the sphere, with a clearer orange band through the middle. Over time, the pale cloudy and crystalline areas become more widespread across the sphere, especially in the upper and middle regions, while the clearer central opening becomes smaller and more obscured. The sphere outline and its position relative to the surface remain essentially unchanged.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "mid_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The main sphere is centered and fully visible.",
+      "Crystalline patches are already present in the first frame.",
+      "The sphere's lower edge is visibly adjacent to the dark granular surface."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "translucent sphere",
+      "visible_form": "round transparent or translucent spherical shell with a glossy rim",
+      "material_description": "clear to milky translucent surface with reflective highlights and visible pale internal or surface markings",
+      "visible_properties": [
+        "spherical outline",
+        "transparent areas",
+        "milky opaque areas",
+        "glossy boundary"
+      ],
+      "initial_motion_description": "no visible translation or rotation before the main visible change",
+      "initial_integrity_description": "appears intact as a continuous sphere",
+      "event_role_hints": [
+        "main visible object containing or carrying the changing patterns"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "crystalline patterns",
+      "visible_form": "pale feather-like, leaf-like, and jagged patches distributed across the sphere",
+      "material_description": "white to pale bluish opaque and semi-opaque markings with sharp and diffuse edges",
+      "visible_properties": [
+        "branching shapes",
+        "jagged edges",
+        "feather-like lines",
+        "semi-opaque coverage"
+      ],
+      "initial_motion_description": "already present with no separate rapid motion visible at the start",
+      "initial_integrity_description": "appears as separated and partially connected patches",
+      "event_role_hints": [
+        "primary visibly changing pattern"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "dark granular surface",
+      "visible_form": "uneven horizontal surface at the bottom of the frame",
+      "material_description": "dark blue-black granular texture with small pale highlights",
+      "visible_properties": [
+        "rough texture",
+        "low horizontal profile",
+        "dark color"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "continuous uneven surface",
+      "event_role_hints": [
+        "supporting visible surface"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "sky background",
+      "visible_form": "smooth gradient background behind the sphere",
+      "material_description": "blue upper region transitioning to orange near the horizon",
+      "visible_properties": [
+        "soft color gradient",
+        "out-of-focus appearance"
+      ],
+      "initial_motion_description": "stationary relative to the frame",
+      "initial_integrity_description": "continuous background",
+      "event_role_hints": [
+        "background visible through the sphere"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the lower edge of the sphere is visibly in contact with or immediately adjacent to the dark granular surface",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "the crystalline patterns are visible within the circular boundary of the sphere",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "the sky colors are visible through clearer regions of the sphere",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A translucent circular sphere occupies the center of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The bottom edge of the sphere meets a dark uneven granular surface."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Pale leaf-like crystalline patches are visible in the upper part of the sphere."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A jagged pale crystalline band is visible along the lower part of the sphere."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A relatively clear orange band is visible through the middle of the sphere."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The upper half of the sphere appears more cloudy than at the start."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The pale crystalline patches extend farther across the upper-middle region of the sphere."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The lower jagged crystalline band remains visible across the bottom of the sphere."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "Much of the upper and central sphere appears milky and semi-opaque."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The clear orange region through the sphere is smaller than in the early frames."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The sphere's circular outline stays in nearly the same frame position throughout the video."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The background sky gradient and bottom surface remain stable in the frame."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The sphere is already marked by pale crystalline shapes, with a clearer band through the center."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains intact and centered"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "appears as separated pale leaf-like and jagged patches in the upper and lower sphere"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The pale cloudy coverage becomes more extensive across the upper and middle sphere."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "changes outline and coverage, with upper patches extending farther across the sphere"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "continues to show a stable circular boundary"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The sphere appears more obscured by milky pale shapes, and the clear central view is reduced."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "occupies more of the visible sphere area than earlier"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains unbroken with no visible collapse or displacement"
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "No scene cut or substantial camera movement is visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "stays in nearly the same position relative to the frame and surface"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains stationary at the bottom of the frame"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains a stable color-gradient background"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11",
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact placement of the crystalline patterns on the sphere surface versus inside the sphere is not visually distinguishable."
+  ]
+}

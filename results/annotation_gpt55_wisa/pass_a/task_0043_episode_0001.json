@@ -1,0 +1,353 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "In a shallow bowl, four colored raised mounds sit in liquid while surrounding colored regions slowly broaden and blur.",
+  "raw_event_description": "The video shows a shallow beige bowl containing a shallow pool of liquid with four raised granular-looking colored mounds: gray at upper left, red at upper center, blue at center-left, and yellow at right. Blue color occupies much of the left side of the liquid, orange-red color occupies the upper/right side, and yellow-green color occupies the lower/right side. Over the clip, the colored areas around the mounds remain in the same general locations while their edges become softer and slightly more spread out. The mounds stay visible and keep their raised textured forms, with small bright speckles or bubble-like spots on their surfaces. No tools or hands enter the scene.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The bowl, liquid surface, colored regions, and four raised mounds are already visible in the first frame.",
+      "The visible color-spreading process appears already underway at the start."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "shallow bowl",
+      "visible_form": "wide shallow round bowl with curved sides",
+      "material_description": "glossy beige solid surface",
+      "visible_properties": [
+        "concave",
+        "smooth",
+        "reflective"
+      ],
+      "initial_motion_description": "stationary relative to the camera",
+      "initial_integrity_description": "appears intact with continuous rim and basin",
+      "event_role_hints": [
+        "contains the visible liquid and colored mounds"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "liquid pool",
+      "visible_form": "shallow glossy pool covering the bottom of the bowl",
+      "material_description": "transparent to translucent liquid with colored areas",
+      "visible_properties": [
+        "glossy surface",
+        "colored regions",
+        "soft color boundaries"
+      ],
+      "initial_motion_description": "no large surface motion visible at the start",
+      "initial_integrity_description": "continuous liquid surface visible across the bowl bottom",
+      "event_role_hints": [
+        "colored areas change shape and boundary softness during the clip"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "blue mound",
+      "visible_form": "raised rounded granular-looking blue mound near center-left",
+      "material_description": "bright blue textured surface with small speckles",
+      "visible_properties": [
+        "raised",
+        "rough-textured",
+        "blue"
+      ],
+      "initial_motion_description": "stationary relative to the bowl",
+      "initial_integrity_description": "appears as one raised mound with an irregular textured top",
+      "event_role_hints": [
+        "surrounded by blue-tinted liquid"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "yellow mound",
+      "visible_form": "raised rounded yellow mound on the right side",
+      "material_description": "bright yellow textured surface with small bright speckles",
+      "visible_properties": [
+        "raised",
+        "rough-textured",
+        "yellow"
+      ],
+      "initial_motion_description": "stationary relative to the bowl",
+      "initial_integrity_description": "appears as one raised mound with a textured top",
+      "event_role_hints": [
+        "adjacent to yellow-green tinted liquid"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "red mound",
+      "visible_form": "raised rounded red mound near the upper center",
+      "material_description": "red textured surface with small speckles",
+      "visible_properties": [
+        "raised",
+        "rough-textured",
+        "red"
+      ],
+      "initial_motion_description": "stationary relative to the bowl",
+      "initial_integrity_description": "appears as one raised mound with a textured top",
+      "event_role_hints": [
+        "adjacent to orange-red tinted liquid"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "gray mound",
+      "visible_form": "small raised gray mound near the upper left",
+      "material_description": "gray/silver textured surface with bright highlights",
+      "visible_properties": [
+        "raised",
+        "rough-textured",
+        "gray"
+      ],
+      "initial_motion_description": "stationary relative to the bowl",
+      "initial_integrity_description": "appears as one small raised mound with a textured top",
+      "event_role_hints": [
+        "sits near blue-tinted and pale liquid areas"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is contained inside",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "sits within or on the surface of the liquid",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "sits within or on the surface of the liquid",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "sits within or on the surface of the liquid",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "sits within or on the surface of the liquid",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A shallow beige bowl contains a glossy shallow pool of liquid."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Four raised colored mounds are visible in the liquid: gray, red, blue, and yellow."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A blue-tinted area covers much of the left side of the liquid around the blue mound."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "An orange-red tinted area is visible on the upper and right side of the liquid near the red mound."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A yellow-green tinted area is visible on the lower and right side of the liquid near the yellow mound."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The boundaries between the colored liquid areas are soft and irregular."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The blue-tinted area appears broader and less sharply bounded than at the start."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The yellow-green tinted area appears slightly broader toward the lower center."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The orange-red tinted area remains on the upper and right side with a softer pale edge."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The four mounds remain in the same visible positions relative to the bowl."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "Small bright speckles or bubble-like spots are visible on the mound surfaces."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "No hands, tools, or additional objects enter the bowl."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "A curved bright reflection remains visible near the lower part of the liquid surface."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The bowl, shallow liquid pool, four raised mounds, and colored liquid regions are all already present."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The bowl is stationary and contains the visible liquid."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The liquid shows blue, orange-red, and yellow-green colored regions with soft boundaries."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The blue mound is raised and textured near the center-left."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The yellow mound is raised and textured on the right."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The red mound is raised and textured near the upper center."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The gray mound is raised and textured near the upper left."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The colored regions remain in their general areas while their edges look more diffuse."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The blue and yellow-green colored areas appear slightly more spread out with softer borders."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The blue mound remains visible and in place."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The yellow mound remains visible and in place."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The red mound remains visible and in place."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The gray mound remains visible and in place."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The scene ends with the mounds still present and the liquid colors softly blended at their borders."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The colored liquid regions remain visible with broad, softened transitions between colors."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The blue mound remains raised and textured."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The yellow mound remains raised and textured."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The red mound remains raised and textured."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The gray mound remains raised and textured."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact substance of the colored mounds and liquid is not visually identifiable.",
+    "The small bright speckles on the mound surfaces cannot be visually distinguished as bubbles, grains, or reflections."
+  ]
+}

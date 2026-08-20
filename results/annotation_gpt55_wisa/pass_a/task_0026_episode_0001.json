@@ -1,0 +1,399 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "Colored light bursts appear and fade over a nighttime waterfront, with matching colored reflections on the rippled water.",
+  "raw_event_description": "The view shows a dark harbor with buildings and lights along the far shore. Small colored light clusters are already visible in the sky near the center-right. Over time, additional vertical light streaks rise from the shoreline area, circular clusters of red, white, green, and pink points appear, expand into rings or dense round patterns, then dim. The water below shows elongated colored reflections that brighten and change color as the sky lights change. Near the end, several adjacent red and pink circular light patterns are visible at once above the shoreline.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "mid_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "Small colored sky light clusters are already visible in the first frame.",
+      "The scene is distant and dark, with the shoreline and water visible but many details obscured.",
+      "The source area of the vertical light streaks is not clearly resolved."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "colored sky light bursts",
+      "visible_form": "Clusters, rings, and dense round arrangements of bright colored points in the night sky",
+      "material_description": "Visible as luminous colored points and short lines; no solid surface detail visible",
+      "visible_properties": [
+        "red",
+        "white",
+        "green",
+        "pink",
+        "round patterns",
+        "briefly bright",
+        "distant"
+      ],
+      "initial_motion_description": "Small light points are visible above the shoreline at the start, with some points changing position or brightness between frames.",
+      "initial_integrity_description": "Initially visible as separated small clusters and short streaks rather than one continuous shape.",
+      "event_role_hints": [
+        "main changing visible light patterns in the sky"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "vertical sky light streaks",
+      "visible_form": "Thin bright lines extending upward from the shoreline area into the sky",
+      "material_description": "Visible as narrow luminous lines; no solid surface detail visible",
+      "visible_properties": [
+        "white",
+        "orange",
+        "red",
+        "thin",
+        "near-vertical",
+        "brief"
+      ],
+      "initial_motion_description": "Short vertical streaks are visible near the center-right shoreline area before larger circular bursts appear.",
+      "initial_integrity_description": "Initially appears as separate narrow line segments.",
+      "event_role_hints": [
+        "precede some circular sky light patterns"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "water surface",
+      "visible_form": "Dark foreground expanse with rippled texture and elongated vertical light reflections",
+      "material_description": "Dark reflective surface with visible ripples",
+      "visible_properties": [
+        "dark",
+        "reflective",
+        "rippled",
+        "blue reflections",
+        "red reflections",
+        "green reflections",
+        "white reflections"
+      ],
+      "initial_motion_description": "Ripple patterns and reflected light bands shift subtly across the foreground.",
+      "initial_integrity_description": "Continuous water surface across the lower portion of the frame.",
+      "event_role_hints": [
+        "shows changing reflections of shoreline and sky lights"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "shoreline buildings and lights",
+      "visible_form": "Low waterfront structures and rows of small lights along the far side of the water",
+      "material_description": "Building facades and fixed artificial lights are visible; material details are indistinct in darkness",
+      "visible_properties": [
+        "rectangular buildings",
+        "stationary",
+        "blue sign-like light",
+        "orange-lit facade",
+        "white shoreline lights"
+      ],
+      "initial_motion_description": "No visible movement relative to the frame.",
+      "initial_integrity_description": "Buildings and shoreline lights appear intact and continuous.",
+      "event_role_hints": [
+        "fixed background reference"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "right-side pier or bridge structure",
+      "visible_form": "Dark horizontal structure with small lights on the right side of the shoreline",
+      "material_description": "Mostly silhouetted structure with small illuminated points",
+      "visible_properties": [
+        "horizontal",
+        "dark",
+        "stationary",
+        "distant"
+      ],
+      "initial_motion_description": "No visible movement relative to the frame.",
+      "initial_integrity_description": "Appears continuous across the right side.",
+      "event_role_hints": [
+        "fixed background reference"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "tall masts or poles",
+      "visible_form": "Thin vertical silhouettes at the far left and far right edges",
+      "material_description": "Dark narrow vertical forms; material not visually resolved",
+      "visible_properties": [
+        "thin",
+        "vertical",
+        "stationary",
+        "silhouetted"
+      ],
+      "initial_motion_description": "No visible movement relative to the frame.",
+      "initial_integrity_description": "Appear as continuous narrow vertical lines.",
+      "event_role_hints": [
+        "fixed foreground or shoreline reference"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "blue diagonal light beams",
+      "visible_form": "Faint blue diagonal bands extending upward from the shoreline area into the sky",
+      "material_description": "Visible as diffuse blue light bands; no solid surface visible",
+      "visible_properties": [
+        "blue",
+        "diagonal",
+        "faint",
+        "wide",
+        "semi-transparent"
+      ],
+      "initial_motion_description": "Faint diagonal bands are visible in the sky and appear similar across multiple moments.",
+      "initial_integrity_description": "Appear as broad continuous light bands.",
+      "event_role_hints": [
+        "background sky light feature"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The colored sky light bursts are above the far shoreline.",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "The water surface is below the sky light bursts and shoreline lights.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "The shoreline buildings are positioned behind the foreground water.",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Small colored light clusters are visible in the sky above the center-right shoreline."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Vertical colored reflections are visible on the water below the sky lights."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "A row of buildings and fixed lights is visible along the far side of the water."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "Thin bright vertical streaks appear near the center-right shoreline area."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A large red circular pattern of light points appears left of the earlier small clusters."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The red circular pattern becomes larger and brighter across successive frames."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "A broad red reflection band appears on the water below the large red circular light pattern."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "A white round light pattern appears to the right of the large red circular pattern."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The large red circular pattern dims into a thinner ring of red points."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "A small red light appears to the left of a white round light pattern."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "White and green round light patterns appear side by side above the shoreline."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "Three adjacent round light patterns in pink, white, and red are visible above the shoreline."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "Large red and pink reflected bands are visible on the water beneath the late sky light patterns."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The shoreline buildings, right-side structure, and edge masts remain in fixed positions within the frame."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "continuous",
+      "observation": "Image sharpness remains similar throughout the clip."
+    },
+    {
+      "evidence_id": "e16",
+      "stage": "continuous",
+      "observation": "The water surface shows small rippled highlights throughout the clip."
+    },
+    {
+      "evidence_id": "e17",
+      "stage": "continuous",
+      "observation": "Faint blue diagonal light beams are visible in the sky near the shoreline."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e4",
+        "e17"
+      ],
+      "observations": [
+        "The clip begins with the waterfront already illuminated by small sky light clusters and shoreline lights."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Small colored light clusters are already present above the center-right shoreline."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Thin vertical bright streaks appear near the center-right shoreline area."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The water shows narrow blue, white, red, and green reflections."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "Faint blue diagonal light beams are visible in the sky."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "A large red circular sky pattern becomes the dominant visible light feature, followed by a smaller bright white round pattern to its right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "A large red circular arrangement of points appears, increases in apparent size and brightness, then dims into a thinner ring."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "A white round pattern appears to the right of the red circular pattern."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The water shows a broad bright red reflection band beneath the red sky pattern."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "Several smaller round sky patterns appear in succession and then multiple adjacent pink, white, and red patterns are visible together."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "A small red round light appears to the left of a white round light pattern."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "White and green round light patterns appear side by side."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "Three adjacent pink, white, and red round light patterns are visible near the end."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The water reflections shift to larger red, pink, white, and green vertical bands beneath the late sky patterns."
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e3",
+        "e14",
+        "e15",
+        "e16"
+      ],
+      "observations": [
+        "The camera view remains stable while fixed shoreline elements stay in place and the water retains visible rippled highlights."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The shoreline buildings and lights remain stationary in the frame."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The right-side horizontal structure remains stationary in the frame."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The tall edge silhouettes remain stationary in the frame."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The water surface continues to show moving-looking rippled highlights and changing reflected colors."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e14",
+      "e15"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact source points of the vertical light streaks are distant and not clearly resolved.",
+    "Fine details of the shoreline structures are obscured by darkness and distance."
+  ]
+}

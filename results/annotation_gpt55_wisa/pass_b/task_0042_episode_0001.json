@@ -1,0 +1,265 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "pot",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "source",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "vapor-like plume",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "stovetop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "burner area",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "phase_transition",
+      "type": "boiling",
+      "raw_type": "continuous boiling of the liquid with repeated bubble formation and vapor release",
+      "participant_object_ids": [
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "gas_particulate_motion",
+        "type": "gas_emission",
+        "raw_type": "pale vapor-like material rises from the boiling liquid as a changing plume",
+        "participant_object_ids": [
+          "obj_2",
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6",
+          "e7"
+        ]
+      },
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "liquid free surface repeatedly changes texture with small bubbles and larger circular openings",
+        "participant_object_ids": [
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e4"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the bubbling and plume are already ongoing",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e8"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "repeated",
+      "change_profile": "steady",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "phase",
+        "type": "liquid_to_gas",
+        "raw_transition": "parts of the liquid form vapor bubbles and release vapor during boiling"
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "the liquid surface repeatedly develops and loses small bright bubbles and larger circular openings"
+      },
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "the vapor-like plume rises above the pot and changes outline and density over time"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "the liquid surface becomes partially obscured at times by the vapor-like plume"
+      },
+      "evidence_refs": [
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "heat_transfer",
+      "raw_mechanism": "thermal energy input drives liquid-to-gas phase change observed as boiling",
+      "participant_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "buoyancy",
+      "raw_mechanism": "gas or vapor regions move upward through and above the liquid",
+      "participant_object_ids": [
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "liquid-gas interfaces form rounded bubbles and circular surface openings",
+      "participant_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "the pale translucent plume scatters or blocks view through its volume, reducing visibility of the liquid surface",
+      "participant_object_ids": [
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e7"
+      ]
+    }
+  ]
+}

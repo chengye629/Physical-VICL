@@ -1,0 +1,356 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small red-and-blue toy kart travels around a blue track with a raised loop and exits the visible area.",
+  "raw_event_description": "The scene begins with an empty blue toy track on a green cloth surface, with tan wooden blocks placed around and beneath parts of the track. A small toy kart with a red-capped rider enters from the left on the foreground track, moves around the front curve toward the right, travels onto the raised loop section, crosses the upper part of the loop, moves through the inner track section, repeats a visible pass across the raised loop, then returns to the foreground curve and leaves at the left edge.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The blue track, green surface, backdrop, and wooden blocks are visible.",
+      "The moving toy kart is not visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "toy kart",
+      "visible_form": "Small wheeled toy vehicle with a seated red-capped rider figure",
+      "material_description": "Glossy colored plastic-like surfaces with black wheels",
+      "visible_properties": [
+        "red rider head/cap",
+        "red front body area",
+        "blue lower vehicle area",
+        "black wheels",
+        "compact toy scale"
+      ],
+      "initial_motion_description": "Not visible in the first frame; first appears entering from the left edge on the foreground track.",
+      "initial_integrity_description": "Appears intact as a single toy vehicle with rider figure attached.",
+      "event_role_hints": [
+        "moving object on the blue track"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "blue track",
+      "visible_form": "Curved plastic-like track with a low foreground curve, a diagonal inner section, and a raised circular loop section",
+      "material_description": "Bright blue glossy plastic-like material",
+      "visible_properties": [
+        "continuous curved sections",
+        "raised loop portion",
+        "low foreground portion",
+        "track edges visible"
+      ],
+      "initial_motion_description": "Stationary throughout the visible sequence.",
+      "initial_integrity_description": "Appears continuous and intact.",
+      "event_role_hints": [
+        "path followed by the toy kart"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wooden blocks",
+      "visible_form": "Tan rectangular blocks, including vertical posts and horizontal rectangular blocks near the track",
+      "material_description": "Light tan wood with visible grain-like texture",
+      "visible_properties": [
+        "rectangular shapes",
+        "flat faces",
+        "placed at several locations around the track"
+      ],
+      "initial_motion_description": "Stationary throughout the visible sequence.",
+      "initial_integrity_description": "Appear intact.",
+      "event_role_hints": [
+        "fixed objects near and under parts of the track"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "green cloth surface",
+      "visible_form": "Flat green fabric covering the tabletop or floor area",
+      "material_description": "Matte green fabric with wrinkles",
+      "visible_properties": [
+        "green color",
+        "visible folds and wrinkles"
+      ],
+      "initial_motion_description": "Stationary.",
+      "initial_integrity_description": "Appears continuous across the visible surface.",
+      "event_role_hints": [
+        "scene base surface"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "blue backdrop",
+      "visible_form": "Vertical blue fabric background behind the track",
+      "material_description": "Matte blue fabric with wrinkles",
+      "visible_properties": [
+        "blue color",
+        "vertical hanging surface",
+        "visible folds"
+      ],
+      "initial_motion_description": "Stationary.",
+      "initial_integrity_description": "Appears continuous across the background.",
+      "event_role_hints": [
+        "background"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "yellow pieces",
+      "visible_form": "Small yellow plastic-like pieces near the lower-right part of the track",
+      "material_description": "Bright yellow plastic-like material",
+      "visible_properties": [
+        "small size",
+        "yellow color",
+        "located near lower-right track area"
+      ],
+      "initial_motion_description": "Stationary throughout the visible sequence.",
+      "initial_integrity_description": "Appear intact.",
+      "event_role_hints": [
+        "small fixed objects near the track"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "The blue track lies on the green cloth surface and includes a raised loop above part of the surface.",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "Several tan wooden blocks are positioned under or next to elevated portions of the blue track.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "The yellow pieces are near the lower-right section of the blue track.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The first visible scene shows a blue track on a green cloth surface with no toy kart visible."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The blue track has a low foreground curve and a raised circular loop toward the rear and right."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Tan rectangular wooden blocks are placed beneath or beside portions of the raised track."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "Small yellow pieces are visible near the lower-right area of the track."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A small toy kart enters from the left edge on the foreground blue track."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "early",
+      "observation": "The toy kart has a red-capped rider figure, red body areas, blue lower areas, and black wheels."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "early",
+      "observation": "The toy kart moves left-to-right along the foreground curve."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The toy kart passes the right-front wooden block area."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The toy kart is visible on the right side of the raised loop with its body tilted relative to the green surface."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The toy kart appears near the top portion of the raised loop."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "middle",
+      "observation": "The toy kart crosses the upper segment of the raised loop from the right side toward the left side."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "middle",
+      "observation": "The toy kart moves along the left side of the raised loop and reaches the lower inner track section."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "middle",
+      "observation": "The toy kart moves along the lower inner diagonal track section toward the lower-right track area."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "middle",
+      "observation": "The toy kart again appears on the right side of the raised loop."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "late",
+      "observation": "The toy kart crosses an upper segment of the raised loop again."
+    },
+    {
+      "evidence_id": "e16",
+      "stage": "late",
+      "observation": "The toy kart exits the raised loop area near the right/front portion of the track."
+    },
+    {
+      "evidence_id": "e17",
+      "stage": "late",
+      "observation": "The toy kart travels along the foreground track toward the left edge."
+    },
+    {
+      "evidence_id": "e18",
+      "stage": "late",
+      "observation": "The toy kart leaves the visible area at the left edge."
+    },
+    {
+      "evidence_id": "e19",
+      "stage": "continuous",
+      "observation": "The camera viewpoint remains fixed while the track and background stay in the same image positions."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The setup is visible before the toy kart appears."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The blue track remains stationary in a curved arrangement with a raised loop."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The wooden blocks remain stationary around and beneath parts of the track."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The yellow pieces remain stationary near the lower-right track area."
+        }
+      ]
+    },
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The toy kart first becomes visible on the foreground track."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The toy kart enters from the left and moves along the foreground curve toward the right."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The toy kart transitions from the foreground area to the raised and inner sections of the track."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The toy kart passes the right-front block area, moves onto the raised loop, crosses the upper loop segment, and continues to the lower inner track section."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e14",
+        "e15"
+      ],
+      "observations": [
+        "A further pass across the raised loop is visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The toy kart appears again on the right side of the raised loop and crosses an upper segment."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e16",
+        "e17",
+        "e18"
+      ],
+      "observations": [
+        "The toy kart returns to the foreground track and leaves the frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The toy kart exits the raised loop area, moves along the foreground track toward the left, and disappears at the left edge."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e19"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The toy kart is motion-blurred in several frames, so wheel-to-track contact details are not always visually distinct.",
+    "Some track connections are partly hidden by the toy kart, wooden blocks, or the frame edge during parts of the motion."
+  ]
+}

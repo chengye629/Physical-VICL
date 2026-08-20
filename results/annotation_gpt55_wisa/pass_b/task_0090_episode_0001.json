@@ -1,0 +1,247 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "large bubble",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "transparent",
+        "translucent",
+        "reflective",
+        "flexible"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e4",
+        "e5",
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "grassy field",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "tree line",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "white tent",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "sky",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e11"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "bubble drifting across the sky relative to the fixed field, trees, and tent",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e8",
+        "e9",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "deformation",
+        "type": null,
+        "raw_type": "continuous bubble outline deformation from rounder to wavy and slightly elongated shapes",
+        "participant_object_ids": [
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e5"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": null,
+        "raw_type": "changing iridescent colored bands and glossy highlights on the transparent bubble surface",
+        "participant_object_ids": [
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e7"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the bubble is already present at the start",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e8",
+        "e9",
+        "e10",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "bubble position changes relative to the stationary background, ending farther left near the trees above the tent"
+      },
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e8",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "bubble outline changes from nearly circular to uneven, wavy, and slightly elongated while remaining enclosed"
+      },
+      "evidence_refs": [
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "iridescent color patches, colored bands, and highlights shift across the bubble surface"
+      },
+      "evidence_refs": [
+        "e3",
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "airflow_forcing",
+      "raw_mechanism": "distributed aerodynamic forcing moves the suspended bubble through the air and perturbs its outline",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "surface tension in the thin bubble film maintains a continuous enclosed outline while allowing smooth shape changes",
+      "participant_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": null,
+      "raw_mechanism": "light interacting with the transparent curved film produces shifting iridescent bands and reflective highlights",
+      "participant_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e7"
+      ]
+    }
+  ]
+}

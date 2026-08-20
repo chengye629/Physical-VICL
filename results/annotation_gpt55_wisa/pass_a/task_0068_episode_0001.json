@@ -1,0 +1,358 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A dancer in black performs a sequence of visible steps, foot lifts, and arm gestures in front of a mirrored studio wall.",
+  "raw_event_description": "The scene shows a dance studio with a glossy floor, a mirrored wall, and a horizontal barre. A dancer stands near the center facing the mirror with arms raised. She makes small steps and foot lifts while opening her arms outward, then lowers the arms and brings the hands toward the front of her body. She shifts position slightly, bends the knees, raises one arm in an arc near and above the head, extends an arm outward, and continues stepping with alternating arm positions. The mirror shows her front-facing image during the sequence, while seated people and bags remain in the background.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The dancer is already posed with both arms raised in the first visible frame.",
+      "The studio, mirror wall, barre, and floor are visible.",
+      "The main moving person is unobstructed enough to track."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "dancer",
+      "visible_form": "adult person wearing a black sleeveless dress or top with short skirt, dark tights, and black heeled shoes or boots",
+      "material_description": "dark fabric clothing, sheer-looking leg covering, dark footwear",
+      "visible_properties": [
+        "upright body posture",
+        "long dark hair",
+        "arms and legs visibly articulated",
+        "black outfit contrasts with bright studio"
+      ],
+      "initial_motion_description": "standing facing the mirror with arms lifted upward; small body and arm motion is already underway",
+      "initial_integrity_description": "body and clothing appear intact",
+      "event_role_hints": [
+        "primary moving person",
+        "performs the visible dance sequence"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "mirror wall",
+      "visible_form": "large wall made of multiple rectangular reflective panels",
+      "material_description": "smooth reflective surface with vertical seams",
+      "visible_properties": [
+        "shows the dancer's front-facing image",
+        "reflects ceiling lights and studio interior",
+        "spans most of the back wall"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "panels appear intact",
+      "event_role_hints": [
+        "shows visible image of dancer and room"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "ballet barre",
+      "visible_form": "long horizontal rail across the mirrored wall",
+      "material_description": "light-colored rail with supports",
+      "visible_properties": [
+        "straight horizontal line",
+        "located in front of the mirror",
+        "crosses the reflected view of the dancer"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears continuous and intact",
+      "event_role_hints": [
+        "stationary studio fixture"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "studio floor",
+      "visible_form": "broad glossy brown plank floor",
+      "material_description": "wood-like shiny surface",
+      "visible_properties": [
+        "reflects lights and lower parts of objects",
+        "flat visible surface",
+        "occupies foreground"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "surface under the dancer"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "seated background group",
+      "visible_form": "several people seated near the left side of the room with bags or belongings nearby",
+      "material_description": "small visible figures with dark and light clothing; assorted dark items on floor",
+      "visible_properties": [
+        "clustered near wall area",
+        "mostly seated",
+        "visible through the studio view and mirror"
+      ],
+      "initial_motion_description": "mostly stationary",
+      "initial_integrity_description": "figures and belongings appear intact",
+      "event_role_hints": [
+        "background entities"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "ceiling lights and upper windows",
+      "visible_form": "rectangular ceiling light panels and upper wall window panels",
+      "material_description": "bright ceiling panels, glass-like upper windows or panes",
+      "visible_properties": [
+        "bright rectangular patterns",
+        "repeated in the mirror",
+        "fixed to upper part of room"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "visible panels appear intact",
+      "event_role_hints": [
+        "stationary room features"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "dancer stands on the studio floor facing the mirror wall",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "dancer's feet are on or very near the glossy floor surface",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "barre runs horizontally across the mirror wall behind the dancer",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "seated group is positioned in the left background area of the studio",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The dancer is upright near the center of the frame with her back toward the camera."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Both of the dancer's arms are raised upward above shoulder level."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The mirror shows the front-facing image of the dancer."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "A horizontal barre extends across the mirrored wall."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "Several people and belongings are visible in the left background area."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "early",
+      "observation": "The dancer opens both arms outward to a wide position."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "early",
+      "observation": "One of the dancer's feet lifts while the other foot remains lower near the floor."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The dancer's arms lower from the wide position toward her sides."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The dancer brings her hands toward the front of her torso."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The dancer bends her knees slightly while facing the mirror."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "middle",
+      "observation": "One hand rises near the dancer's face."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "One of the dancer's arms arcs upward near and above her head."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The raised arm extends outward to the side."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "late",
+      "observation": "The dancer steps laterally across a small distance while continuing arm gestures."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "late",
+      "observation": "The dancer's skirt edge changes shape and position during the steps."
+    },
+    {
+      "evidence_id": "e16",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed on the studio and dancer."
+    },
+    {
+      "evidence_id": "e17",
+      "stage": "continuous",
+      "observation": "No scene cut is visible during the shown sequence."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The dancer begins the visible segment already facing the mirror with arms raised.",
+        "Her reflected front view is visible in the mirror."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "raises and holds both arms high, then opens them outward while making small foot lifts"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "shows the changing image of the dancer as her arms and feet move"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The dancer transitions from open arms to lower and closer hand positions.",
+        "Her knees visibly bend during part of the sequence."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "lowers her arms, brings hands toward the front of her torso, and makes small steps while facing the mirror"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "continues to show the dancer's front-facing image with corresponding arm and leg positions"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e12",
+        "e13",
+        "e14",
+        "e15"
+      ],
+      "observations": [
+        "One arm moves in a visible arc near the head and then outward.",
+        "The dancer continues small lateral steps and arm gestures."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "raises one arm near and above the head, extends it outward, and steps laterally with the skirt moving visibly"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "shows the same visible changes in the dancer's reflected image"
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e16",
+        "e17"
+      ],
+      "observations": [
+        "The barre, floor, mirror wall, lights, and background group remain in place while the dancer moves.",
+        "The framing stays fixed throughout the visible sequence."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "remains stationary across the mirrored wall"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains stationary below the dancer"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "remains mostly stationary in the background"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "remains fixed in the upper part of the room and in the mirror view"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e16",
+      "e17"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

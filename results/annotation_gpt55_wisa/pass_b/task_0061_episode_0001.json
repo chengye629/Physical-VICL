@@ -1,0 +1,164 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "mesh panel",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e4"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "decorative metal frame",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "dark soft-edged patterns",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "warm illuminated area",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e9"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "optical_interaction",
+      "type": "illumination_change",
+      "raw_type": "shifting soft-edged dark illumination patterns across a stationary illuminated mesh",
+      "object_refs": [
+        "obj_1",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the source of the changing dark patterns is outside the frame",
+      "actor_refs": [],
+      "target_refs": [
+        "obj_1",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e10"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "dark soft-edged markings shift, stretch, fade in areas, and redistribute across the bright mesh"
+      },
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "the visible illumination pattern on the mesh changes while the mesh texture remains fixed"
+      },
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e8",
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "optical_electromagnetic",
+      "type": null,
+      "raw_mechanism": "scene-level light pattern changes on the mesh, consistent with changing optical attenuation or shadowing from an off-frame source or occluder",
+      "object_refs": [
+        "obj_1",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e6",
+        "e8",
+        "e9"
+      ]
+    }
+  ]
+}

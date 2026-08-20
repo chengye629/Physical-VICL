@@ -1,0 +1,352 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A large vertical metal cylinder stays centered over wrinkled metal scraps while a dark rod-like object intermittently enters from the right and moves near the right-side scrap.",
+  "raw_event_description": "The scene shows a stationary-looking vertical shiny cylindrical assembly with a wider round lower section positioned over rust-brown wrinkled sheet fragments on a flat work surface. A larger bent sheet piece remains arched on the left side. Early in the sequence, a dark slender rod-like object appears from the right and moves toward the right-side sheet edge, then recedes. The central cylinder and most scraps remain in nearly the same visible positions. Later, the dark rod-like object reappears from the right, sweeps near or under the right-side sheet edge, and withdraws again. The camera view remains fixed.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The central metal cylinder, work surface, and surrounding sheet fragments are already visible at the start.",
+      "The event appears to be ongoing rather than starting from an empty or untouched setup.",
+      "Some sheet material beneath the central cylinder is partially hidden by the cylinder."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "vertical metal cylinder assembly",
+      "visible_form": "tall shiny vertical cylinder with a wider round lower metal section",
+      "material_description": "smooth reflective silver-gray metal surfaces with darker marks and a narrow yellowish band near the joint",
+      "visible_properties": [
+        "cylindrical",
+        "reflective",
+        "vertically oriented",
+        "large relative to nearby scraps"
+      ],
+      "initial_motion_description": "no clear visible motion at the start",
+      "initial_integrity_description": "appears intact and rigid",
+      "event_role_hints": [
+        "central object",
+        "positioned over sheet fragments"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "work surface",
+      "visible_form": "flat horizontal table or plate with worn marks and holes",
+      "material_description": "gray-brown worn surface with stains and scratches",
+      "visible_properties": [
+        "flat",
+        "horizontal",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact with worn surface markings",
+      "event_role_hints": [
+        "supporting surface"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "rust-brown sheet fragments",
+      "visible_form": "multiple torn or wrinkled thin sheet pieces lying around and beneath the central cylinder",
+      "material_description": "brown and gray surfaces with dull, oxidized-looking coloration",
+      "visible_properties": [
+        "thin",
+        "wrinkled",
+        "irregular edges",
+        "partly flattened",
+        "partly curled"
+      ],
+      "initial_motion_description": "mostly still at the start",
+      "initial_integrity_description": "already torn, creased, and separated into several visible pieces",
+      "event_role_hints": [
+        "loose pieces around the central cylinder"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "left arched sheet piece",
+      "visible_form": "larger curved sheet segment arched upward on the left side",
+      "material_description": "brown-gray dull thin sheet with irregular edge",
+      "visible_properties": [
+        "curved",
+        "arched",
+        "thin",
+        "irregular"
+      ],
+      "initial_motion_description": "no clear visible motion",
+      "initial_integrity_description": "bent and torn-looking, but remains one larger visible piece",
+      "event_role_hints": [
+        "large left-side sheet segment"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "dark rod-like object",
+      "visible_form": "slender dark elongated object entering from the right edge",
+      "material_description": "dark black or charcoal surface, slightly glossy in places",
+      "visible_properties": [
+        "thin",
+        "elongated",
+        "dark",
+        "mobile"
+      ],
+      "initial_motion_description": "moves in from the right side toward the right-side sheet edge",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "intermittently moving object"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "background guard posts",
+      "visible_form": "vertical side structures with black-and-yellow striped markings",
+      "material_description": "painted surfaces with high-contrast yellow and black stripes",
+      "visible_properties": [
+        "vertical",
+        "striped",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "background reference objects"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the wider lower section is positioned directly above or against the central sheet fragments on the work surface",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "the sheet fragments lie on the horizontal work surface",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "the arched sheet piece is located to the left of the central cylinder assembly",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "the dark rod-like object appears at the right side near the right-side sheet edge",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A shiny vertical cylindrical assembly with a wider round lower section is centered in the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Wrinkled rust-brown sheet fragments are visible beneath and around the lower round section."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A larger curved sheet segment arches upward on the left side of the work surface."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A dark slender rod-like object protrudes from the right edge toward the right-side sheet material."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The dark rod-like object is no longer prominent near the right-side sheet edge."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The central vertical cylinder assembly remains centered and vertically oriented throughout the visible sequence."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The left arched sheet piece remains on the left side with a similar arched shape."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "Central sheet fragments remain partly hidden by the wider lower round section."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The dark rod-like object reappears from the right and moves near the right-side sheet edge."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The right-side sheet edge changes visible angle while the dark rod-like object is nearby."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The dark rod-like object withdraws toward the right edge."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The black-and-yellow striped background posts stay aligned with the frame edges."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The central cylinder assembly is already positioned over sheet fragments.",
+        "The left arched sheet piece is already bent upward.",
+        "A dark rod-like object is visible entering from the right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains centered above or against the sheet fragments"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "lies wrinkled around the lower round section"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "holds an arched shape on the left side"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "moves inward from the right toward the right-side sheet material"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The central assembly and most sheet pieces appear nearly unchanged in position.",
+        "The rod-like object is not prominent in the middle part."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "continues to appear vertical and centered"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains partly hidden beneath the lower round section and spread across the work surface"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "continues to show a raised curved left edge"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "is mostly absent from the visible right-side area"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The dark rod-like object re-enters from the right.",
+        "The right-side sheet edge visibly changes angle while the rod-like object is nearby.",
+        "The rod-like object then moves back toward the right edge."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "sweeps in near the right-side sheet edge and then withdraws"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "the right-side sheet edge changes visible angle during the rod-like object's pass"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains visually centered and upright"
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e12"
+      ],
+      "observations": [
+        "The camera framing is steady.",
+        "The background striped posts remain fixed in the frame.",
+        "The central assembly and left arched sheet piece remain continuously visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_6",
+          "observation": "stays stationary in the background"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "stays fixed as the support surface"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "Whether the central lower round section is pressing directly on all hidden sheet pieces is not fully visible because some material is occluded beneath it.",
+    "Any very small vertical movement of the central cylinder assembly is not clearly distinguishable in the provided frames."
+  ]
+}

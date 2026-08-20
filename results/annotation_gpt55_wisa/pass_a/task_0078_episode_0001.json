@@ -1,0 +1,299 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A hand holds a lit match while the visible flame changes size and shape and the match head becomes darker.",
+  "raw_event_description": "The clip begins with a hand holding a pale matchstick horizontally, with a small bright flame at the match head and a partial matchbox-like object at the lower left. The flame becomes taller and more teardrop-shaped, with a bright yellow-white center and a faint bluish-purple edge near the lower side. The match head remains at the flame base and appears progressively darker. The hand continues gripping the matchstick, with small position changes of the hand and match in the frame. Near the end, the flame remains present above the darkened match head.",
+  "observed_scope": "mixed",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The matchstick, hand, and small flame are visible at the start.",
+      "The lower-left object is only partly visible.",
+      "The background is dark and provides little scene context."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "hand",
+      "visible_form": "human fingers pinching a small stick from the right side of the frame",
+      "material_description": "skin-toned surface with visible fingernails and finger creases",
+      "visible_properties": [
+        "light skin tone",
+        "rounded fingertips",
+        "visible fingernail edges"
+      ],
+      "initial_motion_description": "held mostly steady with slight frame-to-frame shifts",
+      "initial_integrity_description": "fingers appear intact and continuous",
+      "event_role_hints": [
+        "grips the matchstick"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "matchstick",
+      "visible_form": "thin pale straight stick held horizontally, with a rounded head at the left end",
+      "material_description": "light-colored stick surface; head region appears darker than the shaft",
+      "visible_properties": [
+        "slender",
+        "straight",
+        "pale shaft",
+        "rounded darker head"
+      ],
+      "initial_motion_description": "held nearly horizontal with small shifts in frame position",
+      "initial_integrity_description": "stick appears continuous and unbroken; head remains attached",
+      "event_role_hints": [
+        "supports the visible flame at its left end"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "flame",
+      "visible_form": "luminous shape above and around the match head, changing from small rounded form to taller teardrop form",
+      "material_description": "bright yellow-white and orange light with faint bluish-purple edge near the base",
+      "visible_properties": [
+        "bright",
+        "semi-transparent edges",
+        "changing outline",
+        "yellow-white center",
+        "bluish-purple lower fringe"
+      ],
+      "initial_motion_description": "already visible as a small bright region at the match head",
+      "initial_integrity_description": "single continuous luminous region",
+      "event_role_hints": [
+        "visible light-emitting region at the match head"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "partial matchbox",
+      "visible_form": "rectangular object partly visible near the lower left edge",
+      "material_description": "flat surfaces with green/yellow and light-colored edges",
+      "visible_properties": [
+        "rectangular",
+        "partially cropped",
+        "colored edge"
+      ],
+      "initial_motion_description": "visible near the lower left with little apparent movement before it leaves or becomes obscured by framing",
+      "initial_integrity_description": "only partial view; visible portion appears intact",
+      "event_role_hints": [
+        "near the lit match in the earliest frames"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "dark background",
+      "visible_form": "mostly black surrounding area behind the hand and match",
+      "material_description": "no clear surface material visible",
+      "visible_properties": [
+        "dark",
+        "low-detail"
+      ],
+      "initial_motion_description": "no distinct background object motion visible",
+      "initial_integrity_description": "continuous dark field",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "fingers pinch the right portion of the matchstick",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "flame is located at the left end of the matchstick around the match head",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "partial rectangular object is below and left of the match head in the early view",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A hand pinches the right side of a pale horizontal matchstick."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A small bright flame is visible at the left end of the matchstick."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A partial rectangular green/yellow-edged object is visible near the lower left edge."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The flame becomes taller than it was at the start."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The flame outline forms a pointed teardrop shape above the match head."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A faint bluish-purple glow is visible near the lower edge of the flame."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The match head appears darkened around the flame base."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The hand maintains a pinch grip on the matchstick throughout the visible sequence."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The matchstick remains visually straight and unbroken."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The flame remains present above the darkened match head near the end."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The match head shows a broad dark area at its left end."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The hand and match shift slightly within the frame."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The camera view has small handheld-style changes while the background remains dark."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The match is already lit at the start.",
+        "A partial rectangular object is visible at the lower left."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Hand holds the matchstick in a pinch grip."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Matchstick is horizontal with the head at the left end."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Small flame is visible at the match head."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Partial rectangular object is visible below-left of the match head."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The flame becomes taller and more pointed.",
+        "The flame shows bright yellow-white and orange areas with a faint bluish-purple edge.",
+        "The match head appears darker than earlier."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "Flame changes from a smaller rounded shape to a taller teardrop shape."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Match head darkens while the shaft remains straight."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "Hand continues holding the matchstick."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The flame remains visible near the end.",
+        "The match head has a broad darkened area.",
+        "The hand and match occupy slightly different positions in the frame compared with earlier views."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "Flame stays above the match head with a pointed upper region."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Darkened match head remains attached to the pale stick."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "Hand maintains the pinch grip."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "handheld",
+    "focus_change": "variable",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "Small frame-position changes of the hand and match are visible, but the video alone does not separate hand movement from camera movement in every frame.",
+    "The partially visible lower-left rectangular object leaves or is no longer clearly visible after the early frames."
+  ]
+}

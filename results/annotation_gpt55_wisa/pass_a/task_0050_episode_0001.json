@@ -1,0 +1,258 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "Small bright particles move through a nighttime view around a lit utility pole and overhead cables.",
+  "raw_event_description": "The video shows a fixed nighttime view looking upward at a utility pole with a bright lamp and many overhead cables. From the first frame through the last, numerous small white specks and short streaks appear and move across the dark background, most visible near the lamp glow. The pole, lamp, cables, and nearby brick wall remain visually stationary while the particles continue passing through the frame.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The scene is dark except for the bright lamp area.",
+      "The utility pole, lamp, cables, and moving particles are visible.",
+      "Some fine cable details are partly obscured by darkness and lamp glare."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "utility pole",
+      "visible_form": "vertical cylindrical pole rising from the lower frame toward the lamp and cable junction",
+      "material_description": "light tan or beige surface with darker attached hardware visible near the top",
+      "visible_properties": [
+        "vertical",
+        "rigid-looking",
+        "stationary throughout the clip"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact as a continuous pole",
+      "event_role_hints": [
+        "stationary structure in the scene"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "streetlamp",
+      "visible_form": "round bright lamp head mounted near the top of the pole",
+      "material_description": "bright white glowing circular light with surrounding glare",
+      "visible_properties": [
+        "very bright",
+        "glowing",
+        "surrounded by illuminated haze or glare"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact and continuously lit",
+      "event_role_hints": [
+        "illuminates nearby particles and objects"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "overhead cables",
+      "visible_form": "multiple dark and reflective narrow lines extending diagonally and horizontally across the frame",
+      "material_description": "dark linear strands with some shiny highlighted segments",
+      "visible_properties": [
+        "thin",
+        "taut-looking",
+        "intersecting",
+        "stationary throughout the clip"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appear continuous and attached near the pole",
+      "event_role_hints": [
+        "stationary lines crossing the particle field"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "falling particles",
+      "visible_form": "many small white specks and short streaks distributed across the dark background and lamp glow",
+      "material_description": "bright white or pale marks with no detailed surface visible",
+      "visible_properties": [
+        "small",
+        "numerous",
+        "transient",
+        "more visible near the bright lamp"
+      ],
+      "initial_motion_description": "already moving through the frame at the first visible moment",
+      "initial_integrity_description": "individual particles appear as separate specks or streaks; no lasting structure visible",
+      "event_role_hints": [
+        "primary moving visible entities"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "brick wall",
+      "visible_form": "vertical wall surface along the right side of the frame",
+      "material_description": "reddish-brown rectangular brick pattern visible in lamp spill",
+      "visible_properties": [
+        "textured",
+        "stationary",
+        "partially lit"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears continuous and intact within the visible area",
+      "event_role_hints": [
+        "stationary background boundary"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "green circular spot",
+      "visible_form": "small green circular light spot near the bright lamp area",
+      "material_description": "green luminous dot with soft edges",
+      "visible_properties": [
+        "small",
+        "green",
+        "near the lamp in the image"
+      ],
+      "initial_motion_description": "no independent scene motion visible",
+      "initial_integrity_description": "appears as a small continuous spot while visible",
+      "event_role_hints": [
+        "visible optical spot in the recorded image"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "mounted near the top of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "crosses around and attaches near the upper area of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "appears throughout the space around",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is positioned to the right of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "A bright round lamp is attached near the top of the vertical pole."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "Multiple narrow cables extend from the pole area across the frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "Small white specks and streaks are visible moving through the lamp-lit area."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "A reddish-brown brick wall occupies the right side of the frame."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The utility pole remains in the same image position during the clip."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The overhead cables remain in the same image positions during the clip."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "Individual white particles enter and leave visibility over time."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "A small green circular spot is visible near the lamp in the recorded image."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The lamp remains continuously bright from early to late frames."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e5",
+        "e6",
+        "e7",
+        "e9"
+      ],
+      "observations": [
+        "The nighttime view remains centered on the pole, lamp, and cable junction.",
+        "Particles continue appearing as specks or short streaks and pass through the frame.",
+        "The stationary objects maintain their visible positions."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "Numerous small white particles move across the dark and lamp-lit background throughout the clip."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The lamp stays bright and produces a glowing area around itself."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The pole remains visually stationary."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The cables remain visually stationary."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The brick wall remains visually stationary at the right edge."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e5",
+      "e6"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact physical identity of the small white moving particles is not visually resolved.",
+    "The green circular spot near the lamp is visible in the recorded image, but its scene location is not visually established."
+  ]
+}

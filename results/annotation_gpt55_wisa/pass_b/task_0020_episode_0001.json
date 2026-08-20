@@ -1,0 +1,287 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "sea water",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "beach",
+      "entity_kind": "granular_material",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "granular",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e7"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "sun",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "bright water band",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e13"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "right cliff",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "building",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "cloudy sky",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "dark shoreline object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "free_surface_motion",
+      "raw_type": "continuous sea-surface ripples and small wave fronts reaching the shoreline with foam appearing and thinning",
+      "participants": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "flickering reflected sunlight pattern on the moving water surface",
+        "participants": [
+          "obj_1",
+          "obj_3",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e2",
+          "e13"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_ids": [],
+      "target_ids": [],
+      "evidence_refs": [
+        "e14"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "repeated",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e13",
+        "e14"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "water free surface repeatedly changes as ripples and small wave fronts move toward the shore, with foam lines forming and later thinning or breaking apart"
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": null,
+        "raw_transition": "beach edge is alternately bordered by advancing water and foam and then more exposed as the waterline shifts back"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "bright water band changes shape and brightness from frame to frame"
+      },
+      "evidence_refs": [
+        "e2",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_8",
+      "transition": {
+        "axis": "relation",
+        "type": null,
+        "raw_transition": "wave edges pass close to the dark shoreline object while it remains near the waterline"
+      },
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "ongoing wave motion drives repeated free-surface displacement of the sea water toward and away from the shoreline",
+      "process_refs": [
+        "primary"
+      ],
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "sunlight reflects from changing orientations of the rippling water surface, producing the flickering bright band",
+      "process_refs": [
+        "secondary[0]"
+      ],
+      "object_ids": [
+        "obj_1",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e13"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "dancer",
+      "entity_kind": "agent",
+      "event_roles": [
+        "actor",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "mirrored wall",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "studio floor",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "ballet barre",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": []
+    },
+    {
+      "object_id": "obj_5",
+      "name": "curtains",
+      "entity_kind": "deformable_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible",
+        "translucent"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": []
+    },
+    {
+      "object_id": "obj_6",
+      "name": "ring light",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": []
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "self-propelled articulated body repositioning from standing through crouch to reclining",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "event_roles": [
+            "actor",
+            "target"
+          ]
+        },
+        {
+          "object_id": "obj_3",
+          "event_roles": [
+            "support"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "relation_reconfiguration",
+        "type": "support_change",
+        "raw_type": "floor support changes as the dancer lowers from standing foot support to seated and reclined body contact",
+        "participants": [
+          {
+            "object_id": "obj_1",
+            "event_roles": [
+              "target"
+            ]
+          },
+          {
+            "object_id": "obj_3",
+            "event_roles": [
+              "support"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e6",
+          "e7",
+          "e8",
+          "e9",
+          "e10"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "mirror reflection of the dancer changes with the dancer's pose",
+        "participants": [
+          {
+            "object_id": "obj_1",
+            "event_roles": [
+              "target"
+            ]
+          },
+          {
+            "object_id": "obj_2",
+            "event_roles": [
+              "medium"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e3"
+        ]
+      }
+    ],
+    "action": {
+      "family": "transport",
+      "type": "lower",
+      "raw_action": "dancer actively lowers and repositions their own body from standing to the floor",
+      "actor_object_id": "obj_1",
+      "target_object_id": "obj_1",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "the dancer shifts to the viewer's right, descends from standing height, then leans backward into a reclined position"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "bent",
+        "raw_transition": "the dancer's body configuration changes as the knees bend, the torso tilts and reclines, one leg extends along the floor, and the arms remain spread"
+      },
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e7",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "the dancer gains additional floor contact as the hips and later reclining body come down onto the studio floor"
+      },
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "the floor becomes contacted by more of the dancer's body as the dancer moves from standing to seated and reclined positions"
+      },
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "the visible reflected image on the mirror changes as the dancer moves, while the mirror itself remains fixed"
+      },
+      "evidence_refs": [
+        "e3",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "torque",
+      "raw_mechanism": "self-generated joint torques drive the dancer's limb, torso, and whole-body reorientation",
+      "linked_processes": [
+        "primary"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "body weight, active muscular support, and floor reaction forces control the gradual lowering to the floor",
+      "linked_processes": [
+        "primary",
+        "secondary"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "sustained_pressure",
+      "raw_mechanism": "sustained contact forces from the floor support the dancer's feet, then hips and reclining body",
+      "linked_processes": [
+        "secondary"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "the reflective mirror surface redirects light to form the visible moving image of the dancer",
+      "linked_processes": [
+        "secondary"
+      ],
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ]
+}

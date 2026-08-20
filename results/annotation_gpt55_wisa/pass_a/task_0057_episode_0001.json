@@ -1,0 +1,332 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "The camera tilts and pans from a sky-and-tower view to a wider outdoor pool-and-slide area, with no visible independent scene-object motion.",
+  "raw_event_description": "At the start, the frame shows blue sky and part of a tall gray stair tower on the right. The camera framing moves downward and slightly across the scene, bringing treetops, a grassy field, a fenced pool area, light-colored slides, and a red car into view. After the wider view is established, the framing becomes mostly steady. The visible scene objects remain in place and intact throughout.",
+  "observed_scope": "camera_only",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The first frame shows only sky and a partial view of the tall stair tower.",
+      "The pool, slides, fence, car, trees, and ground area are not yet fully visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "stair tower",
+      "visible_form": "tall open framework structure with diagonal supports, platforms, railings, and stair flights",
+      "material_description": "gray metallic-looking surfaces and railings",
+      "visible_properties": [
+        "tall",
+        "open lattice frame",
+        "multiple stair levels",
+        "gray",
+        "rigid-looking"
+      ],
+      "initial_motion_description": "no independent motion visible; its position in frame changes due to camera movement",
+      "initial_integrity_description": "appears intact with continuous supports, platforms, railings, and stairs",
+      "event_role_hints": [
+        "large static structure visible along the right side of the scene"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "spiral slide",
+      "visible_form": "light-colored helical slide with a central vertical support near a turquoise pool area",
+      "material_description": "smooth light gray or white surfaces",
+      "visible_properties": [
+        "spiral shape",
+        "elevated segments",
+        "light colored",
+        "rigid-looking"
+      ],
+      "initial_motion_description": "not visible in the first frame; once visible, no independent motion is seen",
+      "initial_integrity_description": "appears intact with continuous curved slide sections",
+      "event_role_hints": [
+        "static slide feature revealed by camera movement"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "pool area",
+      "visible_form": "rectangular or basin-like turquoise area bordered by light surfaces",
+      "material_description": "bright turquoise surface with light-colored bordering structures",
+      "visible_properties": [
+        "turquoise",
+        "flat visible surface",
+        "low to the ground",
+        "open basin-like area"
+      ],
+      "initial_motion_description": "not visible in the first frame; once visible, no independent motion is seen",
+      "initial_integrity_description": "appears intact with a continuous visible boundary",
+      "event_role_hints": [
+        "static ground-level pool area revealed by the camera"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "red car",
+      "visible_form": "red passenger vehicle near the lower left of the later frames",
+      "material_description": "glossy red exterior with dark window areas",
+      "visible_properties": [
+        "red",
+        "vehicle-shaped",
+        "dark windows",
+        "low rectangular body"
+      ],
+      "initial_motion_description": "not visible in the first frame; once visible, remains stationary relative to the ground scene",
+      "initial_integrity_description": "appears intact with continuous body panels and windows",
+      "event_role_hints": [
+        "stationary vehicle in the foreground-left area after the camera reframes"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "foreground fence",
+      "visible_form": "dark chain-link or wire fence crossing the lower foreground",
+      "material_description": "dark thin linear mesh and posts",
+      "visible_properties": [
+        "dark",
+        "mesh pattern",
+        "horizontal and vertical elements",
+        "foreground object"
+      ],
+      "initial_motion_description": "not visible in the first frame; once visible, no independent motion is seen",
+      "initial_integrity_description": "appears intact with continuous mesh and posts",
+      "event_role_hints": [
+        "static foreground boundary revealed by camera movement"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "trees and field",
+      "visible_form": "green tree line and grassy open field behind the pool area",
+      "material_description": "green foliage and grass textures",
+      "visible_properties": [
+        "green",
+        "dense tree line",
+        "open grassy area",
+        "background landscape"
+      ],
+      "initial_motion_description": "not visible in the first frame; once visible, no independent motion is seen",
+      "initial_integrity_description": "appears continuous as a tree line and field",
+      "event_role_hints": [
+        "static background revealed by camera movement"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "small pale sky spot",
+      "visible_form": "small pale circular or speck-like mark in the blue sky near the beginning",
+      "material_description": "pale white visual spot against blue sky",
+      "visible_properties": [
+        "small",
+        "pale",
+        "round or speck-like",
+        "high in frame"
+      ],
+      "initial_motion_description": "no independent motion is distinguishable; it leaves the frame as the camera reframes",
+      "initial_integrity_description": "appears as a single small pale spot",
+      "event_role_hints": [
+        "brief sky feature visible before the camera points lower"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "occupies the right side of the early frame while blue sky fills most of the remaining frame",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "stands near the pool area after the camera reveals the lower scene",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "runs across the lower foreground in front of the pool-and-slide area",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is positioned near the lower left beside the fenced pool area",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "forms the background behind the pool and slide area",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e7"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A gray metal stair tower with platforms and railings is visible along the right side of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A small pale spot is visible in the blue sky near the upper part of the frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "middle",
+      "observation": "The camera framing changes from mostly sky to include treetops, ground, and pool-area structures."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "A light-colored spiral slide is visible beside a turquoise pool area."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A dark mesh fence is visible across the lower foreground."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A red car is visible near the lower left beside the pool area."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "A green tree line and grassy field are visible behind the pool and slides."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The stair tower remains on the right while the pool, slides, fence, car, trees, and field remain visible."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "No people or independently moving scene objects are visible."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ],
+      "observations": [
+        "The view begins with blue sky and a partial stair tower on the right.",
+        "A small pale spot is visible in the sky."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "stair tower appears stationary and intact"
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "small pale sky spot is visible briefly in the sky"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The camera reframes downward and across the outdoor area.",
+        "The pool area, spiral slide, fence, red car, trees, and field enter view."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "spiral slide becomes visible and shows no independent motion"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "turquoise pool area becomes visible and shows no visible state change"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "red car becomes visible and remains in place"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "foreground fence becomes visible and remains fixed in the scene"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "tree line and field become visible as background"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The camera holds a wider view of the outdoor pool-and-slide area.",
+        "Visible objects retain their shapes and positions relative to the ground scene."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "stair tower remains visible on the right with no visible deformation"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "spiral slide remains visible with no independent motion"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "pool area remains visible with no visible change"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "red car remains stationary"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "mixed",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e3",
+      "e8"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "medium"
+  },
+  "unresolved_observations": []
+}

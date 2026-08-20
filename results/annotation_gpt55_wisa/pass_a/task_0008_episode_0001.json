@@ -1,0 +1,409 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "On a crowded nighttime city street, colored aerial light trails and circular bursts appear, expand, and fade above the roadway while haze builds and spectators hold up phones.",
+  "raw_event_description": "The view begins with a dark sky over a broad urban street lined with tall buildings, streetlights, signs, and a dense crowd in the foreground. Initially no large bright burst is active in the sky. Small distant lights and streaks appear above the road, followed by white circular bursts on the right-center horizon area that expand and fade into scattered specks. A brighter sequence follows with vertical purple and white light trails rising from the distant street area and large red, magenta, purple, and white circular patterns forming higher in the sky. The largest bursts expand into rings or star-like radial patterns, then dim while lower bursts continue near the horizon. Haze becomes more visible along the street and between buildings. After the larger bursts fade, faint specks remain in the sky, then later smaller pink and white bursts appear and expand before dimming.",
+  "observed_scope": "mixed",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The crowd, street, buildings, streetlights, and signs are visible.",
+      "The distant sky area is dark and partially obscured by haze and building silhouettes.",
+      "No large active aerial burst is visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "crowd",
+      "visible_form": "dense group of people occupying the lower foreground and extending down the street",
+      "material_description": "visible clothing, heads, arms, and silhouettes under street lighting",
+      "visible_properties": [
+        "many individual heads and shoulders",
+        "some raised arms",
+        "mostly dark silhouettes with occasional brighter clothing"
+      ],
+      "initial_motion_description": "people make small individual movements while standing in place or shifting within the crowd",
+      "initial_integrity_description": "crowd appears continuous and densely packed",
+      "event_role_hints": [
+        "many people face toward the distant sky and street center"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "handheld screens",
+      "visible_form": "small bright rectangular screens held above or near heads",
+      "material_description": "glowing flat rectangular surfaces with dark phone bodies visible on some",
+      "visible_properties": [
+        "blue-white glow",
+        "rectangular outlines",
+        "distributed across the foreground crowd"
+      ],
+      "initial_motion_description": "some screens are raised and shift slightly with the hands holding them",
+      "initial_integrity_description": "screens appear as intact rectangular objects",
+      "event_role_hints": [
+        "oriented toward the distant aerial lights"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "aerial light bursts",
+      "visible_form": "bright colored points, streaks, rings, and radial star-like patterns in the sky",
+      "material_description": "visible as emitted light only, with white, red, magenta, purple, and pink colors",
+      "visible_properties": [
+        "bright points",
+        "thin luminous trails",
+        "circular radial patterns",
+        "rapid appearance and fading"
+      ],
+      "initial_motion_description": "no large active burst is visible at the beginning; later points and streaks appear above the distant street",
+      "initial_integrity_description": "not visible as a persistent solid object at the start",
+      "event_role_hints": [
+        "main changing visible feature in the sky"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "haze",
+      "visible_form": "semi-transparent gray and colored cloud-like patches over the street and sky",
+      "material_description": "diffuse airborne-looking visual veil with gray, pink, and purple illumination in places",
+      "visible_properties": [
+        "semi-transparent",
+        "soft-edged",
+        "more visible near bright light bursts and streetlights"
+      ],
+      "initial_motion_description": "faint haze is present near the distant road area and becomes more visible later",
+      "initial_integrity_description": "diffuse and non-solid, with no sharp boundary",
+      "event_role_hints": [
+        "surrounds and partially veils later light bursts"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "buildings",
+      "visible_form": "tall dark multi-story structures lining both sides of the street",
+      "material_description": "rigid-looking facades with rows of windows and balconies; some lit windows and signs",
+      "visible_properties": [
+        "vertical edges",
+        "rectangular window patterns",
+        "dark surfaces"
+      ],
+      "initial_motion_description": "stationary relative to the scene",
+      "initial_integrity_description": "facades appear intact and continuous",
+      "event_role_hints": [
+        "frame the visible sky and street corridor"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "streetlights and signs",
+      "visible_form": "tall pole-mounted lamps and illuminated roadside signs",
+      "material_description": "metal-looking poles, bright lamp heads, and rigid sign panels with illuminated text or symbols",
+      "visible_properties": [
+        "warm orange lamp glow",
+        "green traffic sign on the right with a U-turn arrow and text",
+        "pink circular sign on the right"
+      ],
+      "initial_motion_description": "stationary relative to the scene",
+      "initial_integrity_description": "poles, lamps, and sign panels appear intact",
+      "event_role_hints": [
+        "provide fixed visual references along the street"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "distant tower lights",
+      "visible_form": "small blue and white points aligned vertically high in the center background",
+      "material_description": "visible as distant illuminated points on a dark vertical structure or skyline position",
+      "visible_properties": [
+        "small blue light",
+        "small white points",
+        "high in the central background"
+      ],
+      "initial_motion_description": "stationary relative to buildings and streetlights",
+      "initial_integrity_description": "visible as separated small light points",
+      "event_role_hints": [
+        "fixed background reference in the sky area"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "occupies the lower foreground beneath the visible sky corridor",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "held within and above parts of the crowd",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "lines the roadway between the buildings",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_7",
+      "relation_description": "appears high in the central background above the street corridor",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A dense crowd fills the lower foreground of a nighttime city street."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Multiple bright rectangular handheld screens are visible above and among the crowd."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Tall buildings line both sides of the road."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A green sign with a U-turn arrow is visible on the right side of the frame."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The initial sky shows no large active circular light burst."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "early",
+      "observation": "Small bright points and thin streaks appear in the right-center sky above the distant street."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "early",
+      "observation": "A white circular radial burst forms in the right-center sky."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "early",
+      "observation": "The white radial burst dims into many smaller specks."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "A bright white flare appears low near the center-right above the distant road."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "A red circular burst appears high in the center-right sky."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "middle",
+      "observation": "The red burst expands into a larger circular ring pattern."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "middle",
+      "observation": "Purple and white vertical light trails extend upward from the distant street area."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "middle",
+      "observation": "A large magenta ring remains high while lower purple and white bursts are visible beneath it."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "middle",
+      "observation": "A large white circular burst expands in the mid-upper center of the sky."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "middle",
+      "observation": "A smaller red burst appears above and to the right of the large white burst."
+    },
+    {
+      "evidence_id": "e16",
+      "stage": "middle",
+      "observation": "Bright purple and white bursts glow near the distant horizon area."
+    },
+    {
+      "evidence_id": "e17",
+      "stage": "middle",
+      "observation": "Haze becomes more visible along the lower street and in front of buildings."
+    },
+    {
+      "evidence_id": "e18",
+      "stage": "late",
+      "observation": "Many faint specks remain in the sky after the larger bursts fade."
+    },
+    {
+      "evidence_id": "e19",
+      "stage": "late",
+      "observation": "The sky darkens again with only scattered faint points and lingering haze."
+    },
+    {
+      "evidence_id": "e20",
+      "stage": "late",
+      "observation": "A small pink burst appears high in the right-center sky."
+    },
+    {
+      "evidence_id": "e21",
+      "stage": "late",
+      "observation": "A later white and pink circular burst expands above the distant street area."
+    },
+    {
+      "evidence_id": "e22",
+      "stage": "continuous",
+      "observation": "The camera keeps a similar street-centered framing throughout the sequence."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The scene begins with a crowd facing down a lit urban street.",
+        "Small aerial lights appear before a white radial burst forms and fades."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The crowd remains gathered in the foreground with small individual motions."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Several handheld screens remain raised and glowing."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Small bright points and streaks appear, then a white circular burst expands and dims."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Buildings remain fixed along both sides of the frame."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "Streetlights and signs remain fixed and illuminated."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14",
+        "e15",
+        "e16",
+        "e17"
+      ],
+      "observations": [
+        "The brightest portion shows multiple colored circular bursts and vertical light trails.",
+        "Haze becomes more prominent in the lower street area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "Red, magenta, purple, and white light patterns appear, expand radially, and fade."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Several thin purple and white trails extend upward from the distant street area."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Diffuse haze becomes brighter and more visible around the lower bursts and along the roadway."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The crowd remains in place with some arms and phones raised."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Handheld screens continue to glow and shift slightly within the foreground."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e18",
+        "e19",
+        "e20",
+        "e21"
+      ],
+      "observations": [
+        "The larger bursts fade into faint sky specks.",
+        "After a darker interval, smaller pink and white bursts appear again."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "Faint specks remain after the large bursts, then later smaller pink and white bursts appear and expand."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Haze lingers over the street and partially veils the distant sky."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The crowd continues to occupy the foreground."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Some bright phone screens remain visible among the crowd."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e22"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The source points of the distant upward light trails are obscured by distance, crowd, haze, and buildings."
+  ]
+}

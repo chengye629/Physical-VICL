@@ -1,0 +1,416 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "main firework burst",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "target",
+        "source",
+        "product"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "emissive",
+        "combustible"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e5",
+        "e6",
+        "e8",
+        "e9",
+        "e11",
+        "e18"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "smoke cloud",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "product",
+        "medium"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e10",
+        "e16",
+        "e17"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "vertical luminous trail",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "source",
+        "product"
+      ],
+      "material_phase": "unknown",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "later central flare",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "source",
+        "product"
+      ],
+      "material_phase": "unknown",
+      "physical_properties": [
+        "emissive",
+        "combustible"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e13",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "dark sky background",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e19"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "explosive_release",
+      "type": "explosion",
+      "raw_type": "firework bursts producing abrupt radial luminous expansion, sparks, and smoke",
+      "object_ids": [
+        "obj_1",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e5",
+        "e8",
+        "e13",
+        "e14"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "gas_particulate_motion",
+        "type": "aerosol_dispersion",
+        "raw_type": "smoke haze spreads and changes shape around the bursts",
+        "object_ids": [
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e2",
+          "e10",
+          "e16",
+          "e17"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "light_emission",
+        "raw_type": "bright colored light emission from flares, arcs, and the vertical trail",
+        "object_ids": [
+          "obj_1",
+          "obj_3",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e1",
+          "e5",
+          "e6",
+          "e7",
+          "e8",
+          "e13",
+          "e14",
+          "e18"
+        ]
+      },
+      {
+        "family": "combustion",
+        "type": "sustained_burning",
+        "raw_type": "glowing firework streaks persist briefly and then dim",
+        "object_ids": [
+          "obj_1",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e8",
+          "e12",
+          "e14",
+          "e18"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the display is already active at the start",
+      "actor_ids": [],
+      "target_ids": [
+        "obj_1",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "repeated",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e13",
+        "e18",
+        "e19"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "the main luminous mass becomes a broad circular pattern with radial streaks and arcs extending outward"
+      },
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "the main burst changes from white-yellow glare to orange-red, red arcs, and remaining green-white arcs"
+      },
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e8",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "intensity_decrease",
+        "raw_transition": "outer red and green streaks dim and darker gaps appear between remaining luminous arcs"
+      },
+      "evidence_refs": [
+        "e17",
+        "e18"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "diffuse smoke remains around the burst and spreads through the central and upper areas"
+      },
+      "evidence_refs": [
+        "e2",
+        "e10",
+        "e16",
+        "e17"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "the smoke appears red-tinted, green-white, and orange-red as illumination changes"
+      },
+      "evidence_refs": [
+        "e10",
+        "e16"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "light_emission_onset",
+        "raw_transition": "a narrow pink-white vertical luminous trail becomes visible below the central burst"
+      },
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "light_emission_onset",
+        "raw_transition": "a compact yellow-white flare appears near the lower central part of the larger burst"
+      },
+      "evidence_refs": [
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "short white radial streaks extend outward from the compact flare"
+      },
+      "evidence_refs": [
+        "e14"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "chemical_energy_release",
+      "raw_mechanism": "rapid energy release in the firework material drives the bright burst and later flare",
+      "process_refs": [
+        "primary"
+      ],
+      "object_ids": [
+        "obj_1",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e5",
+        "e13",
+        "e14"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "pressure_gradient",
+      "raw_mechanism": "rapid expansion drives material and luminous streaks outward from the burst centers",
+      "process_refs": [
+        "primary"
+      ],
+      "object_ids": [
+        "obj_1",
+        "obj_4",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e8",
+        "e14"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity contributes to the downward curvature of outer streak ends",
+      "process_refs": [
+        "primary"
+      ],
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e11"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "drag",
+      "raw_mechanism": "air resistance contributes to curved and slowing spark trails in the sky medium",
+      "process_refs": [
+        "primary"
+      ],
+      "object_ids": [
+        "obj_1",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e11",
+        "e18"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "emissive flare and spark material produces the visible white, yellow, red, green, and pink light",
+      "process_refs": [
+        "secondary"
+      ],
+      "object_ids": [
+        "obj_1",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e13",
+        "e14"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "smoke particles scatter and tint the emitted light while partly obscuring streak detail",
+      "process_refs": [
+        "secondary"
+      ],
+      "object_ids": [
+        "obj_2",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e10",
+        "e16",
+        "e17"
+      ]
+    }
+  ]
+}

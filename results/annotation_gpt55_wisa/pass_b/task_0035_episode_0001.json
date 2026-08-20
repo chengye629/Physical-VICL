@@ -1,0 +1,251 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "large vessel assembly",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "river water",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "medium",
+        "target"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e7",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "steel bridge",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "white wake and foam",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "fragmented",
+      "evidence_refs": [
+        "e2",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "red flag",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "deck boom equipment",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "distant shoreline",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "mixed",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "vessel translation across the river",
+      "event_roles": {
+        "target": [
+          "obj_1"
+        ],
+        "medium": [
+          "obj_2"
+        ]
+      },
+      "evidence_refs": [
+        "e6",
+        "e8",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "wake and foamy free-surface motion around the hull",
+        "event_roles": {
+          "target": [
+            "obj_2",
+            "obj_4"
+          ],
+          "medium": [
+            "obj_2"
+          ]
+        },
+        "evidence_refs": [
+          "e2",
+          "e7",
+          "e12"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the vessel is already moving at the start",
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "vessel position shifts rightward and slightly farther away relative to the fixed bridge and shoreline"
+      },
+      "evidence_refs": [
+        "e6",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "river surface ripples and disturbed regions change continuously around the moving vessel"
+      },
+      "evidence_refs": [
+        "e7",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "white wake and foam patches stretch, break into changing shapes, and remain behind and beside the hull"
+      },
+      "evidence_refs": [
+        "e2",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "flag outline varies slightly while staying attached to the pole"
+      },
+      "evidence_refs": [
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "drag",
+      "raw_mechanism": "relative motion between the vessel hull and river water produces fluid resistance and visible wake disturbance",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "liquid free-surface response allows ripples, foam edges, and disturbed water patches to continuously change shape",
+      "evidence_refs": [
+        "e7",
+        "e12"
+      ]
+    }
+  ]
+}

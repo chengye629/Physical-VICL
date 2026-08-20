@@ -1,0 +1,338 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A night-sky firework display shows bright radial streaks, colored smoke, and later overlapping bursts that appear, expand, and dim.",
+  "raw_event_description": "The video begins with a large overexposed white-yellow luminous mass in the upper center against a dark sky. As the glare reduces, a circular pattern of white and green radial streaks becomes visible around a central orange-red area, with diffuse smoke spreading through the burst. Red arcs then become prominent across much of the pattern while some green-white arcs remain. A narrow pink-white vertical luminous trail is visible from the bottom center toward the central burst area. Later, a smaller bright yellow-white flare appears lower in the central area and develops short white radial streaks within red and green smoke. The outer red and green streaks gradually dim while smoke remains visible.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "mid_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The first frame already contains a large bright overexposed luminous firework area.",
+      "The central brightness obscures finer details of the streaks and smoke.",
+      "The scene is a dark sky with no visible ground or launch setup."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "main firework burst",
+      "visible_form": "large circular luminous pattern with a bright central area and many radial streaks",
+      "material_description": "visible as intense colored light, spark-like points, and glowing trails; no solid surface is visible",
+      "visible_properties": [
+        "very bright",
+        "overexposed in early frames",
+        "white-yellow at first",
+        "green-white radial streaks",
+        "red radial arcs later",
+        "roughly circular spread"
+      ],
+      "initial_motion_description": "already active at the start, with visible expanding and changing luminous streaks",
+      "initial_integrity_description": "not a single intact solid form; appears as a diffuse bright mass and streak pattern",
+      "event_role_hints": [
+        "primary visible changing luminous pattern"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "smoke cloud",
+      "visible_form": "diffuse semi-transparent cloud surrounding and crossing the luminous bursts",
+      "material_description": "visible as gray, green, orange, and red tinted haze illuminated by nearby light",
+      "visible_properties": [
+        "diffuse",
+        "semi-transparent",
+        "irregular edges",
+        "color changes with illumination",
+        "partly obscures streaks"
+      ],
+      "initial_motion_description": "already present around the bright area and changes shape over time",
+      "initial_integrity_description": "continuous diffuse cloud with no sharp boundary",
+      "event_role_hints": [
+        "overlaps the luminous streaks",
+        "partly blocks details"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "vertical luminous trail",
+      "visible_form": "narrow bright pink-white vertical line extending upward from the bottom center",
+      "material_description": "visible as a glowing trail with small spark-like texture",
+      "visible_properties": [
+        "thin",
+        "vertical",
+        "bright pink-white",
+        "persistent through many frames"
+      ],
+      "initial_motion_description": "not clearly visible at the very first frame, then becomes visible below the central burst",
+      "initial_integrity_description": "continuous narrow luminous line when visible",
+      "event_role_hints": [
+        "aligned below the central burst area"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "later central flare",
+      "visible_form": "smaller bright yellow-white point and short radial streaks appearing lower within the larger display",
+      "material_description": "visible as intense yellow-white light and short white spark-like rays",
+      "visible_properties": [
+        "bright yellow center",
+        "white radial streaks",
+        "smaller than the main burst",
+        "appears after the red outer arcs are already visible"
+      ],
+      "initial_motion_description": "not present at the beginning; appears later near the lower central part of the display",
+      "initial_integrity_description": "begins as a compact bright spot before forming short radial streaks",
+      "event_role_hints": [
+        "secondary visible burst within the larger scene"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "dark sky background",
+      "visible_form": "black open background behind the luminous objects",
+      "material_description": "dark visual field with no visible surface texture",
+      "visible_properties": [
+        "black",
+        "featureless in most areas",
+        "contrasts with bright streaks and smoke"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous background",
+      "event_role_hints": [
+        "background for the luminous display"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "located in the upper central portion of the frame against the dark sky",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "surrounds and overlaps the main bright firework area",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "appears below the central burst area along the lower center of the frame",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e7"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A large overexposed white-yellow luminous area fills the upper center of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Diffuse smoke-like haze is visible around the bright central area."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Faint branching luminous streaks extend outward from the bright area."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "Small narrow spark trails are visible below and to the lower right of the main bright area."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A radial pattern of white-green streaks becomes visible around the center."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The central area changes from white-yellow to orange-red."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "A bright pink-white vertical trail is visible from the bottom center toward the central burst."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "Red luminous arcs spread across the left and upper portions of the circular pattern."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "Green-white arcs remain visible on the right side of the circular pattern."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "A dense red-tinted smoke cloud occupies the central and upper-right area."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "middle",
+      "observation": "The outer radial streaks curve outward and downward at their ends."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "middle",
+      "observation": "The red arcs become more numerous and brighter than the green arcs in many areas."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "A compact yellow-white flare appears near the lower central part of the larger burst."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "late",
+      "observation": "Short white radial streaks extend outward from the compact yellow-white flare."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "late",
+      "observation": "A bright green-white glow appears in the lower left-central portion of the smoke."
+    },
+    {
+      "evidence_id": "e16",
+      "stage": "late",
+      "observation": "The smoke cloud appears green-white in the lower central area and orange-red higher up."
+    },
+    {
+      "evidence_id": "e17",
+      "stage": "late",
+      "observation": "Outer red arcs remain visible near the upper and side edges while the central area is smoky."
+    },
+    {
+      "evidence_id": "e18",
+      "stage": "late",
+      "observation": "Several outer streaks dim and leave darker gaps between remaining luminous arcs."
+    },
+    {
+      "evidence_id": "e19",
+      "stage": "continuous",
+      "observation": "The frame composition remains centered on the firework display with no visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene begins with an already bright firework display in progress."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The main burst appears as a saturated white-yellow luminous mass with faint outward streaks."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The smoke cloud is visible around and across the bright area."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The dark sky remains visible around the display."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The main circular pattern becomes more defined after the initial glare."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The main burst shows white-green radial streaks and later many red arcs."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The smoke cloud becomes dense and red-tinted near the central and upper-right parts."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The vertical pink-white trail remains visible below the burst area."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e13",
+        "e14",
+        "e15",
+        "e16",
+        "e17",
+        "e18"
+      ],
+      "observations": [
+        "A later smaller flare appears within the larger smoky display while outer arcs persist and dim."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The later central flare appears as a compact yellow-white point and develops short white radial streaks."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The smoke cloud shows green-white illumination lower in the frame and orange-red illumination above."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The outer red and green arcs become less continuous and darker gaps appear between them."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The vertical luminous trail remains visible near the bottom center."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e19"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The very beginning of the firework event is not visible because the clip starts with a large bright burst already present.",
+    "Fine details near the brightest central areas are obscured by overexposure and smoke."
+  ]
+}

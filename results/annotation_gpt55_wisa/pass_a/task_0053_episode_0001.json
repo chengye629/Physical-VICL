@@ -1,0 +1,297 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A pot is filled to the rim with white foam and clear bubbles that continuously churn and change shape while the camera view slightly changes.",
+  "raw_event_description": "The video begins with a close view of a dark reflective pot on a dark surface. A white foamy layer with many clear rounded bubbles covers the pot opening and rises above the rim. Throughout the clip, the bubbles on the foamy surface repeatedly enlarge, collapse, merge, and reappear in place, while the overall foamy mound remains spread across the top of the pot. The foam edge stays near and over the rim, with small local surface changes but no large spill visible. Later in the clip, slightly more of the pot side, left handle area, and background are visible due to camera-only framing change.",
+  "observed_scope": "mixed",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The pot, rim, and foamy bubble layer are already visible at the start.",
+      "The surface activity is already ongoing in the first frame.",
+      "The top of the contents is partially obscured by the foam itself."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "pot",
+      "visible_form": "round cylindrical cooking vessel with a rolled rim and visible left-side handle attachment",
+      "material_description": "dark shiny reflective outer surface with a lighter metallic-looking rim",
+      "visible_properties": [
+        "reflective",
+        "rigid-looking",
+        "open at top",
+        "dark exterior",
+        "silver-toned rim"
+      ],
+      "initial_motion_description": "No independent motion visible.",
+      "initial_integrity_description": "Appears intact with continuous side wall and rim.",
+      "event_role_hints": [
+        "contains the foamy material",
+        "rim borders the visible foam layer"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "foamy bubble layer",
+      "visible_form": "white mound-like layer with many clear rounded bubbles spread across the pot opening",
+      "material_description": "white opaque foam with transparent glossy bubble surfaces",
+      "visible_properties": [
+        "many rounded cells",
+        "glossy highlights",
+        "irregular surface",
+        "opaque white areas",
+        "transparent bubble pockets",
+        "continuously changing surface"
+      ],
+      "initial_motion_description": "Surface bubbles are already visibly churning and changing shape.",
+      "initial_integrity_description": "Appears as one continuous foamy layer covering the pot opening and extending above the rim.",
+      "event_role_hints": [
+        "main visibly changing material"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "left handle assembly",
+      "visible_form": "curved dark handle or grip connected to the pot by a lighter rectangular bracket",
+      "material_description": "dark handle surface and pale reflective bracket with small dark fastener-like marks",
+      "visible_properties": [
+        "attached to pot side",
+        "rigid-looking",
+        "partly cropped at frame edge"
+      ],
+      "initial_motion_description": "No independent motion visible.",
+      "initial_integrity_description": "Appears attached and intact.",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_4",
+      "name": "dark support surface",
+      "visible_form": "flat dark surface beneath the pot",
+      "material_description": "dark smooth surface with reflections",
+      "visible_properties": [
+        "flat",
+        "dark",
+        "reflective"
+      ],
+      "initial_motion_description": "No motion visible.",
+      "initial_integrity_description": "Appears continuous where visible.",
+      "event_role_hints": [
+        "supports the pot"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "tiled wall",
+      "visible_form": "vertical background made of repeated light rectangular patterned panels",
+      "material_description": "light-colored matte or semi-gloss tiled surface",
+      "visible_properties": [
+        "stationary background",
+        "repeating raised pattern"
+      ],
+      "initial_motion_description": "No independent motion visible.",
+      "initial_integrity_description": "Appears continuous in the visible background.",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_6",
+      "name": "green package",
+      "visible_form": "upright green rectangular package partly visible at the right edge",
+      "material_description": "green printed surface with colored markings",
+      "visible_properties": [
+        "partially visible",
+        "upright",
+        "background object"
+      ],
+      "initial_motion_description": "No independent motion visible.",
+      "initial_integrity_description": "Appears intact where visible.",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "covers the open top of the pot and rises above the rim",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on the dark support surface",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is attached to the left side of the pot",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is behind the pot",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "is positioned to the right of the pot in the background",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A white foamy layer with clear bubbles sits above and across the pot rim."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The pot bottom area is adjacent to a flat dark surface."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A dark handle-like part is visible on the left side of the pot."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "Light patterned tiles remain visible behind the pot."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "A green upright package remains partly visible at the right side of the frame."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "Clear rounded bubbles on the foamy surface repeatedly change size and outline."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "Small local peaks and depressions appear and disappear across the foam surface."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The outer white foam band stays near the pot rim throughout the clip."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "Later frames show more of the pot side and left handle area than the earliest frames."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "No large stream of material is visible falling down the outside of the pot."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The scene starts with the pot already topped by a raised foamy layer.",
+        "The pot and handle are stationary relative to the scene."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The foamy bubble layer is already active, with visible rounded bubbles at the surface."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The pot remains fixed in place relative to the support surface."
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e10"
+      ],
+      "observations": [
+        "The foamy surface continues changing locally while remaining spread over the pot opening.",
+        "The foam edge remains close to the rim through the visible interval."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "Surface bubbles repeatedly enlarge, shrink, merge, collapse, and reappear in neighboring areas."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The overall mound-like foam form remains above the pot rim with small local shape fluctuations."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The pot shows no visible deformation or independent movement."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9"
+      ],
+      "observations": [
+        "The framing reveals slightly more surrounding area than at the beginning."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The pot remains in the same scene position while its image size and framing change slightly due to camera behavior."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The foamy layer remains present across the top of the pot with continuing bubble-surface changes."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "mixed",
+    "focus_change": "variable",
+    "evidence_refs": [
+      "e9"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The contents below the foamy top layer are not visible.",
+    "The source of the continuous bubble activity is not directly visible.",
+    "The exact boundary between foam and any underlying material is obscured by the foam."
+  ]
+}

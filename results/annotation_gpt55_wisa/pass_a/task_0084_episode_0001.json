@@ -1,0 +1,274 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A hand changes contact with strings on a guitar neck near the headstock, then the view shifts so the headstock leaves the frame and background objects become more visible.",
+  "raw_event_description": "The video begins with a close-up of a human hand on the fretboard of a guitar-like stringed instrument near the nut and headstock. Several fingertips are visibly touching strings near the first few frets. The fingers make small position changes, and some fingers lift or move away from the strings. The hand becomes less visible toward the left side of the frame. Later, the headstock occupies the center and then shifts toward the left edge of the image as the camera view reveals more of a black rectangular case and a wooden cabinet in the background. The foreground becomes softer in focus near the end.",
+  "observed_scope": "mixed",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The guitar neck, strings, hand, and headstock are visible at close range.",
+      "The wider environment is mostly outside the frame.",
+      "The hand is already in contact with the strings at the beginning."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "guitar headstock and neck",
+      "visible_form": "stringed instrument neck with fretboard, frets, nut, headstock, tuning posts, and six visible strings",
+      "material_description": "dark glossy headstock and fretboard surfaces, pale nut and fret markings, metallic tuning hardware and frets, light-colored strings",
+      "visible_properties": [
+        "six strings",
+        "multiple metal tuning posts",
+        "dark headstock",
+        "visible nut",
+        "visible frets"
+      ],
+      "initial_motion_description": "No clear independent object motion is visible at the start; it remains in close-up while the hand touches it.",
+      "initial_integrity_description": "Headstock, neck, strings, frets, and tuning hardware appear intact.",
+      "event_role_hints": [
+        "surface contacted by the hand",
+        "foreground object later leaves the camera view"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "human hand",
+      "visible_form": "left-side close-up of fingers and thumb around the guitar neck",
+      "material_description": "skin-toned fingers with visible fingernails; a metal ring is visible on one finger",
+      "visible_properties": [
+        "multiple fingers visible",
+        "thumb visible near the top of the neck",
+        "metal ring on one finger"
+      ],
+      "initial_motion_description": "Fingers are already placed against the strings and then make small visible repositioning movements.",
+      "initial_integrity_description": "Visible fingers appear intact.",
+      "event_role_hints": [
+        "contacts and changes position on the strings",
+        "becomes partly out of frame"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "black rectangular case",
+      "visible_form": "black rectangular box-like object in the background below the headstock",
+      "material_description": "dark exterior with a small lighter rectangular plate and light edging or cord near one corner",
+      "visible_properties": [
+        "rectangular shape",
+        "dark surface",
+        "small light plate"
+      ],
+      "initial_motion_description": "Not clearly moving; mostly background.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "background reference object revealed more clearly later"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wooden cabinet",
+      "visible_form": "upright wooden furniture piece at the right side of the scene",
+      "material_description": "brown wood-like surface with darker panels and small round knobs",
+      "visible_properties": [
+        "vertical furniture form",
+        "brown color",
+        "small knobs"
+      ],
+      "initial_motion_description": "Not visible or only minimally visible early; becomes more visible later due to the changing view.",
+      "initial_integrity_description": "Appears intact where visible.",
+      "event_role_hints": [
+        "background object revealed later"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "plaid curtain",
+      "visible_form": "soft vertical patterned background area",
+      "material_description": "red, orange, and light-colored plaid textile appearance",
+      "visible_properties": [
+        "plaid pattern",
+        "warm colors",
+        "vertical folds"
+      ],
+      "initial_motion_description": "No clear independent motion visible.",
+      "initial_integrity_description": "Appears continuous and intact where visible.",
+      "event_role_hints": [
+        "background reference surface"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "fingertips are visibly in contact with strings on the fretboard near the first frets",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "headstock and strings are in front of the black rectangular case in the camera view",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A guitar-like neck and headstock fill most of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Several human fingertips touch strings on the fretboard near the nut."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The fingertips change positions slightly while remaining near the strings."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "Some fingers lift or move away from the fretboard area."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The hand becomes partly cropped by the left edge of the frame."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The headstock, strings, nut, frets, and tuning hardware remain visibly intact."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The headstock appears progressively closer to the left edge of the image."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The foreground headstock area becomes noticeably softer in focus."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "A black rectangular case is visible below and behind the headstock."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "A wooden cabinet at the right side becomes more visible."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The guitar headstock is mostly outside the frame near the end."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The close-up starts with the hand already touching the guitar strings.",
+        "The guitar neck and headstock dominate the view."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "Fingers make small visible repositioning movements on or near the strings."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The guitar headstock and neck remain intact in close-up."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "Fewer fingertips remain visibly near the fretboard.",
+        "The hand is increasingly cropped at the left side."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "Some fingers move away from the fretboard area."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The visible guitar components remain unchanged in shape and intactness."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The camera view changes so that the headstock is pushed toward and then mostly beyond the left frame edge.",
+        "More of the background case and wooden cabinet is visible.",
+        "The foreground becomes softer in focus."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The headstock becomes partially and then mostly outside the camera frame."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The black rectangular case becomes more visible in the frame."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The wooden cabinet becomes more visible at the right side of the frame."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "mixed",
+    "focus_change": "defocus",
+    "evidence_refs": [
+      "e7",
+      "e8",
+      "e10",
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "medium"
+  },
+  "unresolved_observations": [
+    "The late apparent leftward exit of the headstock is recorded as a change in camera view rather than independent object translation.",
+    "Only a close-up portion of the hand and instrument is visible, so the full body and full instrument are outside the frame."
+  ]
+}

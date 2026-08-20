@@ -1,0 +1,286 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A right hand moves a small rectangular metal-looking piece on a metal-looking grid plate while a left hand rests on the plate.",
+  "raw_event_description": "The view shows a flat gray metal-looking plate with rows of small rectangular raised pieces. A left hand remains on the left side of the plate. A right hand is visible at the right edge, grips a small rectangular piece near the lower-right area, moves it leftward and inward along the surface near an adjacent horizontal piece, holds it there for a period, then shifts the fingers upward and left over nearby raised pieces.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The plate, rows of raised pieces, left hand, right hand, and manipulated piece are visible.",
+      "The right hand is already near or touching a small piece at the right edge in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "base plate",
+      "visible_form": "flat rectangular gray plate lying on a white surface",
+      "material_description": "metal-looking gray surface with slight reflections",
+      "visible_properties": [
+        "rectangular",
+        "flat",
+        "gray",
+        "reflective"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "appears intact as one flat plate",
+      "event_role_hints": [
+        "surface supporting raised pieces and hands"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "raised piece array",
+      "visible_form": "many small rectangular blocks and bars arranged in rows on the plate",
+      "material_description": "metal-looking gray pieces with shiny edges and shadows",
+      "visible_properties": [
+        "rectangular",
+        "regularly spaced",
+        "raised above plate",
+        "gray",
+        "reflective"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "pieces appear separate and intact",
+      "event_role_hints": [
+        "nearby stationary pieces around the manipulated piece"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "left hand",
+      "visible_form": "human left hand with fingers spread lightly on the left side of the plate",
+      "material_description": "light skin tone, visible fingernails",
+      "visible_properties": [
+        "human hand",
+        "light skin",
+        "partially resting on plate"
+      ],
+      "initial_motion_description": "mostly stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "rests on or steadies the plate"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "right hand",
+      "visible_form": "human right hand entering from the right side, with thumb and fingers near a small piece",
+      "material_description": "light skin tone, visible fingertips and fingernails",
+      "visible_properties": [
+        "human hand",
+        "light skin",
+        "pinching posture"
+      ],
+      "initial_motion_description": "near the right edge with small visible repositioning",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "manipulates the small rectangular piece"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "small moved piece",
+      "visible_form": "small rectangular metal-looking block near the lower-right area of the plate",
+      "material_description": "shiny gray metal-looking surface",
+      "visible_properties": [
+        "small",
+        "rectangular",
+        "gray",
+        "reflective"
+      ],
+      "initial_motion_description": "near the right edge, then moved by the right hand",
+      "initial_integrity_description": "appears intact as one small block",
+      "event_role_hints": [
+        "piece visibly translated by the right hand"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is arranged across the upper and middle areas of the base plate",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "rests on the left side of the base plate",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is positioned at the right edge near a small rectangular piece",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is adjacent to other rectangular raised pieces in the lower-right area",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Rows of small rectangular raised pieces are visible on the gray plate."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The left hand lies on the left side of the plate with fingers extending toward the raised pieces."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The right hand is visible at the right edge with fingertips near a small rectangular piece."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The small rectangular piece is in the lower-right area beside other raised pieces."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The right hand pinches the small rectangular piece between fingertips."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The small rectangular piece changes position leftward and inward relative to the right edge of the plate."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The moved piece is held near the right end of a longer horizontal rectangular piece."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The left hand remains in approximately the same position during the manipulation."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The right hand fingers shift upward and left over nearby raised pieces."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The small moved piece remains visible near the lower-right row area after the right fingers shift."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The plate and raised-piece array are already present.",
+        "The left hand is already resting on the plate.",
+        "The right hand is already near the small piece on the right side."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The base plate remains stationary."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The raised-piece array remains stationary."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The left hand remains resting on the plate."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The right hand is positioned near the small piece."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The small piece is located near the lower-right edge area."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The right hand grips and repositions the small rectangular piece.",
+        "The left hand remains mostly still."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The right hand pinches the small piece and moves with it."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The small piece translates leftward and inward along the lower-right area of the plate."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The left hand stays in approximately the same visible position."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The right hand changes finger position over adjacent pieces after holding the moved piece near the row."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The right hand fingers move upward and left over nearby raised pieces."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The small piece remains visible near the lower-right row area."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

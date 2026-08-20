@@ -1,0 +1,308 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A wide fixed view shows a sun near the horizon over water while clouds, sky brightness, and the water reflection visibly change over time.",
+  "raw_event_description": "The video begins with a bright orange sun slightly above the horizon over a rippled water surface, with many yellow-orange illuminated cloud patches across a blue sky and a dark shoreline with structures on the right. Over the sequence, the sun appears lower relative to the horizon, the cloud patches shift and change outline, the illuminated areas in the clouds change distribution, and the vertical orange reflection on the water below the sun changes in brightness and shape. The shoreline and distant structures remain visually fixed in place.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The sun, water surface, cloud field, horizon, and shoreline are visible from the beginning.",
+      "The main visible changes are already in progress at the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "sun",
+      "visible_form": "small bright circular orange disk near the horizon",
+      "material_description": "bright luminous disk with saturated orange-yellow color",
+      "visible_properties": [
+        "bright",
+        "circular",
+        "orange-yellow",
+        "near horizon"
+      ],
+      "initial_motion_description": "appears nearly stationary within the first moment, then gradually lower relative to the horizon across the sequence",
+      "initial_integrity_description": "single continuous bright disk",
+      "event_role_hints": [
+        "primary changing bright object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "water surface",
+      "visible_form": "broad dark blue surface filling the lower part of the frame with small ripples",
+      "material_description": "dark reflective surface with fine texture and orange reflected light",
+      "visible_properties": [
+        "rippled",
+        "dark blue",
+        "reflective",
+        "horizontal expanse"
+      ],
+      "initial_motion_description": "small surface texture changes are visible; the overall water area remains in place",
+      "initial_integrity_description": "continuous unbroken water surface",
+      "event_role_hints": [
+        "receives changing vertical orange reflection"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "cloud field",
+      "visible_form": "many irregular cloud patches and bands across the upper and middle sky",
+      "material_description": "soft-edged blue-gray and yellow-orange cloud masses",
+      "visible_properties": [
+        "irregular",
+        "patchy",
+        "blue-gray",
+        "yellow-orange illuminated edges",
+        "covers much of sky"
+      ],
+      "initial_motion_description": "cloud outlines and gaps change gradually through the sequence",
+      "initial_integrity_description": "multiple separate and connected cloud patches remain visible",
+      "event_role_hints": [
+        "main visible changing sky pattern"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "shoreline",
+      "visible_form": "dark narrow land strip along the right side of the horizon",
+      "material_description": "dark silhouette with no surface detail visible",
+      "visible_properties": [
+        "dark",
+        "horizontal",
+        "distant",
+        "silhouetted"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous dark land strip",
+      "event_role_hints": [
+        "fixed horizon reference"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "distant structures",
+      "visible_form": "thin dark crane-like and building-like silhouettes on the right horizon",
+      "material_description": "dark rigid silhouettes with narrow vertical and angled shapes",
+      "visible_properties": [
+        "dark",
+        "thin",
+        "angular",
+        "distant",
+        "silhouetted"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "separate narrow silhouettes remain intact",
+      "event_role_hints": [
+        "fixed background reference"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "sky",
+      "visible_form": "large blue-to-orange background region behind clouds and sun",
+      "material_description": "colored atmospheric background with blue upper area and orange band near the horizon",
+      "visible_properties": [
+        "blue upper region",
+        "orange horizon band",
+        "broad gradient"
+      ],
+      "initial_motion_description": "no discrete motion; colors and brightness change gradually",
+      "initial_integrity_description": "continuous open background",
+      "event_role_hints": [
+        "background whose color distribution changes"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the sun is positioned just above the distant horizon line",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "a vertical orange reflection is visible on the water below the sun",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "the silhouetted structures stand on or near the right-side shoreline",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A bright orange circular disk is visible slightly above the horizon."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The lower part of the frame is filled by a dark blue rippled water surface."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A narrow vertical orange reflection is visible on the water below the sun."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "Irregular yellow-orange cloud patches cover much of the upper sky."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A dark shoreline and thin dark structures are visible along the right horizon."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The sun appears lower relative to the horizon than it did early in the clip."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "Cloud gaps and cloud edges have different shapes than in the early frames."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The orange reflection on the water is still aligned below the sun but has changed shape and brightness."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The sun is closer to the horizon line than in the early frames."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The illuminated yellow-orange regions in the cloud field are distributed differently than earlier."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The shoreline and distant structures remain in the same frame position throughout the clip."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The horizon line remains stable in the frame throughout the clip."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "A bright sun, rippled water, illuminated cloud field, and right-side silhouetted shoreline are all visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The sun is a bright orange disk just above the horizon."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The water shows small rippled texture and an orange reflected streak."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The cloud field has many yellow-orange illuminated patches."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The sky pattern and reflection have changed while the wide framing remains stable."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The sun appears lower relative to the horizon."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Cloud outlines and gaps change shape."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The orange reflection below the sun changes shape and brightness."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The sun is nearer the horizon and the cloud illumination pattern differs from earlier frames."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The sun remains visible as a bright disk near the horizon."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The illuminated cloud regions appear rearranged compared with early frames."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The shoreline remains stationary in the frame."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The silhouetted structures remain stationary in the frame."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11",
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

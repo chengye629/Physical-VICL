@@ -1,0 +1,366 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "yellow pouch",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target",
+        "container",
+        "source"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "deformed",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "green pouch",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target",
+        "container",
+        "source"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "blue pouch",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target",
+        "container",
+        "source"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "black rod",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "colored spray and sheets",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e8",
+        "e11",
+        "e12"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fracture_separation",
+      "type": "rupture",
+      "raw_type": "rod-induced rupture and tearing open of suspended colored pouches",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e8",
+        "e9",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "contact_loading",
+        "type": "penetration",
+        "raw_type": "black rod penetrates through the pouch row",
+        "participant_object_ids": [
+          "obj_4",
+          "obj_1",
+          "obj_2",
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e2",
+          "e7"
+        ]
+      },
+      {
+        "family": "fluid_motion",
+        "type": "splashing",
+        "raw_type": "colored liquid-like material splashes outward as sheets, strands, and droplets",
+        "participant_object_ids": [
+          "obj_5",
+          "obj_1",
+          "obj_2",
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e4",
+          "e5",
+          "e8",
+          "e11",
+          "e12"
+        ]
+      },
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "black rod translates horizontally across the pouches",
+        "participant_object_ids": [
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e2",
+          "e7"
+        ]
+      }
+    ],
+    "action": {
+      "family": "separation",
+      "type": "pierce",
+      "raw_action": "a black rod pierces and passes through the suspended pouches",
+      "actor_object_ids": [],
+      "tool_object_ids": [
+        "obj_4"
+      ],
+      "target_object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e8",
+        "e11"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "repeated",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "impact_id": "impact_1",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "integrity",
+        "type": "ruptured",
+        "raw_transition": "yellow pouch opens and loses containment, with torn sheet-like portions and irregular edges"
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "impact_id": "impact_2",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "integrity",
+        "type": "ruptured",
+        "raw_transition": "green pouch develops a large torn opening and releases green material"
+      },
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "impact_id": "impact_3",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "integrity",
+        "type": "ruptured",
+        "raw_transition": "blue pouch develops an opening or torn area at its left side with blue sheet-like splash"
+      },
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "impact_id": "impact_4",
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "yellow, green, and blue material spreads outward across the frame as sheets, strands, and droplets"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e8",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "impact_id": "impact_5",
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "liquid_emission_onset",
+        "raw_transition": "colored liquid-like material begins appearing from each opened pouch"
+      },
+      "evidence_refs": [
+        "e3",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "impact_id": "impact_6",
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "black rod changes position horizontally from the yellow pouch area toward the green and blue pouch area"
+      },
+      "evidence_refs": [
+        "e2",
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "mechanism_id": "mechanism_1",
+      "family": "mechanical_forcing",
+      "type": "shear",
+      "raw_mechanism": "localized contact from the moving rod applies shear and penetration loading to the pouch surfaces",
+      "linked_process_families": [
+        "fracture_separation",
+        "contact_loading"
+      ],
+      "object_ids": [
+        "obj_4",
+        "obj_1",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e8",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "mechanism_id": "mechanism_2",
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "released liquid-like material forms droplets, strands, and thin sheets during breakup and spreading",
+      "linked_process_families": [
+        "fluid_motion"
+      ],
+      "object_ids": [
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e8",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "mechanism_id": "mechanism_3",
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "rod-pouch contact transfers momentum to the pouch material and expelled colored material",
+      "linked_process_families": [
+        "fracture_separation",
+        "fluid_motion"
+      ],
+      "object_ids": [
+        "obj_4",
+        "obj_1",
+        "obj_2",
+        "obj_3",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e8",
+        "e11"
+      ]
+    }
+  ]
+}

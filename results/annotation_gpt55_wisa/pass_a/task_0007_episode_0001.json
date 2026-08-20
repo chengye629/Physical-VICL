@@ -1,0 +1,338 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "Bright firework-like lights appear and expand over a nighttime waterfront skyline, with colored reflections visible on the water.",
+  "raw_event_description": "The video shows a dark waterfront with a lit skyline and still framing. At first, a small bright white cluster is already visible near the horizon left of center, with a faint gray cloud above it and a narrow reflection below. A pink point then appears higher in the sky and expands into a circular cluster of short radial streaks. Beneath it, a lower bright magenta-white cluster intensifies near the horizon. The water directly below shows taller pink and white reflections. Later, the upper circular cluster becomes brighter and shifts to white with green and pink areas while faint smoke-like patches remain around it.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "mid_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "A bright light cluster is already present near the horizon in the first frame.",
+      "The waterfront, skyline lights, and water reflections are visible.",
+      "Some dark sky detail is limited by low light."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "upper bright burst",
+      "visible_form": "circular cluster of many bright short streaks and points in the sky",
+      "material_description": "visible as colored light only, mainly pink, white, and green",
+      "visible_properties": [
+        "bright",
+        "round arrangement",
+        "color-changing",
+        "located above the skyline"
+      ],
+      "initial_motion_description": "not visible at the first frame; later appears as a small pink point and expands outward into a circular pattern",
+      "initial_integrity_description": "not present as a visible cluster at the start",
+      "event_role_hints": [
+        "main changing light pattern"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "lower bright cluster",
+      "visible_form": "compact bright cluster near the horizon with vertical streak-like light",
+      "material_description": "visible as white and magenta light",
+      "visible_properties": [
+        "very bright",
+        "near horizon",
+        "produces visible reflection"
+      ],
+      "initial_motion_description": "already flickering or changing in brightness near the horizon at the start",
+      "initial_integrity_description": "visible as a compact light cluster from the beginning",
+      "event_role_hints": [
+        "lower changing light source"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "smoke-like cloud",
+      "visible_form": "faint irregular gray patches in the dark sky",
+      "material_description": "gray translucent-looking haze",
+      "visible_properties": [
+        "faint",
+        "irregular",
+        "partially illuminated"
+      ],
+      "initial_motion_description": "appears suspended above the lower bright cluster with slight visible change over time",
+      "initial_integrity_description": "diffuse and irregular from the start",
+      "event_role_hints": [
+        "surrounds the bright light activity"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "water surface",
+      "visible_form": "dark horizontal water area in the lower half of the frame with vertical light reflections",
+      "material_description": "dark reflective surface",
+      "visible_properties": [
+        "reflective",
+        "mostly dark",
+        "shows rippled vertical light bands"
+      ],
+      "initial_motion_description": "small shimmering changes in reflected light are visible",
+      "initial_integrity_description": "continuous flat surface across the frame",
+      "event_role_hints": [
+        "shows changing reflections of the bright lights"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "city skyline",
+      "visible_form": "distant row of buildings and structures with many small lights",
+      "material_description": "dark building silhouettes with yellow, white, blue, and red lights",
+      "visible_properties": [
+        "distant",
+        "horizon-aligned",
+        "illuminated windows and outlines"
+      ],
+      "initial_motion_description": "no visible independent motion",
+      "initial_integrity_description": "stable row of structures across the horizon",
+      "event_role_hints": [
+        "background reference"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "light reflections",
+      "visible_form": "vertical elongated colored bands on the water below the bright sky lights and skyline",
+      "material_description": "visible colored light patterns on the water surface",
+      "visible_properties": [
+        "pink",
+        "white",
+        "yellow",
+        "elongated",
+        "shimmering"
+      ],
+      "initial_motion_description": "shimmers slightly and changes brightness with the visible lights above",
+      "initial_integrity_description": "present as narrow vertical bands at the start",
+      "event_role_hints": [
+        "visible response-like change in water appearance"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is positioned near the horizon left of center",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is visible above and around the lower bright cluster",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "appears vertically below the lower bright cluster on the water",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "lies below the skyline and reflects skyline and bright event lights",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1",
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "A dark water surface occupies the lower part of the frame below a distant lit skyline."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A compact bright white cluster is visible near the horizon left of center."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A faint gray irregular cloud is visible above the compact bright cluster."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A narrow vertical white reflection appears on the water below the compact bright cluster."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A small pink circular light appears higher in the sky above the lower bright cluster."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The pink circular light becomes a larger radial pattern of many short bright streaks."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The lower bright cluster beneath the radial pattern becomes more magenta and brighter."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The water reflection below the bright activity becomes a taller pink vertical band."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The upper radial light pattern contains bright white and green areas along with pink areas."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Faint gray haze remains around and above the upper radial light pattern."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "A magenta glow remains near the horizon below the upper radial pattern."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The skyline lights remain in the same frame positions throughout the visible sequence."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The framing of the horizon and skyline stays steady without an apparent cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene begins at night with an ongoing bright light cluster near the horizon and reflections on the water."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "is already visible as a compact bright white cluster near the horizon"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "is visible as faint gray haze above the bright cluster"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "appears as a narrow vertical reflection below the bright cluster"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "A higher pink light appears and grows into a radial pattern while lower light and water reflections brighten."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "appears as a small pink light and expands into a circular arrangement of bright streaks"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "brightens and shows stronger magenta-white coloration"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "extends into a taller pink reflection band on the water"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The upper radial light pattern remains visible with white, green, and pink coloring while haze persists nearby."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "shows white and green bright areas within the radial pattern"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains as faint gray haze around and above the bright pattern"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "continues as a magenta glow near the horizon"
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e1",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The city skyline and water remain visible as stable background elements."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "remains fixed in the background with many small lights"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "continues showing dark surface area with shimmering vertical light bands"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12",
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The sequence starts after some bright light activity is already underway."
+  ]
+}

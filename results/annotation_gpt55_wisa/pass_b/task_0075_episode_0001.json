@@ -1,0 +1,241 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "upper shark-like animal",
+      "entity_kind": "agent",
+      "event_roles": [
+        "actor",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "lower shark-like animal",
+      "entity_kind": "agent",
+      "event_roles": [
+        "actor",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "water surface",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e12"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "deformation",
+      "type": "bending_deformation",
+      "raw_type": "side-to-side bending of rear bodies and tails during swimming",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e8"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "separate translational movement of the animals through water",
+        "object_ids": [
+          "obj_1",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e2",
+          "e5",
+          "e9",
+          "e11"
+        ]
+      },
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "small water-surface ripples and changing reflected patterns",
+        "object_ids": [
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e1",
+          "e12"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; animals are already moving or enter while moving",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e7",
+        "e8"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "repeated",
+      "change_profile": "steady",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "bent",
+        "raw_transition": "rear body and tail curvature changes from frame to frame"
+      },
+      "evidence_refs": [
+        "e4",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "animal position changes as it moves through the water and later occupies a different area of the frame"
+      },
+      "evidence_refs": [
+        "e2",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "geometry",
+        "type": "bent",
+        "raw_transition": "rear body and tail begin visible curvature changes after the animal enters the frame"
+      },
+      "evidence_refs": [
+        "e5",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "animal enters from the lower right edge and moves into a separated area of the frame"
+      },
+      "evidence_refs": [
+        "e5",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "small ripple patterns and bright surface highlights vary across the sequence"
+      },
+      "evidence_refs": [
+        "e1",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "lateral body and tail motion against the surrounding water drives the animals' swimming movement",
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "drag",
+      "raw_mechanism": "the surrounding water acts as a resisting medium during the animals' motion",
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e9"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "flexible rear body and tail regions allow the observed curvature changes without loss of integrity",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e8"
+      ]
+    }
+  ]
+}

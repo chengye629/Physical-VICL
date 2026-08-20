@@ -1,0 +1,342 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "sun disk",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "unknown",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "right foreground evergreen",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "foreground forest trees",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "mountain ridges",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "horizontal cloud bank",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e7",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "upper sky clouds",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e6",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "valley mist",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e8",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_8",
+      "name": "lens flare spots",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "transparent"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "gas_particulate_motion",
+      "type": "plume_motion",
+      "raw_type": "gradual cloud and mist advection and reshaping",
+      "participants": [
+        "obj_5",
+        "obj_6",
+        "obj_7"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e13",
+        "e14"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "apparent downward and slight rightward motion of the sun disk",
+        "participants": [
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e6",
+          "e10"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "illumination_change",
+        "raw_type": "changing cloud-edge brightness, orange sky color near the sun, and visible lens flare spots",
+        "participants": [
+          "obj_1",
+          "obj_5",
+          "obj_8"
+        ],
+        "evidence_refs": [
+          "e7",
+          "e9",
+          "e11",
+          "e12"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actors": [],
+      "targets": [],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e15"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "horizontal cloud bank contour changes over time"
+      },
+      "evidence_refs": [
+        "e7",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "upper sky cloud patches change shape"
+      },
+      "evidence_refs": [
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "thin mist patches appear and fade along valleys and ridge slopes"
+      },
+      "evidence_refs": [
+        "e8",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "sun disk appears lower and slightly rightward, ending near the top edge of the cloud bank"
+      },
+      "evidence_refs": [
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "cloud bank edges near the sun become brighter and more orange"
+      },
+      "evidence_refs": [
+        "e7",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_8",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "small greenish circular light spots become visible in the image"
+      },
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "airflow_forcing",
+      "raw_mechanism": "moving air drives gradual displacement and reshaping of cloud and mist forms",
+      "process_refs": [
+        "primary"
+      ],
+      "object_refs": [
+        "obj_5",
+        "obj_6",
+        "obj_7"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e13",
+        "e14"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "sunlight scattered by cloud and mist volumes produces bright rims, glow, and visibility changes",
+      "process_refs": [
+        "secondary"
+      ],
+      "object_refs": [
+        "obj_1",
+        "obj_5",
+        "obj_6",
+        "obj_7"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e11",
+        "e12",
+        "e14"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": null,
+      "raw_mechanism": "image-plane optical artifact associated with bright sunlight produces greenish circular flare spots",
+      "process_refs": [
+        "secondary"
+      ],
+      "object_refs": [
+        "obj_1",
+        "obj_8"
+      ],
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ]
+}

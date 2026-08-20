@@ -1,0 +1,234 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "water surface",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium",
+        "support"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "tree and shrub banks",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e7"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "protruding rocks",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e8"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "floating pale flecks",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "unknown",
+      "physical_properties": [],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "water reflections",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "oscillating",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e6"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "free_surface_motion",
+      "raw_type": "ongoing water-surface rippling and disturbed free-surface variation",
+      "participants": [
+        "obj_1"
+      ],
+      "stage": "continuous",
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "shimmering deformation of reflected tree and sky patterns on the rippled water",
+        "participants": [
+          "obj_1",
+          "obj_2",
+          "obj_5"
+        ],
+        "stage": "continuous",
+        "evidence_refs": [
+          "e6"
+        ]
+      },
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "slight drifting of tiny pale flecks on the water surface",
+        "participants": [
+          "obj_4",
+          "obj_1"
+        ],
+        "stage": "continuous",
+        "evidence_refs": [
+          "e5"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actors": [],
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e4",
+        "e9"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "id": "impact_1",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "water free-surface texture and ripple outlines continuously change"
+      },
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "id": "impact_2",
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "some tiny pale flecks shift slightly across the water surface"
+      },
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "id": "impact_3",
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "reflected tree and sky patterns shimmer and change shape"
+      },
+      "evidence_refs": [
+        "e6"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "id": "mechanism_1",
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "the liquid free surface responds to small disturbances with changing ripples and surface texture",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "id": "mechanism_2",
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "changing water-surface orientations redirect reflected tree and sky light, producing the observed shimmering patterns",
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "id": "mechanism_3",
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "motion of the water surface carries small floating flecks along the surface",
+      "object_ids": [
+        "obj_1",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ]
+}

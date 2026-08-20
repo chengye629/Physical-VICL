@@ -1,0 +1,187 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "glowing smoke-like cloud",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "raw_description": "A billowing volumetric cloud with bright yellow-orange luminous regions and gray-brown smoke-like regions, already present and changing shape at the start.",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "gas_particulate_motion",
+      "type": "plume_motion",
+      "raw_type": "expanding and rising smoke-like plume",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "event_roles": [
+            "target"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e7",
+        "e8",
+        "e10",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "light_emission",
+        "raw_type": "orange-yellow glow within the cloud that dims and becomes localized",
+        "participants": [
+          {
+            "object_id": "obj_1",
+            "event_roles": [
+              "target"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e1",
+          "e6",
+          "e9",
+          "e12"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention or source object",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": []
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "The cloud grows from a compact bright mass into a taller and broader plume."
+      },
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "Smoke-like material spreads upward, outward, and laterally near the lower portion."
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "intensity_decrease",
+        "raw_transition": "The bright orange-yellow glow diminishes and remains only faintly visible near the upper portion by the end."
+      },
+      "evidence_refs": [
+        "e6",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "The visible cloud changes from bright yellow-orange regions to mostly gray-brown and darker smoke-like regions."
+      },
+      "evidence_refs": [
+        "e1",
+        "e7",
+        "e11",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "pressure_gradient",
+      "raw_mechanism": "Expansion of the gas or aerosol cloud is driven by internal pressure differences within the plume.",
+      "linked_process": "primary",
+      "evidence_refs": [
+        "e4",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "buoyancy",
+      "raw_mechanism": "The upward growth and vertical plume shape are consistent with buoyant rise of the cloud material through the surrounding gas.",
+      "linked_process": "primary",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "Luminous regions inside the cloud emit visible orange-yellow light that later fades.",
+      "linked_process": "secondary",
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "Suspended smoke or aerosol regions scatter light through the volume, producing the gray-brown opaque plume appearance.",
+      "linked_process": "primary",
+      "evidence_refs": [
+        "e7",
+        "e11"
+      ]
+    }
+  ]
+}

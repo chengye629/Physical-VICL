@@ -1,0 +1,296 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A flame flickers on the top of a white roll while smoke appears and a dark patch on the roll's top surface enlarges.",
+  "raw_event_description": "A white cylindrical roll with a hollow center lies horizontally on a small dark support against a black background. At the start, an orange flame is already present on the upper surface of the roll. Through the sequence, the flame changes height and shape, pale smoke wisps appear above and to the side of it, and a dark area on the roll's top surface becomes larger and darker. The roll, support, and loose sheet extending from the roll remain in the same visible positions.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The flame is already visible at the first frame.",
+      "The roll, hollow opening, loose sheet, support, flame, and dark background are visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "white roll",
+      "visible_form": "horizontal cylindrical roll with a circular hollow opening facing left and a loose sheet extending from the lower right side",
+      "material_description": "white, fibrous-looking, textured surface with layered edges visible around the hollow opening",
+      "visible_properties": [
+        "white exterior",
+        "cylindrical shape",
+        "hollow circular center",
+        "embossed or textured surface",
+        "loose attached sheet"
+      ],
+      "initial_motion_description": "no visible motion at the start",
+      "initial_integrity_description": "roll is intact overall, with a small dark area already present on the upper surface",
+      "event_role_hints": [
+        "flame is located on its top surface",
+        "top surface shows visible darkening over time"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "flame",
+      "visible_form": "orange and yellow translucent plume rising from the top of the roll",
+      "material_description": "bright orange/yellow luminous shape with darker orange edges in places",
+      "visible_properties": [
+        "glowing orange color",
+        "irregular changing outline",
+        "semi-transparent appearance"
+      ],
+      "initial_motion_description": "already flickering and changing shape at the start",
+      "initial_integrity_description": "continuous visible plume present at the beginning",
+      "event_role_hints": [
+        "located above the dark patch on the roll"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "smoke",
+      "visible_form": "thin pale gray wisps above and beside the flame",
+      "material_description": "faint gray translucent strands",
+      "visible_properties": [
+        "wispy shape",
+        "semi-transparent appearance",
+        "curling outlines"
+      ],
+      "initial_motion_description": "faint wisps are visible near the flame and change shape",
+      "initial_integrity_description": "diffuse and discontinuous wisps",
+      "event_role_hints": [
+        "appears near and above the flame"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "support",
+      "visible_form": "small dark circular base beneath the roll",
+      "material_description": "dark, smooth-looking surface with subtle reflection",
+      "visible_properties": [
+        "dark color",
+        "low circular form"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "intact visible base",
+      "event_role_hints": [
+        "roll rests on it"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "background surface",
+      "visible_form": "black backdrop and dark horizontal surface",
+      "material_description": "dark, non-detailed background with minimal reflections",
+      "visible_properties": [
+        "black background",
+        "dark tabletop-like surface"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "unchanged background",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "flame is positioned on and above the upper surface of the roll",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "smoke wisps are visible above and beside the flame",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "roll rests on the small dark support",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e10"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "loose sheet extends from the lower right side of the roll",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e8"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A white cylindrical roll lies horizontally with a circular hollow opening facing left."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "An orange flame is already visible rising from the top surface of the roll."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A small dark patch is visible on the top surface of the roll beneath the flame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "The flame outline changes repeatedly from frame to frame."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "Pale gray smoke wisps appear near the flame and curl upward or sideways."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The dark area on the top surface of the roll is larger than at the start."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The roll keeps the same position and orientation relative to the frame."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "A loose white sheet remains visible extending from the lower right side of the roll."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The flame becomes a taller orange plume rising from a broader dark area on the roll's top surface."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "A small dark circular support remains visible beneath the roll."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The black background remains unchanged and no scene cut is visible."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The framing, scale, and view angle remain consistent throughout the sequence."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e10"
+      ],
+      "observations": [
+        "The roll is already shown with a flame on its upper surface.",
+        "A small dark top patch is present from the beginning."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "roll is visible as an intact white cylinder with a hollow center and a small dark patch on top"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "flame is already present and rising from the roll's top surface"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "support remains beneath the roll"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The flame continues changing shape.",
+        "Smoke wisps appear and curl near the flame.",
+        "The dark top area becomes larger."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "flame flickers with changing height and outline"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "smoke wisps form changing curled shapes above and beside the flame"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "top surface shows an enlarged dark area while the roll body stays in the same position"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e11"
+      ],
+      "observations": [
+        "The flame is taller and rises from a broader dark patch.",
+        "The roll and loose sheet remain visibly positioned as before."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "flame appears as a taller orange plume above the roll"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "upper surface has a broader darkened area while the cylindrical form remains visible"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "faint smoke remains visible near the upper part of the flame in some frames"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The start of the flame is not visible.",
+    "The end of the flame is not visible."
+  ]
+}

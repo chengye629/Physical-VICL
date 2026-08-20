@@ -1,0 +1,219 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A pale fog layer drifts and reshapes around a dark ridgeline under a bright sunrise sky while the camera glides slowly.",
+  "raw_event_description": "The video shows a wide aerial-looking view with a dark ridge across the upper middle, a bright sun or sun glow at the far right edge, and a large pale fog layer covering the lower scene. Throughout the clip, the fog’s upper boundary and wispy areas near the ridge subtly shift and change shape, especially near the center and right-center. The ridge remains generally continuous and partly obscured by the fog. The framing changes slowly without a cut.",
+  "observed_scope": "mixed",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The fog layer, ridgeline, and bright sky are visible from the start.",
+      "The lower parts of the landscape are obscured by the fog.",
+      "The event appears to be an ongoing gradual process rather than a discrete onset."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "fog layer",
+      "visible_form": "broad, soft-edged pale layer filling the lower half of the view with wispy uneven upper edges",
+      "material_description": "white to pale gray semi-translucent diffuse mass",
+      "visible_properties": [
+        "soft boundary",
+        "low contrast",
+        "partially obscures background",
+        "wispy texture"
+      ],
+      "initial_motion_description": "subtle apparent shifting along the upper edge is visible from the beginning",
+      "initial_integrity_description": "continuous broad layer with uneven wisps and gaps near the ridge",
+      "event_role_hints": [
+        "main visibly changing scene element"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "ridgeline",
+      "visible_form": "long dark horizontal landform silhouette across the upper middle of the frame",
+      "material_description": "dark solid-looking terrain with small uneven crest details",
+      "visible_properties": [
+        "dark silhouette",
+        "continuous horizon-like outline",
+        "partly obscured by fog"
+      ],
+      "initial_motion_description": "no independent motion visible",
+      "initial_integrity_description": "continuous and unbroken across the frame",
+      "event_role_hints": [
+        "stationary background reference"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "bright sun glow",
+      "visible_form": "very bright yellow-white glow at the far right near the ridge edge",
+      "material_description": "bright light region in the sky",
+      "visible_properties": [
+        "high brightness",
+        "warm yellow-orange surrounding sky",
+        "partly at frame edge"
+      ],
+      "initial_motion_description": "no independent motion visible",
+      "initial_integrity_description": "persistent bright region at the right edge",
+      "event_role_hints": [
+        "lighting/background element"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "sky",
+      "visible_form": "open gradient sky above the ridge",
+      "material_description": "yellow-orange near the horizon fading to darker greenish-blue higher left",
+      "visible_properties": [
+        "smooth color gradient",
+        "brightest on the right",
+        "clear upper background"
+      ],
+      "initial_motion_description": "no independent motion visible",
+      "initial_integrity_description": "continuous sky region without visible breaks",
+      "event_role_hints": [
+        "background"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "overlaps and partially hides the lower portions of the ridgeline area",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "appears near the far right end of the ridgeline",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "extends above the ridgeline",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A broad pale fog layer fills most of the lower half of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A dark ridgeline spans horizontally across the upper middle of the frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A very bright yellow-white glow is visible at the far right edge near the ridge."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The fog overlaps the lower edge of the dark ridge and obscures parts of it."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "Wispy fog near the central ridge edge changes shape."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The fog boundary near the right-center appears to bulge upward and become more diffuse."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The ridge remains visible as a dark continuous band across the upper frame."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The fog layer still covers the lower frame with a soft uneven upper edge."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The overall framing drifts slowly without an abrupt scene cut."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "Focus remains generally stable across the scene."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The scene remains a wide view of fog, ridge, bright sky, and sun glow."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The fog layer persistently shifts and reshapes along its upper wispy boundary."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The ridgeline stays visually intact and partly obscured by fog."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The bright glow remains near the far right edge of the frame."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The sky remains a stable warm-to-darker gradient background."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "tracking",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e9",
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "Some apparent fog movement may be difficult to separate from the slow camera drift."
+  ]
+}

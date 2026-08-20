@@ -1,0 +1,375 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A large tan-brown cloud formation under a dark cloud deck changes shape and shifts right over a flat grassy landscape.",
+  "raw_event_description": "The video shows a fixed wide view of a flat green-brown field beneath a large layered sky. At the start, a tan-brown diffuse cloud mass hangs near the center below gray overhead clouds, with a very dark cloud region on the right and a lighter streaked area near the left horizon. Over time, the tan-brown mass broadens aloft, develops a narrower lower pendant, then shifts toward the right side of the frame while becoming more diffuse. Smaller cloud fragments under the main cloud deck also change shape and position. By the end, the main tan-brown feature is nearer the dark right-side cloud bank, with its lower portion shorter and less sharply bounded.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The field, horizon, cloud deck, central tan-brown cloud feature, and dark right-side cloud bank are all visible in the first frame.",
+      "The cloud-change process is already underway at the start."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "grassy field",
+      "visible_form": "flat horizontal ground strip across the lower part of the frame",
+      "material_description": "green-brown textured surface",
+      "visible_properties": [
+        "flat horizon",
+        "low vertical extent in frame",
+        "continuous across foreground"
+      ],
+      "initial_motion_description": "no visible independent motion",
+      "initial_integrity_description": "continuous unbroken field surface",
+      "event_role_hints": [
+        "static landscape reference"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "overhead gray cloud deck",
+      "visible_form": "large layered cloud cover spanning most of the sky",
+      "material_description": "diffuse gray and blue-gray cloud texture",
+      "visible_properties": [
+        "broad coverage",
+        "layered texture",
+        "curved and rippled edges"
+      ],
+      "initial_motion_description": "cloud texture is already changing slowly at the start",
+      "initial_integrity_description": "continuous cloud cover with uneven internal shading",
+      "event_role_hints": [
+        "surrounding changing sky feature"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "tan-brown hanging cloud",
+      "visible_form": "diffuse tan-brown cloud mass hanging below the main cloud deck",
+      "material_description": "tan-brown cloud texture with soft edges",
+      "visible_properties": [
+        "central at start",
+        "irregular outline",
+        "soft boundary",
+        "vertical pendant portions"
+      ],
+      "initial_motion_description": "already changing shape in the first visible frames",
+      "initial_integrity_description": "single diffuse mass with connected upper and lower portions",
+      "event_role_hints": [
+        "main visibly changing feature"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "dark right cloud bank",
+      "visible_form": "very dark blue-gray cloud mass occupying the right side of the sky",
+      "material_description": "dark diffuse cloud texture",
+      "visible_properties": [
+        "right-side position",
+        "extends down near horizon",
+        "darker than surrounding clouds"
+      ],
+      "initial_motion_description": "subtle boundary changes visible across the sequence",
+      "initial_integrity_description": "continuous dark cloud region",
+      "event_role_hints": [
+        "large adjacent sky feature"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "pale vertical streaked area",
+      "visible_form": "light gray vertical streaks below clouds near the left-center horizon",
+      "material_description": "pale gray semi-transparent streaked texture",
+      "visible_properties": [
+        "vertical streaking",
+        "lighter than right cloud bank",
+        "near horizon"
+      ],
+      "initial_motion_description": "no distinct independent motion resolved at the start",
+      "initial_integrity_description": "diffuse streaked patch",
+      "event_role_hints": [
+        "background sky feature"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "small horizon structures",
+      "visible_form": "tiny light and dark marks near the center of the horizon",
+      "material_description": "small distant solid-looking marks",
+      "visible_properties": [
+        "very small",
+        "near horizon line",
+        "fixed image position"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "unchanged tiny cluster",
+      "event_role_hints": [
+        "distant position reference"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "small lower cloud fragments",
+      "visible_form": "small irregular cloud pieces beneath the main cloud deck left of the tan-brown hanging cloud",
+      "material_description": "gray to tan diffuse cloud texture",
+      "visible_properties": [
+        "small relative to main hanging cloud",
+        "soft edges",
+        "irregular shapes"
+      ],
+      "initial_motion_description": "not prominent at the first frame; later visible changes in position and shape",
+      "initial_integrity_description": "separate small diffuse fragments when visible",
+      "event_role_hints": [
+        "secondary changing cloud features"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is below the overhead cloud deck near the center of the frame",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is to the right of the tan-brown hanging cloud at the start",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "lies below the visible sky and clouds",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is below the cloud deck and left of the central tan-brown hanging cloud",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3",
+        "e5"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "sits along the horizon below the central sky features",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3",
+        "e13"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "A flat green-brown field fills the lower strip of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A large layered gray cloud deck covers most of the sky."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A tan-brown diffuse hanging cloud mass is near the center below the upper cloud layers."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A very dark blue-gray cloud region occupies the right side of the sky down to near the horizon."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A pale gray vertically streaked area is visible below clouds left of center near the horizon."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The tan-brown hanging cloud mass becomes broader in its upper portion."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The lower part of the tan-brown cloud becomes a narrower pendant shape below the broader upper part."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "Small darker and tan cloud fragments are visible left of the main hanging cloud under the cloud deck."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The main tan-brown cloud mass occupies positions farther to the right than at the start relative to the horizon."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The lower tan-brown pendant becomes shorter and more diffuse."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The tan-brown cloud feature is adjacent to the dark right-side cloud bank."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The left side of the sky remains lighter than the dark right side."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The horizon line and tiny distant structures remain in the same image positions."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "Cloud boundaries and internal shading change throughout the sequence."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e13"
+      ],
+      "observations": [
+        "The scene begins with the event already in progress."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains as a flat foreground strip below the sky"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "spans the upper frame with layered gray cloud texture"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "hangs near the center as a tan-brown diffuse mass below the cloud deck"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "occupies the right side as a dark cloud region"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "is visible as pale vertical streaks near the left-center horizon"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "stays fixed as tiny marks near the horizon"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e14"
+      ],
+      "observations": [
+        "The most visible changes occur in the central tan-brown cloud and nearby smaller cloud fragments."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "shows changing contours and shading in the overhead layers"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "broadens in its upper portion and develops a narrower lower pendant"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "moves visually toward the right side of the frame relative to the horizon"
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "small separate fragments become visible and change shape left of the main hanging cloud"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ],
+      "observations": [
+        "The right side remains darker while the left side remains lighter."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "has a shorter and more diffuse lower portion than in the middle frames"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "is positioned adjacent to the dark right-side cloud bank"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains a large dark cloud region on the right"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "continues to show no visible independent motion"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "continues to remain fixed along the horizon"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The diffuse cloud boundaries make exact separation between some adjacent cloud features unclear."
+  ]
+}

@@ -1,0 +1,287 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small green oval item remains on a circular stovetop burner while blue and orange flames flicker around it and visible dark and pale areas on the item change slightly.",
+  "raw_event_description": "The video starts with a small green-yellow oval item already positioned at the center of a circular burner. Blue flame is visible around the lower part of the item, with taller orange flame tongues on both sides. Through the clip the flames repeatedly change shape and height, especially on the right side. The item stays near the same central position, with dark patches and pale torn-looking areas visible along its side and lower edge; a red-orange exposed area behind or beside it becomes more apparent during the sequence. The burner ring and surrounding stovetop remain stationary.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The small green item, burner, and flames are already visible in the first frame.",
+      "The visible process is already underway at the start.",
+      "The camera view shows the burner and surrounding stovetop clearly."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "green oval item",
+      "visible_form": "small rounded oval piece with an uneven pebbled outer surface",
+      "material_description": "green-yellow outer surface with black-brown darkened patches, pale white torn-looking exposed areas, and some red-orange exposed surface near the lower/back side",
+      "visible_properties": [
+        "green-yellow",
+        "oval",
+        "small relative to burner",
+        "textured surface",
+        "dark patches",
+        "pale exposed edge"
+      ],
+      "initial_motion_description": "No clear whole-object motion is visible at the start.",
+      "initial_integrity_description": "The item appears as one main piece with visible darkened areas and a pale opening or strip along one lower side.",
+      "event_role_hints": [
+        "positioned in the visible flames",
+        "visible surface markings and exposed areas change during the clip"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "circular burner",
+      "visible_form": "round stovetop burner ring with central support area and radial openings",
+      "material_description": "gray and dark metal-like surfaces with soot-like dark staining and light residue",
+      "visible_properties": [
+        "circular",
+        "stationary",
+        "gray",
+        "darkened surface",
+        "slotted outer edge"
+      ],
+      "initial_motion_description": "No motion visible.",
+      "initial_integrity_description": "Appears intact as a circular burner assembly.",
+      "event_role_hints": [
+        "located directly beneath the green oval item",
+        "flames are visible around its central area"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "flame",
+      "visible_form": "blue ring-like flame near the burner with taller orange translucent flame tongues rising upward",
+      "material_description": "luminous blue, purple, red, and orange visible flame shapes",
+      "visible_properties": [
+        "blue lower region",
+        "orange upper tongues",
+        "translucent",
+        "rapidly changing outline",
+        "variable height"
+      ],
+      "initial_motion_description": "Flame shapes flicker and change height from the first frame.",
+      "initial_integrity_description": "Not applicable as a persistent solid object; visible flame is continuous but changing.",
+      "event_role_hints": [
+        "surrounds the lower part of the green item",
+        "changes shape and height throughout the clip"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "stovetop surface",
+      "visible_form": "flat metal stovetop area around the burner with rear burner parts and supports in the background",
+      "material_description": "gray metal-like surface with stains, dark marks, and scattered light residue",
+      "visible_properties": [
+        "flat",
+        "gray",
+        "stained",
+        "stationary",
+        "background support structures visible"
+      ],
+      "initial_motion_description": "No motion visible.",
+      "initial_integrity_description": "Appears continuous around the burner with stains and residue.",
+      "event_role_hints": [
+        "supports the circular burner",
+        "provides the surrounding scene context"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The green oval item is positioned above the center of the circular burner.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "The visible flame surrounds the lower portion of the green oval item.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "The circular burner is set into the surrounding stovetop surface.",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e12"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A small green-yellow oval item is visible at the center of a circular burner."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Blue flame is visible around the base of the green oval item."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Orange flame tongues rise on the left and right sides of the green oval item."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The green oval item has a dark patch on its upper-left visible surface."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A pale white torn-looking strip is visible along the lower-left edge of the green oval item."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The right-side orange flame tongue becomes taller than the green oval item."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "A pale area along the lower/front edge of the green oval item is visible across a wider section than at the start."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "A red-orange exposed surface is visible behind or to the right of the green oval item."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The flame outline and height change from frame to frame."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The green oval item remains near the center of the burner."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "Dark patches are visible near the upper and lower portions of the green oval item."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The circular burner and surrounding stovetop remain in the same positions in the frame."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "No scene cut is visible."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The item is already on the burner when the clip begins.",
+        "Flames are already present around the item."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The green oval item is stationary near the burner center with dark and pale visible surface areas."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Blue and orange flame shapes are visible around the item."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The flames continue changing shape.",
+        "The right-side orange flame rises prominently beside the item.",
+        "More pale and red-orange exposed surface is visible on or behind the item."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The visible pale lower edge and red-orange exposed area become more apparent."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The flame flickers, with the right orange tongue extending upward beside the item."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The item remains over the burner.",
+        "The burner and stovetop stay fixed in view.",
+        "No cut occurs."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The green oval item remains near the burner center with visible dark patches and pale lower edge."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The circular burner remains stationary."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The flame continues flickering around the lower part of the item."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12",
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact identity of the green oval item is not visually established.",
+    "Some lower parts of the item are intermittently obscured by the flames."
+  ]
+}

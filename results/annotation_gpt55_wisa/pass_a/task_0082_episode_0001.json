@@ -1,0 +1,357 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A dark container pours a clear liquid stream into a tall glass containing ice, and the glass contents become increasingly cloudy and higher.",
+  "raw_event_description": "At the start, a tall clear glass stands upright with multiple ice pieces inside and a low amount of pale cloudy liquid at the bottom. A dark pouring container moves in from the right side and its spout area aligns above the open top of the glass. A clear liquid stream appears from the container and enters the glass, striking the ice area near the top. As the stream continues, the visible liquid level in the glass rises and the contents become more uniformly cloudy white. The stream stops, and the dark container moves away to the right while the glass remains filled below the rim with ice still visible near the top.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The tall glass and ice are clearly visible.",
+      "The left-side clear ridged object is only partially visible.",
+      "The later pouring container is not yet visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "tall glass",
+      "visible_form": "upright cylindrical drinking glass with open top and transparent walls",
+      "material_description": "clear glossy material with visible reflections",
+      "visible_properties": [
+        "transparent",
+        "tall",
+        "upright",
+        "open at top"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact with no visible cracks or breaks",
+      "event_role_hints": [
+        "contains ice and liquid",
+        "receives incoming liquid stream"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "ice pieces",
+      "visible_form": "multiple irregular translucent white solid chunks inside the glass",
+      "material_description": "whitish translucent pieces with glossy highlights",
+      "visible_properties": [
+        "translucent",
+        "white",
+        "irregular angular shapes",
+        "clustered inside glass"
+      ],
+      "initial_motion_description": "stationary inside the glass",
+      "initial_integrity_description": "separate visible chunks, intact as visible pieces",
+      "event_role_hints": [
+        "occupies upper and middle parts of glass",
+        "is contacted by incoming liquid stream"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "dark pouring container",
+      "visible_form": "dark vessel entering from the right with a narrowed pouring edge or spout area",
+      "material_description": "dark glossy exterior with blue highlights",
+      "visible_properties": [
+        "dark colored",
+        "glossy",
+        "partially visible",
+        "tilted during event"
+      ],
+      "initial_motion_description": "not visible at first; later moves in from the right",
+      "initial_integrity_description": "visible portion appears intact",
+      "event_role_hints": [
+        "source of visible liquid stream"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "liquid stream",
+      "visible_form": "narrow transparent moving stream between the dark container and the glass opening",
+      "material_description": "clear glossy flowing substance visible through highlights",
+      "visible_properties": [
+        "transparent",
+        "narrow",
+        "continuous while present",
+        "reflective"
+      ],
+      "initial_motion_description": "not present in first frames",
+      "initial_integrity_description": "not applicable before appearing",
+      "event_role_hints": [
+        "moves from container area into glass opening"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "glass contents liquid",
+      "visible_form": "liquid inside the glass, initially low and later higher, appearing cloudy white",
+      "material_description": "pale cloudy liquid with a visible horizontal surface region",
+      "visible_properties": [
+        "cloudy",
+        "white or pale gray",
+        "fills lower part of glass",
+        "surface level changes upward"
+      ],
+      "initial_motion_description": "stationary or not visibly moving at the bottom of the glass",
+      "initial_integrity_description": "continuous liquid region at bottom of glass",
+      "event_role_hints": [
+        "visible level rises during pouring",
+        "becomes more opaque-looking"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "left ridged clear object",
+      "visible_form": "partially visible ribbed transparent object at the left edge of the frame",
+      "material_description": "clear glossy material with ridges and reflections",
+      "visible_properties": [
+        "transparent",
+        "ribbed",
+        "partially visible"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "visible portion appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_7",
+      "name": "table surface",
+      "visible_form": "flat patterned surface under the glass",
+      "material_description": "blue patterned cloth or covering visible beneath objects",
+      "visible_properties": [
+        "flat",
+        "patterned",
+        "blue areas"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "continuous visible surface",
+      "event_role_hints": [
+        "supports the glass"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "stands upright on the patterned table surface",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is inside the tall glass",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "occupies the lower part of the tall glass",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The tall glass is upright on a patterned table surface."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Several translucent white ice pieces are visible inside the glass."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A low cloudy liquid region is visible at the bottom of the glass."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A ribbed clear object is partially visible along the left edge of the frame."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A dark glossy container moves into view from the right side."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The dark container is tilted with its pouring edge positioned above the glass opening."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "A narrow transparent liquid stream appears between the dark container and the glass."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The transparent stream enters the open top of the glass."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The stream contacts the visible ice area near the upper part of the glass."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The cloudy liquid region inside the glass rises upward during the stream."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "middle",
+      "observation": "The lower and middle parts of the glass become more uniformly cloudy white."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "middle",
+      "observation": "Some ice pieces remain visible near the top while becoming partly obscured by cloudy contents and reflections."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The visible stream thins and then is no longer present."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "late",
+      "observation": "The dark container moves away toward the right side."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "late",
+      "observation": "The glass remains upright with cloudy liquid below the rim and ice still visible near the top."
+    },
+    {
+      "evidence_id": "e16",
+      "stage": "continuous",
+      "observation": "No scene cut is visible during the sequence."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The glass is already set up with ice and a small amount of cloudy liquid.",
+        "The left ridged clear object remains partially in frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The glass stays upright and stationary."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The ice pieces are stationary inside the glass."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The cloudy liquid is visible only in the lower part of the glass."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "A dark container enters and tilts over the glass.",
+        "A clear stream enters the glass and the cloudy contents rise."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The dark container moves in from the right and holds a tilted position above the glass opening."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The visible liquid stream extends from the container into the glass."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The visible cloudy liquid level rises upward inside the glass."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The ice pieces remain visible but become partly obscured by the cloudy contents and reflections."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e13",
+        "e14",
+        "e15"
+      ],
+      "observations": [
+        "The stream ends and the container withdraws.",
+        "The glass remains filled below the rim."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The stream disappears."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The dark container moves away to the right."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The glass remains upright."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The cloudy liquid remains at a higher level than at the start."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e16"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact identity of the dark pouring container is not fully visible.",
+    "The left ridged clear object is only partially visible and does not visibly participate in the main event."
+  ]
+}

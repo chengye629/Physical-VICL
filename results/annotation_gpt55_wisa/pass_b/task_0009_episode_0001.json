@@ -1,0 +1,121 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "reflective flat surface",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e7"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "sky and clouds",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [],
+      "material_phase": "gas",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "distant horizon strip",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "unknown",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e8"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "small white distant specks",
+      "entity_kind": "unknown",
+      "event_roles": [],
+      "material_phase": "unknown",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "distant hills",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "small dark distant specks",
+      "entity_kind": "unknown",
+      "event_roles": [],
+      "material_phase": "unknown",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "scope": "camera_only",
+    "primary": {
+      "family": "special",
+      "type": "none",
+      "raw_type": "no independent scene-level physical process; apparent changes are due to camera tracking",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "static",
+      "temporal_structure": "not_applicable",
+      "change_profile": "none",
+      "process_scope": "camera_only"
+    }
+  },
+  "impacts": [],
+  "mechanisms": []
+}

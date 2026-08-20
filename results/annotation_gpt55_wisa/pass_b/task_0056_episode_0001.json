@@ -1,0 +1,212 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "person",
+      "entity_kind": "agent",
+      "event_roles": [
+        "actor",
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "red band",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "tool",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e6",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "green turf floor",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "wall and baseboard",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e12"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": null,
+      "raw_type": "articulated body posture change while holding a band",
+      "participants": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "contact_loading",
+        "type": "tension_loading",
+        "raw_type": "held band under tensile loading between shoe area and hands",
+        "participants": [
+          "obj_1",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e2",
+          "e3",
+          "e6",
+          "e9",
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "transport",
+      "type": "move",
+      "raw_action": "person repositions body segments and hands while gripping the red band",
+      "actor_object_id": "obj_1",
+      "target_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "mixed"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "body posture changes: supporting leg straightens, torso leans forward, rear leg raises backward, and arms become straighter with hands lower"
+      },
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "red band changes visible orientation from diagonal near the shoe-to-hand line to a more vertical line beside the body"
+      },
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "wall and baseboard become visible as the framing moves upward"
+      },
+      "evidence_refs": [
+        "e11",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "torque",
+      "raw_mechanism": "active joint torques within the articulated body change limb and torso orientations",
+      "linked_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "tension",
+      "raw_mechanism": "hand grip and the shoe-area lower end of the band maintain tensile loading while the band reorients",
+      "linked_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e6",
+        "e9",
+        "e10"
+      ]
+    }
+  ]
+}

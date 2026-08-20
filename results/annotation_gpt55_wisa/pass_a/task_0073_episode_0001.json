@@ -1,0 +1,318 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A bright flash around a black rectangular container is followed by a large white vapor cloud expanding upward and to the right in a snowy outdoor scene.",
+  "raw_event_description": "The sequence begins with a strong white-yellow glare filling much of the frame and obscuring the central area. As the glare fades, a black rectangular container is visible on snow in front of a low snowy dirt berm. A white cloud appears above the container, grows into a dense rounded mass, rises higher, and expands outward. The cloud becomes large enough to cover much of the background and extends strongly to the right while the container remains mostly stationary and increasingly obscured.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "poor",
+    "setup_clarity": "partial",
+    "reasons": [
+      "A bright white-yellow glare overexposes most of the central frame.",
+      "The central container and nearby ground details are largely obscured in the first frame.",
+      "The snowy ground and distant berm are only partly visible through the glare."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "black rectangular container",
+      "visible_form": "Low, dark, rectangular open-topped box or tray positioned near the center of the frame",
+      "material_description": "Dark matte-looking exterior with straight edges; exact material not visually identifiable",
+      "visible_properties": [
+        "black or very dark",
+        "rectangular",
+        "rigid-looking",
+        "stationary in the frame"
+      ],
+      "initial_motion_description": "No visible motion after it becomes clear through the fading glare",
+      "initial_integrity_description": "Appears intact as a single rectangular object before becoming partly hidden by the cloud",
+      "event_role_hints": [
+        "The white cloud appears directly above and around this object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "white vapor cloud",
+      "visible_form": "Bright white to pale gray billowing cloud that changes from a low mound to a large rounded plume",
+      "material_description": "Opaque and semi-translucent white vapor-like mass with soft edges",
+      "visible_properties": [
+        "white",
+        "billowing",
+        "expanding",
+        "soft-edged",
+        "partly opaque"
+      ],
+      "initial_motion_description": "Not clearly visible in the first overexposed frame; then appears above the container and expands upward and outward",
+      "initial_integrity_description": "Initially a low continuous white mass, later a larger connected plume with wispy edges",
+      "event_role_hints": [
+        "Appears at and above the container opening",
+        "Obscures the container and background as it grows"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "bright glare",
+      "visible_form": "Large white-yellow overexposed region centered around the container area",
+      "material_description": "Visible light/glare with no solid surface detail",
+      "visible_properties": [
+        "very bright",
+        "white-yellow",
+        "overexposed",
+        "temporarily obscuring"
+      ],
+      "initial_motion_description": "Fills much of the frame at the beginning, then visibly diminishes",
+      "initial_integrity_description": "Appears as a broad continuous bright region at the start",
+      "event_role_hints": [
+        "Precedes the clearly visible growth of the white cloud"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "snow-covered ground",
+      "visible_form": "Flat outdoor ground with patchy snow and sparse dry grass",
+      "material_description": "White snow patches with brown grass or soil showing through",
+      "visible_properties": [
+        "snow-covered",
+        "flat",
+        "stationary"
+      ],
+      "initial_motion_description": "No visible motion",
+      "initial_integrity_description": "Ground surface remains continuous and visible except where obscured by glare or cloud",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_5",
+      "name": "snowy dirt berm",
+      "visible_form": "Low horizontal ridge across the background with snow patches and dark vegetation",
+      "material_description": "Brown soil-like ridge with white snow and dark grass-like vegetation",
+      "visible_properties": [
+        "horizontal",
+        "background",
+        "stationary",
+        "partly snow-covered"
+      ],
+      "initial_motion_description": "No visible motion",
+      "initial_integrity_description": "Background ridge remains continuous where not obscured",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The container is positioned on the snow-covered ground near the center foreground.",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The container is in front of the snowy dirt berm.",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "The white cloud appears directly above the container.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "The bright glare is centered over the same region where the container later becomes visible.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A white-yellow overexposed glare fills most of the central and lower frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "After the glare fades, a black rectangular container is visible on snowy ground."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A low white cloud is visible directly above the container."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The white cloud grows upward into a rounded mound above the container."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The white cloud expands laterally beyond the width of the container."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "Wispy white portions are visible near the lower left and lower right edges of the container."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The expanding cloud partially hides the snowy dirt berm behind it."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "A large part of the cloud extends toward the right side of the frame."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The cloud forms a tall dense vertical column above the container."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The right side of the cloud reaches far to the right and partly out of the frame."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The top opening area of the container is mostly hidden by the low white cloud layer."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The container remains in the same ground position while the cloud continues to move and change shape above it."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The container and background ridge keep approximately fixed image positions throughout the sequence."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "No visible scene cut occurs during the sequence."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The frame begins with strong central overexposure.",
+        "The black rectangular container becomes visible as the glare fades.",
+        "A white cloud appears above the container."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The bright glare diminishes and reveals more of the scene."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The container becomes visible in a fixed position on the snowy ground."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The white cloud appears as a low mound above the container."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The white cloud grows taller and wider.",
+        "The background becomes increasingly hidden behind the cloud.",
+        "The cloud begins extending prominently to the right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The cloud expands upward into a rounded plume."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The cloud spreads laterally beyond the container edges."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The container remains stationary while its upper area becomes partly obscured."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The background berm is partially hidden by the cloud."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "A dense white column persists above the container.",
+        "The rightward portion of the cloud occupies much of the right side of the frame.",
+        "The container remains visible mainly as a dark rectangular lower shape."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The cloud continues to billow and shift shape above and to the right of the container."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The container stays in place and is increasingly covered by the low cloud layer."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Large portions of the berm are hidden behind the white cloud."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13",
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "severe",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The interior of the container is not visible after the cloud forms.",
+    "The exact source of the bright glare is not visible as a distinct object.",
+    "The white cloud obscures much of the container and background during the later frames."
+  ]
+}

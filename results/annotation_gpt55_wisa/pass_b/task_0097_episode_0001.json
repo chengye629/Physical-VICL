@@ -1,0 +1,220 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "corrugated structure",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "combustible",
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "flames",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "target",
+        "product",
+        "source"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [
+        "emissive",
+        "translucent"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "tan sheet",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "wooden table",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "partial dark figure",
+      "entity_kind": "unknown",
+      "event_roles": [],
+      "material_phase": "unknown",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "unknown",
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "combustion",
+      "type": "sustained_burning",
+      "raw_type": "ongoing flickering combustion on the corrugated tabletop structure",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the fire is already ongoing at the start",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e11"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "flame tongues repeatedly lengthen, narrow, bend, split, and shrink while flickering"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "geometry",
+        "type": "contracted",
+        "raw_transition": "the right-side flame changes from tall and bright to lower and more compact near the curved right portion"
+      },
+      "evidence_refs": [
+        "e4",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "thermal_reaction",
+        "type": null,
+        "raw_transition": "the corrugated structure remains in an active burning and thermal-glow state with darkened and orange glowing areas visible"
+      },
+      "evidence_refs": [
+        "e3",
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "chemical_energy_release",
+      "raw_mechanism": "combustion releases energy in the burning material, sustaining visible flames and thermal glow",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e7"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "hot flames and glowing regions emit visible yellow, orange, and white light",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e7"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "airflow_forcing",
+      "raw_mechanism": "surrounding air motion perturbs the flame shapes, producing bending and flickering",
+      "object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8"
+      ]
+    }
+  ]
+}

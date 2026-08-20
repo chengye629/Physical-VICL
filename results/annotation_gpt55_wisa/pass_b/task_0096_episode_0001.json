@@ -1,0 +1,104 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "left striped bead wall",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "right striped bead wall",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "lower stepped bead block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e6"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "bottom icon strip",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "special",
+      "type": "none",
+      "raw_type": "no visible independent scene-object motion or scene-level physical process",
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_object_id": null,
+      "target_object_ids": [],
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "static",
+      "temporal_structure": "not_applicable",
+      "change_profile": "none",
+      "process_scope": "camera_only"
+    }
+  },
+  "impacts": [],
+  "mechanisms": []
+}

@@ -1,0 +1,311 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "white pitcher",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e4",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "black pouring vessel",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "clear liquid stream",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "liquid surface inside pitcher",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "container"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "green cutting mat",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "pouring",
+      "raw_type": "clear liquid stream pours from a black vessel into the white pitcher",
+      "participants": [
+        {
+          "object_id": "obj_2",
+          "role": "source"
+        },
+        {
+          "object_id": "obj_3",
+          "role": "target"
+        },
+        {
+          "object_id": "obj_1",
+          "role": "container"
+        },
+        {
+          "object_id": "obj_4",
+          "role": "target"
+        }
+      ],
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "liquid free surface rises with visible bubbles and foam-like patches",
+        "participants": [
+          {
+            "object_id": "obj_4",
+            "role": "target"
+          },
+          {
+            "object_id": "obj_3",
+            "role": "medium"
+          }
+        ],
+        "evidence_refs": [
+          "e6",
+          "e7",
+          "e8",
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "fluid_handling",
+      "type": "pour",
+      "raw_action": "pour clear liquid from the partially visible black vessel into the pitcher",
+      "participants": [
+        {
+          "object_id": "obj_2",
+          "role": "source"
+        },
+        {
+          "object_id": "obj_3",
+          "role": "target"
+        },
+        {
+          "object_id": "obj_1",
+          "role": "container"
+        }
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e5",
+        "e10"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e7",
+        "e9",
+        "e10"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "impact_id": "impact_1",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "material_transfer",
+        "raw_transition": "clear liquid is transferred as a continuous stream from the pouring vessel area into the pitcher"
+      },
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "impact_id": "impact_2",
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "liquid amount inside the pitcher increases and the visible surface rises closer to the rim"
+      },
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "impact_id": "impact_3",
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "small bubbles and foam-like clusters appear and spread on the liquid surface near the stream impact area"
+      },
+      "evidence_refs": [
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "impact_id": "impact_4",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "the pitcher becomes visibly more filled with liquid"
+      },
+      "evidence_refs": [
+        "e7",
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "mechanism_id": "mechanism_1",
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the liquid downward from the elevated source area into the pitcher",
+      "supports_processes": [
+        "primary"
+      ],
+      "supports_impacts": [
+        "impact_1",
+        "impact_2",
+        "impact_4"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "mechanism_id": "mechanism_2",
+      "family": "energy_reaction",
+      "type": "mass_transport",
+      "raw_mechanism": "continued liquid transport adds material to the pitcher interior, raising the visible fill level",
+      "supports_processes": [
+        "primary"
+      ],
+      "supports_impacts": [
+        "impact_2",
+        "impact_4"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "mechanism_id": "mechanism_3",
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "free-surface effects at the stream impact area allow bubbles and foam-like patches to persist on the liquid surface",
+      "supports_processes": [
+        "secondary"
+      ],
+      "supports_impacts": [
+        "impact_3"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e8"
+      ]
+    }
+  ]
+}

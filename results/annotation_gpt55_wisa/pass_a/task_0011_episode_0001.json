@@ -1,0 +1,303 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A charred debris pile releases drifting pale smoke while a small orange flame flickers on the right side.",
+  "raw_event_description": "The view shows a black and gray debris heap with pale smoke already present above it. Throughout the clip, smoke wisps change shape and drift across the frame, with the densest plume near the upper center. A small orange-yellow flame at the right edge repeatedly changes height and outline. The dark debris heap, a partially visible dark cylinder near the lower middle-left, and background rods or pipes remain in place. No scene cut or notable camera movement is visible.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The smoke and flame are already active in the first frame.",
+      "Smoke partially obscures the central and upper parts of the scene.",
+      "The debris heap and right-side flame are visible, but some background objects are partly hidden."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "charred debris pile",
+      "visible_form": "Irregular mound spread across the lower and central frame with curled, fragmented, and granular surfaces.",
+      "material_description": "Mostly black and gray surfaces with ash-like pale patches and charred-looking fragments.",
+      "visible_properties": [
+        "dark",
+        "irregular",
+        "rough-textured",
+        "fragmented",
+        "partly gray-white"
+      ],
+      "initial_motion_description": "No visible bulk motion in the first frames.",
+      "initial_integrity_description": "Appears as a loose, uneven heap with many small fragments already present.",
+      "event_role_hints": [
+        "smoke is visible above and among the pile",
+        "flame is visible along the right side of the pile"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "smoke plume",
+      "visible_form": "Pale gray and white semi-transparent wisps and thicker patches extending above the debris.",
+      "material_description": "Translucent gray-white vapor-like visual mass.",
+      "visible_properties": [
+        "semi-transparent",
+        "soft-edged",
+        "shifting",
+        "pale gray",
+        "white"
+      ],
+      "initial_motion_description": "Already moving and changing shape above the debris in the first frames.",
+      "initial_integrity_description": "Diffuse and broken into overlapping wisps and denser patches.",
+      "event_role_hints": [
+        "visible throughout the clip",
+        "changes shape continuously"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "right-side flame",
+      "visible_form": "Small cluster of orange-yellow pointed luminous shapes near the right edge of the debris.",
+      "material_description": "Bright orange, yellow, and occasional pale luminous areas.",
+      "visible_properties": [
+        "bright",
+        "orange-yellow",
+        "flickering",
+        "small",
+        "shape-changing"
+      ],
+      "initial_motion_description": "Already flickering in the first frames.",
+      "initial_integrity_description": "Appears as several adjoining small flame tongues that change outline.",
+      "event_role_hints": [
+        "remains near the right edge",
+        "varies in height and shape"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "dark cylinder",
+      "visible_form": "Partially exposed rounded cylindrical object near the lower middle-left of the debris heap.",
+      "material_description": "Dark gray to black surface with smooth curved visible portion.",
+      "visible_properties": [
+        "dark",
+        "rounded",
+        "partly buried",
+        "stationary"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Partially visible and apparently intact in its exposed portion.",
+      "event_role_hints": [
+        "partly surrounded by smoke and debris"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "background rods and rubble",
+      "visible_form": "Linear pipe-like or rod-like pieces and irregular rubble behind and to the right of the debris pile.",
+      "material_description": "Gray, brown, and dark surfaces with hard-edged fragments and tubular shapes.",
+      "visible_properties": [
+        "rigid-looking",
+        "linear",
+        "fragmented surroundings",
+        "stationary"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Scattered pieces and rods appear already arranged in place.",
+      "event_role_hints": [
+        "forms background around the smoke and flame"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "Smoke occupies the space above and partly in front of the debris pile.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "The flame is positioned along the right side of the debris pile.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "The dark cylinder is partially embedded among the lower middle-left debris.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "The rods and rubble are behind and to the right of the debris pile.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e7"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A black and gray irregular debris heap fills most of the lower half of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Pale gray-white smoke is already visible above the central debris."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A small orange-yellow flame is visible near the right edge of the debris."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "The right-side flame repeatedly changes outline."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The smoke wisps shift position and change shape across the upper center of the frame."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "A dark rounded cylindrical object remains partly visible near the lower middle-left area."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "Background rods, pipe-like pieces, and rubble remain in the same visible positions."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The main debris mound shows no visible large-scale displacement."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The camera framing remains stable without a visible cut."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The central smoke becomes denser and covers more of the upper middle area."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The right-side flame remains visible and continues to flicker in place."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The scene begins with smoke and flame already present."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The debris pile is stationary in the lower and central frame."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Smoke is visible above the central debris and begins the clip already shifting."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The small right-side flame is already flickering."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e8",
+        "e10"
+      ],
+      "observations": [
+        "The smoke and flame continue changing shape while the debris remains largely fixed."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The smoke thickens in the upper center and drifts across the scene."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The flame changes height and outline repeatedly."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "No large visible movement of the debris pile occurs."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e11"
+      ],
+      "observations": [
+        "The same visible arrangement persists near the end of the clip."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "Smoke continues to shift and partially obscure the upper central area."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The right-side flame remains in the same general location and keeps flickering."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The dark cylinder remains partly exposed and stationary."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The background rods and rubble remain stationary."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e9"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "Some objects behind the smoke are only partly visible.",
+    "The full extent of the debris pile outside the frame is not visible."
+  ]
+}

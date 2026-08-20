@@ -1,0 +1,289 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A translucent yellow-green mass on a glossy surface visibly flattens and spreads while its upright peak lowers.",
+  "raw_event_description": "At the start, an irregular translucent yellow-green mass sits on a glossy yellow surface with a tall narrow peak near its center, a low extension to the left, and a curved raised section to the right. Over the sequence, the central peak becomes shorter and broader, the left portion spreads into a flatter sheet, and the right curved raised section lowers and extends along the surface. By the end, the mass is much flatter and wider, with only low raised remnants and thin edges visible.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The main translucent mass is already present and visibly shaped in the first frame.",
+      "The supporting glossy surface and surrounding fixed visual features are visible.",
+      "No separate initiating action is shown."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "translucent yellow-green mass",
+      "visible_form": "Irregular crescent-like mass with raised edges, a central upright peak, and thin spreading portions.",
+      "material_description": "Translucent, glossy, yellow-green appearance with uneven internal texture and reflective highlights.",
+      "visible_properties": [
+        "translucent",
+        "glossy",
+        "irregular outline",
+        "deformable-looking shape",
+        "thin spreading edges"
+      ],
+      "initial_motion_description": "No separate whole-object translation is visible at the beginning; its shape is already changing over time.",
+      "initial_integrity_description": "Initially continuous as one irregular piece with a tall central peak and raised curved sections.",
+      "event_role_hints": [
+        "main visibly changing object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "glossy yellow surface",
+      "visible_form": "Flat reflective yellow surface with curved rim visible toward the back.",
+      "material_description": "Smooth glossy surface with clear reflections.",
+      "visible_properties": [
+        "flat",
+        "reflective",
+        "yellow-tinted",
+        "smooth"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears continuous and intact.",
+      "event_role_hints": [
+        "supporting surface for the changing mass"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "bright white round background object",
+      "visible_form": "Large bright circular or spherical white object behind the surface.",
+      "material_description": "Bright diffuse white appearance.",
+      "visible_properties": [
+        "round",
+        "bright",
+        "diffuse"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears continuous and intact.",
+      "event_role_hints": [
+        "background visual feature"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "gray circular depression",
+      "visible_form": "Small gray circular ring or recessed area behind the translucent mass on the surface.",
+      "material_description": "Gray, smooth-looking circular feature.",
+      "visible_properties": [
+        "circular",
+        "gray",
+        "smooth"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "stationary nearby feature"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "small rounded droplet",
+      "visible_form": "Small rounded spot near the front-middle area late in the sequence.",
+      "material_description": "Glossy yellow-green appearance similar to the surrounding wet-looking material.",
+      "visible_properties": [
+        "small",
+        "rounded",
+        "glossy"
+      ],
+      "initial_motion_description": "Not clearly visible at the beginning.",
+      "initial_integrity_description": "Appears as a separate small rounded spot when visible.",
+      "event_role_hints": [
+        "late visible small separated spot"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The translucent mass rests on and reflects in the glossy yellow surface.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "The gray circular depression is positioned behind the translucent mass in the image.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "The bright round background object is behind the surface and mass.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A translucent yellow-green irregular mass is visible on a glossy yellow surface."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The mass has a tall narrow upright peak near its center."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The mass has a visible reflection on the glossy surface."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A gray circular depression is visible behind the mass."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "A large bright white round object remains in the background."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The central upright peak is shorter than it was early in the sequence."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The left portion of the mass forms a wider flatter sheet than at the start."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The right raised curved section is lower and more elongated than at the start."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The central peak has become a low mound."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The mass covers a broader area of the glossy surface than in the early frames."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "Thin yellow-green edges extend outward along the left and right sides."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "A small rounded droplet-like spot is visible near the lower middle area of the surface."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The gray circular depression remains in approximately the same image position relative to the background."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The framing of the bright round background object and the tray rim remains essentially unchanged."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The main mass is upright in places and visibly irregular.",
+        "The supporting surface reflects the mass."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The mass initially shows a tall central peak, a left low extension, and a right raised curved section."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The glossy surface remains still and reflective."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The gray circular depression is visible behind the mass."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The main mass changes shape without a visible cut.",
+        "Raised areas become lower while the outline spreads outward."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The central peak lowers, the left portion spreads flatter, and the right curved section lowers and elongates."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The main mass is broader and flatter than before.",
+        "Only low raised remnants and thin spreading edges remain."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The mass ends as a flatter, wider shape with a low mound where the central peak had been."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "A small rounded droplet-like spot is visible near the lower middle area."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13",
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The beginning of the shape-change process is not shown."
+  ]
+}

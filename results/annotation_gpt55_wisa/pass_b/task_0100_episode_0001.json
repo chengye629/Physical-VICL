@@ -1,0 +1,418 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "flames",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "target",
+        "product",
+        "source"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e13",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "fire ring",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "wood pieces in pit",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "combustible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "separated",
+      "evidence_refs": [
+        "e3",
+        "e1",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "flat board",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "person",
+      "entity_kind": "agent",
+      "event_roles": [
+        "actor"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "long log",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "dark stick",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_8",
+      "name": "ash patch",
+      "entity_kind": "granular_material",
+      "event_roles": [
+        "support",
+        "medium"
+      ],
+      "material_phase": "granular",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_9",
+      "name": "chairs",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e15"
+      ]
+    },
+    {
+      "object_id": "obj_10",
+      "name": "tree",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e15"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "combustion",
+      "type": "sustained_burning",
+      "raw_type": "sustained burning of wood in an outdoor fire pit with large fluctuating flames",
+      "participants": {
+        "targets": [
+          "obj_3"
+        ],
+        "sources": [
+          "obj_3"
+        ],
+        "products": [
+          "obj_1"
+        ],
+        "containers": [
+          "obj_2"
+        ],
+        "medium": [
+          "obj_8"
+        ]
+      },
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e6",
+        "e13",
+        "e14"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "relation_reconfiguration",
+        "type": "rearrangement",
+        "raw_type": "person positions long wood pieces across and into the fire pit area",
+        "participants": {
+          "actors": [
+            "obj_5"
+          ],
+          "targets": [
+            "obj_6",
+            "obj_7"
+          ],
+          "containers": [
+            "obj_2"
+          ]
+        },
+        "evidence_refs": [
+          "e7",
+          "e8",
+          "e9",
+          "e10",
+          "e11",
+          "e12"
+        ]
+      },
+      {
+        "family": "gas_particulate_motion",
+        "type": "plume_motion",
+        "raw_type": "smoke wisps and flame-associated plume shapes evolve above the fire area",
+        "participants": {
+          "sources": [
+            "obj_3"
+          ],
+          "medium": [
+            "obj_1"
+          ]
+        },
+        "evidence_refs": [
+          "e6",
+          "e13"
+        ]
+      }
+    ],
+    "action": {
+      "family": "assembly",
+      "type": "place",
+      "raw_action": "person carries and places or positions long wood pieces across and into the fire pit area",
+      "actor": "obj_5",
+      "targets": [
+        "obj_6",
+        "obj_7"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e11",
+        "e12"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "axis": "geometry",
+      "type": null,
+      "raw_transition": "flame plume outline and occupied shape rapidly fluctuate while remaining around the pit area",
+      "evidence_refs": [
+        "e1",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "axis": "emission_transport",
+      "type": "dispersion",
+      "raw_transition": "light gray smoke wisps are visible above the flame and ash area",
+      "evidence_refs": [
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "axis": "thermal_reaction",
+      "type": null,
+      "raw_transition": "wood pieces in the pit remain in the active burning region and continue producing visible flames and smoke",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e6",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "axis": "motion",
+      "type": "motion_onset",
+      "raw_transition": "person enters from the left foreground and moves toward the fire ring",
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "axis": "geometry",
+      "type": "bent",
+      "raw_transition": "person changes posture by bending forward over the edge of the pit area",
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "axis": "motion",
+      "type": null,
+      "raw_transition": "long log moves with the person from the left toward the pit",
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "axis": "relation",
+      "type": null,
+      "raw_transition": "long log becomes positioned across the fire pit area",
+      "evidence_refs": [
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "axis": "relation",
+      "type": "containment_gain",
+      "raw_transition": "dark stick or log segment is moved downward into the fire ring area from the person's hands",
+      "evidence_refs": [
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_8",
+      "axis": "optical_visibility",
+      "type": "visibility_increase",
+      "raw_transition": "small flames become visible on the ash-covered ground left of the ring at several moments",
+      "evidence_refs": [
+        "e14"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "chemical_energy_release",
+      "raw_mechanism": "combustion of wood-like material releases energy and produces visible flames",
+      "applies_to_process": "primary",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e6"
+      ]
+    },
+    {
+      "family": "energy_reaction",
+      "type": "mass_transport",
+      "raw_mechanism": "burning material releases smoke and gaseous products that move above the pit",
+      "applies_to_process": "secondary",
+      "evidence_refs": [
+        "e13"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "airflow_forcing",
+      "raw_mechanism": "surrounding air motion perturbs the flame and smoke plume shapes",
+      "applies_to_process": "secondary",
+      "evidence_refs": [
+        "e6",
+        "e13"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "sustained_pressure",
+      "raw_mechanism": "the person applies sustained hand-held contact to position the long wood pieces in the pit area",
+      "applies_to_process": "secondary",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e12"
+      ]
+    }
+  ]
+}

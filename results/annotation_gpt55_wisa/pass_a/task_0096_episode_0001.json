@@ -1,0 +1,260 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A close camera pass shows stationary striped structures made of shiny brown and silver spheres, with no visible independent scene-object motion.",
+  "raw_event_description": "The video begins close to several upright rectangular and stepped assemblies made from rows of shiny spheres in brown and silver colors. The viewpoint moves laterally across the assemblies, changing which striped sections and stepped blocks are centered in the frame. The spherical-grid structures remain visibly intact throughout, with no individual spheres seen separating, falling, bending, or changing position relative to neighboring spheres. A row of small colored square icons is visible along the bottom of many frames and later is no longer visible.",
+  "observed_scope": "camera_only",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The first frame is a close-up with some bead structures cropped by the image edges.",
+      "Multiple upright bead assemblies are already present before any visible change.",
+      "A bottom on-screen icon strip covers part of the lower scene area."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "left striped bead wall",
+      "visible_form": "upright rectangular wall made from a grid of round spheres, with vertical brown and silver bands",
+      "material_description": "shiny reflective brown and silver sphere surfaces",
+      "visible_properties": [
+        "round repeated units",
+        "rectangular grid arrangement",
+        "vertical color striping",
+        "reflective highlights"
+      ],
+      "initial_motion_description": "no independent motion visible before the camera movement",
+      "initial_integrity_description": "appears intact as a continuous block of adjoining spheres",
+      "event_role_hints": [
+        "stationary scene structure"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "right striped bead wall",
+      "visible_form": "upright wall and tower-like sections made from rows of round spheres, including brown and silver vertical bands",
+      "material_description": "shiny reflective brown and silver sphere surfaces",
+      "visible_properties": [
+        "round repeated units",
+        "upright rectangular faces",
+        "vertical color striping",
+        "reflective highlights"
+      ],
+      "initial_motion_description": "no independent motion visible before the camera movement",
+      "initial_integrity_description": "appears intact as connected rows and columns of spheres",
+      "event_role_hints": [
+        "stationary scene structure"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "lower stepped bead block",
+      "visible_form": "shorter stepped block of shiny spheres positioned between taller walls",
+      "material_description": "mostly shiny brown spheres with some nearby silver spheres visible in early frames",
+      "visible_properties": [
+        "shorter height than adjacent walls",
+        "grid of round units",
+        "stepped top profile",
+        "reflective highlights"
+      ],
+      "initial_motion_description": "no independent motion visible",
+      "initial_integrity_description": "appears intact with rows of adjacent spheres",
+      "event_role_hints": [
+        "stationary scene structure"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "bottom icon strip",
+      "visible_form": "horizontal row of small colored square icons inside a rectangular strip at the bottom of the image",
+      "material_description": "flat screen-like colored graphics",
+      "visible_properties": [
+        "fixed near lower frame edge",
+        "multiple colored squares",
+        "rectangular border"
+      ],
+      "initial_motion_description": "fixed relative to the image frame",
+      "initial_integrity_description": "visible as a continuous row of icons in early frames",
+      "event_role_hints": [
+        "on-screen overlay"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "positioned to the left of a gap and other bead structures",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "lower than the adjacent upright bead walls and located between taller sections",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "overlaps the lower part of the image in front of the bead structures",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e7"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The early view shows a tall left bead wall with a brown vertical band beside a silver vertical band."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A shorter bead block is visible below the tops of the adjacent tall walls."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "The visible bead assemblies keep their ordered rows and columns throughout the clip."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "The bead structures shift across the image frame while maintaining the same local sphere arrangements."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The middle view is filled by close vertical bands of brown spheres and silver spheres."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "late",
+      "observation": "The late view shows a tall silver bead column near the left side and a lower brown stepped block to its right."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "early",
+      "observation": "A row of small colored square icons is visible along the bottom edge of the image."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The bottom row of colored icons is no longer visible in the later frames."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e7"
+      ],
+      "observations": [
+        "Several upright striped bead structures are already present.",
+        "A shorter stepped bead block is visible between taller sections.",
+        "A bottom icon strip overlaps the lower image area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "visible as an intact tall striped bead wall"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "visible as an intact tall striped bead assembly"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "visible as an intact lower stepped bead block"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "visible as a fixed bottom image overlay"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The view continues sliding across close-up bead faces.",
+        "Alternating brown and silver vertical bands dominate the frame.",
+        "No sphere is seen changing position relative to neighboring spheres."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains visually intact as it moves out of central framing"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains visually intact while different sections become centered in the frame"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "is intermittently visible below taller sections without visible shape change"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e8"
+      ],
+      "observations": [
+        "A tall silver column and nearby brown stepped block are shown close-up.",
+        "The bead structures remain arranged in rows and columns.",
+        "The bottom icon strip is absent from the later view."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "remains an intact upright striped bead structure"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains an intact lower stepped bead block"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "is no longer visible"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "mixed",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e4",
+      "e5",
+      "e6"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "medium"
+  },
+  "unresolved_observations": [
+    "The bottom icon strip disappears later in the clip, but it is not part of the physical bead scene."
+  ]
+}

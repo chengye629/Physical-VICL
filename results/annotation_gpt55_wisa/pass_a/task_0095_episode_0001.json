@@ -1,0 +1,175 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A bright orange-yellow cloud expands and dims into a larger gray-brown smoke plume against a black background.",
+  "raw_event_description": "The video begins with a compact, bright yellow-orange billowing cloud near the center of a black scene. The cloud enlarges outward and upward, with rounded glowing lobes forming across its top and sides. A pale gray-brown lower cloud spreads along the bottom while a central vertical plume becomes visible. Over time the orange glow becomes more localized, mainly in the upper right and inner areas, while the surrounding cloud turns darker gray-brown. By the end, the visible form is a tall, broad smoke-like plume with only faint reddish-orange glow near the upper portion.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "mid_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The main cloud is already present and bright in the first frame.",
+      "No pre-event state or source object is visible.",
+      "The background is black with no visible surrounding environment."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "glowing smoke-like cloud",
+      "visible_form": "A billowing, irregular volumetric cloud with rounded lobes and a widening lower base.",
+      "material_description": "Bright yellow-orange luminous regions mixed with gray, brown, and darker smoke-like opaque regions.",
+      "visible_properties": [
+        "glowing",
+        "billowing",
+        "irregular outline",
+        "color changes from yellow-orange to gray-brown",
+        "expanding shape"
+      ],
+      "initial_motion_description": "The object is already present and visibly changing shape at the start.",
+      "initial_integrity_description": "Initially appears as one compact, continuous bright cloud mass.",
+      "event_role_hints": [
+        "main visible changing entity"
+      ]
+    }
+  ],
+  "initial_relation_observations": [],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A compact bright yellow-orange cloud is centered against a black background."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The cloud has rounded billowing lobes along its top edge."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A pale gray-brown cloud layer is visible along the lower edge of the bright cloud."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The cloud expands upward and outward from its earlier size."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A narrower central vertical plume becomes visible below the wider upper cloud."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "Bright orange-yellow regions remain visible inside the upper cloud."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "Gray-brown smoke-like regions increase around the glowing areas."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The lower cloud spreads laterally near the bottom of the frame."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The orange glow becomes concentrated mostly in the upper right portion of the plume."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The plume appears taller and broader than in the first frame."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "Most of the visible cloud is gray-brown with darker shaded areas."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "Only faint reddish-orange glow remains near the upper portion by the end."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The event is already underway at the start.",
+        "The visible cloud is compact and brightly colored."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Appears as a compact bright yellow-orange billowing cloud with a pale lower edge."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The cloud grows into a broader upper mass with a narrower central lower plume.",
+        "The lower portion spreads near the bottom of the frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Expands upward and outward while its bright regions remain visible inside a growing gray-brown cloud."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The plume becomes darker overall.",
+        "The visible glow diminishes and becomes localized near the upper portion."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Transitions into a tall gray-brown smoke-like plume with faint reddish-orange glow near the top."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "No pre-event source object is visible.",
+    "The surrounding environment is not visible beyond the black background."
+  ]
+}

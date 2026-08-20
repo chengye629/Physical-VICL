@@ -1,0 +1,368 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A toy train travels rightward along a wooden track while the camera follows it, after an early visible change in a nearby switch-like track piece.",
+  "raw_event_description": "The scene opens on a light wooden toy railway on a green textured surface with a red toy house beside a turnout area. A light-colored switch or loose track piece near the turnout is first angled diagonally and then appears farther to the right in a changed orientation. A yellow-and-red toy locomotive enters from the left on the straight track, followed by two red carriages with yellow panels. The train continues moving to the right along the wooden track, passing the red house and then traveling across a longer straight section. The camera pans or tracks right to keep the train and carriages in view. By the end, the locomotive has moved out of frame to the right and the rear carriage remains partly visible near the right edge.",
+  "observed_scope": "mixed",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The track, turnout area, green surface, and red house are visible.",
+      "The train is not yet visible in the first frame.",
+      "A switch-like or loose track piece near the turnout is visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "wooden track",
+      "visible_form": "light tan toy railway track with grooves, including straight sections and a turnout or curved junction",
+      "material_description": "light tan surface with visible wood-like grain and molded grooves",
+      "visible_properties": [
+        "long",
+        "narrow",
+        "segmented",
+        "grooved",
+        "light tan"
+      ],
+      "initial_motion_description": "stationary relative to the green surface",
+      "initial_integrity_description": "appears assembled from multiple connected pieces",
+      "event_role_hints": [
+        "train travels along it"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "switch-like track piece",
+      "visible_form": "light tan movable or loose track-shaped piece near the turnout",
+      "material_description": "light tan wood-like surface matching the track",
+      "visible_properties": [
+        "narrow",
+        "flat",
+        "grooved",
+        "elongated"
+      ],
+      "initial_motion_description": "initially angled diagonally near the turnout",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "changes visible orientation early in the video"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "toy locomotive",
+      "visible_form": "small toy engine with yellow boiler front, red cab, black roof, black funnel, red wheels, and black lower frame",
+      "material_description": "smooth brightly colored toy surfaces with glossy plastic-like appearance",
+      "visible_properties": [
+        "yellow front",
+        "red cab",
+        "black roof",
+        "black funnel",
+        "red wheels"
+      ],
+      "initial_motion_description": "not visible in the first frame; later enters from the left moving rightward along the track",
+      "initial_integrity_description": "appears intact when first visible",
+      "event_role_hints": [
+        "leads the train"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "first red carriage",
+      "visible_form": "red toy carriage with rounded roof, black base, yellow rectangular side panels, and red wheels",
+      "material_description": "smooth brightly colored toy surfaces with black base and red wheels",
+      "visible_properties": [
+        "red",
+        "yellow side panels",
+        "rounded roof",
+        "black base",
+        "red wheels"
+      ],
+      "initial_motion_description": "not visible in the first frame; later follows behind the locomotive moving rightward",
+      "initial_integrity_description": "appears intact when first visible",
+      "event_role_hints": [
+        "follows locomotive"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "second red carriage",
+      "visible_form": "red toy carriage with rounded roof, black base, yellow rectangular side panels, and red wheels",
+      "material_description": "smooth brightly colored toy surfaces with black base and red wheels",
+      "visible_properties": [
+        "red",
+        "yellow side panels",
+        "rounded roof",
+        "black base",
+        "red wheels"
+      ],
+      "initial_motion_description": "not visible in the first frame; later follows behind the first carriage moving rightward",
+      "initial_integrity_description": "appears intact when first visible",
+      "event_role_hints": [
+        "rear part of train"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "red toy house",
+      "visible_form": "small red house or station-like toy with brown roof on a light base",
+      "material_description": "smooth red and brown toy surfaces with light base",
+      "visible_properties": [
+        "red walls",
+        "brown roof",
+        "light base",
+        "small"
+      ],
+      "initial_motion_description": "stationary relative to the green surface",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "background scenery near turnout"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "red block structure",
+      "visible_form": "small red rectangular block or accessory behind the turnout area",
+      "material_description": "smooth red toy surface",
+      "visible_properties": [
+        "red",
+        "rectangular",
+        "small"
+      ],
+      "initial_motion_description": "stationary relative to the green surface",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "background scenery"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "green surface",
+      "visible_form": "flat green textured surface covering the ground area",
+      "material_description": "green textured fabric or mat-like surface",
+      "visible_properties": [
+        "green",
+        "textured",
+        "flat"
+      ],
+      "initial_motion_description": "stationary in the scene",
+      "initial_integrity_description": "continuous visible surface",
+      "event_role_hints": [
+        "supports track and scenery"
+      ]
+    },
+    {
+      "id": "obj_9",
+      "name": "toy trees",
+      "visible_form": "small dark green conical tree models in the background",
+      "material_description": "dark green textured miniature tree-like surfaces",
+      "visible_properties": [
+        "dark green",
+        "conical",
+        "small"
+      ],
+      "initial_motion_description": "stationary relative to the scene",
+      "initial_integrity_description": "appear intact",
+      "event_role_hints": [
+        "background scenery"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the wooden track runs across the green surface and includes a turnout near the red toy house",
+      "object_id": "obj_8",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "the switch-like track piece is positioned near the turnout of the wooden track",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "the red toy house stands beside the turnout area",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The first visible scene shows a light tan toy railway on a green surface with a red toy house beside a turnout area."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A light tan switch-like track piece near the turnout is angled diagonally down and right."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The switch-like track piece appears in a farther rightward orientation than before."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A yellow-and-red toy locomotive enters the frame from the left on the straight track."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The locomotive moves rightward relative to the track joints and the red toy house."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "Two red carriages with yellow side panels follow behind the locomotive."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The locomotive passes in front of or beside the red toy house area."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "Black connector pieces remain visible between the locomotive and carriages."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The locomotive moves out of the right side of the frame."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The two red carriages continue rightward along the straight wooden track after the locomotive leaves the frame."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "Near the end, the rear red carriage is partly visible at the right edge of the frame."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The camera framing moves rightward along the track as the train travels."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The red house and background trees shift leftward within the frame as the camera follows the train."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "No scene cut is visible."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene begins with the track, turnout area, red toy house, and green surface visible.",
+        "A switch-like track piece near the turnout changes visible orientation before the train is fully in view."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "changes from a diagonal position to a more rightward position near the turnout"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "enters from the left on the wooden track"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The toy train passes the red toy house area.",
+        "The locomotive leads two red carriages along the track."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "moves rightward along the straight wooden track"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "follows behind the locomotive while moving rightward"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "follows behind the first carriage while moving rightward"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The train continues along a longer straight section of track.",
+        "The locomotive is no longer visible by the final portion."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "exits the frame to the right"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "continues rightward after the locomotive exits"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "continues rightward and becomes partly visible near the right edge"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "tracking",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12",
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "medium"
+  },
+  "unresolved_observations": [
+    "No hand or visible actuator is seen changing the switch-like track piece.",
+    "The exact attachment state of the switch-like track piece is unclear from the frames."
+  ]
+}

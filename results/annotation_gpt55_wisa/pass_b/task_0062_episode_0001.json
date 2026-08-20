@@ -1,0 +1,327 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "man",
+      "entity_kind": "agent",
+      "event_roles": [
+        "actor",
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "winter hat",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "sunglasses",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "jacket",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "right hand",
+      "entity_kind": "articulated_object",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "stone wall",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "shrubs",
+      "entity_kind": "deformable_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "grass area",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": []
+    },
+    {
+      "id": "obj_9",
+      "name": "wooden fence",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e15"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": null,
+      "raw_type": "human head reorientation and hand gestural motion",
+      "object_ids": [
+        "obj_1",
+        "obj_5",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "deformation",
+        "type": null,
+        "raw_type": "repeated mouth shape change",
+        "object_ids": [
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e7"
+        ]
+      }
+    ],
+    "action": {
+      "family": "transport",
+      "type": "move",
+      "raw_action": "the man moves and reorients his head and right hand while facing the camera",
+      "actor_ids": [
+        "obj_1"
+      ],
+      "target_ids": [
+        "obj_1",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "repeated",
+      "change_profile": "steady",
+      "process_scope": "mixed",
+      "camera_motion_note": "handheld camera viewpoint shifts cause the background to slide within the frame",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "head and face orientation change from partly toward the camera to the right side of the frame, back toward the camera, and again toward the right"
+      },
+      "raw_impact": "the man's head orientation changes during the video",
+      "evidence_refs": [
+        "e6",
+        "e9",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "mouth opens and closes repeatedly, changing visible facial geometry"
+      },
+      "raw_impact": "the man's mouth shape changes repeatedly",
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "right hand enters the frame, is held near chest height, shifts up and down and side to side, and later moves partly out of frame"
+      },
+      "raw_impact": "the right hand changes visible position during gesturing",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "hand pose changes while fingers are extended"
+      },
+      "raw_impact": "the right hand changes pose during the gesture",
+      "evidence_refs": [
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "hat moves and reorients together with the man's head"
+      },
+      "raw_impact": "the winter hat follows the man's head motion",
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e9",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "sunglasses move and reorient together with the man's head"
+      },
+      "raw_impact": "the sunglasses follow the man's head motion",
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e9",
+        "e14"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "torque",
+      "raw_mechanism": "internally generated joint torques reorient the head and move the hand during the gesture",
+      "process_family": "rigid_motion",
+      "evidence_refs": [
+        "e6",
+        "e9",
+        "e12",
+        "e14"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "soft facial tissues and jaw articulation permit the repeated visible mouth shape changes",
+      "process_family": "deformation",
+      "evidence_refs": [
+        "e7"
+      ]
+    }
+  ]
+}

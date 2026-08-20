@@ -1,0 +1,377 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A brightly illuminated parade float moves slowly along a dark parade route past spectators while colored light elements blink and change brightness.",
+  "raw_event_description": "The video opens with a large sea-themed illuminated float already in view on a dark route. The float advances slowly along the pavement between spectator rows, with a red crowned figure, blue arch, teal and magenta decorative shapes, and many small lights remaining attached and upright. Across the sequence the float shifts position relative to the spectators and route edges, while its colored lights pulse and the pavement reflects some of the colors. The clip ends while the float is still moving and intact.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The illuminated float is already present at the start of the clip.",
+      "The dark environment obscures fine detail on the base and spectators.",
+      "The overall parade route and audience rows are visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "illuminated parade float",
+      "visible_form": "large decorated platform-like structure with sea-themed light sculptures and a dark lower base",
+      "material_description": "bright colored light tubes or panels, glossy reflective surfaces, and dark structural areas; exact materials are not visually resolved",
+      "visible_properties": [
+        "multicolored",
+        "brightly illuminated",
+        "large relative to people",
+        "decorated with curved and branching forms"
+      ],
+      "initial_motion_description": "already visible; across early frames it shifts slowly along the route relative to the spectators",
+      "initial_integrity_description": "appears intact with decorations attached",
+      "event_role_hints": [
+        "main moving illuminated object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red crowned figure",
+      "visible_form": "large upright red figure with a crown-like top and raised arms on the float",
+      "material_description": "glossy red and gold illuminated or reflective surfaces",
+      "visible_properties": [
+        "upright",
+        "red",
+        "gold accents",
+        "large decorative figure"
+      ],
+      "initial_motion_description": "moves together with the float; no separate translation visible",
+      "initial_integrity_description": "upright and attached-looking throughout visible frames",
+      "event_role_hints": [
+        "central decoration on float"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "blue arched decoration",
+      "visible_form": "tall curved arch or loop on the right side of the float",
+      "material_description": "blue and purple illuminated outline with small light points",
+      "visible_properties": [
+        "curved",
+        "blue-lit",
+        "tall relative to float base"
+      ],
+      "initial_motion_description": "moves together with the float; no independent motion visible",
+      "initial_integrity_description": "remains continuous and upright",
+      "event_role_hints": [
+        "rear or side decorative light structure"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "teal front decorations",
+      "visible_form": "branching and tentacle-like light shapes at the lower front/left area of the float",
+      "material_description": "teal, cyan, and blue illuminated tubes or panels",
+      "visible_properties": [
+        "branching forms",
+        "bright teal-blue color",
+        "low on the float"
+      ],
+      "initial_motion_description": "moves with the float; no separate motion visible",
+      "initial_integrity_description": "appears attached and continuous",
+      "event_role_hints": [
+        "front decorative light cluster"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "spectators",
+      "visible_form": "groups of people standing or seated along both sides of the dark route",
+      "material_description": "mostly dark silhouettes with occasional bright clothing, phones, or small lights",
+      "visible_properties": [
+        "human figures",
+        "mostly dark",
+        "arranged along route edges"
+      ],
+      "initial_motion_description": "mostly stationary with occasional small body or hand movements visible",
+      "initial_integrity_description": "individuals remain present along the route edges",
+      "event_role_hints": [
+        "stationary observers"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "overhead hanging lights",
+      "visible_form": "vertical strands of blue and multicolored lights hanging above the route",
+      "material_description": "small bright points and elongated illuminated strips against a black background",
+      "visible_properties": [
+        "vertical",
+        "overhead",
+        "blue and multicolored"
+      ],
+      "initial_motion_description": "no clear independent motion visible",
+      "initial_integrity_description": "strands remain continuous in view",
+      "event_role_hints": [
+        "overhead illuminated background"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "dark parade route",
+      "visible_form": "wide dark paved path between spectator rows",
+      "material_description": "dark surface with visible reflections from float lights",
+      "visible_properties": [
+        "flat visible surface",
+        "dark",
+        "reflective patches"
+      ],
+      "initial_motion_description": "stationary in the scene",
+      "initial_integrity_description": "continuous visible path",
+      "event_role_hints": [
+        "surface occupied by moving float"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "lower float lamps",
+      "visible_form": "small bright white and greenish lamps along the lower front/base of the float",
+      "material_description": "bright point-like lights on the dark lower base",
+      "visible_properties": [
+        "white-green illumination",
+        "low position",
+        "repeated across the front"
+      ],
+      "initial_motion_description": "moves together with the float",
+      "initial_integrity_description": "lamps remain visible across the sequence",
+      "event_role_hints": [
+        "visible light sources on float base"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned on the visible paved route",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e1",
+        "e14"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is located on the upper central area of the float",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is located on the right side of the float and keeps the same relative placement",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "lines the sides of the route near the float path",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e2",
+        "e11"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "hangs above the route and above the visible float area",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A large illuminated float occupies the left and center-left portion of the dark route."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Spectators are visible along the right side of the route."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Vertical blue and multicolored light strands are visible above the route."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "The float shifts position relative to the spectator rows and route edges over time."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "Small white and greenish lights remain visible along the lower front/base of the float."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "Magenta, blue, teal, orange, and white decorative lights change brightness during the clip."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The large red crowned figure remains upright on the float."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The blue arched decoration stays on the right side of the float and moves with it."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "Teal branching decorations are visible at the lower front area of the float."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Later frames show the float farther along the route between the spectator rows."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "Spectators remain along the route edges while the float passes."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "No visible decoration separates from the float."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The framing of the route and spectator rows remains nearly constant with no visible scene cut."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The pavement near the float shows colored reflections from the lights."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e7"
+      ],
+      "observations": [
+        "The clip begins with the illuminated float already in view on a dark parade route.",
+        "Spectators and overhead light strands are visible around the route."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The float is present and already positioned on the route."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The red crowned figure is upright on the float."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Spectators stand or sit along the route edge."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "Overhead light strands are visible above the float path."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e8",
+        "e9",
+        "e14"
+      ],
+      "observations": [
+        "The float continues moving along the route.",
+        "Colored light elements blink or shift brightness.",
+        "Reflections from the float lights appear on the pavement."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The float changes position relative to the spectators and route edges."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The blue arched decoration stays aligned with the moving float."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The teal front decorations remain attached-looking and illuminated."
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "The lower lamps remain visible on the moving float base."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The float remains between spectator rows and continues past the camera view.",
+        "The decorations remain visibly intact through the end of the clip."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The float is farther along the route than at the beginning."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Spectators remain along the route edges."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The red crowned figure remains upright."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "Fine details of the float's lower base are obscured by darkness and bright lights.",
+    "Individual spectator actions are difficult to distinguish in the dark areas."
+  ]
+}

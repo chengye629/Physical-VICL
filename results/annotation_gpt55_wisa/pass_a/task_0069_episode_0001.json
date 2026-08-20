@@ -1,0 +1,274 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A clear liquid stream is poured from a partially visible black vessel into a white handled pitcher, and the visible liquid surface inside the pitcher rises with bubbles forming.",
+  "raw_event_description": "At the start, a white glossy handled pitcher sits on a green gridded cutting mat while a clear liquid stream already extends from a partially visible black pouring vessel at the upper right into the pitcher opening. Over time the stream continues entering the pitcher, the visible liquid surface inside rises closer to the rim, and small bubbles and foam-like clusters appear and spread on the surface. By the end, the pitcher is visibly more filled and the stream is still entering.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The pitcher, handle, spout, liquid stream, and cutting mat are visible.",
+      "The pouring vessel is only partly visible at the upper right.",
+      "The liquid stream is already present in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "white pitcher",
+      "visible_form": "small rounded container with an open top, a pouring lip on the left side, and a loop handle on the right side",
+      "material_description": "glossy white solid surface with reflective highlights",
+      "visible_properties": [
+        "open top",
+        "rounded body",
+        "handle",
+        "pouring lip",
+        "light-colored interior"
+      ],
+      "initial_motion_description": "stationary relative to the cutting mat",
+      "initial_integrity_description": "appears intact with continuous walls, handle, and rim",
+      "event_role_hints": [
+        "receives the visible liquid stream"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black pouring vessel",
+      "visible_form": "partially visible dark container or spout area entering from the upper right edge of the frame",
+      "material_description": "dark opaque exterior with a small transparent or reflective outlet area visible near the stream",
+      "visible_properties": [
+        "partially out of frame",
+        "dark exterior",
+        "positioned above the pitcher opening"
+      ],
+      "initial_motion_description": "mostly stationary with small visible position changes during the sequence",
+      "initial_integrity_description": "visible portion appears intact",
+      "event_role_hints": [
+        "visible source area for the liquid stream"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "clear liquid stream",
+      "visible_form": "continuous narrow transparent stream extending from the pouring vessel into the pitcher",
+      "material_description": "clear, reflective, translucent fluid appearance",
+      "visible_properties": [
+        "transparent",
+        "continuous stream",
+        "irregular moving surface"
+      ],
+      "initial_motion_description": "already moving from the upper right vessel area into the pitcher opening",
+      "initial_integrity_description": "appears as a continuous stream in the first frame",
+      "event_role_hints": [
+        "enters the pitcher opening"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "liquid surface inside pitcher",
+      "visible_form": "pale reflective surface visible through the pitcher opening",
+      "material_description": "light-toned reflective liquid surface with bubbles appearing later",
+      "visible_properties": [
+        "rising surface",
+        "small bubbles",
+        "foam-like patches"
+      ],
+      "initial_motion_description": "surface is visibly disturbed where the stream enters",
+      "initial_integrity_description": "surface is continuous with localized ripples or disturbance",
+      "event_role_hints": [
+        "visible fill level changes during the event"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "green cutting mat",
+      "visible_form": "flat green rectangular work surface with a printed grid and measurement markings",
+      "material_description": "matte green surface with yellow and white printed lines",
+      "visible_properties": [
+        "grid pattern",
+        "measurement markings",
+        "flat surface"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the pitcher"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on top of the green cutting mat",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is positioned above and to the upper right of the pitcher opening",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "extends from the pouring vessel area into the pitcher opening",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "The white pitcher remains on the green gridded cutting mat."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A partially visible black pouring vessel occupies the upper right of the frame above the pitcher."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A clear liquid stream is already entering the open top of the pitcher."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The visible liquid surface inside the pitcher is below the rim."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The clear stream continues entering the pitcher opening."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "Small bubbles appear on the visible liquid surface inside the pitcher."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The visible liquid surface inside the pitcher is higher than at the start."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "A cluster of bubbles and foam-like texture is visible near the stream impact area."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The liquid surface sits close to the upper rim of the pitcher."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The stream is still entering the pitcher at the end of the visible sequence."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The pitcher is already positioned on the mat.",
+        "The pouring action is already underway."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The pitcher remains stationary on the mat."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The partially visible pouring vessel is held above the pitcher opening."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The clear stream enters the pitcher."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The liquid surface inside the pitcher is below the rim and visibly disturbed."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The pouring continues without a visible break.",
+        "The liquid surface rises and bubbles become visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The stream remains continuous into the pitcher."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The surface level rises and small bubbles appear."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The pitcher appears more filled than earlier.",
+        "Bubble clusters are visible on the surface."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The stream continues entering the pitcher."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The surface is close to the rim and contains multiple bubbles."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e1"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The full shape of the black pouring vessel is outside the frame.",
+    "The start and end of the pouring action are not shown."
+  ]
+}

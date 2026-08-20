@@ -1,0 +1,328 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A surfer on a surfboard rides along a breaking ocean wave and becomes hidden by curling water and whitewater.",
+  "raw_event_description": "The video begins with a person in a dark full-body suit standing on a light-colored surfboard on the face of a breaking ocean wave. The person moves along the wave while changing stance from more upright to crouched. The board rises near the crest, and fan-shaped spray appears behind the rider. The wave face steepens and curls, with whitewater expanding on the rider's right side. The rider then lowers into the darker wave face near the breaking section, becomes partially obscured by spray and foam, and later is no longer visible while parts of the surfboard intermittently appear under or beside the curling water.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "mid_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The surfer and surfboard are already on the wave at the first visible moment.",
+      "The wave face, crest, foam, and surrounding ocean surface are visible.",
+      "The beginning of the ride before the first frame is not shown."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "surfer",
+      "visible_form": "human figure standing and crouching on a surfboard",
+      "material_description": "dark full-body suit with a lighter visible head area",
+      "visible_properties": [
+        "upright body posture early",
+        "crouched body posture later",
+        "arms extended at several moments"
+      ],
+      "initial_motion_description": "already moving along the face of a breaking wave while standing on the board",
+      "initial_integrity_description": "body appears whole and unobstructed at the start",
+      "event_role_hints": [
+        "visible rider on the surfboard",
+        "later partly and then fully hidden by water and foam"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "surfboard",
+      "visible_form": "long narrow board with pointed ends",
+      "material_description": "mostly light-colored surface with pink or red visible areas on the underside or edge",
+      "visible_properties": [
+        "elongated",
+        "smooth-looking",
+        "partly submerged or covered at times"
+      ],
+      "initial_motion_description": "moves with the surfer along the wave face",
+      "initial_integrity_description": "appears intact throughout visible portions",
+      "event_role_hints": [
+        "platform under the surfer",
+        "later visible intermittently when the surfer is obscured"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "ocean wave",
+      "visible_form": "large dark green-blue water face with crest, curling section, and breaking whitewater",
+      "material_description": "water surface with smooth darker regions and white foamy regions",
+      "visible_properties": [
+        "steep face",
+        "curling crest",
+        "white foam",
+        "spray"
+      ],
+      "initial_motion_description": "crest and whitewater are visibly changing shape while the wave breaks",
+      "initial_integrity_description": "continuous water surface with breaking and foamy areas",
+      "event_role_hints": [
+        "main moving water surface carrying and surrounding the surfer and board",
+        "later curls over and obscures the rider"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "whitewater and spray",
+      "visible_form": "irregular white foamy water and airborne spray around the breaking section",
+      "material_description": "white, misty, frothy water",
+      "visible_properties": [
+        "expanding foamy regions",
+        "fan-shaped spray",
+        "partly translucent mist"
+      ],
+      "initial_motion_description": "white foam and spray are already present near the breaking crest",
+      "initial_integrity_description": "fragmented and changing foam and spray patterns",
+      "event_role_hints": [
+        "surrounds the surfer during the ride",
+        "later covers or hides the surfer"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "background ocean",
+      "visible_form": "wide gray-blue ocean surface behind the wave",
+      "material_description": "water surface with small ripples and darker patches",
+      "visible_properties": [
+        "flat horizon area",
+        "distant textured surface"
+      ],
+      "initial_motion_description": "small surface texture changes are visible",
+      "initial_integrity_description": "continuous background water surface",
+      "event_role_hints": [
+        "background setting behind the main wave"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the surfer is standing on the surfboard",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "the surfboard is on the face of the ocean wave",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "white foam and spray are adjacent to the rider and board near the breaking crest",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The surfer is standing on top of the surfboard near the upper part of the wave face."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The surfboard is positioned on the sloped dark water surface of the wave."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "White foamy water is visible behind and beside the surfer near the crest."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The front of the surfboard lifts above the crest line while the surfer bends the knees."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A fan-shaped spray of white water rises behind the surfer."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The surfer descends lower on the wave face with a crouched posture."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The dark wave face forms an overhanging curling section to the surfer's left."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "Whitewater expands around the surfer's right side."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The surfer becomes partially hidden by spray and foam."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Only part of the surfer's upper body remains visible near the breaking whitewater."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The surfer is no longer visible under the curling wave section and foam."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "A light-colored portion of the surfboard is intermittently visible beneath or beside the curling water."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "White foamy water fills much of the foreground throughout the clip."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The horizon and background ocean remain in a wide fixed view."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The rider and board are already engaged with the wave at the start of the visible segment."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The surfer stands on the surfboard near the upper wave face."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The surfboard travels along the sloped wave surface."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The wave crest shows white breaking water."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Foam and spray are present near the rider."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The rider changes height and stance while moving along the wave face.",
+        "The breaking section becomes more prominent behind and beside the rider."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The surfer bends into a crouched posture and extends the arms."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The surfboard's front end rises briefly near the crest and later points along the wave face."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The wave face steepens visually and forms a curling overhanging section."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Spray rises in a broad white fan behind the surfer."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The rider enters the area next to the curling and breaking section.",
+        "Water and foam increasingly block the view of the rider."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The surfer becomes partly hidden and then disappears from view behind foam and curling water."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The surfboard remains intermittently visible after the surfer is obscured."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The curling wave section covers more of the area where the rider was visible."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Whitewater expands across the breaking section."
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e13",
+        "e14"
+      ],
+      "observations": [
+        "Foamy foreground water and the distant ocean background remain visible through the clip."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "The background ocean remains visible behind the main breaking wave."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "severe",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The surfer's final state after being hidden by the wave and foam is not visible."
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "Nighttime fireworks light patterns change above a city skyline and their reflections appear on calm water.",
+  "raw_event_description": "The view opens with several dim golden firework bursts already spread across the upper sky above a lit city skyline. The older upper bursts gradually fade while a bright pink-white light appears near the horizon left of center and grows into an intense vertical plume with smoke around it. A narrow bright vertical streak rises from the same area, reflected as a long bright line on the water. Later, a golden circular burst appears above the vertical plume, expands into a round star-like pattern, and remains visible while the lower bright plume continues.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "mid_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "Firework bursts are already present in the sky at the first visible frame.",
+      "The skyline, waterline, and reflections are visible.",
+      "The exact source structure for the light patterns is not clearly visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "upper firework bursts",
+      "visible_form": "multiple radial clusters of short curved and dotted light traces in the upper sky",
+      "material_description": "bright golden-white light traces with no solid surface visible",
+      "visible_properties": [
+        "golden-white",
+        "radial",
+        "fragmented",
+        "small point-like ends",
+        "fading over time"
+      ],
+      "initial_motion_description": "already spread in the sky with individual light points changing position slightly and dimming",
+      "initial_integrity_description": "separate radial clusters with many discrete light traces",
+      "event_role_hints": [
+        "visible changing light pattern in the sky"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "lower bright plume",
+      "visible_form": "bright pink-white flare and later a tall narrow vertical column of light near the horizon",
+      "material_description": "intense white and pink light with no solid surface visible",
+      "visible_properties": [
+        "very bright",
+        "pink-white",
+        "vertical",
+        "reflected on water",
+        "changes height and width"
+      ],
+      "initial_motion_description": "not prominent at the start, then appears and grows upward from near the horizon",
+      "initial_integrity_description": "initially absent or very dim, later continuous as a bright vertical light column",
+      "event_role_hints": [
+        "new central changing light feature"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "golden upper burst",
+      "visible_form": "round star-like cluster of golden light points above the lower plume",
+      "material_description": "golden-yellow light traces with no solid surface visible",
+      "visible_properties": [
+        "circular",
+        "golden",
+        "radial",
+        "expanding",
+        "bright center"
+      ],
+      "initial_motion_description": "not visible at first, then appears as a compact bright point and expands outward",
+      "initial_integrity_description": "absent before appearing; later a coherent circular burst",
+      "event_role_hints": [
+        "later appearing upper light pattern"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "smoke cloud",
+      "visible_form": "gray and pink-tinted cloudy patches around the lower fireworks and across parts of the sky",
+      "material_description": "semi-transparent hazy cloud-like visual matter",
+      "visible_properties": [
+        "gray",
+        "pink-lit",
+        "irregular",
+        "semi-transparent",
+        "changing outline"
+      ],
+      "initial_motion_description": "faint haze visible near the upper bursts and horizon, later more visible around the bright lower plume",
+      "initial_integrity_description": "diffuse and irregular",
+      "event_role_hints": [
+        "visible haze around changing lights"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "city skyline",
+      "visible_form": "row of illuminated buildings and low horizontal shoreline lights",
+      "material_description": "dark building silhouettes with many small artificial lights",
+      "visible_properties": [
+        "stationary",
+        "horizontal line of lights",
+        "building silhouettes",
+        "multicolored lights"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous skyline with separate lit buildings",
+      "event_role_hints": [
+        "stationary background reference"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "water surface",
+      "visible_form": "dark broad water area below the skyline with vertical light reflections",
+      "material_description": "dark reflective surface with shimmering colored light streaks",
+      "visible_properties": [
+        "dark",
+        "reflective",
+        "vertical reflections",
+        "slightly rippled appearance"
+      ],
+      "initial_motion_description": "reflections shimmer subtly while the camera view remains fixed",
+      "initial_integrity_description": "continuous flat surface across the lower frame",
+      "event_role_hints": [
+        "reflects skyline and firework lights"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "night sky",
+      "visible_form": "large dark background area above the skyline",
+      "material_description": "black sky with visible smoke and light patterns",
+      "visible_properties": [
+        "dark",
+        "open background",
+        "contains firework lights"
+      ],
+      "initial_motion_description": "no visible motion as a background region",
+      "initial_integrity_description": "continuous dark field",
+      "event_role_hints": [
+        "background for visible light patterns"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "positioned above the city skyline in the upper half of the frame",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "located along the horizon between the sky and the water",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "shows vertical reflections below the skyline lights",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "visible around and beneath the upper firework bursts",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Several golden radial firework clusters are already visible in the upper sky."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A row of illuminated buildings and shoreline lights spans the horizon."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Vertical colored light reflections extend downward on the water below the skyline."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "Faint gray haze is visible around the fireworks and above the horizon."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A bright pink-white light appears near the horizon left of center."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The pink-white light grows brighter and wider near the horizon."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "Pink-tinted smoke becomes more visible around the bright lower light."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "A narrow bright vertical white streak extends upward from the lower bright area."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "A long bright white reflection aligns below the vertical streak on the water."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The earlier upper golden bursts become dimmer and more fragmented."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "A compact golden light appears above the vertical plume."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The compact golden light expands into a circular star-like burst."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The circular golden burst shows many short radial spokes."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "late",
+      "observation": "The lower vertical plume remains bright while the golden circular burst is visible above it."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "late",
+      "observation": "Smoke remains visible to the left and around the lower bright plume."
+    },
+    {
+      "evidence_id": "e16",
+      "stage": "continuous",
+      "observation": "The skyline remains in the same position in the frame throughout the clip."
+    },
+    {
+      "evidence_id": "e17",
+      "stage": "continuous",
+      "observation": "The horizon line remains level and stable throughout the clip."
+    },
+    {
+      "evidence_id": "e18",
+      "stage": "continuous",
+      "observation": "The water reflections shimmer while staying vertically oriented below the lights."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene begins with fireworks already active over the skyline.",
+        "City lights and their water reflections are visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Existing upper radial light clusters remain visible and begin to dim."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Faint haze is present near the fireworks."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The skyline remains stationary."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The water shows vertical reflected light streaks."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "A new intense lower light feature appears near the horizon and grows.",
+        "A vertical bright streak and matching reflection become dominant near the center-left."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The lower bright plume appears, brightens, and extends upward as a narrow vertical column."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Smoke around the lower bright area becomes brighter and more visible."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The earlier upper bursts continue to fade and break into fewer visible points."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "A long bright reflection appears directly below the lower plume."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e11",
+        "e12",
+        "e13",
+        "e14",
+        "e15"
+      ],
+      "observations": [
+        "A new golden burst appears above the lower vertical plume.",
+        "The lower plume and smoke remain visible while the upper burst expands."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "A compact golden light appears above the plume and expands into a circular radial burst."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The vertical plume remains bright and narrow below the new upper burst."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Smoke remains as irregular illuminated patches around the lower plume."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The bright vertical reflection remains visible below the plume."
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e16",
+        "e17",
+        "e18"
+      ],
+      "observations": [
+        "The camera view stays stable while scene lights change.",
+        "The city and water provide a fixed visual background."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "The skyline stays fixed in the frame."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The water continues to show shimmering vertical reflections."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "The dark sky remains the background for the changing fireworks and smoke."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e16",
+      "e17"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact physical source structure for the fireworks is not clearly visible.",
+    "Individual small sparks are difficult to track continuously against the dark sky."
+  ]
+}

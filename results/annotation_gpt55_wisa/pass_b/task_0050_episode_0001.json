@@ -1,0 +1,203 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "utility pole",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "streetlamp",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "overhead cables",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "falling particles",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "unknown",
+      "physical_properties": [],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "brick wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "green circular spot",
+      "entity_kind": "unknown",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e8"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "gas_particulate_motion",
+      "type": null,
+      "raw_type": "many small bright particles moving through the nighttime view",
+      "object_ids": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e7"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "scattering",
+        "raw_type": "lamp light makes the moving particles visible as bright specks and streaks",
+        "object_ids": [
+          "obj_2",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; particles are already moving at the first visible moment",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e7"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "material_transfer",
+        "raw_transition": "particles pass through the lamp-lit field of view, with individual specks entering and leaving visibility"
+      },
+      "evidence_refs": [
+        "e3",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "individual particles appear as bright specks or short streaks against the dark background and lamp glow"
+      },
+      "evidence_refs": [
+        "e3",
+        "e7",
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "mechanical forces carry the small particles through the air; the specific driver is not visually identified",
+      "object_ids": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e7"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "light from the streetlamp redirects from the small particles, making them visible as pale specks and streaks",
+      "object_ids": [
+        "obj_2",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e9"
+      ]
+    }
+  ]
+}

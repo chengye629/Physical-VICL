@@ -1,0 +1,265 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "fog patches",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "raw_description": "Irregular pale white-gray semi-transparent fog masses spread across the lower and middle view, initially dense and later thinner and separated."
+    },
+    {
+      "object_id": "obj_2",
+      "name": "large right cloud bank",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "raw_description": "Large gray-white soft-edged cloud mass along the upper right hillside and sky region, remaining mostly continuous."
+    },
+    {
+      "object_id": "obj_3",
+      "name": "mountain ridges",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_description": "Layered dark blue-green ridge landforms in the background, initially partly hidden by fog."
+    },
+    {
+      "object_id": "obj_4",
+      "name": "green fields",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_description": "Green open hillside and valley ground patches, initially obscured and later exposed through fog gaps."
+    },
+    {
+      "object_id": "obj_5",
+      "name": "village buildings",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_description": "Small clustered light-colored buildings in the valley and on hillsides, mostly obscured early and later clearly visible."
+    },
+    {
+      "object_id": "obj_6",
+      "name": "dark wooded areas",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_description": "Dark green to nearly black vegetation-like hillside patches, partly hidden by fog at the beginning."
+    },
+    {
+      "object_id": "obj_7",
+      "name": "overcast sky",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "raw_description": "Broad gray and pale blue sky region above the ridges with layered cloud texture."
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "gas_particulate_motion",
+      "type": "plume_motion",
+      "raw_type": "fog and cloud patches drift, thin, and separate over the valley",
+      "participants": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e7",
+        "e8",
+        "e11"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actors": [],
+      "targets": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e12"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e6",
+        "e7",
+        "e9",
+        "e11",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "contracted",
+        "raw_transition": "dense broad fog coverage thins into smaller separated remnants"
+      },
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e7",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "background ridges change from faintly visible through fog to clearly visible"
+      },
+      "evidence_refs": [
+        "e3",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "green hillside and valley fields become exposed through openings in the fog"
+      },
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "village buildings change from indistinct or hidden to clearly visible"
+      },
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "airflow_forcing",
+      "raw_mechanism": "ambient air movement advects and reshapes the visible fog and cloud patches",
+      "process_refs": [
+        "primary"
+      ],
+      "object_refs": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "energy_reaction",
+      "type": "diffusion",
+      "raw_mechanism": "mixing and dilution of suspended fog material reduces dense coverage and leaves smaller remnants",
+      "process_refs": [
+        "primary"
+      ],
+      "object_refs": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e11"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "suspended fog droplets scatter and obscure transmitted light; reduced fog opacity increases visibility of the valley landscape",
+      "process_refs": [
+        "primary"
+      ],
+      "object_refs": [
+        "obj_1",
+        "obj_3",
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e4",
+        "e5",
+        "e9",
+        "e10"
+      ]
+    }
+  ]
+}

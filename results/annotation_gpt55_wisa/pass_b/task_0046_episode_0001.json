@@ -1,0 +1,245 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "mountain",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [],
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "lake surface",
+      "entity_kind": "liquid_body",
+      "material_phase": "liquid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "target",
+        "medium",
+        "support"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "bright sky light",
+      "entity_kind": "surface_or_region",
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "event_roles": [
+        "source"
+      ],
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "reflected mountain image",
+      "entity_kind": "surface_or_region",
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "oscillating",
+      "initial_integrity_state": "not_applicable",
+      "event_roles": [
+        "target"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "bright water reflection",
+      "entity_kind": "surface_or_region",
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "oscillating",
+      "initial_integrity_state": "not_applicable",
+      "event_roles": [
+        "target"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "clouds",
+      "entity_kind": "gas_or_vapor",
+      "material_phase": "gas",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [],
+      "evidence_refs": [
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "shoreline band",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [],
+      "evidence_refs": [
+        "e6"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "free_surface_motion",
+      "raw_type": "continuous small ripples on the lake surface",
+      "object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "reflected mountain and bright glare shimmer on the rippled water",
+        "object_ids": [
+          "obj_1",
+          "obj_2",
+          "obj_3",
+          "obj_4",
+          "obj_5"
+        ],
+        "evidence_refs": [
+          "e4",
+          "e5",
+          "e9",
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e12",
+        "e13"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e12",
+        "e13"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "the visible lake free surface ripple pattern shifts continuously"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "the reflected mountain outline wavers slightly over time"
+      },
+      "evidence_refs": [
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "the bright water reflection flickers and changes outline and brightness distribution"
+      },
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "the liquid water surface supports continuing small free-surface ripples",
+      "object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "light reflects from the glossy lake surface, and changing ripple slopes redirect the reflected mountain image and bright glare",
+      "object_ids": [
+        "obj_2",
+        "obj_3",
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e9",
+        "e10"
+      ]
+    }
+  ]
+}

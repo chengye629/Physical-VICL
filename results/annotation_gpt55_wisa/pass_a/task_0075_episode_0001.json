@@ -1,0 +1,237 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "Two shark-like marine animals move separately through green water while their rear bodies and tails bend side to side.",
+  "raw_event_description": "The video opens with one shark-like animal visible in green water from an overhead view. It moves across the frame with its tail and rear body changing curvature. Later, a second similar shark-like animal appears from the lower right edge. Both animals remain visible for a period, moving in separate paths with open water between them and no visible contact. Near the end, the animals are farther apart, with one nearer the right side and the other nearer the left/lower area.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "One shark-like animal is already visible in the water at the first frame.",
+      "The motion appears to be ongoing at the start rather than beginning from rest.",
+      "The surrounding scene is mostly featureless water, so the broader setting is only partially visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "upper shark-like animal",
+      "visible_form": "elongated fish-like body with a broad head region, triangular dorsal fin, paired side fins, and a long tapering tail",
+      "material_description": "smooth-looking gray upper surface with lighter side or underside areas visible through green water",
+      "visible_properties": [
+        "elongated body",
+        "triangular dorsal fin",
+        "paired side fins",
+        "narrow tapering tail",
+        "gray and pale contrast along the body"
+      ],
+      "initial_motion_description": "already moving through the water with the rear body and tail curved",
+      "initial_integrity_description": "body appears continuous and intact",
+      "event_role_hints": [
+        "primary visible moving animal at the start"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "lower shark-like animal",
+      "visible_form": "elongated fish-like body with a triangular dorsal fin, paired side fins, and a long tapering tail",
+      "material_description": "smooth-looking gray upper surface with lighter side or underside areas visible through green water",
+      "visible_properties": [
+        "elongated body",
+        "triangular dorsal fin",
+        "paired side fins",
+        "narrow tapering tail",
+        "gray and pale contrast along the body"
+      ],
+      "initial_motion_description": "not visible in the first frames; later enters from the lower right edge while moving into the frame",
+      "initial_integrity_description": "when visible, body appears continuous and intact",
+      "event_role_hints": [
+        "second moving animal entering later"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "water surface",
+      "visible_form": "broad green-turquoise water area filling the frame",
+      "material_description": "transparent-looking green water with surface ripples and bright reflected highlights",
+      "visible_properties": [
+        "green-turquoise color",
+        "small ripples",
+        "bright reflected spots",
+        "featureless open background"
+      ],
+      "initial_motion_description": "small surface patterns and highlights vary across the sequence",
+      "initial_integrity_description": "continuous water area fills the frame",
+      "event_role_hints": [
+        "surrounding medium visible around both animals"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "obj_1 is visible within the green water area, with open water surrounding it",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "Green-turquoise water fills the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "One shark-like animal is visible near the upper central area of the frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The first animal has an elongated gray body, triangular dorsal fin, paired side fins, and a narrow tail."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The first animal's rear body and tail are visibly curved."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A second shark-like animal appears partially from the lower right edge of the frame."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The second animal has an elongated body with a dorsal fin, side fins, and a tapering tail."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The first animal's tail and rear body change curvature from frame to frame."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The second animal's tail and rear body change curvature after it enters the frame."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "Both animals are visible at the same time with open water between them."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "No visible contact occurs between the two animals."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The two animals occupy separated areas of the frame, with one nearer the right side and the other nearer the left or lower-left area."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "Small bright highlights and ripple patterns are visible on the water surface."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "Only one shark-like animal is visible at the start."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "obj_1 moves through the water with its rear body and tail curved."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "obj_3 fills the frame with visible ripples and reflected highlights."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "A second shark-like animal becomes visible from the lower right edge.",
+        "Both animals are visible simultaneously and remain separated by open water."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "obj_1 continues moving while its tail and rear body change shape."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "obj_2 enters the frame and moves with visible tail and rear-body curvature changes."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The animals continue moving separately without visible contact.",
+        "They are positioned in different parts of the frame near the end."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "obj_1 remains separated from obj_2 and is nearer the right side in the late frames."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "obj_2 remains separated from obj_1 and is nearer the left or lower-left area in the late frames."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Water ripples and bright surface highlights remain visible."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "unknown",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "unclear"
+  },
+  "unresolved_observations": [
+    "Camera translation cannot be determined from the visible scene because the background is mostly featureless water.",
+    "The complete beginning and end of the animals' movement are not shown."
+  ]
+}

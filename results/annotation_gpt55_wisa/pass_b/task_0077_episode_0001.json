@@ -1,0 +1,275 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": {
+    "items": [
+      {
+        "object_id": "obj_1",
+        "name": "red toy track",
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "support",
+          "medium"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact",
+        "raw_description": "red interconnected plastic rail structure with straight, curved, sloped, and elevated sections",
+        "evidence_refs": [
+          "e1",
+          "e13"
+        ]
+      },
+      {
+        "object_id": "obj_2",
+        "name": "track supports",
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact",
+        "raw_description": "vertical white columns with yellow caps and black circular bases supporting the track",
+        "evidence_refs": [
+          "e1",
+          "e2",
+          "e13"
+        ]
+      },
+      {
+        "object_id": "obj_3",
+        "name": "wooden table",
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact",
+        "raw_description": "flat wooden tabletop supporting the toy setup and surrounding objects",
+        "evidence_refs": [
+          "e2",
+          "e5"
+        ]
+      },
+      {
+        "object_id": "obj_4",
+        "name": "calculator",
+        "entity_kind": "rigid_solid",
+        "event_roles": [],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact",
+        "raw_description": "black rectangular calculator lying flat inside the foreground track area",
+        "evidence_refs": [
+          "e3",
+          "e13"
+        ]
+      },
+      {
+        "object_id": "obj_5",
+        "name": "remote control",
+        "entity_kind": "rigid_solid",
+        "event_roles": [],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact",
+        "raw_description": "dark elongated remote control lying flat behind the calculator",
+        "evidence_refs": [
+          "e4",
+          "e13"
+        ]
+      },
+      {
+        "object_id": "obj_6",
+        "name": "white balls",
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "unknown",
+        "initial_integrity_state": "intact",
+        "raw_description": "small white spherical balls appearing at different positions on red track sections",
+        "evidence_refs": [
+          "e6",
+          "e7",
+          "e8",
+          "e9",
+          "e10",
+          "e11"
+        ]
+      },
+      {
+        "object_id": "obj_7",
+        "name": "blue ball",
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "unknown",
+        "initial_integrity_state": "intact",
+        "raw_description": "small blue spherical ball appearing late on the lower-left curved track section",
+        "evidence_refs": [
+          "e12"
+        ]
+      },
+      {
+        "object_id": "obj_8",
+        "name": "silver rectangular object",
+        "entity_kind": "rigid_solid",
+        "event_roles": [],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "reflective"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact",
+        "raw_description": "shiny rectangular object lying on the table left of center",
+        "evidence_refs": [
+          "e5",
+          "e13"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": null,
+      "raw_type": "small balls moving along red toy track sections",
+      "participant_object_ids": [
+        "obj_6",
+        "obj_7",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_6",
+        "obj_7"
+      ],
+      "evidence_refs": []
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "repeated",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "white ball positions change across right-side, front lower, lower-left, and upper red track sections"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "blue ball appears on the lower-left curved track section during the ball-motion sequence"
+      },
+      "evidence_refs": [
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the small balls along the elevated and sloped track path",
+      "object_ids": [
+        "obj_6",
+        "obj_7",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "contact with the red rails supports and guides the balls along curved track sections",
+      "object_ids": [
+        "obj_6",
+        "obj_7",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e12"
+      ]
+    }
+  ]
+}

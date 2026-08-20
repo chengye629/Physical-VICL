@@ -1,0 +1,229 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "translucent yellow-green mass",
+      "entity_kind": "liquid_body",
+      "material_phase": "liquid",
+      "physical_properties": [
+        "viscous",
+        "translucent",
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "target"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "glossy yellow surface",
+      "entity_kind": "surface_or_region",
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "event_roles": [
+        "support"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "bright white round background object",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [],
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "gray circular depression",
+      "entity_kind": "surface_or_region",
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "event_roles": [],
+      "evidence_refs": [
+        "e4",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "small rounded droplet",
+      "entity_kind": "liquid_body",
+      "material_phase": "liquid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "separated",
+      "event_roles": [
+        "product"
+      ],
+      "evidence_refs": [
+        "e12"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "viscous_spreading",
+      "raw_type": "slow viscous spreading and leveling of a translucent mass on a glossy surface",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "roles": [
+            "target"
+          ]
+        },
+        {
+          "object_id": "obj_2",
+          "roles": [
+            "support"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention is shown",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e13",
+        "e14"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "flattened",
+        "raw_transition": "central upright peak lowers into a low mound and raised sections become flatter"
+      },
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "mass spreads outward and covers a broader area of the glossy surface"
+      },
+      "evidence_refs": [
+        "e7",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "small rounded droplet-like spot becomes visible near the lower middle area late in the sequence"
+      },
+      "evidence_refs": [
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "material_response",
+      "type": "viscosity",
+      "raw_mechanism": "viscous material response allows slow spreading while resisting rapid shape change",
+      "linked_process": "primary",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity-driven sagging and leveling lowers the upright peak and raised sections on the support surface",
+      "linked_process": "primary",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    }
+  ]
+}

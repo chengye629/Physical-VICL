@@ -1,0 +1,266 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "base plate",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support",
+        "medium"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "raised piece array",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "separated",
+      "evidence_refs": [
+        "e1",
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "left hand",
+      "entity_kind": "agent",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "right hand",
+      "entity_kind": "agent",
+      "event_roles": [
+        "actor"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "small moved piece",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "sliding",
+      "raw_type": "hand-driven sliding translation of a small rectangular piece along the plate surface",
+      "participants": {
+        "actor": [
+          "obj_4"
+        ],
+        "target": [
+          "obj_5"
+        ],
+        "support": [
+          "obj_1"
+        ],
+        "medium": [
+          "obj_1"
+        ]
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "contact_loading",
+        "type": "sustained_contact",
+        "raw_type": "pinching and holding contact between the right hand and the small piece",
+        "participants": {
+          "actor": [
+            "obj_4"
+          ],
+          "target": [
+            "obj_5"
+          ]
+        },
+        "evidence_refs": [
+          "e5",
+          "e7"
+        ]
+      }
+    ],
+    "action": {
+      "family": "transport",
+      "type": "move",
+      "raw_action": "the right hand pinches and moves the small rectangular piece leftward and inward",
+      "actors": [
+        "obj_4"
+      ],
+      "targets": [
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e9",
+        "e10"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "the small piece begins moving from the lower-right area under the right hand's grip"
+      },
+      "resulting_state": "the small piece translates leftward and inward along the plate surface",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "after repositioning, the small piece is held and remains visible near the lower-right row area"
+      },
+      "resulting_state": "the small piece is stationary or held near nearby raised pieces",
+      "evidence_refs": [
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "relation",
+        "type": null,
+        "raw_transition": "the small piece changes position relative to neighboring raised pieces and is held near the right end of a longer horizontal piece"
+      },
+      "resulting_state": "the small piece occupies a new nearby position within the lower-right row area",
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "the right-hand fingers shift upward and left over adjacent raised pieces after the repositioning"
+      },
+      "resulting_state": "the right-hand fingers move over nearby raised pieces",
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "shear",
+      "raw_mechanism": "tangential force from the right-hand fingertips drives the small block leftward and inward along the plate surface",
+      "object_ids": [
+        "obj_4",
+        "obj_5",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "sustained_pressure",
+      "raw_mechanism": "pinching pressure from the fingertips maintains contact and control of the small piece during repositioning and holding",
+      "object_ids": [
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e7"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "friction",
+      "raw_mechanism": "sliding contact with the plate provides tangential resistance while the small piece moves along the support surface",
+      "object_ids": [
+        "obj_5",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    }
+  ]
+}

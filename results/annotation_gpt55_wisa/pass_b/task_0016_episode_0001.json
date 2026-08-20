@@ -1,0 +1,207 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "rail vehicle",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "white plume",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "railway tracks",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "house",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "hillside trees",
+      "entity_kind": "deformable_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "overhead wires",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "grass and shrubs",
+      "entity_kind": "deformable_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "gas_particulate_motion",
+      "type": "plume_motion",
+      "raw_type": "white plume spreading and changing shape above a distant rail vehicle",
+      "participant_object_ids": [
+        "obj_2",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e10"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "white plume spreads over a larger region upward and leftward"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "plume becomes broader and its irregular outline changes"
+      },
+      "evidence_refs": [
+        "e5",
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "gas or suspended plume material is transported through the surrounding air, changing the plume boundary and extent",
+      "linked_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    }
+  ]
+}

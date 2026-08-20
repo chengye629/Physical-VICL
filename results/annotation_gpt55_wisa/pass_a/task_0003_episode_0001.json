@@ -1,0 +1,308 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A pale smoke plume in a forest clearing changes shape and moves upward while the camera tilts upward toward the treetops.",
+  "raw_event_description": "The video begins with a wooded area containing many tall tree trunks, dry ground vegetation, and a pale gray-white smoke plume near the lower center of the view. The smoke is already present at the start and continues to curl, spread, and shift upward from the ground area. As the clip progresses, the camera view tilts upward, causing the ground and smoke area to move lower in the frame while more sky and upper tree crowns become visible. By the end, the view is dominated by tall tree trunks, treetops, blue sky, and the dark foreground trunk at the right edge, with the smoke only near the lower portion of the frame.",
+  "observed_scope": "mixed",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The smoke plume is already visible in the first frame.",
+      "The lower area where the smoke originates is partly obscured by distance, vegetation, shadows, and nearby tree trunks.",
+      "The surrounding forest and large foreground trunk are visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "smoke plume",
+      "visible_form": "irregular pale gray-white semi-transparent cloud rising from a low area near the center of the forest floor",
+      "material_description": "pale gray-white translucent airborne material",
+      "visible_properties": [
+        "semi-transparent",
+        "soft-edged",
+        "changing outline",
+        "light colored"
+      ],
+      "initial_motion_description": "already present and slowly changing shape near the lower center of the frame",
+      "initial_integrity_description": "diffuse cloud with no rigid boundary",
+      "event_role_hints": [
+        "main visibly changing scene entity"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "forest trees",
+      "visible_form": "many tall vertical trunks with sparse upper branches and leafless background trees",
+      "material_description": "brown and dark tree bark with branch silhouettes",
+      "visible_properties": [
+        "tall",
+        "vertical",
+        "stationary in the scene",
+        "partly backlit"
+      ],
+      "initial_motion_description": "no independent visible motion",
+      "initial_integrity_description": "standing trunks and branches appear intact",
+      "event_role_hints": [
+        "stationary surrounding objects"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "foreground tree trunk",
+      "visible_form": "large dark textured trunk occupying the right edge of the frame",
+      "material_description": "dark rough bark texture",
+      "visible_properties": [
+        "large in frame",
+        "rough surface",
+        "dark",
+        "near camera"
+      ],
+      "initial_motion_description": "no independent visible motion",
+      "initial_integrity_description": "continuous vertical trunk surface visible",
+      "event_role_hints": [
+        "foreground occluding object"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "forest floor",
+      "visible_form": "uneven ground with dry grass, brush, shadows, and small low objects",
+      "material_description": "brown ground cover and dry vegetation",
+      "visible_properties": [
+        "dark and brown tones",
+        "patchy vegetation",
+        "uneven surface"
+      ],
+      "initial_motion_description": "no independent visible motion",
+      "initial_integrity_description": "continuous ground surface visible in the lower part of the frame",
+      "event_role_hints": [
+        "surface near the smoke"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "small low dark object",
+      "visible_form": "small dark rectangular or pile-like object on the ground near the smoke area",
+      "material_description": "dark, low, solid-looking visible shape",
+      "visible_properties": [
+        "small",
+        "low to ground",
+        "dark"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears as a single low shape",
+      "event_role_hints": [
+        "near the smoke plume"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "sky",
+      "visible_form": "clear blue background above the trees",
+      "material_description": "blue open background with no visible solid surface",
+      "visible_properties": [
+        "blue",
+        "uniform",
+        "bright"
+      ],
+      "initial_motion_description": "no independent visible motion",
+      "initial_integrity_description": "continuous visible blue area",
+      "event_role_hints": [
+        "background increasingly visible due to camera tilt"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "smoke plume is positioned above a low ground area among tree trunks",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "smoke plume is located between and behind several visible tree trunks",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "foreground trunk occupies the right edge and blocks part of the forest view",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "small low dark object lies near the lower right side of the smoke area",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A pale gray-white smoke plume is visible near the lower center above the forest floor."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The smoke plume appears among multiple vertical tree trunks."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "A large dark tree trunk remains along the right edge of the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A small dark low object is visible on the ground near the smoke area."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The smoke plume changes outline and spreads into thinner wisps."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The smoke plume occupies a slightly higher area relative to the nearby ground than before."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The smoke plume is near the lower edge of the frame and is less prominent than the treetops and sky."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The camera view shifts upward, revealing more treetops and blue sky over time."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The tree trunks remain visibly sharp without an obvious focus transition."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Tall upper branches and crowns occupy the upper frame against the blue sky."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene starts in a forest with the smoke already visible near the lower center.",
+        "The source area is partly obscured by distance and vegetation."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Smoke is present as a pale irregular plume above the ground."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Trees remain standing and visually stationary in the scene."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Foreground trunk remains fixed at the right edge of the view."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Small low dark object remains still near the smoke area."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8"
+      ],
+      "observations": [
+        "The smoke continues to change shape while the camera tilts upward.",
+        "More upper trunks and sky enter the frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Smoke curls, thins, and spreads while moving upward in the viewable scene."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Tree trunks shift position in the frame due to the camera tilt, with no independent visible tree motion."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The visible area of blue sky increases."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10"
+      ],
+      "observations": [
+        "The camera is aimed higher than at the start.",
+        "Treetops and sky dominate the frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Smoke remains faintly visible near the lower part of the frame."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Upper trunks and crowns are the most prominent forest objects."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "Blue sky fills much of the upper background."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "tilt",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e8",
+      "e9"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "medium"
+  },
+  "unresolved_observations": [
+    "The exact object or surface at the base of the smoke is not clearly visible.",
+    "The small low dark object near the smoke cannot be identified from the visible frames."
+  ]
+}

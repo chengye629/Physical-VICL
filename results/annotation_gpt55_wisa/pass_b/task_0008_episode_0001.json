@@ -1,0 +1,377 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "crowd",
+      "entity_kind": "agent",
+      "event_roles": [],
+      "material_phase": "mixed",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "handheld screens",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "emissive"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "aerial light bursts",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "target",
+        "product"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14",
+        "e15",
+        "e16",
+        "e18",
+        "e20",
+        "e21"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "haze",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "medium",
+        "product"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e17",
+        "e19"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "buildings",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "streetlights and signs",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "distant tower lights",
+      "entity_kind": "unknown",
+      "event_roles": [],
+      "material_phase": "unknown",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "explosive_release",
+      "type": "explosion",
+      "raw_type": "repeated aerial light bursts that rapidly appear, expand radially, and fade",
+      "participants": [
+        {
+          "object_id": "obj_3",
+          "event_roles": [
+            "target",
+            "product"
+          ]
+        },
+        {
+          "object_id": "obj_4",
+          "event_roles": [
+            "medium",
+            "product"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14",
+        "e15",
+        "e16",
+        "e17",
+        "e18",
+        "e20",
+        "e21"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "light_emission",
+        "raw_type": "colored light emission from aerial points, streaks, rings, and radial burst patterns",
+        "participants": [
+          {
+            "object_id": "obj_3",
+            "event_roles": [
+              "product"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e6",
+          "e7",
+          "e9",
+          "e10",
+          "e12",
+          "e13",
+          "e14",
+          "e15",
+          "e16",
+          "e20",
+          "e21"
+        ]
+      },
+      {
+        "family": "gas_particulate_motion",
+        "type": "aerosol_dispersion",
+        "raw_type": "diffuse haze becomes more visible, spreads through the street corridor, and lingers",
+        "participants": [
+          {
+            "object_id": "obj_4",
+            "event_roles": [
+              "medium",
+              "product"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e17",
+          "e19"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the distant source of the upward trails and bursts is not visible",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e12"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "raw_temporal_description": "upward light trails and bright aerial bursts recur over an extended interval; bursts appear abruptly and expand, then fade while haze gradually builds and lingers",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e11",
+        "e12",
+        "e14",
+        "e17",
+        "e18",
+        "e19",
+        "e20",
+        "e21",
+        "e22"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "light_emission_onset",
+        "raw_transition": "bright points, streaks, and circular bursts appear in the initially dark sky"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e9",
+        "e10",
+        "e12",
+        "e20",
+        "e21"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "circular and radial light patterns expand outward into rings or star-like forms"
+      },
+      "evidence_refs": [
+        "e7",
+        "e11",
+        "e14",
+        "e21"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "intensity_decrease",
+        "raw_transition": "large bright bursts dim and fade into smaller scattered specks"
+      },
+      "evidence_refs": [
+        "e8",
+        "e18",
+        "e19"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "visible burst colors shift among white, red, magenta, purple, and pink patterns"
+      },
+      "evidence_refs": [
+        "e10",
+        "e13",
+        "e14",
+        "e15",
+        "e16",
+        "e20",
+        "e21"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "diffuse haze becomes more visible along the lower street and in front of buildings"
+      },
+      "evidence_refs": [
+        "e17"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "haze builds and remains over the street after the larger bursts fade"
+      },
+      "evidence_refs": [
+        "e17",
+        "e19"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": null,
+      "raw_mechanism": "rapid stored-energy release produces abrupt bright aerial bursts and expanding visible patterns",
+      "supports_process": "primary",
+      "evidence_refs": [
+        "e7",
+        "e9",
+        "e10",
+        "e11",
+        "e14",
+        "e21"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "emissive aerial material or devices produce the visible colored points, streaks, rings, and radial bursts",
+      "supports_process": "secondary",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e10",
+        "e12",
+        "e13",
+        "e14",
+        "e16",
+        "e20",
+        "e21"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "airborne haze scatters and veils light, making the haze more visible around bursts and street lighting",
+      "supports_process": "secondary",
+      "evidence_refs": [
+        "e17",
+        "e19"
+      ]
+    }
+  ]
+}

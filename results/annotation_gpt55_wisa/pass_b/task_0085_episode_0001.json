@@ -1,0 +1,281 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "dark upper head",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "white rounded mass",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "translucent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "tan surface",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "orange-brown crumbs",
+      "entity_kind": "granular_material",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "granular",
+      "physical_properties": [],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "fragmented",
+      "evidence_refs": [
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "white fragments and powder",
+      "entity_kind": "granular_material",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "granular",
+      "physical_properties": [],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "fragmented",
+      "evidence_refs": [
+        "e6",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "dark specks",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "granular",
+      "physical_properties": [],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "fragmented",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10",
+        "e11"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "gas_particulate_motion",
+      "type": "deposition",
+      "raw_type": "airborne crumbs, white fragments, and dark specks settle toward the surface around the base",
+      "event_roles": [
+        {
+          "object_id": "obj_4",
+          "roles": [
+            "target"
+          ]
+        },
+        {
+          "object_id": "obj_5",
+          "roles": [
+            "target"
+          ]
+        },
+        {
+          "object_id": "obj_6",
+          "roles": [
+            "target"
+          ]
+        },
+        {
+          "object_id": "obj_3",
+          "roles": [
+            "support"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "contact_loading",
+        "type": "sustained_contact",
+        "raw_type": "dark protrusion remains in sustained contact with the white rounded mass",
+        "event_roles": [
+          {
+            "object_id": "obj_1",
+            "roles": [
+              "tool"
+            ]
+          },
+          {
+            "object_id": "obj_2",
+            "roles": [
+              "target"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e2",
+          "e12"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the dark upper head is already positioned against the white mass when the view begins",
+      "actor_object_ids": [],
+      "target_object_ids": [],
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "first_frame_phase": "mid_event",
+      "evidence_refs": [
+        "e7",
+        "e10",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "motion",
+        "type": "settling",
+        "raw_transition": "dark specks are initially suspended around the mass and later are fewer away from the surface"
+      },
+      "evidence_refs": [
+        "e7",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "deposition",
+        "raw_transition": "white fragments and powder that are visible moving or suspended near the base end up scattered on the tan surface near the lower edge"
+      },
+      "evidence_refs": [
+        "e6",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "settling",
+        "raw_transition": "orange-brown crumbs shift slightly and remain gathered near the lower right edge of the white mass"
+      },
+      "evidence_refs": [
+        "e5",
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity draws suspended and disturbed particulate downward toward the supporting tan surface",
+      "object_ids": [
+        "obj_4",
+        "obj_5",
+        "obj_6",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "drag",
+      "raw_mechanism": "air resistance damps the motion of fine airborne particles as their visible suspension decreases",
+      "object_ids": [
+        "obj_5",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "persistent normal contact is present between the dark upper head and the white rounded mass",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e12"
+      ]
+    }
+  ]
+}

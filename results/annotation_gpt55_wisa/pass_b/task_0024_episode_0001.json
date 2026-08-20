@@ -1,0 +1,231 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "blue crystalline rod",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "translucent",
+        "reflective"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black nozzle",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "blue flame plume",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "medium",
+        "source"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "brown background",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "combustion",
+      "type": "sustained_burning",
+      "raw_type": "sustained blue flame burning from the nozzle",
+      "object_ids": [
+        "obj_2",
+        "obj_3"
+      ],
+      "event_roles": {
+        "source": [
+          "obj_2"
+        ],
+        "medium": [
+          "obj_3"
+        ],
+        "target": [
+          "obj_1"
+        ]
+      },
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e7"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "gas_particulate_motion",
+        "type": "plume_motion",
+        "raw_type": "directed flame plume shape and position variation",
+        "object_ids": [
+          "obj_3"
+        ],
+        "event_roles": {
+          "source": [
+            "obj_2"
+          ],
+          "medium": [
+            "obj_3"
+          ],
+          "target": [
+            "obj_1"
+          ]
+        },
+        "evidence_refs": [
+          "e2",
+          "e6",
+          "e7"
+        ]
+      }
+    ],
+    "action": {
+      "family": "thermal",
+      "type": "heat",
+      "raw_action": "apply a visible flame from the nozzle near the rod",
+      "actor_ids": [],
+      "tool_ids": [
+        "obj_2"
+      ],
+      "target_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "mixed",
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "id": "impact_1",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "the luminous plume appears mainly blue and later shows a broader purple-blue region near the nozzle"
+      },
+      "evidence_refs": [
+        "e2",
+        "e7"
+      ]
+    },
+    {
+      "id": "impact_2",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": null,
+        "raw_transition": "the apparent near-alignment between the flame tip and different spots along the upper half of the rod shifts over time"
+      },
+      "evidence_refs": [
+        "e6"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "id": "mechanism_1",
+      "family": "energy_reaction",
+      "type": "chemical_energy_release",
+      "raw_mechanism": "combustion in the gas plume releases energy and maintains the visible blue flame",
+      "object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e7"
+      ]
+    },
+    {
+      "id": "mechanism_2",
+      "family": "mechanical_forcing",
+      "type": "pressure_gradient",
+      "raw_mechanism": "gas flow from the nozzle directs the luminous plume leftward toward the rod",
+      "object_ids": [
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e6"
+      ]
+    },
+    {
+      "id": "mechanism_3",
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "the flame plume emits visible blue and purple-blue light",
+      "object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e7"
+      ]
+    }
+  ]
+}

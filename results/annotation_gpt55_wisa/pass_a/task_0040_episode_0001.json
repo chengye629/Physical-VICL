@@ -1,0 +1,339 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A bright circular firework-like light pattern over a dark waterfront expands, changes color and shape, reflects on the water, and fades.",
+  "raw_event_description": "The scene shows a dark night sky above a waterfront with shoreline lights and their reflections. A bright circular cluster of pink and white light points is already visible high above the horizon at the start. The cluster grows into a larger round radial pattern with many short bright streaks. Its color shifts from pink and white toward red, orange, and pale gold while two narrow vertical light streaks remain on either side. Reflections of the bright sky pattern and shoreline lights appear on the water. The radial streaks lengthen and curve downward in the visible image, then gradually dim until only faint dotted arcs and shoreline lights remain.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "mid_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "A circular light burst is already present in the sky in the first visible frame.",
+      "The waterfront, water surface, and shoreline lights are visible from the start.",
+      "The beginning before the circular burst appeared is not shown."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "circular sky light burst",
+      "visible_form": "round cluster of many bright points and short radial streaks in the night sky",
+      "material_description": "visible as colored light only; no solid body discernible",
+      "visible_properties": [
+        "pink",
+        "white",
+        "red",
+        "orange-gold",
+        "radial pattern",
+        "bright against dark sky"
+      ],
+      "initial_motion_description": "already visible high in the sky with a compact circular shape that begins enlarging across frames",
+      "initial_integrity_description": "appears as a coherent circular cluster of light points",
+      "event_role_hints": [
+        "main changing visible light pattern"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "side vertical light streaks",
+      "visible_form": "two narrow bright vertical streaks positioned left and right of the central burst",
+      "material_description": "visible as thin white-orange light lines; no solid body discernible",
+      "visible_properties": [
+        "thin",
+        "vertical",
+        "bright",
+        "paired on opposite sides of the main burst"
+      ],
+      "initial_motion_description": "visible as nearly vertical streaks near the central sky burst",
+      "initial_integrity_description": "each appears as a continuous narrow line segment",
+      "event_role_hints": [
+        "secondary changing visible light features"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "smoke or haze patches",
+      "visible_form": "faint irregular gray-purple cloudy patches around and below the bright burst",
+      "material_description": "semi-transparent dim cloud-like visual texture",
+      "visible_properties": [
+        "faint",
+        "irregular",
+        "partly illuminated",
+        "semi-transparent"
+      ],
+      "initial_motion_description": "faint patches are visible around the light burst with no clearly separable fast motion",
+      "initial_integrity_description": "appears diffuse and irregular",
+      "event_role_hints": [
+        "background visible haze around the light pattern"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "water surface",
+      "visible_form": "dark horizontal water area occupying the lower part of the scene",
+      "material_description": "dark reflective surface with vertical light reflections",
+      "visible_properties": [
+        "dark",
+        "reflective",
+        "slightly rippled appearance",
+        "horizontal expanse"
+      ],
+      "initial_motion_description": "no distinct surface translation visible; reflections shimmer slightly across frames",
+      "initial_integrity_description": "continuous water surface",
+      "event_role_hints": [
+        "receives visible reflections"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "shoreline structures and lights",
+      "visible_form": "low dark building and bridge-like silhouettes with rows of small lights along the horizon",
+      "material_description": "dark solid silhouettes and fixed white, yellow, orange, and blue lights",
+      "visible_properties": [
+        "low horizon line",
+        "stationary silhouettes",
+        "small bright lights",
+        "reflected in water"
+      ],
+      "initial_motion_description": "stationary relative to the frame",
+      "initial_integrity_description": "continuous skyline and light row",
+      "event_role_hints": [
+        "static background reference"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "sky",
+      "visible_form": "large dark background above the shoreline",
+      "material_description": "black night background with illuminated patches from the light burst",
+      "visible_properties": [
+        "dark",
+        "open",
+        "high contrast with bright lights"
+      ],
+      "initial_motion_description": "stationary background appearance",
+      "initial_integrity_description": "continuous dark field",
+      "event_role_hints": [
+        "background containing visible light patterns"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "positioned high above the shoreline structures",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "positioned above the water surface",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "one vertical streak is on the left side of the central burst and one is on the right side",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A compact circular pink-white light cluster is visible high above the horizon."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The water surface lies below the sky light cluster."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Two thin vertical light streaks are visible on opposite sides of the circular sky cluster."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The circular sky cluster becomes larger across successive frames."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "Many radial light streaks extend outward from the central sky cluster."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The dominant color of the circular light pattern changes from pink-white to red and orange-gold."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "Bright vertical reflections appear on the water below the sky lights."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "Faint cloudy patches are visible around and below the bright circular pattern."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The radial light streaks become dimmer while retaining a rounded arrangement."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Only faint dotted arcs remain where the bright circular pattern was previously visible."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "Shoreline lights remain in fixed positions relative to the frame."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The camera framing of the shoreline and central sky area remains steady."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "A waterfront night scene is visible with an already-formed circular light cluster in the sky."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "appears as a compact pink-white circular cluster of light points"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "appears as two thin vertical light streaks flanking the central cluster"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "shows dark surface with small reflected shoreline lights"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "remains as a low illuminated horizon line"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The central sky light pattern enlarges and develops many radial streaks."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "expands into a larger round pattern with red, white, and orange-gold radial streaks"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains visible as narrow vertical side streaks near the main burst"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "appears as faint illuminated haze around and below the burst"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "shows brighter vertical reflections below the sky lights"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The central light pattern dims progressively."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "changes from bright radial streaks to faint dotted arcs"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "becomes less prominent and fades from view"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "the bright reflection below the burst weakens"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "shoreline lights remain visible after the sky pattern dims"
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The overall camera view stays fixed on the same waterfront and sky region."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "stays in the same frame position throughout"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "continues as the dark background for the changing light pattern"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11",
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The source object or launch path before the visible circular sky burst is not shown.",
+    "The faint haze and dim light trails overlap visually, making their exact boundaries indistinct."
+  ]
+}

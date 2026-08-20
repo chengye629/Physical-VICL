@@ -1,0 +1,260 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A handheld camera moves from a close view of a translucent curved object with rainbow light bands to a wider view of a wooden tabletop with a bright rectangular light patch and a dark horizontal edge above it.",
+  "raw_event_description": "At the start, the frame is filled by a pale translucent curved object and bright curved rainbow-like bands across a gray surface. As the view changes, more of the object's rim and edge appear, then the object shifts out of the frame area due to camera movement. The later view shows a wooden tabletop with a bright rectangular patch near the upper left and a dark horizontal band across the top. Near the end, a pale curved rim reappears near the top edge of the frame.",
+  "observed_scope": "camera_only",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The initial view is a close-up with only part of the translucent curved object visible.",
+      "The surrounding tabletop and upper dark edge are not yet fully visible.",
+      "Bright curved light bands occupy much of the frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "translucent curved object",
+      "visible_form": "large pale translucent curved surface with circular rim-like contours and a thin blue-tinted edge visible later",
+      "material_description": "appears smooth, translucent, and glossy",
+      "visible_properties": [
+        "curved",
+        "pale",
+        "translucent",
+        "reflective highlights",
+        "blue-tinted edge"
+      ],
+      "initial_motion_description": "no independent motion visible before the camera movement dominates the view",
+      "initial_integrity_description": "appears intact, continuous, and unbroken",
+      "event_role_hints": [
+        "near the bright curved rainbow-like light bands at the beginning"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal surface with fine linear grain",
+      "material_description": "warm brown surface with visible wood grain",
+      "visible_properties": [
+        "flat",
+        "brown",
+        "wood-grained",
+        "matte to mildly reflective"
+      ],
+      "initial_motion_description": "not independently moving",
+      "initial_integrity_description": "appears continuous and intact",
+      "event_role_hints": [
+        "receives bright light patches and shadows"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "dark horizontal edge",
+      "visible_form": "dark band spanning the upper portion of the later frames",
+      "material_description": "dark, nearly black visible surface or edge",
+      "visible_properties": [
+        "dark",
+        "straight-edged",
+        "horizontal in the later view"
+      ],
+      "initial_motion_description": "not visible at the beginning",
+      "initial_integrity_description": "appears continuous where visible",
+      "event_role_hints": [
+        "borders the bright area on the tabletop in later frames"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "bright light patterns",
+      "visible_form": "curved rainbow-like bands, star-like glare points, and a later rectangular bright patch",
+      "material_description": "visible illumination pattern with white and colored bands",
+      "visible_properties": [
+        "bright",
+        "curved bands",
+        "rainbow colors",
+        "rectangular patch later",
+        "soft-edged shadow boundary later"
+      ],
+      "initial_motion_description": "apparent position changes in the frame as the camera view changes",
+      "initial_integrity_description": "appears as continuous visible light patterns",
+      "event_role_hints": [
+        "visible on or across the tabletop and translucent object"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "occupies most of the close-up view and overlaps visually with curved colored light bands",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "appears across the surface area below and around the translucent object",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The early frames show curved rainbow-like bands crossing a pale gray surface."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A pale translucent curved object fills much of the early frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A bright star-like glare point appears near the right side of the curved light bands."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The camera view shifts so the translucent object's edge moves toward the left side of the frame."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A thin blue-tinted edge of the translucent object is visible near the left border."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "More of the brown wooden tabletop becomes visible."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The translucent object is mostly out of view."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "A bright rectangular patch lies on the wooden tabletop near the upper left area."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "A dark horizontal band spans the upper part of the frame."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "A pale curved rim appears again near the top edge in the final frame."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The view begins as a close-up of a translucent curved object and bright curved rainbow-like light bands."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "appears large and partially cropped in the frame"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "appears as curved colored bands and bright glare across the visible surface"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The camera changes viewpoint, revealing more of the tabletop while the translucent object occupies less of the frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "its visible edge shifts toward the left edge of the frame due to camera movement"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "becomes more visible as a brown wood-grained surface"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "curved colored bands remain visible briefly near the object's edge"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The view is mostly the wooden tabletop with a dark band above and a bright rectangular light patch."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "is mostly outside the frame, with a pale curved rim reappearing near the top edge at the end"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains visible as the main background surface"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "appears as a dark horizontal band across the top of the frame"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "appears as a bright rectangular patch on the tabletop"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "mixed",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e4",
+      "e6",
+      "e7",
+      "e8",
+      "e9"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "medium"
+  },
+  "unresolved_observations": [
+    "The full shape and identity of the translucent curved object are not visible.",
+    "The source and exact surface receiving the early rainbow-like light bands are not fully distinguishable from the close-up view."
+  ]
+}

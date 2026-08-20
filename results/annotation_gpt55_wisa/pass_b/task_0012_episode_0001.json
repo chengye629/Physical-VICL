@@ -1,0 +1,258 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "dark cloud mass",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "left layered cloud bands",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "dark vertical curtain",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "orange horizon glow",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "flat field",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "small dark specks",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "unknown",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "unknown",
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "gas_particulate_motion",
+      "type": "plume_motion",
+      "raw_type": "existing dark cloud mass advects, reshapes, and extends across the sky",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "small dark specks move through the sky late in the scene",
+        "participant_object_ids": [
+          "obj_6"
+        ],
+        "evidence_refs": [
+          "e10",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e12"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "dark cloud mass changes outline and covers more of the visible sky above the right horizon"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "left layered cloud bands become more pronounced and extend farther toward the center"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "dark vertical curtain changes width and edge shape near the horizon"
+      },
+      "evidence_refs": [
+        "e4",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "orange horizon glow remains visible but its visible border and surrounding outline change as the dark cloud base advances around it"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "small dark specks appear late and change position between frames"
+      },
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "airflow_forcing",
+      "raw_mechanism": "ambient atmospheric air motion drives the visible advection and reshaping of the cloud features",
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": null,
+      "raw_mechanism": "dark cloud material attenuates or occludes portions of the orange horizon glow from the fixed viewpoint",
+      "object_ids": [
+        "obj_1",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    }
+  ]
+}

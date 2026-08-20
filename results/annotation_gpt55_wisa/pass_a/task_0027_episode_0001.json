@@ -1,0 +1,261 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A gray round disk moves through a triangular wheeled frame, reaches the floor, and then rolls rightward away from the frame while the frame shifts slightly left.",
+  "raw_event_description": "At the start, a gray circular disk is visible hanging by a thin white line inside a triangular frame made of pale rods with red wheels. The disk moves downward and rightward through the frame, passes near the front lower rods and right-side wheel area, reaches the floor, and then continues rightward on the floor as a rolling upright disk. During the later part, the wheeled frame remains in view on the left and appears slightly farther left relative to the floor markings, while the disk separates from the frame area and travels to the right before slowing near the right side of the view.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The gray disk, thin line, triangular rod frame, red wheels, and floor are visible.",
+      "The upper attachment point of the thin line is outside or near the top edge of the frame.",
+      "Some parts of the wheeled structure extend beyond the left edge of the image."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "gray round disk",
+      "visible_form": "small circular disk or coin-like object, seen mostly upright with a gray metallic-looking face and rim",
+      "material_description": "gray reflective surface with darker markings; visually metallic or metal-like",
+      "visible_properties": [
+        "round",
+        "flat",
+        "upright orientation visible during rolling",
+        "gray",
+        "reflective highlights"
+      ],
+      "initial_motion_description": "visible near the upper-left interior of the frame, moving along a curved path while attached to or aligned with a thin white line",
+      "initial_integrity_description": "appears intact as one round disk",
+      "event_role_hints": [
+        "moving object",
+        "later rolling object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "triangular wheeled frame",
+      "visible_form": "light-colored rod structure forming triangular side supports and horizontal base rods, with red circular wheels",
+      "material_description": "pale rod-like members; red plastic-looking wheels with small pale centers",
+      "visible_properties": [
+        "triangular outline",
+        "multiple straight rods",
+        "red wheels",
+        "partly outside left edge of frame"
+      ],
+      "initial_motion_description": "initially positioned on the left half of the image; later appears slightly shifted left relative to floor markings",
+      "initial_integrity_description": "appears intact with rods and wheels connected",
+      "event_role_hints": [
+        "surrounding structure",
+        "wheeled object"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "thin white line",
+      "visible_form": "narrow vertical or slanted white strand connected visually to the gray disk during the early motion",
+      "material_description": "white, thread-like, very thin",
+      "visible_properties": [
+        "thin",
+        "white",
+        "partly difficult to see against pale background"
+      ],
+      "initial_motion_description": "moves together with the gray disk during the early part of the event",
+      "initial_integrity_description": "visible as a continuous thin line above the disk early in the clip",
+      "event_role_hints": [
+        "line attached or adjacent to moving disk early in the sequence"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "white floor surface",
+      "visible_form": "flat pale surface with several dark vertical seam or marker lines",
+      "material_description": "white or light-colored smooth-looking surface with dark linear markings",
+      "visible_properties": [
+        "flat",
+        "light-colored",
+        "dark straight markings"
+      ],
+      "initial_motion_description": "stationary background surface",
+      "initial_integrity_description": "unchanged visible surface",
+      "event_role_hints": [
+        "surface on which disk later rolls"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the gray disk is inside the triangular rod frame area",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "a thin white line extends upward from or very near the gray disk",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "the red wheels of the frame rest on the white floor surface",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The gray round disk is visible inside the triangular rod frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A thin white line is visible above the gray disk."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Red wheels on the rod frame are in contact with the white floor surface."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The gray disk moves from a higher position toward a lower position inside the frame."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The gray disk passes near the lower front rods and the right-side red wheel area of the frame."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The gray disk reaches the floor surface near the right side of the frame."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "After reaching the floor, the gray disk remains upright and moves rightward away from the frame."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The gray disk is separated from the frame area and is farther to the right on the floor."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The visible face markings of the gray disk change orientation as it moves on the floor."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The wheeled frame appears slightly farther left relative to the floor markings than at the start."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The gray disk remains intact and upright near the right side of the view."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene shows a triangular rod-and-wheel frame on a white floor.",
+        "The gray disk is visible inside the frame with a thin white line above it."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "moves downward within the triangular frame area"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "is visible above the disk during the early motion"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains mostly in the left portion of the view"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The disk passes close to the lower rods and right-side wheel area.",
+        "The disk reaches the floor and then continues rightward."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "moves from inside the frame to the floor and continues rightward while upright"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "stays visible on the left side of the scene"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The disk is now separated from the frame area and farther to the right.",
+        "The frame appears slightly left-shifted relative to fixed floor markings."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "rolls rightward across the white floor and remains upright"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "appears slightly farther left relative to floor markings than earlier"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact connection between the gray disk and the thin white line becomes hard to see after the disk reaches the floor.",
+    "Parts of the frame and the upper end of the thin line are outside the image boundaries."
+  ]
+}

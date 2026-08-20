@@ -1,0 +1,308 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A hand-held shiny circular disc is cut with scissors from its central opening to its outer edge, and a sector-shaped piece separates.",
+  "raw_event_description": "A shiny circular disc with a central hole is held over a teal fabric surface by a left hand while a right hand operates scissors. The scissor blades are positioned through and across the central opening, then advance diagonally across the disc. A visible slit lengthens from the central opening toward the outer rim. As the cut progresses, a sector-shaped portion near the upper side tilts away from the rest of the disc. Near the end, the slit reaches the outer edge, the sector-shaped piece separates, and the scissors move away to the right.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The disc, hands, and scissors are visible at the start.",
+      "The scissors are already positioned at the disc's central opening.",
+      "The disc surface and central opening are clearly visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "shiny circular disc",
+      "visible_form": "thin round disc with a central circular opening and reflective iridescent surface",
+      "material_description": "silver-colored reflective surface with rainbow color bands; transparent-looking central area; dark circular ring markings around the hole",
+      "visible_properties": [
+        "circular outline",
+        "thin profile",
+        "central hole",
+        "reflective surface",
+        "iridescent color patterns"
+      ],
+      "initial_motion_description": "held mostly steady with small repositioning while the scissors are placed at the central opening",
+      "initial_integrity_description": "appears mostly continuous at the start, with the scissors already at or just inside the central opening",
+      "event_role_hints": [
+        "receives a lengthening slit",
+        "develops a separated sector-shaped portion"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "scissors",
+      "visible_form": "handheld scissors with two long narrow blades and black handles",
+      "material_description": "dark blades with reflective edges; black handle loops",
+      "visible_properties": [
+        "two pivoting blades",
+        "black handles",
+        "pointed blade tips"
+      ],
+      "initial_motion_description": "held from the right side with blade tips positioned at the disc's central opening",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "moves diagonally across the disc",
+        "opens and closes while aligned with the visible slit"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "left hand",
+      "visible_form": "human hand holding the lower-left side of the disc",
+      "material_description": "skin-toned fingers and thumb",
+      "visible_properties": [
+        "thumb visible on front of disc",
+        "fingers support disc from behind or edge"
+      ],
+      "initial_motion_description": "holds the disc and makes small adjustments",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the disc during the cutting action"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "right hand",
+      "visible_form": "human hand gripping the scissor handles on the right side",
+      "material_description": "skin-toned fingers around black handle",
+      "visible_properties": [
+        "fingers visible at scissor handle",
+        "thumb area near handle"
+      ],
+      "initial_motion_description": "moves the scissors across the disc",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "operates the scissors"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "teal fabric surface",
+      "visible_form": "flat cloth-like background under the hands and disc",
+      "material_description": "green-blue woven-looking surface with visible texture",
+      "visible_properties": [
+        "flat background",
+        "textured appearance"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears continuous",
+      "event_role_hints": [
+        "background surface"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_3",
+      "relation_description": "holds the lower-left portion of the disc",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is positioned through or across the disc's central opening",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "grips the scissor handles",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is above the teal fabric surface",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A shiny circular disc with a central opening is held over a teal fabric surface by a left hand."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A pair of scissors extends from the right side toward the disc's central opening."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "One scissor blade lies across the central opening of the disc."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A right hand grips the black handle of the scissors."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The scissor blades advance diagonally from the central opening across the disc surface."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A narrow diagonal slit is visible in the disc along the path of the scissors."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The visible slit lengthens toward the outer rim of the disc."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "A sector-shaped portion of the disc near the upper side tilts away from the rest of the disc."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "Rainbow-colored reflections shift across the disc surface as the disc and scissors positions change."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The diagonal slit reaches the outer edge of the disc."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "A curved sector-shaped piece is visibly separated from the remaining disc."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The remaining disc shows a large wedge-shaped missing area between the central opening and the outer rim."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The scissors move away to the right after the piece separates."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The disc is held in front of the camera with the scissors already placed at the central opening."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "is held steady with its central opening exposed"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "is positioned across the disc's central opening"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "holds the disc at the lower-left side"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "grips the scissors handle on the right"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The scissors progress diagonally across the disc, and the visible slit extends."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "develops a lengthening diagonal slit from the central opening toward the rim"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "has an upper sector-shaped portion that tilts away from the main disc"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "advances across the disc along the slit"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "continues holding and slightly repositioning the disc"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "continues moving the scissors"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The slit reaches the rim, a sector-shaped piece separates, and the scissors withdraw."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "shows a separated curved sector-shaped piece"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "shows a wedge-shaped missing region in the remaining disc"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "moves away to the right after the separation"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

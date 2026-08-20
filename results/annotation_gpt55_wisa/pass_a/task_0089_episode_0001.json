@@ -1,0 +1,344 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A person holds a tilted translucent bottle so a clear liquid stream contacts a white translucent mound on a white object while he watches and smiles.",
+  "raw_event_description": "The clip begins with the bottle already tilted over the mound and a narrow clear stream visible between the bottle opening and the top side of the mound. The person leans close to the objects, first with a surprised open-mouth expression and then with a broad smile. Across the clip the bottle remains near the mound with small hand-position changes, and the liquid stream or droplets remain visible for much of the sequence. The white mound stays upright on the white base/object while its surface looks wet and reflective in places.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The bottle, stream, mound, person's face, and supporting white object are visible at the start.",
+      "The pouring contact is already underway in the first frame.",
+      "The lower part of the white supporting object is partly cut off by the frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "person",
+      "visible_form": "adult person leaning over a countertop, wearing a backward light-colored cap and sleeveless dark top",
+      "material_description": "skin, fabric clothing, cap material, small metallic-looking earring",
+      "visible_properties": [
+        "face visible",
+        "right side of body near frame edge",
+        "hand extended toward bottle area",
+        "eyes directed toward the mound and bottle opening"
+      ],
+      "initial_motion_description": "Leaning close to the countertop with raised hand holding the bottle; face oriented toward the mound.",
+      "initial_integrity_description": "Body and clothing visible without visible damage or separation.",
+      "event_role_hints": [
+        "holding the tilted bottle",
+        "watching the contact area"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "translucent bottle",
+      "visible_form": "small plastic-looking bottle with blue tint and open neck",
+      "material_description": "translucent blue plastic-like container with a label and clear liquid visible inside",
+      "visible_properties": [
+        "tilted downward",
+        "partly filled with clear liquid",
+        "cap absent or not covering the opening",
+        "held in the person's hand"
+      ],
+      "initial_motion_description": "Already tilted above and to the side of the mound; small hand-guided shifts continue during the clip.",
+      "initial_integrity_description": "Bottle remains intact with continuous visible walls and neck.",
+      "event_role_hints": [
+        "source position for the visible stream"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "clear liquid",
+      "visible_form": "narrow stream and small droplets between bottle opening and mound",
+      "material_description": "transparent, colorless to faintly blue due to surrounding bottle tint and lighting",
+      "visible_properties": [
+        "thin continuous-looking stream in many frames",
+        "shiny highlights",
+        "contacts upper portion of white mound"
+      ],
+      "initial_motion_description": "Visible as a stream moving from the bottle opening to the mound at the start.",
+      "initial_integrity_description": "Liquid is visible as a connected stream in early frames and as small shiny wet areas on the mound surface.",
+      "event_role_hints": [
+        "contacts the mound surface"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "white mound",
+      "visible_form": "upright, rounded, irregular mound with bumpy granular surface",
+      "material_description": "white translucent crystalline-looking or icy-looking surface with bright reflective highlights",
+      "visible_properties": [
+        "rough texture",
+        "taller than it is wide",
+        "top and side exposed",
+        "surface glistens where liquid contacts it"
+      ],
+      "initial_motion_description": "Stationary on top of the white base/object.",
+      "initial_integrity_description": "Visible as one continuous mound without visible breakage or collapse.",
+      "event_role_hints": [
+        "receives the visible liquid stream"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "white base object",
+      "visible_form": "white upright object below the mound, partly cropped at the bottom",
+      "material_description": "smooth white material with curved visible contour",
+      "visible_properties": [
+        "supports the mound",
+        "lower portion partly outside frame",
+        "positioned on countertop"
+      ],
+      "initial_motion_description": "Stationary on the countertop.",
+      "initial_integrity_description": "Visible portion remains intact.",
+      "event_role_hints": [
+        "supporting the white mound"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "countertop",
+      "visible_form": "flat speckled kitchen counter surface",
+      "material_description": "polished stone-like or composite-looking surface with speckled pattern",
+      "visible_properties": [
+        "horizontal surface",
+        "foreground support area"
+      ],
+      "initial_motion_description": "Stationary background/support surface.",
+      "initial_integrity_description": "No visible change.",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "person's hand is wrapped around and holding the bottle",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "bottle opening is positioned above and beside the upper part of the mound",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "liquid stream spans the gap between the bottle opening and the mound surface",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "white mound is seated on top of the white base object",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "white base object is positioned on the countertop",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A hand holds the translucent bottle around its middle and neck area."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The bottle is tilted with its open neck directed toward the upper side of the white mound."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A narrow clear stream is visible between the bottle opening and the mound."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The white mound sits on the top of a white upright object."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The white upright object is on a speckled countertop."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "early",
+      "observation": "The person's mouth is open and rounded while his eyes look toward the mound."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The bottle remains tilted over the mound."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The clear stream continues to contact the upper portion of the white mound."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The person's expression changes to a broad smile with teeth visible."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "Bright shiny patches are visible on the mound surface near the contact area."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The bottle neck remains close to the mound's upper side."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The person's smile remains broad while he looks at the mound and bottle opening."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The white mound remains upright on the white base object."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The lower part of the white base object stays partly outside the frame."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The clip starts with pouring already visible.",
+        "The person is close to the countertop and looking at the contact area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Person holds the bottle and watches the mound with an open-mouth expression."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Bottle is tilted with its opening aimed toward the mound."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Clear liquid forms a narrow visible stream from the bottle opening to the mound."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "White mound remains upright on the white base object."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The bottle position changes slightly while staying over the mound.",
+        "The person's facial expression changes from surprised to smiling."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Person smiles broadly while maintaining gaze toward the mound and bottle opening."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Bottle remains tipped above the mound with small visible hand-guided position changes."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Liquid remains visible between the bottle opening and the mound and on the mound surface."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Mound surface shows shiny reflective areas near the liquid contact region."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ],
+      "observations": [
+        "The bottle continues to hover very close to the upper side of the mound.",
+        "The mound and white base remain in the same general position on the countertop."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Person continues smiling while looking at the mound and bottle area."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Bottle stays angled downward near the mound."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "White mound remains upright and visibly textured."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "White base object remains partly cropped and stationary on the countertop."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact material of the white mound is not identifiable from visuals alone.",
+    "The exact liquid in the bottle is not identifiable from visuals alone.",
+    "The full shape of the white base object is not visible because its lower portion is cropped."
+  ]
+}

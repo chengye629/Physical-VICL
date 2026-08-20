@@ -1,0 +1,418 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A person in a blue shirt approaches an outdoor fire pit with large flames and positions long wood pieces across and into the pit.",
+  "raw_event_description": "The video begins with a metal fire ring on an ash-covered patch of ground, with large orange flames extending upward and leftward from wood in and around the ring. A flat rectangular board lies diagonally on the right side near the flames, and two chairs stand behind the pit. A person wearing a bright blue shirt enters from the left foreground carrying a long dark cylindrical log, steps toward the pit, and holds the log across the fire area. The person then stands close to the pit, bends forward, and manipulates a dark stick or log into the ring area while the flames and smoke continue changing shape.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "Large flames, the fire ring, wood pieces, ash-covered ground, nearby board, chairs, and surrounding yard are visible from the first frame.",
+      "The main flame activity is already underway at the start."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "flames",
+      "visible_form": "large orange and yellow moving plume with irregular edges",
+      "material_description": "bright luminous flame-like visual form with darker smoke nearby",
+      "visible_properties": [
+        "orange",
+        "yellow",
+        "irregular outline",
+        "rapidly changing shape",
+        "extends upward and leftward"
+      ],
+      "initial_motion_description": "The flame shapes fluctuate continuously above and beside the fire ring.",
+      "initial_integrity_description": "The flame mass is visually continuous but constantly changing outline.",
+      "event_role_hints": [
+        "central visible activity"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "fire ring",
+      "visible_form": "low circular metal ring at the center of the ash patch",
+      "material_description": "dark gray metal-looking circular container or ring",
+      "visible_properties": [
+        "circular",
+        "dark",
+        "rigid-looking",
+        "stationary"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact as a continuous circular ring.",
+      "event_role_hints": [
+        "contains or surrounds several wood pieces"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wood pieces in pit",
+      "visible_form": "dark irregular logs and wood chunks inside and over the ring",
+      "material_description": "wood-like pieces with dark blackened and brown surfaces",
+      "visible_properties": [
+        "irregular",
+        "dark",
+        "solid-looking",
+        "partly surrounded by flames"
+      ],
+      "initial_motion_description": "No clear motion before the person enters.",
+      "initial_integrity_description": "Multiple separate pieces appear intact enough to keep their log or chunk shapes.",
+      "event_role_hints": [
+        "located in the main flame area"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "flat board",
+      "visible_form": "flat rectangular board lying diagonally on the right side of the fire ring",
+      "material_description": "brown board-like surface with straight edges",
+      "visible_properties": [
+        "rectangular",
+        "flat",
+        "brown",
+        "stationary"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact as one flat panel.",
+      "event_role_hints": [
+        "adjacent to the flame area"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "person",
+      "visible_form": "human figure seen mostly from the back, wearing a bright blue shirt and dark pants",
+      "material_description": "clothed body with blue fabric shirt, dark pants, and shoes",
+      "visible_properties": [
+        "upright body",
+        "blue shirt",
+        "dark pants",
+        "moves from left foreground toward pit",
+        "later bends forward"
+      ],
+      "initial_motion_description": "Not visible in the first frames; later enters from the left foreground.",
+      "initial_integrity_description": "Visible body appears whole where not occluded by frame edge and posture.",
+      "event_role_hints": [
+        "carries and manipulates long wood pieces"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "long log",
+      "visible_form": "long dark cylindrical wood piece carried horizontally and later positioned across the pit",
+      "material_description": "dark bark-like or blackened wood-like surface with a lighter circular cut end visible at times",
+      "visible_properties": [
+        "long",
+        "cylindrical",
+        "dark",
+        "rigid-looking"
+      ],
+      "initial_motion_description": "Not visible at the start; later moves with the person from left toward the pit.",
+      "initial_integrity_description": "Appears as one continuous long piece.",
+      "event_role_hints": [
+        "carried by the person",
+        "placed or held across the flame area"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "dark stick",
+      "visible_form": "narrow dark stick or log segment held downward into the fire ring area",
+      "material_description": "dark wood-like surface",
+      "visible_properties": [
+        "elongated",
+        "dark",
+        "narrower than the long log",
+        "partly occluded by flames and person"
+      ],
+      "initial_motion_description": "Not clearly visible at the start; later moves with the person's hands toward the pit.",
+      "initial_integrity_description": "Appears as a single elongated piece where visible.",
+      "event_role_hints": [
+        "used by the person to manipulate material in the ring area"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "ash patch",
+      "visible_form": "light gray and white irregular patch on the ground surrounding the fire ring",
+      "material_description": "powdery-looking pale ground covering with darker scattered areas",
+      "visible_properties": [
+        "light gray",
+        "white",
+        "irregular boundary",
+        "stationary"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears as a continuous irregular surface patch with scattered darker spots.",
+      "event_role_hints": [
+        "surrounds the fire ring"
+      ]
+    },
+    {
+      "id": "obj_9",
+      "name": "chairs",
+      "visible_form": "two molded outdoor chairs behind the fire pit",
+      "material_description": "tan or gray plastic-looking chairs",
+      "visible_properties": [
+        "two separate chairs",
+        "upright",
+        "stationary"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Both chairs appear intact.",
+      "event_role_hints": [
+        "background reference objects"
+      ]
+    },
+    {
+      "id": "obj_10",
+      "name": "tree",
+      "visible_form": "large tree trunk on the right side with leafy branches above",
+      "material_description": "rough bark-like trunk and green leaves",
+      "visible_properties": [
+        "upright trunk",
+        "stationary",
+        "partly at right edge of scene"
+      ],
+      "initial_motion_description": "No visible trunk motion.",
+      "initial_integrity_description": "Visible trunk appears intact.",
+      "event_role_hints": [
+        "background reference object"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "flames are visible above and around the wood pieces inside the fire ring",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "fire ring is centered within the ash-covered ground patch",
+      "object_id": "obj_8",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "flat board lies diagonally to the right of the fire ring with one end near the flame area",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_9",
+      "relation_description": "two chairs stand behind the fire pit area",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Large orange flames extend upward and leftward from the fire pit area."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A dark circular metal ring is visible at the center of a light ash-covered ground patch."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Dark logs and wood chunks are visible inside and across the circular ring."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A flat brown rectangular board lies diagonally on the right side of the fire ring."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "Two outdoor chairs are visible behind the fire pit."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The flame outline changes rapidly while remaining in the pit area."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "A person in a bright blue shirt enters from the left foreground."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The person carries a long dark cylindrical log horizontally while moving toward the pit."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The long dark log is held or positioned across the fire pit area."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The person stands close to the fire ring with their back mostly toward the camera."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The person bends forward over the edge of the pit area."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "A dark stick or log segment angles downward from the person's hands into the ring area."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "Light gray smoke wisps are visible above the ash and flame area."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "Small flames are visible on the ash-covered ground left of the ring at several moments."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "continuous",
+      "observation": "The chairs and tree remain in the same image positions relative to the pit throughout the clip."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The outdoor fire pit scene is already active at the start."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Large flames are visible above and to the left of the fire ring."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The circular ring remains stationary within the ash patch."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Wood pieces are visible within and across the ring."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The flat board lies near the right side of the pit."
+        },
+        {
+          "object_id": "obj_9",
+          "observation": "The two chairs remain upright in the background."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e13"
+      ],
+      "observations": [
+        "A person approaches the pit while the flame shapes continue changing."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "The person enters from the left foreground and steps toward the fire ring."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The long dark log moves with the person and becomes positioned across the pit area."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "Flames continue fluctuating around the wood and ring."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "Smoke wisps appear above the flame and ash area."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ],
+      "observations": [
+        "The person remains close to the pit and manipulates an elongated dark piece into the ring area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "The person bends forward with their torso angled toward the fire ring."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "A dark stick or log segment is angled downward into the ring area from the person's hands."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "Flames continue changing shape and remain visible around the logs, ring, and nearby board."
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "The ash patch remains visible around the pit with small flames appearing on its left side."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e15"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact identity and continuity of the dark stick or log segment handled near the end is partly obscured by the person's body and the flames.",
+    "Some portions of the fire ring and wood are intermittently hidden by large flames and smoke."
+  ]
+}

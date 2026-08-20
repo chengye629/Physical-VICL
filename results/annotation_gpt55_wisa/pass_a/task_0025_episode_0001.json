@@ -1,0 +1,343 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A fixed elevated city view shows dark and bright cloud masses changing across the sky while a gray veil remains over parts of the distant city.",
+  "raw_event_description": "The video begins with an elevated view over rooftops, a checkered tall building, a large green park, a distant tower, and foreground antenna equipment under a dark cloud ceiling. Over time, the upper cloud shapes and brightness change, with darker cloud areas receding from parts of the top frame and brighter white cloud areas appearing, especially toward the upper right. A broad gray vertical-looking veil is visible over the left and central distance and varies in visibility while the buildings, park, tower, and foreground antennas remain in fixed positions in the frame.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The city, park, tower, foreground antennas, and cloud layer are visible from the start.",
+      "The ongoing sky and distant-veil changes are already present in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "city district",
+      "visible_form": "wide urban area with many low and mid-rise buildings and streets",
+      "material_description": "visible building facades and reddish roofs; individual material types are not distinguishable",
+      "visible_properties": [
+        "dense",
+        "multi-colored",
+        "distant"
+      ],
+      "initial_motion_description": "no visible motion relative to the frame",
+      "initial_integrity_description": "buildings appear intact",
+      "event_role_hints": [
+        "background reference for sky and visibility changes"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "checkered building",
+      "visible_form": "tall rectangular building with a black-and-white checkered facade pattern",
+      "material_description": "smooth light and dark exterior panels visible",
+      "visible_properties": [
+        "tall",
+        "rectangular",
+        "high contrast pattern"
+      ],
+      "initial_motion_description": "no visible motion relative to the frame",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "prominent fixed landmark"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "park",
+      "visible_form": "large continuous area of dense dark green tree canopy on the right side",
+      "material_description": "green vegetation visible as a textured canopy",
+      "visible_properties": [
+        "dark green",
+        "broad",
+        "textured"
+      ],
+      "initial_motion_description": "no distinct canopy motion visible at this scale",
+      "initial_integrity_description": "canopy appears continuous",
+      "event_role_hints": [
+        "fixed ground area beneath changing sky"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "distant tower",
+      "visible_form": "slender vertical tower with stacked sections on the horizon right of center",
+      "material_description": "pale gray vertical structure visible",
+      "visible_properties": [
+        "thin",
+        "vertical",
+        "distant"
+      ],
+      "initial_motion_description": "no visible motion relative to the frame",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "fixed horizon landmark"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "rooftop antennas",
+      "visible_form": "foreground cluster of antenna masts, dishes, rods, and equipment along the bottom edge",
+      "material_description": "white and gray metal-like rods, dishes, and equipment housings visible",
+      "visible_properties": [
+        "foreground",
+        "clustered",
+        "rigid-looking"
+      ],
+      "initial_motion_description": "no visible motion relative to the frame",
+      "initial_integrity_description": "equipment appears intact",
+      "event_role_hints": [
+        "fixed foreground reference"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "cloud layer",
+      "visible_form": "broad overhead cloud masses with dark gray undersides and later brighter white portions",
+      "material_description": "diffuse gray and white cloud texture",
+      "visible_properties": [
+        "large",
+        "irregular",
+        "gray",
+        "white"
+      ],
+      "initial_motion_description": "cloud shapes occupy the top of the frame and begin changing across the sequence",
+      "initial_integrity_description": "continuous cloud mass with irregular edges",
+      "event_role_hints": [
+        "main visibly changing scene entity"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "gray distant veil",
+      "visible_form": "broad semi-opaque gray vertical-looking area over the left and central distant skyline",
+      "material_description": "misty gray translucent appearance",
+      "visible_properties": [
+        "semi-opaque",
+        "vertical-looking",
+        "soft-edged"
+      ],
+      "initial_motion_description": "present over the left distance at the start with no sharply trackable edge",
+      "initial_integrity_description": "appears as a continuous diffuse veil",
+      "event_role_hints": [
+        "visibility-changing distant feature"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "stands in front of the city district and beside the park from the camera viewpoint",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "occupies the right side below the distant tower",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "covers the upper portion of the scene above the city and park",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_7",
+      "relation_description": "overlies the left and central distant skyline in the view",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A tall black-and-white checkered building is centered in the lower half of the frame among surrounding city buildings."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A large dark green park occupies the right side of the frame, with a slender tower on the horizon beyond it."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A dark gray cloud ceiling covers the top of the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A broad gray translucent veil is visible over the left distant skyline."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The underside of the cloud layer changes shape along the upper right portion of the frame."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "Brighter white cloud areas become more visible near the upper center and upper right."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The gray veil over the left and central distance remains visible while the skyline behind it appears muted."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "A small blue sky patch appears near the upper right edge among brighter clouds."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The right-side cloud mass appears brighter and more broken than at the beginning."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The foreground antenna equipment stays aligned with the bottom edge throughout the sequence."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The checkered building, park, and distant tower keep the same positions in the frame throughout the sequence."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "Overall illumination across the city and clouds changes from darker early frames to brighter later frames."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene starts under a dark cloud ceiling with a gray veil over the left distance."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_6",
+          "observation": "Dark gray cloud mass occupies the upper frame."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "Gray translucent veil is visible over the left distant city."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "City district remains visible beneath the sky, with muted visibility toward the left distance."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "Cloud shapes and brightness vary across the top of the frame while the distant veil persists."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_6",
+          "observation": "Cloud edges and underside shapes change across the upper center and right."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "Gray veil remains across portions of the left and central distance."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e12"
+      ],
+      "observations": [
+        "Later frames show brighter cloud areas and a small blue opening near the upper right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_6",
+          "observation": "Cloud layer contains brighter white regions and more separated-looking patches."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "City surfaces appear brighter than in the early frames."
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "Ground landmarks and foreground equipment remain fixed in the frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "Checkered building stays in the same frame position."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Park stays in the same frame position."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Distant tower stays in the same frame position."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Foreground antenna cluster stays in the same frame position."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10",
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The gray distant veil is visible but its exact contents are not distinguishable."
+  ]
+}

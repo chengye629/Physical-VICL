@@ -1,0 +1,272 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A stationary close-up of an ornate screen shows warm illumination while soft dark patterns move and change shape across the mesh surface.",
+  "raw_event_description": "The video begins with a close view of a decorative mesh panel and dark curled metal bars. A warm bright area covers much of the center-right mesh. Soft-edged dark patterns are already visible on the bright mesh, and over the clip these patterns shift, stretch, and fade in different areas while the metal frame, scroll shapes, and mesh panel remain fixed in the image. No object enters or exits the main panel area.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The mesh panel, decorative metal curls, bright area, and dark patterns are visible from the start.",
+      "The visible change is already underway in the first frame.",
+      "The source of the changing dark patterns is not visible within the frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "mesh panel",
+      "visible_form": "large rectangular fine-patterned mesh or woven-looking surface occupying the center and right of the frame",
+      "material_description": "tan or golden surface with many small repeated openings or texture marks",
+      "visible_properties": [
+        "fine repeating texture",
+        "flat visible surface",
+        "warmly illuminated in parts"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact and continuous",
+      "event_role_hints": [
+        "surface on which bright and dark patterns are visible"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "decorative metal frame",
+      "visible_form": "dark metal-looking bars and curled scroll shapes bordering and crossing the mesh panel",
+      "material_description": "dark opaque rods with curved ornamental shapes",
+      "visible_properties": [
+        "rigid-looking",
+        "dark silhouette",
+        "curled scroll motifs"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "stationary foreground and border structure"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "dark soft-edged patterns",
+      "visible_form": "irregular dark bands and patches projected across the bright mesh area",
+      "material_description": "dark visual markings without visible solid surface of their own",
+      "visible_properties": [
+        "soft edges",
+        "irregular elongated shapes",
+        "changing outlines"
+      ],
+      "initial_motion_description": "already present and beginning in changed positions across sampled frames",
+      "initial_integrity_description": "not a solid object; appears as discontinuous visible dark regions",
+      "event_role_hints": [
+        "main visible changing feature"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "warm illuminated area",
+      "visible_form": "large yellow-gold bright region covering the center-right mesh surface",
+      "material_description": "visible light-toned area on the mesh, not a separate solid object",
+      "visible_properties": [
+        "warm color",
+        "high contrast against dark frame",
+        "broad area"
+      ],
+      "initial_motion_description": "no distinct motion of its boundary is clearly visible",
+      "initial_integrity_description": "appears continuous over much of the mesh",
+      "event_role_hints": [
+        "background region where the dark patterns are most visible"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "the decorative metal frame borders and overlaps the mesh panel in the image",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "the dark soft-edged patterns lie visually on the illuminated portion of the mesh panel",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "the warm illuminated area covers the center-right portion of the mesh panel",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A dark ornate frame with curled scroll shapes is visible around and over a fine mesh panel."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A warm yellow-gold bright area covers much of the center-right mesh panel."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Several soft-edged dark bands and patches are visible across the bright mesh area."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "The mesh texture remains aligned in the same image position throughout the clip."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The curled metal scrolls remain in the same image positions throughout the clip."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The dark pattern across the central bright mesh has a different outline than in the early frames."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "An elongated dark region is visible slanting through the central illuminated area."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The dark markings on the center-right mesh are redistributed compared with the early frames."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The warm illuminated mesh area remains visible behind the changing dark markings."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "No scene cut is visible."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The decorative screen fills the frame.",
+        "Bright illumination and soft dark markings are already present."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The mesh panel is visible and stationary."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The decorative metal frame is visible and stationary."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The dark soft-edged patterns are present across the bright mesh."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The warm illuminated area covers the center-right mesh."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The stationary screen remains in close-up.",
+        "The dark markings on the bright area change shape and position relative to the fixed scrollwork."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The mesh panel remains fixed in the image."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The scrollwork remains fixed in the image."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The dark pattern shifts and changes outline across the illuminated mesh."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The bright region remains visible beneath the changing dark pattern."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The same screen remains visible with no cut.",
+        "The dark markings continue to differ from earlier positions."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The mesh panel remains intact and stationary."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The decorative metal frame remains intact and stationary."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The dark soft-edged markings remain on the bright mesh in a changed arrangement."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The warm illuminated area remains present on the mesh."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e4",
+      "e5"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The source of the changing dark soft-edged patterns is not visible within the frame."
+  ]
+}

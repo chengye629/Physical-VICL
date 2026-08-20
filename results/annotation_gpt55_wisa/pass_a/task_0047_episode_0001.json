@@ -1,0 +1,321 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A bright orange-yellow flame burst grows under metal rails, followed by sustained ground-level flames and a large gray-white smoke plume.",
+  "raw_event_description": "The view begins at ground level beside a dark structure and beneath horizontal metal rails, with a small orange flame-like region near the gravel. The luminous region rapidly enlarges into a bright yellow-white and orange fireball occupying the center and right side of the frame. Orange ground-level flames then extend along the gravel, while a thick gray-white smoke cloud grows beside and above them. Later, the large bright plume reduces in size, leaving a long band of lower flames on the ground and a continuing smoke cloud that partly obscures the background.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The first frame already contains a small orange flame-like region.",
+      "The low viewpoint and nearby dark structure obscure part of the scene.",
+      "The rails, gravel ground, and outdoor background are visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "metal rails",
+      "visible_form": "multiple long horizontal bars running diagonally across the upper part of the frame",
+      "material_description": "dark, rigid, metal-looking bars",
+      "visible_properties": [
+        "straight",
+        "dark colored",
+        "stationary relative to the ground"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous straight bars with no visible breakage",
+      "event_role_hints": [
+        "stationary overhead foreground structure"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "dark side structure",
+      "visible_form": "large dark vertical surface at the left edge of the frame",
+      "material_description": "dark opaque surface with hard edges",
+      "visible_properties": [
+        "tall",
+        "dark",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact where visible",
+      "event_role_hints": [
+        "adjacent to the initial flame area"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "gravel ground",
+      "visible_form": "rough ground surface covered with small stones across the lower frame",
+      "material_description": "gray-brown small stones and dirt-like surface",
+      "visible_properties": [
+        "rough texture",
+        "low-lying",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous visible ground surface",
+      "event_role_hints": [
+        "surface along which flames are visible"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "flames and bright fireball",
+      "visible_form": "irregular luminous orange, yellow, and white region that changes shape over time",
+      "material_description": "bright semi-transparent flame-like light with orange-yellow edges and white central areas during peak brightness",
+      "visible_properties": [
+        "bright",
+        "flickering",
+        "irregular outline",
+        "rapidly changing shape"
+      ],
+      "initial_motion_description": "small orange region flickers and changes shape near the ground",
+      "initial_integrity_description": "diffuse luminous region with no fixed solid boundary",
+      "event_role_hints": [
+        "main visible changing luminous region"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "smoke cloud",
+      "visible_form": "gray-white and orange-tinted opaque cloud surrounding and trailing the flames",
+      "material_description": "soft-edged gray, white, and orange-tinted vapor-like plume",
+      "visible_properties": [
+        "opaque in places",
+        "soft edged",
+        "expanding",
+        "partly obscuring background"
+      ],
+      "initial_motion_description": "faint haze appears near the early flame area",
+      "initial_integrity_description": "diffuse cloud with no sharp boundary",
+      "event_role_hints": [
+        "large changing cloud associated spatially with the flames"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "outdoor background",
+      "visible_form": "blue sky with white clouds, distant trees, and open field visible through the rails",
+      "material_description": "distant landscape and sky",
+      "visible_properties": [
+        "bright sky",
+        "distant tree line",
+        "partly visible through smoke later"
+      ],
+      "initial_motion_description": "no visible motion of background objects",
+      "initial_integrity_description": "background initially visible on the right side",
+      "event_role_hints": [
+        "visibility reference for smoke occlusion"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_4",
+      "relation_description": "small orange flame-like region is located near the gravel ground",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "initial flame-like region is beside the dark side structure",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rails pass above the flame area in the frame",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "background is visible through gaps below and between the rails before later smoke obscures it",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1",
+        "e8"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The camera view is low to the gravel ground with dark horizontal rails crossing the upper frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A small orange flame-like region is visible near the ground beside the dark left structure."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The orange-yellow luminous region rapidly grows outward across the center of the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "A very bright yellow-white center appears within the enlarged orange fireball."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The bright fireball occupies much of the area under the rails."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "Orange flames are visible as a low band along the gravel ground."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "A large orange and gray plume extends upward behind the lower flames."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "Gray-white smoke partly hides the distant trees and sky on the right side."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The large bright fireball is no longer filling the frame."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Lower orange flames continue along a long strip on the gravel."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "A dense gray-white smoke cloud remains above and to the right of the ground flames."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The metal rails keep the same position relative to the frame throughout the clip."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "No scene cut is visible."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "A small orange flame-like region is already present near the ground.",
+        "The luminous region quickly enlarges from the initial area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "changes from a small orange region into a larger orange-yellow region"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary above the changing luminous region"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains visible beneath the flame area"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The fireball reaches its largest visible extent and becomes intensely bright.",
+        "Ground-level flames and a large smoke plume are visible at the same time."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "forms a large bright yellow-white and orange fireball under the rails"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "grows into a broad gray-white and orange-tinted cloud"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "becomes partly obscured by smoke"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The large bright fireball subsides from view.",
+        "A lower line of flames persists along the gravel while smoke remains nearby."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "appears mainly as lower flickering flames along the ground"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "remains as a dense gray-white cloud above and beside the flames"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "continues to appear unchanged and stationary"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12",
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact source object or material producing the visible flames is not clearly visible.",
+    "Parts of the scene are obscured by the bright fireball and later smoke."
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A clear liquid is poured from a transparent spouted vessel into a square container holding yellow liquid, producing surface disturbance and bubbles.",
+  "raw_event_description": "At the start, a square translucent container sits on a light countertop with yellow liquid inside. A transparent spouted vessel appears at the upper left and a clear liquid stream begins entering the yellow liquid. The stream continues for most of the clip, the liquid surface becomes disturbed, pale swirling regions appear, and a cluster of bubbles forms and grows near the stream contact area. Near the end, the stream becomes thinner while the bubble cluster remains on the surface.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The square container and yellow liquid are visible before the pour begins.",
+      "The pouring vessel is not yet clearly positioned over the container in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "square container",
+      "visible_form": "open, square, rounded-corner container with translucent walls",
+      "material_description": "translucent plastic-like appearance",
+      "visible_properties": [
+        "open top",
+        "rounded square rim",
+        "transparent to translucent sides"
+      ],
+      "initial_motion_description": "stationary on the countertop",
+      "initial_integrity_description": "intact container with continuous visible rim and sides",
+      "event_role_hints": [
+        "receives visible liquid stream"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "yellow liquid",
+      "visible_form": "shallow pool inside the container",
+      "material_description": "transparent yellow liquid",
+      "visible_properties": [
+        "glossy surface",
+        "yellow color",
+        "surface reflections"
+      ],
+      "initial_motion_description": "surface appears mostly still before the stream begins",
+      "initial_integrity_description": "continuous liquid volume inside the container",
+      "event_role_hints": [
+        "surface becomes disturbed during the pour"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "spouted vessel",
+      "visible_form": "partially visible transparent vessel with a pouring lip at the upper left",
+      "material_description": "clear glass-like material with bright reflections",
+      "visible_properties": [
+        "transparent body",
+        "curved spout",
+        "reflective highlights"
+      ],
+      "initial_motion_description": "partially visible near the upper left before the main stream appears",
+      "initial_integrity_description": "visible spout and body appear intact",
+      "event_role_hints": [
+        "visible source of the clear stream"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "clear liquid stream",
+      "visible_form": "narrow to wide transparent stream extending from the spouted vessel toward the container",
+      "material_description": "clear transparent liquid",
+      "visible_properties": [
+        "transparent",
+        "continuous stream during most of the event",
+        "narrower near the end"
+      ],
+      "initial_motion_description": "not visible in the first frame",
+      "initial_integrity_description": "absent before onset",
+      "event_role_hints": [
+        "contacts the yellow liquid surface"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "bubble cluster",
+      "visible_form": "small clustered round bubbles on the liquid surface",
+      "material_description": "light-toned foamy bubbles with reflective edges",
+      "visible_properties": [
+        "clustered",
+        "pale",
+        "floating on surface"
+      ],
+      "initial_motion_description": "not visible as a cluster at the start",
+      "initial_integrity_description": "absent before the stream contacts the liquid",
+      "event_role_hints": [
+        "appears near the stream contact area"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "countertop",
+      "visible_form": "flat light-colored surface beneath the container",
+      "material_description": "smooth pale surface",
+      "visible_properties": [
+        "flat",
+        "light colored"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "continuous visible surface",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is inside",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is partially visible near the upper-left edge of the frame",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The square translucent container is on a light-colored countertop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A yellow liquid occupies the bottom portion of the container."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A transparent spouted vessel is partially visible at the upper left."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A clear liquid stream first appears between the spout and the container."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The clear stream contacts the yellow liquid surface inside the container."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The yellow liquid surface shows ripples and disturbed shapes around the contact area."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "Pale cloudy-looking regions appear within the yellow liquid near the stream contact area."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "Small bubbles appear on the liquid surface near the contact area."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The surface bubble cluster is larger and more defined than when it first appeared."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The clear stream becomes thinner near the end of the clip."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The liquid surface level appears higher than at the start."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The container remains in approximately the same position in the frame throughout the clip."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The container holds yellow liquid before the main stream is visible.",
+        "The spouted vessel is partly visible near the upper left."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The container remains stationary on the countertop."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The yellow liquid surface appears mostly still."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The spouted vessel is positioned partly above and to the left of the container."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "A clear stream extends from the vessel spout into the container.",
+        "The yellow liquid surface becomes visibly disturbed.",
+        "Pale regions and small bubbles appear near the stream contact area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The spouted vessel remains partially visible while the stream issues from its lip."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The clear stream continuously enters the container."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The yellow liquid shows ripples, swirling shapes, and pale areas."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Small surface bubbles appear near the stream contact area."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The stream narrows near the end.",
+        "The bubble cluster remains on the surface.",
+        "The liquid appears to occupy a greater height in the container than at the start."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The clear stream changes from a wider stream to a thinner stream."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The bubble cluster appears larger and persists on the liquid surface."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The yellow liquid surface remains disturbed with visible surface texture."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

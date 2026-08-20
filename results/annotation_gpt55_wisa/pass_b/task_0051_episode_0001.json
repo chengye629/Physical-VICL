@@ -1,0 +1,332 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "surfer",
+      "entity_kind": "agent",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e6",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "surfboard",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e4",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "ocean wave",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "medium",
+        "support",
+        "source",
+        "target"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "whitewater and spray",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "medium",
+        "product",
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e8",
+        "e9",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "background ocean",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e14"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "free_surface_motion",
+      "raw_type": "breaking ocean wave curls and expands whitewater around the rider",
+      "object_ids": [
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e8",
+        "e13"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "surfer and surfboard travel along the sloped wave face",
+        "object_ids": [
+          "obj_1",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e1",
+          "e2",
+          "e4",
+          "e6"
+        ]
+      },
+      {
+        "family": "gas_particulate_motion",
+        "type": "aerosol_dispersion",
+        "raw_type": "airborne water spray spreads in a fan behind and around the surfer",
+        "object_ids": [
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no distinct external intervention is shown; the surfer and board are already riding the wave at the first visible moment",
+      "actor_object_id": null,
+      "target_object_ids": [],
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e7",
+        "e8",
+        "e11",
+        "e13"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "surfer changes from a more upright stance to a crouched posture"
+      },
+      "evidence_refs": [
+        "e4",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "surfer descends lower on the wave face while continuing along the wave"
+      },
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "surfer becomes partly hidden and then no longer visible behind spray, foam, and curling water"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "surfboard front end lifts near the crest and the board continues along the wave face"
+      },
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "surfboard becomes only intermittently visible beneath or beside the curling water"
+      },
+      "evidence_refs": [
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "wave face steepens and forms an overhanging curling section"
+      },
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "whitewater and spray spread outward, including a fan-shaped spray behind the surfer and expanded foam near the rider"
+      },
+      "evidence_refs": [
+        "e5",
+        "e8",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "foamy whitewater occupies a larger visible region around the breaking section"
+      },
+      "evidence_refs": [
+        "e8",
+        "e13"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "pressure_gradient",
+      "raw_mechanism": "spatial pressure differences in the moving wave drive the curling free-surface motion and breaking whitewater",
+      "object_ids": [
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "drag",
+      "raw_mechanism": "relative motion between water, surfboard, and rider carries the board along the wave face and contributes to spray generation",
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "viscosity",
+      "raw_mechanism": "liquid water and foam continuously deform and flow as the wave breaks rather than retaining a fixed shape",
+      "object_ids": [
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "foam and suspended spray scatter and block the line of sight, reducing visibility of the surfer and surfboard",
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  ]
+}

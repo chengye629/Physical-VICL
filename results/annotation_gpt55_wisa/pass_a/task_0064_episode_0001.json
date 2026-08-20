@@ -1,0 +1,172 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A green-yellow faceted transparent object continuously changes orientation on a glossy black surface while its reflection and highlights shift.",
+  "raw_event_description": "The video shows a single faceted, transparent green-yellow object on a shiny black surface. At the start it is upright enough to show a rounded crown-like face. Over time it turns through side and lower profiles, with different facets becoming visible. A bright reflected image remains below it on the surface. White, yellow, green, and occasional orange highlights move across the facets during the orientation change. The object remains intact and near the same area of the frame throughout.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The main faceted object is visible against a dark background.",
+      "The glossy surface and the object's reflection are visible at the bottom of the frame.",
+      "The event appears already in progress at the first visible frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "faceted green object",
+      "visible_form": "small cut gemstone-like solid with many flat facets and rounded triangular-to-oval apparent outlines depending on orientation",
+      "material_description": "transparent or translucent green-yellow material with bright white reflective highlights and internal-looking color patches",
+      "visible_properties": [
+        "faceted",
+        "transparent or translucent",
+        "green-yellow coloration",
+        "bright reflective highlights",
+        "rigid-looking outline"
+      ],
+      "initial_motion_description": "The object is already changing visible orientation at the start.",
+      "initial_integrity_description": "The object appears whole and unbroken.",
+      "event_role_hints": [
+        "main visible moving object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "glossy black surface",
+      "visible_form": "flat dark horizontal-looking surface occupying the lower part of the scene",
+      "material_description": "black, shiny, mirror-like surface with a visible reflection of the faceted object",
+      "visible_properties": [
+        "glossy",
+        "dark",
+        "reflective"
+      ],
+      "initial_motion_description": "No independent surface motion is visible.",
+      "initial_integrity_description": "The surface appears continuous and unchanged.",
+      "event_role_hints": [
+        "supporting visible surface",
+        "shows reflection"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The faceted object is positioned immediately above the glossy black surface with a reflected image directly below it.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A faceted green-yellow transparent object is visible near the lower center of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A bright reflected image of the object is visible below it on the black surface."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "The object's visible outline changes from a more upright rounded form to wider side profiles and back through other profiles."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "Different flat facets become visible as the object changes orientation."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "Bright white highlights shift across the object's facets."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "Green, yellow, and occasional orange color patches appear in changing positions within the object."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The object appears wider and lower in the frame during the middle portion."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The object shows another upright or rounded profile late in the sequence."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The object remains visibly intact throughout the sequence."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The black background remains visually unchanged."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The reflected image below the object changes shape and colors along with the object's changing appearance."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e11"
+      ],
+      "observations": [
+        "The faceted object remains on or immediately above the glossy black surface while its apparent orientation changes.",
+        "Its reflection remains visible underneath and changes appearance during the sequence."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The faceted object continuously changes visible orientation, revealing different facets and profiles."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The object keeps a single unbroken visible form."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The surface stays visually stationary and continues showing a reflection of the object."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

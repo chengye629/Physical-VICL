@@ -1,0 +1,291 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A dancer in a mirrored studio transitions from a standing extended-arm pose into a squat, then sits and reclines on the floor.",
+  "raw_event_description": "The scene opens with one person upright near a mirrored wall, with the mirror showing the person's reflection. The person holds the arms extended, tilts the torso, shifts slightly to the viewer's right, bends both knees into a low crouched posture, lowers the hips to the floor, leans the upper body backward, extends one leg along the floor, and ends reclined with one leg bent and the arms spread away from the torso.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The person is already visible in an extended-arm standing pose at the opening frame.",
+      "The mirrored wall, floor, and studio fixtures are clearly visible.",
+      "The person's reflection is visible in the mirror from the start."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "dancer",
+      "visible_form": "adult person with tied-back dark hair, long-sleeved blue top, loose gray pants, and bare or light-colored feet",
+      "material_description": "visible skin, hair, and soft fabric clothing",
+      "visible_properties": [
+        "upright at start",
+        "articulated limbs",
+        "moves continuously",
+        "clearly visible"
+      ],
+      "initial_motion_description": "already holding an extended-arm pose with small visible arm and torso changes",
+      "initial_integrity_description": "body and clothing appear intact with no visible separation or damage",
+      "event_role_hints": [
+        "primary moving person"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "mirrored wall",
+      "visible_form": "large rectangular wall mirror panels spanning much of the left wall",
+      "material_description": "smooth reflective glass-like surface",
+      "visible_properties": [
+        "reflective",
+        "vertical",
+        "stationary",
+        "shows the dancer's reflected image"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "panels appear intact and continuous",
+      "event_role_hints": [
+        "displays reflection of the moving person"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "studio floor",
+      "visible_form": "wide gray floor surface covering the lower part of the scene",
+      "material_description": "smooth matte surface",
+      "visible_properties": [
+        "flat-looking",
+        "stationary",
+        "supports the visible dance positions"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "surface appears continuous with no visible break",
+      "event_role_hints": [
+        "surface contacted by the dancer's feet and later body"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "ballet barre",
+      "visible_form": "horizontal rails mounted along the right wall, also visible in the mirror",
+      "material_description": "wood-toned rails with darker supports",
+      "visible_properties": [
+        "horizontal",
+        "stationary",
+        "wall-mounted"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "rails appear intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_5",
+      "name": "curtains",
+      "visible_form": "tall pale curtains covering windows along the right side",
+      "material_description": "light translucent fabric appearance",
+      "visible_properties": [
+        "vertical folds",
+        "stationary",
+        "partly translucent"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "curtains appear intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_6",
+      "name": "ring light",
+      "visible_form": "circular illuminated light on a stand near the left side of the mirror",
+      "material_description": "bright circular light with dark stand",
+      "visible_properties": [
+        "circular",
+        "illuminated",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the person stands in front of the mirrored wall",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the person's feet are on or very near the gray floor at the start",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "the mirrored wall shows a reflected image of the person",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A person in a blue top and gray pants is upright near a mirrored wall."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The person's arms are extended away from the torso."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "The mirror shows a reflected image of the moving person."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The person's torso tilts backward while the arms remain extended."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The person shifts toward the viewer's right side of the frame."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The person's knees bend and the body descends from standing height."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The person reaches a low crouched posture with both knees bent."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The person's hips move down to the floor while the knees remain bent."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The person's upper body leans backward from a seated posture."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "One of the person's legs extends along the floor while the other leg remains bent."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The person's arms are spread away from the torso while reclining."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The mirrored wall edges remain in fixed positions within the frame."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The dancer remains visibly sharp throughout the clip."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The person is upright near the mirror with arms extended.",
+        "The mirror displays the same person as a reflection."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "holds an extended-arm standing pose and tilts the torso backward"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "shows the reflected image of the person's changing pose"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The person shifts to the viewer's right.",
+        "The person descends into a low crouched posture and then lowers to the floor."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "bends both knees, lowers the body, reaches a crouch, and brings the hips down to the floor"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "is contacted by the person's feet and later by the seated body"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The person transitions from seated to reclined on the floor.",
+        "One leg is extended and the other remains bent near the end."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "leans the upper body backward, extends one leg along the floor, and ends reclined with arms spread"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains a stationary surface under the reclining person"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12",
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

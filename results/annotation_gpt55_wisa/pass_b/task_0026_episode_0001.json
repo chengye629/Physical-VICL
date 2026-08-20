@@ -1,0 +1,349 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "colored sky light bursts",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "target",
+        "product"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "vertical sky light streaks",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "water surface",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e13",
+        "e16"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "shoreline buildings and lights",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "rigid",
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e14"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "right-side pier or bridge structure",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e14"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "tall masts or poles",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e14"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "blue diagonal light beams",
+      "entity_kind": "unknown",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e17"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "explosive_release",
+      "type": "explosion",
+      "raw_type": "repeated aerial colored light bursts that appear, expand into round patterns, and fade",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e6",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "colored sky lights reflected as elongated bands on the rippled water surface",
+        "object_ids": [
+          "obj_1",
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e2",
+          "e7",
+          "e13",
+          "e16"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention or actor; the light events occur in the distant scene",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e12",
+        "e14"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "repeated",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "light_emission_onset",
+        "raw_transition": "new colored point clusters and round sky light patterns appear above the shoreline"
+      },
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e8",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "round arrangements of colored points increase in apparent size and form rings or dense circular patterns"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "intensity_decrease",
+        "raw_transition": "bright colored sky patterns dim after appearing"
+      },
+      "evidence_refs": [
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "the visible sky patterns change among red, white, green, and pink"
+      },
+      "evidence_refs": [
+        "e5",
+        "e8",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "thin bright vertical streaks rise from the shoreline area into the sky"
+      },
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "light_emission_onset",
+        "raw_transition": "brief narrow luminous lines appear near the shoreline before some circular bursts"
+      },
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "intensity_increase",
+        "raw_transition": "elongated reflection bands on the water brighten beneath the sky light bursts"
+      },
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "water reflections shift among blue, red, green, white, and pink as the sky lights change"
+      },
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e13"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": null,
+      "raw_mechanism": "rapid energy release in the distant aerial bursts produces abrupt bright emission and expanding colored point patterns",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e8",
+        "e9",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "the sky bursts and vertical streaks act as visible light sources",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e8",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "light from the sky patterns reflects from the rippled water surface, producing elongated colored bands",
+      "object_ids": [
+        "obj_1",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e13",
+        "e16"
+      ]
+    }
+  ]
+}

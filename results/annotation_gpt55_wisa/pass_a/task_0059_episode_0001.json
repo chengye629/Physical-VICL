@@ -1,0 +1,251 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small tan-and-white dog moves leftward across blue pool water while keeping its head above the surface and producing ripples.",
+  "raw_event_description": "The clip shows a small dog already in the pool, with its head facing left and body extending to the right. Across the clip, the dog steadily advances leftward toward a bright white reflected area on the water. Its head stays above the water, its body remains partly submerged, and small surface ripples and splashes appear around its muzzle, shoulders, sides, and trailing body. The pool water shows a blue tiled floor below and shifting surface reflections throughout.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The dog is already moving in the water at the first visible frame.",
+      "The dog, pool water, tiled floor, and large bright reflection are visible.",
+      "No prior entry into the pool is shown."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "small dog",
+      "visible_form": "small four-legged animal with tan-and-white head and body, pointed ears, narrow muzzle, and tail extending behind",
+      "material_description": "wet-looking tan and white fur visible above and at the water surface",
+      "visible_properties": [
+        "small size relative to pool area",
+        "head held above water",
+        "body partly submerged",
+        "tan-and-white coloration",
+        "tail visible trailing to the right"
+      ],
+      "initial_motion_description": "already moving leftward through the water with its head facing left",
+      "initial_integrity_description": "body appears whole and continuous with no visible damage or separation",
+      "event_role_hints": [
+        "main moving subject"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "pool water",
+      "visible_form": "broad turquoise-blue water surface covering the frame",
+      "material_description": "transparent blue liquid appearance with visible surface ripples and reflections",
+      "visible_properties": [
+        "rippling surface",
+        "transparent enough to show tiled floor below",
+        "bright reflected patches on the left side"
+      ],
+      "initial_motion_description": "surface ripples are visible throughout the frame",
+      "initial_integrity_description": "continuous water surface with no visible breaks except ripples and small splashes",
+      "event_role_hints": [
+        "surrounds the dog",
+        "shows ripples and wake"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "pool tile floor",
+      "visible_form": "grid of small square tiles beneath the water",
+      "material_description": "blue and teal square pattern visible through the water",
+      "visible_properties": [
+        "checker-like square pattern",
+        "stationary background surface",
+        "partly distorted by water surface"
+      ],
+      "initial_motion_description": "no independent motion visible",
+      "initial_integrity_description": "continuous tiled pattern visible under the water",
+      "event_role_hints": [
+        "stationary visual reference"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "bright water reflection",
+      "visible_form": "large irregular white reflected patch along the left side of the water surface",
+      "material_description": "bright white optical reflection on rippling water",
+      "visible_properties": [
+        "high brightness",
+        "irregular edge",
+        "surface shape changes with ripples"
+      ],
+      "initial_motion_description": "its outline wavers with the water surface",
+      "initial_integrity_description": "continuous reflected patch visible on the left side",
+      "event_role_hints": [
+        "near the dog's direction of travel"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the dog is partly immersed in the pool water",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the dog is above the visible tiled pool floor as seen through the water",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the dog begins to the right of the large bright reflection",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The dog's body is partly below the water surface while its head is above the surface."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A blue square tile pattern is visible beneath the dog through the water."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A large bright white reflected patch is visible on the left side of the frame, with the dog positioned to its right."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "The dog keeps its muzzle and eyes above the water surface."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The dog moves leftward across the tiled pool background."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "Small ripples spread outward around the dog's head and body."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "A narrow disturbed trail is visible in the water behind the dog's body."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "Small splashes appear intermittently near the dog's shoulder and side."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The dog is closer to the bright reflected patch than it was at the start."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The bright reflected patch on the left wavers in outline with the moving water surface."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The tiled background remains fixed in the frame while the dog changes position relative to it."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The dog is already in the water, facing left, and located to the right of the bright reflected patch."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The dog begins the visible clip with its head above the water and body partly submerged."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The water surface shows existing ripples around the dog."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The dog continues moving leftward through the water while the surface is disturbed around and behind it."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The dog advances leftward with its head held above the surface."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Ripples and small splashes appear around the dog's head, shoulders, and trailing body."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The dog remains in motion near the left-side reflected area, with continued surface ripples."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The dog is visibly closer to the bright reflected patch than earlier."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The reflected patch continues to change outline with the rippling water surface."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

@@ -1,0 +1,322 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A wide desert landscape remains fixed while a large dark cloud layer and gray vertical veils under it visibly change shape and position over time.",
+  "raw_event_description": "The sequence opens on a scrub-covered desert foreground with low hills along the horizon and a broad brown-gray cloud mass filling most of the sky. A dark horizontal cloud underside spans the middle and right portions of the sky, with a gray vertical veil near the center-left reaching from the cloud base toward the horizon. Over the sequence, the cloud textures reshape, the dark underside becomes more prominent across the center and right, and the gray veils beneath the cloud base shift and vary in width and darkness. Near the later frames, a lighter sky gap is visible below the cloud shelf near the center-right while small darker cloud fragments remain suspended beneath the main cloud layer. The land, hills, and foreground vegetation stay in the same positions in the frame.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The scene already contains the large cloud layer and gray vertical veil at the start.",
+      "The horizon, foreground, and cloud structures are visible across the frame.",
+      "There is no separate visible pre-event state before the cloud changes."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "large overhead cloud layer",
+      "visible_form": "broad continuous cloud mass covering most of the upper frame with rounded, textured, uneven lower surfaces",
+      "material_description": "diffuse brown, tan, gray, and dark gray visible cloud formations",
+      "visible_properties": [
+        "large",
+        "layered",
+        "dark underside",
+        "soft-edged",
+        "textured"
+      ],
+      "initial_motion_description": "ongoing visible reshaping of cloud edges and textures across the sequence; no separate pre-event motion interval is shown",
+      "initial_integrity_description": "continuous cloud layer spanning nearly the full width of the frame at the start",
+      "event_role_hints": [
+        "main changing sky feature"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "dark lower cloud band",
+      "visible_form": "dark horizontal band along the lower edge of the cloud layer, especially prominent across the middle and right sky",
+      "material_description": "dark gray to nearly black diffuse cloud band",
+      "visible_properties": [
+        "horizontal",
+        "low in the sky",
+        "dark",
+        "soft-edged"
+      ],
+      "initial_motion_description": "visible position and outline vary over the sequence",
+      "initial_integrity_description": "appears as a continuous dark band with uneven lower edge",
+      "event_role_hints": [
+        "changing lower boundary of the overhead cloud layer"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "gray vertical veil",
+      "visible_form": "semi-transparent gray vertical region extending downward from the cloud base toward the horizon near the center-left and center",
+      "material_description": "gray, hazy, streaked-looking atmospheric veil",
+      "visible_properties": [
+        "vertical",
+        "semi-transparent",
+        "diffuse",
+        "variable width"
+      ],
+      "initial_motion_description": "visible extent and darkness change over time",
+      "initial_integrity_description": "present as an irregular vertical gray curtain beneath the cloud base at the start",
+      "event_role_hints": [
+        "changing feature beneath the cloud layer"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "desert foreground",
+      "visible_form": "flat to gently uneven ground with scattered low shrubs and bare reddish-brown soil",
+      "material_description": "visible dry-looking soil, rocks, and green-brown vegetation",
+      "visible_properties": [
+        "stationary",
+        "textured ground",
+        "scattered shrubs"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "unchanged continuous landscape surface with intact shrubs",
+      "event_role_hints": [
+        "stationary foreground reference"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "distant hills",
+      "visible_form": "low dark ridgelines along the horizon",
+      "material_description": "dark silhouetted landforms",
+      "visible_properties": [
+        "distant",
+        "low profile",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous horizon ridges visible at the start",
+      "event_role_hints": [
+        "stationary horizon reference"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "lighter sky gap",
+      "visible_form": "pale gray to light blue-gray opening below the cloud shelf near the center-right and right horizon",
+      "material_description": "brighter visible sky area",
+      "visible_properties": [
+        "bright relative to surrounding clouds",
+        "near horizon",
+        "partly covered by dark cloud edges"
+      ],
+      "initial_motion_description": "small brighter areas are visible early and become more exposed later",
+      "initial_integrity_description": "partially visible as a narrow bright region beneath the dark cloud band",
+      "event_role_hints": [
+        "visible contrast area beneath changing cloud edge"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "occupies most of the sky above the horizon",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "lies along the lower edge of the larger cloud layer",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "appears below the cloud base and above the distant horizon",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "fills the lower portion of the frame below the horizon",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A broad brown-gray cloud mass covers most of the upper frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A dark horizontal cloud band is visible along the lower part of the cloud mass."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A gray vertical veil is visible beneath the cloud base near the center-left."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The lower frame contains reddish-brown ground with scattered shrubs."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The textured cloud forms near the upper center change their rounded outlines."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The dark lower cloud band appears thicker across the center and right portions of the sky."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The gray vertical veil beneath the cloud base varies in darkness and width."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "A pale brighter sky region is visible below the dark cloud shelf near the center-right horizon."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "Small darker cloud fragments are visible below the main cloud band near the center."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The foreground shrubs remain in the same positions in the frame."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The distant horizon ridgeline remains in the same position in the frame."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "No scene cut is visible."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene begins with the cloud layer already covering most of the sky.",
+        "The dark cloud band and gray vertical veil are already present."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "occupies most of the upper frame with uneven brown-gray texture"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "forms a dark horizontal underside below the main cloud mass"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "appears as a gray vertical veil below the cloud base"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains still in the lower frame"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The cloud shapes continue changing.",
+        "The dark lower band becomes visually broader across the central and right sky.",
+        "The gray veil changes in apparent width and darkness."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "rounded cloud textures near the upper center reshape"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "dark band appears thicker and more continuous across the center-right"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "vertical veil shifts in outline and tonal density"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "A brighter sky opening is more visible below the dark shelf near the center-right.",
+        "Small darker cloud fragments remain visible beneath the main band.",
+        "The land and horizon remain fixed in the frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "continues as a dark shelf-like band across much of the middle and right sky"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "appears as a pale opening under the cloud edge near the center-right horizon"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "stays stationary along the horizon"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10",
+      "e11",
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact beginning and ending of the cloud-changing process are not shown."
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "hand",
+      "entity_kind": "agent",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e8",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "matchstick",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "combustible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e7",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "flame",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "product",
+        "source"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "partial matchbox",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "dark background",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e13"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "combustion",
+      "type": "sustained_burning",
+      "raw_type": "lit match continues burning with changing flame and darkening match head",
+      "participants": [
+        {
+          "object_id": "obj_2",
+          "role": "burning solid source"
+        },
+        {
+          "object_id": "obj_3",
+          "role": "visible flame"
+        }
+      ],
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5",
+        "e7",
+        "e10",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "light_emission",
+        "raw_type": "flame emits visible yellow-white, orange, and faint bluish-purple light",
+        "participants": [
+          {
+            "object_id": "obj_3",
+            "role": "emissive source"
+          }
+        ],
+        "evidence_refs": [
+          "e2",
+          "e4",
+          "e5",
+          "e6",
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible ignition action; hand holds an already-lit match",
+      "actor_object_id": "obj_1",
+      "target_object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e8"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "mixed",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e7",
+        "e10",
+        "e11",
+        "e13"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "flame grows taller and changes from a smaller rounded shape to a pointed teardrop shape"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "flame shows bright yellow-white and orange regions with a faint bluish-purple lower edge"
+      },
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "thermal_reaction",
+        "type": "material_to_charred",
+        "raw_transition": "match head becomes progressively darker and ends with a broad darkened area"
+      },
+      "evidence_refs": [
+        "e7",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "chemical_energy_release",
+      "raw_mechanism": "combustion at the match head releases energy that sustains the visible flame and blackens the head material",
+      "linked_process": "primary",
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "the flame acts as a visible light-emitting region",
+      "linked_process": "secondary",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "buoyancy",
+      "raw_mechanism": "upward motion of hot gases gives the flame its taller teardrop form",
+      "linked_process": "primary",
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    }
+  ]
+}

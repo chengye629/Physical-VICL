@@ -1,0 +1,243 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "guitar headstock and neck",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "human hand",
+      "entity_kind": "agent",
+      "event_roles": [
+        "actor"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "black rectangular case",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "wooden cabinet",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "plaid curtain",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": []
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "relation_reconfiguration",
+      "type": "rearrangement",
+      "raw_type": "fingertip contact arrangement on the guitar strings changes",
+      "event_roles": {
+        "actor": [
+          "obj_2"
+        ],
+        "target": [
+          "obj_1"
+        ]
+      },
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "special",
+        "type": "other",
+        "raw_type": "camera framing shifts and foreground focus softens",
+        "event_roles": {},
+        "evidence_refs": [
+          "e7",
+          "e8",
+          "e10",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "loading",
+      "type": null,
+      "raw_action": "hand changes fingertip loading and placement on the strings",
+      "actor_object_ids": [
+        "obj_2"
+      ],
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "gradual",
+      "process_scope": "mixed"
+    }
+  },
+  "impacts": [
+    {
+      "impact_id": "imp_1",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "fingers make small position changes near the strings"
+      },
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "impact_id": "imp_2",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_loss",
+        "raw_transition": "some fingers lift or move away from the fretboard and string contact area"
+      },
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "impact_id": "imp_3",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "the hand becomes partly cropped by the left edge of the frame"
+      },
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "impact_id": "imp_4",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_loss",
+        "raw_transition": "fewer fingertips remain visibly near or on the guitar string area"
+      },
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "impact_id": "imp_5",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "the headstock shifts toward the frame edge, becomes softer in focus, and is mostly outside the frame near the end"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "impact_id": "imp_6",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "the black rectangular case becomes more visible in the background"
+      },
+      "evidence_refs": [
+        "e9"
+      ]
+    },
+    {
+      "impact_id": "imp_7",
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "the wooden cabinet becomes more visible at the right side of the frame"
+      },
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "mechanism_id": "mech_1",
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "contact forces from the hand alter which fingertips remain on or near the strings",
+      "applies_to_process": "primary",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4"
+      ]
+    }
+  ]
+}

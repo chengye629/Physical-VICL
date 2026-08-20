@@ -1,0 +1,453 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "fountain pool",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "container",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "vertical fountain jets",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "product"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "translucent",
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e11",
+        "e15"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "arcing water stream",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "product"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "translucent",
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "large spray plume",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "target",
+        "product"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "translucent",
+        "reflective"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "foreground string lights",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "building facade",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e9",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "colored illumination",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e8",
+        "e14"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "jetting",
+      "raw_type": "sustained illuminated fountain water jets with changing heights",
+      "object_ids": [
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6",
+        "e11",
+        "e15"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "fluid_motion",
+        "type": "spraying",
+        "raw_type": "broad water spray sheets and misty plumes forming above and beside the jets",
+        "object_ids": [
+          "obj_4",
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e7",
+          "e10"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "illumination_change",
+        "raw_type": "visible fountain lighting shifts from blue and cyan toward purple, pink, and magenta",
+        "object_ids": [
+          "obj_7",
+          "obj_1",
+          "obj_2",
+          "obj_3",
+          "obj_4",
+          "obj_6"
+        ],
+        "evidence_refs": [
+          "e8",
+          "e11",
+          "e14"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "colored light reflects from the pool surface and building facade",
+        "object_ids": [
+          "obj_1",
+          "obj_6",
+          "obj_7"
+        ],
+        "evidence_refs": [
+          "e8",
+          "e14"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the fountain display is already active at the start",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_2",
+        "obj_3",
+        "obj_4",
+        "obj_7"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e13"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "mixed",
+      "process_scope": "mixed",
+      "raw_temporal_description": "continuous fountain jetting and spraying persists through the sequence while water shapes and visible colors change; the camera also reframes upward and rightward",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e15"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "the vertical jet columns change visible height and shape over time"
+      },
+      "evidence_refs": [
+        "e6",
+        "e11",
+        "e15"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "the vertical jets shift from blue/cyan illumination to purple and pink tones"
+      },
+      "evidence_refs": [
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "the curved stream appears as a broader pale spray arc with droplets across the upper right and center"
+      },
+      "evidence_refs": [
+        "e4",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "the bright plume expands into a broad curved spray sheet"
+      },
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "sprayed water spreads into misty, diffuse edges over a larger region"
+      },
+      "evidence_refs": [
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "the dominant visible illumination changes from blue/cyan to purple, pink, and magenta"
+      },
+      "evidence_refs": [
+        "e8",
+        "e11",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "the pool and water surface regions show changing colored illumination"
+      },
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "colored light remains visible on the facade and varies with the fountain lighting"
+      },
+      "evidence_refs": [
+        "e8",
+        "e14"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "pressure_gradient",
+      "raw_mechanism": "pressurized water flow drives the upward and arcing fountain jets",
+      "object_ids": [
+        "obj_2",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e15"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity contributes to the curved paths and falling spread of the water streams and spray",
+      "object_ids": [
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e10"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "drag",
+      "raw_mechanism": "air resistance perturbs and spreads the fine water droplets at the edges of the spray",
+      "object_ids": [
+        "obj_4",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "liquid surface tension helps maintain coherent streams and governs breakup into droplets",
+      "object_ids": [
+        "obj_2",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "display lighting produces the visible colored illumination on the water and surrounding surfaces",
+      "object_ids": [
+        "obj_7",
+        "obj_1",
+        "obj_2",
+        "obj_3",
+        "obj_4",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e11",
+        "e14"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "mist and spray scatter light, producing bright diffuse plume edges and glare",
+      "object_ids": [
+        "obj_4",
+        "obj_3",
+        "obj_7"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "the reflective pool surface and glass facade reflect the colored fountain light",
+      "object_ids": [
+        "obj_1",
+        "obj_6",
+        "obj_7"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e14"
+      ]
+    }
+  ]
+}

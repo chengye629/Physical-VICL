@@ -1,0 +1,332 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "Two hands manipulate a translucent decorated sheet in a clear tray containing clear liquid while the sheet bends and changes position.",
+  "raw_event_description": "A translucent sheet with colored drawings is held by two hands over and partly inside a clear rectangular tray. At the start, the sheet lies diagonally with a curled upper portion and a lower portion near clear liquid in the tray. The left hand holds the left side while the right hand holds the upper-right folded area. Through the sequence, the sheet is pulled and lifted, its surface forms changing folds and wrinkles, and more of the printed white area becomes upright and visible. The clear liquid surface below shows shifting highlights and rippled outlines. By the end, the sheet is more raised and sloped relative to the tray rim, with part of it still near the liquid.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The hands, sheet, tray, and liquid are visible, but parts of the sheet are folded and partly transparent.",
+      "The event is already underway in the first frame.",
+      "Reflections and overlapping transparent surfaces obscure some boundaries."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "decorated translucent sheet",
+      "visible_form": "large thin translucent sheet or bag-like panel with colored printed drawings including blue shapes and green plant-like shapes",
+      "material_description": "glossy translucent plastic-like surface with visible folds and reflections",
+      "visible_properties": [
+        "translucent",
+        "thin",
+        "glossy",
+        "wrinkled",
+        "printed"
+      ],
+      "initial_motion_description": "already being held and slightly repositioned at the start",
+      "initial_integrity_description": "appears continuous with no visible tears or separations",
+      "event_role_hints": [
+        "held by both hands",
+        "changes shape",
+        "changes position relative to the tray"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "clear tray",
+      "visible_form": "rectangular open container with transparent walls and rim",
+      "material_description": "clear rigid-looking glossy material",
+      "visible_properties": [
+        "transparent",
+        "glossy",
+        "rectangular",
+        "open-topped"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "appears intact with continuous walls and rim",
+      "event_role_hints": [
+        "contains clear liquid",
+        "surrounds the lower part of the sheet"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "clear liquid",
+      "visible_form": "transparent liquid surface inside the clear tray",
+      "material_description": "clear reflective fluid with bright highlights",
+      "visible_properties": [
+        "transparent",
+        "reflective",
+        "surface highlights"
+      ],
+      "initial_motion_description": "surface is visible with small changing highlights",
+      "initial_integrity_description": "continuous visible liquid area inside the tray",
+      "event_role_hints": [
+        "surrounds or contacts the lower part of the sheet",
+        "surface appearance changes during manipulation"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "left hand",
+      "visible_form": "human hand at the left side of the frame with fingers curled around the sheet",
+      "material_description": "skin surface with visible fingers and knuckles",
+      "visible_properties": [
+        "skin-toned",
+        "fingered",
+        "partially visible"
+      ],
+      "initial_motion_description": "holds the left side of the sheet with small hand movement",
+      "initial_integrity_description": "visible hand appears intact",
+      "event_role_hints": [
+        "grips sheet",
+        "moves with sheet"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "right hand",
+      "visible_form": "human hand near the upper-right edge gripping a folded part of the sheet",
+      "material_description": "skin surface with visible fingers partly obscured by sheet",
+      "visible_properties": [
+        "skin-toned",
+        "fingered",
+        "partially visible"
+      ],
+      "initial_motion_description": "holds the upper-right area of the sheet",
+      "initial_integrity_description": "visible hand appears intact",
+      "event_role_hints": [
+        "grips sheet",
+        "raises or pulls sheet area"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the sheet spans diagonally over and partly inside the tray",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "the clear liquid is inside the tray",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "the left hand grips the left side of the sheet",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "the right hand grips the upper-right folded area of the sheet",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the lower part of the sheet is near the clear liquid surface",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e6"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A clear rectangular tray with transparent walls occupies the lower part of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A clear reflective liquid surface is visible inside the tray."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A large translucent sheet with colored drawings lies diagonally across the tray opening."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A left-side hand holds the left edge area of the translucent sheet."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A right-side hand holds a folded upper-right area of the translucent sheet."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "early",
+      "observation": "The lower portion of the sheet overlaps the visible liquid area in the tray."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The printed blue shapes on the sheet move upward within the frame relative to the tray rim."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The sheet surface forms changing folds and curved wrinkles."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "Bright reflections on the liquid surface shift beneath the sheet."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The right-hand-held upper portion of the sheet is pulled into a tighter raised fold."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "More of the white printed area of the sheet is visible upright above the tray."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The sheet appears more sloped and raised relative to the front rim of the tray than at the start."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The clear tray remains in approximately the same position in the frame."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "No scene cut is visible during the sequence."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The tray, liquid, sheet, and both hands are already visible at the start."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The decorated translucent sheet is diagonally positioned with a curled upper portion and a lower portion near the liquid."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The left hand holds the left side of the sheet."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The right hand holds the upper-right folded area of the sheet."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The clear liquid surface is visible beneath and around the lower sheet area."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The sheet changes position and shape while remaining held by both hands."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The sheet shifts upward relative to the tray rim and develops changing folds and wrinkles."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The left hand maintains a grip while moving with the sheet edge."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The right hand pulls the upper sheet area into a raised folded shape."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The liquid surface shows shifting bright highlights and rippled outlines."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ],
+      "observations": [
+        "The sheet ends more upright and raised than it was at the beginning of the visible sequence."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The sheet is more sloped above the tray, with a larger central printed area visible."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The tray remains visually stationary and intact."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The clear liquid remains visible in the tray below the sheet."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13",
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact shape and boundary of the lower sheet portion are partly obscured by reflections and transparent overlapping surfaces.",
+    "The starting state before the visible manipulation is not shown."
+  ]
+}

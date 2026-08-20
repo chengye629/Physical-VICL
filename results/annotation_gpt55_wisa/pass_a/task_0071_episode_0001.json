@@ -1,0 +1,258 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A cream-colored liquid surface changes from irregular raised folds into a larger cup-like rim and then a tall smooth sheet with beads and dimples around it.",
+  "raw_event_description": "The video shows a close-up of an opaque beige liquid filling the frame. At the start, the surface is already disturbed, with folded raised sheets, narrow strands, rounded bead tips, and scattered small droplets. The central raised region opens into a rounded cup or ring shape while nearby droplets remain visible, especially toward the upper right. The ring enlarges and smooths, then the central material reshapes into a broad raised sheet with curled edges and small bead-like tips. By the later frames, the sheet becomes taller and more leaf-like in the image, surrounded by rounded mounds, dimples, small holes, and scattered droplets on the same beige surface.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "mid_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The beige liquid and raised structures are visible in the first frame.",
+      "The first frame already contains an ongoing surface disturbance.",
+      "No initiating object or pre-disturbance state is visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "beige liquid mass",
+      "visible_form": "continuous opaque liquid filling the frame, with a changing surface, raised sheets, ridges, strands, cup-like openings, mounds, and dimples",
+      "material_description": "glossy opaque cream-beige material with smooth wet-looking highlights",
+      "visible_properties": [
+        "opaque",
+        "glossy",
+        "smooth-surfaced",
+        "cream-beige color",
+        "forms continuous sheets and thin strands"
+      ],
+      "initial_motion_description": "The first visible state already shows changing raised folds and strands on the liquid surface.",
+      "initial_integrity_description": "The liquid appears as a continuous surface with protruding raised regions and some separated bead-like droplets nearby.",
+      "event_role_hints": [
+        "main visible changing surface",
+        "forms raised rims, sheets, strands, mounds, and dimples"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "small beige droplets",
+      "visible_form": "small rounded beads and tiny spheres scattered near and above the central raised liquid forms",
+      "material_description": "glossy opaque beige material matching the surrounding liquid",
+      "visible_properties": [
+        "round",
+        "small",
+        "glossy",
+        "cream-beige color",
+        "some detached from the main surface"
+      ],
+      "initial_motion_description": "Small droplets are already visible in the first frame; their relative positions change across the sequence.",
+      "initial_integrity_description": "Several droplets appear as separate rounded beads, while some bead-like tips remain attached to thin strands.",
+      "event_role_hints": [
+        "scattered around the changing central surface",
+        "appear as detached beads and bead tips on strands"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "tiny colored specks",
+      "visible_form": "very small dark dots and faint reddish short marks visible on or within the beige liquid area",
+      "material_description": "tiny dark and reddish visible marks against the beige background",
+      "visible_properties": [
+        "small",
+        "dark dots",
+        "faint reddish marks",
+        "thin short marks"
+      ],
+      "initial_motion_description": "No clear independent motion is visible.",
+      "initial_integrity_description": "The specks appear as isolated tiny marks.",
+      "event_role_hints": [
+        "minor visible inclusions or surface marks"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "Small droplets are positioned around the central raised area of the beige liquid, with a visible cluster toward the upper right of the frame.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "Tiny reddish and dark specks are visible against the beige liquid surface.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The frame is filled by a cream-beige liquid surface."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Several small rounded beige droplets are visible around the central raised region, especially in the upper-right area."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The central area contains raised folded beige sheets."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "Thin beige strands extend from the central raised sheets."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A rounded cup-like opening with a raised rim appears near the center-left area."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The raised rim becomes larger and smoother across successive frames."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "A long thin beige strand extends from the right side of the central form and ends in a rounded bead."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The central form becomes a broad smooth raised sheet with curled edges."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "Small bead-like tips are visible along parts of the raised sheet edge."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "Tiny dark dots and faint reddish short marks are visible on or within the beige liquid area."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The surrounding liquid surface contains rounded mounds and small circular dimples or holes."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The shot remains a close-up macro view with no visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The liquid surface is already visibly disturbed at the start.",
+        "Raised folds, strands, and droplets are present before any initiating object is shown."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The beige liquid surface shows raised folded sheets and thin projecting strands."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Small rounded droplets are scattered around the central raised liquid forms."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The central raised material forms a rounded cup-like opening.",
+        "A thin strand with a bead-like end remains visible on the right side of the central form."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The raised liquid reshapes into a larger smooth-rimmed cup or ring form."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Detached small droplets and bead-like tips remain visible near the changing rim."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e11"
+      ],
+      "observations": [
+        "The central cup-like form changes into a taller broad raised sheet.",
+        "The surrounding beige surface shows many mounds and circular dimples."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The raised liquid sheet becomes broad, smooth, and curled along its edges."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Small rounded droplets remain visible around the raised sheet and on some edge tips."
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e10",
+        "e12"
+      ],
+      "observations": [
+        "Tiny colored specks remain visible against the beige liquid.",
+        "The video maintains one close-up view."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "Tiny dark and reddish marks are visible without clear independent motion."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The initiating source of the surface disturbance is not visible.",
+    "It is not visually clear whether the tiny colored specks are on the surface or within the beige liquid."
+  ]
+}

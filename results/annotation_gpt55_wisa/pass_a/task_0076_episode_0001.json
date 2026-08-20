@@ -1,0 +1,322 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A hand holds and tilts a shiny circular disc while another hand rearranges and lifts colored plastic clips on a white tabletop.",
+  "raw_event_description": "At the start, a left hand holds a shiny circular disc near a pile of colored plastic clips on a white surface. The disc is turned and tilted several times, and colored bands on its surface visibly shift. Later, a right hand enters from the lower right, touches the pile of clips, lifts a pink clip, holds it above the surface, rotates it slightly, then lowers it back near the other clips and continues touching nearby yellow, orange, green, and purple clips. The disc remains held in the left hand throughout the visible sequence.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The disc, left hand, and colored clips are already visible at the beginning.",
+      "The disc is already being held near the clips.",
+      "The tabletop and object layout are unobstructed."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "left hand",
+      "visible_form": "human hand visible from above, holding an object between fingers",
+      "material_description": "skin surface visible",
+      "visible_properties": [
+        "brown skin tone",
+        "fingers visible",
+        "partially cropped at left edge"
+      ],
+      "initial_motion_description": "holds the circular disc and makes small turning or tilting motions",
+      "initial_integrity_description": "hand appears intact with visible fingers",
+      "event_role_hints": [
+        "holds disc",
+        "moves disc"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "shiny circular disc",
+      "visible_form": "flat round disc with central circular hole and inner ring",
+      "material_description": "smooth shiny reflective surface with multicolored bands",
+      "visible_properties": [
+        "circular",
+        "thin",
+        "central hole",
+        "rainbow-colored reflections",
+        "silver-toned reflective face"
+      ],
+      "initial_motion_description": "held near the left side of the frame and rotated or tilted slightly",
+      "initial_integrity_description": "disc appears whole, with no visible breaks",
+      "event_role_hints": [
+        "held by left hand",
+        "shows changing colored reflections"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "colored plastic clips pile",
+      "visible_form": "loose group of small clip-shaped objects on the tabletop",
+      "material_description": "bright colored plastic-looking surfaces",
+      "visible_properties": [
+        "multiple colors",
+        "separate pieces",
+        "clip-like shapes",
+        "clustered on right side"
+      ],
+      "initial_motion_description": "initially still on the tabletop",
+      "initial_integrity_description": "individual clips appear intact",
+      "event_role_hints": [
+        "objects touched and rearranged by right hand"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "pink clip",
+      "visible_form": "small pink triangular clip with open center and two jaws",
+      "material_description": "glossy pink plastic-looking surface",
+      "visible_properties": [
+        "pink",
+        "clip-shaped",
+        "triangular side opening",
+        "small"
+      ],
+      "initial_motion_description": "rests among the other clips before being picked up",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "lifted and displayed by right hand"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "right hand",
+      "visible_form": "human hand entering from the lower right, fingers grasping small objects",
+      "material_description": "skin surface visible",
+      "visible_properties": [
+        "brown skin tone",
+        "fingers visible",
+        "partially cropped at lower edge during entry"
+      ],
+      "initial_motion_description": "not visible at the very beginning, then enters and reaches toward the clips",
+      "initial_integrity_description": "visible hand appears intact with fingers",
+      "event_role_hints": [
+        "selects clips",
+        "lifts pink clip",
+        "moves clips"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "white tabletop",
+      "visible_form": "flat white horizontal surface filling the background",
+      "material_description": "smooth light-colored surface with mild reflections",
+      "visible_properties": [
+        "white",
+        "flat",
+        "glossy highlights"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "surface appears continuous in view",
+      "event_role_hints": [
+        "supports clips"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "left hand is in contact with and holding the shiny circular disc",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "disc is positioned to the left of the pile of colored clips",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "colored clips are lying on the white tabletop",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The left hand grips the edge and inner area of the shiny circular disc."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The shiny circular disc is on the left side of the frame and the colored clips are grouped on the right side."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Several colored clips rest directly on the white tabletop."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "Multicolored bands are visible on the reflective face of the disc."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The disc changes orientation in the left hand."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The colored bands on the disc shift positions as the disc orientation changes."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "A right hand enters from the lower right side of the frame."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The right hand touches the group of colored clips."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The right hand grasps a pink clip."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The pink clip is lifted above the tabletop."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "middle",
+      "observation": "The lifted pink clip is held between the right-hand fingers."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "middle",
+      "observation": "The pink clip is rotated slightly while held."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The right hand lowers the pink clip back toward the other clips."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "late",
+      "observation": "The right hand touches nearby yellow, orange, green, and purple clips."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "late",
+      "observation": "The disc remains in the left hand while the right hand handles the clips."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The setup shows a hand-held shiny disc beside a group of colored clips on a white tabletop."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The left hand holds the disc."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The disc shows multicolored reflective bands."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The colored clips remain grouped on the tabletop."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The disc is moved in the left hand while the right hand begins interacting with the clips."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The disc changes orientation and its visible colored bands shift."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The right hand enters and reaches to the clip group."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The pink clip is grasped, lifted, held, and slightly rotated."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e13",
+        "e14",
+        "e15"
+      ],
+      "observations": [
+        "The right hand returns attention to the clip pile while the disc stays held at the left."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The pink clip is lowered back near the other clips."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The right hand touches several clips in the pile."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The disc remains visible in the left hand."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

@@ -1,0 +1,204 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "toy kart",
+      "entity_kind": "articulated_object",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "raw_description": "Small wheeled toy vehicle with a seated red-capped rider figure; first visible entering from the left already moving on the blue track.",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "blue track",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_description": "Bright blue curved plastic-like track with a foreground curve, inner section, and raised circular loop.",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wooden blocks",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_description": "Tan rectangular wooden blocks positioned around and beneath parts of the track.",
+      "evidence_refs": [
+        "e3",
+        "e8"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "green cloth surface",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_description": "Flat green fabric surface supporting the scene setup.",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "blue backdrop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_description": "Vertical blue fabric background behind the track.",
+      "evidence_refs": [
+        "e19"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "yellow pieces",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_description": "Small yellow plastic-like pieces near the lower-right area of the track.",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": null,
+      "raw_type": "track-guided toy kart motion around a curved and raised looped track",
+      "participants": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14",
+        "e15",
+        "e16",
+        "e17",
+        "e18"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the toy kart enters the frame already moving",
+      "actor_ids": [],
+      "target_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e19"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "repeated",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "raw_temporal_description": "The toy kart moves continuously through the visible track path, including more than one visible pass across the raised loop section."
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "The toy kart repeatedly changes travel direction and orientation as it follows the foreground curve, raised loop, inner track section, and then exits the visible area."
+      },
+      "evidence_refs": [
+        "e7",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14",
+        "e15",
+        "e16",
+        "e17",
+        "e18"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "Contact and support from the blue track constrain and redirect the toy kart's rigid motion along the curved and raised loop path; the source of the kart's propulsion is not visible.",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14",
+        "e15",
+        "e16",
+        "e17"
+      ]
+    }
+  ]
+}

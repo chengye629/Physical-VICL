@@ -1,0 +1,208 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "translucent sphere",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "translucent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e5",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "crystalline patterns",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target",
+        "product"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "separated",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "dark granular surface",
+      "entity_kind": "granular_material",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "granular",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "sky background",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e5",
+        "e12"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "phase_transition",
+      "type": "crystallization",
+      "raw_type": "growth of pale crystalline patterns within or on a stationary translucent sphere",
+      "object_ids": [
+        "obj_2",
+        "obj_1"
+      ],
+      "event_roles": [
+        {
+          "object_id": "obj_2",
+          "role": "target"
+        },
+        {
+          "object_id": "obj_2",
+          "role": "product"
+        },
+        {
+          "object_id": "obj_1",
+          "role": "container"
+        },
+        {
+          "object_id": "obj_1",
+          "role": "target"
+        }
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6",
+        "e7",
+        "e9",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "scattering",
+        "raw_type": "increased cloudiness and obscuration as pale crystalline regions spread through the visible sphere",
+        "object_ids": [
+          "obj_1",
+          "obj_2"
+        ],
+        "event_roles": [
+          {
+            "object_id": "obj_1",
+            "role": "target"
+          },
+          {
+            "object_id": "obj_2",
+            "role": "medium"
+          }
+        ],
+        "evidence_refs": [
+          "e6",
+          "e9",
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_ids": [],
+      "target_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e11",
+        "e12"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "phase",
+        "type": "crystallized",
+        "raw_transition": "pale ordered crystalline structures visibly grow from already present patches"
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "crystalline pattern coverage expands across the upper and central regions of the sphere"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "the sphere becomes more milky and semi-opaque, and the clear orange region through it becomes smaller"
+      },
+      "evidence_refs": [
+        "e6",
+        "e9",
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": []
+}

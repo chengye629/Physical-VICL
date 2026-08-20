@@ -1,0 +1,310 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "wooden track",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "switch-like track piece",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "toy locomotive",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "first red carriage",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "second red carriage",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e6",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "red toy house",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "red block structure",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "object_id": "obj_8",
+      "name": "green surface",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "object_id": "obj_9",
+      "name": "toy trees",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e13"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "rightward travel of the toy train along the wooden track",
+      "event_roles": {
+        "target": [
+          "obj_3",
+          "obj_4",
+          "obj_5"
+        ],
+        "support": [
+          "obj_1"
+        ]
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": null,
+        "raw_type": "early visible repositioning or reorientation of the switch-like track piece",
+        "event_roles": {
+          "target": [
+            "obj_2"
+          ],
+          "support": [
+            "obj_1"
+          ]
+        },
+        "evidence_refs": [
+          "e2",
+          "e3"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention acts on the train or the switch-like track piece",
+      "evidence_refs": []
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "mixed",
+      "raw_temporal_description": "an early switch-like piece orientation change is followed by steady rightward train travel while the camera tracks rightward",
+      "camera_observation": {
+        "raw_camera_behavior": "camera framing moves rightward along the track as the train travels",
+        "evidence_refs": [
+          "e12",
+          "e13",
+          "e14"
+        ]
+      }
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "switch-like track piece changes from a diagonal position to a farther-right visible orientation near the turnout"
+      },
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "locomotive enters from the left, moves rightward along the track, and exits the right side of the frame"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "first red carriage follows behind the locomotive while moving rightward along the track"
+      },
+      "evidence_refs": [
+        "e6",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "second red carriage follows the first carriage rightward and remains partly visible near the right edge by the end"
+      },
+      "evidence_refs": [
+        "e6",
+        "e10",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "supported contact with the wooden track guides the rigid train bodies along the track path",
+      "object_ids": [
+        "obj_1",
+        "obj_3",
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "connector-mediated mechanical coupling keeps the carriages following behind the locomotive",
+      "object_ids": [
+        "obj_3",
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e8"
+      ]
+    }
+  ]
+}

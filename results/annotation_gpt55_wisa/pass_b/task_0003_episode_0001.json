@@ -1,0 +1,214 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "smoke plume",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "raw_observation": "Irregular pale gray-white semi-transparent smoke cloud already present near the lower center, with a changing outline.",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "forest trees",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_observation": "Many tall vertical trunks and upper branches remain standing and show no independent visible motion.",
+      "evidence_refs": [
+        "e2",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "foreground tree trunk",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_observation": "Large dark textured tree trunk remains along the right edge of the frame.",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "forest floor",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "raw_observation": "Uneven ground with dry vegetation and brush lies below the smoke area.",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "small low dark object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_observation": "Small low dark solid-looking shape remains still near the smoke area.",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "sky",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "raw_observation": "Clear blue background above the trees becomes more visible as the camera tilts upward.",
+      "evidence_refs": [
+        "e8",
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "gas_particulate_motion",
+      "type": "plume_motion",
+      "raw_type": "existing smoke plume curls, spreads, thins, and shifts upward",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the smoke plume is already present at the start",
+      "actor_object_id": null,
+      "target_object_ids": [],
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "mixed",
+      "raw_temporal": "The smoke plume evolves continuously while the camera also tilts upward over the clip.",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8"
+      ]
+    },
+    "camera": {
+      "raw_camera_behavior": "camera view tilts upward, revealing more treetops and blue sky while the smoke moves lower in the frame",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "smoke spreads into thinner wisps over a larger region"
+      },
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "smoke plume shifts upward relative to the nearby ground"
+      },
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "smoke outline curls and changes shape without a rigid boundary"
+      },
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "buoyancy",
+      "raw_mechanism": "upward buoyant transport carries the smoke plume higher through the surrounding air",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "airflow_forcing",
+      "raw_mechanism": "surrounding air motion advects and perturbs the suspended smoke, producing curling and spreading wisps",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    }
+  ]
+}

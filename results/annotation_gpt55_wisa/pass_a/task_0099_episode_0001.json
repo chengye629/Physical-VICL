@@ -1,0 +1,213 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A luminous oval ring with yellow-orange and pink-purple wisps continuously changes shape and brightness against a dark background.",
+  "raw_event_description": "The clip begins with an already-visible glowing oval ring near the center of a dark green-black field. The ring has a darker central opening and a brighter yellow-orange band mostly along the right and lower portions, with pink-purple translucent wisps around and inside it. Over time, the outline flickers, wisps extend and retract, the bright band shifts around the oval, and the overall shape becomes taller and then more rounded while remaining centered in the frame. Near the later portion, the upper and right portions glow more broadly, the surrounding wispy veil spreads outward, and the central dark opening remains visible.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The luminous oval is already present in the first frame.",
+      "The object boundary and central opening are visible against a dark background.",
+      "The event appears to be ongoing rather than beginning from an unaltered setup."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "luminous oval ring",
+      "visible_form": "Irregular vertical oval ring with a dark central opening and many thin, curling, semi-transparent wisps around its edge.",
+      "material_description": "Glowing yellow-orange regions with pink, magenta, and purple translucent areas; no solid surface texture is visible.",
+      "visible_properties": [
+        "bright",
+        "glowing",
+        "semi-transparent edges",
+        "irregular outline",
+        "oval central opening",
+        "flickering wisps"
+      ],
+      "initial_motion_description": "Already flickering and changing outline at the start; small wisps shift along the edge.",
+      "initial_integrity_description": "The oval ring is continuous enough to outline a central opening, but its boundary is ragged and wispy.",
+      "event_role_hints": [
+        "main visible changing object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "dark background",
+      "visible_form": "Uniform dark green-black field filling the frame.",
+      "material_description": "Dark, featureless visual field with no distinct surface texture.",
+      "visible_properties": [
+        "dark",
+        "mostly uniform",
+        "stationary appearance"
+      ],
+      "initial_motion_description": "No visible independent motion.",
+      "initial_integrity_description": "Continuous unbroken background.",
+      "event_role_hints": [
+        "surrounding visual field"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The luminous oval ring is centered within and surrounded by the dark background.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A glowing vertical oval ring is visible near the center of a dark green-black frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The ring has a darker central opening."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The right and lower-right edge of the ring is brighter yellow-orange than much of the interior."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "Thin pink-purple wisps are visible around the ring edge."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The wispy outer boundary changes shape from frame to frame."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The bright yellow-orange band occupies more of the right side of the oval."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The luminous oval appears taller than in the earliest frames."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The central dark opening remains visible while the surrounding glow changes."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The upper portion of the ring becomes a broad bright yellow-orange area."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "A pink-orange wispy veil extends outward around the upper and right sides."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The oval opening becomes more rounded compared with the earlier taller shape."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The dark background remains visually stable and featureless."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The main visible object is already present as a glowing oval with a dark center."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The ring flickers while maintaining an oval outline around a central opening."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The background remains dark and unchanged."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The outline and bright regions of the ring continue changing."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The bright yellow-orange area spreads along the right side and the ring appears taller."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "Pink-purple wisps shift around the perimeter and inside the oval boundary."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The glowing structure remains centered while its wispy outline continues to deform."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The upper region becomes brighter and broader."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The surrounding wisps extend outward and the central opening appears more rounded."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The background stays dark with no visible scene cut."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

@@ -1,0 +1,343 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A white paraglider with a suspended person moves above a reddish cliff edge and green forest while the camera tracks it.",
+  "raw_event_description": "The video shows a continuous outdoor aerial view over reddish eroded ground, a cliff edge, sandy clearings, green treetops, distant buildings, and hills. A white arched paraglider canopy is visible near the center early in the clip with a small person suspended below it by thin lines. Across the sequence, the paraglider and suspended person shift from the area above the sandy clearing and cliff-side trees toward the greener forest area, remaining above the treetops. The canopy keeps a curved ribbed form while its orientation changes slightly, with one side becoming more prominent later. Near the end, several much smaller distant curved canopies are visible in the far right sky. The camera view moves with the main paraglider and the background shifts during the shot.",
+  "observed_scope": "mixed",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The main white arched canopy is already visible above the treeline.",
+      "The suspended person is small but visible below the canopy.",
+      "The surrounding cliff, clearing, trees, buildings, and horizon are visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "main paraglider canopy",
+      "visible_form": "large white curved wing-shaped canopy with ribbed panel lines and a shallow arch shape",
+      "material_description": "opaque white surface with visible segmented rib pattern; underside has pale pink tint in some views",
+      "visible_properties": [
+        "white",
+        "arched",
+        "ribbed",
+        "large relative to suspended person"
+      ],
+      "initial_motion_description": "already moving above the treetops and sandy clearing at the start",
+      "initial_integrity_description": "single continuous inflated-looking curved canopy with no visible tears or separated parts",
+      "event_role_hints": [
+        "main moving visible object above the landscape"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "suspended person",
+      "visible_form": "small human figure hanging below the canopy with legs visible",
+      "material_description": "dark and light clothing or harness areas visible; fine details indistinct due distance",
+      "visible_properties": [
+        "small relative to canopy",
+        "below canopy",
+        "dark-and-light silhouette"
+      ],
+      "initial_motion_description": "moves together with the canopy at the start",
+      "initial_integrity_description": "body and attached equipment remain visually connected as one suspended figure",
+      "event_role_hints": [
+        "person suspended below the main canopy"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "suspension lines",
+      "visible_form": "thin dark lines extending between the canopy and the suspended person",
+      "material_description": "narrow line-like strands visible against the background",
+      "visible_properties": [
+        "thin",
+        "dark",
+        "straight to slightly angled"
+      ],
+      "initial_motion_description": "move with the canopy and suspended person",
+      "initial_integrity_description": "visible as continuous connections between canopy and person",
+      "event_role_hints": [
+        "visible connection between obj_1 and obj_2"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "reddish cliff and sandy ground",
+      "visible_form": "eroded reddish vertical cliff faces with flat sandy clearings and gullies",
+      "material_description": "red-orange exposed earth and pale sandy ground",
+      "visible_properties": [
+        "red-orange",
+        "irregular",
+        "steep cliff edges",
+        "flat sandy patches"
+      ],
+      "initial_motion_description": "no independent motion visible",
+      "initial_integrity_description": "continuous terrain with no visible collapse or fragmentation during the clip",
+      "event_role_hints": [
+        "stationary visible landscape reference"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "green forest",
+      "visible_form": "dense area of rounded green treetops with some bare branches and trunks visible",
+      "material_description": "green foliage and brown-gray trunks or branches",
+      "visible_properties": [
+        "green",
+        "dense",
+        "rounded treetop shapes"
+      ],
+      "initial_motion_description": "no independent motion visible at the video scale",
+      "initial_integrity_description": "tree cover remains continuous with no visible breakage or sudden change",
+      "event_role_hints": [
+        "stationary visible landscape reference below the paraglider"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "distant buildings",
+      "visible_form": "white and light-colored rectangular structures on the distant left horizon area",
+      "material_description": "light-colored rigid-looking building surfaces",
+      "visible_properties": [
+        "rectangular",
+        "white",
+        "distant"
+      ],
+      "initial_motion_description": "no independent motion visible",
+      "initial_integrity_description": "remain intact and unchanged",
+      "event_role_hints": [
+        "distant fixed background objects"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "distant paragliders",
+      "visible_form": "tiny curved canopy shapes in the far right sky late in the clip",
+      "material_description": "small pale curved marks; details indistinct",
+      "visible_properties": [
+        "tiny",
+        "curved",
+        "distant"
+      ],
+      "initial_motion_description": "not visible at the beginning; visible late as small sky objects",
+      "initial_integrity_description": "each visible as a small single curved shape",
+      "event_role_hints": [
+        "additional distant moving sky objects"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is below the main canopy",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "extends between the main canopy and the suspended person",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is above the treetops near the sandy clearing and cliff area",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A large white arched canopy is visible above trees near a reddish cliff and sandy clearing."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A small person-shaped figure is visible below the white canopy."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Thin line-like connections are visible between the canopy and the suspended figure."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The main canopy and suspended figure are positioned above the sandy clearing and near the cliff edge."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The main canopy keeps a smooth curved ribbed shape while moving across the view."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The suspended figure remains below the canopy while both shift relative to the treetop and clearing background."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The main canopy is over a denser green treetop area."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The canopy orientation changes so that one side appears more vertical than earlier."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "Several tiny curved canopy shapes are visible in the far right sky."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The background landscape shifts across the frame while the main paraglider remains near the central viewing area."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "No scene cut is visible during the sequence."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The image stays generally in focus throughout the sequence."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The main paraglider is already in view above the landscape.",
+        "The suspended person and connection lines are visible below the canopy."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "is visible as a white arched canopy above trees near the cliff-side clearing"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "hangs below the canopy as a small dark-and-light figure"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "spans between the canopy and the suspended figure"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The main paraglider remains above the terrain and shifts relative to the clearing, cliff, and treetops.",
+        "The canopy form remains continuous and curved."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "moves across the view above the sandy clearing and treetops while maintaining a ribbed curved outline"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains suspended below the moving canopy"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains a fixed reddish terrain feature with no visible change"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "remains below the paraglider with no visible independent change"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The main paraglider is positioned over a broad green forest area.",
+        "Additional tiny curved canopy shapes are visible far away in the sky."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "continues moving above the treetops with a slightly changed orientation"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "continues hanging below the canopy"
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "becomes visible as several tiny distant curved shapes in the far right sky"
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The camera follows the main paraglider while the landscape shifts in the frame.",
+        "The shot remains continuous and generally focused."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "stays near the central viewing area despite background motion"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "tracking",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10",
+      "e11",
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "medium"
+  },
+  "unresolved_observations": [
+    "Fine details of the suspended person's equipment are not distinguishable.",
+    "The exact number of distant late-appearing canopies is difficult to determine from the small shapes."
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A wooded scene remains largely unchanged while the camera slowly moves through it, with sunlight, shadows, and haze visible among trees and ground vegetation.",
+  "raw_event_description": "The video begins in a forested area with tall tree trunks, dense overhead foliage, low ground plants, and bright sunlight shining through the canopy near the upper center. As time passes, the viewpoint slowly advances and shifts, causing foreground leaves, trunks, shadow bands, and bright patches of vegetation to change their positions within the frame. The trees and ground vegetation maintain their visible forms, and no distinct collision, breakage, or independent object displacement is visible.",
+  "observed_scope": "camera_only",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "Tall tree trunks, foliage, ground vegetation, sunlight, and shadows are visible from the start.",
+      "Many foreground and ground details are dark due to strong contrast between sunlight and shadow.",
+      "No separate onset of a scene-object event is visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "tree trunks",
+      "visible_form": "multiple tall vertical trunks with branching canopy above",
+      "material_description": "dark bark-like surfaces with leafy green canopy attached or nearby",
+      "visible_properties": [
+        "upright",
+        "stationary relative to the ground",
+        "partly silhouetted"
+      ],
+      "initial_motion_description": "no independent motion visible",
+      "initial_integrity_description": "trunks appear intact and continuous",
+      "event_role_hints": [
+        "static scene structure"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "ground vegetation",
+      "visible_form": "dense low grasses or flowering plants covering the forest floor in patches",
+      "material_description": "thin plant stems and small bright leaf or flower-like tips, mostly dark with sunlit highlights",
+      "visible_properties": [
+        "low to the ground",
+        "dense",
+        "sparkling highlights in sunlit areas"
+      ],
+      "initial_motion_description": "no clear independent motion visible",
+      "initial_integrity_description": "vegetation patches appear continuous and intact",
+      "event_role_hints": [
+        "foreground and midground scene surface"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "overhead leaves",
+      "visible_form": "clusters of green leaves and branches framing the upper and right edges",
+      "material_description": "leafy green plant surfaces with dark shadowed areas and sunlit edges",
+      "visible_properties": [
+        "partly occluding sky and sunlight",
+        "irregular leaf shapes",
+        "foreground elements at frame edges"
+      ],
+      "initial_motion_description": "no clear independent motion visible",
+      "initial_integrity_description": "leaf clusters appear intact",
+      "event_role_hints": [
+        "foreground occluders"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "sunlight and haze",
+      "visible_form": "bright glare near the upper center with visible pale beams and misty bands between trees",
+      "material_description": "visible light, glare, and translucent haze; no solid material cue",
+      "visible_properties": [
+        "bright",
+        "partly blocked by canopy",
+        "forms beams through gaps"
+      ],
+      "initial_motion_description": "apparent position and brightness change with camera viewpoint and occlusion",
+      "initial_integrity_description": "light beams and glare are continuously visible",
+      "event_role_hints": [
+        "illumination pattern in the scene"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "ground shadows",
+      "visible_form": "long dark bands stretching across the forest floor between sunlit vegetation patches",
+      "material_description": "dark optical regions on ground vegetation and soil; no solid material cue",
+      "visible_properties": [
+        "elongated",
+        "high contrast",
+        "aligned through the forest floor"
+      ],
+      "initial_motion_description": "shifts in image position with camera movement",
+      "initial_integrity_description": "shadow bands remain continuous",
+      "event_role_hints": [
+        "stationary illumination pattern relative to scene"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "tree trunks stand among and above the low ground vegetation",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "overhead leaves partly cover the upper and right portions of the view",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "sunlight appears between tree trunks and through canopy gaps",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "dark shadow bands lie across the ground vegetation",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e6"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Multiple tall dark tree trunks are visible across the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Low dense vegetation covers most of the forest floor."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Green leaves and branches frame the upper and right edges of the image."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "A bright sun glare is visible through the canopy near the upper center."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "Pale light beams and misty bands are visible between the trees."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "Long dark shadow bands extend across the ground vegetation."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "Foreground and midground scene elements shift their positions in the frame as the viewpoint moves."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "Tree trunks keep upright shapes without visible bending, breaking, or falling."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "Ground vegetation patches keep their overall shapes without a visible separate displacement event."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The forest view continues with no visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The same forest environment remains visible throughout the clip.",
+        "Apparent shifts of trunks, leaves, vegetation highlights, and shadows are consistent with the changing camera viewpoint."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Tree trunks remain upright and retain their visible forms."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Ground vegetation remains spread across the floor with sunlit highlights appearing in different frame positions."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Overhead and right-edge leaves remain visible as framing elements while their image positions change."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Sun glare and light beams remain visible through gaps in the canopy."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Long shadow bands remain visible across the ground."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "tracking",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e7",
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

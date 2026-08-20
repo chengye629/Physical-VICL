@@ -1,0 +1,246 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A black-and-yellow striped upper cylinder descends onto a brown mound on a round platform, and the mound becomes shorter and wider.",
+  "raw_event_description": "At the start, a brown curled mound sits upright on the center of a round platform while a striped cylindrical tool is suspended above it with a visible gap. The upper cylinder moves downward, contacts the top of the mound, and continues lower. As contact continues, the mound loses height, the curled top bends and disappears under the cylinder, and the brown material spreads outward into a flatter rounded stack. By the end, the striped cylinder remains low above the platform with the brown object flattened between it and the platform.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The upper cylinder, brown mound, and lower platform are all clearly visible.",
+      "A visible air gap separates the upper cylinder from the brown mound.",
+      "The brown mound appears upright and not yet flattened."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "upper striped cylinder",
+      "visible_form": "vertical cylindrical assembly with a lower black-and-yellow striped band and a shiny gray cylindrical section above it",
+      "material_description": "shiny gray metal-like surface above; black and yellow striped exterior on the lower sleeve",
+      "visible_properties": [
+        "circular lower edge",
+        "vertical orientation",
+        "high-contrast diagonal stripes"
+      ],
+      "initial_motion_description": "moves downward from above the brown mound",
+      "initial_integrity_description": "appears rigid and intact throughout the visible sequence",
+      "event_role_hints": [
+        "descends toward the brown mound",
+        "contacts the mound during the event"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "brown mound",
+      "visible_form": "small upright curled mound with rounded stacked contours and a pointed curled top",
+      "material_description": "brown glossy surface with visible folds and highlights",
+      "visible_properties": [
+        "rounded shape",
+        "curled top",
+        "surface wrinkles",
+        "changes shape during contact"
+      ],
+      "initial_motion_description": "stationary on the platform before contact",
+      "initial_integrity_description": "appears as one continuous mound before contact",
+      "event_role_hints": [
+        "located between the upper cylinder and the platform",
+        "visibly flattens and widens during the event"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "lower platform",
+      "visible_form": "large round horizontal platform with gray top and black-and-yellow striped side",
+      "material_description": "gray flat top surface; black and yellow striped cylindrical side",
+      "visible_properties": [
+        "horizontal top",
+        "circular outline",
+        "high-contrast diagonal stripes on side"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears rigid and intact throughout the visible sequence",
+      "event_role_hints": [
+        "supports the brown mound"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "background",
+      "visible_form": "plain light-colored vertical backdrop",
+      "material_description": "pale textured surface",
+      "visible_properties": [
+        "stationary background",
+        "fine vertical and horizontal texture"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "unchanged",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "sits on the top surface of",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is above and separated by a visible gap from",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The brown mound is centered on the gray top of the lower round platform."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A visible gap separates the lower edge of the upper striped cylinder from the top of the brown mound."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The upper striped cylinder moves downward relative to the stationary platform."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The lower edge of the upper striped cylinder touches the curled top of the brown mound."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The curled top of the brown mound bends sideways beneath the upper cylinder."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The visible height of the brown mound decreases."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The brown mound widens outward near the platform surface."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The brown object appears as a flatter rounded stack between the upper cylinder and the platform."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The upper striped cylinder remains low over the brown object."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The lower platform remains in the same visible position in the frame."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The brown mound is upright on the platform while the upper cylinder descends from above."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "moves downward toward the brown mound"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains upright on the platform before contact"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains stationary"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The upper cylinder contacts the brown mound and continues lower while the mound changes shape."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "contacts the top of the brown mound and continues downward"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "its curled top bends under the cylinder, its height decreases, and its lower portion widens"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "continues supporting the brown object"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The brown object is visibly flatter and wider under the low-positioned upper cylinder."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains low over the flattened brown object"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "appears as a flattened rounded stack between the cylinder and platform"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "shows no visible deformation or displacement"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

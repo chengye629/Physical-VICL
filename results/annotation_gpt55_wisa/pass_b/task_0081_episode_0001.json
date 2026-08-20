@@ -1,0 +1,391 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "square container",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "translucent"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "yellow liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e7",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "spouted vessel",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "clear liquid stream",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "source",
+        "target"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "transparent"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "bubble cluster",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "countertop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "pouring",
+      "raw_type": "clear liquid poured from a spouted vessel into yellow liquid in a container",
+      "participants": [
+        "obj_2",
+        "obj_3",
+        "obj_4",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e10",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "ripples and disturbed liquid surface around the stream contact area",
+        "participants": [
+          "obj_2",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6"
+        ]
+      },
+      {
+        "family": "fluid_motion",
+        "type": "mixing",
+        "raw_type": "pale swirling regions form within the yellow liquid near the incoming stream",
+        "participants": [
+          "obj_2",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e7"
+        ]
+      },
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "surface bubbles appear and grow near the pour contact area",
+        "participants": [
+          "obj_2",
+          "obj_5",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e8",
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "fluid_handling",
+      "type": "pour",
+      "raw_action": "pouring liquid from the transparent spouted vessel into the container",
+      "actor_object_id": null,
+      "tool_object_id": "obj_3",
+      "target_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "liquid_emission_onset",
+        "raw_transition": "clear liquid stream first appears from the spout"
+      },
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "material_transfer",
+        "raw_transition": "clear liquid moves from the spouted vessel into the container"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "geometry",
+        "type": "contracted",
+        "raw_transition": "visible stream narrows near the end of the clip"
+      },
+      "evidence_refs": [
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "yellow liquid surface changes from mostly still to rippled and disturbed"
+      },
+      "evidence_refs": [
+        "e2",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "mixing",
+        "raw_transition": "pale cloudy-looking regions appear and swirl within the yellow liquid near the stream contact area"
+      },
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "liquid amount in the container increases, with the surface level appearing higher than at the start"
+      },
+      "evidence_refs": [
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "small surface bubbles appear and grow into a larger cluster near the stream contact area"
+      },
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "containment_gain",
+        "raw_transition": "container receives additional liquid during the pour"
+      },
+      "evidence_refs": [
+        "e5",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity-driven transfer of liquid from the elevated spouted vessel into the lower container",
+      "supports_processes": [
+        "fluid_motion"
+      ],
+      "object_ids": [
+        "obj_3",
+        "obj_4",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "sustained_pressure",
+      "raw_mechanism": "incoming liquid stream applies sustained local forcing to the yellow liquid surface, producing ripples and disturbance",
+      "supports_processes": [
+        "fluid_motion"
+      ],
+      "object_ids": [
+        "obj_4",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "viscosity",
+      "raw_mechanism": "fluid resistance shapes the swirling motion and mixing of the two visible liquid regions",
+      "supports_processes": [
+        "fluid_motion"
+      ],
+      "object_ids": [
+        "obj_2",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "liquid surface interfaces support the formation and persistence of small bubbles on the surface",
+      "supports_processes": [
+        "fluid_motion"
+      ],
+      "object_ids": [
+        "obj_2",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "family": "energy_reaction",
+      "type": "mass_transport",
+      "raw_mechanism": "incoming liquid carries material into the container, increasing the liquid volume and contributing to visible mixing",
+      "supports_processes": [
+        "fluid_motion"
+      ],
+      "object_ids": [
+        "obj_4",
+        "obj_2",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e11"
+      ]
+    }
+  ]
+}

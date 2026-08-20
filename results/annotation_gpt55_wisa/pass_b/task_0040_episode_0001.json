@@ -1,0 +1,301 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "circular sky light burst",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e6",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "side vertical light streaks",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "smoke or haze patches",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "medium",
+        "product"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "water surface",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "shoreline structures and lights",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "sky",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium",
+        "container"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e8"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "optical_interaction",
+      "type": "light_emission",
+      "raw_type": "expanding firework-like sky light emission with color change and fading",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e6",
+        "e9",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "bright sky and shoreline lights reflected on the water surface",
+        "object_ids": [
+          "obj_1",
+          "obj_4",
+          "obj_5"
+        ],
+        "evidence_refs": [
+          "e7"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the circular light burst is already present at the start",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e9",
+        "e10",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "compact circular light cluster enlarges into a larger round radial pattern"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "dominant light color changes from pink-white toward red, orange, and pale gold"
+      },
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "intensity_decrease",
+        "raw_transition": "bright radial light streaks dim until only faint dotted arcs remain"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "radial light streaks spread outward over a larger circular region"
+      },
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "intensity_decrease",
+        "raw_transition": "side vertical light streaks become less prominent as the sky light pattern fades"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "faint cloudy haze patches become visible around and below the bright circular pattern"
+      },
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "illumination_gain",
+        "raw_transition": "bright vertical reflected light patterns appear on the water below the sky lights"
+      },
+      "evidence_refs": [
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "visible light from the sky burst produces the bright colored circular pattern",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "light from the sky pattern and shoreline redirects from the reflective water surface",
+      "object_ids": [
+        "obj_1",
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "faint suspended haze scatters or carries illumination around the bright burst",
+      "object_ids": [
+        "obj_3",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e8"
+      ]
+    }
+  ]
+}

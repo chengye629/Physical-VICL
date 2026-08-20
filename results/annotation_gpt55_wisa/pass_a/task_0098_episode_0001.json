@@ -1,0 +1,239 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A wooded waterway remains in view while the water surface shows ongoing ripples, drifting pale flecks, and changing reflections.",
+  "raw_event_description": "The clip opens on a still-framed view of a narrow pond or slow stream surrounded by dense green trees and shrubs. A few rocks protrude above the water near the left and center distance. Across the full clip, the water surface continuously changes: small ripple patterns shift, a brighter disturbed patch near the center channel changes shape, pale specks on the surface appear in scattered positions and some shift slightly, and reflected tree and sky patterns shimmer. The surrounding vegetation, banks, and protruding rocks show no visible independent movement.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The water surface, banks, trees, and protruding rocks are visible from the first frame.",
+      "The visible activity is already underway at the start with no separate onset shown."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "water surface",
+      "visible_form": "broad dark green reflective surface filling the lower and middle part of the frame",
+      "material_description": "visibly liquid-looking reflective surface with small ripples and scattered pale flecks",
+      "visible_properties": [
+        "reflective",
+        "dark green tint",
+        "rippled in places",
+        "partly smooth"
+      ],
+      "initial_motion_description": "surface patterns and small ripples are already changing at the start",
+      "initial_integrity_description": "continuous unbroken surface across the visible waterway",
+      "event_role_hints": [
+        "main changing visible surface"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "tree and shrub banks",
+      "visible_form": "dense green vegetation lining both sides and the far end of the waterway",
+      "material_description": "leafy green plants and tree trunks visible along the banks",
+      "visible_properties": [
+        "dense",
+        "green",
+        "irregular outline",
+        "partly sunlit on the right"
+      ],
+      "initial_motion_description": "no independent visible motion before the ongoing water-surface changes",
+      "initial_integrity_description": "continuous vegetation border around the water",
+      "event_role_hints": [
+        "static surrounding scene",
+        "source of visible reflections on the water"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "protruding rocks",
+      "visible_form": "small gray rounded shapes rising above the water near the left-middle and center-distance areas",
+      "material_description": "gray solid-looking surfaces",
+      "visible_properties": [
+        "gray",
+        "rounded",
+        "partly surrounded by water"
+      ],
+      "initial_motion_description": "no visible movement",
+      "initial_integrity_description": "unchanged solid shapes above the waterline",
+      "event_role_hints": [
+        "fixed reference objects in the water"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "floating pale flecks",
+      "visible_form": "tiny scattered white or pale dots and small specks on the water surface",
+      "material_description": "small light-colored surface marks; exact material not visually identifiable",
+      "visible_properties": [
+        "tiny",
+        "pale",
+        "scattered",
+        "high contrast against darker water"
+      ],
+      "initial_motion_description": "some flecks are visible on the surface at the start; later positions vary slightly",
+      "initial_integrity_description": "individual specks remain small and separated where visible",
+      "event_role_hints": [
+        "small surface markers showing visible position changes"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "water reflections",
+      "visible_form": "inverted green tree shapes and pale sky patches visible on the water surface",
+      "material_description": "optical patterns on the water surface",
+      "visible_properties": [
+        "mirrored",
+        "green and pale",
+        "wavy",
+        "shimmering"
+      ],
+      "initial_motion_description": "reflected shapes are already wavering slightly at the start",
+      "initial_integrity_description": "reflection patterns remain present but continuously change shape",
+      "event_role_hints": [
+        "visible optical scene changes on the water"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "water occupies the channel between the left and right vegetation banks",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "rocks protrude from or sit within the visible water surface",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "pale flecks are located on top of or within the visible water-surface area",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "reflected tree and sky patterns are visible on the water surface",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e6"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The frame shows a green wooded waterway with vegetation along both sides."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Small gray rock shapes protrude above the water near the left-middle and center-distance areas."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "The water surface contains small ripple patterns that change shape over time."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "A brighter disturbed patch near the center channel changes its outline during the clip."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "Tiny pale flecks are visible at scattered locations on the water surface."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "Reflected tree and sky shapes on the water surface shimmer and deform."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The surrounding vegetation keeps the same overall position and shape in the frame."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The protruding rocks keep the same visible positions in the frame."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed with no visible pan, tilt, or zoom."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The visible action is a persistent water-surface process rather than a single discrete impact or transformation."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The water surface shows ongoing small ripple changes and shifting surface texture."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Some tiny pale flecks on the water change visible positions slightly during the clip."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The reflected tree and sky patterns on the water continuously waver and change shape."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The banks and vegetation remain visually fixed in the frame."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The protruding rocks remain visually fixed in the frame."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e9"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact identity of the tiny pale flecks on the water surface is not visually determinable."
+  ]
+}

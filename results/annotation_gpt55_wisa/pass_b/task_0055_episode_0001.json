@@ -1,0 +1,293 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "leafy herb pile",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target",
+        "product"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "knife blade",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "cutting board",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "garlic clove",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "yellow citrus pieces",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "separated",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fracture_separation",
+      "type": "cutting_separation",
+      "raw_type": "knife blade cutting and separating leafy herbs",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e7",
+        "e8"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "deformation",
+        "type": "bending_deformation",
+        "raw_type": "leaves and stems bend as the blade passes through",
+        "object_ids": [
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e5"
+        ]
+      },
+      {
+        "family": "contact_loading",
+        "type": "shear_loading",
+        "raw_type": "blade contact loads and shears the herbs",
+        "object_ids": [
+          "obj_1",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e4",
+          "e5"
+        ]
+      },
+      {
+        "family": "relation_reconfiguration",
+        "type": "rearrangement",
+        "raw_type": "loose herb pieces are redistributed around the blade on the board",
+        "object_ids": [
+          "obj_1",
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e6",
+          "e7"
+        ]
+      }
+    ],
+    "action": {
+      "family": "separation",
+      "type": "cut",
+      "raw_action": "a metal knife blade moves through the herb pile to cut it",
+      "actor_ids": [],
+      "tool_ids": [
+        "obj_2"
+      ],
+      "target_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "integrity",
+        "type": "fragmented",
+        "raw_transition": "dense leafy herb pile becomes partly separated into loose leaves, stems, and small herb pieces"
+      },
+      "evidence_refs": [
+        "e5",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "bent",
+        "raw_transition": "leaves and stems change shape and bend near the blade"
+      },
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "leafy stems and loose herb pieces spread outward toward the left and front of the main pile"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "knife blade moves into the herb pile and remains close to the cutting board among the herbs"
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "knife blade establishes contact with the leafy herb pile"
+      },
+      "evidence_refs": [
+        "e4",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "deposition",
+        "raw_transition": "loose green leaves and small herb pieces become visible on the cutting board"
+      },
+      "evidence_refs": [
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "shear",
+      "raw_mechanism": "the moving sharp blade applies tangential shear to the leaves and stems, driving separation",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e7"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "sustained_pressure",
+      "raw_mechanism": "blade contact applies localized pressure while passing through the herb material",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "thin flexible plant material bends under loading and separates into loose pieces",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    }
+  ]
+}

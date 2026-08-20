@@ -1,0 +1,266 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A flooded wooded area remains in view while the water surface continuously ripples and reflects trees and foliage.",
+  "raw_event_description": "The video shows standing water among multiple tree trunks, with a muddy bank and leafy plants in the foreground at the left. Across the clip, the scene remains largely unchanged: small bright leaves or debris float on the water, tree and foliage reflections shimmer, and small ripples move across the water surface. The camera framing drifts slightly while no discrete object impact, breakage, or large translation is visible.",
+  "observed_scope": "mixed",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The flooded woodland, tree trunks, muddy bank, floating debris, and reflective water surface are visible from the beginning.",
+      "The visible activity is already ongoing in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "water surface",
+      "visible_form": "broad shallow-looking flooded surface extending through the wooded area",
+      "material_description": "transparent to greenish-brown reflective liquid surface with visible reflections",
+      "visible_properties": [
+        "reflective",
+        "partly transparent",
+        "rippled",
+        "greenish-brown appearance"
+      ],
+      "initial_motion_description": "small ripples and shimmering reflection changes are already visible",
+      "initial_integrity_description": "continuous unbroken surface across the visible flooded area",
+      "event_role_hints": [
+        "main visible changing surface"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "tree trunks",
+      "visible_form": "multiple vertical dark trunks standing in the flooded area",
+      "material_description": "dark bark-like surfaces with green foliage above",
+      "visible_properties": [
+        "vertical",
+        "dark",
+        "partly submerged at bases"
+      ],
+      "initial_motion_description": "no independent visible motion",
+      "initial_integrity_description": "upright and intact",
+      "event_role_hints": [
+        "stationary background objects reflected in water"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "floating leaves and debris",
+      "visible_form": "small pale flat pieces scattered on the water surface",
+      "material_description": "light-colored thin leaf-like or debris-like pieces",
+      "visible_properties": [
+        "small",
+        "flat",
+        "pale",
+        "floating"
+      ],
+      "initial_motion_description": "positions appear mostly steady with subtle changes during the clip",
+      "initial_integrity_description": "separate small pieces remain intact",
+      "event_role_hints": [
+        "visible markers on the water surface"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "muddy bank",
+      "visible_form": "irregular wet mud area in the lower-left foreground",
+      "material_description": "dark wet soil or mud with sticks and small debris on it",
+      "visible_properties": [
+        "dark",
+        "wet-looking",
+        "irregular surface"
+      ],
+      "initial_motion_description": "no independent visible motion",
+      "initial_integrity_description": "continuous uneven bank surface",
+      "event_role_hints": [
+        "foreground boundary of the flooded area"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "foreground vegetation",
+      "visible_form": "green leafy plants along the left edge and upper wooded area",
+      "material_description": "green leaves and thin stems or branches",
+      "visible_properties": [
+        "green",
+        "leafy",
+        "partially occluding left edge"
+      ],
+      "initial_motion_description": "no clear independent motion distinguishable from camera drift",
+      "initial_integrity_description": "intact leafy clusters",
+      "event_role_hints": [
+        "foreground and background visual frame"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "water reflections",
+      "visible_form": "mirrored shapes of tree trunks, branches, sky, and green foliage on the water surface",
+      "material_description": "optical reflected patterns on the liquid surface",
+      "visible_properties": [
+        "bright and dark mirrored patches",
+        "distorted by ripples",
+        "changing shape"
+      ],
+      "initial_motion_description": "reflection patterns shimmer and distort continuously",
+      "initial_integrity_description": "continuous reflected pattern across much of the water",
+      "event_role_hints": [
+        "visible optical pattern changing with the water surface"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "tree trunks extend downward into the flooded area",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "small pale pieces lie on top of the visible water surface",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "muddy bank borders the water in the lower-left foreground",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "reflected tree and foliage patterns appear on the water surface",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "Multiple dark tree trunks stand within the visible flooded area."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "A dark wet muddy bank occupies the lower-left foreground."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "The water surface shows reflections of tree trunks, branches, bright sky patches, and green foliage."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "Small pale flat pieces are scattered on the water surface."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "Small ripples are visible across the water surface throughout the clip."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "Reflected shapes on the water shimmer and change shape over time."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "No large object enters or exits the visible flooded area."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The camera framing shifts slightly during the clip."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The visible tree trunks remain upright and intact."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The water level relative to the visible tree bases appears visually steady."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "There is no visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The flooded woodland remains visible with standing tree trunks, a muddy bank, floating debris, and reflective water.",
+        "The water surface continuously displays small ripples and changing reflections.",
+        "No discrete collision, breakage, or large object displacement is visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The water surface continuously ripples."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The reflected tree and foliage patterns continuously shimmer and distort."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The tree trunks remain visibly stationary and upright."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The small pale floating pieces remain scattered on the water surface."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The muddy bank remains fixed in the foreground."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "handheld",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e8",
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

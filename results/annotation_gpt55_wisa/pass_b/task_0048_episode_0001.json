@@ -1,0 +1,266 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "main paraglider canopy",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "suspended person",
+      "entity_kind": "agent",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e6"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "suspension lines",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e6"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "reddish cliff and sandy ground",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "mixed",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "green forest",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e7"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "distant buildings",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": []
+    },
+    {
+      "id": "obj_7",
+      "name": "distant paragliders",
+      "entity_kind": "unknown",
+      "event_roles": [],
+      "material_phase": "unknown",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "sustained gliding translation of the paraglider canopy and suspended person above the terrain",
+      "participants": [
+        "obj_1",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the paraglider is already moving at the start of the clip",
+      "actors": [],
+      "targets": [],
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e11"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "mixed",
+      "raw_temporal_description": "the main paraglider continues moving through a continuous tracked shot while the background shifts in the frame",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the main canopy changes position relative to the cliff-side clearing and treetops, ending over a denser green forest area"
+      },
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the canopy orientation changes slightly, with one side appearing more vertical late in the clip"
+      },
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the suspended person moves together with the canopy across the landscape backdrop"
+      },
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the suspension lines move with the canopy and suspended person while remaining visibly between them"
+      },
+      "evidence_refs": [
+        "e3",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "several tiny distant curved canopy shapes become visible in the far right sky late in the clip"
+      },
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "airflow_forcing",
+      "raw_mechanism": "moving air exerts distributed aerodynamic force on the arched canopy during the sustained above-ground glide",
+      "applies_to": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e7"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity acts on the canopy-person system while it remains suspended above the treetops",
+      "applies_to": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "tension",
+      "raw_mechanism": "the suspension lines carry tensile loading between the canopy and the hanging person",
+      "applies_to": [
+        "obj_3",
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e6"
+      ]
+    }
+  ]
+}

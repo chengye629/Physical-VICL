@@ -1,0 +1,356 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A nighttime illuminated fountain display shows changing colored vertical jets, arcing water streams, and broad sprays while the camera reframes upward along nearby buildings.",
+  "raw_event_description": "The video begins with a wide view of a fountain pool at night, with many warm small lights in the foreground and blue/cyan illuminated water jets across the pool. Several narrow vertical jets are active, a curved water stream crosses from the right side toward the center, and a bright tall plume is visible near the right side. As the sequence continues, the row of vertical jets becomes more evenly visible, the colors shift from blue/cyan toward purple, pink, and magenta, and broad spray sheets form above the jets. Later, the camera tilts and pans upward/right so the glass building facade and upper stories occupy more of the frame while the fountain jets remain active near the bottom and right edges.",
+  "observed_scope": "mixed",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The fountain activity is already underway in the first frame.",
+      "The main water jets, pool, foreground lights, and building are visible.",
+      "Bright illumination and spray obscure some exact jet origins and pool details."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "fountain pool",
+      "visible_form": "broad horizontal water basin occupying the lower part of the scene",
+      "material_description": "reflective liquid surface with blue, cyan, purple, and pink illumination",
+      "visible_properties": [
+        "reflective",
+        "colored illumination",
+        "partly obscured by spray and glare"
+      ],
+      "initial_motion_description": "surface details are mostly obscured by light and active jets",
+      "initial_integrity_description": "appears continuous as a single pool area",
+      "event_role_hints": [
+        "contains the visible fountain jets"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "vertical fountain jets",
+      "visible_form": "multiple narrow upright water columns arranged in rows across the pool",
+      "material_description": "bright translucent water columns with colored illumination",
+      "visible_properties": [
+        "cyan/blue at first",
+        "later purple/pink",
+        "varying heights",
+        "repeated spacing"
+      ],
+      "initial_motion_description": "several vertical jets are already rising from the pool in the first frame",
+      "initial_integrity_description": "individual jets appear continuous but partly broken by mist and glare",
+      "event_role_hints": [
+        "main repeated moving water elements"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "arcing water stream",
+      "visible_form": "curved stream spanning from the right side toward the center-left area",
+      "material_description": "bright translucent water arc with blue, white, and purple tones",
+      "visible_properties": [
+        "curved shape",
+        "thin continuous stream in early frames",
+        "partly separated into droplets in later frames"
+      ],
+      "initial_motion_description": "already visible as a curved stream across the pool",
+      "initial_integrity_description": "appears mostly continuous with some spray along its path",
+      "event_role_hints": [
+        "large curved fountain element"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "large spray plume",
+      "visible_form": "tall bright plume and broad fan-like spray near the right side",
+      "material_description": "white/cyan/purple illuminated water spray",
+      "visible_properties": [
+        "tall",
+        "bright",
+        "misty edges",
+        "broad sheet-like shape during part of the event"
+      ],
+      "initial_motion_description": "a tall bright plume is visible near the right edge at the start",
+      "initial_integrity_description": "edges are diffuse and changing",
+      "event_role_hints": [
+        "largest visible spray feature"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "foreground string lights",
+      "visible_form": "many small warm white points spread across the lower foreground",
+      "material_description": "small bright light points on dark foreground material",
+      "visible_properties": [
+        "warm white",
+        "numerous",
+        "stationary relative to the scene"
+      ],
+      "initial_motion_description": "no independent visible motion",
+      "initial_integrity_description": "appears as a continuous cluster of many small lights",
+      "event_role_hints": [
+        "foreground visual reference"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "building facade",
+      "visible_form": "multi-story glass and wall facade behind the fountain",
+      "material_description": "glass panels, windows, and vertical wall sections reflecting colored light",
+      "visible_properties": [
+        "rectangular window grid",
+        "colored reflections",
+        "stationary background"
+      ],
+      "initial_motion_description": "no independent visible motion",
+      "initial_integrity_description": "appears intact and continuous",
+      "event_role_hints": [
+        "background structure"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "colored illumination",
+      "visible_form": "blue, cyan, purple, pink, magenta, and white light regions on water and building surfaces",
+      "material_description": "visible light coloration and glow",
+      "visible_properties": [
+        "changes color over time",
+        "bright glare in some areas",
+        "reflects on glass surfaces"
+      ],
+      "initial_motion_description": "blue/cyan illumination is visible across the water jets and pool",
+      "initial_integrity_description": "appears as broad colored regions and bright highlights",
+      "event_role_hints": [
+        "visible color-changing component of the display"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "the vertical jets are positioned within the fountain pool",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "the arcing stream passes above the pool and in front of the building",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "the small warm lights occupy the foreground below the fountain view",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "the building facade is behind the fountain display",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Many small warm white light points occupy the lower foreground."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A glass-fronted building facade is visible behind the fountain area."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Several vertical water jets are active across the pool."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A curved water stream extends from the right side toward the center of the frame."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A tall bright white/cyan plume is visible near the right side."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A row of evenly spaced blue vertical jets becomes prominent across the pool."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "A large spray sheet forms above the row of jets near the right and center-right area."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The visible illumination on the jets changes from blue/cyan to purple and pink tones."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The camera framing shifts upward so more of the building facade fills the frame."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "A broad pale purple and white spray arc crosses the upper right and center of the frame."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "Pink and purple vertical jets remain visible near the lower part of the frame."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The foreground string lights occupy less of the frame after the upward/rightward camera reframing."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "No scene cut is visible during the sequence."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "Colored light appears on the building facade throughout much of the sequence."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "continuous",
+      "observation": "The visible heights and shapes of the water jets vary over time."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The fountain display is already active at the start.",
+        "Blue/cyan illumination dominates the pool and jets."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "Multiple vertical jets stand upright from the pool."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "A curved stream spans from the right side toward the center."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "A bright plume is visible near the right side."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Foreground string lights remain stationary relative to the scene."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e14",
+        "e15"
+      ],
+      "observations": [
+        "The repeated row of jets becomes more prominent.",
+        "The dominant visible colors shift toward purple and pink."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The vertical jets continue with changing visible heights."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The right-side spray expands into a broad curved sheet."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "Illumination on the water changes from blue/cyan toward purple and pink."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "Colored light remains visible on the building facade."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e14",
+        "e15"
+      ],
+      "observations": [
+        "Large pale spray occupies the right and upper parts of the view.",
+        "Pink and purple jets remain visible along the lower frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "A broad curved spray arc is visible across the upper right and center."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Vertical jets continue near the lower edge of the frame."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "Bright purple, pink, cyan, and white illumination remains visible on water and building surfaces."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "mixed",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e9",
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "medium"
+  },
+  "unresolved_observations": [
+    "Exact jet outlets are partly hidden by bright light, spray, and the pool edge.",
+    "Some water boundaries are difficult to separate where glare and mist overlap."
+  ]
+}

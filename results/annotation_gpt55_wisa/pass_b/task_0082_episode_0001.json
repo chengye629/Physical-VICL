@@ -1,0 +1,352 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "tall glass",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e15"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "ice pieces",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "translucent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "separated",
+      "evidence_refs": [
+        "e2",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "dark pouring container",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "actor",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "liquid stream",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "glass contents liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e10",
+        "e11",
+        "e15"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "left ridged clear object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "table surface",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "pouring",
+      "raw_type": "clear liquid pours from the dark container into the ice-filled glass",
+      "participant_object_ids": [
+        "obj_3",
+        "obj_4",
+        "obj_1",
+        "obj_2",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "fluid_motion",
+        "type": "mixing",
+        "raw_type": "incoming clear liquid mixes with the cloudy liquid already in the glass",
+        "participant_object_ids": [
+          "obj_4",
+          "obj_5"
+        ],
+        "evidence_refs": [
+          "e10",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "fluid_handling",
+      "type": "pour",
+      "raw_action": "the dark container is moved and tilted above the glass to transfer liquid",
+      "actor_object_ids": [
+        "obj_3"
+      ],
+      "target_object_ids": [
+        "obj_1",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e10",
+        "e11",
+        "e13",
+        "e14",
+        "e16"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "liquid_emission_onset",
+        "raw_transition": "a visible liquid stream appears from the container area"
+      },
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "material_transfer",
+        "raw_transition": "the liquid stream moves from the container into the glass opening"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "the amount of visible liquid inside the glass increases"
+      },
+      "evidence_refs": [
+        "e10",
+        "e15"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "the liquid level rises upward inside the glass"
+      },
+      "evidence_refs": [
+        "e10",
+        "e15"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "mixing",
+        "raw_transition": "the lower and middle glass contents become more uniformly cloudy white"
+      },
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "the ice pieces become partly obscured by the cloudy contents and reflections"
+      },
+      "evidence_refs": [
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "the dark container moves into view and is positioned above the glass"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "the dark container withdraws toward the right after pouring"
+      },
+      "evidence_refs": [
+        "e14"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "the tilted source lets the liquid move downward into the open glass",
+      "linked_process_family": "fluid_motion",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "viscosity",
+      "raw_mechanism": "the liquid remains a continuous flowing stream during transfer",
+      "linked_process_family": "fluid_motion",
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "energy_reaction",
+      "type": "mass_transport",
+      "raw_mechanism": "added liquid increases the material volume inside the glass",
+      "linked_process_family": "fluid_motion",
+      "evidence_refs": [
+        "e8",
+        "e10",
+        "e15"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "the increasingly cloudy liquid scatters light through the glass contents, reducing visibility of the ice",
+      "linked_process_family": "fluid_motion",
+      "evidence_refs": [
+        "e11",
+        "e12"
+      ]
+    }
+  ]
+}

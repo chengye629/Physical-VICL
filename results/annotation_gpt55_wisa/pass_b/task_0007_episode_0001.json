@@ -1,0 +1,403 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "upper bright burst",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "target",
+        "source",
+        "product"
+      ],
+      "material_phase": "unknown",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "lower bright cluster",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "source",
+        "target"
+      ],
+      "material_phase": "unknown",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "smoke-like cloud",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "product",
+        "medium"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "water surface",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "medium",
+        "target"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "city skyline",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "light reflections",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "product",
+        "target"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e8"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "explosive_release",
+      "type": "explosion",
+      "raw_type": "firework-like burst expands into a radial colored light pattern",
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "light_emission",
+        "raw_type": "bright colored light emission from upper and lower clusters",
+        "object_ids": [
+          "obj_1",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e2",
+          "e5",
+          "e6",
+          "e7",
+          "e9",
+          "e11"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "colored light reflects as vertical bands on the water surface",
+        "object_ids": [
+          "obj_4",
+          "obj_6"
+        ],
+        "evidence_refs": [
+          "e4",
+          "e8"
+        ]
+      },
+      {
+        "family": "gas_particulate_motion",
+        "type": "plume_motion",
+        "raw_type": "faint smoke-like haze remains and changes around the bright burst",
+        "object_ids": [
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the bright activity is already underway or appears in the sky",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "impact_id": "impact_1",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "light_emission_onset",
+        "raw_transition": "a small pink light appears higher in the sky"
+      },
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "impact_id": "impact_2",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "the small pink light expands into a larger circular radial pattern of short bright streaks"
+      },
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "impact_id": "impact_3",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "the upper radial pattern changes to include bright white and green areas along with pink areas"
+      },
+      "evidence_refs": [
+        "e9"
+      ]
+    },
+    {
+      "impact_id": "impact_4",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "intensity_increase",
+        "raw_transition": "the lower bright cluster becomes brighter beneath the radial pattern"
+      },
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "impact_id": "impact_5",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "the lower cluster shifts toward stronger magenta-white coloration and later remains as a magenta glow"
+      },
+      "evidence_refs": [
+        "e7",
+        "e11"
+      ]
+    },
+    {
+      "impact_id": "impact_6",
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "the water reflection changes from a narrow vertical band into a taller pink vertical band"
+      },
+      "evidence_refs": [
+        "e4",
+        "e8"
+      ]
+    },
+    {
+      "impact_id": "impact_7",
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "intensity_increase",
+        "raw_transition": "the reflected light on the water brightens with the bright activity above"
+      },
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "impact_id": "impact_8",
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "illumination_gain",
+        "raw_transition": "the water surface shows stronger colored illumination where the reflected bands appear"
+      },
+      "evidence_refs": [
+        "e4",
+        "e8"
+      ]
+    },
+    {
+      "impact_id": "impact_9",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": null,
+        "raw_transition": "faint gray smoke-like haze remains around and above the upper bright pattern"
+      },
+      "evidence_refs": [
+        "e3",
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "mechanism_id": "mechanism_1",
+      "family": "energy_reaction",
+      "type": null,
+      "raw_mechanism": "rapid stored-energy release produces the intense bright burst and outward radial expansion",
+      "process_refs": [
+        "primary"
+      ],
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "mechanism_id": "mechanism_2",
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "emissive bright clusters create the visible colored light patterns in the sky",
+      "process_refs": [
+        "primary",
+        "secondary[0]"
+      ],
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e6",
+        "e7",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "mechanism_id": "mechanism_3",
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "colored light reflects from the rippled water surface, forming elongated vertical reflection bands",
+      "process_refs": [
+        "secondary[1]"
+      ],
+      "object_ids": [
+        "obj_4",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e8"
+      ]
+    },
+    {
+      "mechanism_id": "mechanism_4",
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "suspended haze scatters or reveals light around the bright sky pattern",
+      "process_refs": [
+        "secondary[2]"
+      ],
+      "object_ids": [
+        "obj_3",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e10"
+      ]
+    }
+  ]
+}
