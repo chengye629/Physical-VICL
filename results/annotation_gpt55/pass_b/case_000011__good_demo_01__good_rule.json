@@ -1,0 +1,291 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "left black cylinder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "right black cylinder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "blue round object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "yellow ball",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e14"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "contact_loading",
+      "type": "collision",
+      "raw_type": "brief meeting contact between two moving round objects followed by separation",
+      "participants": [
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "opposing tabletop motion before contact and separating motion after contact",
+        "participants": [
+          "obj_4",
+          "obj_5"
+        ],
+        "evidence_refs": [
+          "e4",
+          "e5",
+          "e6",
+          "e7",
+          "e9",
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the colored objects enter already moving",
+      "actors": [],
+      "targets": [
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "rebound",
+        "raw_transition": "blue object changes from moving rightward toward the yellow ball to moving leftward away from the meeting point"
+      },
+      "evidence_refs": [
+        "e6",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "yellow ball changes from moving leftward toward the blue object to moving toward the upper-right area after the meeting"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "blue object later stops at a separated position near the left side"
+      },
+      "evidence_refs": [
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "yellow ball later stops at a separated position in the upper-right area"
+      },
+      "evidence_refs": [
+        "e10",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "blue object reaches an adjacent or touching relation with the yellow ball near the tabletop center"
+      },
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "yellow ball reaches an adjacent or touching relation with the blue object near the tabletop center"
+      },
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_loss",
+        "raw_transition": "blue object separates from the yellow ball after the meeting"
+      },
+      "evidence_refs": [
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_loss",
+        "raw_transition": "yellow ball separates from the blue object after the meeting"
+      },
+      "evidence_refs": [
+        "e10",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "brief contact at the meeting point transfers momentum and redirects the moving objects",
+      "applies_to_process": "primary",
+      "object_ids": [
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "friction",
+      "raw_mechanism": "contact resistance with the tabletop opposes motion until the objects come to rest",
+      "applies_to_process": "secondary",
+      "object_ids": [
+        "obj_4",
+        "obj_5",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  ]
+}

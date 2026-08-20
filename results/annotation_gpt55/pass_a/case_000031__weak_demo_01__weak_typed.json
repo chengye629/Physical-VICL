@@ -1,0 +1,291 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A bright flame remains on the left red candle and visibly flickers while a similar right red candle remains without a flame.",
+  "raw_event_description": "The video shows two upright red candles in separate gold-colored holders on a wooden tabletop against a plain wall. From the start, the left candle has a yellow-orange flame at its top, and the right candle has a small dark wick at its top with no visible flame. Across the video, the left flame stays present while its outline, height, and brightness vary slightly; the candles, holders, table, and wall keep the same visible arrangement.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "Both candles and holders are visible from the beginning.",
+      "The left candle already has a visible flame in the first frame.",
+      "The right candle top and wick are visible without a flame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "left red candle",
+      "visible_form": "tall narrow upright cylinder with a flat top area",
+      "material_description": "smooth opaque red surface with a wax-like appearance",
+      "visible_properties": [
+        "red",
+        "vertical",
+        "cylindrical",
+        "opaque",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears whole and upright",
+      "event_role_hints": [
+        "has a visible flame at its top"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left flame",
+      "visible_form": "small tapered luminous shape above the left candle top",
+      "material_description": "bright yellow, orange, and pale white luminous region",
+      "visible_properties": [
+        "bright",
+        "yellow-orange",
+        "variable outline",
+        "variable height"
+      ],
+      "initial_motion_description": "visible flickering from the beginning",
+      "initial_integrity_description": "appears as one continuous luminous region",
+      "event_role_hints": [
+        "changes shape and brightness over time"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "right red candle",
+      "visible_form": "tall narrow upright cylinder with a small dark curved wick at the top",
+      "material_description": "smooth opaque red surface with a wax-like appearance; dark wick visible",
+      "visible_properties": [
+        "red",
+        "vertical",
+        "cylindrical",
+        "opaque",
+        "stationary",
+        "unlit"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears whole and upright",
+      "event_role_hints": [
+        "has no visible flame"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "left holder",
+      "visible_form": "gold-colored candlestick holder with cup, stem, round base, and side handle",
+      "material_description": "shiny gold-colored metallic-looking surface",
+      "visible_properties": [
+        "gold-colored",
+        "reflective",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears whole and upright",
+      "event_role_hints": [
+        "supports the left candle"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "right holder",
+      "visible_form": "gold-colored candlestick holder with cup, stem, round base, and side handle",
+      "material_description": "shiny gold-colored metallic-looking surface",
+      "visible_properties": [
+        "gold-colored",
+        "reflective",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears whole and upright",
+      "event_role_hints": [
+        "supports the right candle"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal surface occupying the lower part of the frame",
+      "material_description": "light brown surface with visible wood-like tone",
+      "visible_properties": [
+        "flat",
+        "brown",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous visible surface",
+      "event_role_hints": [
+        "holds the candle holders"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "background wall",
+      "visible_form": "plain vertical background surface",
+      "material_description": "matte light gray or off-white surface",
+      "visible_properties": [
+        "plain",
+        "light-colored",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous visible background",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "positioned directly above the top of the left candle",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "seated upright in the left holder",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "seated upright in the right holder",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "rests on the tabletop",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "rests on the tabletop",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "stands to the left of the right candle",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Two upright red candles stand in separate gold-colored holders on a wooden tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A yellow-orange luminous flame is visible at the top of the left candle."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The right candle has a small dark curved wick at its top and no visible flame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "The left flame changes outline slightly over time."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The left flame changes apparent height slightly over time."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The left flame changes brightness slightly over time."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The two candles and holders keep the same visible positions relative to each other."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "No visible flame appears on the right candle during the video."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The camera framing remains steady."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "No scene cut is visible."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The visible arrangement remains stable while the left flame varies."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "remains visible above the left candle and flickers with small changes in outline, height, and brightness"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "stays upright and stationary in the left holder"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "stays upright and stationary with no visible flame"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "stays stationary on the tabletop"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "stays stationary on the tabletop"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e9",
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

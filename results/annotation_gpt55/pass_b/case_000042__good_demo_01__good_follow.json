@@ -1,0 +1,324 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "yellow cup-like object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "source",
+        "product"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "brittle"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "gray block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e7",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "blue hanging strip",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "floor",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e10",
+        "e11",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "white backdrop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": []
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fracture_separation",
+      "type": "fragmentation",
+      "raw_type": "impact-induced breakage of the yellow cup-like object into scattered pieces",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "role": "target"
+        },
+        {
+          "object_id": "obj_2",
+          "role": "support"
+        },
+        {
+          "object_id": "obj_4",
+          "role": "support"
+        }
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "free_fall",
+        "raw_type": "rapid downward motion of the suspended yellow object",
+        "participants": [
+          {
+            "object_id": "obj_1",
+            "role": "target"
+          }
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6"
+        ]
+      },
+      {
+        "family": "contact_loading",
+        "type": "collision",
+        "raw_type": "brief impact between the descending yellow object and the gray block",
+        "participants": [
+          {
+            "object_id": "obj_1",
+            "role": "target"
+          },
+          {
+            "object_id": "obj_2",
+            "role": "support"
+          }
+        ],
+        "evidence_refs": [
+          "e7",
+          "e8"
+        ]
+      },
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "fragment pieces move outward across the floor and then stop",
+        "participants": [
+          {
+            "object_id": "obj_1",
+            "role": "product"
+          },
+          {
+            "object_id": "obj_4",
+            "role": "support"
+          }
+        ],
+        "evidence_refs": [
+          "e9",
+          "e10",
+          "e11",
+          "e13"
+        ]
+      }
+    ],
+    "action": {
+      "family": "release",
+      "type": "drop",
+      "raw_action": "release or drop of the suspended yellow cup-like object; releasing actor is not visible",
+      "actor_object_id": null,
+      "target_object_id": "obj_1",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "brief",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "yellow object changes from nearly stationary suspension to rapid downward motion"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "yellow object gains contact with the top area of the gray block"
+      },
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "integrity",
+        "type": "fragmented",
+        "raw_transition": "whole yellow cup-like object becomes multiple yellow and light-colored fragments"
+      },
+      "evidence_refs": [
+        "e1",
+        "e8",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "fragments spread outward from the block area across the floor"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "settling",
+        "raw_transition": "fragment motion decays until pieces remain scattered with little or no visible motion"
+      },
+      "evidence_refs": [
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "gray block is contacted by the descending yellow object"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "deposition",
+        "raw_transition": "yellow and light-colored fragments come to rest on the floor around the block"
+      },
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e13"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the yellow object downward after it begins falling from the suspended position",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "brief impact with the gray block transfers load and momentum to the yellow object",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "brittleness",
+      "raw_mechanism": "the cup-like object fractures into pieces with no visible continuous deformation before separation",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    }
+  ]
+}

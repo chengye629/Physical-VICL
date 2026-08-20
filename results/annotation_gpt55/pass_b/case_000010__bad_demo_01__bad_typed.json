@@ -1,0 +1,259 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "orange sphere",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "brown disk",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e7",
+        "e8",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "gray sphere",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "actor"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "black cylinder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "contact_loading",
+      "type": "collision",
+      "raw_type": "brief contact or collision between the incoming gray sphere and the initially adjacent orange sphere and brown disk",
+      "participants": [
+        "obj_4",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "gray sphere translates rightward across the tabletop before contact",
+        "participants": [
+          "obj_4",
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6"
+        ]
+      },
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "orange sphere translates rightward after the brief cluster",
+        "participants": [
+          "obj_2",
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e9",
+          "e10",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the gray sphere enters the scene already moving",
+      "actors": [],
+      "targets": [],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e13"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "single",
+      "change_profile": "abrupt",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "orange sphere changes from stationary beside the brown disk to moving rightward after the brief cluster"
+      },
+      "evidence_refs": [
+        "e4",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_loss",
+        "raw_transition": "orange sphere separates from the clustered gray sphere and brown disk"
+      },
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "orange sphere becomes cropped at the right edge and then disappears from view as it moves out of the visible area"
+      },
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "gray sphere moves rightward into the cluster and then remains near the brown disk with only small visible positional changes afterward"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "gray sphere reaches and briefly clusters with the brown disk and orange sphere"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "brown disk becomes part of the brief visible cluster with the gray sphere and orange sphere"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "brief contact transfers momentum through the clustered objects, producing the orange sphere's rightward motion",
+      "participants": [
+        "obj_4",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    }
+  ]
+}

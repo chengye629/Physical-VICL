@@ -1,0 +1,297 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A red-orange liquid stream runs from a raised drink dispenser spigot into a clear plastic bottle, and the visible liquid level in the bottle rises.",
+  "raw_event_description": "At the start, a ribbed transparent dispenser containing red-orange liquid sits on a woven stand above a clear plastic bottle. A red-orange stream is already extending from the dispenser spigot into the bottle opening, and a shallow amount of red-orange liquid is visible in the bottle. Through the video, the stream remains continuous, bubbles and surface disturbance appear inside the bottle, and the liquid level in the bottle gradually increases. The camera framing remains essentially unchanged.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "mid_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The dispenser, spigot, stream, and receiving bottle are all visible.",
+      "The liquid transfer is already underway in the first frame.",
+      "The bottle already contains some red-orange liquid at the bottom."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "drink dispenser",
+      "visible_form": "large clear ribbed cylindrical container with a lid area at top and a front metal spigot",
+      "material_description": "transparent glossy container with metal-looking spigot hardware",
+      "visible_properties": [
+        "contains red-orange liquid",
+        "raised above the bottle",
+        "ribbed outer surface"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact and closed-looking except for the visible spigot outlet",
+      "event_role_hints": [
+        "visible source container for the red-orange stream"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "spigot",
+      "visible_form": "small metal-looking tap protruding from the front lower part of the dispenser",
+      "material_description": "shiny dark and silver metal-like surfaces",
+      "visible_properties": [
+        "positioned above the bottle opening",
+        "has a decorative front handle shape"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact",
+      "event_role_hints": [
+        "visible outlet where the stream begins"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "red-orange liquid stream",
+      "visible_form": "narrow vertical-to-slightly-slanted continuous line of red-orange liquid",
+      "material_description": "translucent red-orange fluid appearance",
+      "visible_properties": [
+        "continuous from spigot to bottle opening",
+        "thin compared with bottle width"
+      ],
+      "initial_motion_description": "already moving downward from the spigot into the bottle opening",
+      "initial_integrity_description": "continuous unbroken stream",
+      "event_role_hints": [
+        "visible moving material between dispenser and bottle"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "plastic bottle",
+      "visible_form": "clear upright plastic bottle with ribbed sides and narrow neck",
+      "material_description": "transparent plastic with reflective highlights",
+      "visible_properties": [
+        "open top aligned under the spigot",
+        "contains red-orange liquid at the bottom",
+        "upright on tabletop"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact",
+      "event_role_hints": [
+        "receiving container for the visible stream"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "liquid inside bottle",
+      "visible_form": "red-orange liquid volume occupying the lower portion of the clear bottle",
+      "material_description": "opaque to translucent red-orange liquid with small bubbles or foam near the surface",
+      "visible_properties": [
+        "surface level visible through bottle wall",
+        "surface disturbance visible during filling"
+      ],
+      "initial_motion_description": "surface is disturbed by incoming stream",
+      "initial_integrity_description": "continuous pooled volume at the bottom of the bottle",
+      "event_role_hints": [
+        "visible accumulated liquid in the bottle"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "woven stand",
+      "visible_form": "round woven basket-like platform beneath the dispenser",
+      "material_description": "brown and tan woven material",
+      "visible_properties": [
+        "supports the dispenser visually",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact",
+      "event_role_hints": [
+        "background support object"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "table",
+      "visible_form": "flat wooden tabletop",
+      "material_description": "light brown wood-like surface",
+      "visible_properties": [
+        "supports the bottle and woven stand",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact",
+      "event_role_hints": [
+        "support surface"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned above",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is aligned over the bottle opening",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "extends from the spigot into the bottle opening",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "stands on the tabletop in front of the woven stand",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A clear ribbed dispenser containing red-orange liquid is above a clear plastic bottle."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The dispenser spigot is directly over the bottle opening."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "A narrow red-orange stream connects the spigot area to the bottle opening."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The clear plastic bottle stands upright on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A shallow red-orange liquid volume is visible at the bottom of the bottle."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The red-orange liquid surface in the bottle is higher than at the beginning."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "Small bubbles and surface disturbance are visible where the stream enters the bottle liquid."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The red-orange liquid in the bottle occupies a larger portion of the bottle than in the early frames."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The stream is still visible entering the bottle near the end of the clip."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The dispenser, woven stand, bottle, and table remain in the same visible positions relative to the frame."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The liquid transfer is already underway.",
+        "The receiving bottle has a small amount of red-orange liquid in its bottom portion."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The stream is visible from the spigot into the bottle."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The liquid inside the bottle occupies only the lower portion."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The stream remains continuous.",
+        "The bottle's visible liquid level increases."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The red-orange stream continues entering the bottle opening."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The liquid surface in the bottle rises and shows bubbles or ripples."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The bottle contains visibly more red-orange liquid than at the start.",
+        "The stream remains present near the end."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "The accumulated liquid volume in the bottle is larger than earlier."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The stream is still visible entering the bottle."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

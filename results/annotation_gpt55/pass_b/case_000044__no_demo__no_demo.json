@@ -1,0 +1,271 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "transparent sheet",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support",
+        "medium"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "wooden tabletop",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "red paint spot",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "viscous",
+        "adhesive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "paintbrush",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "right-side holder",
+      "entity_kind": "articulated_object",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "viscous_spreading",
+      "raw_type": "brush-driven smearing and spreading of red paint across the transparent sheet",
+      "participants": [
+        "obj_3",
+        "obj_4",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "contact_loading",
+        "type": "shear_loading",
+        "raw_type": "paintbrush tip applies tangential contact to the red paint spot",
+        "participants": [
+          "obj_4",
+          "obj_3",
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6",
+          "e7"
+        ]
+      }
+    ],
+    "action": {
+      "family": "transport",
+      "type": "move",
+      "raw_action": "the connected paintbrush is moved across the sheet toward and through the red spot",
+      "actor_object_ids": [
+        "obj_5"
+      ],
+      "tool_object_ids": [
+        "obj_4"
+      ],
+      "target_object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e9"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "the red paint changes from a compact circular spot into an elongated curved smear"
+      },
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "red paint is spread over a larger curved region along the brush path"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "the paintbrush moves across the sheet toward the red spot and later moves away toward the right side"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "deposition",
+        "raw_transition": "a curved red paint streak remains deposited on the transparent sheet"
+      },
+      "evidence_refs": [
+        "e8",
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "shear",
+      "raw_mechanism": "tangential contact from the moving brush tip drags the red paint across the sheet surface",
+      "process_refs": [
+        "primary",
+        "secondary"
+      ],
+      "object_ids": [
+        "obj_4",
+        "obj_3",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "viscosity",
+      "raw_mechanism": "the paint behaves as a viscous material that spreads into a continuous streak rather than separating into fragments",
+      "process_refs": [
+        "primary"
+      ],
+      "object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "adhesion",
+      "raw_mechanism": "the red paint remains attached to the transparent sheet after the brush moves away",
+      "process_refs": [
+        "primary"
+      ],
+      "object_ids": [
+        "obj_3",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e10"
+      ]
+    }
+  ]
+}

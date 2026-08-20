@@ -1,0 +1,263 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "clear vessel",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "blue liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "green surface band",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support",
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "white crumpled piece",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "deformed",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "blue top clips or handles",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": []
+    },
+    {
+      "object_id": "obj_6",
+      "name": "table",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e11"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "downward motion of the white crumpled piece inside the clear vessel",
+      "participants": [
+        {
+          "object_id": "obj_4",
+          "role": "target"
+        },
+        {
+          "object_id": "obj_1",
+          "role": "container"
+        },
+        {
+          "object_id": "obj_3",
+          "role": "support"
+        }
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "relation_reconfiguration",
+        "type": "support_change",
+        "raw_type": "white piece comes to rest on the green surface region above the blue liquid",
+        "participants": [
+          {
+            "object_id": "obj_4",
+            "role": "target"
+          },
+          {
+            "object_id": "obj_3",
+            "role": "support"
+          },
+          {
+            "object_id": "obj_2",
+            "role": "medium"
+          }
+        ],
+        "evidence_refs": [
+          "e7",
+          "e8",
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the white piece begins moving after still frames",
+      "participants": [],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "single",
+      "change_profile": "abrupt",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "white crumpled piece changes from still near the upper opening area to moving downward"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "white crumpled piece stops descending and remains at the green surface region"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "relation",
+        "type": "support_gain",
+        "raw_transition": "white crumpled piece becomes supported at the surface region above the blue liquid"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "green surface region receives the white crumpled piece at its location"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "downward gravitational forcing drives the white piece from the upper area toward the liquid surface region",
+      "linked_process_family": "rigid_motion",
+      "object_refs": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "buoyancy",
+      "raw_mechanism": "fluid support at the surface region arrests the white piece and leaves it resting above the blue liquid",
+      "linked_process_family": "relation_reconfiguration",
+      "object_refs": [
+        "obj_2",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    }
+  ]
+}

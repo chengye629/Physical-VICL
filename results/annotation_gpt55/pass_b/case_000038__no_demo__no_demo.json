@@ -1,0 +1,285 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "black balloon",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "round black base",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "slender stick",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "flame",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "source",
+        "tool"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "pink tape",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "dark fragments",
+      "entity_kind": "granular_material",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "granular",
+      "physical_properties": [],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "fragmented",
+      "evidence_refs": [
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e10",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "black cord",
+      "entity_kind": "deformable_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fracture_separation",
+      "type": "rupture",
+      "raw_type": "rapid rupture of the inflated black balloon after flame contact",
+      "participants": {
+        "target": [
+          "obj_1"
+        ],
+        "source": [
+          "obj_4"
+        ],
+        "product": [
+          "obj_6"
+        ]
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "explosive_release",
+        "type": "explosion",
+        "raw_type": "abrupt pressure-release-like burst ejecting dark balloon fragments",
+        "participants": {
+          "source": [
+            "obj_1"
+          ],
+          "product": [
+            "obj_6"
+          ]
+        },
+        "evidence_refs": [
+          "e8",
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "thermal",
+      "type": "heat",
+      "raw_action": "flame-bearing stick tip is moved to apply a visible flame to the balloon surface",
+      "participants": {
+        "tool": [
+          "obj_3",
+          "obj_4"
+        ],
+        "target": [
+          "obj_1"
+        ]
+      },
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "multi_stage",
+      "change_profile": "abrupt",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "integrity",
+        "type": "ruptured",
+        "raw_transition": "the initially intact inflated balloon loses its round intact form and is no longer present as a whole object"
+      },
+      "evidence_refs": [
+        "e1",
+        "e7",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "small dark fragments appear and move away from the former balloon location"
+      },
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "deposition",
+        "raw_transition": "a small dark remnant or mark remains on the tabletop near the former balloon position"
+      },
+      "evidence_refs": [
+        "e10",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "heat_transfer",
+      "raw_mechanism": "thermal energy from the visible flame is applied at the balloon contact area and drives local failure of the balloon material",
+      "linked_process": "primary",
+      "object_refs": [
+        "obj_4",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "pressure_gradient",
+      "raw_mechanism": "pressure difference associated with the inflated balloon drives rapid opening and outward motion of fragments after rupture",
+      "linked_process": "secondary",
+      "object_refs": [
+        "obj_1",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    }
+  ]
+}

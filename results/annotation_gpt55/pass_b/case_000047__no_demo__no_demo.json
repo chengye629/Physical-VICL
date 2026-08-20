@@ -1,0 +1,250 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "rectangular glass sheet",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "small crumpled item",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "reflective",
+        "combustible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "deformed",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "smoke-like plume",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "product",
+        "medium"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "bright flame-like glow",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "product",
+        "source"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "wooden tabletop",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "combustion",
+      "type": "sustained_burning",
+      "raw_type": "sustained flame-like burning at the crumpled item",
+      "participant_object_ids": [
+        "obj_2",
+        "obj_4",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "gas_particulate_motion",
+        "type": "plume_motion",
+        "raw_type": "smoke-like plume rising, bending, and undulating",
+        "participant_object_ids": [
+          "obj_3",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e5",
+          "e9"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "light_emission",
+        "raw_type": "localized flame-like light emission flickering near the crumpled item",
+        "participant_object_ids": [
+          "obj_4",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e4",
+          "e6"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention during the clip",
+      "actor_object_ids": [],
+      "target_object_ids": [],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e10"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e9"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "thermal_reaction",
+        "type": null,
+        "raw_transition": "crumpled item remains associated with a sustained burning or glowing region while staying in approximately the same position"
+      },
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "smoke-like wisps rise upward from the central area and spread into a bending, changing plume"
+      },
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "bright luminous region flickers with changing outline and brightness while remaining localized near the crumpled item"
+      },
+      "evidence_refs": [
+        "e4",
+        "e6"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "chemical_energy_release",
+      "raw_mechanism": "exothermic reaction associated with the sustained flame-like glow and smoke production",
+      "linked_process_family": "combustion",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "buoyancy",
+      "raw_mechanism": "heated smoke-like material rises upward relative to the surrounding air",
+      "linked_process_family": "gas_particulate_motion",
+      "evidence_refs": [
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "the flame-like region emits visible yellow-white light that flickers over time",
+      "linked_process_family": "optical_interaction",
+      "evidence_refs": [
+        "e4",
+        "e6"
+      ]
+    }
+  ]
+}

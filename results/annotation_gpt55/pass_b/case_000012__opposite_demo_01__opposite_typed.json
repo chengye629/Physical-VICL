@@ -1,0 +1,455 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red-orange block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e10",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "pink block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "green block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e8",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "blue block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e7",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "purple block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e6",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "black round object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e13"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "tan pointed stick",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "actor",
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e14"
+      ]
+    },
+    {
+      "id": "obj_9",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e12"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "toppling",
+      "raw_type": "sequential leftward toppling of upright blocks",
+      "participants": [
+        "obj_1",
+        "obj_2",
+        "obj_3",
+        "obj_4",
+        "obj_5",
+        "obj_6",
+        "obj_9"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    "secondary": [
+      {
+        "id": "secondary_1",
+        "family": "contact_loading",
+        "type": null,
+        "raw_type": "contact loading from the rotating stick into the rightmost block and through the block row",
+        "participants": [
+          "obj_8",
+          "obj_6",
+          "obj_5",
+          "obj_4",
+          "obj_3",
+          "obj_2",
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6",
+          "e7",
+          "e8",
+          "e9",
+          "e10",
+          "e11"
+        ]
+      },
+      {
+        "id": "secondary_2",
+        "family": "rigid_motion",
+        "type": "rotation",
+        "raw_type": "angular sweeping motion of the tan stick while attached near the black round object",
+        "participants": [
+          "obj_8",
+          "obj_7"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e4",
+          "e5",
+          "e14"
+        ]
+      }
+    ],
+    "action": {
+      "family": "transport",
+      "type": "rotate",
+      "raw_action": "the tan stick is rotated or swept from the black round object toward the purple block",
+      "actor_objects": [
+        "obj_8"
+      ],
+      "tool_objects": [
+        "obj_8"
+      ],
+      "target_objects": [
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "id": "impact_1",
+      "affected_objects": [
+        "obj_6"
+      ],
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "purple block changes from upright and stationary to leftward tipping"
+      },
+      "evidence_refs": [
+        "e6",
+        "e12"
+      ]
+    },
+    {
+      "id": "impact_2",
+      "affected_objects": [
+        "obj_5"
+      ],
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "blue block changes from upright and stationary to leftward tipping after the purple block"
+      },
+      "evidence_refs": [
+        "e7",
+        "e12"
+      ]
+    },
+    {
+      "id": "impact_3",
+      "affected_objects": [
+        "obj_4"
+      ],
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "green block changes from upright and stationary to leftward tipping after the blue block"
+      },
+      "evidence_refs": [
+        "e8",
+        "e12"
+      ]
+    },
+    {
+      "id": "impact_4",
+      "affected_objects": [
+        "obj_3"
+      ],
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "pink block changes from upright and stationary to leftward tipping after the green block"
+      },
+      "evidence_refs": [
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "id": "impact_5",
+      "affected_objects": [
+        "obj_2"
+      ],
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "red-orange block changes from upright and stationary to leftward tipping after the pink block"
+      },
+      "evidence_refs": [
+        "e10",
+        "e12"
+      ]
+    },
+    {
+      "id": "impact_6",
+      "affected_objects": [
+        "obj_1"
+      ],
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "yellow block changes from upright and stationary to leftward tipping after the red-orange block"
+      },
+      "evidence_refs": [
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "id": "impact_7",
+      "affected_objects": [
+        "obj_1",
+        "obj_2",
+        "obj_3",
+        "obj_4",
+        "obj_5",
+        "obj_6"
+      ],
+      "transition": {
+        "axis": "motion",
+        "type": "settling",
+        "raw_transition": "the moving blocks come to rest lying or leaning in a leftward-collapsed arrangement on the tabletop"
+      },
+      "evidence_refs": [
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "id": "mechanism_1",
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "contact or loading from the rotating tan stick transfers mechanical force to the rightmost purple block",
+      "involved_objects": [
+        "obj_8",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "id": "mechanism_2",
+      "family": "mechanical_forcing",
+      "type": "torque",
+      "raw_mechanism": "off-center contact on the upright blocks produces rotational motion that tips them leftward",
+      "involved_objects": [
+        "obj_1",
+        "obj_2",
+        "obj_3",
+        "obj_4",
+        "obj_5",
+        "obj_6",
+        "obj_8"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "id": "mechanism_3",
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "after the blocks tilt away from upright support, gravity carries them downward until they lie or lean on the tabletop",
+      "involved_objects": [
+        "obj_1",
+        "obj_2",
+        "obj_3",
+        "obj_4",
+        "obj_5",
+        "obj_6",
+        "obj_9"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  ]
+}

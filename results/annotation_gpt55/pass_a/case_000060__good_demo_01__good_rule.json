@@ -1,0 +1,264 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "Two small spherical objects move across a tabletop in opposite directions and leave the visible area.",
+  "raw_event_description": "The video begins with a light wood-colored tabletop visible between two black cylindrical objects near the left and right edges. After a period with no moving objects, a brown spherical object appears from the right side near the upper half of the tabletop and moves leftward. Shortly after, a light gray spherical object appears from the left side near the lower half of the tabletop and moves rightward. The two spheres pass through different parts of the tabletop without visibly touching. The brown sphere reaches the upper-left edge area and disappears from view; the gray sphere continues toward the right edge and disappears from view. The tabletop is then visible again with no moving spheres.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tabletop and side black cylindrical objects are visible.",
+      "The moving spherical objects are not yet visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "tabletop",
+      "visible_form": "flat rectangular horizontal surface filling most of the frame",
+      "material_description": "light wood-colored surface with visible grain pattern",
+      "visible_properties": [
+        "flat",
+        "rectangular",
+        "light colored",
+        "wood-grain patterned"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "appears continuous and intact",
+      "event_role_hints": [
+        "visible surface across which the spherical objects move"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left black cylinder",
+      "visible_form": "black cylindrical object partly visible at the left edge",
+      "material_description": "dark glossy-looking exterior",
+      "visible_properties": [
+        "black",
+        "cylindrical",
+        "partially visible"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "fixed side object near the tabletop edge"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "right black cylinder",
+      "visible_form": "black cylindrical object partly visible at the right edge",
+      "material_description": "dark glossy-looking exterior",
+      "visible_properties": [
+        "black",
+        "cylindrical",
+        "partially visible"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "fixed side object near the tabletop edge"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "brown sphere",
+      "visible_form": "small round ball-like object",
+      "material_description": "brown surface with a lighter curved stripe or marking",
+      "visible_properties": [
+        "spherical",
+        "brown",
+        "small",
+        "marked with a light stripe"
+      ],
+      "initial_motion_description": "not visible at the beginning; later appears from the right side and moves leftward across the upper half of the tabletop",
+      "initial_integrity_description": "appears intact when visible",
+      "event_role_hints": [
+        "moving object"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "light gray sphere",
+      "visible_form": "small round ball-like object",
+      "material_description": "light gray or white smooth-looking surface",
+      "visible_properties": [
+        "spherical",
+        "light gray",
+        "small"
+      ],
+      "initial_motion_description": "not visible at the beginning; later appears from the left side and moves rightward across the lower half of the tabletop",
+      "initial_integrity_description": "appears intact when visible",
+      "event_role_hints": [
+        "moving object"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is positioned near the left edge of the tabletop",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is positioned near the right edge of the tabletop",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A black cylindrical object is partly visible at the left edge of the tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A black cylindrical object is partly visible at the right edge of the tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "No spherical moving objects are visible on the tabletop at the start."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "A brown spherical object appears near the right side of the tabletop."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The brown spherical object moves leftward across the upper half of the tabletop."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A light gray spherical object appears near the left side of the tabletop."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The light gray spherical object moves rightward across the lower half of the tabletop."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The brown and light gray spherical objects are simultaneously visible in separated areas of the tabletop."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The brown spherical object reaches the upper-left edge area and disappears from view."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The light gray spherical object reaches the right edge area and disappears from view."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "After both spheres disappear, the tabletop remains visible with no moving spherical objects."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The scene shows a stationary tabletop with black cylindrical objects at both side edges.",
+        "No moving spheres are visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The tabletop remains stationary in the frame."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The left black cylinder remains stationary."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The right black cylinder remains stationary."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "A brown sphere appears from the right side and moves leftward.",
+        "A light gray sphere appears from the left side and moves rightward.",
+        "The two spheres are visible at the same time but remain separated."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The brown sphere moves from the right side toward the upper-left area."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The light gray sphere moves from the left side toward the right side."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The brown sphere leaves the visible area near the upper-left side.",
+        "The light gray sphere leaves the visible area near the right side.",
+        "The scene returns to a tabletop view without moving spheres."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The brown sphere disappears from view at the upper-left edge area."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The light gray sphere disappears from view at the right edge area."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

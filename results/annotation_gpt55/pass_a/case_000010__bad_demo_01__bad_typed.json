@@ -1,0 +1,303 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A gray sphere moved in from the left across a tabletop, reached a brown disk and orange sphere, and the orange sphere then moved rightward and out of view.",
+  "raw_event_description": "The scene shows a light wood-grain tabletop with a small orange sphere and a small dark brown upright disk near the upper-right area of the table. A partially visible black cylinder remains at the left edge. After an initial still interval, a small gray sphere appears from the left side and moves rightward across the tabletop toward the orange sphere and brown disk. The gray sphere reaches the pair, the objects briefly touch or overlap visually, and the orange sphere separates to the right. The orange sphere continues rightward until it exits the visible table area at the right edge. The gray sphere and brown disk remain near the central-right area of the tabletop with only small visible positional changes afterward.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The orange sphere and brown disk are visible and stationary on the tabletop before the gray sphere appears.",
+      "The tabletop and left-edge black cylinder are visible.",
+      "The incoming gray sphere is not yet visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "tabletop",
+      "visible_form": "large flat rectangular tabletop",
+      "material_description": "light-colored wood-grain visible surface",
+      "visible_properties": [
+        "flat top surface",
+        "rectangular outline",
+        "pale wood pattern"
+      ],
+      "initial_motion_description": "stationary relative to the camera",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "other visible objects are on its upper surface"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "orange sphere",
+      "visible_form": "small round ball",
+      "material_description": "smooth orange visible surface",
+      "visible_properties": [
+        "spherical shape",
+        "bright orange color"
+      ],
+      "initial_motion_description": "stationary before the gray sphere arrives",
+      "initial_integrity_description": "appears intact and undeformed",
+      "event_role_hints": [
+        "initially adjacent to the brown disk",
+        "later moves rightward"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "brown disk",
+      "visible_form": "small upright round disk or short cylinder with circular face visible",
+      "material_description": "dark brown face with lighter edge highlight",
+      "visible_properties": [
+        "circular face",
+        "dark brown color",
+        "upright orientation at start"
+      ],
+      "initial_motion_description": "stationary before the gray sphere arrives",
+      "initial_integrity_description": "appears intact and undeformed",
+      "event_role_hints": [
+        "initially adjacent to the orange sphere",
+        "later near the gray sphere"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "gray sphere",
+      "visible_form": "small round ball",
+      "material_description": "light gray visible surface",
+      "visible_properties": [
+        "spherical shape",
+        "gray color"
+      ],
+      "initial_motion_description": "not visible in the first frames; later moves rightward from the left side",
+      "initial_integrity_description": "appears intact when visible",
+      "event_role_hints": [
+        "approaches the orange sphere and brown disk from the left"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "black cylinder",
+      "visible_form": "partially visible horizontal cylindrical object at the left edge",
+      "material_description": "black exterior with a lighter circular end visible in some frames",
+      "visible_properties": [
+        "cylindrical form",
+        "mostly black color",
+        "partially cropped by left frame edge"
+      ],
+      "initial_motion_description": "stationary throughout the visible sequence",
+      "initial_integrity_description": "appears intact where visible",
+      "event_role_hints": [
+        "located near the left side where the gray sphere first appears"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is immediately to the right of and visually adjacent to",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "rests on the visible upper surface of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "rests on the visible upper surface of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is partially visible at the left edge of the scene near",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A light wood-grain tabletop fills most of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A dark brown upright disk is directly beside a small orange sphere near the upper-right area of the tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A black cylindrical object is partially visible at the left edge of the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The orange sphere and brown disk remain still for several frames before the gray sphere appears."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A light gray sphere appears from the left side of the tabletop."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The gray sphere moves rightward across the tabletop toward the brown disk and orange sphere."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The gray sphere reaches the position immediately beside the brown disk and orange sphere."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The gray sphere, brown disk, and orange sphere are visually clustered together for a brief moment."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The orange sphere separates from the cluster and moves to the right."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The orange sphere continues rightward across the tabletop."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The orange sphere becomes partially cropped at the right edge and then disappears from view."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The gray sphere and brown disk remain near each other on the tabletop after the orange sphere has moved away."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The camera view remains fixed on the table without visible panning or zooming."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The tabletop is visible with the brown disk and orange sphere near the upper-right area.",
+        "The black cylinder is partially visible at the left edge.",
+        "The orange sphere and brown disk are stationary."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The orange sphere remains still beside the brown disk."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The brown disk remains still beside the orange sphere."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The black cylinder remains stationary at the left edge."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The gray sphere enters from the left and moves rightward.",
+        "The gray sphere reaches the brown disk and orange sphere.",
+        "The orange sphere begins moving rightward after the brief cluster."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The gray sphere appears from the left side and moves rightward toward the two stationary objects."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The orange sphere moves rightward away from the brown disk and gray sphere."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The brown disk remains near the gray sphere after the cluster moment."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The orange sphere continues rightward and exits the visible frame.",
+        "The gray sphere and brown disk remain visible near each other."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The orange sphere becomes cropped at the right edge and then is no longer visible."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The gray sphere stays near the brown disk in the central-right area of the tabletop."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The brown disk stays near the gray sphere in the central-right area of the tabletop."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact contact boundaries between the gray sphere, brown disk, and orange sphere are partly obscured during the brief cluster.",
+    "The gray sphere is not visible before it enters from the left side."
+  ]
+}

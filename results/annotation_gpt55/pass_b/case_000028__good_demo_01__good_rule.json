@@ -1,0 +1,261 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "white figurine",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "round base",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "bright light area",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "black cable",
+      "entity_kind": "deformable_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "wall silhouette",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_8",
+      "name": "circular light patch",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "rotation",
+      "raw_type": "smooth rotation of the white figurine on a fixed base",
+      "participants": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e8",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "illumination_change",
+        "raw_type": "changing projected wall silhouette as the figurine orientation changes",
+        "participants": [
+          "obj_1",
+          "obj_3",
+          "obj_4",
+          "obj_7",
+          "obj_8"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e7",
+          "e9",
+          "e12"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the event is already in progress",
+      "participants": [],
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "visible orientation changes smoothly from front-facing to side-profile to back-facing"
+      },
+      "evidence_refs": [
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "silhouette outline changes from broad front-like shape to narrower side-profile-like shape and then to broader back-like shape"
+      },
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "the visible dark pattern on the wall changes shape while the circular light patch remains in place"
+      },
+      "evidence_refs": [
+        "e3",
+        "e7",
+        "e9",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "the figurine undergoes angular motion about a fixed support while the base does not visibly translate",
+      "linked_process": "primary",
+      "evidence_refs": [
+        "e6",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": null,
+      "raw_mechanism": "light from the bright region is blocked or attenuated by the rotating figurine, producing a changing dark silhouette on the wall",
+      "linked_process": "secondary",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e7",
+        "e9",
+        "e12"
+      ]
+    }
+  ]
+}

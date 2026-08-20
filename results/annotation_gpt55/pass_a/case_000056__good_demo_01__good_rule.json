@@ -1,0 +1,287 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A yellow smiley tennis ball on a black circular base changes orientation until the face markings rotate out of view.",
+  "raw_event_description": "The scene shows a yellow fuzzy ball with a dark smiley face positioned on top of a black circular base on a wooden tabletop, with a pale wall and a cable behind it. At the start the smiley face is directed toward the camera. Over time, the face markings move toward the viewer's left side of the ball, then become only partly visible, and by the end the front-facing surface shows mainly the yellow ball surface and a curved pale seam while the smiley face is no longer visible. The ball stays above the base and the base stays in the same place in the frame.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The ball, black circular base, tabletop, wall, and rear cable are clearly visible.",
+      "The visible orientation-change process is present from the beginning rather than preceded by a distinct still pre-event interval."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow smiley ball",
+      "visible_form": "round fuzzy ball with dark smiley face markings and pale curved seam lines",
+      "material_description": "bright yellow fuzzy surface; dark drawn-looking face markings; pale seam bands",
+      "visible_properties": [
+        "round",
+        "yellow",
+        "fuzzy",
+        "smiley face visible at start",
+        "curved seam visible"
+      ],
+      "initial_motion_description": "No separate pre-event motion is visible; across the early frames the face markings begin shifting sideways relative to the camera.",
+      "initial_integrity_description": "The ball appears intact and retains its round shape.",
+      "event_role_hints": [
+        "main visibly changing object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black circular base",
+      "visible_form": "short black cylindrical platform with a flat circular top",
+      "material_description": "smooth dark surface with a slightly reflective top and dark side",
+      "visible_properties": [
+        "black",
+        "cylindrical",
+        "flat top",
+        "stationary position in frame"
+      ],
+      "initial_motion_description": "No visible lateral movement at the start.",
+      "initial_integrity_description": "The base appears intact.",
+      "event_role_hints": [
+        "supporting surface for the ball"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal table surface with wood grain",
+      "material_description": "brown surface with visible grain pattern",
+      "visible_properties": [
+        "flat",
+        "brown",
+        "wood-grain appearance"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "The tabletop appears continuous and intact.",
+      "event_role_hints": [
+        "supporting surface for the base"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "rear cable",
+      "visible_form": "thin dark cable extending behind the base toward the right rear",
+      "material_description": "dark flexible-looking line",
+      "visible_properties": [
+        "thin",
+        "dark",
+        "partly curved"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "The cable appears continuous where visible.",
+      "event_role_hints": [
+        "background object"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "wall",
+      "visible_form": "plain pale vertical background surface",
+      "material_description": "smooth pale surface",
+      "visible_properties": [
+        "pale",
+        "plain",
+        "vertical background"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "The visible wall surface appears intact.",
+      "event_role_hints": [
+        "background"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the ball is in contact with or immediately above the top surface of the black circular base",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "the black circular base is positioned on the wooden tabletop",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "the cable is visible behind and to the right of the base",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The yellow smiley ball is centered on top of the black circular base."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The black circular base is on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A thin dark cable is visible behind the base toward the right side."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The ball's dark smiley face is directed toward the camera."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The ball remains above the black circular base while its markings shift across the visible surface."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The smiley face markings move toward the viewer's left side of the ball."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "Only part of the smiley face is visible near the left side of the ball."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The smiley face is no longer visible on the front of the ball."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "A pale curved seam line is visible across the upper front area of the ball."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The base, tabletop edges, wall, and cable keep stable positions in the frame."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "No scene cut is visible."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The ball starts with its smiley face toward the camera while positioned on the base."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The ball shows its smiley face frontally."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The base stays centered under the ball."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The visible markings on the ball shift sideways."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The smiley markings move toward the viewer's left and become partly visible at the side."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The base remains in the same visible location below the ball."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The front of the ball no longer shows the smiley face."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The ball presents mostly yellow fuzzy surface and a curved pale seam toward the camera."
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The surrounding scene remains stable in the frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The tabletop remains visually unchanged."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The rear cable remains in place."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The wall remains a stable background."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10",
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "Whether the black circular base itself changes orientation is not visually resolved because it has few visible asymmetric surface features."
+  ]
+}

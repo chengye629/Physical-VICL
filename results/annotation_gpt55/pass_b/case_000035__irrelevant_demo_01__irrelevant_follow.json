@@ -1,0 +1,219 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "transparent panel",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support",
+        "medium"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "colored strips",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "yellow round object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "purple angled piece",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "downward translation of the small yellow round object across the panel",
+      "participants": [
+        {
+          "object_id": "obj_3",
+          "role": "target"
+        },
+        {
+          "object_id": "obj_1",
+          "role": "medium"
+        },
+        {
+          "object_id": "obj_4",
+          "role": "support"
+        }
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e11"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e8",
+        "e9"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "the yellow round object becomes visible after not being visible in the initial frames"
+      },
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the yellow round object changes visible position downward from the upper area toward the central area"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "the yellow round object stops changing visible position near the inner area of the purple angled piece"
+      },
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "relation",
+        "type": null,
+        "raw_transition": "the yellow round object's final visible position is near the inner area of the purple angled piece"
+      },
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the yellow object's downward motion",
+      "object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "mechanical interaction with the fixed angled region arrests the yellow object's motion near the purple angled piece",
+      "object_ids": [
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    }
+  ]
+}

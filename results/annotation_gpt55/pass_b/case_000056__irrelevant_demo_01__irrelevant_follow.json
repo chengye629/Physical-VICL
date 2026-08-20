@@ -1,0 +1,154 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "yellow smiley ball",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "rotating",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "black circular base",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "wooden tabletop",
+      "axes": {
+        "entity_kind": "surface_or_region",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e2",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "rear cable",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [],
+        "material_phase": "solid",
+        "physical_properties": [],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "rotation",
+      "raw_type": "in-place rotation of the ball on the base",
+      "participants": {
+        "target": [
+          "obj_1"
+        ],
+        "support": [
+          "obj_2"
+        ]
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_ids": [],
+      "target_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e9"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the ball's orientation changes as the smiley markings move leftward relative to the camera"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "the front-facing smiley face becomes mostly no longer visible"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": []
+}

@@ -1,0 +1,279 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "glass dispenser",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source",
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "spout",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "receiving jar",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "orange liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "woven stand",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "wooden table",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e8"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "bulk_flow",
+      "raw_type": "continuous orange liquid stream flowing from dispenser spout into receiving jar",
+      "participant_object_ids": [
+        "obj_4"
+      ],
+      "event_roles": {
+        "source": [
+          "obj_1",
+          "obj_2"
+        ],
+        "target": [
+          "obj_4"
+        ],
+        "container": [
+          "obj_3"
+        ],
+        "support": [
+          "obj_5",
+          "obj_6"
+        ]
+      },
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e7"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the liquid stream is already flowing at the start",
+      "actor_object_ids": [],
+      "target_object_ids": [],
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "raw_temporal": "the continuous stream persists while the liquid level in the jar rises over time; the event is already underway in the first visible frame",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e7"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "material_transfer",
+        "raw_transition": "orange liquid moves as a continuous stream from the spout area into the receiving jar"
+      },
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "the amount of orange liquid collected in the jar increases over time"
+      },
+      "evidence_refs": [
+        "e5",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "the orange liquid free surface rises toward the upper portion of the jar"
+      },
+      "evidence_refs": [
+        "e5",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "small pale bubbles and foam are visible along the liquid surface near the jar opening"
+      },
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "the receiving jar contains a visibly increasing volume of orange liquid"
+      },
+      "evidence_refs": [
+        "e5",
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the falling liquid stream downward from the spout into the jar",
+      "linked_process": "primary",
+      "object_ids": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "pressure_gradient",
+      "raw_mechanism": "a pressure difference across the spout supports continuous outflow of the liquid",
+      "linked_process": "primary",
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "liquid free-surface effects support visible bubbles and foam on the collected liquid surface",
+      "linked_process": "primary",
+      "object_ids": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e6"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow mug",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e8"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black circular base",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "bright light",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wall shadow pattern",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "product",
+        "target"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "black cord",
+      "entity_kind": "deformable_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e7"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "rotation",
+      "raw_type": "yellow mug rotates or changes orientation on the circular base",
+      "object_ids": [
+        "obj_1"
+      ],
+      "event_roles": {
+        "target": [
+          "obj_1"
+        ],
+        "support": [
+          "obj_2"
+        ]
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e8"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "illumination_change",
+        "raw_type": "projected mug shadow changes shape and handle visibility as the mug orientation changes",
+        "object_ids": [
+          "obj_1",
+          "obj_3",
+          "obj_4"
+        ],
+        "event_roles": {
+          "source": [
+            "obj_3"
+          ],
+          "target": [
+            "obj_4"
+          ],
+          "medium": [
+            "obj_1"
+          ]
+        },
+        "evidence_refs": [
+          "e3",
+          "e6",
+          "e8",
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the mug is already changing orientation at the beginning",
+      "actor_ids": [],
+      "target_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e10"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the mug's visible orientation changes; the handle moves into view on the left and then shifts farther toward the left/rear side"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "the wall shadow pattern changes, with a handle-shaped shadow appearing and then repositioning with the mug's changing orientation"
+      },
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e8"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "torque",
+      "raw_mechanism": "angular forcing of the mug-base system drives the mug's rotation or reorientation while it remains supported",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e8"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "the bright light emits visible illumination toward the mug and wall throughout the clip",
+      "object_ids": [
+        "obj_3",
+        "obj_1",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e9"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "absorption",
+      "raw_mechanism": "the opaque mug blocks part of the emitted light, producing a mug-shaped shadow whose handle portion shifts as the mug rotates",
+      "object_ids": [
+        "obj_1",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e8"
+      ]
+    }
+  ]
+}

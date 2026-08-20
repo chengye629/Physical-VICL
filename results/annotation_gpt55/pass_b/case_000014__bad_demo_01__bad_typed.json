@@ -1,0 +1,226 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "orange citrus piece",
+      "axes": {
+        "entity_kind": "deformable_solid",
+        "event_roles": [
+          "target",
+          "product"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "metal blade",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "tool"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "reflective"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "transparent cutting board",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "transparent",
+          "reflective"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wood-colored surface",
+      "axes": {
+        "entity_kind": "surface_or_region",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e3",
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fracture_separation",
+      "type": "cutting_separation",
+      "raw_type": "blade cutting a citrus piece into two portions",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": null,
+        "raw_type": "cut citrus portion rotates outward and shifts sideways",
+        "participant_object_ids": [
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e6",
+          "e7"
+        ]
+      }
+    ],
+    "action": {
+      "family": "separation",
+      "type": "cut",
+      "raw_action": "a sharp metal blade is used to cut through the citrus piece",
+      "actor_object_id": null,
+      "tool_object_id": "obj_2",
+      "target_object_id": "obj_1",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "integrity",
+        "type": "broken",
+        "raw_transition": "the citrus changes from a mostly whole piece intersected by the blade into two separated cut portions"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "rotation_onset",
+        "raw_transition": "the right cut portion begins rotating outward"
+      },
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "the right cut portion shifts to the right while the left portion remains to the left"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "integrity",
+        "type": "fragmented",
+        "raw_transition": "a small pale-orange fragment or spot appears near the lower center between the separated portions"
+      },
+      "evidence_refs": [
+        "e8"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "shear",
+      "raw_mechanism": "the blade applies localized cutting and shear along the citrus centerline",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "the citrus tissue and rind separate along the blade path under the cutting load",
+      "participant_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    }
+  ]
+}

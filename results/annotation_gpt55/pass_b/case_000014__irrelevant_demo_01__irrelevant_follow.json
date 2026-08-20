@@ -1,0 +1,248 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "knife blade",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "orange citrus piece",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "left orange piece",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "unknown",
+      "evidence_refs": [
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "right orange piece",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "unknown",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "cutting board",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "translucent"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "wood-toned surface",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fracture_separation",
+      "type": "cutting_separation",
+      "raw_type": "knife blade separates the citrus piece into two pieces",
+      "participants": {
+        "tool_object_ids": [
+          "obj_1"
+        ],
+        "target_object_ids": [
+          "obj_2"
+        ],
+        "product_object_ids": [
+          "obj_3",
+          "obj_4"
+        ],
+        "support_object_ids": [
+          "obj_5"
+        ]
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": null,
+        "raw_type": "right separated orange portion tilts and shifts to the right",
+        "participants": {
+          "target_object_ids": [
+            "obj_4"
+          ],
+          "support_object_ids": [
+            "obj_5"
+          ]
+        },
+        "evidence_refs": [
+          "e7",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "separation",
+      "type": "cut",
+      "raw_action": "cutting the citrus piece with a knife blade",
+      "actor_object_ids": [],
+      "tool_object_ids": [
+        "obj_1"
+      ],
+      "target_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6",
+        "e8"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "integrity",
+        "type": "broken",
+        "raw_transition": "initially connected citrus piece separates into two visible orange pieces"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "integrity",
+        "type": "broken",
+        "raw_transition": "left portion becomes an independently visible separated piece"
+      },
+      "evidence_refs": [
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "integrity",
+        "type": "broken",
+        "raw_transition": "right portion becomes an independently visible separated piece"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "right orange portion tilts away from the blade and moves to the right before resting angled"
+      },
+      "evidence_refs": [
+        "e7",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "shear",
+      "raw_mechanism": "localized blade contact drives separation along the central cut line",
+      "linked_process": "primary",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6",
+        "e8"
+      ]
+    }
+  ]
+}

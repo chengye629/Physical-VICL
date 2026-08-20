@@ -1,0 +1,184 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "beverage dispenser",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "red-orange liquid in dispenser",
+      "entity_kind": "liquid_body",
+      "event_roles": [],
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "spigot",
+      "entity_kind": "articulated_object",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "lower glass",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "red-orange liquid in lower glass",
+      "entity_kind": "liquid_body",
+      "event_roles": [],
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "woven stand",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": []
+    },
+    {
+      "object_id": "obj_8",
+      "name": "background wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": []
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "special",
+      "type": "none",
+      "raw_type": "no visible scene-level physical process",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "static",
+      "temporal_structure": "not_applicable",
+      "change_profile": "none",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    }
+  },
+  "impacts": [],
+  "mechanisms": []
+}

@@ -1,0 +1,262 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small blue round object moves from left to right across a tabletop, passes beyond the tabletop edge, and exits the frame on the right.",
+  "raw_event_description": "The scene begins with a stationary view of a tan wood-grain tabletop beside a light wall and a light rectangular sheet or panel on the right. After a period with no moving object visible, a small blue round object enters from the left on the tabletop. It travels rightward across the tabletop with visible blur, reaches the tabletop's right edge, then appears to the right of that edge in front of the light wall or sheet area. It continues rightward with a slightly lower image position and leaves the frame at the right side. The scene remains otherwise unchanged.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tabletop, wall, and right-side sheet or panel are visible before the blue object appears.",
+      "The moving blue object is not visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "tabletop",
+      "visible_form": "horizontal rectangular tan surface with a rounded front-right corner and a vertical right edge",
+      "material_description": "tan wood-grain patterned visible surface",
+      "visible_properties": [
+        "flat-looking top surface",
+        "straight visible right edge",
+        "rounded corner"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact and unchanged",
+      "event_role_hints": [
+        "blue object moves across this visible surface before reaching its edge"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "wall",
+      "visible_form": "smooth light-colored vertical background surface",
+      "material_description": "plain light gray surface with no distinct texture",
+      "visible_properties": [
+        "vertical",
+        "light colored",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact and unchanged",
+      "event_role_hints": [
+        "background behind the moving blue object near the right side"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "right-side sheet or panel",
+      "visible_form": "light rectangular sheet or panel on the right side with horizontal seam-like lines",
+      "material_description": "light gray semi-opaque or matte-looking surface",
+      "visible_properties": [
+        "rectangular visible area",
+        "horizontal line across it",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact and unchanged",
+      "event_role_hints": [
+        "blue object appears in front of this area after leaving the tabletop edge"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "blue round object",
+      "visible_form": "small bright blue round object with a circular outline in most visible frames",
+      "material_description": "solid blue visible surface; exact material not visually determined",
+      "visible_properties": [
+        "blue",
+        "small relative to tabletop",
+        "round outline",
+        "motion blur while moving"
+      ],
+      "initial_motion_description": "not visible at the start; later enters from the left moving rightward",
+      "initial_integrity_description": "appears whole while visible",
+      "event_role_hints": [
+        "main moving object"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the tabletop occupies the left and lower-left part of the frame and ends near the right-side sheet or panel",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "the sheet or panel is positioned in front of or adjacent to the light wall area on the right side of the frame",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A tan wood-grain tabletop is visible on the left with a right edge near the center-right of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A light wall and a light rectangular sheet or panel are visible on the right side."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "No blue moving object is visible during the initial still portion."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "A small blue round object appears from the left side on the tabletop."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The blue object changes position rightward across the tabletop."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The blue object shows motion blur while crossing the tabletop."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The blue object reaches the visible right edge of the tabletop."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The blue object appears to the right of the tabletop edge in front of the light wall or sheet area."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The blue object continues rightward with a lower image position than when it was on the tabletop."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "A dark oval area is visible near the blue object on the light right-side area while the object passes."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The blue object exits the frame at the right edge."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The tabletop, wall, and right-side sheet or panel remain stationary and visibly unchanged."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The camera framing remains essentially fixed with no visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e12"
+      ],
+      "observations": [
+        "The setup is static before the moving blue object appears."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "visible and stationary"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "visible and stationary"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "visible and stationary"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "not visible in the frame"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The blue object enters and traverses the tabletop toward the right edge."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "appears from the left on the tabletop and moves rightward with blur"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary as the blue object crosses its visible top surface"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The blue object is visible beyond the tabletop edge and then leaves the frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "moves to the right of the tabletop edge in front of the light right-side area, shifts rightward and lower in the image, and exits the frame"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains stationary while a dark oval area and the blue object pass in front of its visible region"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact three-dimensional shape and material of the blue object are not fully distinguishable from the visible frames."
+  ]
+}

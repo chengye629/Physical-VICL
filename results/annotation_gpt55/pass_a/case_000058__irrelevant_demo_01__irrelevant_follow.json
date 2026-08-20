@@ -1,0 +1,347 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A pink rectangular block is lowered onto a blue horizontal block spanning two upright blocks, then remains standing upright after the holder moves away.",
+  "raw_event_description": "The scene begins with a small block structure on a wooden tabletop: a blue horizontal block is positioned across a red upright block and a yellow upright block. A pink rectangular block, partly attached to or held near a dark and blue object above it, moves downward from the top of the frame at a slight angle. The lower end of the pink block reaches the top of the blue block near its center. The pink block becomes upright while its lower end is on the blue block. The dark and blue holder moves upward out of the frame, and the pink block remains standing vertically on the blue block. The red, yellow, and blue blocks remain visibly in place throughout.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tabletop, blue horizontal block, red upright block, yellow upright block, and part of the descending pink block are visible.",
+      "The upper holding object is not yet fully visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal surface extending across the lower part of the scene",
+      "material_description": "wood-like surface with visible grain pattern and brown coloration",
+      "visible_properties": [
+        "horizontal",
+        "brown",
+        "wood-grain texture"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "continuous visible surface",
+      "event_role_hints": [
+        "surface beneath the block structure"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "blue horizontal block",
+      "visible_form": "rectangular block placed horizontally across the tops of two upright blocks",
+      "material_description": "matte blue colored solid-looking block",
+      "visible_properties": [
+        "blue",
+        "rectangular",
+        "horizontal"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact rectangular form",
+      "event_role_hints": [
+        "receives the pink block on its top surface"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "red upright block",
+      "visible_form": "narrow vertical rectangular block under the left side of the blue block",
+      "material_description": "matte red colored solid-looking block",
+      "visible_properties": [
+        "red",
+        "rectangular",
+        "vertical"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact rectangular form",
+      "event_role_hints": [
+        "left upright part of the block structure"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "yellow upright block",
+      "visible_form": "narrow vertical rectangular block under the right side of the blue block",
+      "material_description": "matte yellow colored solid-looking block",
+      "visible_properties": [
+        "yellow",
+        "rectangular",
+        "vertical"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact rectangular form",
+      "event_role_hints": [
+        "right upright part of the block structure"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "pink rectangular block",
+      "visible_form": "long narrow rectangular block descending from above and later standing vertically",
+      "material_description": "matte pink colored solid-looking block",
+      "visible_properties": [
+        "pink",
+        "rectangular",
+        "initially angled",
+        "later vertical"
+      ],
+      "initial_motion_description": "moves downward from the upper part of the frame",
+      "initial_integrity_description": "intact rectangular form",
+      "event_role_hints": [
+        "moving object placed onto the top blue block"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "dark and blue holder",
+      "visible_form": "dark elongated object with blue edges or side coloration appearing above the pink block",
+      "material_description": "dark surface with blue visible edging; material not otherwise identifiable",
+      "visible_properties": [
+        "dark",
+        "blue-edged",
+        "elongated"
+      ],
+      "initial_motion_description": "moves downward with the pink block, then moves upward out of view",
+      "initial_integrity_description": "visible portion remains intact",
+      "event_role_hints": [
+        "located at the upper end of the pink block during its movement"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "back wall",
+      "visible_form": "plain vertical background surface behind the tabletop",
+      "material_description": "smooth gray wall-like surface",
+      "visible_properties": [
+        "gray",
+        "vertical",
+        "plain"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "continuous visible surface",
+      "event_role_hints": [
+        "background"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is positioned horizontally across the tops of the red and yellow upright blocks",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is positioned horizontally across the tops of the red and yellow upright blocks",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "stands on the tabletop below the left side of the blue block",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "stands on the tabletop below the right side of the blue block",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is initially above the blue block and separated from it by visible space",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The blue block is horizontal and its left end is above the red upright block."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The blue block is horizontal and its right end is above the yellow upright block."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The red upright block is vertical on the tabletop."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The yellow upright block is vertical on the tabletop."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The pink block is visible near the top of the frame above the blue block with open space between them."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "early",
+      "observation": "The pink block moves downward while angled slightly from vertical."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "A dark and blue holder is visible above the pink block during the downward movement."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The lower end of the pink block reaches the top surface area of the blue block near the center."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The pink block changes from a slanted orientation to a more vertical orientation."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The dark and blue holder moves upward away from the pink block."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The pink block remains upright on top of the blue block after the holder has moved upward."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The blue, red, and yellow blocks keep their visible positions and shapes throughout the sequence."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "No visible pieces detach from the blocks."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The camera viewpoint remains fixed relative to the tabletop and wall."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The initial block structure is already assembled on the tabletop.",
+        "The pink block is above the blue block and moving downward."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The blue block remains horizontal across the red and yellow blocks."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The pink block descends from the upper part of the frame while slightly angled."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The holder is visible above the pink block.",
+        "The pink block reaches the blue block and becomes more vertical."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "The lower end of the pink block arrives at the top surface of the blue block near the center."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The dark and blue holder remains above the pink block during placement."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The holder moves upward out of the scene.",
+        "The pink block remains standing on the blue block.",
+        "The original three-block structure remains visibly unchanged."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_6",
+          "observation": "The holder moves upward and leaves the visible area."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The pink block stays upright on the blue block."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The blue block stays horizontal."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The red block stays upright."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The yellow block stays upright."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact contact details between the holder and the upper end of the pink block are partly obscured by the holder."
+  ]
+}

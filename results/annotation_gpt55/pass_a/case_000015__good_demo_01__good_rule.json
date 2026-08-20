@@ -1,0 +1,276 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A green sheet between two scissor-like tools bends, develops a central separation, and ends as two separate green pieces on a tabletop.",
+  "raw_event_description": "At the start, a bright green rectangular sheet lies mostly flat on a wooden tabletop, spanning between a black-and-blue handled tool on the left and a similar tool on the right. For several frames the sheet remains continuous and nearly still. A visible discontinuity then appears near the middle of the sheet, and the sheet bends upward and twists into two portions. The opening widens until the two green portions are visibly separate. After separation, the left portion tilts and settles on the left side of the table, while the right portion moves and settles on the right side. The two handled tools remain at opposite sides of the scene with little visible change.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The green sheet, both handled tools, and tabletop are visible.",
+      "The sheet appears continuous before the visible separation begins."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "green sheet",
+      "visible_form": "thin bright green rectangular sheet with straight edges, later appearing as two separated green pieces",
+      "material_description": "matte-looking bright green sheet material with thin visible edge",
+      "visible_properties": [
+        "bright green",
+        "thin",
+        "flat-to-curved during event",
+        "straight-edged",
+        "flexible-looking from visible bending"
+      ],
+      "initial_motion_description": "initially mostly still on the tabletop",
+      "initial_integrity_description": "initially appears as one continuous sheet spanning the middle of the frame",
+      "event_role_hints": [
+        "undergoes visible bending",
+        "undergoes visible separation into two pieces"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left handled tool",
+      "visible_form": "black tool with blue inner handle loop and narrow dark tip near the green sheet",
+      "material_description": "black and blue plastic-looking handle areas with small shiny metal-looking dots",
+      "visible_properties": [
+        "black outer handle",
+        "blue inner handle",
+        "looped handle shape",
+        "dark narrow tip"
+      ],
+      "initial_motion_description": "initially still at the left side of the sheet",
+      "initial_integrity_description": "appears intact and unchanged",
+      "event_role_hints": [
+        "positioned near the left edge of the green sheet"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "right handled tool",
+      "visible_form": "black tool with blue inner handle loop and narrow dark tip near the green sheet",
+      "material_description": "black and blue plastic-looking handle areas with small shiny metal-looking dots",
+      "visible_properties": [
+        "black outer handle",
+        "blue inner handle",
+        "looped handle shape",
+        "dark narrow tip"
+      ],
+      "initial_motion_description": "initially still at the right side of the sheet",
+      "initial_integrity_description": "appears intact and unchanged",
+      "event_role_hints": [
+        "positioned near the right edge of the green sheet"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal tabletop surface",
+      "material_description": "brown wood-grain visible surface",
+      "visible_properties": [
+        "brown",
+        "wood-grain pattern",
+        "flat surface"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "unchanged visible surface",
+      "event_role_hints": [
+        "surface under the green sheet and later under the separated pieces"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "spans across the center of the frame between the two handled tools",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "spans across the center of the frame between the two handled tools",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "lies on or very near the tabletop surface",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A bright green sheet occupies the center of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A black-and-blue handled tool is visible on each side of the green sheet."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The green sheet is mostly flat against the brown wood-grain tabletop."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The green sheet initially appears as one continuous piece."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A visible opening appears near the middle of the green sheet."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The green sheet bends upward into two raised portions."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The right portion of the green sheet forms a long curved raised shape."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The left portion of the green sheet tilts upward and leftward."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The green sheet is visible as two separate green pieces with a gap between them."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The left green piece rests on the left side of the tabletop."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The right green piece rests on the right side of the tabletop."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The camera viewpoint remains fixed relative to the tabletop and background."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The two handled tools remain near the left and right edges of the frame throughout the visible event."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene shows a green sheet between two handled tools on a tabletop before the visible separation."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "appears continuous and mostly flat"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains at the left side near the sheet"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains at the right side near the sheet"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "A central discontinuity appears and widens while the green sheet bends and twists."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "develops a visible opening near its middle"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "bends into two raised portions"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e13"
+      ],
+      "observations": [
+        "The two green portions are separated and settle apart on the tabletop."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "is visible as two separate green pieces with a gap between them"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains visible near the left green piece"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains visible near the right green piece"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact contact points between the handled tools and the green sheet are partly obscured by angle and overlap.",
+    "The precise moment when the green sheet first becomes fully separated is visible only over a short interval."
+  ]
+}

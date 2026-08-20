@@ -1,0 +1,366 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "small yellow ball",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "transparent vertical panel",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support",
+        "medium"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "upper green curved strip",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "upper purple strip",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "yellow strip",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "blue strip",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "lower green strip",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "lower purple U-shaped piece",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e12",
+        "e13",
+        "e14"
+      ]
+    },
+    {
+      "id": "obj_9",
+      "name": "upper teal piece",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "unknown",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "small yellow ball translating through the vertical board setup",
+      "participants": [
+        "obj_1",
+        "obj_2",
+        "obj_3",
+        "obj_4",
+        "obj_5",
+        "obj_6",
+        "obj_7",
+        "obj_8"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "relation_reconfiguration",
+        "type": "insertion",
+        "raw_type": "ball enters or comes to rest at the opening of the lower purple U-shaped piece",
+        "participants": [
+          "obj_1",
+          "obj_8"
+        ],
+        "evidence_refs": [
+          "e12",
+          "e13",
+          "e14"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; ball is first seen already moving",
+      "actor_ids": [],
+      "target_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "the ball changes position along a descending path across several strips"
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "the ball stops changing position and remains visible in the lower purple U-shaped piece near the end"
+      },
+      "evidence_refs": [
+        "e13",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "containment_gain",
+        "raw_transition": "the ball becomes located inside or at the opening of the lower purple U-shaped piece"
+      },
+      "evidence_refs": [
+        "e12",
+        "e13",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "the ball is not visible at the start and then becomes visible below the upper green curved strip"
+      },
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the ball downward through the vertical board setup",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e10",
+        "e12",
+        "e13"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "intermittent contact with fixed colored strips and the U-shaped piece guides or arrests the ball's motion",
+      "object_ids": [
+        "obj_1",
+        "obj_3",
+        "obj_4",
+        "obj_5",
+        "obj_6",
+        "obj_7",
+        "obj_8"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e7",
+        "e9",
+        "e11",
+        "e13",
+        "e14"
+      ]
+    }
+  ]
+}

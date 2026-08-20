@@ -1,0 +1,408 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A black hanging kettlebell descends onto the left pillow while a green hanging sheet descends and bends against the right pillow.",
+  "raw_event_description": "The scene begins with two light gray pillows on a wooden surface, a black kettlebell hanging above the left pillow, and a green rectangular sheet hanging above the right pillow. The kettlebell moves downward until its lower part contacts the top of the left pillow, after which the pillow surface forms a visible depression around it. The green sheet also moves downward on a hanging blue-and-black strip, contacts the right pillow, bends upward at one side, and later lies flatter across the pillow surface while the hanging strip remains vertical above it.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The two pillows and wooden surface are clearly visible.",
+      "The black hanging object and green sheet are visible near the top of the frame, but the upper suspension points are cropped or not fully shown.",
+      "No contact between the descending objects and pillows is visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "left pillow",
+      "visible_form": "large light gray rectangular cushion with rounded bulging top and dark edge piping",
+      "material_description": "fabric-like surface with wrinkles and stitched-looking dark trim",
+      "visible_properties": [
+        "soft-looking",
+        "light gray",
+        "wrinkled",
+        "bulging"
+      ],
+      "initial_motion_description": "stationary on the wooden surface",
+      "initial_integrity_description": "intact and inflated-looking with no visible tears",
+      "event_role_hints": [
+        "receives contact from the black hanging object",
+        "shows a visible surface depression during the event"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "right pillow",
+      "visible_form": "large light gray rectangular cushion with rounded bulging top and dark edge piping",
+      "material_description": "fabric-like surface with wrinkles and stitched-looking dark trim",
+      "visible_properties": [
+        "soft-looking",
+        "light gray",
+        "wrinkled",
+        "bulging"
+      ],
+      "initial_motion_description": "stationary on the wooden surface",
+      "initial_integrity_description": "intact and inflated-looking with no visible tears",
+      "event_role_hints": [
+        "receives contact from the green sheet and hanging strip",
+        "shows local shape change near the contact area"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "black kettlebell",
+      "visible_form": "black rounded weight-like object with an arched handle and flat lower front",
+      "material_description": "dark matte or semi-matte solid surface with faint lettering on the front",
+      "visible_properties": [
+        "black",
+        "rigid-looking",
+        "arched handle",
+        "compact"
+      ],
+      "initial_motion_description": "moves downward from above the left pillow",
+      "initial_integrity_description": "intact, with no visible breakage or deformation",
+      "event_role_hints": [
+        "descends onto the left pillow",
+        "comes to rest partly embedded in a visible pillow depression"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "black hanging strap",
+      "visible_form": "vertical black strip extending upward from the kettlebell handle",
+      "material_description": "dark strap-like surface",
+      "visible_properties": [
+        "black",
+        "narrow",
+        "vertical"
+      ],
+      "initial_motion_description": "moves downward together with the kettlebell",
+      "initial_integrity_description": "intact and continuous where visible",
+      "event_role_hints": [
+        "visibly connected to or aligned with the kettlebell handle"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "green sheet",
+      "visible_form": "bright green rectangular flexible-looking sheet or card",
+      "material_description": "smooth bright green surface",
+      "visible_properties": [
+        "green",
+        "thin",
+        "rectangular",
+        "bendable-looking"
+      ],
+      "initial_motion_description": "moves downward from above the right pillow",
+      "initial_integrity_description": "intact with no visible tears",
+      "event_role_hints": [
+        "contacts the right pillow",
+        "bends and changes orientation during contact"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "blue-and-black hanging strip",
+      "visible_form": "narrow mostly vertical strip above the green sheet, with blue side areas and darker central or edge areas",
+      "material_description": "smooth strip-like surface with blue and black visible regions",
+      "visible_properties": [
+        "narrow",
+        "vertical",
+        "blue and black"
+      ],
+      "initial_motion_description": "moves downward together with the green sheet",
+      "initial_integrity_description": "intact and continuous where visible",
+      "event_role_hints": [
+        "attached to or passing through the top of the green sheet",
+        "remains vertical while the green sheet bends against the pillow"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "wooden surface",
+      "visible_form": "horizontal brown tabletop or bench under the pillows",
+      "material_description": "brown wood-like surface",
+      "visible_properties": [
+        "brown",
+        "flat",
+        "horizontal"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact",
+      "event_role_hints": [
+        "supports the two pillows"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "background wall",
+      "visible_form": "plain light-colored vertical wall behind the objects",
+      "material_description": "smooth light gray or white wall surface",
+      "visible_properties": [
+        "light-colored",
+        "plain",
+        "vertical"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on the wooden surface and is positioned left of the right pillow",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "rests on the wooden surface and is positioned right of the left pillow",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "hangs above the left pillow with visible space between its bottom and the pillow top",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "hangs above the right pillow with visible space between its lower edge and the pillow top",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is vertically aligned with the kettlebell handle",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "is attached to or passes through the top area of the green sheet",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Two light gray pillows sit side by side on a brown wooden surface."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A black kettlebell-shaped object is visible above the left pillow with a gap below it."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A green rectangular sheet is visible above the right pillow with a gap below it."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A vertical black strap is visible above the kettlebell handle."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A narrow blue-and-black strip is visible at the top of the green sheet."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The kettlebell is lower than before and closer to the top of the left pillow."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The lower part of the kettlebell touches the top surface of the left pillow."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The top of the left pillow is visibly indented beneath the kettlebell."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The green sheet is lower than before and close to the top of the right pillow."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The green sheet contacts the top of the right pillow."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "middle",
+      "observation": "One side of the green sheet bends upward while another part lies against the right pillow."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The kettlebell remains seated in a depression on the left pillow."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The black strap above the kettlebell remains nearly vertical."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "late",
+      "observation": "The green sheet lies flatter across the top of the right pillow than during first contact."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "late",
+      "observation": "The blue-and-black strip remains nearly vertical above the green sheet."
+    },
+    {
+      "evidence_id": "e16",
+      "stage": "late",
+      "observation": "No scene cut is visible."
+    },
+    {
+      "evidence_id": "e17",
+      "stage": "continuous",
+      "observation": "The camera view remains fixed on the pillows and hanging objects."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The pillows are already side by side on the wooden surface.",
+        "The kettlebell and green sheet are suspended above separate pillows."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The left pillow is stationary and rounded on top."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The right pillow is stationary and rounded on top."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The kettlebell is above the left pillow without visible contact."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The green sheet is above the right pillow without visible contact."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The hanging objects move downward relative to the pillows.",
+        "The black object and green sheet each reach their corresponding pillow surfaces."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The kettlebell descends and its bottom edge contacts the left pillow."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The left pillow surface forms a visible depression around the kettlebell contact area."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The green sheet descends, contacts the right pillow, and bends."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The right pillow top shows local contact with the green sheet."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e12",
+        "e13",
+        "e14",
+        "e15",
+        "e16"
+      ],
+      "observations": [
+        "The contacted objects remain in place on the pillow surfaces.",
+        "The visible scene remains continuous."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The kettlebell remains partly lowered into the visible depression on the left pillow."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The black strap remains vertical above the kettlebell."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The green sheet remains on the right pillow and appears flatter than during first contact."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The blue-and-black strip remains vertical above the green sheet."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e17"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The upper attachment points of the hanging strap and strip are not fully visible.",
+    "The exact connection between the green sheet and the blue-and-black strip is partly obscured by their overlap."
+  ]
+}

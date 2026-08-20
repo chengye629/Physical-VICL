@@ -1,0 +1,303 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A white strip held above a blue mug is released into red liquid, after which the liquid surface splashes and ripples before settling.",
+  "raw_event_description": "At the start, a dark blue mug filled near the rim with red liquid sits on a light wooden tabletop. A blue and black holder at the top of the frame holds a vertical white strip that extends into the liquid. The holder and strip remain mostly steady for several moments. Then the white strip moves downward rapidly and is no longer visible above the liquid. Immediately afterward, the red liquid surface shows a small splash and bright disturbed patches, followed by waves and ripples that gradually diminish while the blue holder remains above the mug.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The mug, liquid surface, white strip, and part of the holder are visible.",
+      "The holder is partially cropped by the top edge, but its lower prongs and connection to the strip are visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "blue mug",
+      "visible_form": "cylindrical cup with rounded handle on the right side",
+      "material_description": "glossy dark blue exterior with reflective highlights",
+      "visible_properties": [
+        "dark blue",
+        "glossy",
+        "open top",
+        "handle on right"
+      ],
+      "initial_motion_description": "stationary on the tabletop",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "contains the red liquid"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red liquid",
+      "visible_form": "flat exposed liquid surface filling most of the mug opening",
+      "material_description": "dark red glossy surface with reflections",
+      "visible_properties": [
+        "dark red",
+        "shiny surface",
+        "fills mug near rim"
+      ],
+      "initial_motion_description": "surface appears mostly still",
+      "initial_integrity_description": "continuous visible surface",
+      "event_role_hints": [
+        "surface becomes disturbed after the white strip disappears into it"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "white strip",
+      "visible_form": "narrow vertical rectangular strip",
+      "material_description": "white smooth-looking solid surface",
+      "visible_properties": [
+        "white",
+        "slender",
+        "rectangular",
+        "vertical"
+      ],
+      "initial_motion_description": "held nearly stationary with its lower end in or at the red liquid",
+      "initial_integrity_description": "appears intact before it disappears into the mug",
+      "event_role_hints": [
+        "moves downward into the mug"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "blue-black holder",
+      "visible_form": "partially visible forked or tong-like object entering from the top edge",
+      "material_description": "blue surfaces with black borders and a pale central section",
+      "visible_properties": [
+        "partially cropped",
+        "blue",
+        "black-edged",
+        "forked shape"
+      ],
+      "initial_motion_description": "mostly stationary above the mug",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "initially aligned with the white strip"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal surface beneath the mug",
+      "material_description": "light tan surface with visible wood grain pattern",
+      "visible_properties": [
+        "light brown",
+        "wood-grain pattern",
+        "flat"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the mug"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "small red spot",
+      "visible_form": "small reddish mark on the tabletop to the left of the mug",
+      "material_description": "small red mark visible on the light tabletop",
+      "visible_properties": [
+        "small",
+        "red",
+        "left of mug"
+      ],
+      "initial_motion_description": "not clearly visible at the start",
+      "initial_integrity_description": "appears as a small mark when visible",
+      "event_role_hints": [
+        "visible after the liquid disturbance"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on the tabletop",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is contained within the open top of the mug",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "extends vertically from the holder down into or onto the red liquid surface",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is above the mug and aligned with the white strip",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A dark blue mug filled near the rim with dark red liquid is on a light wood-grain tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A narrow white strip hangs vertically from a blue-black holder and reaches into the red liquid."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The mug and tabletop remain fixed in the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The white strip moves rapidly downward and appears blurred."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The white strip is no longer visible above the liquid surface."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The red liquid surface shows a small upward splash and bright disturbed regions near the center."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "Circular ripples and irregular surface waves are visible across the red liquid."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The liquid surface disturbance becomes smaller over time."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "A small red spot is visible on the tabletop to the left of the mug."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The blue-black holder remains partially visible above the mug after the strip is no longer visible."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The scene is steady with the mug centered and the holder entering from the top."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The mug remains stationary on the tabletop."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The red liquid surface appears mostly still."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The white strip is held vertically with its lower part at the liquid."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The holder stays above the mug."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The main visible change occurs when the white strip moves downward and disappears from view above the liquid."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The white strip moves rapidly downward into the mug and is no longer visible above the liquid."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The liquid surface shows a splash, bright disturbed patches, and spreading ripples."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The holder remains above the mug with its lower tips visible."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The liquid surface gradually returns toward a smoother appearance while the holder stays near the top of the frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The visible waves and ripples on the red liquid diminish."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "A small red spot is visible on the tabletop left of the mug."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The mug remains upright and stationary."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e3"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The white strip is not visible after it enters the mug, so its final position is not visible.",
+    "The top portion of the holder is cropped by the frame."
+  ]
+}

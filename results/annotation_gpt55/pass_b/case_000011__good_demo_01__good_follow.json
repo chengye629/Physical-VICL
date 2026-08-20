@@ -1,0 +1,350 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e14"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "blue small cylinder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e9",
+        "e10",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "yellow ball",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e9",
+        "e11",
+        "e13"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "left black edge object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "right black edge object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "background panel",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e14"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "contact_loading",
+      "type": "collision",
+      "raw_type": "brief contact collision between the moving blue cylinder and yellow ball",
+      "participants": [
+        "obj_2",
+        "obj_3"
+      ],
+      "event_roles": {
+        "support": [
+          "obj_1"
+        ],
+        "target": [
+          "obj_2",
+          "obj_3"
+        ]
+      },
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "opposing tabletop translations before contact and separating translations after contact",
+        "participants": [
+          "obj_2",
+          "obj_3"
+        ],
+        "event_roles": {
+          "support": [
+            "obj_1"
+          ],
+          "target": [
+            "obj_2",
+            "obj_3"
+          ]
+        },
+        "evidence_refs": [
+          "e4",
+          "e5",
+          "e6",
+          "e7",
+          "e10",
+          "e11",
+          "e12",
+          "e13"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the colored objects enter the frame already moving",
+      "actor_objects": [],
+      "target_objects": [
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "single",
+      "change_profile": "abrupt",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "blue cylinder becomes adjacent to and visibly touches the yellow ball"
+      },
+      "related_objects": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "yellow ball becomes adjacent to and visibly touches the blue cylinder"
+      },
+      "related_objects": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "rebound",
+        "raw_transition": "blue cylinder changes from rightward approach to leftward separation after the touch"
+      },
+      "related_objects": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e9",
+        "e10",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "rebound",
+        "raw_transition": "yellow ball changes from leftward approach to motion toward the upper-right area after the touch"
+      },
+      "related_objects": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e9",
+        "e11",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_loss",
+        "raw_transition": "blue cylinder is separated from the yellow ball after the visible touch"
+      },
+      "related_objects": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_loss",
+        "raw_transition": "yellow ball is separated from the blue cylinder after the visible touch"
+      },
+      "related_objects": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "blue cylinder later remains near the left side of the tabletop"
+      },
+      "related_objects": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "yellow ball later remains near the upper-right area of the tabletop"
+      },
+      "related_objects": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e13"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "brief contact between the two moving objects transfers momentum and changes their directions",
+      "participants": [
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "friction",
+      "raw_mechanism": "contact resistance with the tabletop is consistent with the colored objects slowing and coming to rest apart",
+      "participants": [
+        "obj_1",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e12",
+        "e13"
+      ]
+    }
+  ]
+}

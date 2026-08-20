@@ -1,0 +1,324 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "yellow round object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "vertical panel",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "medium",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "upper green curved strip",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "upper purple dotted strip",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "blue slanted strip",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "central purple bent strip",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "lower green dotted strip",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_8",
+      "name": "bottom yellow striped strip",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_9",
+      "name": "black side supports",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e9"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "small yellow round object translates downward and to the right across the panel before stopping on a central strip",
+      "event_roles": {
+        "target": [
+          "obj_1"
+        ],
+        "medium": [
+          "obj_2"
+        ],
+        "support": [
+          "obj_6"
+        ]
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "relation_reconfiguration",
+        "type": "support_change",
+        "raw_type": "yellow object gains visible support on the central purple bent strip",
+        "event_roles": {
+          "target": [
+            "obj_1"
+          ],
+          "support": [
+            "obj_6"
+          ]
+        },
+        "evidence_refs": [
+          "e7",
+          "e8"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the yellow object becomes visible after the initial still frames",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6",
+        "e7",
+        "e8",
+        "e10"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "yellow round object becomes visible below the upper green curved strip"
+      },
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "visible position changes downward and to the right through the colored-strip arrangement"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "yellow object stops changing visible position after reaching the central purple bent strip"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "support_gain",
+        "raw_transition": "yellow object becomes visibly supported on the central purple bent strip"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity provides the downward mechanical driver for the yellow object's descent",
+      "object_ids": [
+        "obj_1"
+      ],
+      "process_refs": [
+        "primary"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e6"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "contact support from the central purple bent strip arrests the yellow object's visible motion",
+      "object_ids": [
+        "obj_1",
+        "obj_6"
+      ],
+      "process_refs": [
+        "primary",
+        "secondary"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    }
+  ]
+}

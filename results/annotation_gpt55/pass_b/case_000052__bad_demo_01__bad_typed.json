@@ -1,0 +1,275 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "near kettlebell",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "far kettlebell",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "tennis ball",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support",
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "right reflective surface",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "reflective",
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": []
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "tennis ball translates across the tabletop toward the near kettlebell and then stops at it",
+      "participants": [
+        "obj_3",
+        "obj_4",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e9",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "contact_loading",
+        "type": "sustained_contact",
+        "raw_type": "tennis ball makes contact with the lower front of the near kettlebell and remains there",
+        "participants": [
+          "obj_3",
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e9",
+          "e10"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "the reflective surface shows a reflected image of the moving tennis ball",
+        "participants": [
+          "obj_3",
+          "obj_5"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e8"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the ball enters the frame already moving",
+      "participants": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e7"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e9",
+        "e10",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "the tennis ball changes position across the tabletop and then remains stationary at the near kettlebell"
+      },
+      "evidence_refs": [
+        "e7",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "the tennis ball gains contact with the lower front area of the near kettlebell"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "the near kettlebell gains contact from the arriving tennis ball while remaining still"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "a yellow-green reflected ball image becomes visible on the right reflective surface"
+      },
+      "evidence_refs": [
+        "e3",
+        "e8"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "contact forces from the tabletop and the near kettlebell oppose further motion of the tennis ball after it reaches the kettlebell",
+      "linked_processes": [
+        "rigid_motion",
+        "contact_loading"
+      ],
+      "participants": [
+        "obj_3",
+        "obj_4",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "light from the yellow-green ball reflects from the right reflective surface to produce the visible reflected image",
+      "linked_processes": [
+        "optical_interaction"
+      ],
+      "participants": [
+        "obj_3",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e8"
+      ]
+    }
+  ]
+}

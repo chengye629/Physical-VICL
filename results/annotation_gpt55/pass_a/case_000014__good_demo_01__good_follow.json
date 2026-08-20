@@ -1,0 +1,268 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A vertical metal blade passes through a small orange fruit piece on a textured board, and the fruit piece separates into two visible pieces.",
+  "raw_event_description": "At the start, a small orange fruit piece rests near the center of a wet-looking textured rectangular board while a narrow metal blade is aligned through its middle. The blade remains between the orange sides as the visible central gap darkens and widens. The orange piece changes from one joined form into two separated pieces; the right piece moves and tips to the right, while the left piece stays left of the blade. By the end, the two orange pieces are apart on opposite sides of the blade, which remains upright between them.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The orange fruit piece, blade, and board are all visible.",
+      "The blade is already aligned with the center of the fruit piece in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "orange fruit piece",
+      "visible_form": "small orange peeled citrus-like piece with curved outer orange edge and lighter inner segment lines",
+      "material_description": "orange glossy surface with pale internal fibrous-looking lines; visibly moist-looking areas",
+      "visible_properties": [
+        "orange color",
+        "rounded wedge-like shape",
+        "segmented interior pattern",
+        "glossy highlights"
+      ],
+      "initial_motion_description": "no visible motion before the blade-fruit interaction already underway",
+      "initial_integrity_description": "appears as one connected piece with two rounded lobes joined near the center",
+      "event_role_hints": [
+        "visible object that separates into two pieces"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "metal blade",
+      "visible_form": "thin vertical metallic strip with a narrow lower edge",
+      "material_description": "smooth gray reflective metal surface with bright highlights",
+      "visible_properties": [
+        "straight narrow edge",
+        "vertical orientation at the start",
+        "reflective surface"
+      ],
+      "initial_motion_description": "appears positioned through the center area of the fruit piece at the start",
+      "initial_integrity_description": "appears intact and continuous",
+      "event_role_hints": [
+        "visible object passing through the fruit piece"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "textured board",
+      "visible_form": "flat rectangular board covering most of the frame",
+      "material_description": "translucent or gray-brown textured surface with wet-looking reflective streaks",
+      "visible_properties": [
+        "rectangular outline",
+        "fine surface texture",
+        "shiny wet-looking patches"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact and flat",
+      "event_role_hints": [
+        "surface supporting the fruit piece"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "table surface",
+      "visible_form": "brown flat surface visible around the board edges",
+      "material_description": "wood-like brown surface",
+      "visible_properties": [
+        "brown color",
+        "flat background surface"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "background support surface"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on top of the textured board near the center of the frame",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is vertically aligned through the central area of the orange fruit piece",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "lies on the brown table surface",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The orange fruit piece is positioned on the textured rectangular board."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A narrow metal blade is visible through the center of the orange fruit piece."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The textured rectangular board is on a brown surface."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The orange fruit piece initially appears connected across the blade line."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A dark narrow opening becomes visible along the center of the orange fruit piece beside the blade."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The two orange sides become visibly farther apart near the blade."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The right orange piece changes orientation and moves to the right of the blade."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "Two separate orange pieces are visible on opposite sides of the blade."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The left orange piece remains left of the blade."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The blade remains between the two separated orange pieces."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The board and table remain in the same visible positions throughout the clip."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "Wet-looking reflective streaks are visible on the board throughout the clip."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The fruit piece is centered on the board with the blade aligned through its middle."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "appears as one connected orange piece around the blade line"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "is upright and positioned through the central area of the orange fruit piece"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains flat under the fruit piece"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The central separation becomes more visible while the blade stays between the orange sides."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "changes from a joined shape into two visibly separating sides"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "right side moves rightward and tips into a new orientation"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains aligned between the separating orange sides"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The two orange pieces are separated and lie on opposite sides of the blade."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "is visible as two separate orange pieces"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "stays upright between the separated orange pieces"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "shows no visible displacement or deformation"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The hand or holder for the blade is not visible.",
+    "The exact upper extent of the blade is partly outside the frame."
+  ]
+}

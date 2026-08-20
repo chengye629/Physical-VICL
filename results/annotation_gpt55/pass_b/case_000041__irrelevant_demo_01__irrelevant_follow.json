@@ -1,0 +1,227 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "teapot-shaped object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "black circular base",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "mirror",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "reflective",
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "black cord",
+      "entity_kind": "deformable_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "walls and dark side structure",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e11"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "rotation",
+      "raw_type": "steady rotation of the teapot-shaped object around its upright vertical axis",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "mirror reflection of the rotating teapot-shaped object changes with the object's orientation",
+        "object_ids": [
+          "obj_1",
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e8"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e11"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "orientation changes around the vertical axis while the object remains upright and intact"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "reflected view of the teapot-shaped object changes orientation in step with the rotating object"
+      },
+      "evidence_refs": [
+        "e3",
+        "e8"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "torque",
+      "raw_mechanism": "angular driving torque about the vertical axis produces the observed rotation; the driving source is not visible",
+      "object_ids": [
+        "obj_1"
+      ],
+      "process_refs": [
+        "primary"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "light from the rotating teapot-shaped object reflects from the mirror surface, producing a reflected image that changes with object orientation",
+      "object_ids": [
+        "obj_1",
+        "obj_3"
+      ],
+      "process_refs": [
+        "secondary[0]"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e8"
+      ]
+    }
+  ]
+}

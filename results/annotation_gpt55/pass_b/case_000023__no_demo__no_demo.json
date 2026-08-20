@@ -1,0 +1,172 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "drink dispenser",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e5",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red liquid in dispenser",
+      "entity_kind": "liquid_body",
+      "event_roles": [],
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "spigot",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "small glass",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "red liquid in small glass",
+      "entity_kind": "liquid_body",
+      "event_roles": [],
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "woven stand",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "special",
+      "type": "none",
+      "raw_type": "no visible scene-level physical process",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "evidence_refs": [
+        "e7",
+        "e10"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "static",
+      "temporal_structure": "not_applicable",
+      "change_profile": "none",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    }
+  },
+  "impacts": [],
+  "mechanisms": []
+}

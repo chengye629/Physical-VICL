@@ -1,0 +1,183 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "wood tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "left black cylinder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "right black cylinder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "brown sphere",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "light gray sphere",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "partial hand",
+      "entity_kind": "agent",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "unknown",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "two small spheres translate across the tabletop in opposite directions",
+      "object_ids": [
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "unknown",
+      "raw_action": "a partial hand appears near the right-side onset area, but direct intervention on the spheres is not fully visible",
+      "actor_ids": [
+        "obj_6"
+      ],
+      "target_ids": [],
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "appears near the right side, moves leftward across the upper half of the tabletop, and exits at the upper-left edge"
+      },
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "appears near the left side, moves rightward across the lower half of the tabletop, and exits at the right edge"
+      },
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": []
+}

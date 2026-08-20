@@ -1,0 +1,190 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "white open container",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "raw_event_roles": [
+        "stationary visual occluder near the moving object's path"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "gray round object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "raw_event_roles": [
+        "moving object crossing the tabletop"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "raw_event_roles": [
+        "surface across which the gray round object moves"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "dark left-edge object",
+      "entity_kind": "unknown",
+      "event_roles": [],
+      "raw_event_roles": [],
+      "material_phase": "unknown",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "unknown",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "rightward translation of a small gray round object across the tabletop",
+      "participant_object_ids": [
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e8"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the gray round object enters the frame already moving",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e10"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "impact_id": "impact_1",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the gray round object changes visible position rightward across the tabletop and leaves the visible frame area"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e8"
+      ]
+    },
+    {
+      "impact_id": "impact_2",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "the gray round object becomes partly or fully hidden by the white container while passing near it"
+      },
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "impact_id": "impact_3",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "the gray round object appears from the left side and later reappears on the right side of the white container"
+      },
+      "evidence_refs": [
+        "e4",
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "mechanism_id": "mechanism_1",
+      "family": "optical_electromagnetic",
+      "type": null,
+      "raw_mechanism": "line-of-sight occlusion by the stationary white container reduces visibility of the moving gray object",
+      "linked_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "linked_impact_ids": [
+        "impact_2",
+        "impact_3"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A gray rounded object moves in from the left, reaches a brown object and orange sphere, after which the orange sphere moves rightward and leaves the frame.",
+  "raw_event_description": "At the start, a small brown cylindrical object and an orange sphere are next to each other on a light wood tabletop, with a black cylindrical item partly visible at the far left. For a period nothing in the scene visibly changes. A gray rounded object then appears from the left side and moves rightward across the tabletop toward the pair. The gray object reaches the brown object and orange sphere; the orange sphere separates from the brown object and travels rightward toward the table's right edge. The orange sphere exits the frame at the right edge, while the gray object and brown object remain near the tabletop center area.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The brown object and orange sphere are clearly visible near the upper middle of the tabletop.",
+      "The gray moving object is not visible in the first frame.",
+      "The black cylindrical item is only partly visible at the left edge."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "orange sphere",
+      "visible_form": "small round orange ball-like object",
+      "material_description": "smooth orange surface with glossy highlight",
+      "visible_properties": [
+        "orange",
+        "round",
+        "small relative to tabletop"
+      ],
+      "initial_motion_description": "stationary on the tabletop before the gray object appears",
+      "initial_integrity_description": "appears intact with no visible deformation",
+      "event_role_hints": [
+        "initially adjacent to the brown object",
+        "later moves rightward and exits the frame"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "brown cylinder",
+      "visible_form": "small short cylindrical or puck-like object with circular face visible",
+      "material_description": "brown surface with lighter markings or highlights on the visible face",
+      "visible_properties": [
+        "brown",
+        "cylindrical",
+        "small relative to tabletop"
+      ],
+      "initial_motion_description": "stationary on the tabletop before the gray object appears",
+      "initial_integrity_description": "appears intact with no visible deformation",
+      "event_role_hints": [
+        "initially adjacent to the orange sphere",
+        "later remains near the gray object"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "gray rounded object",
+      "visible_form": "small gray rounded object, sphere-like in motion and later appearing rounded/cylindrical from the camera view",
+      "material_description": "gray surface with lighter highlight",
+      "visible_properties": [
+        "gray",
+        "rounded",
+        "small relative to tabletop"
+      ],
+      "initial_motion_description": "not visible in the first frame; when first visible, it is moving rightward from the left side of the tabletop",
+      "initial_integrity_description": "appears intact when visible, with no visible deformation",
+      "event_role_hints": [
+        "enters from the left",
+        "reaches the brown and orange objects"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "black cylindrical item",
+      "visible_form": "partly visible black cylinder at the far left edge of the frame",
+      "material_description": "dark black surface",
+      "visible_properties": [
+        "black",
+        "cylindrical",
+        "partially visible"
+      ],
+      "initial_motion_description": "stationary throughout the visible sequence",
+      "initial_integrity_description": "visible portion appears intact",
+      "event_role_hints": [
+        "located near where the gray object first appears"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "tabletop",
+      "visible_form": "large rectangular light wood tabletop",
+      "material_description": "light wood-grain surface",
+      "visible_properties": [
+        "flat",
+        "rectangular",
+        "light-colored wood grain"
+      ],
+      "initial_motion_description": "stationary relative to the camera",
+      "initial_integrity_description": "appears intact with no visible deformation",
+      "event_role_hints": [
+        "surface across which the small objects are visible"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the orange sphere is immediately to the right of the brown cylinder, with their sides appearing adjacent or touching",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "the black cylindrical item is partly visible at the far left edge of the tabletop",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the orange sphere is on the tabletop",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "the brown cylinder is on the tabletop",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A light wood-grain tabletop fills most of the frame with a green sofa in the background."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A brown cylindrical object and an orange sphere are adjacent near the upper middle of the tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A black cylindrical item is partly visible at the far left edge of the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The brown cylindrical object and orange sphere remain still for several frames."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A gray rounded object appears from the left side of the frame on the tabletop."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The gray rounded object moves rightward across the tabletop."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The gray rounded object becomes adjacent to the brown cylindrical object."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The orange sphere separates from the brown cylindrical object."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The orange sphere moves rightward across the tabletop."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The orange sphere reaches the right edge of the frame."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The orange sphere is no longer visible after passing the right edge of the frame."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The gray rounded object and brown cylindrical object remain near each other on the tabletop after the orange sphere leaves view."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The camera view remains fixed with no visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The tabletop, sofa, black cylindrical item, brown cylindrical object, and orange sphere are visible.",
+        "The brown cylindrical object and orange sphere are adjacent and still."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The orange sphere remains stationary beside the brown cylindrical object."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The brown cylindrical object remains stationary beside the orange sphere."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The black cylindrical item remains partly visible at the left edge."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The gray rounded object enters from the left and moves toward the pair.",
+        "The gray rounded object becomes adjacent to the brown cylindrical object.",
+        "The orange sphere separates and moves rightward."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The gray rounded object moves rightward from the left side toward the brown and orange objects."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The orange sphere moves rightward away from the brown cylindrical object."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The brown cylindrical object remains near the gray rounded object after the gray object arrives."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The orange sphere reaches and then passes out of the right edge of the frame.",
+        "The gray rounded object and brown cylindrical object remain visible near the center area of the tabletop."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The orange sphere exits the frame at the right edge."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The gray rounded object remains visible near the brown cylindrical object."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The brown cylindrical object remains visible with its circular face facing the camera."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact shape of the gray moving object is not fully distinguishable from the visible frames."
+  ]
+}

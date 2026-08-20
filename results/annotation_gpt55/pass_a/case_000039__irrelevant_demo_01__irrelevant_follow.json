@@ -1,0 +1,343 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "An orange hanging ball with metal hardware moves downward until its bottom meets the wooden tabletop, then stays nearly still.",
+  "raw_event_description": "At the start, an orange spherical object with shiny metal hardware is hanging in front of a gray wall and beside a vertical mirror. The object, its orange cord, its metal hardware, its wall shadow, and its mirror reflection all shift downward over time. The orange sphere approaches the tabletop, its lower edge reaches the tabletop surface, and afterward the hanging object remains nearly stationary with the sphere resting at the surface line.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The orange sphere, metal hardware, tabletop, wall, and mirror are visible.",
+      "The upper part of the cord extends out of the top of the frame.",
+      "The object is already hanging above the tabletop at the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "orange ball",
+      "visible_form": "small orange sphere with a textured surface and a vertical seam-like line",
+      "material_description": "orange textured surface; exact material not visually determined",
+      "visible_properties": [
+        "round",
+        "orange",
+        "small relative to the tabletop and wall"
+      ],
+      "initial_motion_description": "visible near the upper part of the frame and later moves downward",
+      "initial_integrity_description": "appears intact as one spherical piece",
+      "event_role_hints": [
+        "main moving visible object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "orange cord",
+      "visible_form": "thin vertical orange line extending upward out of the frame",
+      "material_description": "orange cord-like strand; exact material not visually determined",
+      "visible_properties": [
+        "thin",
+        "vertical",
+        "orange"
+      ],
+      "initial_motion_description": "moves downward together with the hanging assembly",
+      "initial_integrity_description": "appears continuous where visible",
+      "event_role_hints": [
+        "attached above the hanging assembly"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "metal clip assembly",
+      "visible_form": "shiny metal cap, ring, and clip above the orange ball",
+      "material_description": "reflective silver-colored metal-like surfaces",
+      "visible_properties": [
+        "shiny",
+        "silver-colored",
+        "small parts connected above the ball"
+      ],
+      "initial_motion_description": "moves downward with the orange ball",
+      "initial_integrity_description": "appears connected and intact",
+      "event_role_hints": [
+        "part of the hanging assembly"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal tan surface occupying the lower part of the scene",
+      "material_description": "wood-grain-like tan surface",
+      "visible_properties": [
+        "flat",
+        "horizontal",
+        "tan"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears continuous and intact",
+      "event_role_hints": [
+        "surface reached by the orange ball"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "gray wall",
+      "visible_form": "vertical light gray background surface",
+      "material_description": "matte gray surface",
+      "visible_properties": [
+        "vertical",
+        "plain",
+        "light gray"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears continuous and intact",
+      "event_role_hints": [
+        "background surface showing a moving shadow"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "mirror",
+      "visible_form": "vertical reflective panel on the right side",
+      "material_description": "reflective surface with visible duplicated image of the hanging object and tabletop",
+      "visible_properties": [
+        "vertical",
+        "reflective",
+        "rectangular visible edge"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "shows reflection of the hanging assembly"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "wall shadow",
+      "visible_form": "soft dark circular patch on the gray wall",
+      "material_description": "darkened area on wall; not a separate solid material",
+      "visible_properties": [
+        "soft-edged",
+        "dark",
+        "roughly circular"
+      ],
+      "initial_motion_description": "shifts downward as the hanging object descends",
+      "initial_integrity_description": "appears as a single soft patch",
+      "event_role_hints": [
+        "visible optical change associated with the moving hanging object"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "mirror reflection of hanging object",
+      "visible_form": "smaller reflected orange sphere with reflected metal hardware and cord inside the mirror",
+      "material_description": "reflected image on mirror surface",
+      "visible_properties": [
+        "orange reflected sphere",
+        "silver-colored reflected hardware",
+        "vertical reflected cord"
+      ],
+      "initial_motion_description": "moves downward within the mirror image",
+      "initial_integrity_description": "reflected image remains continuous",
+      "event_role_hints": [
+        "optical duplicate of the moving hanging assembly"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "orange ball is below the metal clip assembly",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "metal clip assembly is below the orange cord",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "orange ball is initially above the tabletop with visible space between them",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_8",
+      "relation_description": "reflected hanging object appears inside the mirror on the right",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The orange sphere is directly below the shiny metal cap and clip."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A thin orange cord extends upward from the metal hardware and out of the top of the frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The orange sphere is separated from the tabletop by a visible gap."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A reflected orange sphere and hardware appear on the mirror surface at the right."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The orange sphere and metal hardware occupy lower positions than in the early frames."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The soft dark patch on the wall shifts downward during the descent."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The lower edge of the orange sphere meets the tabletop surface line."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "After the sphere reaches the tabletop, the hanging assembly shows little to no visible position change."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The mirror reflection shows a corresponding downward shift of the reflected hanging object."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The wall, tabletop edge, mirror edge, and dark right-side furniture remain in fixed positions in the frame."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The hanging assembly is visible above the tabletop.",
+        "The mirror shows a reflected version of the hanging assembly."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "orange ball hangs above the tabletop with a visible gap"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "orange cord extends upward out of frame"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "metal clip assembly is connected above the orange ball"
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "reflection of the hanging assembly is visible in the mirror"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e9"
+      ],
+      "observations": [
+        "The hanging assembly moves downward.",
+        "The visible reflection also moves downward in the mirror."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "orange ball moves downward toward the tabletop"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "metal clip assembly moves downward with the ball"
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "wall shadow shifts downward"
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "reflected hanging object shifts downward within the mirror"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The orange ball reaches the tabletop surface line.",
+        "The hanging assembly remains nearly still afterward."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "lower edge of the orange ball meets the tabletop and then remains nearly stationary"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "visible cord remains vertical above the resting ball"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "metal hardware remains above the ball with little visible movement"
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "reflected hanging object appears near the reflected tabletop and then remains nearly still"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The upper attachment point of the cord is outside the frame.",
+    "The exact material of the orange sphere is not visually determined."
+  ]
+}

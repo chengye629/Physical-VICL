@@ -1,0 +1,190 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "black circular base",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "pale rectangular block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "tilted metallic object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "purple strip",
+      "entity_kind": "deformable_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "black cable",
+      "entity_kind": "deformable_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": null,
+      "raw_type": "pale rectangular block travels around the top surface of a stationary-looking circular base while its visible orientation changes",
+      "participants": [
+        {
+          "object_id": "obj_2",
+          "role": "target",
+          "evidence_refs": [
+            "e2",
+            "e6",
+            "e7",
+            "e8",
+            "e9"
+          ]
+        },
+        {
+          "object_id": "obj_1",
+          "role": "support",
+          "evidence_refs": [
+            "e1",
+            "e12"
+          ]
+        }
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention or start trigger",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e8"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "block position shifts around the circular top from the front/right region to the left/front edge region and then to the upper/back region, with a changed visible orientation"
+      },
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "motion occurs while the block remains on the circular top surface; the visible contact with the base constrains the block to travel along that support surface",
+      "object_ids": [
+        "obj_2",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e8",
+        "e12"
+      ]
+    }
+  ]
+}

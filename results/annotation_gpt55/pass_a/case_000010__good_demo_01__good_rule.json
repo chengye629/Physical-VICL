@@ -1,0 +1,285 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A light gray round object moves in from the left, contacts a small cluster on the tabletop, and the orange sphere moves rightward out of view while the gray and brown objects remain near the middle-right area.",
+  "raw_event_description": "The scene begins with a light wood tabletop in front of a yellow couch. A brown round object and an orange sphere sit next to each other near the upper-right portion of the tabletop, while a black cylindrical object is partly visible at the left edge. After a period with the brown and orange objects still, a light gray round object enters from the left and moves rightward across the tabletop. It reaches the brown and orange objects, after which the orange sphere separates and travels to the right, eventually leaving the image at the right side. The gray object and brown object remain close together near the middle-right portion of the table with little or no visible later movement.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tabletop and the initially present orange and brown objects are visible.",
+      "No moving scene object is yet visible in the first frame.",
+      "The left-edge black cylindrical object is only partly visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "orange sphere",
+      "visible_form": "small round orange ball-like object",
+      "material_description": "smooth orange visible surface",
+      "visible_properties": [
+        "orange",
+        "round",
+        "small relative to tabletop"
+      ],
+      "initial_motion_description": "stationary on the tabletop before the gray object enters",
+      "initial_integrity_description": "appears intact throughout visible time",
+      "event_role_hints": [
+        "initially adjacent to the brown object",
+        "later moves rightward and exits the image"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "brown round object",
+      "visible_form": "small dark brown round object, appearing ball-like or disk-like from the camera view",
+      "material_description": "smooth dark brown visible surface with a lighter curved highlight",
+      "visible_properties": [
+        "dark brown",
+        "round visible outline",
+        "small relative to tabletop"
+      ],
+      "initial_motion_description": "stationary on the tabletop before the gray object enters",
+      "initial_integrity_description": "appears intact throughout visible time",
+      "event_role_hints": [
+        "initially adjacent to the orange sphere",
+        "later remains close to the gray object"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "gray round object",
+      "visible_form": "small light gray round object entering from the left",
+      "material_description": "smooth light gray visible surface",
+      "visible_properties": [
+        "light gray",
+        "round",
+        "small relative to tabletop"
+      ],
+      "initial_motion_description": "not visible at the start; later moves rightward across the tabletop",
+      "initial_integrity_description": "appears intact when visible",
+      "event_role_hints": [
+        "enters from the left",
+        "reaches the initial brown-orange pair"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "black cylinder",
+      "visible_form": "partly visible black cylindrical object at the left edge of the frame",
+      "material_description": "dark black surface",
+      "visible_properties": [
+        "black",
+        "cylindrical",
+        "partially visible"
+      ],
+      "initial_motion_description": "stationary when visible",
+      "initial_integrity_description": "visible portion appears intact",
+      "event_role_hints": [
+        "located near where the gray object later appears, but no visible contact with it is shown in the clip"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "tabletop",
+      "visible_form": "large rectangular light wood tabletop",
+      "material_description": "light-colored wood grain pattern",
+      "visible_properties": [
+        "flat visible top surface",
+        "rectangular",
+        "light wood grain"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact throughout",
+      "event_role_hints": [
+        "supports the visible small objects"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the orange sphere is immediately to the right of the brown round object",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "the black cylinder is partly visible at the left edge of the image",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The orange sphere and the brown round object are adjacent on the tabletop near the upper-right area."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The orange sphere and brown round object remain still for several frames before another small object appears."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A black cylindrical object is partly visible at the left edge of the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "A light gray round object appears from the left side of the tabletop."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The light gray round object moves rightward across the tabletop toward the brown and orange objects."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The light gray round object reaches the area occupied by the brown round object and orange sphere."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "After the gray object reaches the pair, the orange sphere is separated to the right of the brown object."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The orange sphere continues moving rightward across the tabletop."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The orange sphere disappears beyond the right side of the image."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The gray object and brown object remain close together near the middle-right area of the tabletop."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "No further visible motion of the gray and brown objects is apparent in the later frames."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The camera view remains fixed on the tabletop and couch background."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The initial tabletop arrangement is visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The orange sphere is stationary next to the brown object."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The brown round object is stationary next to the orange sphere."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The black cylinder is partly visible and stationary at the left edge."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "A new small gray object enters and moves toward the initial pair.",
+        "The initial pair changes arrangement after the gray object reaches it."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The gray round object moves rightward from the left side of the tabletop."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The gray round object reaches the brown-orange pair."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The orange sphere moves rightward away from the brown object."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The brown round object remains near the gray object after the gray object reaches it."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The orange sphere is no longer visible after moving to the right.",
+        "The gray and brown objects remain visible on the tabletop."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The orange sphere exits the image at the right side."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The brown round object remains near the middle-right portion of the tabletop."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The gray round object remains close to the brown object with no later visible travel."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact three-dimensional shape of the brown object is not fully determined from the view.",
+    "The orange sphere leaves the image at the right side, and its later location is not visible."
+  ]
+}

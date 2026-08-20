@@ -1,0 +1,248 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "glass",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "clear liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "transparent"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "slender stick",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "combustible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "flame",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "target",
+        "product"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "oscillating",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "combustion",
+      "type": null,
+      "raw_type": "visible flame at the stick end flickers, shrinks, and goes out",
+      "participant_object_ids": [
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "relation_reconfiguration",
+        "type": "insertion",
+        "raw_type": "the darkened stick end shifts slightly farther into the glass opening",
+        "participant_object_ids": [
+          "obj_3",
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e6",
+          "e9"
+        ]
+      }
+    ],
+    "action": [
+      {
+        "family": "assembly",
+        "type": "insert",
+        "raw_action": "position the lit stick end into the glass opening near the liquid surface",
+        "actor_object_id": null,
+        "target_object_ids": [
+          "obj_3",
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e6",
+          "e9"
+        ]
+      }
+    ],
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e7",
+        "e8",
+        "e11"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "geometry",
+        "type": "contracted",
+        "raw_transition": "flame outline and height become smaller"
+      },
+      "evidence_refs": [
+        "e5",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "intensity_decrease",
+        "raw_transition": "yellow-orange luminous flame diminishes and is no longer visible"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "thermal_reaction",
+        "type": "burning_to_extinguished",
+        "raw_transition": "burning at the darkened stick end stops while the darkened tip remains visible"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "relation",
+        "type": "containment_gain",
+        "raw_transition": "stick end becomes positioned farther inside the glass opening"
+      },
+      "evidence_refs": [
+        "e6",
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "chemical_energy_release",
+      "raw_mechanism": "combustion at the stick end releases energy while the visible flame is present",
+      "related_object_ids": [
+        "obj_3",
+        "obj_4"
+      ],
+      "related_process_family": "combustion",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e7"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "the flame produces visible yellow-orange light, and that emission diminishes until it disappears",
+      "related_object_ids": [
+        "obj_4"
+      ],
+      "related_process_family": "combustion",
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e8"
+      ]
+    }
+  ]
+}

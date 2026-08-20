@@ -1,0 +1,252 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A transparent hanging box descends over a stationary yellow smiley ball on a wooden tabletop and then remains around it.",
+  "raw_event_description": "At the start, a yellow smiley-faced ball sits near the center of a wooden tabletop with a transparent rectangular object high above it. The transparent object lowers steadily from above, revealing a dark metal top plate, ring, chain, and orange cord. The transparent walls move down around the ball until the ball is enclosed within the transparent box. Near the end, the box, hanging hardware, and ball remain nearly still, with the ball visible through the box.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The yellow ball and tabletop are clearly visible.",
+      "Only part of the transparent hanging object is visible near the top edge at the start."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow smiley ball",
+      "visible_form": "small yellow spherical object with black smiley face markings",
+      "material_description": "bright yellow surface with black printed or drawn facial features",
+      "visible_properties": [
+        "round",
+        "yellow",
+        "black face markings"
+      ],
+      "initial_motion_description": "stationary on the tabletop",
+      "initial_integrity_description": "appears intact and unchanged",
+      "event_role_hints": [
+        "object located below the descending transparent box"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "transparent box",
+      "visible_form": "clear rectangular container or box with vertical transparent sides and a dark top plate",
+      "material_description": "transparent panels with reflective edges; dark shiny metal-looking top hardware",
+      "visible_properties": [
+        "transparent",
+        "rectangular",
+        "hollow-looking",
+        "reflective top plate"
+      ],
+      "initial_motion_description": "visible high in the frame and moving downward",
+      "initial_integrity_description": "appears intact and rigid",
+      "event_role_hints": [
+        "descends over the yellow ball"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "hanging hardware",
+      "visible_form": "ring, chain links, hook-like connector, and orange cord above the box",
+      "material_description": "dark metal-looking links and ring with an orange cord segment",
+      "visible_properties": [
+        "thin",
+        "vertical",
+        "linked sections",
+        "orange cord"
+      ],
+      "initial_motion_description": "becomes visible as the box lowers",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "visibly attached above the transparent box"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal table surface",
+      "material_description": "brown wood-grain surface",
+      "visible_properties": [
+        "flat",
+        "brown",
+        "wood grain"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the yellow ball"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "background wall",
+      "visible_form": "plain vertical wall behind the table",
+      "material_description": "smooth light gray surface",
+      "visible_properties": [
+        "flat",
+        "light gray"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears unchanged",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "sits on the wooden tabletop",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is positioned above the yellow ball",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The yellow smiley ball is centered on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A transparent rectangular object is visible above the ball near the top of the frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "middle",
+      "observation": "The transparent box moves downward toward the ball."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The yellow ball stays in the same tabletop location while the transparent box lowers."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A dark top plate and ring above the transparent box become visible."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The lower transparent edges of the box pass down around the sides of the yellow ball."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The yellow ball is visible inside the transparent box."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "An orange cord and dark chain are visible above the box."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The box and ball remain nearly stationary for many frames."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ],
+      "observations": [
+        "The ball is on the tabletop.",
+        "The transparent box is above the ball."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary on the tabletop"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "is visible high above the ball"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The transparent box descends toward and around the ball.",
+        "The ball remains in place."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "moves downward over the yellow ball"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "stays visible through the transparent sides as the box lowers"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "appears above the box as the descending assembly becomes more visible"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The ball is inside the transparent box.",
+        "The hanging hardware is visible above the box.",
+        "The visible objects remain nearly still."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains inside the transparent box without visible shape change"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "stays around the ball with little visible motion"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "hangs above the box with little visible motion"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

@@ -1,0 +1,243 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small crumpled item on a rectangular glass sheet continuously shows a bright flame-like glow while wispy smoke rises above it.",
+  "raw_event_description": "The video shows a rectangular transparent-looking sheet on a wooden tabletop with a small crumpled white and metallic-looking piece near its center. From the start, a bright yellow-white flame-like region is visible at the piece, and pale blue-gray smoke-like wisps extend upward. Across the sequence the crumpled piece remains in place, the bright region flickers in size and shape, and the smoke column bends and undulates while rising. The tabletop, glass sheet, and background remain stationary, and no scene cut is visible.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The main glowing and smoke-emitting activity is already visible in the first frame.",
+      "The small crumpled object, glass sheet, and tabletop are clearly visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "rectangular glass sheet",
+      "visible_form": "flat rectangular sheet with thin greenish edges",
+      "material_description": "transparent or translucent surface with speckled/reflected highlights and green-tinted edges",
+      "visible_properties": [
+        "flat",
+        "rectangular",
+        "transparent-looking",
+        "rigid-looking",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact with straight edges and no visible cracks",
+      "event_role_hints": [
+        "surface under the small crumpled item"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "small crumpled item",
+      "visible_form": "compact irregular crumpled piece near the center of the sheet",
+      "material_description": "white and shiny silver-gray visible areas, reflective highlights",
+      "visible_properties": [
+        "small",
+        "irregular",
+        "crumpled",
+        "partly reflective",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible translation or rotation",
+      "initial_integrity_description": "appears as a compact crumpled mass with folded edges",
+      "event_role_hints": [
+        "central item associated with the visible glow and smoke"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "smoke-like plume",
+      "visible_form": "thin translucent wisps rising upward from the central area",
+      "material_description": "pale blue-gray semi-transparent strands",
+      "visible_properties": [
+        "wispy",
+        "translucent",
+        "elongated",
+        "changing shape"
+      ],
+      "initial_motion_description": "visible upward and wavering motion from the start",
+      "initial_integrity_description": "diffuse and continuously changing, with several narrow strands",
+      "event_role_hints": [
+        "visible rising plume above the crumpled item"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "bright flame-like glow",
+      "visible_form": "small bright yellow-white luminous area at the lower/right side of the crumpled item",
+      "material_description": "intense yellow-white light with bluish adjacent streaks",
+      "visible_properties": [
+        "bright",
+        "flickering",
+        "localized",
+        "changing outline"
+      ],
+      "initial_motion_description": "flickers in place with small shape changes",
+      "initial_integrity_description": "appears as a compact luminous region rather than a solid object",
+      "event_role_hints": [
+        "localized visible light adjacent to the crumpled item"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "wooden tabletop",
+      "visible_form": "broad flat brown surface below the glass sheet",
+      "material_description": "wood-grain pattern with brown tones and reflected light",
+      "visible_properties": [
+        "flat",
+        "stationary",
+        "brown",
+        "wood-grain visible"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact and unchanged",
+      "event_role_hints": [
+        "supporting surface for the glass sheet"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "rests on or contacts the top surface of the rectangular sheet near its center",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "lies flat on the wooden tabletop",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "extends upward from the area of the crumpled item",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is localized at the lower/right side of the crumpled item",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A small crumpled white and silver-gray item is positioned near the center of the rectangular sheet."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The rectangular transparent-looking sheet is lying flat on a brown wood-grain tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Thin pale smoke-like wisps are visible above the small crumpled item at the start."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A bright yellow-white luminous area is visible at the lower/right side of the crumpled item at the start."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The smoke-like wisps rise upward while bending and changing shape."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The bright luminous area flickers and changes outline while remaining near the crumpled item."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The small crumpled item remains in approximately the same position on the sheet."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The rectangular sheet remains stationary and visibly intact throughout the clip."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "Near the end, a narrow pale plume still rises above the crumpled item."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The background wall and tabletop do not show visible displacement."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The visible event is already underway at the beginning and persists through the final frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "remains approximately fixed in place as a compact crumpled mass"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "forms thin translucent strands that rise, curl, and shift laterally"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "flickers near the crumpled item with small changes in brightness and shape"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "stays flat and unchanged beneath the central activity"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact identity of the small crumpled material is not visually determinable."
+  ]
+}

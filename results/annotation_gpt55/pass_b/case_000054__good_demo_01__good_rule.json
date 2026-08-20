@@ -1,0 +1,319 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "support frame and base",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "left outer sphere",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "central sphere group",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "right outer sphere",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e8",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "blue and black item",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e13"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "oscillation",
+      "raw_type": "alternating pendulum-like oscillation of the outer suspended spheres",
+      "participant_object_ids": [
+        "obj_2",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "contact_loading",
+        "type": null,
+        "raw_type": "brief sphere contact or near-contact during returns to the aligned row",
+        "participant_object_ids": [
+          "obj_2",
+          "obj_3",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e7",
+          "e9",
+          "e10",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the spheres begin still and later move within the fixed scene",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_2",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e14"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "repeated",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e6",
+        "e8",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "left outer sphere changes from initially stationary in the row to visible motion away from and back toward the row"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "left outer sphere alternates between outward left displacement and inward return toward the central row"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": null,
+        "raw_transition": "left outer sphere changes between being separated to the left of the row and being nearly aligned with the other spheres"
+      },
+      "evidence_refs": [
+        "e6",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "right outer sphere changes from initially stationary in the row to visible motion away from and back toward the row"
+      },
+      "evidence_refs": [
+        "e5",
+        "e8",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "right outer sphere alternates between outward right displacement and inward return toward the central row"
+      },
+      "evidence_refs": [
+        "e8",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "relation",
+        "type": null,
+        "raw_transition": "right outer sphere changes between being separated to the right of the row and being nearly aligned with the other spheres"
+      },
+      "evidence_refs": [
+        "e8",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity acts as a restoring driver for the displaced suspended spheres as they swing back toward the lower aligned position",
+      "object_ids": [
+        "obj_2",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e7",
+        "e8",
+        "e12"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "brief contacts among the aligned spheres transfer motion so that the separated outer sphere alternates between the left and right sides",
+      "object_ids": [
+        "obj_2",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "elasticity",
+      "raw_mechanism": "the shiny spheres show negligible visible deformation while the motion reverses and continues, consistent with a rebound-like rigid response",
+      "object_ids": [
+        "obj_2",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e7",
+        "e10",
+        "e11"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A brown round object and a red rectangular object remain suspended near the top, then move downward and come to rest on two white cushions.",
+  "raw_event_description": "The scene begins with two white cushions at the bottom and two colored holders near the top: a blue holder at upper left with a brown round object nearby and an orange-black holder at upper right with a red rectangular object nearby. The arrangement stays still for many frames. Later, the brown round object and red rectangular object separate from the upper holders and move downward with visible blur. The brown object reaches the left cushion and remains there, while the red object reaches the right cushion, changes orientation, and remains there.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The two upper objects, two holders, and two lower cushions are visible before any visible motion.",
+      "The camera view includes the relevant upper and lower regions of the scene."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "brown round object",
+      "visible_form": "small round brown object with a lighter curved seam or line on its surface",
+      "material_description": "brown surface with a stitched or textured appearance",
+      "visible_properties": [
+        "round",
+        "brown",
+        "small relative to the cushions"
+      ],
+      "initial_motion_description": "stationary near the upper left area before the main movement",
+      "initial_integrity_description": "appears intact as one round piece",
+      "event_role_hints": [
+        "moves downward during the event",
+        "ends on the left cushion"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red rectangular object",
+      "visible_form": "small red-orange rectangular block or bar",
+      "material_description": "solid-looking red-orange surface",
+      "visible_properties": [
+        "rectangular",
+        "red-orange",
+        "small relative to the cushions"
+      ],
+      "initial_motion_description": "stationary near the upper right area before the main movement",
+      "initial_integrity_description": "appears intact as one rectangular piece",
+      "event_role_hints": [
+        "moves downward during the event",
+        "ends on the right cushion"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "blue holder",
+      "visible_form": "blue curved prong-like holder attached near the top left",
+      "material_description": "blue rigid-looking surface with dark connection area",
+      "visible_properties": [
+        "blue",
+        "curved",
+        "mounted near top edge"
+      ],
+      "initial_motion_description": "stationary before the main event",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "located near the brown round object before the brown object moves"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "orange-black holder",
+      "visible_form": "orange and black holder-like piece attached near the top right",
+      "material_description": "orange and black rigid-looking surfaces",
+      "visible_properties": [
+        "orange",
+        "black",
+        "mounted near top edge"
+      ],
+      "initial_motion_description": "stationary before the main event",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "located near the red rectangular object before the red object moves"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "left white cushion",
+      "visible_form": "large rounded white cushion occupying the lower left portion of the frame",
+      "material_description": "white fabric-like surface with wrinkles and a shallow depression",
+      "visible_properties": [
+        "white",
+        "soft-looking",
+        "rounded top surface"
+      ],
+      "initial_motion_description": "stationary throughout the early part of the video",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "brown round object ends on its top surface"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "right white cushion",
+      "visible_form": "large rounded white cushion occupying the lower right portion of the frame",
+      "material_description": "white fabric-like surface with wrinkles",
+      "visible_properties": [
+        "white",
+        "soft-looking",
+        "rounded top surface"
+      ],
+      "initial_motion_description": "stationary throughout the early part of the video",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "red rectangular object ends on its top surface"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "white background surface",
+      "visible_form": "plain light-colored vertical or back surface behind the objects",
+      "material_description": "smooth white or light gray surface",
+      "visible_properties": [
+        "plain",
+        "light-colored"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears continuous and intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "positioned near and below the blue holder in the upper left area",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "positioned near the orange-black holder in the upper right area",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "side-by-side with a narrow dark gap between it and the right cushion",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A brown round object is visible near the blue holder at the upper left."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A red rectangular object is visible near the orange-black holder at the upper right."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Two large white cushions occupy the lower part of the frame with a vertical dark gap between them."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The visible objects remain in the same positions for many frames before the main movement."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The blue holder appears open above the moving brown round object."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The brown round object is lower than its starting position and appears motion-blurred."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The red rectangular object is lower than its starting position and appears motion-blurred."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The red rectangular object is briefly visible in an upright orientation above the right cushion."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The brown round object is on the upper surface of the left cushion."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The red rectangular object is on the upper surface of the right cushion in a lower, tilted or lying orientation."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "After both objects reach the cushions, their positions remain visually stable through the end of the video."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene is static with the brown round object near the upper-left holder and the red rectangular object near the upper-right holder."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "stationary near the upper left"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "stationary near the upper right"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "stationary at the lower left"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "stationary at the lower right"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The two small upper objects move downward from their starting areas."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "moves downward with visible blur toward the left cushion"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "moves downward with visible blur toward the right cushion and is briefly upright above it"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "Both small objects are now located on the cushion surfaces and remain still."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "rests on the left cushion"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "rests on the right cushion in a tilted or lying orientation"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e3",
+      "e4",
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

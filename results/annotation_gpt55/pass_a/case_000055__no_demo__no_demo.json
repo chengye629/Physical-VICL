@@ -1,0 +1,313 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A transparent cylinder is lowered over a lit upright strip in a bowl of red liquid, after which the flame disappears and red liquid is visible higher inside the cylinder.",
+  "raw_event_description": "At the start, a clear bowl partly filled with red liquid sits on a tabletop, with a vertical red rectangular strip protruding upward from the liquid and a flame at its top. A transparent cylindrical container descends from above around the flame and strip until its lower rim is inside the bowl. The flame remains visible briefly inside the cylinder, then becomes smaller and disappears. Grayish cloudy material appears inside the cylinder. The red liquid level inside the cylinder becomes visibly higher than the red liquid level outside it in the bowl, and the red strip later appears tilted inside the cylinder.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The bowl, red liquid, upright strip, and flame are visible at the beginning.",
+      "The descending transparent cylinder is not yet fully surrounding the flame in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "glass bowl",
+      "visible_form": "clear round bowl with curved sides and a visible rim",
+      "material_description": "transparent glass-like material",
+      "visible_properties": [
+        "transparent",
+        "rigid-looking",
+        "stationary on tabletop"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "intact and continuous",
+      "event_role_hints": [
+        "contains red liquid",
+        "surrounds lower portion of upright strip"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red liquid",
+      "visible_form": "red fluid layer occupying the bottom portion of the bowl",
+      "material_description": "red translucent liquid-like material",
+      "visible_properties": [
+        "red",
+        "level surface",
+        "contained in bowl"
+      ],
+      "initial_motion_description": "no visible surface motion at the start",
+      "initial_integrity_description": "continuous pool",
+      "event_role_hints": [
+        "later visible inside the transparent cylinder"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "upright red strip",
+      "visible_form": "narrow rectangular vertical strip with blue bands near the top",
+      "material_description": "red/pink solid-looking strip with darker blue bands",
+      "visible_properties": [
+        "upright at start",
+        "partly submerged in red liquid",
+        "top protrudes above bowl rim"
+      ],
+      "initial_motion_description": "no visible motion at the start",
+      "initial_integrity_description": "intact rectangular form",
+      "event_role_hints": [
+        "has flame at its top",
+        "later appears tilted"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "flame",
+      "visible_form": "bright yellow-orange flame shape above the strip",
+      "material_description": "luminous yellow-orange region",
+      "visible_properties": [
+        "bright",
+        "flickering",
+        "changes shape"
+      ],
+      "initial_motion_description": "flickers in place above the strip",
+      "initial_integrity_description": "continuous visible flame at start",
+      "event_role_hints": [
+        "later disappears"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "transparent cylinder",
+      "visible_form": "clear cylindrical container lowered from above, open end downward",
+      "material_description": "transparent glass-like or plastic-like material",
+      "visible_properties": [
+        "transparent",
+        "cylindrical",
+        "rigid-looking"
+      ],
+      "initial_motion_description": "descends from above into the scene",
+      "initial_integrity_description": "intact continuous cylinder",
+      "event_role_hints": [
+        "surrounds the flame and strip",
+        "lower rim enters the bowl"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "gray cloudy material",
+      "visible_form": "pale gray cloudiness inside the transparent cylinder",
+      "material_description": "semi-transparent smoky or misty visible material",
+      "visible_properties": [
+        "gray",
+        "diffuse",
+        "semi-transparent"
+      ],
+      "initial_motion_description": "not visible at the start",
+      "initial_integrity_description": "absent at the start",
+      "event_role_hints": [
+        "appears after the cylinder surrounds the flame"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is inside the bottom portion of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "stands upright through the red liquid in",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is located at the top of",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "approaches from above toward",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A clear bowl contains a red liquid layer with a mostly level upper surface."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A red rectangular strip stands vertically near the center of the bowl."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A yellow-orange flame is visible at the top of the red strip."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A transparent cylindrical container enters from the top of the frame above the flame."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The transparent cylinder moves downward around the flame and red strip."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The flame remains visible inside the transparent cylinder for several frames."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The flame becomes smaller and less bright."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The flame is no longer visible."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "Gray cloudy material is visible inside the transparent cylinder."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The lower rim of the transparent cylinder is inside the bowl and below the bowl rim."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The red liquid level inside the cylinder is higher than the red liquid level outside the cylinder in the bowl."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The red strip is no longer vertical and appears tilted inside the cylinder."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The bowl stays in the same position on the tabletop."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The initial setup shows a lit upright strip in a red liquid-filled bowl.",
+        "A transparent cylinder begins entering from above."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "flickers above the top of the red strip"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "descends toward the flame and strip"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The transparent cylinder surrounds the upper part of the strip and the flame.",
+        "The flame changes size and then disappears.",
+        "Gray cloudy material appears inside the cylinder."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "continues downward around the strip"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "shrinks and then is no longer visible"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "appears as diffuse gray cloudiness inside the cylinder"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The cylinder remains positioned inside the bowl.",
+        "The liquid level inside the cylinder is visibly above the surrounding liquid level.",
+        "The red strip appears tilted."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "is visible at a higher level inside the cylinder than outside it"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "appears tilted inside the cylinder"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary on the tabletop"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

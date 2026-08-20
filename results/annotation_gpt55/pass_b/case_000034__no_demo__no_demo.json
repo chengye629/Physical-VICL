@@ -1,0 +1,187 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "black circular object",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "support"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e5",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "silver wrench-shaped object",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "target"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "left metallic angled object",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [],
+      "evidence_refs": [
+        "e3",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "purple strip",
+      "entity_kind": "deformable_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [],
+      "evidence_refs": [
+        "e3",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "black cord",
+      "entity_kind": "deformable_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [],
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "event_roles": [
+        "support"
+      ],
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": null,
+      "raw_type": "wrench-shaped object translates leftward while reorienting along the front edge of the black circular object",
+      "participants": [
+        "obj_2",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor": null,
+      "target": "obj_2",
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "the silver wrench-shaped object changes from an initial visible position at the front-right edge to moving leftward along the front edge while changing angle"
+      },
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "the silver wrench-shaped object becomes no longer visible after appearing near the left-front edge"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    }
+  ],
+  "mechanisms": []
+}

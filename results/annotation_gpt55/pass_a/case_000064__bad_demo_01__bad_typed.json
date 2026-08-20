@@ -1,0 +1,281 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A black kettlebell descends onto a white cup on a wooden tabletop, and the cup becomes flattened beneath it.",
+  "raw_event_description": "At the start, a white cup-like object rests on its side near the center of a wooden table, with part of a black object visible near the top edge of the frame. The black object descends into view and is visible as a kettlebell marked \"30 LB.\" It moves downward toward the cup, contacts the upper side of the cup, and continues lower while the cup visibly changes from a tilted cup shape into a flattened, folded shape. The kettlebell then remains upright over the flattened cup, with a black vertical strap or support visible above it.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The white cup and tabletop are clearly visible.",
+      "Only the lower part of a black object is visible at the top edge before it descends further."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "white cup",
+      "visible_form": "small white tapered cup-like container with a rolled rim, initially lying on its side at a slight angle",
+      "material_description": "white glossy or lightly reflective thin-walled surface",
+      "visible_properties": [
+        "white",
+        "tapered",
+        "rolled rim",
+        "hollow-looking opening not fully visible from the camera angle",
+        "changes shape during contact"
+      ],
+      "initial_motion_description": "stationary on the tabletop before the kettlebell reaches it",
+      "initial_integrity_description": "appears intact with a continuous cup wall and rim before contact",
+      "event_role_hints": [
+        "located below the descending kettlebell",
+        "visibly flattens during contact with the kettlebell"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black kettlebell",
+      "visible_form": "black kettlebell with rounded body and arched handle, marked with blue text reading \"30 LB\"",
+      "material_description": "black solid-looking textured surface with blue printed marking",
+      "visible_properties": [
+        "black",
+        "rounded body",
+        "arched handle",
+        "blue \"30 LB\" marking",
+        "moves downward before contact",
+        "upright orientation after contact"
+      ],
+      "initial_motion_description": "partially visible near the top edge, then moves downward into the frame",
+      "initial_integrity_description": "appears intact with continuous body and handle throughout the visible event",
+      "event_role_hints": [
+        "descends toward the cup",
+        "contacts the cup",
+        "remains over the flattened cup"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal tabletop spanning the lower part of the scene",
+      "material_description": "brown wood-grain surface",
+      "visible_properties": [
+        "flat",
+        "brown",
+        "wood grain visible",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears unchanged throughout the clip",
+      "event_role_hints": [
+        "cup rests on it",
+        "flattened cup remains on it under the kettlebell"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "vertical black strap",
+      "visible_form": "narrow black vertical band above the kettlebell after it descends",
+      "material_description": "black flexible-looking or strap-like surface",
+      "visible_properties": [
+        "black",
+        "vertical",
+        "connected visually to the kettlebell region"
+      ],
+      "initial_motion_description": "not clearly visible at the start; appears as the kettlebell descends",
+      "initial_integrity_description": "appears continuous when visible",
+      "event_role_hints": [
+        "moves with or remains aligned above the kettlebell"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "gray wall",
+      "visible_form": "plain vertical background wall behind the table",
+      "material_description": "smooth gray surface",
+      "visible_properties": [
+        "gray",
+        "flat-looking",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "unchanged throughout the clip",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on the tabletop near the center of the frame",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is partially visible above the cup near the top edge of the frame",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "forms the stationary background behind the tabletop and objects",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A white cup-like object lies on its side on a wooden tabletop near the center of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A black object is partly visible at the top edge above the cup."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "A plain gray wall remains visible behind the table."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The black object descends farther into view and shows an arched kettlebell handle."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "Blue text reading \"30 LB\" is visible on the front of the black kettlebell."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The lower rounded part of the kettlebell reaches the upper side of the white cup."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The white cup changes from a tilted cup shape into a visibly flattened shape while the kettlebell overlaps it."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The flattened white cup is visible beneath the kettlebell at the tabletop."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The kettlebell remains upright over the flattened cup."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "A black vertical strap or support is visible above the kettlebell."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The camera viewpoint remains fixed relative to the tabletop and wall."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The cup is intact-looking and lying sideways on the tabletop.",
+        "Only a small lower portion of the black object is visible near the top edge."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The cup remains stationary on its side."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The kettlebell is only partially visible above the cup."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The black kettlebell descends into full view.",
+        "The kettlebell reaches and overlaps the cup.",
+        "The cup visibly changes shape during the overlap."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The kettlebell moves downward toward the tabletop and cup."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The cup becomes flattened and folded beneath the kettlebell."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The kettlebell is upright over the cup area.",
+        "Only a flattened white portion of the cup remains visible below the kettlebell."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The kettlebell remains in place above the flattened cup."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The cup remains flattened on the tabletop."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The vertical black strap remains visible above the kettlebell."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact connection between the vertical black strap and the kettlebell is not fully visible.",
+    "Parts of the cup are hidden by the kettlebell after contact."
+  ]
+}

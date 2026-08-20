@@ -1,0 +1,425 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A tan stick on a black circular object moves into a row of upright colored rectangular blocks, after which the blocks fall leftward in sequence.",
+  "raw_event_description": "Six colored rectangular blocks begin upright in a row on a wooden tabletop, with a black circular object behind and to the right and a tan pointed stick extending from it. The stick changes angle and its pointed end reaches the rightmost purple block. The purple block tilts left, followed by the blue, green, pink, orange, and yellow blocks tilting and falling leftward. The blocks end resting at low angles or lying on the tabletop, with the row collapsed.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The upright colored blocks are fully visible.",
+      "The black circular object and tan stick are visible on the right.",
+      "The tabletop and background are unobstructed."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow block",
+      "visible_form": "tall narrow rectangular prism standing upright",
+      "material_description": "solid yellow painted surface; material not otherwise identifiable",
+      "visible_properties": [
+        "yellow",
+        "upright",
+        "rectangular",
+        "flat faces"
+      ],
+      "initial_motion_description": "stationary before the row begins falling",
+      "initial_integrity_description": "appears intact as one solid piece",
+      "event_role_hints": [
+        "leftmost block in the row"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "orange block",
+      "visible_form": "tall narrow rectangular prism standing upright",
+      "material_description": "solid orange painted surface; material not otherwise identifiable",
+      "visible_properties": [
+        "orange",
+        "upright",
+        "rectangular",
+        "flat faces"
+      ],
+      "initial_motion_description": "stationary before the row begins falling",
+      "initial_integrity_description": "appears intact as one solid piece",
+      "event_role_hints": [
+        "second block from the left"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "pink block",
+      "visible_form": "tall narrow rectangular prism standing upright",
+      "material_description": "solid pink painted surface; material not otherwise identifiable",
+      "visible_properties": [
+        "pink",
+        "upright",
+        "rectangular",
+        "flat faces"
+      ],
+      "initial_motion_description": "stationary before the row begins falling",
+      "initial_integrity_description": "appears intact as one solid piece",
+      "event_role_hints": [
+        "third block from the left"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "green block",
+      "visible_form": "tall narrow rectangular prism standing upright",
+      "material_description": "solid green painted surface; material not otherwise identifiable",
+      "visible_properties": [
+        "green",
+        "upright",
+        "rectangular",
+        "flat faces"
+      ],
+      "initial_motion_description": "stationary before the row begins falling",
+      "initial_integrity_description": "appears intact as one solid piece",
+      "event_role_hints": [
+        "fourth block from the left"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "blue block",
+      "visible_form": "tall narrow rectangular prism standing upright",
+      "material_description": "solid blue painted surface; material not otherwise identifiable",
+      "visible_properties": [
+        "blue",
+        "upright",
+        "rectangular",
+        "flat faces"
+      ],
+      "initial_motion_description": "stationary before the row begins falling",
+      "initial_integrity_description": "appears intact as one solid piece",
+      "event_role_hints": [
+        "fifth block from the left"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "purple block",
+      "visible_form": "tall narrow rectangular prism standing upright",
+      "material_description": "solid purple painted surface; material not otherwise identifiable",
+      "visible_properties": [
+        "purple",
+        "upright",
+        "rectangular",
+        "flat faces"
+      ],
+      "initial_motion_description": "stationary before contact with the moving stick",
+      "initial_integrity_description": "appears intact as one solid piece",
+      "event_role_hints": [
+        "rightmost block in the row"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "black circular object",
+      "visible_form": "low black round cylinder with a flat top",
+      "material_description": "black surface with slight shine; material not otherwise identifiable",
+      "visible_properties": [
+        "black",
+        "circular",
+        "cylindrical",
+        "flat-topped"
+      ],
+      "initial_motion_description": "the circular body appears stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "positioned behind and to the right of the block row"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "tan pointed stick",
+      "visible_form": "thin tan rod with a pointed end extending from the black circular object",
+      "material_description": "tan wood-like surface; material not otherwise identifiable",
+      "visible_properties": [
+        "tan",
+        "thin",
+        "pointed",
+        "rod-like"
+      ],
+      "initial_motion_description": "changes angle while extending from the black circular object",
+      "initial_integrity_description": "appears intact as one slender piece",
+      "event_role_hints": [
+        "moves toward the rightmost purple block"
+      ]
+    },
+    {
+      "id": "obj_9",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal surface",
+      "material_description": "brown wood-grain surface",
+      "visible_properties": [
+        "brown",
+        "flat",
+        "horizontal",
+        "wood-grain pattern"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears continuous and intact",
+      "event_role_hints": [
+        "supports the objects"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "stands upright at the far left of the colored block row",
+      "object_id": "obj_9",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "stands upright at the far right of the colored block row",
+      "object_id": "obj_9",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_7",
+      "relation_description": "is behind and to the right of the colored block row",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_8",
+      "relation_description": "extends from the top area of the black circular object toward the block row",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Six colored rectangular blocks stand upright in a left-to-right row: yellow, orange, pink, green, blue, and purple."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A black circular object sits behind and to the right of the row."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A tan pointed stick extends from the black circular object."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The tan stick changes its angle over time while the black circular object remains in the same place."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The pointed end of the tan stick reaches the right side area of the purple block."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The purple block tilts left from its upright position."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The blue block tilts left after the purple block begins tilting."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The green block tilts left after the blue block begins tilting."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The pink block tilts left after the green block begins tilting."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The orange block tilts left after the pink block begins tilting."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "middle",
+      "observation": "The yellow block tilts left after the orange block begins tilting."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The colored blocks rest at low angles or lie on the tabletop after the sequence."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The purple block lies near the right side of the collapsed row."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The camera view remains fixed on the tabletop scene."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The blocks are upright and separated in a row.",
+        "The tan stick is visible on the black circular object and changes orientation."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains upright and still"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains upright and still"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains upright and still"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains upright and still"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "remains upright and still"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "remains upright and still"
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "changes angle while extending from the black circular object"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The stick reaches the rightmost block.",
+        "The colored blocks fall leftward in right-to-left order."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_8",
+          "observation": "its pointed end reaches the purple block area"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "tilts left from upright"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "tilts left after the purple block"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "tilts left after the blue block"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "tilts left after the green block"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "tilts left after the pink block"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "tilts left after the orange block"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The row is collapsed on the tabletop.",
+        "The blocks no longer stand upright."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "rests low to the tabletop near the left side of the row"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "lies low on the tabletop near the left side"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "rests slanted among the collapsed blocks"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "rests slanted among the collapsed blocks"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "rests slanted among the collapsed blocks"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "rests low on the tabletop near the right side"
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "remains extended from the black circular object"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

@@ -1,0 +1,253 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small yellow round object appears near the upper middle of a transparent panel, moves downward through fixed colored pieces, and then remains near a purple angled piece.",
+  "raw_event_description": "The video shows a mostly static view of a transparent vertical panel with several colored patterned strips attached to it. For the first portion, no small moving object is visible. A small yellow round object then appears below a green curved strip near the upper middle area. It moves through the space near the upper purple horizontal strip, then continues downward toward the central purple angled piece. It comes to a visible stop near the inner corner of the purple angled piece and stays there through the end of the clip. The colored strips and the panel frame remain visually stationary.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The fixed panel, frame, and colored strips are visible at the start.",
+      "The small yellow moving object is not yet visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "transparent panel",
+      "visible_form": "large upright clear rectangular surface bordered by black vertical supports",
+      "material_description": "clear glossy sheet with reflections; black rigid-looking side frame",
+      "visible_properties": [
+        "transparent",
+        "glossy",
+        "upright",
+        "rectangular"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "intact and continuous",
+      "event_role_hints": [
+        "background surface carrying the colored pieces"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "colored strips",
+      "visible_form": "multiple fixed patterned strips and shapes attached across the clear panel, including green, purple, blue, and yellow pieces",
+      "material_description": "colored patterned tape-like or strip-like pieces visible on the clear panel",
+      "visible_properties": [
+        "stationary",
+        "colored",
+        "patterned",
+        "flat-looking"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "all visible pieces remain intact",
+      "event_role_hints": [
+        "fixed visible pieces along the yellow object's path"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "yellow round object",
+      "visible_form": "small yellow circular object",
+      "material_description": "solid yellow surface; appears round in the image",
+      "visible_properties": [
+        "small",
+        "yellow",
+        "round"
+      ],
+      "initial_motion_description": "not visible at the very start; later appears and moves downward across the panel",
+      "initial_integrity_description": "appears intact throughout visibility",
+      "event_role_hints": [
+        "only visibly moving scene object"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "purple angled piece",
+      "visible_form": "purple bent or V-like angled strip near the center of the panel",
+      "material_description": "purple patterned strip-like material",
+      "visible_properties": [
+        "stationary",
+        "angled",
+        "purple"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "intact",
+      "event_role_hints": [
+        "final visible location of the yellow round object"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "attached or positioned on the front area of the transparent panel",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "located near the central region of the transparent panel among other colored strips",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A clear upright panel with black side supports fills the view."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Several colored patterned strips are fixed on the panel, including a purple angled piece near the center."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "No small yellow round object is visible in the initial frames."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "A small yellow round object appears below the upper green curved strip."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The yellow round object is visible above and near the upper purple horizontal strip."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The yellow round object changes position downward from the upper area toward the central area."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The yellow round object approaches the purple angled piece near the center."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The yellow round object is positioned at the inner area of the purple angled piece."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The yellow round object remains in the same visible position near the purple angled piece for the rest of the clip."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The colored strips and black side supports do not visibly change position."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The camera view remains fixed without visible panning, tilting, or zooming."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e10"
+      ],
+      "observations": [
+        "The panel and colored strips are visible and stationary.",
+        "The yellow round object is not yet visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The transparent panel remains stationary in the frame."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The colored strips remain fixed in place."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The yellow round object is not visible."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The small yellow round object appears and moves through the upper-middle region of the panel.",
+        "It passes near the upper purple horizontal strip and continues toward the central purple angled piece."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The yellow round object appears below the upper green curved strip."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The yellow round object moves downward toward the central purple angled piece."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The fixed colored strips remain stationary while the yellow object moves nearby."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The yellow round object is located at the purple angled piece and then stays there."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The yellow round object stops changing visible position near the inner area of the purple angled piece."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The purple angled piece remains stationary while the yellow object is positioned on or beside its inner area."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact contact moments between the yellow round object and the colored pieces are partly hard to distinguish because of distance, reflections, and the small size of the object."
+  ]
+}

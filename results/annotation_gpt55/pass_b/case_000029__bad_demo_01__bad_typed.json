@@ -1,0 +1,328 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "duck-shaped toy",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e8",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "black tray",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "support",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "red container",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "blue spout",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "red-orange liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "product",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "viscous",
+        "reflective"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "woven cylinder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "pouring",
+      "raw_type": "red-orange liquid stream transfers from an overhead spout onto the duck-shaped toy and tray",
+      "object_ids": [
+        "obj_5",
+        "obj_4",
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e12"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "fluid_motion",
+        "type": null,
+        "raw_type": "liquid puddle spreads outward across the tray floor",
+        "object_ids": [
+          "obj_5",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e9",
+          "e10",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the liquid begins emerging from the spout area",
+      "object_ids": [
+        "obj_3",
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "liquid_emission_onset",
+        "raw_transition": "red-orange liquid changes from not visible to a visible stream below the blue spout"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "material_transfer",
+        "raw_transition": "red-orange liquid transfers from the spout area to the duck-shaped toy and tray"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "deposition",
+        "raw_transition": "duck-shaped toy changes from uncoated to partially coated with red-orange liquid on the head and upper body"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "tray floor changes from dry-looking black surface to holding an increasing red-orange puddle"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "red-orange liquid puddle spreads outward with irregular edges across a larger region of the tray floor"
+      },
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "visible surface of the duck-shaped toy shifts from mostly yellow to partly red-orange where liquid covers it"
+      },
+      "evidence_refs": [
+        "e8",
+        "e13"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the downward liquid stream from the overhead spout toward the duck-shaped toy and tray",
+      "object_ids": [
+        "obj_5",
+        "obj_4",
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e12"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "adhesion",
+      "raw_mechanism": "wetting and adhesion allow red-orange liquid to remain as a coating on the duck-shaped toy surface",
+      "object_ids": [
+        "obj_5",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e13"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "viscosity",
+      "raw_mechanism": "liquid material response controls the formation and outward spreading of the puddle on the tray floor",
+      "object_ids": [
+        "obj_5",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ]
+    }
+  ]
+}

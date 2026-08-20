@@ -1,0 +1,214 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "orange citrus piece",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target",
+        "product"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "knife blade",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "cutting board",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "transparent",
+        "translucent"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fracture_separation",
+      "type": "cutting_separation",
+      "raw_type": "knife blade cuts the citrus piece into two pieces",
+      "participants": {
+        "target": [
+          "obj_1"
+        ],
+        "tool": [
+          "obj_2"
+        ],
+        "support": [
+          "obj_3"
+        ]
+      },
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e7",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": null,
+        "raw_type": "right citrus portion tips and moves right after separation",
+        "participants": {
+          "target": [
+            "obj_1"
+          ],
+          "support": [
+            "obj_3"
+          ]
+        },
+        "evidence_refs": [
+          "e6",
+          "e8"
+        ]
+      }
+    ],
+    "action": {
+      "family": "separation",
+      "type": "cut",
+      "raw_action": "use a knife blade to cut through the citrus piece",
+      "participants": {
+        "tool": [
+          "obj_2"
+        ],
+        "target": [
+          "obj_1"
+        ]
+      },
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e7",
+        "e10"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "integrity",
+        "type": "cracked",
+        "raw_transition": "a central split line forms in the citrus piece along the blade"
+      },
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "integrity",
+        "type": "broken",
+        "raw_transition": "the originally connected citrus piece separates into two visible pieces"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "the right portion begins leaning and moving away from the blade toward the right"
+      },
+      "evidence_refs": [
+        "e6",
+        "e8"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "shear",
+      "raw_mechanism": "the narrow blade applies localized shearing contact through the citrus material along the split line",
+      "objects": [
+        "obj_2",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e7"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "the citrus tissue loses structural connectedness under the cutting edge, producing two separated pieces",
+      "objects": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e7"
+      ]
+    }
+  ]
+}

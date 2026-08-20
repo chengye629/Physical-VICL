@@ -1,0 +1,185 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow smiley tennis ball",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black circular platform",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "rear cable",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "plain wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "rotation",
+      "raw_type": "in-place rotation of the ball changing which markings face the camera",
+      "object_ids": [
+        "obj_1"
+      ],
+      "event_roles": {
+        "target": [
+          "obj_1"
+        ],
+        "support": [
+          "obj_2",
+          "obj_3"
+        ]
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_ids": [],
+      "target_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e10"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "axis": "motion",
+      "type": null,
+      "raw_transition": "the ball's rotational orientation changes while its center stays approximately fixed on the platform",
+      "initial_state": "smiley face markings are front-facing",
+      "final_state": "smiley face markings have turned mostly out of view and seam markings face forward",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "axis": "optical_visibility",
+      "type": "visibility_decrease",
+      "raw_transition": "the black smiley face markings become mostly hidden from the camera view",
+      "initial_state": "black smiley face is visible facing the camera",
+      "final_state": "most black smiley face markings are no longer visible",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "axis": "optical_visibility",
+      "type": "visibility_increase",
+      "raw_transition": "the pale seam marking becomes the main visible marking on the ball",
+      "initial_state": "smiley face markings dominate the visible front",
+      "final_state": "a pale curved seam is prominent across the visible front",
+      "evidence_refs": [
+        "e6",
+        "e8"
+      ]
+    }
+  ],
+  "mechanisms": []
+}

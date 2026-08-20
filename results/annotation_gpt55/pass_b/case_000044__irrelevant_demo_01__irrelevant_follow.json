@@ -1,0 +1,303 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "transparent sheet",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support",
+        "medium"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e5",
+        "e8",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "red spot",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "viscous",
+        "adhesive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "paintbrush",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "actor",
+        "tool"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "right-side holder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "viscous_spreading",
+      "raw_type": "brush-driven smearing and spreading of red material on the transparent sheet",
+      "participants": {
+        "moving_tool": [
+          "obj_4"
+        ],
+        "target_material": [
+          "obj_3"
+        ],
+        "surface_or_medium": [
+          "obj_1"
+        ]
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e12"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "contact_loading",
+        "type": "shear_loading",
+        "raw_type": "brush bristles drag tangentially through the red material during contact",
+        "participants": {
+          "loading_tool": [
+            "obj_4"
+          ],
+          "loaded_material": [
+            "obj_3"
+          ],
+          "supporting_surface": [
+            "obj_1"
+          ]
+        },
+        "evidence_refs": [
+          "e5",
+          "e6",
+          "e7",
+          "e8"
+        ]
+      },
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "paintbrush translates across the sheet area and then moves out of view",
+        "participants": {
+          "moving_object": [
+            "obj_4"
+          ]
+        },
+        "evidence_refs": [
+          "e4",
+          "e10",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "transport",
+      "type": "move",
+      "raw_action": "the brush is moved across the transparent sheet into and through the red spot",
+      "actor_object_ids": [
+        "obj_4"
+      ],
+      "tool_object_ids": [
+        "obj_4"
+      ],
+      "target_object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e10",
+        "e11"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "the compact round red spot becomes an elongated curved red mark with two close streaks"
+      },
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e8",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "red material is redistributed from the original spot along the brush path"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "the transparent sheet surface changes from showing a small red spot to showing a longer curved red mark"
+      },
+      "evidence_refs": [
+        "e2",
+        "e8",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "the brush bristles reach and contact the red material on the sheet"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "shear",
+      "raw_mechanism": "moving brush bristles apply tangential contact forcing to the red material",
+      "linked_process_family": "fluid_motion",
+      "object_ids": [
+        "obj_4",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "viscosity",
+      "raw_mechanism": "the red material deforms and spreads as a viscous smear rather than remaining a compact spot",
+      "linked_process_family": "fluid_motion",
+      "object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "adhesion",
+      "raw_mechanism": "the red material remains attached to the transparent sheet as a persistent curved mark after the brush leaves",
+      "linked_process_family": "fluid_motion",
+      "object_ids": [
+        "obj_3",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e12"
+      ]
+    }
+  ]
+}

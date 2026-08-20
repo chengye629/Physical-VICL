@@ -1,0 +1,311 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A vertical knife blade passes through a small orange citrus piece on a textured board, leaving two separated pieces on either side of the blade.",
+  "raw_event_description": "The video begins with a small orange citrus piece upright on a rectangular textured board, with a narrow knife blade aligned through its middle. The blade remains through the fruit as a central split becomes visible. The right portion tilts and moves to the right while the left portion remains to the left. By the end, two orange pieces are visibly separated with the blade between them.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The orange citrus piece, knife blade, and board are visible.",
+      "The blade is already aligned through the fruit at the beginning.",
+      "The cutting action is not shown before blade contact."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "knife blade",
+      "visible_form": "thin vertical metallic blade with a sharp lower edge visible near the fruit",
+      "material_description": "shiny gray metal appearance",
+      "visible_properties": [
+        "thin",
+        "straight-edged",
+        "reflective",
+        "dark edge line visible"
+      ],
+      "initial_motion_description": "appears nearly vertical and aligned through the citrus piece; any motion is small relative to the frame",
+      "initial_integrity_description": "intact continuous blade visible from above the fruit downward",
+      "event_role_hints": [
+        "passes through the orange citrus piece"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "orange citrus piece",
+      "visible_form": "small upright orange wedge or half-section with orange rind and lighter interior membranes",
+      "material_description": "orange outer rind, glossy orange interior, pale white membrane lines",
+      "visible_properties": [
+        "small",
+        "orange",
+        "moist-looking",
+        "segmented interior",
+        "upright on board"
+      ],
+      "initial_motion_description": "stationary relative to the board at the start",
+      "initial_integrity_description": "initially appears as one connected piece around the blade",
+      "event_role_hints": [
+        "becomes separated into two visible pieces"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "left orange piece",
+      "visible_form": "left separated portion of the citrus piece with orange rind and pale interior lines",
+      "material_description": "orange rind with glossy orange interior and pale membrane lines",
+      "visible_properties": [
+        "orange",
+        "wedge-shaped",
+        "moist-looking",
+        "upright or leaning slightly"
+      ],
+      "initial_motion_description": "not separately visible as an independent piece at the start",
+      "initial_integrity_description": "appears as part of the whole citrus piece before separation",
+      "event_role_hints": [
+        "remains on the left side after separation"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "right orange piece",
+      "visible_form": "right separated portion of the citrus piece with orange rind and pale interior lines",
+      "material_description": "orange rind with glossy orange interior and pale membrane lines",
+      "visible_properties": [
+        "orange",
+        "wedge-shaped",
+        "moist-looking",
+        "tilted after separation"
+      ],
+      "initial_motion_description": "not separately visible as an independent piece at the start",
+      "initial_integrity_description": "appears as part of the whole citrus piece before separation",
+      "event_role_hints": [
+        "moves and tilts to the right after separation"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "cutting board",
+      "visible_form": "rectangular translucent or gray-brown textured board covering most of the frame",
+      "material_description": "semi-transparent or frosted surface with visible texture and shiny wet-looking areas",
+      "visible_properties": [
+        "flat",
+        "rectangular",
+        "textured",
+        "reflective patches",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary relative to the frame",
+      "initial_integrity_description": "intact continuous surface visible throughout",
+      "event_role_hints": [
+        "supports the citrus piece and blade contact area"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "wood-toned surface",
+      "visible_form": "brown horizontal surface visible beyond and below the board",
+      "material_description": "wood-like brown color and grain-like appearance",
+      "visible_properties": [
+        "flat",
+        "brown",
+        "background surface"
+      ],
+      "initial_motion_description": "stationary relative to the frame",
+      "initial_integrity_description": "intact visible background surface",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "blade is vertically aligned through the middle of the orange citrus piece",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "orange citrus piece is standing on the textured board",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "board rests on or covers a wood-toned surface visible around it",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A thin metallic blade is visible along the centerline of the orange citrus piece."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The orange citrus piece is upright on the textured rectangular board."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A brown wood-toned surface is visible around the rectangular board."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The citrus piece shows orange rind around the outside and pale curved membrane lines inside."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A narrow dark line appears between the left and right portions of the orange citrus piece."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The blade remains between the two orange portions as the central opening becomes wider."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The right orange portion tilts away from the blade toward the right side of the frame."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "Two separate orange pieces are visible with a gap between them."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The blade is positioned between the left orange piece and the right orange piece."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The left orange piece remains to the left of the blade."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The right orange piece rests to the right of the blade and is angled with its cut face visible."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The textured board remains in the same position in the frame throughout the video."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed on the board, blade, and citrus pieces."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene starts with the citrus piece already contacted or entered by the blade."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The knife blade is visible as a vertical line through the citrus piece."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The orange citrus piece appears mostly connected around the blade."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The textured board remains flat beneath the citrus piece."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The central split becomes more visible while the blade stays between the orange portions."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The orange citrus piece changes from one connected-looking piece into two distinguishable portions."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The right portion tilts and shifts to the right."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The blade remains in the central gap as the portions separate."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The citrus piece is visibly separated into left and right pieces."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The left orange piece remains on the left side of the blade."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The right orange piece rests to the right side with its interior face visible."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The blade is still visible between the two separated pieces."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12",
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The blade is already in contact with or inside the citrus piece at the first visible frame, so the moment before contact is not shown.",
+    "Part of the blade and contact area is hidden by the citrus piece during the cut."
+  ]
+}

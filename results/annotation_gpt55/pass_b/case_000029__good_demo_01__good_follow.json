@@ -1,0 +1,286 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow toy duck",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "target",
+        "support"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e7",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black tray",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "container",
+        "support",
+        "target"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "red overhead container",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "source"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e6"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "red-orange liquid",
+      "entity_kind": "liquid_body",
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "event_roles": [
+        "target",
+        "product"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "woven stand",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "support"
+      ],
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "wood tabletop",
+      "entity_kind": "surface_or_region",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "support"
+      ],
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "pouring",
+      "raw_type": "red-orange liquid flows from an overhead outlet onto the duck and into the tray",
+      "participants": [
+        "obj_3",
+        "obj_4",
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "fluid_handling",
+      "type": "dispense",
+      "raw_action": "liquid is dispensed from the overhead outlet area",
+      "actor_object_ids": [
+        "obj_3"
+      ],
+      "target_object_ids": [
+        "obj_4",
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e9"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "liquid_emission_onset",
+        "raw_transition": "red-orange liquid becomes visible as a narrow stream below the overhead outlet"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "material_transfer",
+        "raw_transition": "liquid moves from the overhead outlet area to the duck and tray"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "the liquid spreads outward into a larger puddle on the tray surface"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "deposition",
+        "raw_transition": "red-orange liquid deposits on and coats parts of the duck's head and body"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "red-orange liquid accumulates on the tray surface around the duck"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "the falling liquid stream establishes contact with the top of the duck's head"
+      },
+      "evidence_refs": [
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the liquid downward from the overhead outlet toward the duck and tray",
+      "linked_process": "primary",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "viscosity",
+      "raw_mechanism": "liquid material response supports continuous flow and puddle spreading across the tray surface",
+      "linked_process": "primary",
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "adhesion",
+      "raw_mechanism": "interfacial adhesion allows red-orange liquid to remain on the duck surface as a coating",
+      "linked_process": "primary",
+      "evidence_refs": [
+        "e8",
+        "e11"
+      ]
+    }
+  ]
+}

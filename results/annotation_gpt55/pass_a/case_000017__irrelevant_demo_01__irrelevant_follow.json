@@ -1,0 +1,373 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A tan stick on a black circular device moves into the rightmost upright block, after which the three right-side blocks fall while the four left-side blocks remain standing.",
+  "raw_event_description": "The scene shows a wooden tabletop with seven upright narrow rectangular blocks arranged in two separated groups: four blocks on the left and three blocks on the right. A black circular low cylinder is positioned behind and to the right of the right-side group, with a green piece and a tan stick attached on top. Over time the tan stick changes angle and its tip moves toward the rightmost black block in the right-side group. The stick reaches the area of that block, the rightmost black block tilts left, the adjacent white block also tilts and falls, and the remaining black block in that right-side group falls. By the end, the three right-side blocks are down on the tabletop, while the four left-side blocks are still upright.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "upright blocks are visible across the tabletop",
+      "black circular device and attached stick are visible on the right",
+      "no block has fallen in the first frame"
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "tabletop",
+      "visible_form": "flat horizontal wood-grain surface",
+      "material_description": "light brown surface with visible wood-grain pattern",
+      "visible_properties": [
+        "horizontal",
+        "broad",
+        "light brown"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous visible tabletop surface",
+      "event_role_hints": [
+        "supports the visible blocks and device"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black circular device",
+      "visible_form": "low round black cylinder at the right side of the scene",
+      "material_description": "black smooth-looking exterior",
+      "visible_properties": [
+        "round",
+        "black",
+        "low cylindrical"
+      ],
+      "initial_motion_description": "no visible translation",
+      "initial_integrity_description": "appears whole and unchanged",
+      "event_role_hints": [
+        "has green piece and tan stick on top"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "tan stick",
+      "visible_form": "slender light tan rod or skewer projecting from the top of the black circular device",
+      "material_description": "light tan visible surface",
+      "visible_properties": [
+        "thin",
+        "elongated",
+        "pointed-looking end",
+        "light tan"
+      ],
+      "initial_motion_description": "changes angle across early frames while remaining associated with the green piece on the black circular device",
+      "initial_integrity_description": "appears straight and continuous",
+      "event_role_hints": [
+        "moves toward the rightmost upright block",
+        "visibly reaches the rightmost upright block area"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "green top piece",
+      "visible_form": "small green piece on top of the black circular device",
+      "material_description": "green visible surface",
+      "visible_properties": [
+        "small",
+        "green",
+        "located on device top"
+      ],
+      "initial_motion_description": "visible position changes together with the tan stick angle",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "connected visually with the tan stick"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "left group of four blocks",
+      "visible_form": "four upright narrow rectangular blocks arranged in a row on the left side",
+      "material_description": "smooth black and white visible faces",
+      "visible_properties": [
+        "upright",
+        "rectangular",
+        "alternating black and white appearance"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "all four blocks appear upright and separate",
+      "event_role_hints": [
+        "remain standing through the visible event"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "right-group left black block",
+      "visible_form": "upright narrow black rectangular block at the left of the right-side group",
+      "material_description": "black smooth visible face",
+      "visible_properties": [
+        "black",
+        "rectangular",
+        "upright at start"
+      ],
+      "initial_motion_description": "no visible motion before the right-side group starts falling",
+      "initial_integrity_description": "appears as a single intact block",
+      "event_role_hints": [
+        "falls during the right-side group motion"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "right-group middle white block",
+      "visible_form": "upright narrow white rectangular block between two black blocks in the right-side group",
+      "material_description": "white smooth visible face",
+      "visible_properties": [
+        "white",
+        "rectangular",
+        "upright at start"
+      ],
+      "initial_motion_description": "no visible motion before the right-side group starts falling",
+      "initial_integrity_description": "appears as a single intact block",
+      "event_role_hints": [
+        "tilts and falls after the rightmost black block moves"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "right-group right black block",
+      "visible_form": "upright narrow black rectangular block at the right end of the right-side group",
+      "material_description": "black smooth visible face",
+      "visible_properties": [
+        "black",
+        "rectangular",
+        "upright at start"
+      ],
+      "initial_motion_description": "no visible motion before the tan stick reaches it",
+      "initial_integrity_description": "appears as a single intact block",
+      "event_role_hints": [
+        "is the first right-side block to visibly tilt"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_5",
+      "relation_description": "stands on the tabletop to the left of a gap",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "stands on the tabletop as the left block of the right-side group",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_7",
+      "relation_description": "stands on the tabletop between the two black blocks of the right-side group",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_8",
+      "relation_description": "stands on the tabletop closest to the black circular device",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "extends from the green top piece on the black circular device",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Four narrow rectangular blocks stand upright in a row on the left side of the tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Three narrow rectangular blocks stand upright in a row on the right side, ordered black, white, black from left to right."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A black low circular cylinder is visible behind and to the right of the right-side blocks."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A tan slender stick extends from a small green piece on top of the black circular cylinder."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The tan stick changes angle and its tip moves toward the rightmost black block."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The tan stick tip reaches the area of the rightmost black block in the right-side group."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The rightmost black block in the right-side group tilts left from its upright position."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The middle white block in the right-side group tilts left from its upright position."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The left black block in the right-side group tilts and descends from its upright position."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The three right-side blocks are down on the tabletop near their original row."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The four left-side blocks remain upright."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The black circular cylinder remains in the same visible tabletop location."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed with no visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "Seven blocks are upright in two separated groups on the tabletop.",
+        "The tan stick is attached at the top of the black circular device."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "left group of four blocks is upright and still"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "right-group left black block is upright and still"
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "right-group middle white block is upright and still"
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "right-group right black block is upright and still"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The tan stick sweeps toward the right-side group.",
+        "The right-side group changes from upright to falling positions."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "tan stick changes angle and reaches the rightmost block area"
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "rightmost black block tilts left"
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "middle white block tilts left"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "left black block of the right-side group tilts and descends"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The right-side group is no longer upright.",
+        "The left-side group remains upright."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_6",
+          "observation": "right-group left black block lies or leans on the tabletop"
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "right-group middle white block lies or leans among the fallen right-side blocks"
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "right-group right black block is down on the tabletop"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "left group of four blocks remains upright"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "black circular device remains in place"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

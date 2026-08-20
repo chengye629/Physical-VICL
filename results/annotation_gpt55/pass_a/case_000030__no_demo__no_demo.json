@@ -1,0 +1,311 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A red liquid stream enters a small clear jar, then red liquid overflows the jar and spreads across the black tray.",
+  "raw_event_description": "At the start, a small transparent jar stands upright in a black tray beneath a blue nozzle attached to a red dispenser. A narrow red liquid stream is already entering the jar, and the red liquid inside is near the top. Over time the liquid surface reaches the mouth area, red liquid appears over the rim, runs down the outside of the jar, reaches the tray, and forms a spreading red pool mostly to the front and right of the jar while the stream continues.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "mid_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The jar, tray, nozzle, and red liquid stream are visible.",
+      "The red liquid is already entering the jar in the first frame.",
+      "No spill on the tray is visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "clear jar",
+      "visible_form": "small upright cylindrical transparent container with a narrow mouth",
+      "material_description": "transparent glossy container with visible reflections",
+      "visible_properties": [
+        "upright",
+        "open top",
+        "partly filled with red liquid at the start"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "visible red stream enters its mouth",
+        "red liquid later appears on its outside surface"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red liquid",
+      "visible_form": "opaque red-orange liquid appearing as a narrow stream, liquid inside the jar, exterior runs, and a tray pool",
+      "material_description": "glossy opaque fluid with red-orange color",
+      "visible_properties": [
+        "forms a continuous-looking stream",
+        "forms a smooth surface inside the jar",
+        "forms spreading puddle shapes on the tray"
+      ],
+      "initial_motion_description": "a narrow stream is visibly moving from the nozzle area into the jar mouth",
+      "initial_integrity_description": "continuous liquid form is visible; no separate solid pieces visible",
+      "event_role_hints": [
+        "enters the jar",
+        "later crosses the rim area",
+        "later spreads on the tray"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "dispenser nozzle",
+      "visible_form": "blue tap or nozzle below a partially visible red container",
+      "material_description": "blue glossy plastic-looking nozzle and red ribbed container surface",
+      "visible_properties": [
+        "positioned above the jar mouth",
+        "partially visible at the top of the frame"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "visible red stream begins at the lower nozzle area"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "black tray",
+      "visible_form": "rectangular shallow tray or baking pan with raised sides",
+      "material_description": "dark matte-to-slightly-glossy surface",
+      "visible_properties": [
+        "flat bottom",
+        "raised rim",
+        "contains jar within its interior"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "later holds the spreading red liquid pool"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "woven basket",
+      "visible_form": "round woven object behind the dispenser and jar",
+      "material_description": "tan and multicolored woven texture",
+      "visible_properties": [
+        "stationary background object"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_6",
+      "name": "wood tabletop",
+      "visible_form": "flat light-brown horizontal surface under the tray",
+      "material_description": "wood-grain-looking surface",
+      "visible_properties": [
+        "supports the tray in the visible scene"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "stands upright inside the tray",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is positioned above the jar mouth",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "appears as a narrow stream between the nozzle and the jar mouth",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is already visible inside the jar near the top region",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A black rectangular tray fills the foreground with raised sides visible."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A small clear jar stands upright near the rear middle area of the tray."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A narrow red liquid stream is visible between the blue nozzle and the jar opening."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "Red liquid is visible inside the jar close to the mouth area."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The red liquid surface reaches the top mouth area of the jar."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "Red liquid appears over the jar rim and on the outside front-right surface of the jar."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "A small red puddle appears on the tray at the base of the jar."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The red puddle extends outward from the jar with thin branching edges."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The front of the jar exterior shows vertical red streaks."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The red liquid pool covers a larger area of the tray to the front and right of the jar."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The red liquid stream remains visible at the nozzle and jar mouth area."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The spreading pool has a broad rounded edge on the right side of the tray interior."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed on the tray, jar, nozzle, and background."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The jar is upright in the tray beneath the blue nozzle.",
+        "A red stream is already entering the jar.",
+        "No red pool is visible on the tray at the start."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "appears as a narrow stream entering the jar mouth"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "contains red liquid near its upper portion"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "tray surface around the jar is initially clear of a red spill"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The red liquid reaches the jar mouth area.",
+        "Red liquid appears outside the jar and on the tray."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "crosses the rim area and runs down the exterior of the jar"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "forms a small spreading puddle at the jar base"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "shows red liquid on its outside surface"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The red pool on the tray grows wider.",
+        "The liquid remains visible at the nozzle and jar mouth area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "spreads across a larger area of the tray, mainly to the front and right of the jar"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "has visible vertical red streaks on the front exterior"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains stationary above the jar while the red stream is still visible below it"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

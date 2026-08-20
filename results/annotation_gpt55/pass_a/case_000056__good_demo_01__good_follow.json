@@ -1,0 +1,254 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A yellow smiley-faced tennis ball remains on a black circular platform while its visible markings turn from front-facing to mostly hidden.",
+  "raw_event_description": "At the start, a fuzzy yellow ball with a black smiley face is centered on top of a black round platform on a wooden table. Over time, the smiley face shifts toward the viewer's left side of the ball and then out of view, while the ball stays in approximately the same position on the platform. A pale curved tennis-ball seam becomes the main visible marking near the end. The camera view remains steady.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The ball, platform, tabletop, wall, and rear cable are visible at the start.",
+      "The ball is already positioned on the platform in the first frame.",
+      "The visible process continues through the clip."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow smiley tennis ball",
+      "visible_form": "small fuzzy spherical ball with black smiley face markings and pale curved seam lines",
+      "material_description": "bright yellow fuzzy surface with dark drawn or printed face markings and light seam bands",
+      "visible_properties": [
+        "spherical",
+        "bright yellow",
+        "fuzzy texture",
+        "black smiley face visible early",
+        "pale seam line visible"
+      ],
+      "initial_motion_description": "No separate pre-event motion is visible; the ball is already on the platform at the start.",
+      "initial_integrity_description": "The ball appears whole and undeformed.",
+      "event_role_hints": [
+        "Its visible face and seam markings change orientation during the clip."
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black circular platform",
+      "visible_form": "short black cylindrical round base with flat circular top",
+      "material_description": "dark black surface with slight highlights and a darker side band",
+      "visible_properties": [
+        "cylindrical",
+        "flat top",
+        "black",
+        "stationary position in frame"
+      ],
+      "initial_motion_description": "No distinct platform motion is visually identifiable from surface features at the start.",
+      "initial_integrity_description": "The platform appears whole and intact.",
+      "event_role_hints": [
+        "The ball remains on its top surface throughout the clip."
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal table surface extending across the frame",
+      "material_description": "brown wood-grain surface",
+      "visible_properties": [
+        "flat",
+        "brown",
+        "wood grain visible"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "The tabletop appears intact.",
+      "event_role_hints": [
+        "The platform sits on it."
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "rear cable",
+      "visible_form": "thin dark cord extending behind the platform toward the upper right",
+      "material_description": "dark flexible-looking cable",
+      "visible_properties": [
+        "thin",
+        "dark",
+        "curved path"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "The cable appears continuous where visible.",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_5",
+      "name": "plain wall",
+      "visible_form": "vertical light-colored background surface",
+      "material_description": "plain pale wall surface",
+      "visible_properties": [
+        "light colored",
+        "smooth-looking",
+        "stationary background"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "No visible break or change.",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The ball is centered on and in visible contact with the top of the black platform.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "The platform is positioned on the wooden tabletop.",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "The cable is visible behind the platform and extends toward the upper right of the frame.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The yellow ball is centered on the top surface of the black circular platform."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The black circular platform is on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A thin dark cable is visible behind the platform."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The ball's black smiley face is visible facing the camera."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The smiley face markings shift toward the viewer's left side of the ball."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A pale curved seam line on the ball becomes more prominent on the visible front-right area."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "Most of the black smiley face markings are no longer visible from the camera view."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "A pale horizontal curved seam is visible across the upper front of the ball."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The ball remains approximately centered on the platform throughout the clip."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The platform, tabletop, wall, and cable keep the same positions in the frame."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene starts with the ball on the platform and its smiley face directed toward the camera."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The ball shows both black eyes and the curved smile on its front-facing side."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The platform remains in a fixed position on the table."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e9"
+      ],
+      "observations": [
+        "The ball's visible markings change orientation while its location on the platform stays nearly unchanged."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The smiley face moves toward the viewer's left side and a seam line becomes more visible."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The ball is still on the platform, but the front-facing smiley face is mostly out of view."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The visible side of the ball mainly shows yellow fuzz and a pale curved seam."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The black platform remains visually unchanged in position and shape."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

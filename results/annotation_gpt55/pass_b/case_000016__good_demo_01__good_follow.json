@@ -1,0 +1,310 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "blue mug",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "red liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e8",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "white strip",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "blue pronged object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "wood tabletop",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "small reddish tabletop spot",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "unknown",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "unknown",
+      "evidence_refs": [
+        "e12"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "splashing",
+      "raw_type": "small splash and spreading ripples on the red liquid as the white strip enters",
+      "participant_object_ids": [
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "downward motion of the white strip into the mug",
+        "participant_object_ids": [
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e6",
+          "e10"
+        ]
+      },
+      {
+        "family": "contact_loading",
+        "type": "penetration",
+        "raw_type": "white strip enters the liquid surface",
+        "participant_object_ids": [
+          "obj_3",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e8",
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "release",
+      "type": "release",
+      "raw_action": "white strip is released or allowed to descend from the blue pronged object",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_3"
+      ],
+      "tool_or_source_object_ids": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "brief",
+      "temporal_structure": "single",
+      "change_profile": "mixed",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8",
+        "e11"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "white strip changes from nearly still to moving downward relative to the mug rim"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "relation",
+        "type": "containment_gain",
+        "raw_transition": "white strip enters the liquid-filled mug region"
+      },
+      "evidence_refs": [
+        "e6",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "white strip is no longer visible above the liquid surface"
+      },
+      "evidence_refs": [
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "red liquid surface changes from mostly smooth to a small splash with raised ripples and bright reflective patches"
+      },
+      "evidence_refs": [
+        "e2",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "settling",
+        "raw_transition": "liquid surface ripples diminish and the surface becomes smoother"
+      },
+      "evidence_refs": [
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "small reddish spot becomes visible on the tabletop after the liquid disturbance"
+      },
+      "evidence_refs": [
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the released white strip downward",
+      "linked_object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "entry of the strip transfers momentum to the liquid surface, producing the splash and ripples",
+      "linked_object_ids": [
+        "obj_3",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "the liquid free surface responds to disturbance by forming and smoothing surface waves",
+      "linked_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "viscosity",
+      "raw_mechanism": "internal resistance in the liquid damps the visible ripples over time",
+      "linked_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e11"
+      ]
+    }
+  ]
+}

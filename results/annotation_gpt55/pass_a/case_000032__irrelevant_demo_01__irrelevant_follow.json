@@ -1,0 +1,322 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A light lavender rectangular block moves and turns across the top of a black circular object while nearby objects remain visually stationary.",
+  "raw_event_description": "The scene shows a wooden tabletop with a black circular device on the right, a small angled reflective object on the left, a purple strip hanging from the angled object, and a black cable extending from the circular device. A light lavender rectangular block is initially on the front area of the black circular top. Over time, the block changes position and orientation across the circular top, moving toward the left/front edge, then around the upper portion of the top, and later toward the upper-right area. The black circular object, angled reflective object, purple hanging strip, cable, tabletop, and wall do not show visible displacement or shape change.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The light lavender rectangular block is already visible on the black circular top in the first frame.",
+      "The black circular object, reflective angled object, purple strip, cable, tabletop, and wall are visible.",
+      "No separate start trigger or pre-event interval is shown."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "black circular object",
+      "visible_form": "low black cylindrical object with a flat circular top",
+      "material_description": "dark, smooth-looking exterior with minimal visible surface detail",
+      "visible_properties": [
+        "round top",
+        "black color",
+        "low cylindrical shape"
+      ],
+      "initial_motion_description": "No visible displacement in the first frame.",
+      "initial_integrity_description": "Appears intact and unchanged.",
+      "event_role_hints": [
+        "light lavender block is on its top surface"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "light lavender rectangular block",
+      "visible_form": "small rectangular solid with flat faces",
+      "material_description": "light lavender or pale purple matte-looking surface",
+      "visible_properties": [
+        "rectangular prism shape",
+        "light color",
+        "rigid-looking edges"
+      ],
+      "initial_motion_description": "Already present on the black circular top; no separate pre-event motion is visible before its continuing movement.",
+      "initial_integrity_description": "Appears intact with no visible breakage or deformation.",
+      "event_role_hints": [
+        "changes position and orientation during the event"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "angled reflective object",
+      "visible_form": "small tilted reflective object with a rounded or cylindrical end, standing to the left of the black circular object",
+      "material_description": "shiny metallic-looking surface with bright reflections",
+      "visible_properties": [
+        "silver/gold-toned reflective surface",
+        "tilted posture",
+        "small size relative to black circular object"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact and unchanged.",
+      "event_role_hints": [
+        "remains near the moving block but does not visibly move"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "purple hanging strip",
+      "visible_form": "narrow vertical strip hanging downward from or beside the angled reflective object",
+      "material_description": "purple flat strip with smooth visible surface",
+      "visible_properties": [
+        "thin strip shape",
+        "purple color",
+        "vertical orientation"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact and unchanged.",
+      "event_role_hints": [
+        "stationary nearby strip"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "black cable",
+      "visible_form": "thin black cord extending from the black circular object toward the upper-right of the frame",
+      "material_description": "black cord-like visible material",
+      "visible_properties": [
+        "thin",
+        "curved path",
+        "black color"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact and unchanged.",
+      "event_role_hints": [
+        "remains visually stationary"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal tabletop surface",
+      "material_description": "wood-grain pattern with brown tones",
+      "visible_properties": [
+        "flat surface",
+        "visible grain pattern",
+        "brown color"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact and unchanged.",
+      "event_role_hints": [
+        "background surface for the objects"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is on the top surface of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is positioned to the left of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "hangs downward beside or from",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "extends from the right side area of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The light lavender rectangular block is visible on the front area of the black circular top."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The angled reflective object is to the left of the black circular object."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A narrow purple strip hangs downward near the angled reflective object."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A black cable extends from the black circular object toward the upper-right of the frame."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The light lavender rectangular block changes position relative to the black circular top."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The light lavender rectangular block is near the left/front edge of the black circular top."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The light lavender rectangular block is oriented more left-to-right than it was at the beginning."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "Part of the light lavender rectangular block appears to extend beyond the left edge of the black circular top."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The light lavender rectangular block is visible on the upper portion of the black circular top."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The light lavender rectangular block has a changed diagonal orientation compared with its early orientation."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The angled reflective object remains in the same visible position and shape."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The purple hanging strip remains in the same visible position and shape."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The black cable remains in the same visible path."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The light lavender rectangular block shows no visible deformation or fragmentation."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "continuous",
+      "observation": "The tabletop grain pattern and wall remain fixed in the frame."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The main objects are visible on a wooden tabletop.",
+        "The light lavender block is already on the black circular top."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "Is positioned on the front area of the black circular top."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Remains to the left of the black circular object."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Hangs downward near the angled reflective object."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The light lavender block has shifted to the left/front side of the black circular top.",
+        "The block's long axis appears closer to left-right orientation than at the start."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "Moves across the black circular top and reaches the left/front edge area."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ],
+      "observations": [
+        "The light lavender block is later visible on the upper portion of the black circular top.",
+        "Nearby objects remain visually stationary."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "Continues changing position and orientation across the top surface."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Shows no visible displacement."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Shows no visible displacement or shape change."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Shows no visible displacement."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e15"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

@@ -1,0 +1,183 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "small pale sphere",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "raw_description": "small light-colored spherical object that enters the frame and moves rightward across the foreground surface",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "foreground surface",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support",
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "raw_description": "large flat pale foreground surface across which the sphere moves",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "black cylindrical object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_description": "short black cylindrical object partly cut off at the lower left edge near the sphere entry area",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "yellow couch",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_description": "large stationary yellow couch in the background",
+      "evidence_refs": [
+        "e1",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "right-side lamp and cabinet",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_description": "partially visible right-side lamp and cabinet that remain stationary",
+      "evidence_refs": [
+        "e1",
+        "e8"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "small sphere translates rightward across the foreground surface and exits the frame",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "role": "target"
+        },
+        {
+          "object_id": "obj_2",
+          "role": "support"
+        },
+        {
+          "object_id": "obj_2",
+          "role": "medium"
+        }
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the sphere enters the frame already moving",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e4"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e9"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "sphere changes position from the lower left across the lower foreground toward the lower right"
+      },
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "sphere disappears from view after reaching the lower right edge"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": []
+}

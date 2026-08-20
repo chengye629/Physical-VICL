@@ -1,0 +1,332 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A blue cylindrical object and a yellow ball move toward each other on a tabletop, touch, separate, and come to rest apart.",
+  "raw_event_description": "The video begins with an empty light wood tabletop visible between two partially visible black cylindrical objects at the left and right edges. After a long still interval, a small blue cylinder enters from the left while a yellow ball enters from the right. They travel toward one another, make visible contact near the upper middle of the tabletop, then separate: the blue cylinder moves back toward the left side and the yellow ball moves toward the upper-right side. Near the end, both colored objects remain separated and stationary or nearly stationary.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The tabletop and two partial black edge objects are visible.",
+      "The blue cylinder and yellow ball are not yet visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "light wood tabletop",
+      "visible_form": "flat rectangular tabletop surface filling most of the frame",
+      "material_description": "light tan surface with visible wood-grain pattern",
+      "visible_properties": [
+        "flat",
+        "rectangular",
+        "light colored",
+        "wood-grain pattern"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous unbroken surface",
+      "event_role_hints": [
+        "surface on which the colored objects move"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left black cylinder",
+      "visible_form": "partially visible black cylindrical object at the left edge",
+      "material_description": "dark, smooth-looking exterior",
+      "visible_properties": [
+        "black",
+        "cylindrical",
+        "partially visible"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "intact visible portion",
+      "event_role_hints": [
+        "stationary edge object near the blue cylinder's entry side"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "right black cylinder",
+      "visible_form": "partially visible black cylindrical object at the right edge",
+      "material_description": "dark, smooth-looking exterior",
+      "visible_properties": [
+        "black",
+        "cylindrical",
+        "partially visible"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "intact visible portion",
+      "event_role_hints": [
+        "stationary edge object near the yellow ball's entry side"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "blue cylinder",
+      "visible_form": "small short blue cylinder or cap-like object",
+      "material_description": "smooth blue exterior with a lighter curved line visible on its face",
+      "visible_properties": [
+        "blue",
+        "small",
+        "cylindrical",
+        "smooth-looking"
+      ],
+      "initial_motion_description": "not visible at the start; later enters from the left and moves rightward",
+      "initial_integrity_description": "intact when first visible",
+      "event_role_hints": [
+        "moves toward the yellow ball",
+        "contacts the yellow ball",
+        "moves leftward after contact"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "yellow ball",
+      "visible_form": "small round yellow-green ball",
+      "material_description": "bright yellow-green surface with a visible curved seam-like line",
+      "visible_properties": [
+        "round",
+        "yellow-green",
+        "small",
+        "seam-like marking"
+      ],
+      "initial_motion_description": "not visible at the start; later enters from the right and moves leftward",
+      "initial_integrity_description": "intact when first visible",
+      "event_role_hints": [
+        "moves toward the blue cylinder",
+        "contacts the blue cylinder",
+        "moves rightward after contact"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "yellow background",
+      "visible_form": "vertical yellow surface along the back of the tabletop",
+      "material_description": "yellow flat-looking background surface",
+      "visible_properties": [
+        "yellow",
+        "vertical",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous visible surface",
+      "event_role_hints": [
+        "background"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "partially visible at the left edge beside the tabletop",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "partially visible at the right edge beside the tabletop",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "located behind the tabletop along the back edge of the scene",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A light wood tabletop fills most of the frame with partial black cylindrical objects at the left and right edges."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A yellow vertical background is visible behind the tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "No blue cylinder or yellow ball is visible during the initial still interval."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "A small blue cylinder enters the tabletop area from the left side."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A yellow ball enters the tabletop area from the right side."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The blue cylinder moves rightward across the left half of the tabletop."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The yellow ball moves leftward across the right half of the tabletop."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The blue cylinder and yellow ball visibly touch near the upper middle area of the tabletop."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "After the touch, the blue cylinder is left of the yellow ball with a visible gap between them."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The blue cylinder moves leftward toward the left side of the tabletop."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The yellow ball moves rightward and upward in the frame toward the upper-right area of the tabletop."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "Near the end, the blue cylinder remains near the left side and the yellow ball remains near the upper-right side."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The final frames show little to no visible position change of the blue cylinder and yellow ball."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The black cylindrical objects at the left and right edges remain in the same visible positions."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed with no visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e14",
+        "e15"
+      ],
+      "observations": [
+        "The scene is static at first, showing the tabletop, yellow background, and partial black side objects."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The tabletop remains stationary."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The left black cylinder remains partially visible at the left edge."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The right black cylinder remains partially visible at the right edge."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The blue cylinder is not yet visible."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The yellow ball is not yet visible."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The blue cylinder and yellow ball enter from opposite sides, approach one another, touch, and then separate."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The blue cylinder enters from the left, moves rightward, touches the yellow ball, and is then seen left of the yellow ball."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The yellow ball enters from the right, moves leftward, touches the blue cylinder, and is then seen right of the blue cylinder."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14",
+        "e15"
+      ],
+      "observations": [
+        "The colored objects continue apart and then remain separated near opposite sides of the tabletop."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The blue cylinder moves leftward and ends near the left side with little to no later visible movement."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The yellow ball moves toward the upper-right area and ends there with little to no later visible movement."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The left black cylinder remains stationary."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The right black cylinder remains stationary."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e15"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

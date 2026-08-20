@@ -1,0 +1,257 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "orange fruit piece",
+      "entity_kind": "deformable_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "target",
+        "product"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "metal blade",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "tool"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "textured board",
+      "entity_kind": "surface_or_region",
+      "material_phase": "solid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "support"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "table surface",
+      "entity_kind": "surface_or_region",
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "support"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e11"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fracture_separation",
+      "type": "cutting_separation",
+      "raw_type": "metal blade cutting separates the orange fruit piece into two pieces",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "event_roles": [
+            "target",
+            "product"
+          ]
+        },
+        {
+          "object_id": "obj_2",
+          "event_roles": [
+            "tool"
+          ]
+        },
+        {
+          "object_id": "obj_3",
+          "event_roles": [
+            "support"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5",
+        "e6",
+        "e8",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": null,
+        "raw_type": "right separated fruit piece moves rightward and tips",
+        "participants": [
+          {
+            "object_id": "obj_1",
+            "event_roles": [
+              "product"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e7",
+          "e8"
+        ]
+      },
+      {
+        "family": "contact_loading",
+        "type": "penetration",
+        "raw_type": "blade remains inserted through the central region of the fruit during separation",
+        "participants": [
+          {
+            "object_id": "obj_2",
+            "event_roles": [
+              "tool"
+            ]
+          },
+          {
+            "object_id": "obj_1",
+            "event_roles": [
+              "target"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e2",
+          "e5",
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "separation",
+      "type": "cut",
+      "raw_action": "a sharp metal blade cuts through the orange fruit piece",
+      "actor_object_ids": [],
+      "tool_object_ids": [
+        "obj_2"
+      ],
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e6",
+        "e8"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "integrity",
+        "type": "broken",
+        "raw_transition": "one connected orange fruit piece becomes two separate visible pieces"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "the right orange piece begins moving rightward after separation becomes visible"
+      },
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "rotation_onset",
+        "raw_transition": "the right orange piece tips into a new orientation"
+      },
+      "evidence_refs": [
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "shear",
+      "raw_mechanism": "localized shear from the blade edge drives separation along the center of the fruit piece",
+      "linked_process_family": "fracture_separation",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "the moist fibrous fruit material loses connectedness along the blade path and divides into two pieces",
+      "linked_process_family": "fracture_separation",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e8"
+      ]
+    }
+  ]
+}

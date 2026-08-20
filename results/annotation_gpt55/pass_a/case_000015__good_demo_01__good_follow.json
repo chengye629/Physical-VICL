@@ -1,0 +1,260 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A green sheet spanning between two handled tools bends, splits near the center, and ends as two separated green pieces on a tabletop.",
+  "raw_event_description": "At the start, a bright green rectangular sheet is stretched across the middle of a wooden tabletop between two black-and-blue handled tools at the left and right edges. The sheet remains mostly flat for several moments with a slightly curved front edge. Then the central area rises and twists, a visible separation opens near the center, and the left and right portions bend away from each other. By the end, two separate green pieces are visible with a gap between them, each near one of the handled tools.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The green sheet is fully visible in the center.",
+      "The two handled tools are partially visible at the left and right sides.",
+      "The tabletop and background are visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "green sheet",
+      "visible_form": "bright green rectangular sheet or card spanning horizontally across the scene",
+      "material_description": "flat green surface with thin visible edges",
+      "visible_properties": [
+        "green",
+        "thin",
+        "rectangular at start",
+        "flexes visibly during event"
+      ],
+      "initial_motion_description": "mostly still before the visible separation",
+      "initial_integrity_description": "appears as one continuous sheet without a visible central gap",
+      "event_role_hints": [
+        "object that bends and separates"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left handled tool",
+      "visible_form": "black outer handle with blue inner grip, partly entering from the left side",
+      "material_description": "dark and blue surfaces with smooth reflective highlights",
+      "visible_properties": [
+        "black",
+        "blue",
+        "rigid-looking",
+        "loop-shaped handle"
+      ],
+      "initial_motion_description": "appears still at the left edge",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "adjacent to the left side of the green sheet"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "right handled tool",
+      "visible_form": "black outer handle with blue inner grip, partly entering from the right side",
+      "material_description": "dark and blue surfaces with smooth reflective highlights",
+      "visible_properties": [
+        "black",
+        "blue",
+        "rigid-looking",
+        "loop-shaped handle"
+      ],
+      "initial_motion_description": "appears still at the right edge",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "adjacent to the right side of the green sheet"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal wooden surface covering the lower background",
+      "material_description": "brown wood-grain surface",
+      "visible_properties": [
+        "brown",
+        "wood grain",
+        "flat"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears continuous",
+      "event_role_hints": [
+        "supporting visible scene objects"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "spans between the left and right handled tools",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "spans between the left and right handled tools",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned above or on the wooden tabletop",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The green sheet extends horizontally between a left handled tool and a right handled tool."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The green sheet is positioned over the wooden tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The green sheet appears continuous with no visible central gap."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The front edge of the green sheet has a shallow curved outline."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The central area of the green sheet rises from its earlier flat position."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A visible opening appears near the center of the green sheet."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The left portion of the green sheet tilts upward and leftward."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The right portion of the green sheet bends upward and rightward."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "Two separate green pieces are visible with a space between them."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The left green piece remains near the left handled tool."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The right green piece remains near the right handled tool."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The camera view remains centered on the tabletop scene."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The green sheet is one continuous visible object spanning between the two handled tools."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "appears mostly flat and continuous"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "stays partially visible at the left side"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "stays partially visible at the right side"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The green sheet changes shape and an opening appears near its center."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "bends, twists, and develops a visible central separation"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The formerly continuous green sheet is visible as two separated green pieces."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "is no longer visible as one continuous rectangle and is instead visible as two separated pieces"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains near the left green piece"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains near the right green piece"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

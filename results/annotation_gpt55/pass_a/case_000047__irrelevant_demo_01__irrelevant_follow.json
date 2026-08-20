@@ -1,0 +1,274 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small crumpled object on a transparent rectangular plate emits a bright glow, small blue flames, and rising wispy smoke while the camera remains static.",
+  "raw_event_description": "The video shows a transparent rectangular plate lying on a wood-grain tabletop. Near the center of the plate is a small crumpled light-colored object. From the beginning through the end, the object shows bright luminous areas at its base and edge, with narrow blue flame-like shapes extending upward and wispy gray-blue smoke rising above it. The smoke and blue luminous shapes continuously change shape and position slightly while the solid objects remain in place.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The small central object, transparent plate, tabletop, luminous region, and smoke plume are already visible in the first frame.",
+      "The visible emission is ongoing at the start rather than beginning from a still pre-event state."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "transparent rectangular plate",
+      "visible_form": "flat rectangular sheet with visible greenish edges",
+      "material_description": "transparent, glossy, green-tinted edge cues",
+      "visible_properties": [
+        "rectangular outline",
+        "flat surface",
+        "reflective highlights",
+        "transparent appearance"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact with continuous rectangular outline",
+      "event_role_hints": [
+        "supports the small central object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "small crumpled object",
+      "visible_form": "irregular crumpled compact piece near the center of the plate",
+      "material_description": "light gray and white surfaces with darker markings; reflective or bright-looking facets visible",
+      "visible_properties": [
+        "irregular folded shape",
+        "small size relative to the plate",
+        "partly bright luminous edges",
+        "darkened areas visible on parts of the object"
+      ],
+      "initial_motion_description": "stationary as a solid piece",
+      "initial_integrity_description": "appears as one compact crumpled mass",
+      "event_role_hints": [
+        "source region for the visible glow, flame-like shapes, and smoke"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "smoke plume",
+      "visible_form": "thin wispy translucent vertical and curved streaks above the central object",
+      "material_description": "semi-transparent gray-blue visual appearance",
+      "visible_properties": [
+        "wispy",
+        "translucent",
+        "vertically extended",
+        "shape changes over time"
+      ],
+      "initial_motion_description": "already rising and wavering upward at the start",
+      "initial_integrity_description": "diffuse and continuously changing",
+      "event_role_hints": [
+        "visible emission above the small central object"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "blue flame-like luminous shapes",
+      "visible_form": "narrow blue translucent luminous streaks extending upward from the small object",
+      "material_description": "blue and pale cyan light-emitting visual cues",
+      "visible_properties": [
+        "narrow vertical streaks",
+        "curved edges",
+        "flickering shape",
+        "semi-transparent appearance"
+      ],
+      "initial_motion_description": "already flickering and changing shape at the start",
+      "initial_integrity_description": "not a fixed solid form; continuously changing luminous shape",
+      "event_role_hints": [
+        "visible emission immediately above the small central object"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "bright yellow-white glow",
+      "visible_form": "small intense luminous patch at the lower right side of the central crumpled object",
+      "material_description": "yellow-white light-emitting visual cue",
+      "visible_properties": [
+        "bright",
+        "localized",
+        "reflects on nearby plate surface",
+        "slightly flickering"
+      ],
+      "initial_motion_description": "stationary in location with brightness changes",
+      "initial_integrity_description": "localized luminous area rather than a solid object",
+      "event_role_hints": [
+        "visible luminous region adjacent to the small object"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "wood-grain tabletop",
+      "visible_form": "flat brown horizontal surface beneath the transparent plate",
+      "material_description": "brown wood-grain visual pattern",
+      "visible_properties": [
+        "flat",
+        "wood-grain pattern",
+        "matte-to-slightly reflective appearance"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears continuous and intact",
+      "event_role_hints": [
+        "supports the transparent plate"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests flat on the tabletop",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "sits near the center of the transparent plate",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "extends upward from the area above the small crumpled object",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "appears directly above and around the small crumpled object",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is adjacent to the lower right portion of the small crumpled object",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "A transparent rectangular plate is visible lying flat on a brown wood-grain tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "A small irregular crumpled object remains near the center of the transparent plate."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "Wispy translucent gray-blue smoke extends upward from the area above the small object."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "Narrow blue luminous shapes extend upward from the small object and vary in outline."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "A bright yellow-white luminous patch is visible at the lower right side of the small object."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The smoke plume bends and curls while maintaining an overall upward extension."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The blue luminous shapes flicker and shift slightly around the small object."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The transparent plate, tabletop, and small solid object show no visible translation across the frame."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "Bright reflected light is visible on the plate surface near the luminous patch."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The camera viewpoint remains fixed with no visible framing change."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The central crumpled object remains on the transparent plate.",
+        "Blue luminous shapes and a yellow-white glow persist around the object.",
+        "Smoke continues to rise and change shape above the object."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The small crumpled object stays in place while luminous areas remain visible around it."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The smoke plume rises upward and curls with changing wispy outlines."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The blue flame-like shapes flicker and shift slightly in height and curvature."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The bright yellow-white glow remains localized near the lower right side of the small object and varies in brightness."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The transparent plate remains stationary and intact in the visible frames."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The beginning of the visible emission is not shown.",
+    "The exact identity or material of the small crumpled object is not visually determined."
+  ]
+}

@@ -1,0 +1,321 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "yellow mug",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e7",
+        "e9",
+        "e10",
+        "e16"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "black circular base",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "bright front light",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "unknown",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "unknown",
+      "evidence_refs": [
+        "e2",
+        "e18"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support",
+        "medium"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "wood tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "black cord",
+      "entity_kind": "deformable_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "wall silhouette",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e5",
+        "e8",
+        "e13",
+        "e17"
+      ]
+    }
+  ],
+  "process": {
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the mug is already changing orientation",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e15",
+        "e14"
+      ]
+    },
+    "primary": {
+      "family": "rigid_motion",
+      "type": "rotation",
+      "raw_type": "slow rotation of the intact mug about a vertical axis",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "event_roles": {
+        "target": [
+          "obj_1"
+        ],
+        "support": [
+          "obj_2"
+        ]
+      },
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e9",
+        "e11",
+        "e12",
+        "e16"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "illumination_change",
+        "raw_type": "changing projected shadow silhouette on the wall as the mug orientation changes under steady light",
+        "participant_object_ids": [
+          "obj_1",
+          "obj_3",
+          "obj_4",
+          "obj_7"
+        ],
+        "event_roles": {
+          "source": [
+            "obj_3"
+          ],
+          "medium": [
+            "obj_4"
+          ],
+          "target": [
+            "obj_7"
+          ]
+        },
+        "evidence_refs": [
+          "e2",
+          "e5",
+          "e8",
+          "e13",
+          "e17",
+          "e18"
+        ]
+      }
+    ],
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e7",
+        "e9",
+        "e11",
+        "e12",
+        "e17"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "process_ref": "primary",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "mug orientation changes gradually while the body remains centered and intact"
+      },
+      "evidence_refs": [
+        "e7",
+        "e9",
+        "e11",
+        "e12",
+        "e16"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "process_ref": "primary",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "mug handle changes visibility from hidden to visible on the left, then partly hidden and not visible again"
+      },
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e9",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "process_ref": "secondary[0]",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "wall silhouette outline changes continuously, with a handle-shaped extension appearing and later disappearing"
+      },
+      "evidence_refs": [
+        "e5",
+        "e8",
+        "e13",
+        "e17"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "torque",
+      "raw_mechanism": "angular forcing about the mug's vertical axis drives the observed shape-preserving rotation",
+      "process_refs": [
+        "primary"
+      ],
+      "object_refs": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e9",
+        "e11",
+        "e12",
+        "e16"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "the bright front light provides steady visible illumination of the mug and wall",
+      "process_refs": [
+        "secondary[0]"
+      ],
+      "object_refs": [
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e18"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": null,
+      "raw_mechanism": "the rotating mug blocks portions of the emitted light, changing the dark projected silhouette on the wall",
+      "process_refs": [
+        "secondary[0]"
+      ],
+      "object_refs": [
+        "obj_1",
+        "obj_3",
+        "obj_4",
+        "obj_7"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e8",
+        "e13",
+        "e17"
+      ]
+    }
+  ]
+}

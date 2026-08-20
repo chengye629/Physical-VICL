@@ -1,0 +1,344 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A brown round object and a red rectangular object move downward from overhead holders and come to rest on separate white cushions.",
+  "raw_event_description": "The video begins with two white cushion-like pads below a dark overhead bar. A brown round object is near a blue holder at the upper left, and a red rectangular object is near an orange-and-dark holder at the upper right. For many frames the scene is still. Later, both objects are seen below their holders with motion blur while moving downward. The brown object reaches the left cushion, and the red rectangular object reaches the right cushion. In the final frames the brown object rests on the left cushion and the red object rests lying flat on the right cushion while the holders remain overhead.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The brown round object, red rectangular object, overhead holders, and white cushions are all visible.",
+      "The first frame shows no visible motion blur on the objects.",
+      "The objects are positioned above the cushion surfaces before the later downward motion."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "brown round object",
+      "visible_form": "small rounded ball-like object with visible seam or stitch lines",
+      "material_description": "brown surface with lighter line markings; material not otherwise identifiable from the image",
+      "visible_properties": [
+        "round",
+        "brown",
+        "small relative to cushions",
+        "surface lines visible"
+      ],
+      "initial_motion_description": "No visible motion before the main event.",
+      "initial_integrity_description": "Appears intact as one piece.",
+      "event_role_hints": [
+        "moves downward from the upper-left area",
+        "comes to rest on the left cushion"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red rectangular object",
+      "visible_form": "small red rectangular block-like piece",
+      "material_description": "solid red visible surface; material not otherwise identifiable from the image",
+      "visible_properties": [
+        "red",
+        "rectangular",
+        "small relative to cushions"
+      ],
+      "initial_motion_description": "No visible motion before the main event.",
+      "initial_integrity_description": "Appears intact as one piece.",
+      "event_role_hints": [
+        "moves downward from the upper-right area",
+        "changes orientation during the event",
+        "comes to rest on the right cushion"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "blue holder",
+      "visible_form": "blue curved clamp-like overhead piece attached near the top-left area",
+      "material_description": "blue and dark visible surfaces; material not otherwise identifiable from the image",
+      "visible_properties": [
+        "blue",
+        "curved",
+        "overhead"
+      ],
+      "initial_motion_description": "No visible motion before the main event.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "is near the brown round object at the start",
+        "appears open after the brown object moves downward"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "orange holder",
+      "visible_form": "orange and dark curved clamp-like overhead piece attached near the top-right area",
+      "material_description": "orange and dark visible surfaces; material not otherwise identifiable from the image",
+      "visible_properties": [
+        "orange",
+        "curved",
+        "overhead"
+      ],
+      "initial_motion_description": "No visible motion before the main event.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "is near the red rectangular object at the start",
+        "appears open after the red object moves downward"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "white cushion pair",
+      "visible_form": "two large adjacent white cushion-like pads with a vertical gap between them",
+      "material_description": "white soft-looking surfaces with wrinkles and dimples visible",
+      "visible_properties": [
+        "white",
+        "large",
+        "paired",
+        "surface wrinkles visible",
+        "central gap visible"
+      ],
+      "initial_motion_description": "No visible motion before the main event.",
+      "initial_integrity_description": "Appears intact as two adjacent pads.",
+      "event_role_hints": [
+        "receives the brown round object on the left pad",
+        "receives the red rectangular object on the right pad"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "dark overhead bar",
+      "visible_form": "dark horizontal bar along the upper edge of the scene",
+      "material_description": "dark surface; material not otherwise identifiable from the image",
+      "visible_properties": [
+        "dark",
+        "horizontal",
+        "overhead"
+      ],
+      "initial_motion_description": "No visible motion before the main event.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "overhead holders are positioned near it"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned near and partly below the blue holder in the upper-left area",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is positioned near and below the orange holder in the upper-right area",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is above the left white cushion at the start",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e2",
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is above the right white cushion at the start",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Two large white cushion-like pads occupy the lower half of the frame with a narrow gap between them."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A brown round object is visible near the blue holder in the upper-left area."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A red rectangular object is visible near the orange-and-dark holder in the upper-right area."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The brown round object and red rectangular object remain still for an extended initial portion."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The brown round object appears below the blue holder with vertical motion blur."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The red rectangular object appears below the orange holder with vertical motion blur."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The blue holder is visible overhead with an open curved shape after the brown object is below it."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The orange holder is visible overhead with an open curved shape after the red object is below it."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The brown round object reaches the upper surface of the left cushion."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The red rectangular object is upright near the upper surface of the right cushion."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The brown round object rests on the left cushion."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The red rectangular object rests lying flat on the right cushion."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The overhead holders remain visible above the resting objects."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed on the same overhead view."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The cushions are below the two overhead objects.",
+        "The brown round object is near the blue holder.",
+        "The red rectangular object is near the orange holder.",
+        "No object motion is visible during the initial still period."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains near the upper-left holder without visible motion"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains near the upper-right holder without visible motion"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "remains stationary below the objects"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "Both small objects are seen below their earlier overhead positions.",
+        "Both small objects show motion blur during downward movement.",
+        "The overhead holders are visible in open curved positions."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "moves downward from the upper-left area toward the left cushion"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "moves downward from the upper-right area toward the right cushion"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "appears open while the brown object is below it"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "appears open while the red object is below it"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The two small objects are stationary on separate cushions.",
+        "The holders remain overhead."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "rests on the left cushion"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "rests lying flat on the right cushion"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains overhead"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains overhead"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "Motion blur obscures the exact first contact frame for each moving object."
+  ]
+}

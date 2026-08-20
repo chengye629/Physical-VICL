@@ -1,0 +1,296 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A yellow mug on a black circular base visibly changes orientation while its handle and shadow shift across the scene.",
+  "raw_event_description": "The scene shows a yellow mug on a black circular base on a tabletop, with a bright light at the front of the base illuminating the mug and wall. At the beginning the mug handle is not prominently visible from the front, and a dark vertical feature appears on the mug face. Over time the mug’s orientation changes: the handle becomes visible as a loop on the left side of the mug, then shifts farther toward the rear/left side and becomes less visible again. The wall shows a large dark mug-shaped shadow and a handle-shaped shadow that changes position in step with the mug’s changing visible orientation. The camera view remains fixed.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The mug, base, tabletop, wall, light, and cord are visible in the first frame.",
+      "The mug appears already in the middle of an ongoing orientation change rather than at a distinct start.",
+      "Strong contrast and shadow obscure some details of the mug rim and upper region."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow mug",
+      "visible_form": "cylindrical cup with a black-looking rim/interior and a loop handle that becomes visible during the clip",
+      "material_description": "yellow glossy-looking opaque exterior with dark rim/interior visible",
+      "visible_properties": [
+        "yellow body",
+        "black or dark top rim/interior",
+        "loop handle",
+        "reflective highlight on front"
+      ],
+      "initial_motion_description": "The mug is already changing visible orientation at the beginning of the clip.",
+      "initial_integrity_description": "The mug appears intact with continuous cup body and handle not visibly damaged.",
+      "event_role_hints": [
+        "main object whose visible orientation changes"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black circular base",
+      "visible_form": "low round platform or base beneath the mug",
+      "material_description": "black, smooth-looking surface with bright reflection/illumination near the front",
+      "visible_properties": [
+        "round outline",
+        "black color",
+        "bright front light/reflection area"
+      ],
+      "initial_motion_description": "No clear translation of the base is visible.",
+      "initial_integrity_description": "The base appears intact.",
+      "event_role_hints": [
+        "supports the mug"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "bright light",
+      "visible_form": "small bright white-yellow illuminated area at the front of the base",
+      "material_description": "visible light source or bright emitting spot",
+      "visible_properties": [
+        "bright white-yellow glow",
+        "strong illumination",
+        "localized at front of base"
+      ],
+      "initial_motion_description": "No visible motion of the bright light location.",
+      "initial_integrity_description": "The bright illuminated area remains visible.",
+      "event_role_hints": [
+        "illuminates the mug and wall"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wall shadow pattern",
+      "visible_form": "large dark mug-shaped shadow on the wall with a handle-shaped part visible during the clip",
+      "material_description": "dark shadow region on a light-colored wall",
+      "visible_properties": [
+        "dark projected silhouette",
+        "rounded top region",
+        "handle-shaped extension appears on the left side"
+      ],
+      "initial_motion_description": "The shadow shape is already present and changes during the clip.",
+      "initial_integrity_description": "The shadow is continuous as a visible dark pattern.",
+      "event_role_hints": [
+        "changes shape and position as the mug orientation changes"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "tabletop",
+      "visible_form": "flat horizontal wooden-looking surface beneath the base",
+      "material_description": "brown surface with visible grain-like lines",
+      "visible_properties": [
+        "flat",
+        "brown",
+        "wood-grain appearance"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "The tabletop appears intact.",
+      "event_role_hints": [
+        "supporting surface"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "black cord",
+      "visible_form": "thin dark cable extending from the base toward the right side of the scene",
+      "material_description": "black flexible-looking cord",
+      "visible_properties": [
+        "thin",
+        "dark",
+        "extends horizontally to the right"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "The cord appears continuous.",
+      "event_role_hints": [
+        "connected near the base area"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The yellow mug is positioned on top of the black circular base.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "The bright light is visible at the front edge area of the base.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "The wall shadow pattern appears behind the mug on the wall.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "The cord extends from near the base toward the right across the tabletop.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e7"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A yellow cylindrical mug is centered on a black circular base."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "A bright white-yellow illuminated spot is visible at the front of the base."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A large dark mug-shaped shadow is visible on the wall behind the mug."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The mug handle is not prominently visible from the front at the beginning."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A loop-shaped handle becomes visible on the left side of the yellow mug."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A handle-shaped shadow appears to the left of the main dark mug shadow on the wall."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "A black cord extends from the base area toward the right side of the tabletop."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The mug handle shifts farther toward the left/rear side and becomes less prominent from the front."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The bright illumination on the mug and wall remains present throughout the clip."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The wall, tabletop edge, base position, and overall framing remain fixed in the image."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e7"
+      ],
+      "observations": [
+        "The mug is on the base in front of the wall.",
+        "The bright light is already on.",
+        "The wall shadow is already visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The mug begins the visible sequence with its handle not prominently facing the camera."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The shadow on the wall shows a large dark mug-shaped region."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e9"
+      ],
+      "observations": [
+        "The mug’s visible orientation changes.",
+        "The handle becomes visible as a loop on the left side.",
+        "The wall shadow gains a visible handle-shaped extension."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The mug handle moves into view on the left side of the mug."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The handle-shaped part of the wall shadow shifts into view beside the main shadow."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The bright light remains visibly illuminated."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The mug’s orientation continues changing.",
+        "The handle becomes less front-facing.",
+        "The camera framing remains unchanged."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The handle shifts farther toward the left/rear side and is less prominent from the front."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The shadow shape changes with the handle-shaped portion repositioned."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "Some upper mug and rim details are difficult to distinguish because of strong darkness and shadow."
+  ]
+}

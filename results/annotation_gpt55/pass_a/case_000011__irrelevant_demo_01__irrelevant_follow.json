@@ -1,0 +1,352 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A blue cylindrical object and a yellow ball move toward each other on a tabletop, become adjacent near the center, then separate and come to rest in different areas.",
+  "raw_event_description": "The video begins with a light wood-grain tabletop, a yellow-green background, and two partially visible black cylindrical fixtures at the left and right edges. After a period with no moving objects visible, a small blue cylindrical object appears from the left side while a yellow ball appears from the right side. The blue object moves rightward and the yellow ball moves leftward until they become very close near the central area. Immediately afterward, the blue object moves back toward the left side, while the yellow ball moves toward the upper-right area. Both objects slow and remain still near the end of the video.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The tabletop and side fixtures are visible in the first frame.",
+      "The two later-moving colored objects are not visible in the first frame.",
+      "The side fixtures are partially cropped by the frame edges."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "tabletop",
+      "visible_form": "flat rectangular light wood-grain horizontal surface",
+      "material_description": "light-colored surface with visible wood-grain pattern",
+      "visible_properties": [
+        "light tan color",
+        "rectangular visible area",
+        "wood-grain texture"
+      ],
+      "initial_motion_description": "stationary throughout the visible video",
+      "initial_integrity_description": "continuous unbroken surface visible",
+      "event_role_hints": [
+        "colored objects move across this visible surface"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left black fixture",
+      "visible_form": "partially visible black cylindrical object at the left edge",
+      "material_description": "opaque black surface",
+      "visible_properties": [
+        "black",
+        "cylindrical end visible",
+        "partly cropped by frame edge"
+      ],
+      "initial_motion_description": "stationary before and during the visible event",
+      "initial_integrity_description": "appears intact with no visible change",
+      "event_role_hints": [
+        "located near where the blue object later appears"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "right black fixture",
+      "visible_form": "partially visible black cylindrical object at the right edge",
+      "material_description": "opaque black surface",
+      "visible_properties": [
+        "black",
+        "cylindrical end visible",
+        "partly cropped by frame edge"
+      ],
+      "initial_motion_description": "stationary before and during the visible event",
+      "initial_integrity_description": "appears intact with no visible change",
+      "event_role_hints": [
+        "located near where the yellow ball later appears"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "blue object",
+      "visible_form": "small blue cylindrical object with a circular face visible",
+      "material_description": "opaque blue surface with a lighter line or highlight visible on one face",
+      "visible_properties": [
+        "blue",
+        "small relative to tabletop",
+        "cylindrical shape",
+        "circular face visible"
+      ],
+      "initial_motion_description": "not visible at the first frame; later appears from the left and moves rightward",
+      "initial_integrity_description": "appears intact when first visible and remains intact",
+      "event_role_hints": [
+        "moves toward the yellow ball",
+        "later moves back toward the left side"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "yellow ball",
+      "visible_form": "small bright yellow-green spherical ball",
+      "material_description": "opaque bright yellow-green surface with curved seam-like markings visible",
+      "visible_properties": [
+        "yellow-green",
+        "spherical",
+        "curved seam markings",
+        "small relative to tabletop"
+      ],
+      "initial_motion_description": "not visible at the first frame; later appears from the right and moves leftward",
+      "initial_integrity_description": "appears intact when first visible and remains intact",
+      "event_role_hints": [
+        "moves toward the blue object",
+        "later moves toward the upper-right area"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "background panel",
+      "visible_form": "yellow-green vertical background behind the tabletop",
+      "material_description": "yellow-green flat surface",
+      "visible_properties": [
+        "yellow-green",
+        "vertical seam or line near center"
+      ],
+      "initial_motion_description": "stationary throughout the visible video",
+      "initial_integrity_description": "appears intact with no visible change",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "partially cropped at the left edge of the tabletop view",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "partially cropped at the right edge of the tabletop view",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "first appears on the left side of the tabletop while the yellow ball is on the right side",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e6"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The early frames show the tabletop with no blue object or yellow ball visible."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "A black cylindrical fixture is partially visible at the left frame edge."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "A black cylindrical fixture is partially visible at the right frame edge."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A small blue cylindrical object appears from the left side of the tabletop."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A yellow-green ball appears from the right side of the tabletop."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The blue object is left of the yellow ball while both are visible on the tabletop."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The blue object moves rightward across the tabletop."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The yellow ball moves leftward across the tabletop."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The blue object and yellow ball become very close near the central area of the tabletop."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "After the close approach, the blue object is again left of the yellow ball."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The blue object moves toward the left side after the close approach."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The yellow ball moves toward the upper-right area after the close approach."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The blue object comes to rest near the left side of the tabletop."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "late",
+      "observation": "The yellow ball comes to rest in the upper-right portion of the tabletop."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "late",
+      "observation": "No visible deformation or breakage appears on either colored object."
+    },
+    {
+      "evidence_id": "e16",
+      "stage": "continuous",
+      "observation": "The framing of the tabletop and background remains essentially unchanged."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The tabletop is visible with the black side fixtures and no colored moving objects present."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary and fully visible as a surface"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains partially visible at the left edge"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains partially visible at the right edge"
+        }
+      ]
+    },
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The blue object appears from the left and the yellow ball appears from the right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "enters the visible tabletop area from the left"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "enters the visible tabletop area from the right"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The two colored objects move toward one another and become very close near the central tabletop area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "moves rightward toward the yellow ball"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "moves leftward toward the blue object"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "After the close approach, the colored objects separate into different regions of the tabletop."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "moves back toward the left side"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "moves toward the upper-right portion of the tabletop"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e13",
+        "e14",
+        "e15"
+      ],
+      "observations": [
+        "Both colored objects are still near the end of the video and remain visibly intact."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "rests near the left side with no visible shape change"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "rests in the upper-right area with no visible shape change"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e16"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "At the closest approach, the blue object and yellow ball appear very close, but the exact presence or absence of physical contact is not fully resolved visually."
+  ]
+}

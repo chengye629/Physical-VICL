@@ -1,0 +1,283 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "An orange spherical object enters from the left, moves rightward across the tabletop, and exits the right side while other visible objects remain stationary.",
+  "raw_event_description": "The video begins with a light wood tabletop in front of a yellow sofa. A small two-toned object with an orange end and dark body lies near the rear upper-center of the table, and a black cylindrical object is partly visible at the far left edge. After several frames with no moving sphere visible, an orange sphere appears from the left side of the tabletop area, travels rightward across the table through the central region, approaches the right edge, and leaves the frame. The two-toned object, table, sofa, and partial black object do not visibly change position.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tabletop and stationary objects are visible in the first frame.",
+      "The later moving orange sphere is not yet visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "table",
+      "visible_form": "large rectangular tabletop occupying most of the frame",
+      "material_description": "pale wood-grain visible surface",
+      "visible_properties": [
+        "flat top surface",
+        "light-colored grain pattern",
+        "straight visible edges"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "appears intact as a single tabletop",
+      "event_role_hints": [
+        "visible surface across which the orange sphere moves"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "orange sphere",
+      "visible_form": "small round orange object",
+      "material_description": "smooth orange visible surface; material not otherwise identifiable",
+      "visible_properties": [
+        "spherical outline",
+        "orange color",
+        "motion blur during movement"
+      ],
+      "initial_motion_description": "not visible in the first frames; later enters from the left",
+      "initial_integrity_description": "when first visible, appears intact and round",
+      "event_role_hints": [
+        "only object with visible translation during the event"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "two-toned small object",
+      "visible_form": "small object lying on its side with an orange end and darker cylindrical sections",
+      "material_description": "orange end surface and dark brown/black surfaces visible; material not otherwise identifiable",
+      "visible_properties": [
+        "two-toned coloring",
+        "cylindrical-looking portions",
+        "lying horizontally near rear tabletop area"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "stationary reference object"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "black cylindrical object",
+      "visible_form": "partly visible black cylinder at the far left edge",
+      "material_description": "dark glossy-looking visible surface",
+      "visible_properties": [
+        "black color",
+        "cylindrical outline",
+        "partially cropped by frame"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "partially visible; no visible change in shape",
+      "event_role_hints": [
+        "stationary edge object"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "yellow sofa",
+      "visible_form": "large upholstered-looking background furniture behind the table",
+      "material_description": "yellow fabric-like visible surface",
+      "visible_properties": [
+        "yellow color",
+        "backrest and cushion seams visible"
+      ],
+      "initial_motion_description": "stationary in the background",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "stationary background"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_3",
+      "relation_description": "lies on the rear upper-center area of the tabletop",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is partly visible at the far left frame edge adjacent to the tabletop area",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is positioned behind the table in the background",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e12"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A light wood rectangular tabletop fills most of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A small two-toned object with an orange end and dark body lies near the rear upper-center of the tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A black cylindrical object is partly visible at the far left edge of the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "No orange sphere is visible on the tabletop area in the early frames."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "An orange spherical object first appears at the left side of the tabletop area."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The orange spherical object moves rightward across the tabletop area."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The orange sphere is visibly separated from the small two-toned object while passing through the central tabletop area."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The orange sphere reaches the right edge of the frame."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The orange sphere is no longer visible after passing the right edge."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The small two-toned object remains in the same visible position throughout the video."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The table edges and background remain fixed in the frame throughout the video."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "A yellow sofa is visible behind the table throughout the video."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e12"
+      ],
+      "observations": [
+        "The scene shows a tabletop with stationary background and stationary small objects.",
+        "The orange sphere is not yet visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The table is stationary in the frame."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The two-toned object lies still near the rear upper-center of the tabletop."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The black cylindrical object remains partly visible at the left frame edge."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The yellow sofa remains stationary in the background."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e10"
+      ],
+      "observations": [
+        "An orange sphere appears from the left and moves rightward across the tabletop area.",
+        "The stationary two-toned object remains separated from the moving sphere."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The orange sphere enters from the left side and travels rightward across the visible tabletop area."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The two-toned object remains in the same visible position while the orange sphere passes through the scene."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The orange sphere reaches the right side and then disappears from view.",
+        "The other visible objects remain unchanged in position."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The orange sphere exits the frame at the right edge."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The two-toned object remains stationary after the sphere exits."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The orange sphere's state before entering the left side of the frame is not visible.",
+    "The orange sphere's state after exiting the right side of the frame is not visible."
+  ]
+}

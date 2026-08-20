@@ -1,0 +1,306 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A brown oblong object moves from the top of a tall transparent glass into blue liquid, causing visible waves before coming to rest near the bottom.",
+  "raw_event_description": "At the start, a tall transparent glass stands on a wooden surface with blue liquid in its lower portion and a green band around the outside near the liquid surface. A brown oblong object is held at the top opening by blue prong-like pieces. The brown object then moves downward into the glass and into the blue liquid. The liquid surface becomes disturbed with waves and splashes inside the glass. The brown object continues downward while partly obscured by the liquid and later remains visible near the lower part of the glass, tilted near the bottom, as the liquid surface settles.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The glass and liquid are clearly visible.",
+      "The top holding pieces and upper part of the brown object are partly cropped by the frame edge."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "tall transparent glass",
+      "visible_form": "upright tall cylindrical drinking vessel with an open top and thicker base",
+      "material_description": "clear transparent reflective surface",
+      "visible_properties": [
+        "transparent",
+        "upright",
+        "open at top",
+        "reflective highlights visible"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact with unchanged outline",
+      "event_role_hints": [
+        "contains the blue liquid and receives the brown object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "blue liquid",
+      "visible_form": "blue fluid occupying the lower portion of the glass",
+      "material_description": "opaque or semi-opaque blue fluid appearance",
+      "visible_properties": [
+        "blue",
+        "has a visible upper surface",
+        "surface initially mostly level"
+      ],
+      "initial_motion_description": "surface appears still before the brown object enters",
+      "initial_integrity_description": "continuous volume inside the glass",
+      "event_role_hints": [
+        "surface becomes disturbed after contact with the brown object"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "green band",
+      "visible_form": "horizontal green strip encircling the outside of the glass",
+      "material_description": "solid green band-like visible surface",
+      "visible_properties": [
+        "green",
+        "horizontal",
+        "wraps around glass"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears continuous around the visible front of the glass",
+      "event_role_hints": [
+        "serves as a visible level marker on the glass"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "brown oblong object",
+      "visible_form": "small elongated rounded brown object",
+      "material_description": "brown surface with darker speckled or textured markings",
+      "visible_properties": [
+        "brown",
+        "elongated",
+        "rounded ends",
+        "opaque"
+      ],
+      "initial_motion_description": "initially held near the top opening with little or no visible movement",
+      "initial_integrity_description": "appears whole and unchanged in shape",
+      "event_role_hints": [
+        "moves into the liquid and later is visible near the bottom"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "blue holding pieces",
+      "visible_form": "two blue prong-like or strap-like parts above the glass opening",
+      "material_description": "solid blue visible surfaces",
+      "visible_properties": [
+        "blue",
+        "partly cropped at top of frame",
+        "positioned around the brown object at the start"
+      ],
+      "initial_motion_description": "mostly stationary at the top of the frame",
+      "initial_integrity_description": "visible parts remain intact",
+      "event_role_hints": [
+        "initially adjacent to the brown object"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal surface beneath the glass",
+      "material_description": "light brown surface with wood-like grain",
+      "visible_properties": [
+        "flat",
+        "light brown",
+        "wood-grain pattern visible"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "unchanged visible surface",
+      "event_role_hints": [
+        "supports the glass"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "stands upright on the tabletop",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "occupies the lower portion inside the transparent glass",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "encircles the glass near the upper edge of the blue liquid",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is positioned at the top opening of the glass next to blue holding pieces",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A tall transparent glass stands upright on a wooden tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Blue liquid fills the lower portion of the glass with a mostly level upper surface."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A green horizontal band is visible around the glass near the blue liquid surface."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A brown oblong object is held near the glass opening by blue prong-like pieces."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The brown oblong object moves downward through the glass opening."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The brown oblong object enters the blue liquid."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The blue liquid surface becomes uneven and forms raised waves inside the glass."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The brown oblong object is partly obscured by the blue liquid while below the surface."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The brown oblong object is visible near the lower part of the glass in a tilted orientation."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Small ripples remain on the blue liquid surface."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The blue holding pieces remain visible above the glass opening after the brown object is inside the liquid."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The glass, tabletop, green band, blue liquid, brown object, and blue holding pieces are visible before the main movement."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The glass remains upright and stationary."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The liquid surface appears mostly flat."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The brown object is positioned near the glass opening."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The blue holding pieces are adjacent to the brown object at the top."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The brown object enters the glass and liquid, and the liquid surface becomes disturbed."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The brown object moves downward into the blue liquid."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The blue liquid forms waves and raised uneven surfaces."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The brown object becomes partly hidden by the blue liquid."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The brown object is underwater near the bottom while surface motion decreases."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The brown object remains near the lower part of the glass in a tilted position."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The liquid surface shows smaller ripples than during entry."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The blue holding pieces remain above the glass opening."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The upper ends of the blue holding pieces are cropped by the frame.",
+    "The brown object is partly obscured by the blue liquid after entering it."
+  ]
+}

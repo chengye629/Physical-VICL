@@ -1,0 +1,369 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A metal-ball desktop cradle shows one outer ball moving into the row, followed by alternating outward swings of the opposite outer balls.",
+  "raw_event_description": "The scene begins with a chrome ball-and-frame desktop cradle on a black base, with a blue-and-black handled object lying to the left. Several shiny suspended balls hang close together near the center while the left outer suspended ball is displaced toward the left. After a static interval, the left outer ball moves inward toward the clustered balls. The right outer ball then separates from the row and swings to the right before returning. The left and right outer balls continue alternating outward and inward motion while the middle balls remain mostly close together.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The cradle frame, base, suspended balls, strings, tabletop, and left-side handled object are visible.",
+      "The suspended balls are not yet undergoing the later alternating outward swings.",
+      "The left displaced ball is partly near the left frame and handled object."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "desktop cradle frame",
+      "visible_form": "rectangular chrome-colored support frame mounted on a glossy black rectangular base",
+      "material_description": "shiny metallic-looking rods and glossy black base",
+      "visible_properties": [
+        "upright frame",
+        "reflective surfaces",
+        "stationary during the event"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the suspended strings and balls"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left outer ball",
+      "visible_form": "small shiny suspended sphere at the left side of the cradle",
+      "material_description": "mirror-like metallic-looking surface",
+      "visible_properties": [
+        "spherical",
+        "reflective",
+        "attached to thin visible strings"
+      ],
+      "initial_motion_description": "initially held or positioned left of the central row with strings angled",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "moves inward toward the other balls and later swings outward left"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "middle ball group",
+      "visible_form": "three shiny suspended spheres hanging close together near the center of the cradle",
+      "material_description": "mirror-like metallic-looking surfaces",
+      "visible_properties": [
+        "spherical",
+        "reflective",
+        "closely aligned",
+        "attached to thin visible strings"
+      ],
+      "initial_motion_description": "mostly still and close together",
+      "initial_integrity_description": "appear intact",
+      "event_role_hints": [
+        "remain clustered while outer balls alternately move"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "right outer ball",
+      "visible_form": "small shiny suspended sphere at the right side of the cradle row",
+      "material_description": "mirror-like metallic-looking surface",
+      "visible_properties": [
+        "spherical",
+        "reflective",
+        "attached to thin visible strings"
+      ],
+      "initial_motion_description": "initially close to the central balls",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "separates from the row and swings outward right"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "suspension strings",
+      "visible_form": "thin nearly vertical or angled lines extending from the top bar to the balls",
+      "material_description": "thin light-colored or translucent strands",
+      "visible_properties": [
+        "thin",
+        "taut-looking",
+        "change angle with ball positions"
+      ],
+      "initial_motion_description": "left-side strings are angled; middle strings are mostly vertical",
+      "initial_integrity_description": "appear continuous",
+      "event_role_hints": [
+        "move with the suspended balls"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "blue-and-black handled object",
+      "visible_form": "flat handled object lying on the tabletop to the left of the cradle, with blue inner areas and black outer edges",
+      "material_description": "matte or semi-gloss plastic-looking black and blue surfaces",
+      "visible_properties": [
+        "stationary",
+        "partly behind the left side of the cradle"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "located near the initially displaced left ball"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "tabletop",
+      "visible_form": "flat wooden surface beneath the cradle",
+      "material_description": "wood-grain visible surface",
+      "visible_properties": [
+        "stationary",
+        "horizontal-looking"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_8",
+      "name": "background wall",
+      "visible_form": "plain light-colored wall behind the table and cradle",
+      "material_description": "smooth light surface",
+      "visible_properties": [
+        "stationary",
+        "plain"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "stands on",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is suspended from the top of the cradle frame with angled strings",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "hangs close together inside the cradle frame",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "hangs adjacent to the middle ball group on the right side",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "lies on the tabletop to the left of the cradle",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The chrome-colored cradle frame and black base are stationary on a wooden tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The left outer suspended ball is displaced toward the left with its visible strings angled."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Three central shiny balls hang close together near the middle of the black base."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A right-side shiny ball is initially close to the central ball group."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A blue-and-black handled object lies to the left of the cradle."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The left outer ball moves rightward toward the row of balls."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The left outer ball reaches the clustered balls."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The right outer ball separates from the clustered balls and is visible to the right of the row."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The right outer ball swings outward to the right with its strings angled."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The right outer ball returns toward the central row."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "middle",
+      "observation": "The left outer ball later separates from the row toward the left."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The middle balls remain mostly close together while the outer balls alternate outward positions."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The outward swings continue with smaller visible spacing changes than the first large rightward separation."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The frame, base, tabletop, wall, and blue-and-black handled object remain stationary throughout the visible event."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The cradle is stationary on the tabletop.",
+        "The left outer ball is displaced left while the other balls hang close together."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "is positioned left of the central row with angled strings"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "hangs in a compact central cluster"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "hangs adjacent to the central cluster on the right"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The left outer ball moves inward.",
+        "The right outer ball separates and swings outward.",
+        "The right outer ball returns.",
+        "The left outer ball later separates outward left."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "moves from the left side toward the clustered balls and later moves outward left"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "moves away from the row to the right and then back toward the row"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "stays mostly clustered near the center"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "changes angle with the moving outer balls"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e12",
+        "e13",
+        "e14"
+      ],
+      "observations": [
+        "Alternating outward motion of the left and right outer balls continues.",
+        "The central balls remain close together.",
+        "Stationary surrounding objects remain in place."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "continues alternating between a position near the row and a leftward separated position"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "continues alternating between a position near the row and a rightward separated position"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary and intact"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "remains stationary on the left side of the tabletop"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The left outer ball is partly near the left frame and blue-and-black handled object at the beginning, making its exact contact with the handled object unclear."
+  ]
+}

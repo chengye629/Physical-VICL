@@ -1,0 +1,182 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support",
+        "medium"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "white rectangular block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "black cylindrical side object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "small brown round object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e7",
+        "e8"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "rightward motion of the small brown round object across the tabletop",
+      "object_ids": [
+        "obj_4"
+      ],
+      "event_roles": {
+        "target": [
+          "obj_4"
+        ],
+        "support": [
+          "obj_1"
+        ],
+        "medium": [
+          "obj_1"
+        ]
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e8"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "rotation",
+        "raw_type": "changing visible orientation of the brown object during travel",
+        "object_ids": [
+          "obj_4"
+        ],
+        "event_roles": {
+          "target": [
+            "obj_4"
+          ]
+        },
+        "evidence_refs": [
+          "e7"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the moving object enters from offscreen",
+      "actor_ids": [],
+      "target_ids": [],
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "impact_id": "impact_1",
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "position changes rightward across the tabletop from the left side of the visible scene to the right edge"
+      },
+      "initial_state": "not visible at the start, then enters from the left while moving",
+      "final_state": "leaves the visible frame at the right edge",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e8"
+      ]
+    },
+    {
+      "impact_id": "impact_2",
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "visible face and orientation change during the rightward motion"
+      },
+      "initial_state": "round brown object first appears with one visible face orientation",
+      "final_state": "visible appearance changes while it travels before exiting",
+      "evidence_refs": [
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": []
+}

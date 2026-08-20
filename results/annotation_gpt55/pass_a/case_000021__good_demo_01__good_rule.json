@@ -1,0 +1,176 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A yellow duck-shaped toy remains visibly unchanged on a wooden tabletop throughout the clip.",
+  "raw_event_description": "The video opens on a small yellow duck-shaped toy positioned on a light brown wood-grain tabletop in front of a plain wall. Across the visible duration, the toy, tabletop, and background keep the same visible positions, shapes, and appearance, with no visible object motion, deformation, separation, emission, or scene transition.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The duck-shaped toy is fully visible near the center of the frame.",
+      "The tabletop surface and wall background are visible.",
+      "No active change is already underway in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow duck toy",
+      "visible_form": "small rounded duck-shaped figure with a raised head, orange beak, black eye markings, and compact body",
+      "material_description": "smooth bright yellow exterior with slight surface shine; orange beak and black eye details are visible",
+      "visible_properties": [
+        "yellow body",
+        "orange beak",
+        "black eyes",
+        "rounded body",
+        "duck-like shape",
+        "small relative to tabletop"
+      ],
+      "initial_motion_description": "No visible motion before or during the observed interval.",
+      "initial_integrity_description": "Appears intact, with no visible cracks, missing parts, deformation, or separated pieces.",
+      "event_role_hints": [
+        "primary visible object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal tabletop surface extending across the frame",
+      "material_description": "light brown surface with visible wood-grain pattern",
+      "visible_properties": [
+        "flat visible surface",
+        "wood-grain appearance",
+        "light brown color"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears continuous and intact in the visible area.",
+      "event_role_hints": [
+        "surface beneath the toy"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wall background",
+      "visible_form": "plain vertical background behind the tabletop",
+      "material_description": "smooth pale wall surface with slight tonal variation",
+      "visible_properties": [
+        "pale color",
+        "vertical background",
+        "plain surface"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears continuous in the visible area.",
+      "event_role_hints": [
+        "background"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The lower edge of the duck-shaped toy is visibly in contact with the tabletop surface.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The duck-shaped toy is positioned in front of the wall background.",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "A yellow duck-shaped toy is fully visible near the center of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "The bottom of the duck-shaped toy meets the visible tabletop surface."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "A plain pale wall is visible behind the toy and tabletop."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "The duck-shaped toy keeps the same visible position relative to the tabletop grain and wall background."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The duck-shaped toy keeps the same visible shape and markings."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "No other objects enter or leave the visible scene."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The camera framing remains visually stable throughout the clip."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The image focus remains visually consistent throughout the clip."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The scene remains visually static with the duck-shaped toy on the tabletop in front of the wall."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The duck-shaped toy remains in the same visible position and orientation, with no visible deformation or emission."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The tabletop remains visually unchanged."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The wall background remains visually unchanged."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e7",
+      "e8"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

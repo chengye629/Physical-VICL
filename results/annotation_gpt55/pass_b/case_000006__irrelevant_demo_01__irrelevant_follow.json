@@ -1,0 +1,307 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "blue sphere",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e4",
+        "e6",
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "green mound",
+      "entity_kind": "granular_material",
+      "event_roles": [
+        "target",
+        "support",
+        "medium"
+      ],
+      "material_phase": "granular",
+      "physical_properties": [
+        "plastically_deformable"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e4",
+        "e8",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "holder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "background wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e13"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "free_fall",
+      "raw_type": "downward fall of the blue sphere after separating from the holder",
+      "participant_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "contact_loading",
+        "type": "penetration",
+        "raw_type": "sphere contacts the green mound and partially enters the mound material",
+        "participant_object_ids": [
+          "obj_1",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e8",
+          "e9",
+          "e10"
+        ]
+      },
+      {
+        "family": "gas_particulate_motion",
+        "type": "granular_rearrangement",
+        "raw_type": "green granular mound locally rearranges around the contacting sphere",
+        "participant_object_ids": [
+          "obj_2",
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e9",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "release",
+      "type": "drop",
+      "raw_action": "the sphere is released from the holder and begins downward motion",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "tool_or_support_object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "blue sphere changes from stationary near the holder to moving downward"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "blue sphere stops moving and remains stationary on the green mound"
+      },
+      "evidence_refs": [
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_loss",
+        "raw_transition": "blue sphere is no longer enclosed by or in contact with the lower part of the holder"
+      },
+      "evidence_refs": [
+        "e5",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "blue sphere gains contact with the top of the green mound"
+      },
+      "evidence_refs": [
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "green mound surface changes shape, forming a depression beneath the sphere with raised uneven material around it"
+      },
+      "evidence_refs": [
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "settling",
+        "raw_transition": "displaced mound material settles into a stable configuration around the lower part of the sphere"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the unsupported sphere downward after it separates from the holder",
+      "linked_processes": [
+        "primary"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "contact between the falling sphere and mound transfers momentum and starts local displacement of the mound surface",
+      "linked_processes": [
+        "secondary"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "sustained_pressure",
+      "raw_mechanism": "the sphere's contact load presses into the green material as it comes to rest",
+      "linked_processes": [
+        "secondary"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "plasticity",
+      "raw_mechanism": "the loose mound material yields and retains the visible depression and raised edges after loading",
+      "linked_processes": [
+        "secondary"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e11"
+      ]
+    }
+  ]
+}

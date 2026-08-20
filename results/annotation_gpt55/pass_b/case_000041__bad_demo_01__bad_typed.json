@@ -1,0 +1,235 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "teapot-shaped object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6",
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "black circular base",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "mirror",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "reflective",
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e12",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "black cord",
+      "entity_kind": "deformable_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "dark right-side object",
+      "entity_kind": "unknown",
+      "event_roles": [],
+      "material_phase": "unknown",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e13"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "rotation",
+      "raw_type": "steady turning of the teapot-shaped object about its vertical axis",
+      "participants": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "mirror reflection shows the teapot-shaped object's changing orientation",
+        "participants": [
+          "obj_1",
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e12"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the object is already turning during the excerpt",
+      "actors": [],
+      "targets": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e10",
+        "e13"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady"
+    }
+  },
+  "impacts": [
+    {
+      "impact_id": "impact_1",
+      "object_id": "obj_1",
+      "process_ref": "primary",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "visible orientation changes about the upright axis; the red handle and red spout move to different sides of the visible outline"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "impact_id": "impact_2",
+      "object_id": "obj_3",
+      "process_ref": "secondary_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "reflected image content changes as the teapot-shaped object's orientation changes"
+      },
+      "evidence_refs": [
+        "e3",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "mechanism_id": "mechanism_1",
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "the mirror surface reflects light from the teapot-shaped object, producing a reflected image that changes with the object's orientation",
+      "process_ref": "secondary_1",
+      "object_refs": [
+        "obj_1",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e12"
+      ]
+    }
+  ]
+}

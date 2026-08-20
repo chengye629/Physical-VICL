@@ -1,0 +1,205 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "table",
+      "entity_kind": "surface_or_region",
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "support"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "yellow duck toy",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "target"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e8",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "brown round object",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "target"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "black cylindrical object",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [],
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "sofa",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [],
+      "evidence_refs": []
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "contact_loading",
+      "type": "collision",
+      "raw_type": "brief contact impact between the moving brown round object and the yellow duck toy",
+      "participant_object_ids": [
+        "obj_3",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "brown round object translates rightward across the tabletop",
+        "participant_object_ids": [
+          "obj_3",
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e4",
+          "e5",
+          "e6",
+          "e10",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the brown round object first appears already moving from the left",
+      "actor_object_id": null,
+      "target_object_ids": [],
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "multi_stage",
+      "change_profile": "abrupt",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "duck toy changes position and visible orientation after the brown round object reaches its left side"
+      },
+      "before": "stationary on the right side of the tabletop",
+      "after": "slightly displaced and turned, then stationary nearby",
+      "evidence_refs": [
+        "e1",
+        "e7",
+        "e8",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "brown round object changes from moving rightward across the tabletop to resting near the back-right area"
+      },
+      "before": "moving rightward across the tabletop and continuing past the duck",
+      "after": "stationary near the back-right area of the tabletop",
+      "evidence_refs": [
+        "e5",
+        "e10",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "brief contact from the moving brown round object transfers momentum to the duck toy, producing the duck's displacement and reorientation",
+      "object_ids": [
+        "obj_3",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "friction",
+      "raw_mechanism": "contact resistance with the tabletop opposes the brown round object's motion until it comes to rest",
+      "object_ids": [
+        "obj_3",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    }
+  ]
+}

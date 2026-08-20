@@ -1,0 +1,305 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A black sphere on a slender dark stem slowly shifts to the right while the green base and surrounding scene remain fixed.",
+  "raw_event_description": "The video shows a black spherical object attached to the top of a narrow dark stem emerging from a bright green rectangular base behind a wooden foreground edge. Across the clip, the sphere and the upper part of the stem gradually move rightward and slightly lower relative to the base and wall, while the base, tabletop edge, and background remain in place. No visible separation, breakage, or sudden emission occurs.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The sphere, stem, and green base are visible.",
+      "The lower part of the setup is partly hidden by the wooden foreground edge.",
+      "The visible motion appears already in progress rather than beginning abruptly in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "black sphere",
+      "visible_form": "round black ball attached at the top of a narrow stem",
+      "material_description": "smooth black surface with soft specular highlights; material type not visually identifiable",
+      "visible_properties": [
+        "spherical",
+        "black",
+        "smooth-looking",
+        "larger than the stem"
+      ],
+      "initial_motion_description": "no single-frame motion visible; over the sequence it begins in an upper central position relative to the base",
+      "initial_integrity_description": "appears intact and continuous with the stem contact point",
+      "event_role_hints": [
+        "visible moving upper object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "dark stem",
+      "visible_form": "thin vertical-to-curved dark strip or rod below the sphere",
+      "material_description": "dark narrow surface with a small blue band or marking near its upper-middle portion",
+      "visible_properties": [
+        "slender",
+        "dark",
+        "curved",
+        "attached-looking at top and bottom"
+      ],
+      "initial_motion_description": "appears nearly upright with a slight curve; over the sequence its visible lean and curvature change",
+      "initial_integrity_description": "appears continuous and unbroken",
+      "event_role_hints": [
+        "visible connector between sphere and base",
+        "changes shape or orientation during the clip"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "green base",
+      "visible_form": "bright green rectangular block or plate behind the wooden foreground edge",
+      "material_description": "flat bright green surfaces with sharp edges; material type not visually identifiable",
+      "visible_properties": [
+        "rectangular",
+        "bright green",
+        "stationary-looking"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "visible lower support area for the stem"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "dark support",
+      "visible_form": "dark rectangular surface beneath or behind the green base",
+      "material_description": "dark matte-looking surface; material type not visually identifiable",
+      "visible_properties": [
+        "dark",
+        "flat-looking",
+        "partly hidden"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact where visible",
+      "event_role_hints": [
+        "stationary surrounding object"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "wooden foreground edge",
+      "visible_form": "horizontal wooden board or tabletop edge across the bottom of the frame",
+      "material_description": "brown wood-grain surface",
+      "visible_properties": [
+        "horizontal",
+        "brown",
+        "wood-grain texture"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "foreground occluding object"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "wall background",
+      "visible_form": "plain light-colored wall behind the setup",
+      "material_description": "light gray-green flat surface with diffuse markings and shadows",
+      "visible_properties": [
+        "flat",
+        "light-colored",
+        "background"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears unchanged",
+      "event_role_hints": [
+        "stationary visual reference"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "black sphere is visibly attached to or touching the upper end of the dark stem",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "dark stem emerges from the area of the green base",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "wooden foreground edge hides part of the lower setup",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The black sphere is at the top of the narrow dark stem."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The narrow dark stem extends down into the visible green rectangular base area."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "A horizontal wooden foreground edge covers the bottom portion of the scene."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The black sphere is positioned slightly left of its later position relative to the green base."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The black sphere is farther right than in the early frames."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "late",
+      "observation": "The black sphere is at its rightmost visible position compared with the early frames."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The dark stem’s visible curve and lean change as the sphere shifts position."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The green base remains in the same image location while the sphere changes position relative to it."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The sphere and stem remain visibly connected throughout the clip."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "No visible pieces detach from the sphere, stem, or base."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The wall background and wooden foreground edge maintain fixed framing throughout the clip."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "Image focus remains steady enough to track the sphere, stem, and base."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The setup is already visible with the black sphere elevated above the green base on the dark stem."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "black sphere appears in an upper central position relative to the base"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "dark stem appears slightly curved between the base and sphere"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "green base remains stationary in the frame"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The upper assembly has shifted rightward compared with the early frames."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "black sphere gradually moves rightward and slightly lower relative to the green base"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "dark stem changes visible curvature and lean while staying connected to the sphere and base area"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "green base shows no visible translation"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e6",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The sphere remains attached and is farther right than at the start."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "black sphere remains intact at a right-shifted position"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "dark stem remains continuous with a changed lean/curve"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "green base remains visually fixed"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11",
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The lower attachment area is partly hidden by the wooden foreground edge.",
+    "The beginning and ending of the motion are not fully shown within the clip."
+  ]
+}

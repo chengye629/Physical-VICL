@@ -1,0 +1,332 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "orange hanging ball assembly",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e8"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e7"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "mirror panel",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "reflective",
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "soft shadows",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e7"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "id": "proc_1",
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "downward translation of the hanging ball assembly",
+      "participant_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "id": "proc_2",
+        "family": "relation_reconfiguration",
+        "type": "support_change",
+        "raw_type": "the descending ball assembly reaches the tabletop and becomes supported there",
+        "participant_object_ids": [
+          "obj_1",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e8",
+          "e9"
+        ]
+      },
+      {
+        "id": "proc_3",
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "mirror reflection of the hanging assembly moves lower with the assembly",
+        "participant_object_ids": [
+          "obj_1",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e2",
+          "e6",
+          "e10"
+        ]
+      },
+      {
+        "id": "proc_4",
+        "family": "optical_interaction",
+        "type": "illumination_change",
+        "raw_type": "soft shadow pattern shifts lower as the hanging assembly descends",
+        "participant_object_ids": [
+          "obj_1",
+          "obj_3",
+          "obj_5"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e7"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the upper cord attachment remains outside the frame",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e11"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e8",
+        "e9",
+        "e11"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "id": "impact_1",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the assembly changes position downward while remaining near the same horizontal location"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "id": "impact_2",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "the lower edge of the orange ball visually meets the tabletop"
+      },
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "id": "impact_3",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "after reaching the tabletop, the hanging assembly remains nearly stationary"
+      },
+      "evidence_refs": [
+        "e9"
+      ]
+    },
+    {
+      "id": "impact_4",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "the tabletop becomes the visible contact surface for the orange ball"
+      },
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "id": "impact_5",
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "the reflected image of the hanging assembly appears lower in the mirror"
+      },
+      "evidence_refs": [
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "id": "impact_6",
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "the soft dark shadow patch shifts lower on the visible surfaces"
+      },
+      "evidence_refs": [
+        "e3",
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "id": "mech_1",
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity acts on the hanging assembly during its downward motion",
+      "process_ids": [
+        "proc_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e8"
+      ]
+    },
+    {
+      "id": "mech_2",
+      "family": "mechanical_forcing",
+      "type": "tension",
+      "raw_mechanism": "the cord connection constrains the assembly while it moves downward near the same horizontal location",
+      "process_ids": [
+        "proc_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "id": "mech_3",
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "supporting contact from the tabletop arrests the assembly's downward motion",
+      "process_ids": [
+        "proc_2"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "id": "mech_4",
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "light from the hanging assembly reflects from the mirror surface to form the visible reflected image",
+      "process_ids": [
+        "proc_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "id": "mech_5",
+      "family": "optical_electromagnetic",
+      "type": null,
+      "raw_mechanism": "the moving assembly changes the position of blocked illumination, shifting the soft shadow pattern",
+      "process_ids": [
+        "proc_4"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e7"
+      ]
+    }
+  ]
+}

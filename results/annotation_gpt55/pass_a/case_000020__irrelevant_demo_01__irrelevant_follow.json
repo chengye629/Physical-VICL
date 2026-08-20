@@ -1,0 +1,262 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A yellow hanging object descends from near the top of the frame toward a dark green box and then disappears from view while the box remains visibly unchanged.",
+  "raw_event_description": "The scene begins with a dark green, open-topped box centered on a wooden tabletop against a plain wall. A small yellow object is visible near the top center, with red cord-like parts above it. For many frames the yellow object remains near the top. It then moves downward through the center of the frame, appearing blurred during the motion, toward the area above the box. After this downward motion, the yellow object is no longer visible; the red cord-like parts remain visible near the top, and the box stays in the same position with no visible deformation or displacement.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The box, tabletop, wall, yellow object, and red cord-like parts are visible before the main motion.",
+      "The yellow object is close to the top edge but still visibly identifiable."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "green box",
+      "visible_form": "upright rectangular open-topped container or box",
+      "material_description": "dark green textured surface with darker edges or seams",
+      "visible_properties": [
+        "centered on table",
+        "open top rim visible",
+        "approximately cube-like shape"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact with no visible deformation",
+      "event_role_hints": [
+        "located below the descending yellow object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "yellow hanging object",
+      "visible_form": "small yellow rounded object hanging near the top center",
+      "material_description": "smooth yellow surface; exact material not visually determinable",
+      "visible_properties": [
+        "bright yellow",
+        "smaller than the box",
+        "initially near top center"
+      ],
+      "initial_motion_description": "stationary or nearly stationary near the top of the frame",
+      "initial_integrity_description": "intact",
+      "event_role_hints": [
+        "moves downward during the visible event"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "red cord-like parts",
+      "visible_form": "two red or orange narrow hanging strands or loop segments near the top of the frame",
+      "material_description": "thin red/orange flexible-looking visual form; exact material not visually determinable",
+      "visible_properties": [
+        "near top center",
+        "partly cropped by upper frame edge"
+      ],
+      "initial_motion_description": "stationary or nearly stationary",
+      "initial_integrity_description": "visible as two narrow hanging parts",
+      "event_role_hints": [
+        "initially adjacent to or connected with the yellow object"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal table surface",
+      "material_description": "light brown wood-like surface with visible grain or panel lines",
+      "visible_properties": [
+        "supports the green box",
+        "occupies lower part of frame"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_5",
+      "name": "wall",
+      "visible_form": "plain vertical background surface",
+      "material_description": "light gray or off-white matte surface",
+      "visible_properties": [
+        "behind the table and box",
+        "even background with side light patches"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on the tabletop near the center of the frame",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is above the green box near the vertical centerline of the scene",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is adjacent to red cord-like parts near the top of the frame",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A dark green open-topped box is centered on a light brown tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A small yellow object is visible near the top center above the green box."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Red cord-like parts are visible above and around the yellow object near the top edge."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "For many early frames, the yellow object remains near the same upper position."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The yellow object appears lower than before and is blurred along the vertical direction."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The yellow object is centered above the green box during its downward motion."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "After the downward motion, the yellow object is no longer visible in the frame."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The red cord-like parts remain visible near the top of the frame after the yellow object disappears."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The green box remains in the same visible position and shape throughout the clip."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed with no visible pan, tilt, or zoom."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The tabletop, wall, box, yellow object, and red cord-like parts are visible.",
+        "The yellow object remains near the top center for an initial interval."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The green box is stationary on the tabletop."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The yellow object is stationary or nearly stationary near the top center."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The red cord-like parts are visible near the top edge."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The yellow object moves downward through the center of the scene toward the box area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The yellow object descends and appears motion-blurred."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The green box remains stationary and visibly unchanged during the yellow object's motion."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The yellow object is absent from view after the downward motion.",
+        "The red cord-like parts remain visible near the upper edge."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The yellow object is no longer visible."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The red cord-like parts remain visible near the top of the frame."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The green box remains in the same position and shape."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact final location of the yellow object is not visible after it disappears from the frame.",
+    "No direct visible contact between the yellow object and the inside of the box is clearly shown."
+  ]
+}

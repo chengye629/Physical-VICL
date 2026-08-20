@@ -1,0 +1,483 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "yellow block",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "orange block",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e4",
+        "e11",
+        "e15"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "pink block",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e4",
+        "e10",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "green block",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e4",
+        "e9",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "blue block",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e4",
+        "e8",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "purple block",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e6",
+        "e7",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "black circular object",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e16"
+      ]
+    },
+    {
+      "object_id": "obj_8",
+      "name": "pointed stick",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "tool"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "rotating",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e6",
+        "e16"
+      ]
+    },
+    {
+      "object_id": "obj_9",
+      "name": "wooden tabletop",
+      "axes": {
+        "entity_kind": "surface_or_region",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "not_applicable",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e13",
+        "e15"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "toppling",
+      "raw_type": "sequential toppling of upright blocks after contact from a rotating pointed stick",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3",
+        "obj_4",
+        "obj_5",
+        "obj_6",
+        "obj_8",
+        "obj_9"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14",
+        "e15"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "rotation",
+        "raw_type": "pointed stick rotates about the black circular object toward the block row",
+        "participant_object_ids": [
+          "obj_7",
+          "obj_8"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e5",
+          "e6",
+          "e16"
+        ]
+      },
+      {
+        "family": "contact_loading",
+        "type": "collision",
+        "raw_type": "rotating stick contacts the purple block and the falling blocks pass contact-induced motion through the row",
+        "participant_object_ids": [
+          "obj_1",
+          "obj_2",
+          "obj_3",
+          "obj_4",
+          "obj_5",
+          "obj_6",
+          "obj_8"
+        ],
+        "evidence_refs": [
+          "e6",
+          "e7",
+          "e8",
+          "e9",
+          "e10",
+          "e11",
+          "e12"
+        ]
+      }
+    ],
+    "action": {
+      "family": "transport",
+      "type": "rotate",
+      "raw_action": "the pointed stick is visibly rotated toward the purple block",
+      "actor_object_ids": [],
+      "tool_object_ids": [
+        "obj_8"
+      ],
+      "target_object_ids": [
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e17"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_8",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the pointed stick changes orientation as it rotates toward the purple block"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "the pointed stick makes contact with the purple block side area"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "the purple block changes from upright stationary support to leftward tilting and then lies lengthwise on the tabletop"
+      },
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "the blue block tilts left after the purple block and remains slanted in the fallen row"
+      },
+      "evidence_refs": [
+        "e8",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "the green block tilts left after the blue block and remains slanted in the fallen row"
+      },
+      "evidence_refs": [
+        "e9",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "the pink block tilts left after the green block and remains slanted in the fallen row"
+      },
+      "evidence_refs": [
+        "e10",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "the orange block tilts left after the pink block and rests low on the tabletop"
+      },
+      "evidence_refs": [
+        "e11",
+        "e15"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "the yellow block tilts left after the orange block as the cascade reaches the left end"
+      },
+      "evidence_refs": [
+        "e1",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "brief contact from the rotating pointed stick transfers momentum to the purple block",
+      "participant_object_ids": [
+        "obj_8",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "successive block-to-block contacts transmit the toppling motion from right to left through the row",
+      "participant_object_ids": [
+        "obj_6",
+        "obj_5",
+        "obj_4",
+        "obj_3",
+        "obj_2",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "torque",
+      "raw_mechanism": "off-center contact and support at the block bases produce angular rotation of the upright blocks during toppling",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3",
+        "obj_4",
+        "obj_5",
+        "obj_6",
+        "obj_8",
+        "obj_9"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "after the blocks are tilted away from upright, gravity drives them downward toward the tabletop",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3",
+        "obj_4",
+        "obj_5",
+        "obj_6",
+        "obj_9"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14",
+        "e15"
+      ]
+    }
+  ]
+}

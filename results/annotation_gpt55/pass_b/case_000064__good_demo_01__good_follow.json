@@ -1,0 +1,265 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "white cup",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black kettlebell",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e11",
+        "e14"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "vertical black strap",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e13"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "gray wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e13"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "deformation",
+      "type": "compression_deformation",
+      "raw_type": "cup compresses and flattens under the descending kettlebell",
+      "involved_object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "kettlebell moves downward toward the cup",
+        "involved_object_ids": [
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e2",
+          "e3",
+          "e6"
+        ]
+      },
+      {
+        "family": "contact_loading",
+        "type": "compression_loading",
+        "raw_type": "kettlebell applies compressive contact loading to the cup",
+        "involved_object_ids": [
+          "obj_1",
+          "obj_2",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e7",
+          "e8",
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "loading",
+      "type": "press",
+      "raw_action": "downward pressing load is applied by the kettlebell onto the cup",
+      "participant_object_ids": {
+        "tool": [
+          "obj_2"
+        ],
+        "target": [
+          "obj_1"
+        ],
+        "support": [
+          "obj_4"
+        ]
+      },
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "brief",
+      "temporal_structure": "single",
+      "change_profile": "abrupt",
+      "evidence_refs": [
+        "e3",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "affected_object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "flattened",
+        "raw_transition": "the cup changes from a rounded sideways form into a flattened white shape beneath the kettlebell"
+      },
+      "causal_process_family": "deformation",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "affected_object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "the descending kettlebell establishes visible contact with the cup"
+      },
+      "causal_process_family": "contact_loading",
+      "interacting_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "affected_object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "the kettlebell changes from downward motion to remaining positioned over the flattened cup"
+      },
+      "causal_process_family": "contact_loading",
+      "interacting_object_ids": [
+        "obj_1",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e7",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "sustained_pressure",
+      "raw_mechanism": "sustained downward contact force from the kettlebell compresses the cup against the tabletop",
+      "linked_process_family": "deformation",
+      "involved_object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "the cup wall bends and collapses under compressive loading instead of remaining shape-preserving",
+      "linked_process_family": "deformation",
+      "involved_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ]
+    }
+  ]
+}

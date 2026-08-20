@@ -1,0 +1,286 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small brown top-shaped object enters from the left, moves across the tabletop in front of a stationary white block, and exits at the right.",
+  "raw_event_description": "The scene begins with a light wood-grain tabletop, a white textured rectangular block near the upper center, and a partially visible black circular object at the left edge. After a period with no visible scene-object motion, a small brown top-shaped object appears from the lower left area, travels rightward across the tabletop below the white block, remains visibly blurred during the traverse, and leaves the frame on the right. The white block, tabletop, and black left-edge object remain in the same visible positions throughout.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tabletop and stationary white block are visible before the moving brown object appears.",
+      "The moving brown object is not yet visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "white rectangular block",
+      "visible_form": "rectangular cuboid with flat faces and a textured surface pattern",
+      "material_description": "white surface with repeating raised or woven-looking texture",
+      "visible_properties": [
+        "white",
+        "rectangular",
+        "stationary",
+        "textured"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact as a single block",
+      "event_role_hints": [
+        "stationary reference object near the path of the moving brown object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "brown top-shaped object",
+      "visible_form": "small rounded or conical brown object with a narrow upper part and broader lower body",
+      "material_description": "brown surface; exact material not visually identifiable",
+      "visible_properties": [
+        "brown",
+        "small",
+        "motion-blurred during movement"
+      ],
+      "initial_motion_description": "not visible at the start; later moves from left to right across the tabletop",
+      "initial_integrity_description": "appears intact when visible",
+      "event_role_hints": [
+        "main moving object"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "tabletop",
+      "visible_form": "flat horizontal surface filling most of the frame",
+      "material_description": "light tan wood-grain visual pattern",
+      "visible_properties": [
+        "light brown",
+        "wood-grain pattern",
+        "flat",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact and continuous",
+      "event_role_hints": [
+        "surface across which the brown object moves"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "black circular side object",
+      "visible_form": "partially visible black round or wheel-like object at the left edge",
+      "material_description": "dark black surface; exact material not visually identifiable",
+      "visible_properties": [
+        "black",
+        "partially visible",
+        "round edge",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "only partially visible; visible portion appears intact",
+      "event_role_hints": [
+        "stationary peripheral object"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "background panel",
+      "visible_form": "vertical yellow-green background area behind the tabletop",
+      "material_description": "yellow-green surface; exact material not visually identifiable",
+      "visible_properties": [
+        "yellow-green",
+        "vertical",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears continuous in the visible area",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests visibly on the tabletop near the upper center of the frame",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is partially visible along the left edge of the frame",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is not visible in the initial frames",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A light wood-grain tabletop fills most of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A white textured rectangular block is positioned near the upper center of the tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A black circular object is partially visible at the far left edge."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "No brown moving object is visible at the start."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A small brown top-shaped object appears from the lower left side of the frame."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The brown object changes position rightward across successive frames."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The brown object is visibly blurred while moving across the tabletop."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The brown object passes below the white block in the image."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The white block remains in the same visible position while the brown object passes nearby."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The brown object exits beyond the right edge of the frame."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "After the brown object leaves, the tabletop, white block, and black left-edge object remain visible and stationary."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed with no visible pan, tilt, or zoom."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene is static before the brown object appears."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary on the tabletop"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "is not visible"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains stationary"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains partially visible and stationary at the left edge"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The main visible change is the brown object moving across the tabletop."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "enters from the lower left, travels rightward below the white block, and appears motion-blurred"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary while the brown object passes in front of and below it in the image"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "continues to appear as the surface under the moving brown object"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The moving brown object is no longer visible after it reaches the right edge."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "exits the frame at the right"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary near the upper center"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains partially visible at the left edge"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

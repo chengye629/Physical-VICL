@@ -1,0 +1,301 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "transparent dispenser",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source",
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "tap assembly",
+      "entity_kind": "articulated_object",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "clear liquid stream",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "transparent"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "jar",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "orange liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "surface bubbles",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "woven stand",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "table",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e6",
+        "e11"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "bulk_flow",
+      "raw_type": "continuous clear liquid stream flows from the dispenser tap into the jar",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3",
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e7",
+        "e8"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "orange liquid free surface rises and remains disturbed with bubbles or foam near the surface",
+        "participant_object_ids": [
+          "obj_5",
+          "obj_6"
+        ],
+        "evidence_refs": [
+          "e7",
+          "e8",
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; liquid dispensing is already in progress at the first frame",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_3",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "material_transfer",
+        "raw_transition": "clear liquid is transported from the tap area into the jar opening as a sustained stream"
+      },
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "orange liquid amount in the jar increases and the liquid level rises"
+      },
+      "evidence_refs": [
+        "e5",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "the upper liquid surface moves upward and is disturbed where the stream enters"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "small bubbles or foam collect around the upper liquid surface"
+      },
+      "evidence_refs": [
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "the jar contains more liquid by the late stage with no visible overflow"
+      },
+      "evidence_refs": [
+        "e8",
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the downward liquid stream from the elevated tap into the jar",
+      "applies_to_process": "primary",
+      "object_ids": [
+        "obj_2",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "liquid surface effects shape the rippled free surface and bubbles or foam near the top of the orange liquid",
+      "applies_to_process": "secondary",
+      "object_ids": [
+        "obj_5",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e9"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,329 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A white folded card on a black circular base turns while a blue-and-black holder carrying an orange ball moves downward and becomes partly or fully hidden by the card.",
+  "raw_event_description": "At the start, a white A-shaped folded card stands on a black circular base on a tabletop, with an orange ball held in a blue-and-black U-shaped holder above it. The folded card changes orientation around a vertical axis, showing first an angled A-frame view, then a broad front face, then another angled view. During the same interval, the holder and orange ball move downward along the central vertical area. The front white panel passes in front of the ball and holder, hiding them for several frames. Later the orange ball and blue parts of the holder are briefly visible lower and partly behind the folded card, then the card continues turning and the ball becomes mostly hidden again.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The folded white card, black base, orange ball, and blue-and-black holder are all visible.",
+      "The objects are already arranged for the visible motion, with the ball above the folded card."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "folded white card",
+      "visible_form": "two flat white rectangular panels joined along a top fold, standing in an inverted V or A-frame shape",
+      "material_description": "matte white sheet-like surface with thin edges",
+      "visible_properties": [
+        "white",
+        "flat panels",
+        "folded",
+        "angular silhouette"
+      ],
+      "initial_motion_description": "begins changing orientation around a vertical axis",
+      "initial_integrity_description": "appears intact as two joined panels",
+      "event_role_hints": [
+        "occupies the central foreground on the base",
+        "visibly occludes other objects during part of the event"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black circular base",
+      "visible_form": "low round black platform with a cylindrical side",
+      "material_description": "black smooth plastic-like surface with slight reflections",
+      "visible_properties": [
+        "black",
+        "circular",
+        "flat top"
+      ],
+      "initial_motion_description": "no distinct motion is visually trackable from its round shape",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "the folded card is positioned on top of it"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "orange ball",
+      "visible_form": "small sphere with pebbled texture",
+      "material_description": "orange textured surface",
+      "visible_properties": [
+        "orange",
+        "round",
+        "textured"
+      ],
+      "initial_motion_description": "visible near the top center and then moves downward with the holder",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "held between the blue-and-black holder arms",
+        "later becomes occluded by the white card"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "blue-and-black holder",
+      "visible_form": "U-shaped curved holder with blue inner side pieces and black outer/upper parts",
+      "material_description": "glossy black and blue plastic-like surfaces",
+      "visible_properties": [
+        "blue",
+        "black",
+        "curved arms",
+        "U-shaped opening"
+      ],
+      "initial_motion_description": "moves downward along the central vertical area",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "surrounds the orange ball at the start"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "vertical rod",
+      "visible_form": "upright narrow rod or post above the base, with dark lower section and silver upper section visible later",
+      "material_description": "black and metallic-looking silver surfaces",
+      "visible_properties": [
+        "vertical",
+        "narrow",
+        "black lower section",
+        "silver upper section"
+      ],
+      "initial_motion_description": "lower portion becomes more visible as the holder moves downward",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "aligned above the central base area"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "tabletop",
+      "visible_form": "flat wooden surface under the base",
+      "material_description": "wood-grain visible surface",
+      "visible_properties": [
+        "brown",
+        "flat",
+        "wood grain"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the base"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "black cord",
+      "visible_form": "thin black cable extending from the base area toward the right",
+      "material_description": "black flexible-looking line",
+      "visible_properties": [
+        "black",
+        "thin",
+        "curved on tabletop"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "lies beside the base on the tabletop"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "stands on top of the black circular base",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is positioned between the arms of the blue-and-black holder",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is above the folded white card at the start",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_7",
+      "relation_description": "extends from the right side of the base area across the tabletop",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The folded white card is standing on the black circular base."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The orange ball is visible between the blue-and-black curved holder arms."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The orange ball is located above the top fold of the white card."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "A black cord lies on the tabletop to the right of the circular base."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The white folded card shows a narrow A-frame view."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "early",
+      "observation": "The blue-and-black holder and orange ball move lower in the frame."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The front white panel turns to present a broad rectangular face toward the camera."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The orange ball is hidden behind the broad white panel."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The vertical rod is visible above the white panel."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Blue parts of the holder reappear partly at the left and right sides behind the folded card."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The orange ball reappears low and partly visible through the opening between the card panels."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The folded card returns to an angled A-frame view while continuing to change orientation."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The main objects are visible with the ball held above the folded card.",
+        "The card begins or continues changing orientation."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The folded card changes from an angled A-frame view toward a different orientation."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The orange ball moves downward with the holder."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The holder moves downward with the orange ball between its arms."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The white card presents a broad front face.",
+        "The ball and holder are mostly or fully blocked from view by the card."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The front panel faces the camera more directly and covers the central area."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The orange ball becomes hidden from view."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The vertical rod remains visible above the card."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The folded card continues turning past the broad front view.",
+        "Parts of the holder and the orange ball become briefly visible lower behind or within the opening of the folded card."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The folded card changes back toward an angled A-frame view."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The orange ball is briefly visible low between the card panels and then becomes mostly hidden again."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Blue side portions of the holder are partly visible behind the folded card."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The black circular base is round and dark, so any rotation of the base itself is not visually separable from the changing orientation of the folded card.",
+    "The ball and holder are hidden by the white card for part of the event, so their exact positions during that interval are not visible."
+  ]
+}

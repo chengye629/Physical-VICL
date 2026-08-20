@@ -1,0 +1,277 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "blue mug",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "red liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e8",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "white strip",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6",
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "blue holder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "wooden tabletop",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "free_surface_motion",
+      "raw_type": "red liquid surface is disturbed into splash-like ripples as the white strip moves into it",
+      "participant_object_ids": [
+        "obj_2",
+        "obj_3",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e8",
+        "e9",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "white strip moves downward relative to the holder and mug",
+        "participant_object_ids": [
+          "obj_3",
+          "obj_1",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e6"
+        ]
+      },
+      {
+        "family": "relation_reconfiguration",
+        "type": "insertion",
+        "raw_type": "white strip enters the mug opening and becomes no longer visible above the liquid surface",
+        "participant_object_ids": [
+          "obj_3",
+          "obj_1",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e6",
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "fluid_handling",
+      "type": "immerse",
+      "raw_action": "white strip is moved downward into the red liquid",
+      "actor_object_ids": [],
+      "tool_object_ids": [
+        "obj_3"
+      ],
+      "target_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e10"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "single",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8",
+        "e9",
+        "e11",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "white strip changes from nearly still to moving downward"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "relation",
+        "type": "containment_gain",
+        "raw_transition": "white strip enters the mug opening and is no longer visible above the liquid surface"
+      },
+      "evidence_refs": [
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "visible part of the white strip becomes slanted or curved while entering the mug"
+      },
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "red liquid surface changes from mostly smooth to a disturbed splash-like surface with ripples and moving highlights"
+      },
+      "evidence_refs": [
+        "e2",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "settling",
+        "raw_transition": "surface ripples diminish and the red liquid surface becomes smoother"
+      },
+      "evidence_refs": [
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "sustained_pressure",
+      "raw_mechanism": "the descending strip contacts and displaces the liquid, forcing the free surface to move",
+      "linked_object_ids": [
+        "obj_3",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "viscosity",
+      "raw_mechanism": "internal fluid resistance damps the surface motion as the liquid settles",
+      "linked_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "free-surface response shapes the localized splash-like disturbance and ripples",
+      "linked_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    }
+  ]
+}

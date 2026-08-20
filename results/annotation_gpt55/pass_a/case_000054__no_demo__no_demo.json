@@ -1,0 +1,356 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A desktop five-ball pendulum toy starts with its balls aligned, then the end balls alternately move outward and back while the center balls remain clustered.",
+  "raw_event_description": "The scene begins with a chrome-framed desktop pendulum ball toy on a wooden tabletop, with five shiny metal balls hanging in a close horizontal row above a glossy black base. After a static interval, the left end ball is seen separated to the left and then returns toward the row. The right end ball then appears separated to the right, returns toward the row, and the left end ball later separates to the left. This alternating outward-and-inward motion of the two end balls continues for the rest of the visible clip while the three central balls stay near the middle row position with small visible shifts.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The pendulum toy, frame, base, wires, and five balls are visible.",
+      "The balls are initially aligned in a compact row.",
+      "No end ball is visibly separated in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "pendulum toy frame and base",
+      "visible_form": "rectangular chrome-colored support frame mounted on a glossy black rectangular base",
+      "material_description": "shiny silver-colored rods and a reflective black base",
+      "visible_properties": [
+        "upright",
+        "rectangular frame",
+        "reflective surfaces",
+        "stationary relative to table"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the suspended balls"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left end ball",
+      "visible_form": "shiny spherical ball suspended by thin wires at the left end of the row",
+      "material_description": "mirror-like silver-colored surface",
+      "visible_properties": [
+        "reflective",
+        "spherical",
+        "suspended"
+      ],
+      "initial_motion_description": "initially still in the aligned row",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "later separates to the left and returns toward the row"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "middle three balls",
+      "visible_form": "three shiny spherical balls suspended in the center of the row",
+      "material_description": "mirror-like silver-colored surfaces",
+      "visible_properties": [
+        "reflective",
+        "spherical",
+        "suspended",
+        "clustered"
+      ],
+      "initial_motion_description": "initially still in the aligned row",
+      "initial_integrity_description": "appear intact",
+      "event_role_hints": [
+        "remain near the central row position during the visible motion"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "right end ball",
+      "visible_form": "shiny spherical ball suspended by thin wires at the right end of the row",
+      "material_description": "mirror-like silver-colored surface",
+      "visible_properties": [
+        "reflective",
+        "spherical",
+        "suspended"
+      ],
+      "initial_motion_description": "initially still in the aligned row",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "later separates to the right and returns toward the row"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "thin suspension wires",
+      "visible_form": "multiple thin vertical or angled lines extending from the top bar to the balls",
+      "material_description": "thin pale or metallic-looking lines",
+      "visible_properties": [
+        "thin",
+        "taut-looking",
+        "attached to balls and top support"
+      ],
+      "initial_motion_description": "initially vertical and still",
+      "initial_integrity_description": "appear intact",
+      "event_role_hints": [
+        "move with the end balls as their angles change"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "blue and black object on table",
+      "visible_form": "flat blue-and-black object lying on the left side of the tabletop",
+      "material_description": "blue and black surfaces",
+      "visible_properties": [
+        "stationary",
+        "partially in frame"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_7",
+      "name": "wooden tabletop",
+      "visible_form": "flat light-brown horizontal surface",
+      "material_description": "wood-grain appearance",
+      "visible_properties": [
+        "stationary",
+        "supports objects"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is at the left end of a close horizontal row of five suspended balls",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is at the right end of the same close horizontal row of suspended balls",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "extends between the top support of the frame and the suspended balls",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "stands on the wooden tabletop",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "lies to the left of the pendulum toy on the tabletop",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Five shiny balls hang inside the chrome-colored frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The five balls form a close horizontal row above the black base."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Thin lines are visible above the balls and connect upward to the top support."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The black base of the toy rests on a light-brown tabletop."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A blue-and-black object lies on the tabletop to the left of the toy."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "early",
+      "observation": "The frame, base, tabletop, and blue-and-black object keep the same positions in the image."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The left end ball is visible separated to the left of the central ball group."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The left end ball later appears at the left side of the aligned row."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The right end ball is visible separated to the right of the central ball group."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The right end ball later appears again near the right side of the row."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "middle",
+      "observation": "The left end ball is again visible separated to the left of the central ball group."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The three middle balls remain close together near the center of the base area."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The visible wires above the end balls change angle as the end balls appear away from the row."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "late",
+      "observation": "Near the end of the clip, the right end ball is visible separated to the right of the row."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The toy is centered in the frame on the tabletop.",
+        "All five balls are in a compact row.",
+        "The surrounding tabletop and left-side blue-and-black object are still."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary on the tabletop"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "hangs at the left end of the row with no visible initial motion"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "hangs as a central cluster with no visible initial motion"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "hangs at the right end of the row with no visible initial motion"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The left end ball separates to the left and then appears back near the row.",
+        "The right end ball separates to the right and then appears back near the row.",
+        "The side separation alternates between left and right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "moves between a left-separated position and the left side of the row"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "moves between a right-separated position and the right side of the row"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "stays near the center row position with small visible shifts"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "shows changing angles above whichever end ball is separated from the row"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e12",
+        "e14"
+      ],
+      "observations": [
+        "The alternating end-ball motion is still visible near the end of the clip.",
+        "The central balls remain clustered."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "is visible to the right of the row near the end"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "continues to remain close together near the center"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e6"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The full stopping point of the end-ball motion is not shown."
+  ]
+}

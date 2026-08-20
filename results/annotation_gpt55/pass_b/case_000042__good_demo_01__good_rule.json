@@ -1,0 +1,374 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "yellow cup",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "brittle"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e4",
+        "e5",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "blue hanging element",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "gray block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e6",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "slatted floor",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "white backdrop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "yellow and light fragments",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "fragmented",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fracture_separation",
+      "type": "fragmentation",
+      "raw_type": "yellow cup breaks apart into multiple pieces on contact with the gray block",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "event_roles": [
+            "target",
+            "source"
+          ]
+        },
+        {
+          "object_id": "obj_3",
+          "event_roles": [
+            "support",
+            "target"
+          ]
+        },
+        {
+          "object_id": "obj_6",
+          "event_roles": [
+            "product"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "yellow cup moves downward from the hanging area toward the block",
+        "participants": [
+          {
+            "object_id": "obj_1",
+            "event_roles": [
+              "target"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6"
+        ]
+      },
+      {
+        "family": "contact_loading",
+        "type": "collision",
+        "raw_type": "descending cup strikes the stationary gray block",
+        "participants": [
+          {
+            "object_id": "obj_1",
+            "event_roles": [
+              "target"
+            ]
+          },
+          {
+            "object_id": "obj_3",
+            "event_roles": [
+              "support",
+              "target"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e6",
+          "e7"
+        ]
+      },
+      {
+        "family": "rigid_motion",
+        "type": "projectile_motion",
+        "raw_type": "separated cup fragments scatter outward from the impact area",
+        "participants": [
+          {
+            "object_id": "obj_6",
+            "event_roles": [
+              "product"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e8",
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the cup is initially suspended and later begins moving downward",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "event_roles": [
+            "target"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e13"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "cup changes from nearly stationary while suspended to downward motion"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "cup reaches and contacts the top region of the gray block"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "integrity",
+        "type": "fragmented",
+        "raw_transition": "intact cup becomes multiple separated yellow and light-colored pieces"
+      },
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "newly formed fragments spread outward around the block, including leftward and rightward pieces"
+      },
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "motion",
+        "type": "settling",
+        "raw_transition": "moving fragments come to rest on the floor around the block and near the lower left edge"
+      },
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "gray block is struck by the descending cup at its top region"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "brief impact between the descending cup and the gray block transfers load to the cup",
+      "linked_processes": [
+        "primary",
+        "secondary:contact_loading"
+      ],
+      "object_ids": [
+        "obj_1",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "brittleness",
+      "raw_mechanism": "cup material loses integrity with little visible continuous deformation and separates into fragments",
+      "linked_processes": [
+        "primary"
+      ],
+      "object_ids": [
+        "obj_1",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "downward motion carries the cup from the suspended position toward the block",
+      "linked_processes": [
+        "secondary:rigid_motion"
+      ],
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e6"
+      ]
+    }
+  ]
+}

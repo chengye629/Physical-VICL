@@ -1,0 +1,326 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "transparent container",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e4",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "blue liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "support",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "green surface band",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target",
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "crumpled white object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "deformed",
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "blue upper supports",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "wooden tabletop",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "free_fall",
+      "raw_type": "downward fall of the crumpled white object inside the transparent container",
+      "object_ids": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "contact_loading",
+        "type": "sustained_contact",
+        "raw_type": "the white object contacts and then rests on the colored liquid surface",
+        "object_ids": [
+          "obj_4",
+          "obj_2",
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e9",
+          "e10"
+        ]
+      },
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "small local irregularities appear on the colored liquid surface around the white object",
+        "object_ids": [
+          "obj_2",
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the prior holding or release arrangement is obscured",
+      "object_ids": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e7"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "changes from still near the upper opening to moving downward inside the container"
+      },
+      "state_before": "stationary near the upper opening area",
+      "state_after": "moving downward through the clear upper interior",
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "downward motion stops after the object reaches the colored liquid surface"
+      },
+      "state_before": "moving downward toward the liquid surface",
+      "state_after": "remaining partly above the surface region",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "relation",
+        "type": "support_gain",
+        "raw_transition": "comes to rest on the colored liquid surface region"
+      },
+      "state_before": "above the liquid surface inside the container",
+      "state_after": "supported at the liquid surface and partly above it",
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "the blue liquid surface region develops small irregular shapes around the white object"
+      },
+      "state_before": "mostly still surface with a steady visible upper region",
+      "state_after": "locally irregular surface near the white object",
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "the green surface band remains around the white object with small visible surface irregularities nearby"
+      },
+      "state_before": "thin continuous horizontal band at the top of the blue liquid",
+      "state_after": "surface band visible around the resting white object with local irregularity",
+      "evidence_refs": [
+        "e3",
+        "e10",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the white object downward after it is no longer held near the top",
+      "object_ids": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "upward contact support from the liquid surface arrests the white object's descent",
+      "object_ids": [
+        "obj_4",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "contact between the descending white object and the liquid surface transfers momentum and disturbs the free surface",
+      "object_ids": [
+        "obj_4",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "liquid free-surface response shapes the small local irregularities around the resting object",
+      "object_ids": [
+        "obj_2",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    }
+  ]
+}

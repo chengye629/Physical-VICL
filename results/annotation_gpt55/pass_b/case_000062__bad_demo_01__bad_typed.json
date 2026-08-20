@@ -1,0 +1,258 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "glass dispenser",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source",
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "tap fixture",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "drinking glass",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e6",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "orange liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "woven stand",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e9"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "bulk_flow",
+      "raw_type": "continuous orange liquid stream flowing from tap into drinking glass",
+      "participants": [
+        {
+          "object_id": "obj_4",
+          "role": "target"
+        },
+        {
+          "object_id": "obj_2",
+          "role": "source"
+        },
+        {
+          "object_id": "obj_3",
+          "role": "container"
+        },
+        {
+          "object_id": "obj_1",
+          "role": "source"
+        }
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e6",
+        "e8"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; liquid transfer is already in progress",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e8",
+        "e9"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "material_transfer",
+        "raw_transition": "orange liquid moves from the tap area into the drinking glass"
+      },
+      "evidence_refs": [
+        "e3",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "orange liquid amount in the drinking glass visibly increases"
+      },
+      "evidence_refs": [
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "liquid free surface inside the glass rises over time with small bubbles or foam near the surface"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the visible downward falling stream into the glass",
+      "linked_object_ids": [
+        "obj_4",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e6"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "pressure_gradient",
+      "raw_mechanism": "liquid exits through the tap from the source container into the lower receiving glass",
+      "linked_object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "liquid interface behavior supports the visible bubbles or foam near the surface",
+      "linked_object_ids": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e7"
+      ]
+    }
+  ]
+}

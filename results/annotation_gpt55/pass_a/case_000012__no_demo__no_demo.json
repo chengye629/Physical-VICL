@@ -1,0 +1,492 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A moving tan rod reaches a row of upright colored bars, after which the bars tilt and fall leftward in sequence.",
+  "raw_event_description": "The scene opens with six upright colored rectangular bars arranged in a row on a wooden tabletop, with a black circular cylinder to their right and a tan pointed rod extending from the cylinder. The rod changes angular position while the bars remain upright. The rod reaches the right side of the purple bar at the end of the row. The purple bar tilts left, followed by the blue, green, pink, orange, and yellow bars changing orientation leftward one after another. By the end, the colored bars lie slanted or horizontal and partly overlapping on the tabletop, while the black cylinder remains in the same visible position and the rod remains protruding from it.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The upright colored bars, black cylinder, tan rod, tabletop, and background are visible before the bars begin moving."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow bar",
+      "visible_form": "tall rectangular prism",
+      "material_description": "solid-looking yellow surface with flat faces",
+      "visible_properties": [
+        "yellow",
+        "upright at start",
+        "leftmost colored bar"
+      ],
+      "initial_motion_description": "No visible motion before the row begins changing orientation.",
+      "initial_integrity_description": "Intact single rectangular bar.",
+      "event_role_hints": [
+        "standing colored bar in the row"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "orange bar",
+      "visible_form": "tall rectangular prism",
+      "material_description": "solid-looking orange surface with flat faces",
+      "visible_properties": [
+        "orange",
+        "upright at start"
+      ],
+      "initial_motion_description": "No visible motion before the row begins changing orientation.",
+      "initial_integrity_description": "Intact single rectangular bar.",
+      "event_role_hints": [
+        "standing colored bar in the row"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "pink bar",
+      "visible_form": "tall rectangular prism",
+      "material_description": "solid-looking pink surface with flat faces",
+      "visible_properties": [
+        "pink",
+        "upright at start"
+      ],
+      "initial_motion_description": "No visible motion before the row begins changing orientation.",
+      "initial_integrity_description": "Intact single rectangular bar.",
+      "event_role_hints": [
+        "standing colored bar in the row"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "green bar",
+      "visible_form": "tall rectangular prism",
+      "material_description": "solid-looking green surface with flat faces",
+      "visible_properties": [
+        "green",
+        "upright at start"
+      ],
+      "initial_motion_description": "No visible motion before the row begins changing orientation.",
+      "initial_integrity_description": "Intact single rectangular bar.",
+      "event_role_hints": [
+        "standing colored bar in the row"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "blue bar",
+      "visible_form": "tall rectangular prism",
+      "material_description": "solid-looking blue surface with flat faces",
+      "visible_properties": [
+        "blue",
+        "upright at start"
+      ],
+      "initial_motion_description": "No visible motion before the row begins changing orientation.",
+      "initial_integrity_description": "Intact single rectangular bar.",
+      "event_role_hints": [
+        "standing colored bar in the row"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "purple bar",
+      "visible_form": "tall rectangular prism",
+      "material_description": "solid-looking purple surface with flat faces",
+      "visible_properties": [
+        "purple",
+        "upright at start",
+        "rightmost colored bar"
+      ],
+      "initial_motion_description": "No visible motion before the rod reaches it.",
+      "initial_integrity_description": "Intact single rectangular bar.",
+      "event_role_hints": [
+        "standing colored bar nearest the rod"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "black cylinder",
+      "visible_form": "short round cylindrical object with a flat top",
+      "material_description": "black smooth surface with slight highlights",
+      "visible_properties": [
+        "black",
+        "round",
+        "to the right of the colored bars"
+      ],
+      "initial_motion_description": "No visible translation of the cylinder.",
+      "initial_integrity_description": "Intact cylindrical object.",
+      "event_role_hints": [
+        "object from which the rod protrudes"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "tan pointed rod",
+      "visible_form": "thin pointed stick-like rod",
+      "material_description": "light tan wood-like visible surface",
+      "visible_properties": [
+        "thin",
+        "pointed end",
+        "extends from the black cylinder"
+      ],
+      "initial_motion_description": "Its angular orientation changes before the colored bars move.",
+      "initial_integrity_description": "Intact single rod.",
+      "event_role_hints": [
+        "moving rod near the purple bar"
+      ]
+    },
+    {
+      "id": "obj_9",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal surface",
+      "material_description": "brown wood-grain patterned surface",
+      "visible_properties": [
+        "brown",
+        "flat",
+        "supports visible objects"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Continuous visible surface.",
+      "event_role_hints": [
+        "surface under the objects"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is immediately left of",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is immediately left of",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is immediately left of",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is immediately left of",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is immediately left of",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "is left of the black cylinder",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "subject_id": "obj_8",
+      "relation_description": "extends from the top area of",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "stands on",
+      "object_id": "obj_9",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A yellow rectangular bar stands upright at the left end of the colored row."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "An orange rectangular bar stands upright to the right of the yellow bar."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A pink rectangular bar stands upright to the right of the orange bar."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A green rectangular bar stands upright to the right of the pink bar."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A blue rectangular bar stands upright to the right of the green bar."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "early",
+      "observation": "A purple rectangular bar stands upright to the right of the blue bar."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "early",
+      "observation": "A black circular cylinder is positioned to the right of the colored bars."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "early",
+      "observation": "A tan pointed rod extends from the top area of the black cylinder."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed relative to the tabletop and background."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The tan rod changes angular orientation toward the purple bar."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "middle",
+      "observation": "The rod's pointed end reaches the right side of the purple bar."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "middle",
+      "observation": "The purple bar tilts left from its upright position."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "middle",
+      "observation": "The purple bar and blue bar are in contact while the blue bar begins tilting left."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "middle",
+      "observation": "The green bar tilts left from its upright position."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "middle",
+      "observation": "The pink bar tilts left from its upright position."
+    },
+    {
+      "evidence_id": "e16",
+      "stage": "middle",
+      "observation": "The orange bar tilts left from its upright position."
+    },
+    {
+      "evidence_id": "e17",
+      "stage": "middle",
+      "observation": "The yellow bar tilts left and moves partly beyond the left image edge."
+    },
+    {
+      "evidence_id": "e18",
+      "stage": "late",
+      "observation": "The colored bars are no longer upright and lie in overlapping slanted or horizontal positions."
+    },
+    {
+      "evidence_id": "e19",
+      "stage": "late",
+      "observation": "The black cylinder remains in the same visible tabletop area."
+    },
+    {
+      "evidence_id": "e20",
+      "stage": "late",
+      "observation": "The tan rod remains protruding from the black cylinder and points diagonally leftward."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "Six colored bars stand upright in a row on the tabletop.",
+        "The black cylinder and tan rod are visible to the right of the row."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Yellow bar remains upright."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Orange bar remains upright."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Pink bar remains upright."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Green bar remains upright."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Blue bar remains upright."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "Purple bar remains upright."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "Black cylinder remains positioned to the right of the row."
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "Tan rod extends from the black cylinder."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14",
+        "e15",
+        "e16",
+        "e17"
+      ],
+      "observations": [
+        "The rod changes angle toward the purple bar.",
+        "The colored bars change orientation leftward in a right-to-left sequence."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_8",
+          "observation": "Tan rod's pointed end reaches the right side of the purple bar."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "Purple bar tilts left from vertical."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Blue bar tilts left after the purple bar reaches it."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Green bar tilts left."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Pink bar tilts left."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Orange bar tilts left."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "Yellow bar tilts left and becomes partly outside the left edge of the frame."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e18",
+        "e19",
+        "e20"
+      ],
+      "observations": [
+        "The colored bars have settled into slanted or horizontal overlapping positions.",
+        "The black cylinder remains visible at the right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Yellow bar is partly off the left edge of the image."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Orange bar lies nearly horizontal on the tabletop."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Pink bar lies slanted and overlaps with neighboring bars."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Green bar lies slanted among the fallen bars."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Blue bar lies slanted among the fallen bars."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "Purple bar lies at the right side of the fallen group."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "Black cylinder remains in the same visible position."
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "Tan rod remains protruding from the cylinder."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e9"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

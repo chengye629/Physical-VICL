@@ -1,0 +1,323 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A blue gripper holds a white strip above a blue mug of red liquid, then the strip moves downward into the liquid and visible splashes and ripples appear before the surface settles.",
+  "raw_event_description": "The video begins with a dark blue mug on a light wood-grain tabletop, filled near the rim with dark red liquid. A blue-and-black gripper-like object is partly visible at the top of the frame, holding a vertical white rectangular strip whose lower end is near or in the liquid surface. The scene remains mostly still for several moments. Later the blue gripper parts move apart, the white strip separates from the gripper and moves downward into the red liquid. The red liquid surface shows a central splash, small upward jets or droplets, bright highlights, and spreading ripples. After the strip is no longer visible above the surface, the liquid continues to ripple and then becomes mostly still again.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The mug, liquid surface, and white strip are visible.",
+      "The upper blue gripper is partly cropped by the top edge of the frame.",
+      "The exact lower end of the white strip relative to the liquid surface is partly obscured by viewing angle and the mug rim."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "blue mug",
+      "visible_form": "cylindrical cup with a curved handle on the right side",
+      "material_description": "glossy dark blue solid surface",
+      "visible_properties": [
+        "dark blue color",
+        "reflective highlights",
+        "open top",
+        "handle on right"
+      ],
+      "initial_motion_description": "stationary on the tabletop",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "contains the red liquid"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red liquid",
+      "visible_form": "flat liquid surface filling the mug close to the rim",
+      "material_description": "dark red, glossy, reflective surface",
+      "visible_properties": [
+        "dark red color",
+        "smooth surface early",
+        "reflective highlights"
+      ],
+      "initial_motion_description": "surface appears mostly still",
+      "initial_integrity_description": "continuous liquid surface visible inside the mug",
+      "event_role_hints": [
+        "surface changes when the white strip enters it"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "white strip",
+      "visible_form": "narrow vertical rectangular strip or stick",
+      "material_description": "solid-looking white object with flat sides",
+      "visible_properties": [
+        "white color",
+        "straight vertical shape",
+        "narrow width"
+      ],
+      "initial_motion_description": "held nearly still in a vertical orientation",
+      "initial_integrity_description": "appears intact before entering the liquid",
+      "event_role_hints": [
+        "initially held by the gripper",
+        "later moves into the liquid"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "blue gripper",
+      "visible_form": "partly visible blue-and-black tong or clamp-like object at the top of the frame",
+      "material_description": "smooth blue and black solid surfaces",
+      "visible_properties": [
+        "blue outer parts",
+        "black edges or inner sections",
+        "two opposing tips",
+        "partly cropped by top frame edge"
+      ],
+      "initial_motion_description": "mostly stationary while holding the white strip",
+      "initial_integrity_description": "visible parts appear intact",
+      "event_role_hints": [
+        "tips separate before the white strip moves downward"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "tabletop",
+      "visible_form": "flat horizontal surface under the mug",
+      "material_description": "light brown wood-grain appearance",
+      "visible_properties": [
+        "light brown color",
+        "wood-grain pattern",
+        "flat surface"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears continuous and intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is inside the open top of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is vertical below the partly visible gripper and above or at the liquid surface",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "holds the upper end region of",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The dark blue mug is stationary on a light wood-grain tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Dark red liquid is visible inside the mug near the rim."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A white rectangular strip is visible in a vertical orientation over the liquid surface."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The upper part of the white strip is between the visible tips of a blue-and-black gripper."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The red liquid surface appears smooth with small bright reflections."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The visible blue gripper tips move apart."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The white strip is no longer between the gripper tips."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The white strip moves downward into the red liquid."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "A small splash appears at the red liquid surface near the center of the mug."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "Bright small droplets or upward liquid shapes are visible above the red surface."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "middle",
+      "observation": "Circular and irregular ripples are visible on the red liquid surface."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The white strip is no longer visible above the liquid surface."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The red liquid surface continues to show diminishing ripples."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "late",
+      "observation": "The red liquid surface becomes mostly smooth again."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "continuous",
+      "observation": "The camera view remains centered on the mug throughout the clip."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The mug and liquid are visible and mostly still.",
+        "The white strip is held vertically by the gripper above or at the liquid surface."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The mug remains stationary on the tabletop."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The liquid surface appears mostly smooth."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The white strip remains nearly still in a vertical orientation."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The gripper remains partly visible at the top while holding the strip."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The gripper tips separate.",
+        "The white strip moves downward into the liquid.",
+        "The liquid surface shows a splash and ripples."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The visible gripper tips move apart."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The white strip separates from the gripper and moves downward into the mug."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The liquid surface changes from smooth to splashing and rippling."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e12",
+        "e13",
+        "e14"
+      ],
+      "observations": [
+        "The white strip is not visible above the liquid.",
+        "Surface motion in the red liquid decreases."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The white strip is no longer visible above the red liquid surface."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Ripples on the liquid surface diminish and the surface becomes mostly smooth."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The mug remains stationary."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The gripper remains partly visible near the top of the frame."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e15"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact position of the lower end of the white strip relative to the liquid surface at the first frame is not fully visible.",
+    "After entry into the liquid, the white strip is hidden from view."
+  ]
+}

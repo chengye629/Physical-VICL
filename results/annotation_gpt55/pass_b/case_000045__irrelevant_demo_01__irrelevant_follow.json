@@ -1,0 +1,316 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "suspended gripper",
+      "entity_kind": "articulated_object",
+      "event_roles": [
+        "actor"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e5",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "crumpled paper wad",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "deformed",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6",
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "clear bowl",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "transparent liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "wooden table",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "background wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e12"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "splashing",
+      "raw_type": "liquid splash and ripples caused by the paper wad entering the liquid",
+      "participant_object_ids": [
+        "obj_2",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "free_fall",
+        "raw_type": "paper wad drops downward from the opened gripper",
+        "participant_object_ids": [
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6"
+        ]
+      },
+      {
+        "family": "contact_loading",
+        "type": "collision",
+        "raw_type": "paper wad impacts the liquid surface",
+        "participant_object_ids": [
+          "obj_2",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e7",
+          "e8"
+        ]
+      },
+      {
+        "family": "relation_reconfiguration",
+        "type": "insertion",
+        "raw_type": "paper wad enters the bowl liquid and remains inside it",
+        "participant_object_ids": [
+          "obj_2",
+          "obj_3",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e7",
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "release",
+      "type": "drop",
+      "raw_action": "gripper tips open and release the paper wad so it drops",
+      "actor_object_ids": [
+        "obj_1"
+      ],
+      "target_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "gripper tips separate, leaving an open gap"
+      },
+      "evidence_refs": [
+        "e5",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "support_loss",
+        "raw_transition": "paper wad is no longer held between the gripper tips"
+      },
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "paper wad changes from being held still to moving downward"
+      },
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "containment_gain",
+        "raw_transition": "paper wad enters and remains visible in the liquid within the bowl"
+      },
+      "evidence_refs": [
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "liquid surface rises, splashes around the paper wad, and develops spreading ripples"
+      },
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "after release, gravity drives the paper wad downward toward the bowl",
+      "linked_processes": [
+        "rigid_motion"
+      ],
+      "object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "brief impact between the paper wad and liquid surface transfers momentum to the liquid",
+      "linked_processes": [
+        "contact_loading",
+        "fluid_motion"
+      ],
+      "object_ids": [
+        "obj_2",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "the liquid free surface responds to impact by forming a splash shape and ripples",
+      "linked_processes": [
+        "fluid_motion"
+      ],
+      "object_ids": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    }
+  ]
+}

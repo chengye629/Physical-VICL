@@ -1,0 +1,299 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small light-colored ball-like object enters from the lower left, moves across the tabletop toward the lower right, and leaves the frame.",
+  "raw_event_description": "The scene begins with a stationary view of a mustard-yellow sofa behind a light tabletop, with a black cylindrical object at the lower left and a side table with a lamp at the right. After several static moments, a small light gray spherical object appears near the lower-left edge of the tabletop, moves steadily rightward across the foreground surface, passes through the central lower area, reaches the lower-right area, and then exits out of the right side of the frame. The surrounding furniture remains visibly unchanged.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tabletop, sofa, black cylindrical object, side table, and lamp are visible.",
+      "The moving spherical object is not yet visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "tabletop",
+      "visible_form": "large flat horizontal foreground surface spanning most of the lower frame",
+      "material_description": "light-colored surface with subtle wood-grain-like lines",
+      "visible_properties": [
+        "flat",
+        "horizontal",
+        "light beige"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "appears intact and continuous",
+      "event_role_hints": [
+        "surface across which the spherical object moves"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "small light ball",
+      "visible_form": "small round spherical object",
+      "material_description": "light gray or white surface; no detailed texture visible",
+      "visible_properties": [
+        "small",
+        "round",
+        "light-colored"
+      ],
+      "initial_motion_description": "not visible at the start; later appears moving rightward across the tabletop",
+      "initial_integrity_description": "appears as one intact spherical object when visible",
+      "event_role_hints": [
+        "main moving object"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "sofa",
+      "visible_form": "wide two-seat sofa with arms and tufted back panels",
+      "material_description": "mustard-yellow upholstered-looking surface with visible seams and buttons",
+      "visible_properties": [
+        "large",
+        "mustard-yellow",
+        "tufted",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "background reference object"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "black cylinder",
+      "visible_form": "partial black cylindrical object at the lower-left edge of the frame",
+      "material_description": "dark glossy-looking exterior",
+      "visible_properties": [
+        "black",
+        "cylindrical",
+        "partially visible"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "partially visible but appears intact",
+      "event_role_hints": [
+        "near the ball's entrance area"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "lamp and side table",
+      "visible_form": "dark side table at right with a lamp above it",
+      "material_description": "dark table surface and dark lampshade; lighter lamp stem/base area visible",
+      "visible_properties": [
+        "stationary",
+        "right side of frame",
+        "partially visible"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "background reference object near the ball's exit side"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_3",
+      "relation_description": "sofa is behind the tabletop",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "black cylinder is at the lower-left edge near the tabletop",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "lamp and side table are positioned at the right side behind the tabletop",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A mustard-yellow sofa is visible behind the light tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A partial black cylindrical object is visible at the lower-left edge of the frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A side table and lamp are visible at the right side of the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "No small light spherical object is visible on the tabletop at the start."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A small light-colored spherical object appears near the lower-left area of the tabletop."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The spherical object is visible farther right than its first visible position."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The spherical object appears near the lower central area of the tabletop."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The spherical object shows slight motion blur while moving across the tabletop."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The spherical object reaches the lower-right area of the tabletop."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The spherical object leaves the frame at the right edge."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The sofa, tabletop, black cylinder, side table, and lamp remain in fixed positions in the frame."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed throughout the visible sequence."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The room setup is visible and stationary before the moving object appears."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "tabletop remains stationary"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "small light ball is not visible"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "sofa remains stationary"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "black cylinder remains stationary"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "lamp and side table remain stationary"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The small spherical object appears and changes position rightward across the tabletop."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "small light ball moves from the lower-left area toward the lower central area of the tabletop"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "tabletop remains visibly unchanged"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The moving object reaches the right side and disappears from view."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "small light ball moves into the lower-right area and exits the frame to the right"
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e11"
+      ],
+      "observations": [
+        "Background and foreground furniture do not visibly change position or shape."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "sofa remains stationary throughout"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "black cylinder remains stationary throughout"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "lamp and side table remain stationary throughout"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

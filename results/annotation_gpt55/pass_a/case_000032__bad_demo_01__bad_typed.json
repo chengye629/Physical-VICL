@@ -1,0 +1,319 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small pale rectangular block moves around on the top of a black circular object while nearby objects remain visibly stationary.",
+  "raw_event_description": "The scene shows a wooden tabletop with a black circular object on the right, a small pale rectangular block on its top, a black cord extending from the circular object, and a tilted metallic object with a purple hanging strip on the left. Over time, the pale block changes position and orientation across the black circular top: it begins near the front-right/front-center area, shifts toward the left side, passes near the left and upper-left portions of the top, and ends closer to the upper-right area. The black circular object, cord, metallic object, purple strip, table, and background remain in the same visible positions.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The main objects are fully visible on the tabletop.",
+      "The pale block is already visible on the black circular top at the beginning.",
+      "No scene cut or camera repositioning is visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "black circular object",
+      "visible_form": "low black cylindrical object with a flat circular top",
+      "material_description": "matte or dark black visible surface",
+      "visible_properties": [
+        "round top",
+        "short cylindrical side",
+        "connected to a black cord"
+      ],
+      "initial_motion_description": "no visible translation of the whole object",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "surface on which the pale block is visible"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "pale rectangular block",
+      "visible_form": "small light-colored rectangular prism or folded rectangular piece",
+      "material_description": "pale lavender or white visible surface",
+      "visible_properties": [
+        "rectangular outline",
+        "flat faces",
+        "small compared with the circular object"
+      ],
+      "initial_motion_description": "initially visible on the top of the black circular object",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "only object with clear visible position change during the event"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "metallic tilted object",
+      "visible_form": "small tilted shiny cylindrical or rounded object on the left",
+      "material_description": "reflective silver or metallic-looking surface",
+      "visible_properties": [
+        "tilted orientation",
+        "bright reflective patches",
+        "located left of the black circular object"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_4",
+      "name": "purple strip",
+      "visible_form": "thin vertical purple strip hanging down near the metallic object",
+      "material_description": "purple flexible-looking strip or ribbon-like piece",
+      "visible_properties": [
+        "long narrow shape",
+        "vertical hanging orientation",
+        "attached or adjacent to the metallic object"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_5",
+      "name": "black cord",
+      "visible_form": "thin black cord extending from the black circular object toward the upper right",
+      "material_description": "black cable-like surface",
+      "visible_properties": [
+        "curved path",
+        "thin elongated form"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_6",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal tabletop with wood grain",
+      "material_description": "brown wood-grain visible surface",
+      "visible_properties": [
+        "flat surface",
+        "visible grain pattern"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supporting visible objects"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "background wall",
+      "visible_form": "plain light-colored wall behind the tabletop",
+      "material_description": "smooth light gray or off-white surface",
+      "visible_properties": [
+        "static background plane"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is on the top surface of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "extends from or meets the right side of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "hangs adjacent to",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned on",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is positioned on or immediately above",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The pale rectangular block is visible on the top of the black circular object near the front-right/front-center area."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "A black cord is visible extending from the black circular object toward the upper right of the frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "A purple strip hangs downward beside the tilted metallic object on the left."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "The black circular object remains in the same visible location on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The tilted metallic object remains in the same visible location left of the black circular object."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "early",
+      "observation": "The pale rectangular block shifts leftward across the visible top of the black circular object."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The pale rectangular block is visible near the left side of the black circular top."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The pale rectangular block changes its visible orientation from more vertical to more horizontal or diagonal relative to the frame."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The pale rectangular block is visible near the upper portion of the black circular top."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The pale rectangular block ends nearer the upper-right area of the black circular top than where it began."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The purple strip shows no clear position change relative to the tabletop or metallic object."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The camera view remains fixed on the tabletop scene."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e6"
+      ],
+      "observations": [
+        "The pale block starts on the visible top of the black circular object and begins changing position across that top."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The pale rectangular block moves from the front-right/front-center area toward the left side of the black circular top."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The pale block is visible along the left side of the black circular top and its long axis appears differently angled than at the start."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The pale rectangular block continues changing position and orientation on the black circular top."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The pale block is visible near the upper part of the circular top and later nearer the upper-right area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The pale rectangular block continues moving around the top surface and finishes in a different position from its initial visible position."
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e11"
+      ],
+      "observations": [
+        "The surrounding visible objects keep their positions during the block's movement."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The black circular object shows no visible translation across the tabletop."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The tilted metallic object shows no visible translation or orientation change."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The purple strip remains hanging in the same visible place."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The black cord remains in the same visible path."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

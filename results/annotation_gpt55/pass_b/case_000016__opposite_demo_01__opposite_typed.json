@@ -1,0 +1,327 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "blue mug",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "red liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "white strip",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "blue gripping tool",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e11"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "splashing",
+      "raw_type": "red liquid splashes and ripples when the white strip enters the mug",
+      "participants": [
+        {
+          "object_id": "obj_2",
+          "role": "target"
+        },
+        {
+          "object_id": "obj_3",
+          "role": "target"
+        },
+        {
+          "object_id": "obj_1",
+          "role": "container"
+        }
+      ],
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "free_fall",
+        "raw_type": "white strip moves downward after separating from the gripping tool",
+        "participants": [
+          {
+            "object_id": "obj_3",
+            "role": "target"
+          },
+          {
+            "object_id": "obj_4",
+            "role": "tool"
+          }
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6"
+        ]
+      },
+      {
+        "family": "relation_reconfiguration",
+        "type": "insertion",
+        "raw_type": "white strip enters the liquid-filled mug opening and disappears below the liquid surface",
+        "participants": [
+          {
+            "object_id": "obj_3",
+            "role": "target"
+          },
+          {
+            "object_id": "obj_1",
+            "role": "container"
+          },
+          {
+            "object_id": "obj_2",
+            "role": "medium"
+          }
+        ],
+        "evidence_refs": [
+          "e5",
+          "e8"
+        ]
+      },
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "surface ripples spread across the red liquid and then diminish",
+        "participants": [
+          {
+            "object_id": "obj_2",
+            "role": "target"
+          }
+        ],
+        "evidence_refs": [
+          "e9",
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "release",
+      "type": "drop",
+      "raw_action": "the blue gripping tool releases the white strip, allowing it to move downward into the liquid",
+      "actor_object_id": "obj_4",
+      "target_object_id": "obj_3",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e9",
+        "e10",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "white strip changes from nearly stationary to downward motion"
+      },
+      "evidence_refs": [
+        "e3",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "relation",
+        "type": "containment_gain",
+        "raw_transition": "white strip enters the liquid-filled mug and is no longer visible above the surface"
+      },
+      "evidence_refs": [
+        "e5",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_loss",
+        "raw_transition": "blue gripping tool separates from the descending white strip"
+      },
+      "evidence_refs": [
+        "e4",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "red liquid surface changes from mostly smooth to splashing with raised disturbances and bright highlights"
+      },
+      "evidence_refs": [
+        "e2",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "settling",
+        "raw_transition": "red liquid ripples diminish and the surface becomes smoother"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "loss of support from the gripping tool allows the white strip to move downward",
+      "applies_to": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "entry of the strip into the liquid transfers momentum to the red liquid surface, producing a splash",
+      "applies_to": [
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e7"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "viscosity",
+      "raw_mechanism": "internal fluid resistance contributes to the decay of ripples and smoothing of the liquid surface",
+      "applies_to": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "liquid interface response helps shape the splash and later free-surface ripples",
+      "applies_to": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e9",
+        "e10"
+      ]
+    }
+  ]
+}

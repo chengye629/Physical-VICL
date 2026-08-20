@@ -1,0 +1,398 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A brown round object and an orange rectangular object move downward from overhead holders and come to rest on separate white cushions.",
+  "raw_event_description": "The video begins with two white cushions below a white background, with a brown round object held near a blue overhead holder on the left and an orange rectangular object held near an orange-and-black overhead holder on the right. After a long still interval, both objects leave the overhead area and move downward with visible blur. The brown object reaches the left cushion and remains there, while the orange object reaches the right cushion, changes from a more upright orientation to a flatter orientation, and remains there.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The two cushions, overhead holders, brown object, and orange object are visible before the main motion begins.",
+      "The scene is static at the start."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "left white cushion",
+      "visible_form": "large rounded rectangular white padded surface occupying the lower-left portion of the frame",
+      "material_description": "white soft-looking surface with visible wrinkles and slight surface dimples",
+      "visible_properties": [
+        "white",
+        "rounded edges",
+        "wrinkled surface",
+        "stationary during setup"
+      ],
+      "initial_motion_description": "No visible motion before the main event.",
+      "initial_integrity_description": "Appears intact as one continuous cushion surface.",
+      "event_role_hints": [
+        "surface under the brown moving object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "right white cushion",
+      "visible_form": "large rounded rectangular white padded surface occupying the lower-right portion of the frame",
+      "material_description": "white soft-looking surface with visible wrinkles and shallow surface contours",
+      "visible_properties": [
+        "white",
+        "rounded edges",
+        "wrinkled surface",
+        "stationary during setup"
+      ],
+      "initial_motion_description": "No visible motion before the main event.",
+      "initial_integrity_description": "Appears intact as one continuous cushion surface.",
+      "event_role_hints": [
+        "surface under the orange moving object"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "brown round object",
+      "visible_form": "small brown round object with curved outline and light seam-like markings",
+      "material_description": "brown surface with lighter curved and straight line markings",
+      "visible_properties": [
+        "brown",
+        "round",
+        "small relative to cushions",
+        "visible seam-like lines"
+      ],
+      "initial_motion_description": "Initially stationary near the upper-left holder.",
+      "initial_integrity_description": "Appears intact as a single object.",
+      "event_role_hints": [
+        "moves downward during the event",
+        "ends on the left cushion"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "orange rectangular object",
+      "visible_form": "small elongated orange rectangular piece",
+      "material_description": "bright orange surface with straight edges",
+      "visible_properties": [
+        "orange",
+        "elongated",
+        "rectangular",
+        "small relative to cushions"
+      ],
+      "initial_motion_description": "Initially stationary near the upper-right holder.",
+      "initial_integrity_description": "Appears intact as a single object.",
+      "event_role_hints": [
+        "moves downward during the event",
+        "ends on the right cushion"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "blue overhead holder",
+      "visible_form": "blue curved U-shaped holder mounted near the upper-left edge",
+      "material_description": "blue rigid-looking visible surface with dark mounting area",
+      "visible_properties": [
+        "blue",
+        "curved",
+        "overhead",
+        "stationary except for visible open state after release"
+      ],
+      "initial_motion_description": "No visible motion during the early static interval.",
+      "initial_integrity_description": "Appears intact and attached near the top edge.",
+      "event_role_hints": [
+        "initially adjacent to the brown object",
+        "later visible empty/open"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "orange-and-black overhead holder",
+      "visible_form": "orange curved holder with black mounting area near the upper-right edge",
+      "material_description": "orange and black rigid-looking visible surfaces",
+      "visible_properties": [
+        "orange",
+        "black",
+        "curved",
+        "overhead"
+      ],
+      "initial_motion_description": "No visible motion during the early static interval.",
+      "initial_integrity_description": "Appears intact and attached near the top edge.",
+      "event_role_hints": [
+        "initially adjacent to the orange object",
+        "later visible empty/open"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "top rail",
+      "visible_form": "dark horizontal bar along the top edge of the frame",
+      "material_description": "dark rigid-looking strip",
+      "visible_properties": [
+        "dark",
+        "horizontal",
+        "stationary"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears continuous across the top edge.",
+      "event_role_hints": [
+        "supports or aligns the visible overhead holders"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "white background",
+      "visible_form": "plain white vertical or rear surface behind the objects",
+      "material_description": "matte white surface with slight shading",
+      "visible_properties": [
+        "white",
+        "plain",
+        "stationary"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears continuous and unbroken.",
+      "event_role_hints": [
+        "background for the moving objects"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is side-by-side with a narrow dark gap separating it from",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is positioned adjacent to the lower part of",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is positioned adjacent to the lower part of",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is attached near or directly below",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "is attached near or directly below",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Two large white cushion surfaces occupy the lower frame with a dark vertical gap between them."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A brown round object is visible near the upper-left area beside a blue curved holder."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "An orange elongated object is visible near the upper-right area beside an orange-and-black holder."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A dark horizontal rail is visible along the top edge with the two overhead holders below it."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The objects and cushions remain visually still for many frames before the main motion."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The brown round object appears below its earlier upper-left position with vertical motion blur."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The orange elongated object appears below its earlier upper-right position with vertical motion blur."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The blue holder is visible without the brown object next to it during the downward motion."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The orange-and-black holder is visible without the orange object next to it during the downward motion."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The brown round object reaches the upper area of the left cushion."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "middle",
+      "observation": "The orange elongated object reaches the upper area of the right cushion in a near-upright orientation."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The brown round object is stationary on the left cushion near the left-center area."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The orange object is stationary on the right cushion in a flatter, slightly slanted orientation."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "late",
+      "observation": "Wrinkles and shallow surface contours are visible around the orange object on the right cushion."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "late",
+      "observation": "The overhead holders remain visible at the top after both objects are on the cushions."
+    },
+    {
+      "evidence_id": "e16",
+      "stage": "continuous",
+      "observation": "The frame composition remains fixed with no visible camera pan, tilt, or zoom."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The scene is static with two cushions below and two small objects near overhead holders."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The left cushion remains still."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The right cushion remains still."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The brown round object remains near the blue holder."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The orange rectangular object remains near the orange-and-black holder."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The blue holder remains at the upper-left area."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The orange-and-black holder remains at the upper-right area."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "Both small objects move downward from the overhead area toward the cushions."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The brown round object moves downward from the upper-left area and reaches the left cushion."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The orange rectangular object moves downward from the upper-right area and reaches the right cushion."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The blue holder is visible without the brown object beside it."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The orange-and-black holder is visible without the orange object beside it."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e12",
+        "e13",
+        "e14",
+        "e15"
+      ],
+      "observations": [
+        "Both small objects remain on the cushion surfaces after the downward motion."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The brown round object remains stationary on the left cushion."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The orange object remains stationary on the right cushion in a flatter orientation than during its arrival."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The left cushion surface remains visible under the brown object."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The right cushion surface shows visible wrinkles and shallow contours around the orange object."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e16"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

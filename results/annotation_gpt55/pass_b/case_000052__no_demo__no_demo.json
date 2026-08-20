@@ -1,0 +1,324 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "support",
+        "medium"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e7"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left kettlebell",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "target"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "right kettlebell",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [],
+      "evidence_refs": [
+        "e2",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wall corner",
+      "entity_kind": "surface_or_region",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [],
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "reflective side panel",
+      "entity_kind": "surface_or_region",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "medium"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e8"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "tennis ball",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "target"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "ball reflection",
+      "entity_kind": "unknown",
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "event_roles": [
+        "product"
+      ],
+      "evidence_refs": [
+        "e8"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "rolling",
+      "raw_type": "tennis ball rolls across the tabletop and comes to rest at the kettlebell",
+      "object_ids": [
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e9",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "contact_loading",
+        "type": "sustained_contact",
+        "raw_type": "ball ends in sustained contact or immediate adjacency with the front of the left kettlebell",
+        "object_ids": [
+          "obj_6",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e9",
+          "e10",
+          "e11"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "reflection",
+        "raw_type": "moving ball image appears in the reflective side panel",
+        "object_ids": [
+          "obj_6",
+          "obj_5",
+          "obj_7"
+        ],
+        "evidence_refs": [
+          "e8"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the ball enters the frame already moving",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e9",
+        "e10",
+        "e13"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "id": "imp_1",
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "motion",
+        "type": "speed_decrease",
+        "raw_transition": "the moving tennis ball slows as it approaches the left kettlebell"
+      },
+      "evidence_refs": [
+        "e7",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "id": "imp_2",
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "the tennis ball changes from moving across the tabletop to remaining stationary at the front lower edge of the left kettlebell"
+      },
+      "evidence_refs": [
+        "e7",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "id": "imp_3",
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "relation",
+        "type": null,
+        "raw_transition": "the ball's spatial relation changes from approaching the left kettlebell to resting against or immediately beside its front lower edge"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "id": "imp_4",
+      "object_id": "obj_7",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "a yellow-green round reflected image becomes visible in the right-side reflective panel"
+      },
+      "evidence_refs": [
+        "e8"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "id": "mech_1",
+      "family": "mechanical_forcing",
+      "type": "friction",
+      "raw_mechanism": "contact resistance between the rolling ball and the tabletop opposes the ball's motion and contributes to its slowing",
+      "object_ids": [
+        "obj_6",
+        "obj_1"
+      ],
+      "process_refs": [
+        "primary"
+      ],
+      "impact_refs": [
+        "imp_1",
+        "imp_2"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "id": "mech_2",
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "the stationary left kettlebell blocks further forward motion of the ball when the ball reaches its front lower side",
+      "object_ids": [
+        "obj_6",
+        "obj_2"
+      ],
+      "process_refs": [
+        "secondary[0]"
+      ],
+      "impact_refs": [
+        "imp_2",
+        "imp_3"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "id": "mech_3",
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "light from the yellow-green ball reflects from the right-side reflective panel, producing the visible ball image",
+      "object_ids": [
+        "obj_6",
+        "obj_5",
+        "obj_7"
+      ],
+      "process_refs": [
+        "secondary[1]"
+      ],
+      "impact_refs": [
+        "imp_4"
+      ],
+      "evidence_refs": [
+        "e8"
+      ]
+    }
+  ]
+}

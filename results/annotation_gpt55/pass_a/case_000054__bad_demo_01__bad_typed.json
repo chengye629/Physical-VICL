@@ -1,0 +1,286 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A Newton-cradle-like set of hanging chrome balls is initially still, then outer balls alternately separate to the left and right while the central row remains near the middle.",
+  "raw_event_description": "The video shows a chrome frame on a black base on a wooden table, with five reflective hanging balls aligned near the center. For many early frames the balls and frame appear still. Later, a ball on the left side is seen displaced outward and blurred, then a ball on the right side is seen separated outward from the row. The outer visible ball alternates between the left and right sides several times, while the remaining balls stay close together in a central row. The camera view remains fixed throughout.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The stand, base, strings, and five hanging balls are visible.",
+      "The balls appear aligned in a compact row with no visible displacement in the first frame.",
+      "The tabletop and surrounding objects are visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "metal support frame",
+      "visible_form": "rectangular chrome-colored stand with rounded upper corners and vertical side posts",
+      "material_description": "shiny reflective metallic surface",
+      "visible_properties": [
+        "upright",
+        "rigid-looking",
+        "reflective"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports hanging strings and balls"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black base",
+      "visible_form": "flat rectangular glossy platform under the hanging balls",
+      "material_description": "black glossy surface with visible reflections of balls",
+      "visible_properties": [
+        "flat",
+        "rectangular",
+        "reflective"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "holds the support frame"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "hanging ball set",
+      "visible_form": "five small chrome-colored spheres suspended by thin vertical strings",
+      "material_description": "shiny reflective metallic-looking spheres with thin light-colored strings",
+      "visible_properties": [
+        "spherical",
+        "reflective",
+        "suspended",
+        "aligned in a row at the start"
+      ],
+      "initial_motion_description": "no visible motion during the early still portion",
+      "initial_integrity_description": "all visible balls appear intact",
+      "event_role_hints": [
+        "outer balls later show side-to-side displacement"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "left blue-and-black tabletop object",
+      "visible_form": "blue object with black border lying on the left side of the table",
+      "material_description": "blue and black visible surfaces, non-reflective compared with the balls",
+      "visible_properties": [
+        "flat-looking",
+        "stationary",
+        "partly outside the main cradle area"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_5",
+      "name": "wooden tabletop",
+      "visible_form": "broad horizontal wood-colored surface",
+      "material_description": "wood-grain colored surface",
+      "visible_properties": [
+        "flat",
+        "stationary",
+        "background support surface"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "stands upright on the black base",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "hangs from the top portion of the metal support frame",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "appears as five adjacent balls in a centered row above the base",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "lies to the left of the cradle on the tabletop",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A chrome-colored rectangular support frame is mounted on a glossy black base."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Thin vertical strings extend downward from the top of the frame to the hanging balls."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Five reflective metal-looking balls are aligned closely together near the center of the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A blue-and-black object rests on the tabletop to the left of the cradle."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The hanging ball row remains visually unchanged for an extended early interval."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A ball appears separated on the left side of the central row."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "A ball appears separated on the right side of the central row."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The separated side ball is sometimes visibly blurred compared with the central balls."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The central balls remain close together while an outer ball is away from the row."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The outer visible ball alternates between being seen on the left side and being seen on the right side."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The alternating side displacement continues in later frames."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The support frame, base, tabletop, and left blue-and-black object remain in the same visible positions."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The cradle setup is fully visible and appears still.",
+        "The balls form a compact row near the center."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The hanging balls show no visible motion during the early still interval."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The frame remains upright and still."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The base remains still with reflections visible."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "An outer ball becomes visible away from the row on one side.",
+        "A separated outer ball is then visible on the opposite side.",
+        "The central balls stay grouped near the middle."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "One outer ball is seen displaced left of the central row, and later one outer ball is seen displaced right of the central row."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The separated ball positions alternate between left and right sides over several frames."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The alternating outer-ball displacement persists.",
+        "Other scene objects remain stationary in the frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "A side ball continues to appear away from the central row on alternating sides."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The blue-and-black tabletop object remains still."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The thin strings are visible but individual string positions are hard to separate during the ball motion.",
+    "The exact identity of the moving outer ball on each side is difficult to track when balls overlap in the central row."
+  ]
+}

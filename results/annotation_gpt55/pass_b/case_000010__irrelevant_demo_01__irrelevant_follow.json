@@ -1,0 +1,267 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e14"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "brown round object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e5",
+        "e8",
+        "e13"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "orange sphere",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e5",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "gray round object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "actor"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e13"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "black cylinder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "sofa",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e14"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "contact_loading",
+      "type": "collision",
+      "raw_type": "brief contact between the moving gray round object and the initially adjacent brown and orange objects",
+      "involved_object_ids": [
+        "obj_4",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "rightward translation of the gray object before contact and rightward translation of the orange sphere after contact",
+        "involved_object_ids": [
+          "obj_4",
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e6",
+          "e7",
+          "e9",
+          "e10",
+          "e11",
+          "e12"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the gray object is already moving when it enters the frame",
+      "actor_object_ids": [],
+      "target_object_ids": [],
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "brief",
+      "temporal_structure": "single",
+      "change_profile": "abrupt",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "id": "impact_1",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "orange sphere changes from stationary beside the brown object to rightward motion"
+      },
+      "evidence_refs": [
+        "e5",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "id": "impact_2",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_loss",
+        "raw_transition": "orange sphere separates from the brown object while moving rightward"
+      },
+      "evidence_refs": [
+        "e1",
+        "e10"
+      ]
+    },
+    {
+      "id": "impact_3",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "orange sphere moves beyond the right frame edge and is no longer visible"
+      },
+      "evidence_refs": [
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "id": "impact_4",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "brown object is reached by the moving gray object near the meeting area"
+      },
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "id": "impact_5",
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "gray object moves rightward before the meeting and later remains near the central tabletop area"
+      },
+      "evidence_refs": [
+        "e7",
+        "e13"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "brief contact transfers momentum from the moving gray object through the contact region, initiating rightward motion of the orange sphere",
+      "involved_object_ids": [
+        "obj_4",
+        "obj_2",
+        "obj_3"
+      ],
+      "supports_process": "primary",
+      "supports_impacts": [
+        "impact_1",
+        "impact_2",
+        "impact_4"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    }
+  ]
+}

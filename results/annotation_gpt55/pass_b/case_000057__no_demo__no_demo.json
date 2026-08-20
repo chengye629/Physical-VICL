@@ -1,0 +1,229 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "woven hanging cylinder",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "reflective"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "orange ball",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e7",
+        "e8",
+        "e12",
+        "e13"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "chain and cord",
+      "axes": {
+        "entity_kind": "articulated_object",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wooden tabletop",
+      "axes": {
+        "entity_kind": "surface_or_region",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e14"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "background wall",
+      "axes": {
+        "entity_kind": "surface_or_region",
+        "event_roles": [],
+        "material_phase": "not_applicable",
+        "physical_properties": [],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "not_applicable"
+      },
+      "evidence_refs": [
+        "e14"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "supported vertical translation of the suspended woven cylinder down toward the ball and back upward",
+      "participant_ids": [
+        "obj_1",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e9",
+        "e10"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "transport",
+      "type": "move",
+      "raw_action": "offscreen supported movement lowers and raises the suspended cylinder",
+      "actor_ids": [],
+      "target_ids": [
+        "obj_1"
+      ],
+      "tool_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e10"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "the woven cylinder begins moving downward from its suspended position above the ball"
+      },
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "after remaining low near the tabletop, the cylinder changes from the low/downward phase to upward motion"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "the orange ball changes from visible to fully hidden as the descending cylinder overlaps it in the image"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "the orange ball reappears below the rising cylinder and becomes fully visible again"
+      },
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "tension",
+      "raw_mechanism": "the attached chain and cord provide a suspended tensile support while the cylinder is moved vertically rather than falling freely",
+      "participant_ids": [
+        "obj_1",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e10"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": null,
+      "raw_mechanism": "the intervening cylinder blocks the camera line of sight to the ball, producing temporary occlusion without visible change to the ball",
+      "participant_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e11",
+        "e12",
+        "e13"
+      ]
+    }
+  ]
+}

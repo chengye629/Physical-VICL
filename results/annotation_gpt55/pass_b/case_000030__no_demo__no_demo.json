@@ -1,0 +1,310 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "clear jar",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "container",
+        "target"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red liquid",
+      "entity_kind": "liquid_body",
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "event_roles": [
+        "target",
+        "product"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "dispenser nozzle",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "source"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "black tray",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "support",
+        "container",
+        "target"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e7",
+        "e8",
+        "e10",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "woven basket",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [],
+      "evidence_refs": []
+    },
+    {
+      "id": "obj_6",
+      "name": "wood tabletop",
+      "entity_kind": "surface_or_region",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "support"
+      ],
+      "evidence_refs": []
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "bulk_flow",
+      "raw_type": "continuous red liquid flow into the jar followed by overflow and spreading on the tray",
+      "participant_object_ids": [
+        "obj_2",
+        "obj_1",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "relation_reconfiguration",
+        "type": "containment_transfer",
+        "raw_type": "red liquid changes from being mainly inside the jar to also occupying the jar exterior and tray interior",
+        "participant_object_ids": [
+          "obj_2",
+          "obj_1",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6",
+          "e7",
+          "e8",
+          "e10",
+          "e12"
+        ]
+      }
+    ],
+    "action": {
+      "family": "fluid_handling",
+      "type": "dispense",
+      "raw_action": "dispense red liquid from the nozzle into the jar",
+      "actor_object_ids": [
+        "obj_3"
+      ],
+      "target_object_ids": [
+        "obj_2",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e11"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "material_transfer",
+        "raw_transition": "red liquid transfers from the nozzle area into the jar, then over the rim to the tray"
+      },
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e6",
+        "e7",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "red liquid spreads outward as a growing pool across the tray"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "geometry",
+        "type": "expanded",
+        "raw_transition": "the visible occupied area of the red liquid increases from a stream and jar contents to a larger puddle"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "deposition",
+        "raw_transition": "red liquid appears on the jar exterior and forms vertical streaks"
+      },
+      "evidence_refs": [
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "red liquid accumulates on the tray surface around the jar"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the liquid downward from the nozzle, over the jar rim, down the jar exterior, and onto the tray",
+      "linked_process_family": "fluid_motion",
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "pressure_gradient",
+      "raw_mechanism": "continued supply through the nozzle drives a sustained red liquid stream into the jar",
+      "linked_process_family": "fluid_motion",
+      "evidence_refs": [
+        "e3",
+        "e11"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "viscosity",
+      "raw_mechanism": "liquid flow resistance shapes the exterior runs and spreading puddle edges",
+      "linked_process_family": "fluid_motion",
+      "evidence_refs": [
+        "e6",
+        "e8",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "liquid free-surface behavior contributes to the rim overflow, streaks, and rounded pool boundary",
+      "linked_process_family": "fluid_motion",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e9",
+        "e12"
+      ]
+    }
+  ]
+}

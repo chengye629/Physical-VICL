@@ -1,0 +1,263 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A vertical blade passes through a small orange citrus piece on a cutting board, separating it into two visible pieces.",
+  "raw_event_description": "At the start, a small orange citrus piece sits upright near the center of a textured transparent cutting board while a thin vertical blade is already aligned through its center. Over time the blade remains near the middle line of the fruit and advances through it. A visible split opens between the left and right portions. The right portion moves outward to the right and tilts onto the board, while the left portion remains to the left of the blade with a smaller shift. By the end, two separated citrus pieces are visible on opposite sides of the blade.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "mid_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The blade is already in contact with or overlapping the citrus piece in the first frame.",
+      "The citrus piece, blade, cutting board, and tabletop are clearly visible.",
+      "The first frame does not show a fully untouched citrus piece before blade contact."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "orange citrus piece",
+      "visible_form": "small upright orange fruit section with rounded peel edge and visible internal pale membranes",
+      "material_description": "orange outer surface, glossy moist-looking interior, pale white membrane lines",
+      "visible_properties": [
+        "orange color",
+        "rounded outer rind edge",
+        "segmented interior pattern",
+        "small size relative to blade and board"
+      ],
+      "initial_motion_description": "stationary at the opening frames",
+      "initial_integrity_description": "appears as one connected piece with the blade aligned through its center",
+      "event_role_hints": [
+        "object being divided into two visible portions"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "blade",
+      "visible_form": "thin vertical gray blade extending from the top of the frame down through the citrus piece",
+      "material_description": "shiny gray reflective surface with a narrow straight edge",
+      "visible_properties": [
+        "thin profile",
+        "vertical orientation early in the clip",
+        "reflective surface",
+        "partly occludes the citrus center"
+      ],
+      "initial_motion_description": "already positioned through or against the citrus piece at the opening",
+      "initial_integrity_description": "appears continuous and intact throughout",
+      "event_role_hints": [
+        "visible tool passing through the citrus piece"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "cutting board",
+      "visible_form": "flat rectangular transparent or translucent board covering most of the frame",
+      "material_description": "clear textured surface with glossy reflections and wet-looking streaks",
+      "visible_properties": [
+        "rectangular outline",
+        "textured surface",
+        "transparent or translucent appearance",
+        "stationary support surface"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact throughout",
+      "event_role_hints": [
+        "surface beneath the citrus and blade"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "tabletop",
+      "visible_form": "brown flat surface visible around and through the board",
+      "material_description": "wood-like brown surface with faint grain-like appearance",
+      "visible_properties": [
+        "brown color",
+        "flat background surface"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears unchanged",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "sits on top of the cutting board near the center of the frame",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is vertically aligned through the middle of the citrus piece",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "rests on or above the brown tabletop",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The orange citrus piece is upright on the flat textured board near the center of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A thin gray blade overlaps the central vertical line of the citrus piece."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The textured transparent board is visible over a brown tabletop."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "A dark narrow gap becomes visible between the left and right portions of the citrus piece."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The blade remains between the two orange portions as the separation increases."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The right orange portion moves to the right of the blade."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The right orange portion tilts so more of its triangular cut face is visible."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "Two separated orange pieces are visible, one on each side of the blade."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The left orange piece remains closer to the original center position than the right piece."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The cutting board and tabletop do not show visible displacement."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "A small orange fragment is visible near the base between the separated pieces."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The citrus piece is centered on the board with the blade already aligned through its middle."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The citrus piece appears as one connected upright piece."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The blade is positioned vertically through the central area of the citrus piece."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The cutting board remains flat and stationary."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The central separation grows while the blade stays between the two forming portions."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The citrus piece visibly divides into left and right portions."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The right portion moves rightward and tilts with its cut face becoming more visible."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The blade remains in the central split area."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The fruit is separated into two pieces on the cutting board."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Two separated citrus pieces rest on opposite sides of the blade."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "A small orange fragment is visible near the central base area."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The board remains in the same position relative to the frame."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The blade and citrus overlap in the first frame, so the moment before initial contact is not visible.",
+    "The upper handle or source of blade motion is outside the frame."
+  ]
+}

@@ -1,0 +1,279 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "rectangular glass sheet",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "small crumpled object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "reflective",
+        "combustible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "deformed",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "rising wisps",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "bright glow",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e9"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "combustion",
+      "type": "sustained_burning",
+      "raw_type": "ongoing localized burning with a flickering bright region and smoke-like wisps",
+      "participants": [
+        {
+          "object_id": "obj_2",
+          "role": "source"
+        },
+        {
+          "object_id": "obj_3",
+          "role": "product"
+        },
+        {
+          "object_id": "obj_4",
+          "role": "source"
+        }
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e7",
+        "e10",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "gas_particulate_motion",
+        "type": "gas_emission",
+        "raw_type": "continuous emission and upward motion of pale translucent wisps from the central source region",
+        "participants": [
+          {
+            "object_id": "obj_2",
+            "role": "source"
+          },
+          {
+            "object_id": "obj_3",
+            "role": "product"
+          }
+        ],
+        "evidence_refs": [
+          "e3",
+          "e5",
+          "e6",
+          "e10"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "light_emission",
+        "raw_type": "localized visible light emission that flickers in brightness and shape",
+        "participants": [
+          {
+            "object_id": "obj_4",
+            "role": "source"
+          }
+        ],
+        "evidence_refs": [
+          "e4",
+          "e7",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the glowing and wisp-producing process is already underway at the start",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e4"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e10",
+        "e11"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "thermal_reaction",
+        "type": null,
+        "raw_transition": "small crumpled object remains the localized source region associated with visible burning, glow, and wisp production"
+      },
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "wisps rise from the central area while elongating, curling, narrowing, and drifting side to side"
+      },
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "bright localized region flickers in visible intensity and shape while staying near the same central location"
+      },
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "chemical_energy_release",
+      "raw_mechanism": "localized reaction releases energy, producing sustained visible glow and wisp formation",
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "buoyancy",
+      "raw_mechanism": "buoyant upward motion carries the heated gas or smoke-like wisps above the source region",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "airflow_forcing",
+      "raw_mechanism": "surrounding air motion perturbs the rising wisps, producing curved and side-to-side drift",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "the localized glow emits visible yellow-white light that varies in brightness",
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e11"
+      ]
+    }
+  ]
+}

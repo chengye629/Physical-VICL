@@ -1,0 +1,281 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A glass drink dispenser and a small glass containing red liquid remain stationary with no visible pouring or object movement.",
+  "raw_event_description": "The video shows a clear ridged glass dispenser partly filled with red liquid on a woven stand, with a metal spigot positioned above a small clear glass that already contains red liquid. Across the visible duration, the dispenser, spigot, stand, table, and small glass remain in place, and no visible stream exits the spigot.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The dispenser, spigot, receiving glass, liquid surfaces, stand, and tabletop are visible from the start.",
+      "The spigot is visible above the opening area of the smaller glass."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "glass dispenser",
+      "visible_form": "large clear cylindrical jar with vertical ridges and a neck at the top",
+      "material_description": "transparent glass-like container",
+      "visible_properties": [
+        "partly filled",
+        "clear walls",
+        "vertical ribbed texture"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact and upright",
+      "event_role_hints": [
+        "holds red liquid",
+        "has spigot attached near lower front"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red liquid in dispenser",
+      "visible_form": "red fluid volume inside the dispenser with a visible upper surface",
+      "material_description": "opaque to translucent red liquid",
+      "visible_properties": [
+        "red color",
+        "level surface visible through the container"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous volume inside dispenser",
+      "event_role_hints": [
+        "contained inside obj_1"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "metal spigot",
+      "visible_form": "small shiny tap protruding from the front of the dispenser with a short handle angled sideways",
+      "material_description": "shiny metallic-looking surface with dark areas",
+      "visible_properties": [
+        "reflective",
+        "attached to dispenser front",
+        "outlet points downward"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact and attached",
+      "event_role_hints": [
+        "positioned above small glass"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "small glass",
+      "visible_form": "clear drinking glass or jar with rounded sides and an open top",
+      "material_description": "transparent glass-like material",
+      "visible_properties": [
+        "upright",
+        "partly filled",
+        "front-centered"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact and upright",
+      "event_role_hints": [
+        "placed below spigot"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "red liquid in small glass",
+      "visible_form": "red fluid volume occupying the lower portion of the small glass",
+      "material_description": "opaque to translucent red liquid",
+      "visible_properties": [
+        "red color",
+        "visible upper surface",
+        "lower than rim"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous volume inside small glass",
+      "event_role_hints": [
+        "contained inside obj_4"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "woven stand",
+      "visible_form": "round stacked woven base under the dispenser",
+      "material_description": "brown and tan woven material",
+      "visible_properties": [
+        "cylindrical",
+        "textured",
+        "supports dispenser"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact",
+      "event_role_hints": [
+        "dispenser rests on it"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "wooden table",
+      "visible_form": "flat tabletop surface extending across the lower frame",
+      "material_description": "wood-like surface with visible grain",
+      "visible_properties": [
+        "horizontal",
+        "light brown"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact",
+      "event_role_hints": [
+        "stand and small glass rest on it"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on top of",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is attached to the front lower area of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is positioned below the spigot outlet",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is inside",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is inside",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "The clear dispenser remains on the round woven stand."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "The metal spigot remains attached to the front of the dispenser."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "The small clear glass remains centered beneath the spigot outlet."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "A red liquid volume is visible inside the dispenser."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "A red liquid volume is visible in the lower portion of the small glass."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "No visible stream appears between the spigot and the small glass."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The visible liquid level in the small glass does not noticeably change."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The dispenser, stand, and small glass maintain the same positions in the scene."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The camera view remains fixed on the setup."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The arrangement remains unchanged throughout the visible clip."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The dispenser remains stationary and upright."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The red liquid in the dispenser remains visibly present with no clear change in level."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The spigot remains stationary with no visible outflow."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The small glass remains stationary beneath the spigot."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The red liquid in the small glass remains at a similar visible level."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The woven stand remains stationary under the dispenser."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "The tabletop remains stationary in the frame."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e9"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

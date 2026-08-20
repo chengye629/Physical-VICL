@@ -1,0 +1,277 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small light gray spherical object enters from the lower left, moves rightward across the foreground tabletop, and exits at the lower right while the room remains otherwise unchanged.",
+  "raw_event_description": "The video begins with a stationary view of a yellow sofa behind a pale tabletop, with a black cylindrical object at the lower left and a lamp on a side table at the right. For several frames no moving object is visible. A small light gray sphere then appears from the lower-left edge of the frame near the black cylinder. It travels rightward across the pale tabletop in the foreground, passing through the lower central area and then the lower-right area. The sphere leaves the frame at the right edge. After it exits, the scene returns to a static view of the sofa, tabletop, black cylinder, and lamp.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The room layout and stationary furniture are clearly visible.",
+      "The moving spherical object is not visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "light gray sphere",
+      "visible_form": "small round ball-like object",
+      "material_description": "light gray surface with smooth visible appearance",
+      "visible_properties": [
+        "spherical",
+        "small relative to the tabletop",
+        "light gray"
+      ],
+      "initial_motion_description": "not visible before entering from the lower-left edge",
+      "initial_integrity_description": "appears whole when visible",
+      "event_role_hints": [
+        "moving object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "pale tabletop",
+      "visible_form": "large flat horizontal rectangular surface in the foreground",
+      "material_description": "pale wood-toned or laminate-like visible surface",
+      "visible_properties": [
+        "flat",
+        "light colored",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "continuous intact surface",
+      "event_role_hints": [
+        "surface across which the sphere moves"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "yellow sofa",
+      "visible_form": "large two-section sofa with arms and tufted back cushions",
+      "material_description": "yellow upholstered visible surface",
+      "visible_properties": [
+        "large",
+        "stationary",
+        "tufted"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_4",
+      "name": "black cylinder",
+      "visible_form": "short dark cylindrical object partly visible at the lower-left edge",
+      "material_description": "black glossy or semi-gloss visible surface",
+      "visible_properties": [
+        "cylindrical",
+        "partially visible",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact where visible",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_5",
+      "name": "lamp and side table",
+      "visible_form": "dark lampshade on a lamp base beside a dark rectangular side table at the right",
+      "material_description": "dark shade and dark table surfaces with a lighter lamp base visible",
+      "visible_properties": [
+        "stationary",
+        "partially visible near right edge"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact where visible",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is in the foreground in front of the sofa",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is partly visible at the lower-left edge near the tabletop",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is positioned at the right side of the sofa",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A yellow sofa is visible behind a pale tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A black cylindrical object is partly visible at the lower-left edge."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A lamp and dark side table are visible near the right edge."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "No light gray sphere is visible at the start."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A light gray sphere appears at the lower-left edge of the frame."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The light gray sphere is visible on the pale tabletop in the lower-left foreground."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The light gray sphere is visible farther right in the lower central foreground."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The light gray sphere is visible in the lower-right foreground."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The light gray sphere is partly visible at the right edge."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The light gray sphere is no longer visible after reaching the right edge."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The sofa remains in the same visible position throughout the clip."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The tabletop remains in the same visible position throughout the clip."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed throughout the clip."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene is static before the sphere appears."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The yellow sofa remains stationary."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The pale tabletop remains stationary."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The light gray sphere is not yet visible."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The sphere enters and traverses the foreground from left to right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The light gray sphere appears at the lower-left edge and changes position rightward across the tabletop."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The tabletop stays visibly unchanged as the sphere passes over it."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The sphere exits the frame at the lower-right side and the room remains static."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The light gray sphere becomes partly visible at the right edge and then disappears from view."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The yellow sofa remains stationary after the sphere exits."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The lamp and side table remain stationary."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The sphere is partly cut off by the frame edge as it enters and exits."
+  ]
+}

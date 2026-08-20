@@ -1,0 +1,241 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "transparent tumbler",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "clear liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "medium",
+        "target"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e6"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "thin stick",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool",
+        "source",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "combustible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e5",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "flame",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e11"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "combustion",
+      "type": null,
+      "raw_type": "burning flame at the stick tip diminishes and goes out",
+      "participant_object_ids": [
+        "obj_3",
+        "obj_4",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "relation_reconfiguration",
+        "type": "insertion",
+        "raw_type": "stick end enters the tumbler opening and reaches the liquid surface",
+        "participant_object_ids": [
+          "obj_1",
+          "obj_2",
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6",
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "fluid_handling",
+      "type": "immerse",
+      "raw_action": "a lit stick is lowered into the clear liquid in the tumbler",
+      "actor_object_ids": [],
+      "affected_object_ids": [
+        "obj_2",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e10"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "axis": "thermal_reaction",
+      "type": "burning_to_extinguished",
+      "raw_transition": "visible burning at the stick end stops as the flame shrinks and disappears",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "axis": "optical_visibility",
+      "type": "intensity_decrease",
+      "raw_transition": "the yellow-orange luminous flame becomes shorter and lower, then is no longer visible",
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "axis": "relation",
+      "type": "containment_gain",
+      "raw_transition": "the blackened lower end of the stick moves into the tumbler opening and remains angled inside near the liquid surface",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "axis": "relation",
+      "type": "contact_gain",
+      "raw_transition": "the clear liquid surface is reached by the blackened stick end",
+      "evidence_refs": [
+        "e6"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "heat_transfer",
+      "raw_mechanism": "contact with the clear liquid removes heat from the burning stick end, leading the visible flame to shrink and disappear",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "energy_reaction",
+      "type": "chemical_energy_release",
+      "raw_mechanism": "combustion at the blackened stick end produces the yellow-orange flame before the burning stops",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e7",
+        "e8"
+      ]
+    }
+  ]
+}

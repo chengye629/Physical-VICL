@@ -1,0 +1,313 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "black circular device",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "tan stick",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "actor",
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "green top piece",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "left group of four blocks",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "right-group left black block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "right-group middle white block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_8",
+      "name": "right-group right black block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e7",
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "toppling",
+      "raw_type": "right-side blocks topple from upright to down after the tan stick reaches the rightmost block",
+      "participants": [
+        "obj_6",
+        "obj_7",
+        "obj_8"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "contact_loading",
+        "type": "collision",
+        "raw_type": "moving tan stick contacts or reaches the rightmost block area and initiates a visible block response",
+        "participants": [
+          "obj_3",
+          "obj_8"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6",
+          "e7"
+        ]
+      }
+    ],
+    "action": {
+      "family": "transport",
+      "type": "rotate",
+      "raw_action": "tan stick rotates or sweeps toward the rightmost upright block",
+      "actor_object_id": "obj_3",
+      "target_object_ids": [
+        "obj_8"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "tan stick changes angle and its tip moves toward the rightmost black block"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_8",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "rightmost black block changes from upright to tilting left and then down on the tabletop"
+      },
+      "evidence_refs": [
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "middle white block changes from upright to tilting left and then down among the fallen right-side blocks"
+      },
+      "evidence_refs": [
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "left black block of the right-side group changes from upright to tilting and descending, ending down on the tabletop"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "motion of the tan stick transfers mechanical loading to the rightmost block, starting its tilt",
+      "object_ids": [
+        "obj_3",
+        "obj_8"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "once the right-side blocks tilt away from stable upright support, gravity drives their downward toppling onto the tabletop",
+      "object_ids": [
+        "obj_6",
+        "obj_7",
+        "obj_8",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "torque",
+      "raw_mechanism": "off-center contact and tilted weight produce rotational motion of the blocks about their lower support region",
+      "object_ids": [
+        "obj_6",
+        "obj_7",
+        "obj_8"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    }
+  ]
+}

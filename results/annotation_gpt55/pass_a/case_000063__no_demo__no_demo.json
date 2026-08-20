@@ -1,0 +1,257 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A black kettlebell descends from above and comes to rest visibly on top of a yellow mug standing on a wooden table.",
+  "raw_event_description": "At the start, a yellow mug is upright on a light wooden tabletop against a plain wall. A black kettlebell enters from the top of the frame and moves downward toward the mug. The kettlebell face with the text \"30 LB\" becomes visible as it lowers. Its bottom reaches the mug's top opening/rim area and then remains positioned on the mug. The mug stays upright and no visible cracking, breaking, spilling, or large shape change is seen.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The yellow mug, wooden tabletop, and wall are visible.",
+      "The black kettlebell is not yet visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow mug",
+      "visible_form": "upright cylindrical cup with an open top and a rectangular handle on the right side",
+      "material_description": "opaque yellow surface with slight sheen",
+      "visible_properties": [
+        "yellow",
+        "upright",
+        "open top",
+        "right-side handle"
+      ],
+      "initial_motion_description": "stationary on the tabletop",
+      "initial_integrity_description": "appears whole and unbroken",
+      "event_role_hints": [
+        "is contacted at its top by the descending black object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black kettlebell",
+      "visible_form": "rounded black weight with two upward handle arches and a front face marked \"30 LB\"",
+      "material_description": "dark matte or textured surface with lighter blue-gray printed text",
+      "visible_properties": [
+        "black",
+        "rounded lower body",
+        "arched handle",
+        "visible \"30 LB\" marking"
+      ],
+      "initial_motion_description": "not visible at first; later moves downward from the top of the frame",
+      "initial_integrity_description": "appears whole when it enters view",
+      "event_role_hints": [
+        "moves downward toward the mug",
+        "ends positioned on the mug"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wooden table",
+      "visible_form": "flat horizontal tabletop spanning the lower part of the frame",
+      "material_description": "light brown surface with visible wood grain",
+      "visible_properties": [
+        "light brown",
+        "flat",
+        "wood-grain pattern"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears continuous and unbroken",
+      "event_role_hints": [
+        "supports the mug"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wall",
+      "visible_form": "plain vertical background wall behind the table",
+      "material_description": "light gray-white painted-looking surface",
+      "visible_properties": [
+        "plain",
+        "light colored",
+        "vertical background"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears continuous",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "upright on the tabletop",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "positioned in front of the wall",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "not visible while the mug is already visible",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The yellow mug is upright on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A plain light wall is visible behind the mug and table."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "No black kettlebell is visible in the first frames."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "A black rounded object enters from the top edge of the frame."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The black object moves downward toward the yellow mug."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The front of the black object shows the text \"30 LB\"."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The black object has upward curved handle portions visible above its rounded body."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The bottom of the black object reaches the top opening/rim area of the yellow mug."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The black object remains positioned on top of the yellow mug."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The yellow mug remains upright after contact."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "No visible fragments, cracks, or spilled contents appear around the mug."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed on the table, wall, mug, and descending object."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The mug is already upright on the table before the black object appears."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The mug remains still and upright."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The kettlebell is outside the visible frame."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The tabletop remains still and unobstructed around the mug."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The black kettlebell enters from above and descends toward the mug."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The kettlebell moves downward with its rounded body and handle visible."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The mug remains upright beneath the descending object."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The kettlebell reaches and remains on the mug's top area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The kettlebell stops descending and stays positioned on the mug."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The mug stays upright with no visible breakage or spill."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

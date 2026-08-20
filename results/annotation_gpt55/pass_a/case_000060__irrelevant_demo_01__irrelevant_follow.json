@@ -1,0 +1,310 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "Two small spheres moved across a light tabletop in opposite directions and then left the frame.",
+  "raw_event_description": "The video begins with an empty light wood-grain tabletop between two black cylindrical fixtures near the left and right edges. After several unchanged frames, a partial hand appears briefly at the right edge, a small brown sphere appears in the upper-right area and moves toward the upper-left area, and a light gray sphere appears from the left/lower area and moves toward the right/lower area. The two spheres are visible at the same time while separated vertically, then the brown sphere leaves near the upper-left edge and the gray sphere leaves near the right edge. The tabletop is empty again afterward.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tabletop and side fixtures are visible before the moving spheres appear.",
+      "The moving spheres are not visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "tabletop",
+      "visible_form": "flat rectangular light-colored surface filling most of the frame",
+      "material_description": "light wood-grain visual pattern",
+      "visible_properties": [
+        "flat",
+        "light tan",
+        "wood-grain lines"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "continuous visible surface with no visible breakage",
+      "event_role_hints": [
+        "surface under the visible moving spheres"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left black cylinder",
+      "visible_form": "black cylindrical object partly visible at the left edge",
+      "material_description": "dark, slightly reflective visible surface",
+      "visible_properties": [
+        "black",
+        "cylindrical",
+        "partially cropped by frame edge"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "static side object"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "right black cylinder",
+      "visible_form": "black cylindrical object partly visible at the right edge",
+      "material_description": "dark, slightly reflective visible surface",
+      "visible_properties": [
+        "black",
+        "cylindrical",
+        "partially cropped by frame edge"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "static side object"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "brown sphere",
+      "visible_form": "small round brown object with a lighter curved marking",
+      "material_description": "brown smooth-looking surface with a pale marking",
+      "visible_properties": [
+        "small",
+        "round",
+        "brown",
+        "light marking"
+      ],
+      "initial_motion_description": "not visible in the first frames; later first visible near the right side moving across the upper half of the tabletop toward the left",
+      "initial_integrity_description": "appears intact when visible",
+      "event_role_hints": [
+        "moving object"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "light gray sphere",
+      "visible_form": "small round light gray or white object",
+      "material_description": "smooth-looking pale surface",
+      "visible_properties": [
+        "small",
+        "round",
+        "light gray",
+        "motion-blurred during movement"
+      ],
+      "initial_motion_description": "not visible in the first frames; later first visible near the left side moving across the lower half of the tabletop toward the right",
+      "initial_integrity_description": "appears intact when visible",
+      "event_role_hints": [
+        "moving object"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "partial hand",
+      "visible_form": "partial fingers or hand shape at the right edge",
+      "material_description": "skin-toned visible area",
+      "visible_properties": [
+        "skin-toned",
+        "partially cropped",
+        "briefly visible"
+      ],
+      "initial_motion_description": "not visible at the start; briefly appears near the right edge before or as the brown sphere appears",
+      "initial_integrity_description": "only partially visible",
+      "event_role_hints": [
+        "brief edge presence"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "partly visible at the left edge of the tabletop area",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "partly visible at the right edge of the tabletop area",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "not visible on the tabletop in the initial frames",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "not visible on the tabletop in the initial frames",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A light wood-grain tabletop is visible with black cylindrical objects partly visible at the left and right edges."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "No small spheres are visible on the central tabletop during the initial unchanged frames."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "middle",
+      "observation": "A skin-toned partial hand or fingers appears briefly at the right edge near the right black cylinder."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "A small brown sphere appears near the right side of the tabletop in the upper half of the frame."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A small light gray sphere appears near the left side of the tabletop in the lower half of the frame."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The brown sphere changes position across the upper half of the tabletop toward the left side."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The light gray sphere changes position across the lower and middle portion of the tabletop toward the right side."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The two spheres are visible at the same time with the brown sphere above the light gray sphere in the frame."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The brown sphere reaches the upper-left edge area and then is no longer visible."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The light gray sphere reaches the right edge area and then is no longer visible."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "After both spheres leave, the tabletop is again visible without the spheres."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The framing of the tabletop and black side cylinders remains fixed throughout the video."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ],
+      "observations": [
+        "The tabletop scene is static before the moving spheres appear."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The tabletop remains stationary in the frame."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The left black cylinder remains stationary at the left edge."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The right black cylinder remains stationary at the right edge."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "A brief partial hand appears at the right edge.",
+        "Both spheres are visible during part of the event and move across different areas of the tabletop."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_6",
+          "observation": "The partial hand appears briefly at the right edge and then is no longer visible."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The brown sphere moves from the right/upper area toward the left/upper area."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The light gray sphere moves from the left/lower area toward the right/lower area."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The moving spheres leave the visible frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The brown sphere exits near the upper-left edge."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The light gray sphere exits near the right edge."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The tabletop remains visible after the spheres are gone."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The partial hand at the right edge is cropped, so its full shape and action are not fully visible.",
+    "No visible contact between the two spheres is shown; they remain separated in the visible frames."
+  ]
+}

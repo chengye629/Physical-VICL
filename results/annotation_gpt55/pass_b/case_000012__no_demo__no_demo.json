@@ -1,0 +1,450 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "yellow bar",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e17",
+        "e18"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "orange bar",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e16",
+        "e18"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "pink bar",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e15",
+        "e18"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "green bar",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e14",
+        "e18"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "blue bar",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e13",
+        "e18"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "purple bar",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e6",
+        "e11",
+        "e12",
+        "e18"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "black cylinder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e7",
+        "e19"
+      ]
+    },
+    {
+      "object_id": "obj_8",
+      "name": "tan pointed rod",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "actor",
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e8",
+        "e10",
+        "e11",
+        "e20"
+      ]
+    },
+    {
+      "object_id": "obj_9",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e9",
+        "e18"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "toppling",
+      "raw_type": "sequential toppling of upright colored bars leftward along the row",
+      "involved_object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3",
+        "obj_4",
+        "obj_5",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e12",
+        "e13",
+        "e14",
+        "e15",
+        "e16",
+        "e17",
+        "e18"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "contact_loading",
+        "type": "collision",
+        "raw_type": "successive side contacts transfer motion from the rod to the purple bar and then between neighboring bars",
+        "involved_object_ids": [
+          "obj_8",
+          "obj_6",
+          "obj_5",
+          "obj_4",
+          "obj_3",
+          "obj_2",
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e11",
+          "e13"
+        ]
+      }
+    ],
+    "action": {
+      "family": "transport",
+      "type": "rotate",
+      "raw_action": "tan rod changes angular orientation toward the purple bar",
+      "actor_object_ids": [
+        "obj_8"
+      ],
+      "target_object_ids": [
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14",
+        "e15",
+        "e16",
+        "e17",
+        "e18"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "impact_id": "impact_obj_8_motion",
+      "object_id": "obj_8",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "rod changes angular orientation toward the purple bar and later remains pointing diagonally leftward"
+      },
+      "evidence_refs": [
+        "e10",
+        "e20"
+      ]
+    },
+    {
+      "impact_id": "impact_obj_6_contact",
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "right side of the purple bar is reached by the rod's pointed end"
+      },
+      "evidence_refs": [
+        "e11"
+      ]
+    },
+    {
+      "impact_id": "impact_obj_6_toppling",
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "purple bar changes from upright to tilting left and ends lying at the right side of the fallen group"
+      },
+      "evidence_refs": [
+        "e12",
+        "e18"
+      ]
+    },
+    {
+      "impact_id": "impact_obj_5_toppling",
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "blue bar changes from upright to tilting left after contact with the purple bar and ends slanted among the fallen bars"
+      },
+      "evidence_refs": [
+        "e13",
+        "e18"
+      ]
+    },
+    {
+      "impact_id": "impact_obj_4_toppling",
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "green bar changes from upright to tilting left and ends slanted among the fallen bars"
+      },
+      "evidence_refs": [
+        "e14",
+        "e18"
+      ]
+    },
+    {
+      "impact_id": "impact_obj_3_toppling",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "pink bar changes from upright to tilting left and ends slanted and overlapping with neighboring bars"
+      },
+      "evidence_refs": [
+        "e15",
+        "e18"
+      ]
+    },
+    {
+      "impact_id": "impact_obj_2_toppling",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "orange bar changes from upright to tilting left and ends nearly horizontal on the tabletop"
+      },
+      "evidence_refs": [
+        "e16",
+        "e18"
+      ]
+    },
+    {
+      "impact_id": "impact_obj_1_toppling",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "yellow bar changes from upright to tilting left and moves partly beyond the left image edge"
+      },
+      "evidence_refs": [
+        "e17",
+        "e18"
+      ]
+    },
+    {
+      "impact_id": "impact_bars_settling",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "settling",
+        "raw_transition": "colored bars come to rest in slanted or horizontal overlapping positions"
+      },
+      "affected_object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3",
+        "obj_4",
+        "obj_5",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e18"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "mechanism_id": "mech_contact_transfer",
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "brief side contacts transfer motion from the rod to the purple bar and then from one bar to the next along the row",
+      "object_ids": [
+        "obj_8",
+        "obj_6",
+        "obj_5",
+        "obj_4",
+        "obj_3",
+        "obj_2",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e11",
+        "e13",
+        "e14",
+        "e15",
+        "e16",
+        "e17"
+      ]
+    },
+    {
+      "mechanism_id": "mech_torque_toppling",
+      "family": "mechanical_forcing",
+      "type": "torque",
+      "raw_mechanism": "side loading on upright bars produces angular motion that tips them leftward from their vertical positions",
+      "object_ids": [
+        "obj_6",
+        "obj_5",
+        "obj_4",
+        "obj_3",
+        "obj_2",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e12",
+        "e13",
+        "e14",
+        "e15",
+        "e16",
+        "e17"
+      ]
+    },
+    {
+      "mechanism_id": "mech_gravity_fall",
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "after the bars tilt away from upright support, gravity contributes to their falling rotation and final settled positions on the tabletop",
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3",
+        "obj_4",
+        "obj_5",
+        "obj_6",
+        "obj_9"
+      ],
+      "evidence_refs": [
+        "e12",
+        "e13",
+        "e14",
+        "e15",
+        "e16",
+        "e17",
+        "e18"
+      ]
+    }
+  ]
+}

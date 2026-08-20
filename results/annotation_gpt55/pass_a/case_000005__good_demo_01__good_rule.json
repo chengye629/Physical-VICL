@@ -1,0 +1,303 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "An orange ball moves downward into a black crate on a wooden table and then remains partly visible inside it.",
+  "raw_event_description": "At the start, a glossy orange ball is centered above an open black crate on a wooden tabletop, with a vertical gap between the ball and the crate rim. After many frames with no visible change, the ball descends into the crate opening, becomes partly hidden by the front wall and lattice of the crate, rises slightly above the rim, then lowers again and comes to rest mostly inside the crate with only portions visible through the handle opening, top opening, and front lattice.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The ball, crate, and tabletop are clearly visible.",
+      "The ball is positioned above the crate before its later downward motion.",
+      "The crate opening and front lattice are visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "orange ball",
+      "visible_form": "round orange ball with black curved seam lines and glossy highlights",
+      "material_description": "smooth glossy orange surface with dark seam markings",
+      "visible_properties": [
+        "orange",
+        "round",
+        "glossy",
+        "black seam lines"
+      ],
+      "initial_motion_description": "initially appears stationary near the top center of the frame above the crate",
+      "initial_integrity_description": "appears whole and undeformed",
+      "event_role_hints": [
+        "main moving object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black crate",
+      "visible_form": "rectangular open-top crate with solid ribs, handle opening, and diamond lattice front",
+      "material_description": "black glossy plastic-like surface",
+      "visible_properties": [
+        "black",
+        "open top",
+        "rigid-looking frame",
+        "front lattice openings",
+        "upper handle cutout"
+      ],
+      "initial_motion_description": "stationary on the tabletop",
+      "initial_integrity_description": "appears whole with no visible breakage or deformation",
+      "event_role_hints": [
+        "receives the moving ball",
+        "partially occludes the ball after entry"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wooden table",
+      "visible_form": "flat rectangular tabletop with visible front edge",
+      "material_description": "brown wood-grain surface",
+      "visible_properties": [
+        "brown",
+        "flat",
+        "wood grain visible"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears whole and unchanged",
+      "event_role_hints": [
+        "supports the crate"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "background panel",
+      "visible_form": "large light-colored vertical background behind the table and crate",
+      "material_description": "plain light gray or white surface",
+      "visible_properties": [
+        "light colored",
+        "smooth-looking"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "unchanged",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_5",
+      "name": "thin vertical line",
+      "visible_form": "thin dark vertical line above and near the orange ball in some frames",
+      "material_description": "dark narrow line-like feature",
+      "visible_properties": [
+        "thin",
+        "vertical",
+        "dark"
+      ],
+      "initial_motion_description": "not visibly moving relative to the frame",
+      "initial_integrity_description": "appears continuous where visible",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is centered above the open top of the crate with visible empty space between them",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "rests on the wooden tabletop",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is behind the ball, crate, and table",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The orange ball is near the top center of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A visible vertical gap separates the ball from the crate rim."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The black crate is positioned on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A light-colored background fills the area behind the objects."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The ball remains in nearly the same position for many frames before descending."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The ball moves downward toward the crate opening."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The lower portion of the ball enters behind the front wall of the crate."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "Orange portions of the ball are visible through the crate's front lattice openings."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "After entering the crate, the ball rises so that a larger upper portion is visible above the crate rim."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The ball then lowers again into the crate."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The ball is mostly inside the crate."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "Only a small upper portion of the ball remains visible near the crate's top opening."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "Orange areas of the ball remain visible through the crate's front lattice."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The crate remains stationary throughout the visible event."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "continuous",
+      "observation": "The table remains stationary throughout the visible event."
+    },
+    {
+      "evidence_id": "e16",
+      "stage": "continuous",
+      "observation": "The ball remains visibly whole during and after entry into the crate."
+    },
+    {
+      "evidence_id": "e17",
+      "stage": "continuous",
+      "observation": "The front wall and lattice of the crate partially hide the ball after it enters."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e5"
+      ],
+      "observations": [
+        "The setup is static with the ball suspended above the crate and the crate on the table."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "appears stationary above the crate"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains stationary on the table"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e17"
+      ],
+      "observations": [
+        "The ball moves downward into the open crate, is partly occluded, rises partly above the rim, and lowers again."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "moves downward into the crate opening, then upward partially, then downward again"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "continues to partially block the view of the ball through its front wall and lattice"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e11",
+        "e12",
+        "e13",
+        "e14",
+        "e15",
+        "e16"
+      ],
+      "observations": [
+        "The ball remains mostly inside the crate with only portions visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "comes to a mostly stationary position inside the crate"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains stationary and intact"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains stationary and intact"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "A thin vertical line is visible above or near the ball in some frames, but its connection to any object is not fully resolved from the view."
+  ]
+}

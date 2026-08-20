@@ -1,0 +1,318 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A white crumpled piece moves downward inside a clear container and ends up resting on the green-topped blue liquid.",
+  "raw_event_description": "At the start, a tall clear container stands on a wooden tabletop with blue liquid in its lower portion and a green horizontal layer at the liquid surface. A white crumpled piece is visible near the upper opening, close to blue supports. Later, the white piece is seen lower inside the container, continues downward through the open interior space, reaches the liquid-surface region, and remains there with part of it visible above the surface.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The transparent container and liquid level are clearly visible.",
+      "The white crumpled piece and blue supports near the top are partly cropped and partly obscured by the rim area."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "clear container",
+      "visible_form": "tall transparent cylindrical vessel with narrow upper opening and thicker base",
+      "material_description": "clear glossy material with visible reflections",
+      "visible_properties": [
+        "transparent",
+        "upright",
+        "cylindrical",
+        "open-looking top"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "contains the liquids and the moving white piece"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "blue liquid",
+      "visible_form": "blue volume filling the lower portion of the container",
+      "material_description": "opaque or semi-opaque blue fluid appearance",
+      "visible_properties": [
+        "blue",
+        "contained in lower section",
+        "mostly level upper boundary"
+      ],
+      "initial_motion_description": "no clear visible motion before the main event",
+      "initial_integrity_description": "continuous visible volume",
+      "event_role_hints": [
+        "surface region receives the white piece"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "green surface layer",
+      "visible_form": "thin horizontal green band or layer at the top of the blue liquid",
+      "material_description": "green, smooth-looking visible layer",
+      "visible_properties": [
+        "green",
+        "horizontal",
+        "located at liquid level"
+      ],
+      "initial_motion_description": "no clear visible motion before the main event",
+      "initial_integrity_description": "appears continuous across most of the container width",
+      "event_role_hints": [
+        "visible contact area for the white piece"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "white crumpled piece",
+      "visible_form": "small irregular crumpled sheet-like object",
+      "material_description": "white matte folded or wrinkled appearance",
+      "visible_properties": [
+        "white",
+        "irregular shape",
+        "crumpled",
+        "smaller than the container width"
+      ],
+      "initial_motion_description": "initially stationary or nearly stationary near the upper opening",
+      "initial_integrity_description": "appears as one crumpled piece",
+      "event_role_hints": [
+        "moves downward through the container",
+        "ends at the liquid-surface region"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "blue upper supports",
+      "visible_form": "two blue curved or strap-like pieces near the container opening",
+      "material_description": "blue glossy or plastic-looking pieces",
+      "visible_properties": [
+        "blue",
+        "paired",
+        "near upper rim"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appear intact",
+      "event_role_hints": [
+        "near the white piece at the start"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal surface beneath the container",
+      "material_description": "light brown wood-grain appearance",
+      "visible_properties": [
+        "flat",
+        "stationary",
+        "supports container"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears continuous",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "stands upright on the tabletop",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is inside the lower portion of the clear container",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "lies horizontally at the top boundary of the blue liquid",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is initially near the upper opening of the container and above the liquid surface",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is positioned around the upper rim area of the container",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A tall clear container is centered upright on a wooden tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Blue liquid fills the lower portion of the container."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A green horizontal band or layer is visible at the top of the blue liquid."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A white crumpled piece is visible near the upper opening of the container."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "Two blue support-like pieces are visible near the upper rim."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The white crumpled piece appears inside the open interior space below the upper opening."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The white crumpled piece moves downward toward the green-topped liquid surface."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The white crumpled piece reaches the liquid-surface region."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The white crumpled piece remains on or immediately at the green layer with part of it visible above the surface."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Small uneven edges or ripples are visible along the liquid-surface region around the white piece."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The camera framing remains centered on the container without a scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The container is upright on the tabletop.",
+        "The blue liquid and green surface layer are visible.",
+        "The white crumpled piece is near the upper opening."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains upright and stationary"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains in the lower part of the container"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "appears as a mostly horizontal band at the liquid surface"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "is visible near the upper opening before its downward motion"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "stays near the upper rim"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The white crumpled piece is seen inside the container below the top opening.",
+        "The piece moves downward through the clear interior space."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "moves downward toward the liquid-surface region"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The white piece reaches the top surface region of the liquid.",
+        "The white piece remains visible at that level.",
+        "The nearby surface edge appears slightly uneven."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "rests on or immediately at the green-topped liquid surface with part above the surface"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "shows a visible local disturbance or uneven edge near the white piece"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains in the lower portion of the container"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact initial contact between the white crumpled piece and the upper blue supports is partly obscured by the rim area and top crop."
+  ]
+}

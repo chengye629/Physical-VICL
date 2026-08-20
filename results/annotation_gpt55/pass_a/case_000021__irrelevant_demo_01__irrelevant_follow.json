@@ -1,0 +1,187 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small yellow duck-shaped toy remains still on a wooden tabletop for the duration of the clip.",
+  "raw_event_description": "The video shows a yellow duck-shaped toy near the center of a wooden tabletop with a pale wall behind it. Across the visible sequence, the toy, tabletop, and background keep the same visible positions and forms, with no observed object motion, deformation, separation, emission, or interaction.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The duck-shaped toy is fully visible near the center of the frame.",
+      "The tabletop surface and wall background are visible.",
+      "No event onset is visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow duck toy",
+      "visible_form": "Small duck-shaped figure with rounded body, rounded head, protruding orange beak, and two small dark eyes.",
+      "material_description": "Bright yellow smooth-looking exterior with orange beak and dark glossy-looking eye spots.",
+      "visible_properties": [
+        "yellow",
+        "orange beak",
+        "dark eyes",
+        "rounded shape",
+        "small compared with tabletop"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact as one continuous toy figure.",
+      "event_role_hints": [
+        "main visible object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "wooden tabletop",
+      "visible_form": "Flat horizontal tabletop surface extending across the lower part of the frame.",
+      "material_description": "Light brown surface with visible wood-grain pattern.",
+      "visible_properties": [
+        "flat",
+        "light brown",
+        "wood grain visible"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears continuous and unbroken in the visible area.",
+      "event_role_hints": [
+        "supporting visible surface"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wall background",
+      "visible_form": "Pale vertical wall surfaces behind the tabletop, including a corner-like boundary on the left side.",
+      "material_description": "Smooth pale wall with slight color variation from lighting.",
+      "visible_properties": [
+        "pale",
+        "vertical",
+        "smooth-looking"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears continuous in the visible area.",
+      "event_role_hints": [
+        "background"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The bottom of the yellow duck toy visually meets the tabletop surface.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The yellow duck toy is positioned in front of the pale wall background.",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "The bottom edge of the yellow duck toy touches the visible tabletop surface."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "The yellow duck toy appears in front of the pale wall background."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "The yellow duck toy keeps the same visible position and orientation within the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "The yellow duck toy keeps the same visible shape."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "No visible pieces separate from the yellow duck toy."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "No visible material or light emission comes from the yellow duck toy."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The tabletop wood-grain pattern remains in the same visible arrangement."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The wall background remains visually unchanged."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed relative to the duck toy, tabletop, and wall."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "Image focus remains stable throughout the visible sequence."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The scene shows a persistent static arrangement of a duck-shaped toy on a tabletop with a wall behind it."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The yellow duck toy shows no visible motion, deformation, separation, or emission."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The tabletop shows no visible motion or change."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The wall background shows no visible motion or change."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e9",
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

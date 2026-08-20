@@ -1,0 +1,290 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small crumpled object on a rectangular glass sheet continuously shows a bright flickering area with pale wisps rising above it.",
+  "raw_event_description": "The video opens with a rectangular glass sheet lying on a wooden tabletop and a small crumpled reflective object near the center. A bright yellow-white glow is visible at the object's lower right area, while thin blue-white and gray translucent wisps extend upward. Throughout the clip, the glass sheet and tabletop remain in fixed positions, the small object remains in the same place, and the wisps continuously change shape as they rise and drift slightly side to side. The bright area around the object flickers in intensity and shape but stays localized near the same small central region.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The main objects are already visible at the start.",
+      "The bright area and rising wisps are already present in the first frame.",
+      "The glass sheet, tabletop, and small central object are distinguishable."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "rectangular glass sheet",
+      "visible_form": "flat transparent rectangular sheet with visible greenish edges",
+      "material_description": "transparent, glossy, slightly green-edged surface",
+      "visible_properties": [
+        "rectangular",
+        "flat",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact with continuous straight edges",
+      "event_role_hints": [
+        "supports the small central object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "small crumpled object",
+      "visible_form": "small irregular crumpled piece near the center of the glass sheet",
+      "material_description": "bright reflective and pale surfaces with angular folds",
+      "visible_properties": [
+        "small",
+        "irregular",
+        "crumpled",
+        "reflective"
+      ],
+      "initial_motion_description": "no visible translation or rotation",
+      "initial_integrity_description": "already crumpled and irregular at the start",
+      "event_role_hints": [
+        "located at the base of the bright area and rising wisps"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "rising wisps",
+      "visible_form": "thin translucent vertical and curved strands extending upward from the central area",
+      "material_description": "pale blue-white and gray translucent visual strands",
+      "visible_properties": [
+        "translucent",
+        "wispy",
+        "elongated",
+        "changing shape"
+      ],
+      "initial_motion_description": "visible upward and side-to-side shape changes are already present",
+      "initial_integrity_description": "diffuse and discontinuous wisps",
+      "event_role_hints": [
+        "appears above the small crumpled object"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "bright glow",
+      "visible_form": "small yellow-white luminous region around the lower right side of the crumpled object",
+      "material_description": "bright yellow-white light with blue-white adjacent regions",
+      "visible_properties": [
+        "luminous",
+        "localized",
+        "flickering"
+      ],
+      "initial_motion_description": "no visible translation; visible flicker in shape and brightness",
+      "initial_integrity_description": "localized bright area present from the first frame",
+      "event_role_hints": [
+        "co-located with the small crumpled object"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "wooden tabletop",
+      "visible_form": "flat brown tabletop surface beneath the glass sheet",
+      "material_description": "brown surface with visible wood grain pattern",
+      "visible_properties": [
+        "flat",
+        "brown",
+        "wood-grain patterned"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact and continuous",
+      "event_role_hints": [
+        "supports the glass sheet"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "rests near the center of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "lies on top of",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "extends upward from the area of",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is localized beside and around",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A small crumpled object is visible near the center of the rectangular glass sheet."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The rectangular glass sheet is visible on a brown wood-grain tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Thin translucent wisps extend upward from the small central object."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A bright yellow-white region is visible at the lower right side of the small central object."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The rising wisps change shape throughout the clip."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "Some wisps curve leftward while others remain more vertical."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The bright region flickers while staying near the same central location."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The small crumpled object remains in the same visible position on the glass sheet."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The glass sheet remains stationary relative to the tabletop."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Near the end, the wisps are still visible above the small central object."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "Near the end, the bright region remains visible beside the small crumpled object."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene begins with the glass sheet, tabletop, crumpled object, bright region, and wisps already visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The small crumpled object is stationary near the center of the glass sheet."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The wisps rise above the small object."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The bright region is present at the small object's lower right area."
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The visible process continues without a scene cut."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The wisps continuously elongate, curl, narrow, and shift side to side."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The bright region flickers in size and intensity while remaining localized."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The small crumpled object remains visibly in place."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The glass sheet remains visibly still."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The clip ends while the visible wisps and bright region are still present."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The wisps remain above the small central object."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The bright region remains near the small crumpled object."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e9"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The start of the visible glowing and wisp-producing process is not shown.",
+    "The end of the visible glowing and wisp-producing process is not shown."
+  ]
+}

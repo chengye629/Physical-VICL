@@ -1,0 +1,273 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A yellow marked ball remains on a black circular base while its printed face turns out of view.",
+  "raw_event_description": "At the start, a yellow ball with a visible smiley-face marking sits on a black circular base on a wooden tabletop near a mirror. Across the clip, the ball stays on the base while the smiley marking shifts around the ball from facing the camera to the side and then out of view, leaving a mostly plain yellow side visible. The mirror shows a reflected view of the ball and base throughout, and the cable and surrounding furniture remain visually stationary.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The yellow ball, black base, tabletop, mirror, and cable are visible from the first frame.",
+      "The ball already appears positioned on the base at the start.",
+      "No separate start trigger is visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow marked ball",
+      "visible_form": "small round yellow ball with a black smiley-face marking on one side",
+      "material_description": "bright yellow fuzzy-looking surface with black printed or drawn markings",
+      "visible_properties": [
+        "round",
+        "yellow",
+        "black face marking visible early",
+        "marking orientation changes over time"
+      ],
+      "initial_motion_description": "The ball is already on the base; the smiley marking begins facing generally toward the camera.",
+      "initial_integrity_description": "The ball appears whole and undeformed.",
+      "event_role_hints": [
+        "Its visible marking changes position during the clip."
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black circular base",
+      "visible_form": "low round black platform or puck-shaped object",
+      "material_description": "dark matte or semi-matte exterior",
+      "visible_properties": [
+        "circular",
+        "flat-topped",
+        "black",
+        "supports the yellow ball"
+      ],
+      "initial_motion_description": "No visible translation of the base.",
+      "initial_integrity_description": "The base appears whole and unchanged.",
+      "event_role_hints": [
+        "The ball remains positioned on top of it."
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "mirror",
+      "visible_form": "vertical rectangular reflective surface behind and to the right of the ball and base",
+      "material_description": "reflective glass-like surface with a visible vertical edge",
+      "visible_properties": [
+        "reflective",
+        "vertical",
+        "shows reflected ball and base"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "The mirror appears intact.",
+      "event_role_hints": [
+        "Shows a reflected view of the scene."
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal light-brown surface",
+      "material_description": "wood-grain-like light-brown surface",
+      "visible_properties": [
+        "flat",
+        "horizontal",
+        "light brown"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "The tabletop appears intact.",
+      "event_role_hints": [
+        "Supports the base, mirror, and cable."
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "black cable",
+      "visible_form": "thin black cord lying in a loose curve on the tabletop",
+      "material_description": "dark flexible-looking cord",
+      "visible_properties": [
+        "thin",
+        "black",
+        "curved path on tabletop"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "The cable appears continuous.",
+      "event_role_hints": [
+        "Lies near the base and extends toward the right side of the frame."
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The yellow ball is positioned on top of the black circular base.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "The black circular base is positioned on the wooden tabletop.",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "The mirror shows a reflected view of the ball and base.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "The cable lies on the tabletop near the base and extends toward the right side.",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e8"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The yellow ball sits on top of the black circular base with a smiley-face marking visible toward the camera."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "The black circular base remains on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "The yellow ball remains on top of the black circular base."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The smiley-face marking shifts toward the viewer-left side of the ball."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "late",
+      "observation": "The camera-facing side of the yellow ball appears mostly plain yellow with the smiley marking no longer visible."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The mirror shows a reflected yellow ball and black circular base."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The reflected ball and reflected base remain in a consistent reflected position in the mirror."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "A black cable lies across the tabletop in a curved path and appears unchanged in position."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The wall edges, tabletop edges, and mirror edge remain stationary in the image."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e6",
+        "e8"
+      ],
+      "observations": [
+        "The ball is on the black base near the mirror.",
+        "The smiley-face marking is visible on the ball."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The yellow ball shows its smiley marking facing generally toward the camera."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The black circular base remains in place on the tabletop."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The mirror shows the reflected ball and base."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The ball remains on the base.",
+        "The smiley-face marking is no longer centered toward the camera."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The visible smiley marking moves toward the viewer-left side of the ball."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The mirror continues to show the reflected ball and base."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The ball remains on the base.",
+        "The visible side of the ball is mostly plain yellow."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The smiley-face marking has turned out of the camera-facing view."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The black cable remains visually unchanged on the tabletop."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e9"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

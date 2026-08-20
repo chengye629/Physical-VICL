@@ -1,0 +1,317 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "beverage dispenser",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source",
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "spigot",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "drinking glass",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e6",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "orange liquid stream",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "collected liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "product"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e6",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "woven stand",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e12"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "bulk_flow",
+      "raw_type": "continuous orange liquid flow from a spigot into a glass",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "event_roles": [
+            "source",
+            "container"
+          ]
+        },
+        {
+          "object_id": "obj_2",
+          "event_roles": [
+            "source"
+          ]
+        },
+        {
+          "object_id": "obj_4",
+          "event_roles": [
+            "target",
+            "medium"
+          ]
+        },
+        {
+          "object_id": "obj_3",
+          "event_roles": [
+            "target",
+            "container"
+          ]
+        },
+        {
+          "object_id": "obj_5",
+          "event_roles": [
+            "target",
+            "product"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e10",
+        "e11"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the liquid stream is already present at the start",
+      "evidence_refs": [
+        "e4",
+        "e13"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e10",
+        "e11",
+        "e13"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "impact_id": "impact_1",
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "collected orange liquid inside the glass increases from a shallow amount to a much higher level"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "impact_id": "impact_2",
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "the liquid free surface rises and shows small bubbles with a pale foamy band near the surface"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "impact_id": "impact_3",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "the amount of orange liquid contained within the drinking glass visibly increases"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "impact_id": "impact_4",
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "material_transfer",
+        "raw_transition": "orange liquid is transported as a continuous stream from the spigot area into the glass"
+      },
+      "evidence_refs": [
+        "e4",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "mechanism_id": "mechanism_1",
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "the liquid moves downward from the spigot outlet into the lower drinking glass",
+      "linked_process": "primary",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e11"
+      ]
+    },
+    {
+      "mechanism_id": "mechanism_2",
+      "family": "energy_reaction",
+      "type": "mass_transport",
+      "raw_mechanism": "continued inflow carries liquid mass into the glass, increasing the collected volume",
+      "linked_impacts": [
+        "impact_1",
+        "impact_3"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "mechanism_id": "mechanism_3",
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "liquid-gas interfaces are visible as bubbles and a foamy band near the liquid surface",
+      "linked_impacts": [
+        "impact_2"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A yellow tennis ball enters the tabletop scene, moves toward a black kettlebell, and stops next to its lower front side while the kettlebell remains still.",
+  "raw_event_description": "The scene begins with a black kettlebell on a wooden tabletop beside a vertical reflective panel, with reflected images visible on the right side. For several moments no visible scene object moves. A yellow tennis ball then appears from the lower foreground, travels across the tabletop toward the kettlebell, and comes to rest immediately adjacent to the kettlebell's lower front-right area. The reflected panel shows corresponding reflected views of the kettlebell and ball. No visible deformation, breakage, emission, or displacement of the kettlebell occurs.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tabletop, wall corner, black kettlebell, and reflective panel are visible before the ball appears.",
+      "The main moving object is not yet visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "black kettlebell",
+      "visible_form": "dark rounded weight with a curved handle on top",
+      "material_description": "dark matte-to-slightly-shiny surface; handle has visible highlights",
+      "visible_properties": [
+        "upright",
+        "stationary",
+        "opaque",
+        "dark colored"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact with continuous body and handle",
+      "event_role_hints": [
+        "stationary object near the ball's final position"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "yellow tennis ball",
+      "visible_form": "small bright yellow-green sphere with curved seam lines",
+      "material_description": "fuzzy-looking bright surface with lighter seam markings",
+      "visible_properties": [
+        "round",
+        "bright yellow-green",
+        "opaque",
+        "moves during the event"
+      ],
+      "initial_motion_description": "not visible at the start; later enters from the lower foreground",
+      "initial_integrity_description": "appears intact when first visible",
+      "event_role_hints": [
+        "moving object that approaches the kettlebell"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "reflective panel",
+      "visible_form": "vertical rectangular reflective surface along the right side of the scene",
+      "material_description": "smooth reflective surface showing mirrored images of scene objects",
+      "visible_properties": [
+        "vertical",
+        "reflective",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "shows reflected images of the kettlebell and ball"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal wood-patterned surface",
+      "material_description": "light brown surface with visible wood grain",
+      "visible_properties": [
+        "flat",
+        "stationary",
+        "supports visible objects"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "surface across which the ball moves"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "wall corner",
+      "visible_form": "two pale vertical wall planes meeting at a corner behind the tabletop",
+      "material_description": "smooth light-colored wall surface",
+      "visible_properties": [
+        "vertical",
+        "stationary",
+        "background"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "stands upright on the tabletop near the wall corner",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is positioned to the right of the visible kettlebell and shows reflected scene content",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is absent from the visible scene at the start",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A black kettlebell is upright on the wooden tabletop near the wall corner."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The reflective panel on the right shows a reflected image of a black kettlebell."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "No yellow tennis ball is visible in the first part of the scene."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "A yellow tennis ball appears at the lower foreground edge of the tabletop view."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The yellow tennis ball changes position across successive frames toward the black kettlebell."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A reflected yellow ball appears in the reflective panel on the right."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The yellow tennis ball is positioned immediately next to the lower front-right side of the black kettlebell."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The black kettlebell remains in the same visible position before and after the ball arrives."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The yellow tennis ball remains still near the kettlebell for the final frames."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed on the tabletop, wall corner, kettlebell, and reflective panel."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The scene is static before the yellow ball appears."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The black kettlebell remains upright and motionless."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The yellow tennis ball is not visible."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The reflective panel shows a reflected kettlebell image."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The yellow ball enters the visible tabletop area and advances toward the kettlebell."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The yellow tennis ball moves from the lower foreground toward the black kettlebell."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The reflective panel shows a corresponding reflected yellow ball."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The black kettlebell remains visually stationary as the ball approaches."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The ball stops next to the kettlebell and the scene becomes static again."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The yellow tennis ball rests immediately beside the lower front-right area of the kettlebell."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The black kettlebell shows no visible displacement or deformation."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The reflective panel makes a duplicated view of objects visible on the right side, so reflected images are visually present in addition to the direct objects."
+  ]
+}

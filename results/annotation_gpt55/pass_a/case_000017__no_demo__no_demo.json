@@ -1,0 +1,438 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A tan rod beside a black circular device sweeps into the rightmost set of upright blocks, after which the three right-side blocks tip over while the four left-side blocks remain upright.",
+  "raw_event_description": "The scene begins with seven narrow rectangular blocks standing upright on a wooden tabletop, arranged as a left group of four and a right group of three. A black circular device sits to the right with a tan rod attached near a small green part on top. The tan rod changes orientation and sweeps outward toward the row of blocks. Its tip reaches the rightmost black block in the right group. The rightmost black block tips leftward, the adjacent white block also tips, and the left black block of the right group ends up no longer upright. By the end, the three right-side blocks are lying or leaning on the tabletop, while the four blocks on the left remain standing.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tabletop, upright blocks, circular device, and rod are visible before the rod reaches the blocks.",
+      "The blocks are separated into a left standing group and a right standing group."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal surface with wood grain pattern",
+      "material_description": "light brown wood-like surface with visible grain",
+      "visible_properties": [
+        "horizontal",
+        "flat",
+        "large relative to the blocks"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous unbroken surface visible",
+      "event_role_hints": [
+        "supports the visible objects"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black circular device",
+      "visible_form": "low black round cylinder on the right side of the table",
+      "material_description": "dark matte or semi-matte surface",
+      "visible_properties": [
+        "round top",
+        "cylindrical side",
+        "larger than the blocks"
+      ],
+      "initial_motion_description": "body shows no visible translation",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "located near the moving rod"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "tan rod",
+      "visible_form": "thin straight stick-like piece extending from the circular device area",
+      "material_description": "light tan wood-like surface",
+      "visible_properties": [
+        "thin",
+        "straight",
+        "elongated"
+      ],
+      "initial_motion_description": "initially near the circular device, then visibly changes orientation",
+      "initial_integrity_description": "appears intact and straight",
+      "event_role_hints": [
+        "moving object that reaches the rightmost block"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "green top piece",
+      "visible_form": "small green piece on top of the black circular device near the rod",
+      "material_description": "green surface, small and bright relative to the device",
+      "visible_properties": [
+        "small",
+        "green",
+        "near rod end"
+      ],
+      "initial_motion_description": "no clear independent translation visible",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "visibly near the rod on the device"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "leftmost black block",
+      "visible_form": "narrow upright rectangular block",
+      "material_description": "black surface",
+      "visible_properties": [
+        "upright",
+        "thin",
+        "rectangular"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "standing upright and intact",
+      "event_role_hints": [
+        "left group block that remains standing"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "left white block",
+      "visible_form": "narrow upright rectangular block",
+      "material_description": "white surface",
+      "visible_properties": [
+        "upright",
+        "thin",
+        "rectangular"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "standing upright and intact",
+      "event_role_hints": [
+        "left group block that remains standing"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "middle-left black block",
+      "visible_form": "narrow upright rectangular block",
+      "material_description": "black surface",
+      "visible_properties": [
+        "upright",
+        "thin",
+        "rectangular"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "standing upright and intact",
+      "event_role_hints": [
+        "left group block that remains standing"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "middle-left white block",
+      "visible_form": "narrow upright rectangular block",
+      "material_description": "white surface",
+      "visible_properties": [
+        "upright",
+        "thin",
+        "rectangular"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "standing upright and intact",
+      "event_role_hints": [
+        "left group block that remains standing"
+      ]
+    },
+    {
+      "id": "obj_9",
+      "name": "right-group black block",
+      "visible_form": "narrow upright rectangular block, leftmost in the right group",
+      "material_description": "black surface",
+      "visible_properties": [
+        "upright initially",
+        "thin",
+        "rectangular"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "standing upright and intact",
+      "event_role_hints": [
+        "right group block that changes orientation during the event"
+      ]
+    },
+    {
+      "id": "obj_10",
+      "name": "right-group white block",
+      "visible_form": "narrow upright rectangular block, center of the right group",
+      "material_description": "white surface",
+      "visible_properties": [
+        "upright initially",
+        "thin",
+        "rectangular"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "standing upright and intact",
+      "event_role_hints": [
+        "right group block that tips during the event"
+      ]
+    },
+    {
+      "id": "obj_11",
+      "name": "rightmost black block",
+      "visible_form": "narrow upright rectangular block closest to the circular device",
+      "material_description": "black surface",
+      "visible_properties": [
+        "upright initially",
+        "thin",
+        "rectangular"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "standing upright and intact",
+      "event_role_hints": [
+        "block reached by the moving rod"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_5",
+      "relation_description": "stands in a left-side row with three other upright blocks",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_9",
+      "relation_description": "stands to the left of the right-group white block",
+      "object_id": "obj_10",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_10",
+      "relation_description": "stands between two black blocks in the right group",
+      "object_id": "obj_11",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is positioned to the right of the rightmost block",
+      "object_id": "obj_11",
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is located near the green piece on top of the circular device",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Four narrow rectangular blocks stand upright on the left side of the tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A black circular device sits on the right side of the tabletop with a small green piece visible on top."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Three narrow rectangular blocks stand upright between the left group and the circular device."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The tan rod is initially angled near the top-right area of the circular device."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The tan rod changes orientation and extends outward toward the upright blocks."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The tip of the tan rod reaches the right side of the rightmost black block."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The rightmost black block tilts leftward from its upright position."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The right-group white block tilts from its upright position."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The right-group left black block is no longer upright."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Three right-side blocks are lying or leaning on the tabletop."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The four left-side blocks remain upright."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The camera view stays fixed on the tabletop scene without a visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The blocks are upright and separated into a left group of four and a right group of three.",
+        "The circular device and rod are positioned to the right of the blocks."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "stands upright without visible motion"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "stands upright without visible motion"
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "stands upright without visible motion"
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "stands upright without visible motion"
+        },
+        {
+          "object_id": "obj_9",
+          "observation": "stands upright without visible motion"
+        },
+        {
+          "object_id": "obj_10",
+          "observation": "stands upright without visible motion"
+        },
+        {
+          "object_id": "obj_11",
+          "observation": "stands upright without visible motion"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "is visible near the circular device before reaching the blocks"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The tan rod sweeps toward the right-side group of blocks.",
+        "The right-side group changes from upright to tilted or down positions."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "changes orientation and extends toward the rightmost block"
+        },
+        {
+          "object_id": "obj_11",
+          "observation": "tilts leftward from upright"
+        },
+        {
+          "object_id": "obj_10",
+          "observation": "tilts from upright"
+        },
+        {
+          "object_id": "obj_9",
+          "observation": "changes from upright to a non-upright position"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The right-side blocks remain down or leaning.",
+        "The left-side blocks remain standing."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_9",
+          "observation": "is no longer upright on the tabletop"
+        },
+        {
+          "object_id": "obj_10",
+          "observation": "rests in a tilted or lying position among the right-side blocks"
+        },
+        {
+          "object_id": "obj_11",
+          "observation": "rests in a lying position near the circular device side"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "remains upright"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "remains upright"
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "remains upright"
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "remains upright"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact attachment details between the tan rod, green top piece, and circular device are not fully visible."
+  ]
+}

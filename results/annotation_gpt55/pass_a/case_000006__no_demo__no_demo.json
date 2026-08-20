@@ -1,0 +1,290 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A blue ball separates from an overhead holder, moves downward into a green granular mound, and comes to rest on the mound.",
+  "raw_event_description": "At the start, a blue round ball is held near the top center inside or just below a blue-and-black U-shaped holder, above a green granular mound on a wooden tabletop. For many frames the ball and mound remain visually unchanged. Later, the ball separates from the holder and moves rapidly downward, appearing blurred during the descent. The ball contacts the top of the green mound, the mound surface changes shape around it, and the ball settles tilted while remaining visible on the mound. The holder remains above with an open gap where the ball had been.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The blue ball, overhead holder, green mound, tabletop, and background wall are visible before the ball moves.",
+      "The ball is already positioned above the mound at the start."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "blue ball",
+      "visible_form": "round ball with a blue speckled surface and a pale curved seam-like line",
+      "material_description": "blue textured or fuzzy-looking exterior with small light speckles",
+      "visible_properties": [
+        "round",
+        "blue",
+        "speckled",
+        "pale curved line visible on surface"
+      ],
+      "initial_motion_description": "stationary near the top center before the main movement",
+      "initial_integrity_description": "appears whole and round before movement",
+      "event_role_hints": [
+        "object that moves downward and ends on the green mound"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "green mound",
+      "visible_form": "low, irregular pile spread on the tabletop",
+      "material_description": "green granular or crumbly-looking material with rough uneven surface",
+      "visible_properties": [
+        "green",
+        "irregular surface",
+        "loose granular appearance",
+        "low mound shape"
+      ],
+      "initial_motion_description": "stationary on the tabletop before the main movement",
+      "initial_integrity_description": "appears as one continuous loose pile before contact",
+      "event_role_hints": [
+        "surface where the ball lands"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "overhead holder",
+      "visible_form": "U-shaped blue-and-black frame hanging from above, partly cropped by the top edge",
+      "material_description": "smooth blue and black visible surfaces",
+      "visible_properties": [
+        "U-shaped",
+        "blue and black",
+        "partly cropped at top"
+      ],
+      "initial_motion_description": "stationary above the ball before the main movement",
+      "initial_integrity_description": "appears intact as a U-shaped frame",
+      "event_role_hints": [
+        "object from which the ball separates"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal table surface",
+      "material_description": "brown wood-grain surface",
+      "visible_properties": [
+        "flat",
+        "brown",
+        "wood-grain pattern"
+      ],
+      "initial_motion_description": "stationary throughout visible portion",
+      "initial_integrity_description": "appears continuous and unchanged",
+      "event_role_hints": [
+        "supporting surface under the green mound"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "background wall",
+      "visible_form": "plain vertical wall behind the table",
+      "material_description": "smooth light gray surface",
+      "visible_properties": [
+        "light gray",
+        "plain",
+        "vertical"
+      ],
+      "initial_motion_description": "stationary background",
+      "initial_integrity_description": "unchanged visible surface",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "positioned above the green mound",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "located within or immediately below the open area of the overhead holder",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "resting on the wooden tabletop",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "positioned above the green mound",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The blue ball is visible above the green mound."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The blue ball is inside or directly below the opening of the U-shaped holder."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The green mound is on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The U-shaped holder is above the green mound."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The ball, holder, and mound remain visually stationary for many frames."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The blue ball is no longer within the holder opening."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The blue ball appears lower than before and is motion-blurred vertically."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The blue ball reaches the top area of the green mound."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The green mound surface is visibly depressed around the ball."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The blue ball remains on the green mound in a tilted resting position."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The overhead holder remains above the mound with an empty open gap."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The tabletop and background wall remain visually unchanged."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The scene is arranged with the ball above the mound and the holder above or around the ball.",
+        "No visible change occurs for many frames."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The blue ball remains stationary above the green mound."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The green mound remains stationary on the tabletop."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The U-shaped holder remains stationary above the mound."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The blue ball separates from the holder opening and moves downward toward the mound."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The blue ball moves downward with visible motion blur and reaches the mound."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The U-shaped holder remains above with the opening visible after the ball has moved away."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The ball is on the green mound after contact, and the mound has a changed surface shape around it."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The blue ball settles on the mound in a tilted position."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The green mound shows a visible depression around the ball."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The holder remains stationary above the settled ball."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The tabletop remains unchanged."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

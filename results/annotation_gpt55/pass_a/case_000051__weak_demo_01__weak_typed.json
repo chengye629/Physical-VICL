@@ -1,0 +1,260 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small brown spherical object moves from the left side of the tabletop toward the right and disappears near the green upright object.",
+  "raw_event_description": "The scene begins with a light wood-grain tabletop, a dark cylindrical object at the left edge, and a green upright rectangular object at the right edge. After several still moments, a small brown sphere enters from the lower-left area, moves rightward across the tabletop with visible blur, passes through the central area, approaches the green upright object, and then disappears from view at the right side behind or beside that object. The scene remains otherwise unchanged after the sphere leaves view.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tabletop and stationary surrounding objects are visible before the moving sphere appears.",
+      "The later moving sphere is not visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "light tabletop",
+      "visible_form": "flat horizontal surface filling most of the frame",
+      "material_description": "pale wood-grain appearance",
+      "visible_properties": [
+        "light colored",
+        "wood-grain pattern",
+        "flat visible surface"
+      ],
+      "initial_motion_description": "stationary in the image",
+      "initial_integrity_description": "continuous unbroken visible surface",
+      "event_role_hints": [
+        "surface over which the small sphere moves"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "dark left cylinder",
+      "visible_form": "small dark cylindrical or cup-like object partly visible at the left edge",
+      "material_description": "black glossy or dark surface cues",
+      "visible_properties": [
+        "dark",
+        "rounded rim",
+        "partly cropped by frame edge"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "stationary object near the sphere entry side"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "green upright object",
+      "visible_form": "upright rectangular block or panel at the right edge with a rectangular cutout near the upper area",
+      "material_description": "green matte or textured visible surface",
+      "visible_properties": [
+        "green",
+        "upright",
+        "rectangular cutout",
+        "partly cropped by right frame edge"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "stationary object near where the sphere leaves view",
+        "partially occludes the right side"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "small brown sphere",
+      "visible_form": "small rounded ball-like object",
+      "material_description": "brown surface with lighter highlight or patch visible during motion",
+      "visible_properties": [
+        "small",
+        "brown",
+        "spherical",
+        "motion blur while moving"
+      ],
+      "initial_motion_description": "not visible in the first frame; first appears moving from the left toward the right",
+      "initial_integrity_description": "appears as one intact rounded object when first visible",
+      "event_role_hints": [
+        "main moving object"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "partly visible along the left edge of the tabletop",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "standing at the right edge on or beside the tabletop surface",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "not visible in the initial view",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A dark cylindrical object is partly visible at the left edge of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A green upright object is partly visible at the right edge of the frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "No small brown sphere is visible at the start of the video."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "A small brown sphere appears from the left side of the frame."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The small brown sphere moves rightward across the tabletop."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The small brown sphere shows visible blur while moving."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The small brown sphere passes through the central tabletop area."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The small brown sphere approaches the green upright object on the right."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The small brown sphere disappears from view at the right side near the green upright object."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "After the sphere disappears, the tabletop scene remains visible without the sphere."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The dark left cylinder and green right upright object maintain fixed image positions throughout the clip."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The tabletop, dark left cylinder, and green right upright object are visible before the moving sphere appears."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The tabletop remains stationary in the image."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The dark cylinder remains stationary at the left edge."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The green upright object remains stationary at the right edge."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The small brown sphere is not yet visible."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The small brown sphere enters the visible tabletop area from the left and travels toward the right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The small brown sphere translates rightward across the tabletop with visible blur."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The dark cylinder remains stationary while the sphere passes nearby to its right."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The moving sphere reaches the right side of the frame and leaves view near the green upright object."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The small brown sphere disappears from view at the right side near the green upright object."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The green upright object remains stationary as the sphere disappears near it."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The sphere's path before entering from the left is not visible.",
+    "The sphere's final position after disappearing near the green upright object is not visible."
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A suspended woven cylinder moves downward over an orange ball on a tabletop, hides it briefly, then moves upward leaving the ball visible again.",
+  "raw_event_description": "At the start, a tan woven cylindrical hanging object is suspended above a small orange ball on a wooden tabletop. The hanging cylinder moves downward along the vertical direction, with its chain moving with it. Its lower edge reaches the area of the orange ball, and the ball becomes partially then fully hidden behind or inside the cylinder from the camera view. The cylinder remains low for a short interval with the ball not visible. Later the cylinder moves upward, and the orange ball reappears below it in approximately the same tabletop position and with no visible shape change.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The hanging woven cylinder, orange ball, tabletop, and background wall are visible before the downward movement begins.",
+      "The cylinder is separated vertically from the ball at the start."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "woven hanging cylinder",
+      "visible_form": "short tan cylindrical object with woven sides, a circular lower rim, a metal-looking top fitting, and an attached hanging chain",
+      "material_description": "tan fibrous woven surface; shiny dark metal-looking cap and chain",
+      "visible_properties": [
+        "cylindrical",
+        "tan",
+        "textured",
+        "suspended",
+        "larger than the orange ball"
+      ],
+      "initial_motion_description": "initially visible above the ball, then begins moving downward",
+      "initial_integrity_description": "appears intact with no visible breaks or deformation",
+      "event_role_hints": [
+        "moves vertically over the orange ball",
+        "occludes the ball during the middle of the event"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "orange ball",
+      "visible_form": "small round orange ball on the tabletop",
+      "material_description": "orange textured surface with darker line-like markings",
+      "visible_properties": [
+        "round",
+        "orange",
+        "small",
+        "textured"
+      ],
+      "initial_motion_description": "appears stationary on the tabletop before the cylinder descends",
+      "initial_integrity_description": "appears intact and round",
+      "event_role_hints": [
+        "becomes hidden by the descending cylinder",
+        "reappears after the cylinder rises"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal wooden surface occupying the lower part of the scene",
+      "material_description": "wood-colored surface with visible grain",
+      "visible_properties": [
+        "flat",
+        "horizontal",
+        "brown",
+        "wood grain visible"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the orange ball",
+        "is beneath the moving cylinder"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "hanging chain",
+      "visible_form": "dark linked chain with an orange cord segment near the top",
+      "material_description": "dark metal-looking links and orange cord-like segment",
+      "visible_properties": [
+        "linked",
+        "vertical",
+        "attached to the cylinder"
+      ],
+      "initial_motion_description": "moves with the suspended cylinder during the vertical motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "remains connected to the top of the cylinder"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is vertically above and separated from",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is on top of",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is attached to the top of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The woven cylinder is suspended above the orange ball with a visible vertical gap between them."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The orange ball is visible on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A dark chain is visible above the woven cylinder and connected to its top fitting."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The woven cylinder moves downward relative to the tabletop and the ball."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The lower edge of the woven cylinder reaches the vertical level of the orange ball."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The orange ball becomes partially hidden by the woven cylinder."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The orange ball is fully hidden from view while the woven cylinder is low over the tabletop."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The woven cylinder remains low for several frames with its bottom near the tabletop."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The woven cylinder moves upward relative to the tabletop."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The orange ball reappears below the woven cylinder."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "After reappearing, the orange ball is in approximately the same visible tabletop location as before being hidden."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The orange ball appears round and intact after the cylinder moves upward."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The tabletop and background wall stay fixed in the frame throughout the sequence."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The cylinder starts above the ball and then descends vertically."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "moves downward from a suspended position above the ball"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains visible on the tabletop with no visible motion"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "moves downward together with the cylinder"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The cylinder overlaps the ball's location from the camera view and hides the ball."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "moves over the ball's visible position and stays low near the tabletop"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "becomes partially and then fully occluded by the cylinder"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The cylinder rises and the ball becomes visible again."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "moves upward away from the tabletop and ball"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "reappears below the cylinder, still round and in approximately the same visible place"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "moves upward together with the cylinder"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The orange ball is not visible while it is hidden by the cylinder, so its state during that interval cannot be directly observed."
+  ]
+}

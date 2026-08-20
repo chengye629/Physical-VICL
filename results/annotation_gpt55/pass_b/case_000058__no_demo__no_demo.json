@@ -1,0 +1,356 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "blue horizontal block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "red vertical block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "yellow vertical block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "pink rectangular block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e5",
+        "e6",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "dark holder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "background wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": []
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "relation_reconfiguration",
+      "type": "support_change",
+      "raw_type": "pink block gains support on top of the blue block after being lowered",
+      "participants": {
+        "target": [
+          "obj_4"
+        ],
+        "support": [
+          "obj_1"
+        ],
+        "tool": [
+          "obj_5"
+        ]
+      },
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e6",
+        "e8"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "pink block translates downward toward the block structure while the holder moves with it",
+        "participants": {
+          "target": [
+            "obj_4"
+          ],
+          "tool": [
+            "obj_5"
+          ]
+        },
+        "evidence_refs": [
+          "e3",
+          "e4"
+        ]
+      },
+      {
+        "family": "rigid_motion",
+        "type": "rotation",
+        "raw_type": "pink block reorients from a slight slant to a more vertical pose",
+        "participants": {
+          "target": [
+            "obj_4"
+          ]
+        },
+        "evidence_refs": [
+          "e6"
+        ]
+      },
+      {
+        "family": "contact_loading",
+        "type": "sustained_contact",
+        "raw_type": "pink block remains in sustained contact with the top of the blue block",
+        "participants": {
+          "target": [
+            "obj_4",
+            "obj_1"
+          ],
+          "support": [
+            "obj_1"
+          ]
+        },
+        "evidence_refs": [
+          "e5",
+          "e8"
+        ]
+      }
+    ],
+    "action": {
+      "family": "transport",
+      "type": "lower",
+      "raw_action": "the dark holder lowers the pink block onto the blue horizontal block",
+      "participants": {
+        "tool": [
+          "obj_5"
+        ],
+        "target": [
+          "obj_4"
+        ],
+        "support": [
+          "obj_1"
+        ]
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "lower end of the pink block establishes contact with the top surface of the blue block"
+      },
+      "before_state": "above the blue block with a visible gap",
+      "after_state": "touching the top surface of the blue block near the center",
+      "evidence_refs": [
+        "e2",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "relation",
+        "type": "support_gain",
+        "raw_transition": "pink block becomes supported while standing on the blue block"
+      },
+      "before_state": "descending from above the block structure",
+      "after_state": "upright on top of the blue horizontal block",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "downward motion stops after the pink block reaches the blue block"
+      },
+      "before_state": "moving downward toward the blue block",
+      "after_state": "remaining upright on the blue block",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "orientation changes from slightly slanted to more vertical"
+      },
+      "before_state": "slanted while approaching or contacting the blue block",
+      "after_state": "more vertical while standing on the blue block",
+      "evidence_refs": [
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "top surface of the blue block receives contact from the pink block"
+      },
+      "before_state": "blue block supports the existing red and yellow block arrangement without the pink block on top",
+      "after_state": "blue block also supports contact from the upright pink block",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "holder moves upward away after the pink block is placed"
+      },
+      "before_state": "holder is above the pink block during descent and contact",
+      "after_state": "holder moves upward and out of the immediate visible area",
+      "evidence_refs": [
+        "e4",
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "guided contact from the holder and the blue support brings the pink block into an upright supported pose",
+      "linked_process": "primary",
+      "object_ids": [
+        "obj_4",
+        "obj_5",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "persistent contact between the pink and blue blocks maintains the pink block on the support without visible deformation or fracture",
+      "linked_process": "secondary",
+      "object_ids": [
+        "obj_4",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e8",
+        "e10"
+      ]
+    }
+  ]
+}

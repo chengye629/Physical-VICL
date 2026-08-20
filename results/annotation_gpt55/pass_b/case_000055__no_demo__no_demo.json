@@ -1,0 +1,405 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "glass bowl",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "container",
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "transparent"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "red liquid",
+      "axes": {
+        "entity_kind": "liquid_body",
+        "event_roles": [
+          "target",
+          "medium"
+        ],
+        "material_phase": "liquid",
+        "physical_properties": [
+          "translucent"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "not_applicable"
+      },
+      "evidence_refs": [
+        "e1",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "upright red strip",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "source",
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "combustible"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "flame",
+      "axes": {
+        "entity_kind": "gas_or_vapor",
+        "event_roles": [
+          "target",
+          "source"
+        ],
+        "material_phase": "gas",
+        "physical_properties": [
+          "emissive"
+        ],
+        "initial_motion_state": "oscillating",
+        "initial_integrity_state": "not_applicable"
+      },
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "transparent cylinder",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "tool",
+          "container"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "transparent"
+        ],
+        "initial_motion_state": "translating",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "gray cloudy material",
+      "axes": {
+        "entity_kind": "aerosol_or_smoke",
+        "event_roles": [
+          "product",
+          "medium"
+        ],
+        "material_phase": "mixed",
+        "physical_properties": [
+          "translucent"
+        ],
+        "initial_motion_state": "unknown",
+        "initial_integrity_state": "not_applicable"
+      },
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "combustion",
+      "type": null,
+      "raw_type": "flame shrinking and extinguishing after enclosure",
+      "object_ids": [
+        "obj_3",
+        "obj_4",
+        "obj_5"
+      ],
+      "event_roles": [
+        {
+          "role": "source",
+          "object_ids": [
+            "obj_3",
+            "obj_4"
+          ]
+        },
+        {
+          "role": "target",
+          "object_ids": [
+            "obj_4"
+          ]
+        },
+        {
+          "role": "container",
+          "object_ids": [
+            "obj_5"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "relation_reconfiguration",
+        "type": "insertion",
+        "raw_type": "transparent cylinder moves down around the flame and strip with its lower rim entering the bowl",
+        "object_ids": [
+          "obj_1",
+          "obj_3",
+          "obj_4",
+          "obj_5"
+        ],
+        "event_roles": [
+          {
+            "role": "container",
+            "object_ids": [
+              "obj_1",
+              "obj_5"
+            ]
+          },
+          {
+            "role": "target",
+            "object_ids": [
+              "obj_3",
+              "obj_4"
+            ]
+          },
+          {
+            "role": "tool",
+            "object_ids": [
+              "obj_5"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e4",
+          "e5",
+          "e10"
+        ]
+      },
+      {
+        "family": "fluid_motion",
+        "type": "bulk_flow",
+        "raw_type": "red liquid redistributes upward inside the cylinder",
+        "object_ids": [
+          "obj_2",
+          "obj_5"
+        ],
+        "event_roles": [
+          {
+            "role": "target",
+            "object_ids": [
+              "obj_2"
+            ]
+          },
+          {
+            "role": "container",
+            "object_ids": [
+              "obj_5"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e11"
+        ]
+      },
+      {
+        "family": "gas_particulate_motion",
+        "type": "gas_emission",
+        "raw_type": "gray cloudy smoky material appears inside the cylinder",
+        "object_ids": [
+          "obj_4",
+          "obj_6",
+          "obj_5"
+        ],
+        "event_roles": [
+          {
+            "role": "source",
+            "object_ids": [
+              "obj_4"
+            ]
+          },
+          {
+            "role": "product",
+            "object_ids": [
+              "obj_6"
+            ]
+          },
+          {
+            "role": "container",
+            "object_ids": [
+              "obj_5"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e6",
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "transport",
+      "type": "lower",
+      "raw_action": "transparent cylinder is lowered from above over the lit strip",
+      "actor_object_ids": [],
+      "acted_object_ids": [
+        "obj_5"
+      ],
+      "target_object_ids": [
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "relation",
+        "type": "containment_gain",
+        "raw_transition": "transparent cylinder comes to surround the flame and red strip, with its lower rim inside the bowl"
+      },
+      "evidence_refs": [
+        "e5",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "thermal_reaction",
+        "type": "burning_to_extinguished",
+        "raw_transition": "flame becomes smaller and less bright, then is no longer visible"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "red liquid surface becomes visibly higher inside the cylinder than outside it in the bowl"
+      },
+      "evidence_refs": [
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "smoke_emission_onset",
+        "raw_transition": "gray cloudy material appears inside the transparent cylinder"
+      },
+      "evidence_refs": [
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "red strip changes from upright to tilted inside the cylinder"
+      },
+      "evidence_refs": [
+        "e2",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "chemical_energy_release",
+      "raw_mechanism": "burning at the strip produces the visible flame before the flame shrinks and stops",
+      "object_ids": [
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "pressure_gradient",
+      "raw_mechanism": "a pressure difference associated with the enclosed cylinder region drives red liquid to a higher level inside the cylinder",
+      "object_ids": [
+        "obj_2",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "family": "energy_reaction",
+      "type": "mass_transport",
+      "raw_mechanism": "material from the burning region is transported into the enclosed cylinder volume as gray cloudiness",
+      "object_ids": [
+        "obj_4",
+        "obj_6",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e9"
+      ]
+    }
+  ]
+}

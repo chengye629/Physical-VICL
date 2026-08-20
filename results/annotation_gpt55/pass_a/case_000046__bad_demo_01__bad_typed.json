@@ -1,0 +1,295 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A white crumpled piece moves downward inside a clear vessel and ends up on the surface region above blue liquid.",
+  "raw_event_description": "The scene starts with a tall clear vessel on a table, containing blue liquid with a green horizontal layer or band at its upper surface. A white crumpled piece is visible near the upper opening area of the vessel. After several still frames, the white piece moves downward through the clear interior, appears blurred during the descent, reaches the green surface region, and remains there as a crumpled white cluster while the vessel and liquids stay in place.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The vessel, liquid levels, green surface band, and the white crumpled piece near the top are visible before the main visible motion begins."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "clear vessel",
+      "visible_form": "tall transparent cylindrical container with a narrower upper neck and open top area",
+      "material_description": "clear glossy material with bright vertical reflections",
+      "visible_properties": [
+        "transparent",
+        "upright",
+        "stationary",
+        "tall",
+        "reflective"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact and continuous.",
+      "event_role_hints": [
+        "contains the visible liquids and the moving white piece"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "blue liquid",
+      "visible_form": "blue volume filling the lower portion of the vessel",
+      "material_description": "opaque or semi-opaque blue fluid-looking region",
+      "visible_properties": [
+        "blue",
+        "level upper boundary",
+        "stationary before the main event"
+      ],
+      "initial_motion_description": "No visible motion before the main event.",
+      "initial_integrity_description": "Continuous blue region in the lower vessel.",
+      "event_role_hints": [
+        "lower contents of the vessel"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "green surface band",
+      "visible_form": "thin green horizontal band or layer at the top of the blue liquid",
+      "material_description": "green colored visible layer or surface region",
+      "visible_properties": [
+        "green",
+        "horizontal",
+        "thin",
+        "stationary before the main event"
+      ],
+      "initial_motion_description": "No visible motion before the main event.",
+      "initial_integrity_description": "Appears as a continuous band across the vessel interior.",
+      "event_role_hints": [
+        "surface region where the white piece later arrives"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "white crumpled piece",
+      "visible_form": "small irregular crumpled white piece",
+      "material_description": "white opaque wrinkled material",
+      "visible_properties": [
+        "white",
+        "irregular",
+        "crumpled",
+        "small relative to vessel"
+      ],
+      "initial_motion_description": "Initially visible near the upper opening area with no apparent motion.",
+      "initial_integrity_description": "Appears as one crumpled piece.",
+      "event_role_hints": [
+        "main moving object"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "blue top clips or handles",
+      "visible_form": "two blue curved pieces attached near the top sides of the vessel",
+      "material_description": "blue solid-looking glossy parts",
+      "visible_properties": [
+        "blue",
+        "stationary",
+        "symmetrically placed near top"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appear intact.",
+      "event_role_hints": [
+        "visible top attachments near the initial position of the white piece"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "table",
+      "visible_form": "flat wooden tabletop beneath the vessel",
+      "material_description": "wood-toned surface with visible grain",
+      "visible_properties": [
+        "flat",
+        "stationary",
+        "wood-colored"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears continuous.",
+      "event_role_hints": [
+        "supporting surface for the vessel"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "stands upright on",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "occupies the lower portion inside",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "lies horizontally at the upper boundary of the blue region inside",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is initially visible near the upper opening area above the liquid surface region",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The clear vessel is upright on a wooden tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A blue region fills the lower portion of the vessel."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A green horizontal band is visible along the top of the blue region."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A white crumpled piece is visible near the upper opening area of the vessel."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The white crumpled piece appears lower inside the clear vessel than in the early frames."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The white piece appears blurred during its downward displacement."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The white crumpled piece is located at the green surface region above the blue liquid."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The white piece remains visible as a crumpled cluster on the surface region."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The blue liquid and green band remain inside the lower portion of the vessel after the white piece arrives."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The vessel stays centered and upright throughout the clip."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The background wall and tabletop remain fixed relative to the frame."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The setup is static with the white piece near the upper opening and the liquids below."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The white crumpled piece is visible near the top of the vessel with no apparent motion."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The blue liquid remains as a still lower region."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The green band remains horizontal at the top of the blue region."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The white piece changes position from the upper area toward the liquid surface region."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The white crumpled piece moves downward inside the clear vessel."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The white piece is now at the green surface region and remains visible there."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The white piece stays as a crumpled cluster at the surface region above the blue liquid."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The blue liquid remains in the lower portion of the vessel."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The green band remains visible around the surface region where the white piece is located."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10",
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact attachment or support condition of the white piece near the top before it moves is not fully visible."
+  ]
+}

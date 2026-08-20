@@ -1,0 +1,311 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A lit slender stick is positioned at the opening of a water-filled glass, and the visible flame shrinks and disappears while the darkened tip remains near the liquid surface.",
+  "raw_event_description": "A transparent glass containing clear liquid sits on a wooden tabletop. A slender tan stick enters diagonally from the upper left with a darkened end at the glass opening. A yellow-orange flame is visible at the end of the stick at the start. The flame flickers and changes shape while the stick end is held near the rim and liquid surface. The stick end moves slightly farther into the mouth of the glass, the flame becomes smaller, and then the flame is no longer visible. The darkened end remains visible near the liquid surface inside the glass opening.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The glass, liquid, stick, flame, tabletop, and background are visible.",
+      "The flame is already present on the stick at the start.",
+      "The stick end is positioned at the glass opening near the liquid surface."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "glass",
+      "visible_form": "transparent cylindrical drinking glass with rounded rim",
+      "material_description": "clear reflective transparent material",
+      "visible_properties": [
+        "transparent",
+        "reflective",
+        "open top",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "intact and upright",
+      "event_role_hints": [
+        "contains liquid",
+        "receives the stick tip near its opening"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "clear liquid",
+      "visible_form": "clear volume filling most of the glass with a visible upper surface",
+      "material_description": "transparent colorless liquid",
+      "visible_properties": [
+        "transparent",
+        "horizontal visible surface",
+        "inside glass"
+      ],
+      "initial_motion_description": "no visible bulk motion",
+      "initial_integrity_description": "continuous liquid volume inside the glass",
+      "event_role_hints": [
+        "located below the burning stick tip"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "slender stick",
+      "visible_form": "long thin tan rod entering diagonally from upper left",
+      "material_description": "tan fibrous-looking solid with a blackened end",
+      "visible_properties": [
+        "thin",
+        "diagonal orientation",
+        "one end darkened"
+      ],
+      "initial_motion_description": "held nearly steady with small visible shifts at the tip",
+      "initial_integrity_description": "continuous rod shape, with darkened end",
+      "event_role_hints": [
+        "carries the visible flame at its end",
+        "its end is placed near the glass opening and liquid surface"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "flame",
+      "visible_form": "yellow-orange luminous teardrop-shaped region at the darkened stick end",
+      "material_description": "visible glowing yellow-orange shape with darker base",
+      "visible_properties": [
+        "luminous",
+        "flickering",
+        "changes shape",
+        "disappears later"
+      ],
+      "initial_motion_description": "flickers and changes outline while attached to the stick end",
+      "initial_integrity_description": "visible continuous flame shape at the start",
+      "event_role_hints": [
+        "visible at the stick tip early",
+        "shrinks and disappears later"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "tabletop",
+      "visible_form": "flat wooden surface underneath the glass",
+      "material_description": "brown wood-grain surface",
+      "visible_properties": [
+        "flat",
+        "brown",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "intact visible surface",
+      "event_role_hints": [
+        "supports the glass"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "glass stands upright on the tabletop",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "clear liquid is inside the glass below the rim",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "stick extends diagonally into the area above the glass opening",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "flame is located at the darkened end of the stick",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A transparent glass stands upright on a wooden tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Clear liquid fills most of the glass and has a visible upper surface below the rim."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A long thin tan stick enters diagonally from the upper left toward the glass opening."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A yellow-orange flame is visible at the darkened end of the stick near the glass rim."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The flame changes outline and height while remaining at the stick end."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The darkened stick end is positioned slightly farther inside the circular opening of the glass."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The visible flame becomes smaller near the darkened stick end."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The yellow-orange flame is no longer visible."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The darkened end of the stick remains visible near the liquid surface inside the glass opening."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The glass remains in the same position on the tabletop throughout the clip."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The camera view stays centered on the glass and stick without a scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The glass of clear liquid is already present on the tabletop.",
+        "The stick is already angled into the area of the glass opening.",
+        "The flame is already visible at the stick end."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "glass remains upright and stationary"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "liquid remains inside the glass with a visible surface"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "stick is held diagonally with its darkened end near the rim"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "flame is visible and attached to the darkened stick end"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The flame flickers and changes shape.",
+        "The darkened end of the stick appears slightly farther inside the glass opening."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "stick end shifts slightly within the glass opening"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "flame changes outline and height at the stick end"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The visible flame becomes smaller.",
+        "The flame disappears.",
+        "The darkened stick end remains near the liquid surface."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "flame shrinks and then is no longer visible"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "darkened stick end remains visible inside the glass opening"
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The tabletop and background remain unchanged.",
+        "The glass remains stationary in the frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "glass does not visibly translate or tip"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "tabletop remains stationary"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact position of the darkened stick end relative to the liquid surface is partially obscured by glass reflections and the rim."
+  ]
+}

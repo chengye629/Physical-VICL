@@ -1,0 +1,327 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "glass bowl",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "upright strip",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "combustible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "flame",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "oscillating",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e9",
+        "e13"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "transparent cylinder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool",
+        "container",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e10",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "combustion",
+      "type": null,
+      "raw_type": "flame extinguishing after being enclosed by the lowered transparent cylinder",
+      "participant_object_ids": [
+        "obj_3",
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e7",
+        "e9",
+        "e13"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "transparent cylinder descends downward over the flame and strip",
+        "participant_object_ids": [
+          "obj_5"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6",
+          "e12"
+        ]
+      },
+      {
+        "family": "gas_particulate_motion",
+        "type": null,
+        "raw_type": "grayish clouding appears inside the transparent cylinder",
+        "participant_object_ids": [
+          "obj_4",
+          "obj_5"
+        ],
+        "evidence_refs": [
+          "e8"
+        ]
+      },
+      {
+        "family": "relation_reconfiguration",
+        "type": "containment_transfer",
+        "raw_type": "red liquid becomes visible within the lower part of the transparent cylinder",
+        "participant_object_ids": [
+          "obj_2",
+          "obj_5",
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "transport",
+      "type": "lower",
+      "raw_action": "a transparent cylindrical container is lowered from above around the flame and upright strip",
+      "acted_object_ids": [
+        "obj_5"
+      ],
+      "target_object_ids": [
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed"
+    }
+  },
+  "impacts": [
+    {
+      "affected_object_id": "obj_5",
+      "axis": "motion",
+      "type": "motion_onset",
+      "raw_transition": "transparent cylinder changes from being partly above the scene to descending into the bowl area",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "affected_object_id": "obj_5",
+      "axis": "relation",
+      "type": "containment_gain",
+      "raw_transition": "transparent cylinder comes to surround and enclose the flame and upper part of the strip",
+      "evidence_refs": [
+        "e6",
+        "e12"
+      ]
+    },
+    {
+      "affected_object_id": "obj_4",
+      "axis": "geometry",
+      "type": "expanded",
+      "raw_transition": "flame appears larger and elongated while inside the transparent cylinder",
+      "evidence_refs": [
+        "e7"
+      ]
+    },
+    {
+      "affected_object_id": "obj_4",
+      "axis": "thermal_reaction",
+      "type": "burning_to_extinguished",
+      "raw_transition": "visible burning flame changes shape and then disappears; no visible flame remains later",
+      "evidence_refs": [
+        "e7",
+        "e9",
+        "e13"
+      ]
+    },
+    {
+      "affected_object_id": "obj_5",
+      "axis": "optical_visibility",
+      "type": "visibility_decrease",
+      "raw_transition": "interior of the transparent cylinder becomes grayish and clouded",
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "affected_object_id": "obj_2",
+      "axis": "emission_transport",
+      "type": "material_transfer",
+      "raw_transition": "red-orange liquid becomes visible inside the lower part of the transparent cylinder",
+      "evidence_refs": [
+        "e10"
+      ]
+    },
+    {
+      "affected_object_id": "obj_3",
+      "axis": "motion",
+      "type": null,
+      "raw_transition": "upright strip changes from vertical to diagonally leaning inside the transparent cylinder",
+      "evidence_refs": [
+        "e3",
+        "e11"
+      ]
+    },
+    {
+      "affected_object_id": "obj_5",
+      "axis": "motion",
+      "type": "motion_arrest",
+      "raw_transition": "transparent cylinder ends upright and stationary inside the bowl",
+      "evidence_refs": [
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "chemical_energy_release",
+      "raw_mechanism": "combustion in the visible flame produces light and heat before the flame stops being visible",
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e9",
+        "e13"
+      ]
+    },
+    {
+      "family": "energy_reaction",
+      "type": "mass_transport",
+      "raw_mechanism": "lowering the cylinder changes gas exchange around the flame region, associated with the visible flame extinguishing",
+      "evidence_refs": [
+        "e6",
+        "e9",
+        "e13"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "pressure_gradient",
+      "raw_mechanism": "a pressure difference across the liquid boundary drives red liquid into the lower part of the transparent cylinder",
+      "evidence_refs": [
+        "e10"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "gray suspended clouding inside the transparent cylinder scatters light and reduces interior visibility",
+      "evidence_refs": [
+        "e8"
+      ]
+    }
+  ]
+}

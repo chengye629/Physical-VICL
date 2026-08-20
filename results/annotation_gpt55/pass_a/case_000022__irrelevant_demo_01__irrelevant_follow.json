@@ -1,0 +1,340 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A red liquid stream runs from a dispenser tap into a clear bottle, and the bottle’s red liquid level rises over time.",
+  "raw_event_description": "At the start, a clear ridged beverage dispenser containing red liquid sits on a woven stand, with its tap centered above the mouth of a clear bottle. A narrow red liquid stream is already extending from the tap into the bottle. Across the video, the stream remains visible and continuous, splashing into the liquid collected at the bottom of the bottle. The red liquid level inside the bottle gradually rises while the dispenser, stand, bottle, table, and camera view remain otherwise stationary.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The dispenser, tap, stream, and receiving bottle are visible at the start.",
+      "The red stream is already present in the first frame.",
+      "The bottle already contains some red liquid at the bottom."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "beverage dispenser",
+      "visible_form": "large clear ridged container with a lower tap and a cropped upper lid area",
+      "material_description": "transparent rigid container with vertical ridges and reflective highlights",
+      "visible_properties": [
+        "clear walls",
+        "cylindrical body",
+        "contains red liquid",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "holds visible red liquid",
+        "tap area aligns above receiving bottle"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "dispenser tap",
+      "visible_form": "small protruding tap fixture on the front of the dispenser",
+      "material_description": "dark and shiny metallic-looking fixture with a small handle and outlet",
+      "visible_properties": [
+        "mounted on dispenser front",
+        "centered above bottle opening",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact and attached",
+      "event_role_hints": [
+        "red liquid stream is visibly connected to its lower outlet"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "red liquid in dispenser",
+      "visible_form": "red liquid volume filling the lower portion of the dispenser",
+      "material_description": "red translucent to opaque fluid appearance",
+      "visible_properties": [
+        "horizontal upper surface",
+        "red color",
+        "contained inside clear dispenser"
+      ],
+      "initial_motion_description": "no obvious surface motion visible inside the dispenser",
+      "initial_integrity_description": "continuous visible volume",
+      "event_role_hints": [
+        "same color as the stream and liquid in the bottle"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "receiving bottle",
+      "visible_form": "clear upright bottle or jar with a narrow opening and ribbed sides",
+      "material_description": "transparent rigid container with reflective highlights and horizontal ridges",
+      "visible_properties": [
+        "upright",
+        "open top visible",
+        "stationary",
+        "partly filled with red liquid"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "receives visible stream through its opening"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "red liquid stream",
+      "visible_form": "narrow vertical red strand extending from tap outlet into bottle",
+      "material_description": "red fluid appearance with slight variation in thickness",
+      "visible_properties": [
+        "continuous-looking stream",
+        "red color",
+        "extends downward between tap and bottle"
+      ],
+      "initial_motion_description": "visible continuous downward motion into the bottle",
+      "initial_integrity_description": "unbroken visible strand at the start",
+      "event_role_hints": [
+        "connects tap outlet to liquid in receiving bottle"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "red liquid in bottle",
+      "visible_form": "red liquid pool occupying the bottom portion of the clear bottle",
+      "material_description": "red fluid with a foamy or bubbly surface region at times",
+      "visible_properties": [
+        "red color",
+        "surface level visible through bottle",
+        "level increases over time"
+      ],
+      "initial_motion_description": "surface shows visible disturbance where the stream meets it",
+      "initial_integrity_description": "continuous visible liquid volume",
+      "event_role_hints": [
+        "accumulates in the receiving bottle"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "woven stand",
+      "visible_form": "round woven basket-like support under the dispenser",
+      "material_description": "brown and tan woven strands",
+      "visible_properties": [
+        "circular",
+        "textured",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the dispenser visibly above the table"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "wooden table",
+      "visible_form": "flat tabletop beneath the stand and bottle",
+      "material_description": "light brown wood-like surface",
+      "visible_properties": [
+        "flat",
+        "stationary",
+        "supports objects"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned on top of the woven stand",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is mounted on the front lower area of the dispenser",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is aligned above the opening of the receiving bottle",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "extends from the tap outlet into the receiving bottle",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "is visible inside the bottom portion of the receiving bottle",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The clear beverage dispenser rests on a round woven stand."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A tap fixture is visible on the front lower part of the dispenser."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The tap outlet is positioned directly above the clear bottle opening."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A narrow red stream is visible between the tap outlet and the bottle."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "Red liquid is visible at the bottom of the receiving bottle."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The red stream remains visible from the tap into the bottle."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The surface of the red liquid in the bottle is disturbed where the stream meets it."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The red liquid level in the bottle is higher than at the start."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The red liquid level in the bottle is higher than in the middle portion."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The dispenser, stand, bottle, and table stay in the same visible positions."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "No scene cut is visible."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The camera framing remains steady."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The event is already underway at the first visible moment.",
+        "A clear receiving bottle sits below the dispenser tap with red liquid in its bottom."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "The red liquid stream is already extending from the tap into the bottle."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The red liquid inside the bottle occupies the lower portion of the bottle."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e10"
+      ],
+      "observations": [
+        "The red stream continues into the bottle.",
+        "The receiving bottle remains upright and stationary."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "The stream stays continuous-looking and centered in the bottle opening."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The liquid level in the bottle rises compared with the early stage, with visible surface disturbance."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The same pouring arrangement remains visible.",
+        "The bottle contains more red liquid than earlier in the clip."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "The stream remains visible from the tap into the bottle."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The red liquid level is visibly higher than before."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

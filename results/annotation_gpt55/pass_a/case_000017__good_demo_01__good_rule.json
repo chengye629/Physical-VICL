@@ -1,0 +1,393 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A tan rod extending from a round black object moves toward a right-side set of upright blocks, and the three right-side blocks tip down while the four left-side blocks remain upright.",
+  "raw_event_description": "At the start, seven narrow rectangular blocks stand upright on a wooden tabletop in two separated groups: four blocks on the left and three blocks on the right. A round black cylindrical object sits behind and to the right of the right-side group, with a green top piece and a tan rod visible near it. The tan rod changes orientation and extends leftward from the round object toward the rightmost black block. The rightmost black block in the right-side group leaves its upright position, followed by the white block and the other black block in that group also moving to down or tilted positions on the tabletop. The four blocks in the left-side group remain upright. The round black object stays in place, and the camera view remains steady.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The upright blocks, tabletop, round black object, green top piece, and tan rod area are visible before the block motion begins.",
+      "The right-side blocks are still upright in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal table surface with visible wood grain",
+      "material_description": "light brown wood-colored surface with grain pattern",
+      "visible_properties": [
+        "flat",
+        "horizontal",
+        "light brown",
+        "wood-grain patterned"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "continuous unbroken tabletop surface visible",
+      "event_role_hints": [
+        "supporting surface for the blocks and round object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "round black cylinder",
+      "visible_form": "short round black cylindrical object near the back-right of the tabletop",
+      "material_description": "dark smooth exterior surface",
+      "visible_properties": [
+        "black",
+        "cylindrical",
+        "low and wide"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact visible cylinder",
+      "event_role_hints": [
+        "near the moving tan rod"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "tan rod",
+      "visible_form": "thin straight tan stick-like rod extending from the area of the green piece on the round black cylinder",
+      "material_description": "tan wood-colored surface",
+      "visible_properties": [
+        "thin",
+        "straight",
+        "tan"
+      ],
+      "initial_motion_description": "initially near the round object; later visibly changes orientation",
+      "initial_integrity_description": "single continuous thin rod",
+      "event_role_hints": [
+        "moves toward the right-side upright blocks"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "green top piece",
+      "visible_form": "small green piece on top of the round black cylinder near the tan rod",
+      "material_description": "green visible surface",
+      "visible_properties": [
+        "green",
+        "small",
+        "on top of cylinder"
+      ],
+      "initial_motion_description": "no independent translation visible",
+      "initial_integrity_description": "intact small visible piece",
+      "event_role_hints": [
+        "located at the rod's base area"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "left group of four upright blocks",
+      "visible_form": "four narrow vertical rectangular blocks arranged in a row on the left side",
+      "material_description": "alternating black and white visible surfaces",
+      "visible_properties": [
+        "upright",
+        "rectangular",
+        "black-white-black-white order"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "all four blocks upright and separate",
+      "event_role_hints": [
+        "remain separate from the right-side falling blocks"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "right-left black block",
+      "visible_form": "narrow vertical black rectangular block, leftmost of the right-side group",
+      "material_description": "dark black surface",
+      "visible_properties": [
+        "black",
+        "rectangular",
+        "upright initially"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "upright and intact",
+      "event_role_hints": [
+        "part of right-side group that later moves down"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "right-middle white block",
+      "visible_form": "narrow vertical white rectangular block, middle of the right-side group",
+      "material_description": "light white surface",
+      "visible_properties": [
+        "white",
+        "rectangular",
+        "upright initially"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "upright and intact",
+      "event_role_hints": [
+        "part of right-side group that later moves down"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "right-right black block",
+      "visible_form": "narrow vertical black rectangular block, rightmost of the right-side group",
+      "material_description": "dark black surface",
+      "visible_properties": [
+        "black",
+        "rectangular",
+        "upright initially"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "upright and intact",
+      "event_role_hints": [
+        "nearest upright block to the moving tan rod"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_5",
+      "relation_description": "stands as a separate row to the left of the right-side group",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "is left of the white block in the right-side group",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_7",
+      "relation_description": "is between the two black blocks in the right-side group",
+      "object_id": "obj_8",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_8",
+      "relation_description": "stands closest to the round black cylinder among the upright blocks",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "extends from the green-piece area on top of the round black cylinder",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Seven narrow rectangular blocks are upright on the tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The left-side group contains four upright blocks in black-white-black-white order."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The right-side group contains three upright blocks in black-white-black order."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A round black cylindrical object sits behind and to the right of the right-side block group."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A small green piece is visible on top of the round black cylinder."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The tan rod changes orientation and extends leftward from the round black cylinder area."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The tan rod tip reaches the area of the rightmost black block in the right-side group."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The rightmost black block in the right-side group leaves its upright position."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The white block in the right-side group tilts away from upright."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The leftmost black block in the right-side group tilts away from upright."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The three right-side blocks are down or tilted on the tabletop."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The four left-side blocks remain upright."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The tan rod remains diagonally extended leftward from the round black cylinder area."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The round black cylinder stays in the same tabletop location."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "continuous",
+      "observation": "The camera framing remains steady without a visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The scene is arranged on a wooden tabletop with upright blocks in two separated groups.",
+        "The round black cylinder, green top piece, and tan rod are visible near the right-side group."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "The four left-side blocks stand upright and remain still."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The right-left black block stands upright."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "The right-middle white block stands upright."
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "The right-right black block stands upright near the round black cylinder."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The round black cylinder is stationary."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The tan rod changes its visible orientation toward the right-side blocks.",
+        "The blocks in the right-side group move from upright toward down positions."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The tan rod extends leftward and points toward the rightmost block."
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "The right-right black block tilts and moves down from upright."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "The right-middle white block tilts and moves down from upright."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The right-left black block tilts and moves down from upright."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ],
+      "observations": [
+        "The right-side group is no longer upright.",
+        "The left-side group remains upright.",
+        "The round black cylinder remains in place."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_6",
+          "observation": "The right-left black block rests down on the tabletop."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "The right-middle white block rests tilted or down among the right-side blocks."
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "The right-right black block rests down on the tabletop."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The four left-side blocks remain upright."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The tan rod remains diagonally extended from the round black cylinder area."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e15"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact contact point between the tan rod and the rightmost black block is not distinctly resolved in the provided frames."
+  ]
+}

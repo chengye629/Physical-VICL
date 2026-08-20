@@ -1,0 +1,352 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "black balloon",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e7",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "black circular base",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e13",
+        "e16"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "thin rod",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e13",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "flame",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "tool",
+        "source"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e16"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "balloon fragments",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "unknown",
+      "evidence_refs": [
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "faint wisps",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e15"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fracture_separation",
+      "type": "rupture",
+      "raw_type": "balloon bursts after flame contacts its lower surface",
+      "object_ids": [
+        "obj_1",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "rotation",
+        "raw_type": "rod and attached flame arc toward the balloon",
+        "object_ids": [
+          "obj_3",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6"
+        ]
+      },
+      {
+        "family": "combustion",
+        "type": "sustained_burning",
+        "raw_type": "small yellow-orange flame burns at the rod tip before contact",
+        "object_ids": [
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e4",
+          "e6"
+        ]
+      },
+      {
+        "family": "gas_particulate_motion",
+        "type": "gas_emission",
+        "raw_type": "brief faint wisps appear after the balloon rupture",
+        "object_ids": [
+          "obj_7"
+        ],
+        "evidence_refs": [
+          "e15"
+        ]
+      }
+    ],
+    "action": {
+      "family": "thermal",
+      "type": "heat",
+      "raw_action": "move a lit flame on a rod to the lower side of the balloon",
+      "actor_object_ids": [],
+      "tool_object_ids": [
+        "obj_3",
+        "obj_4"
+      ],
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "integrity",
+        "type": "ruptured",
+        "raw_transition": "intact glossy spherical balloon abruptly loses integrity and is no longer visible as a sphere"
+      },
+      "evidence_refs": [
+        "e1",
+        "e7",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "large spherical form disappears from its original position"
+      },
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "particle_emission_onset",
+        "raw_transition": "small dark pieces separate from the balloon's former position"
+      },
+      "evidence_refs": [
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "newly visible fragments move away, including upward and leftward motion"
+      },
+      "evidence_refs": [
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "flame is no longer visible after overlapping the balloon surface"
+      },
+      "evidence_refs": [
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "smoke_emission_onset",
+        "raw_transition": "faint translucent gray wisps briefly appear near the former balloon area"
+      },
+      "evidence_refs": [
+        "e15"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "rod remains extended from the base after the balloon is gone"
+      },
+      "evidence_refs": [
+        "e13",
+        "e14"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "heat_transfer",
+      "raw_mechanism": "thermal energy from the flame is applied at the balloon surface before the rupture",
+      "object_ids": [
+        "obj_1",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "pressure_gradient",
+      "raw_mechanism": "pressure difference across the inflated balloon drives rapid opening and outward fragment motion after the surface fails",
+      "object_ids": [
+        "obj_1",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "thin balloon material loses containment after localized flame contact",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10",
+        "e11"
+      ]
+    }
+  ]
+}

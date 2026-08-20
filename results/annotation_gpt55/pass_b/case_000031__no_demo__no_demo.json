@@ -1,0 +1,253 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "left red candle",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "combustible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "right red candle",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "left candle flame",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "product",
+        "target"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "left candle holder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support",
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "right candle holder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support",
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "background wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e7"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "combustion",
+      "type": "sustained_burning",
+      "raw_type": "lit candle flame burns continuously",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "role": "source"
+        },
+        {
+          "object_id": "obj_3",
+          "role": "product"
+        }
+      ],
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "light_emission",
+        "raw_type": "flame emits visible light with slight brightness variation",
+        "participants": [
+          {
+            "object_id": "obj_3",
+            "role": "source"
+          }
+        ],
+        "evidence_refs": [
+          "e2",
+          "e5"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_object_id": null,
+      "target_object_ids": [],
+      "evidence_refs": [
+        "e2",
+        "e7"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "multi_stage": false,
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5",
+        "e7"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "visible flame brightness varies slightly while the flame remains present"
+      },
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "flame outline changes slightly across frames"
+      },
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "chemical_energy_release",
+      "raw_mechanism": "ongoing combustion releases chemical energy in the candle flame",
+      "process_ref": "primary",
+      "object_ids": [
+        "obj_1",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "the flame produces visible light",
+      "process_ref": "secondary",
+      "object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e5"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "figurine",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "reflective"
+        ],
+        "initial_motion_state": "rotating",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e7",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "round base",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "reflective"
+        ],
+        "initial_motion_state": "unknown",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "light source",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "source"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "emissive"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e4",
+        "e6"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wall",
+      "axes": {
+        "entity_kind": "surface_or_region",
+        "event_roles": [
+          "medium",
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "shadow",
+      "axes": {
+        "entity_kind": "surface_or_region",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "not_applicable",
+        "physical_properties": [],
+        "initial_motion_state": "unknown",
+        "initial_integrity_state": "not_applicable"
+      },
+      "evidence_refs": [
+        "e3",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "tabletop",
+      "axes": {
+        "entity_kind": "surface_or_region",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "cable",
+      "axes": {
+        "entity_kind": "deformable_solid",
+        "event_roles": [],
+        "material_phase": "solid",
+        "physical_properties": [
+          "flexible"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "id": "primary_1",
+      "family": "rigid_motion",
+      "type": "rotation",
+      "raw_type": "figurine reorientation by rotation",
+      "participant_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "id": "secondary_1",
+        "family": "optical_interaction",
+        "type": "illumination_change",
+        "raw_type": "changing projected shadow pattern on the wall",
+        "participant_object_ids": [
+          "obj_1",
+          "obj_3",
+          "obj_4",
+          "obj_5"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e6",
+          "e9",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the setup is already lit and changing at the start",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_1",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e12"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "affected_object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "visible orientation progresses from a front-facing view through a side-facing profile to a rear-facing view"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "affected_object_id": "obj_5",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "wall-projected shadow outline changes from broad and centered to narrow side-profile-like and then broad and centered again"
+      },
+      "evidence_refs": [
+        "e3",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "affected_object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "the visible shadow pattern within the circular illuminated wall area changes over time"
+      },
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e9",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "the visible light source emits bright light toward the figurine and wall",
+      "object_ids": [
+        "obj_3",
+        "obj_4"
+      ],
+      "linked_process_ids": [
+        "secondary_1"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e6"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "absorption",
+      "raw_mechanism": "the figurine blocks incident light, producing a dark wall-projected silhouette whose outline changes with the figurine orientation",
+      "object_ids": [
+        "obj_1",
+        "obj_3",
+        "obj_4",
+        "obj_5"
+      ],
+      "linked_process_ids": [
+        "secondary_1"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    }
+  ]
+}

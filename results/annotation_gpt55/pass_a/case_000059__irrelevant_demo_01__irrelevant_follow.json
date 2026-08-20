@@ -1,0 +1,299 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A decorative teapot on a black circular base continuously changes its visible orientation while the camera view remains fixed.",
+  "raw_event_description": "At the beginning, the teapot is upright and centered on a black circular base on a wooden tabletop, with its red handle visible on the left and its red spout on the right. Over time, the teapot's features shift across the view: the red spout moves toward the front center, then later appears on the left side while the handle appears on the right. The blue floral body, green lid, green lower pedestal, and glossy highlights all change visible positions together. The tabletop and wall remain fixed in the frame, and no breakage, deformation, fluid, or emitted material is visible.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The teapot is fully visible and upright in the first frame.",
+      "The base, tabletop, and background wall are visible.",
+      "The orientation-changing process is already underway with no separate still pre-event interval visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "decorative teapot",
+      "visible_form": "Bulbous teapot with a curved red handle, curved red spout, blue rounded body with floral patterns, green lid, green lower pedestal, and small black-and-white knob on top.",
+      "material_description": "Glossy painted surfaces with bright reflected highlights; visible surface appears hard and intact.",
+      "visible_properties": [
+        "upright",
+        "multicolored",
+        "blue floral body",
+        "red handle",
+        "red spout",
+        "green lid",
+        "green lower pedestal",
+        "glossy"
+      ],
+      "initial_motion_description": "Already changing visible orientation at the start; no separate pre-event stillness is shown.",
+      "initial_integrity_description": "Appears intact, with handle, spout, lid, body, pedestal, and top knob all present.",
+      "event_role_hints": [
+        "main visible object undergoing orientation change"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black circular base",
+      "visible_form": "Short black cylindrical base below the teapot, with a flat circular top and rounded side.",
+      "material_description": "Glossy black surface with reflected highlights.",
+      "visible_properties": [
+        "black",
+        "circular",
+        "cylindrical",
+        "glossy",
+        "stationary in frame"
+      ],
+      "initial_motion_description": "The base remains centered in the frame; any rotation of the circular base itself is not visually resolved.",
+      "initial_integrity_description": "Appears intact and unchanged.",
+      "event_role_hints": [
+        "teapot is directly above it"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wooden tabletop",
+      "visible_form": "Flat horizontal tabletop extending across the lower part of the scene.",
+      "material_description": "Wood-toned surface with visible grain pattern.",
+      "visible_properties": [
+        "flat",
+        "horizontal",
+        "wood-toned"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact and continuous.",
+      "event_role_hints": [
+        "base is on top of it"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "plain wall",
+      "visible_form": "Plain light-colored vertical background behind the tabletop and teapot.",
+      "material_description": "Matte light surface with slight tonal variation.",
+      "visible_properties": [
+        "light-colored",
+        "vertical",
+        "plain"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears unchanged.",
+      "event_role_hints": [
+        "background reference"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The teapot is directly above the black circular base.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "The black circular base is on the wooden tabletop.",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "The wall is behind the teapot and tabletop.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The teapot is upright and centered above the black circular base."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The black circular base is positioned on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "A plain light wall remains behind the teapot and tabletop."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The red handle is visible on the left side of the teapot."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The red spout is visible on the right side of the teapot."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The red spout appears near the front center of the teapot."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The red handle is partly obscured behind the teapot body."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The red spout is visible on the left side of the teapot."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The red handle is visible on the right side of the teapot."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The floral pattern and bright highlights on the teapot body shift across the visible surface."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The teapot remains upright throughout the visible sequence."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "No visible breakage, deformation, liquid, vapor, flame, or detached fragments appear."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The tabletop edge and wall stay fixed relative to the frame."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The black circular base remains in the same image position."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The teapot starts centered and upright on the black base.",
+        "The red handle is on the viewer's left and the red spout is on the viewer's right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The teapot is already changing visible orientation."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The base remains centered under the teapot."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e10"
+      ],
+      "observations": [
+        "The teapot's features continue shifting across the view.",
+        "The red spout becomes front-facing near the center."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The teapot continues turning about a vertical direction as indicated by the changing positions of the spout, handle, floral pattern, and highlights."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The red spout is now on the viewer's left and the red handle is on the viewer's right.",
+        "The teapot remains upright and intact."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The teapot reaches a different visible orientation from the initial view."
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e3",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ],
+      "observations": [
+        "The background and tabletop remain fixed in the frame while the teapot's visible orientation changes."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The teapot maintains shape and upright posture while its visible side changes."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The base remains in the same frame position."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The tabletop shows no visible motion."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The wall shows no visible motion."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The black circular base is visually symmetric, so whether the base itself changes orientation is not distinguishable from the visible frames."
+  ]
+}

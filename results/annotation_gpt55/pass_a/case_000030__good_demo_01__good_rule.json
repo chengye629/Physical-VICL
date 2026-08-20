@@ -1,0 +1,374 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A red liquid enters a clear bottle in a tray, reaches the top, runs over the bottle exterior, and spreads across the tray.",
+  "raw_event_description": "The video begins with a small clear bottle standing upright in a black tray while a narrow red liquid stream is visible from a blue nozzle above the bottle opening. The red liquid level in the bottle is already high and continues rising. Near the later part of the video, red liquid appears at the bottle mouth and on the outside of the bottle, then forms streaks down the bottle and a spreading puddle on the tray surface to the right and front of the bottle.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "mid_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "A red liquid stream is already visible entering the bottle at the first frame.",
+      "The bottle, tray, nozzle, and liquid are clearly visible.",
+      "The beginning of the liquid transfer is not shown."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "clear bottle",
+      "visible_form": "small upright cylindrical container with a narrow neck and open top",
+      "material_description": "transparent, glossy, rigid-looking surface",
+      "visible_properties": [
+        "upright",
+        "transparent",
+        "narrow neck",
+        "partly filled at the start",
+        "becomes filled near the top"
+      ],
+      "initial_motion_description": "stationary in the tray",
+      "initial_integrity_description": "appears intact with no visible cracks or breakage",
+      "event_role_hints": [
+        "contains visible red liquid",
+        "receives the visible red stream",
+        "later has red liquid on its outer surface"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red liquid",
+      "visible_form": "opaque red fluid appearing as a narrow stream, contained volume, exterior streaks, and tray puddle",
+      "material_description": "smooth glossy red substance with liquid-like surface reflections",
+      "visible_properties": [
+        "red",
+        "opaque",
+        "glossy",
+        "forms stream",
+        "forms puddle",
+        "spreads over tray surface"
+      ],
+      "initial_motion_description": "a narrow red stream is visible entering the bottle",
+      "initial_integrity_description": "continuous visible stream and continuous contained volume at the start",
+      "event_role_hints": [
+        "visible substance transferred into the bottle",
+        "later appears outside the bottle and across the tray"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "blue nozzle",
+      "visible_form": "small blue spout-like part positioned above the bottle opening",
+      "material_description": "blue glossy rigid-looking piece",
+      "visible_properties": [
+        "blue",
+        "above bottle mouth",
+        "partially visible"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "adjacent to the visible red stream"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "red upper dispenser part",
+      "visible_form": "partially visible red ribbed container or cap-like structure above the bottle",
+      "material_description": "red rigid-looking surface with vertical ribbing",
+      "visible_properties": [
+        "red",
+        "ribbed",
+        "partially visible at top of frame"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports or surrounds the blue nozzle in the visible setup"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "black tray",
+      "visible_form": "rectangular shallow pan with raised edges",
+      "material_description": "dark matte to slightly glossy rigid-looking surface",
+      "visible_properties": [
+        "black",
+        "rectangular",
+        "raised rim",
+        "flat bottom area"
+      ],
+      "initial_motion_description": "stationary on the table",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "receives the visible red liquid after it leaves the bottle exterior"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "woven basket",
+      "visible_form": "round woven object in the background behind the bottle",
+      "material_description": "tan and multicolored woven strands",
+      "visible_properties": [
+        "round",
+        "woven texture",
+        "background object"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_7",
+      "name": "wooden table",
+      "visible_form": "flat tabletop surface beneath the tray",
+      "material_description": "light brown surface with wood-like grain",
+      "visible_properties": [
+        "flat",
+        "light brown",
+        "supports tray"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the clear bottle stands upright inside the black tray",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "the blue nozzle is positioned above the clear bottle opening",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "a narrow red liquid stream is visible between the blue nozzle and the bottle opening",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "red liquid is already visible inside the bottle at the start",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "the black tray rests on the wooden tabletop",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The clear bottle stands upright near the center of the black tray."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A blue nozzle is visible directly above the bottle opening."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A narrow red liquid stream is visible from the nozzle area into the bottle opening."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "Red liquid is visible inside the bottle, already occupying most of the bottle height."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The black tray remains on the light brown tabletop."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The visible red liquid level inside the bottle rises closer to the bottle mouth."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "Small pale bubbles or foam-like spots appear near the red liquid surface inside the bottle mouth."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "Red liquid appears at the bottle mouth and on the outer upper surface of the bottle."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "Vertical red streaks are visible on the outside of the bottle."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "A red puddle appears on the tray beside the bottle base."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The red puddle extends outward across the tray toward the right side of the frame."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The red puddle broadens and covers a larger area of the tray surface."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The red liquid stream from the nozzle area remains visible while the tray puddle is present."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The bottle, tray, nozzle, basket, and tabletop maintain fixed positions in the frame."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "continuous",
+      "observation": "The camera framing remains steady with no visible cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The setup is already active at the start of the visible clip."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "Red liquid is visible as a narrow stream entering the clear bottle."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The clear bottle remains upright and already contains red liquid."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The red liquid surface inside the bottle approaches the bottle mouth."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The visible red liquid volume inside the bottle increases."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The bottle remains stationary while the red liquid level changes inside it."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "Red liquid becomes visible outside the bottle and on the tray."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "Red liquid appears at the bottle mouth, forms streaks on the outside of the bottle, and spreads as a puddle on the tray."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The tray surface becomes partly covered by the spreading red puddle."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The bottle remains upright while red liquid is visible on its exterior."
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e5",
+        "e14",
+        "e15"
+      ],
+      "observations": [
+        "The background objects and main solid objects remain in stable positions."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The blue nozzle remains positioned above the bottle opening."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The red upper dispenser part remains partially visible above the bottle."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The woven basket remains stationary in the background."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "The tabletop remains stationary beneath the tray."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e15"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The very beginning of the red liquid transfer is not visible.",
+    "The upper red dispenser part is only partially visible at the top edge of the frame."
+  ]
+}

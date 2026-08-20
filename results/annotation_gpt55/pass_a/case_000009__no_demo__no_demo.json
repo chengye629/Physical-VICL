@@ -1,0 +1,243 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small blue round object enters from the left, moves rightward across a wooden tabletop, passes beyond the tabletop edge, and exits the right side of the view.",
+  "raw_event_description": "The video begins with a static view of a light-brown wooden tabletop beside a gray wall and a pale translucent sheet on the right. For several moments no moving object is visible. A small blue round object then appears from the left on the tabletop, travels rightward across the wooden surface, reaches the area near the tabletop's right edge, becomes visible against the wall/sheet area to the right of the tabletop, continues rightward, and leaves the frame.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The wooden tabletop, wall, and translucent sheet are visible.",
+      "The small blue moving object is not yet visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "wooden tabletop",
+      "visible_form": "flat rectangular horizontal surface with rounded front-right corner",
+      "material_description": "light-brown surface with visible wood-grain pattern",
+      "visible_properties": [
+        "light brown",
+        "wood grain visible",
+        "flat top surface",
+        "stationary throughout the clip"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears whole and unchanged",
+      "event_role_hints": [
+        "surface crossed by the blue object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "gray wall",
+      "visible_form": "large vertical background surface",
+      "material_description": "plain light-gray surface; material not otherwise identifiable",
+      "visible_properties": [
+        "light gray",
+        "vertical",
+        "stationary throughout the clip"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears continuous and unchanged",
+      "event_role_hints": [
+        "background behind the moving blue object near the end"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "translucent sheet",
+      "visible_form": "pale rectangular sheet or panel positioned vertically on the right side",
+      "material_description": "semi-transparent pale sheet; material not otherwise identifiable",
+      "visible_properties": [
+        "pale gray-white",
+        "translucent appearance",
+        "horizontal edge or fold line visible",
+        "stationary throughout the clip"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears whole and unchanged",
+      "event_role_hints": [
+        "right-side area near the tabletop edge"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "blue round object",
+      "visible_form": "small blue round object appearing as a circular disk or ball in the image",
+      "material_description": "solid blue surface with slight glossy highlights; material not otherwise identifiable",
+      "visible_properties": [
+        "blue",
+        "small relative to tabletop",
+        "round visible outline",
+        "motion blur while moving"
+      ],
+      "initial_motion_description": "not visible at the start; later appears moving rightward",
+      "initial_integrity_description": "appears intact while visible",
+      "event_role_hints": [
+        "only visibly moving object"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "positioned on the left side of the frame and adjacent to the gray wall in the background",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "positioned to the right of the wooden tabletop near its right edge",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "not visible in the initial view",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The early frames show a stationary wooden tabletop, gray wall, and translucent sheet."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "No blue round object is visible in the first part of the clip."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "middle",
+      "observation": "A small blue round object appears at the left side of the tabletop."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The blue round object occupies successively farther-right positions on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The blue round object shows visible motion blur while crossing the tabletop."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The blue round object reaches the area near the tabletop's right edge."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The blue round object is visible to the right of the tabletop against the wall and translucent-sheet area."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The blue round object continues rightward and leaves the visible frame."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The tabletop, wall, and translucent sheet remain in the same visible positions throughout the clip."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The blue round object remains visibly intact while it is in frame."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ],
+      "observations": [
+        "The setup is visible before the moving object appears."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The wooden tabletop remains stationary."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The gray wall remains stationary in the background."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The translucent sheet remains stationary on the right."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The blue round object is not visible."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The blue round object appears and traverses the tabletop from left toward right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The blue round object moves rightward across the wooden tabletop and reaches the tabletop's right-edge area."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10"
+      ],
+      "observations": [
+        "The blue round object is seen beyond the tabletop and then disappears from view."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The blue round object moves rightward in front of the wall/sheet area and exits the frame."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e9"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

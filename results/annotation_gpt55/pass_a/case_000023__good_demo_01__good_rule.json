@@ -1,0 +1,290 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A red liquid dispenser, spigot, and partially filled glass remain visible without a visible stream or scene-object motion.",
+  "raw_event_description": "Throughout the clip, a transparent beverage dispenser containing red-orange liquid sits on a woven stand on a wooden tabletop. A small transparent glass or jar containing red-orange liquid is positioned below the dispenser spigot. The spigot handle stays in the same angled position, no visible liquid stream appears between the spigot and the lower glass, and the visible liquid levels appear unchanged.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The dispenser, spigot, lower glass, liquid surfaces, stand, tabletop, and background wall are visible.",
+      "The first frame already shows the same arrangement maintained through the clip."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "beverage dispenser",
+      "visible_form": "large transparent ribbed container with a cylindrical body and neck at the top",
+      "material_description": "transparent reflective container, visually glass or clear plastic",
+      "visible_properties": [
+        "clear",
+        "ribbed sides",
+        "partly filled with red-orange liquid"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "intact visible container",
+      "event_role_hints": [
+        "holds red-orange liquid",
+        "has a spigot mounted near the lower front"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red-orange liquid in dispenser",
+      "visible_form": "horizontal volume of red-orange liquid inside the dispenser",
+      "material_description": "opaque or cloudy red-orange fluid appearance",
+      "visible_properties": [
+        "red-orange color",
+        "flat visible surface",
+        "contained inside dispenser"
+      ],
+      "initial_motion_description": "no visible surface motion",
+      "initial_integrity_description": "continuous visible liquid volume",
+      "event_role_hints": [
+        "visible liquid level remains steady"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "spigot",
+      "visible_form": "small front-mounted tap with a short outlet and angled handle",
+      "material_description": "shiny dark and silver reflective material cues",
+      "visible_properties": [
+        "front-facing",
+        "handle angled to the right",
+        "outlet positioned above lower glass"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "intact visible tap assembly",
+      "event_role_hints": [
+        "no visible stream below it"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "lower glass",
+      "visible_form": "small transparent jar-like glass with rounded shoulders and open top",
+      "material_description": "transparent reflective container, visually glass or clear plastic",
+      "visible_properties": [
+        "clear",
+        "upright",
+        "partly filled with red-orange liquid"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "intact visible container",
+      "event_role_hints": [
+        "positioned under the spigot"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "red-orange liquid in lower glass",
+      "visible_form": "pool of red-orange liquid in the bottom portion of the lower glass",
+      "material_description": "opaque or cloudy red-orange fluid appearance",
+      "visible_properties": [
+        "red-orange color",
+        "flat visible surface",
+        "contained in lower glass"
+      ],
+      "initial_motion_description": "no visible surface motion",
+      "initial_integrity_description": "continuous visible liquid volume",
+      "event_role_hints": [
+        "visible level appears unchanged"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "woven stand",
+      "visible_form": "round woven basket-like support under the dispenser",
+      "material_description": "tan and brown woven fiber appearance",
+      "visible_properties": [
+        "circular",
+        "stacked woven bands",
+        "supports dispenser visually"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "intact visible woven structure",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_7",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal table surface",
+      "material_description": "light brown wood grain appearance",
+      "visible_properties": [
+        "flat",
+        "light brown",
+        "visible grain pattern"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "intact visible surface",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_8",
+      "name": "background wall",
+      "visible_form": "plain vertical background surface",
+      "material_description": "light gray or white matte surface",
+      "visible_properties": [
+        "plain",
+        "light-colored"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "intact visible background",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "sits above the woven stand",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is attached to the front lower portion of the dispenser",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "stands below the spigot outlet",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is inside the lower glass",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is inside the dispenser",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "The large transparent dispenser remains positioned on top of the woven stand."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "The spigot remains mounted on the front lower area of the dispenser."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "The lower glass remains centered below the spigot outlet."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "Red-orange liquid is visible in the bottom portion of the lower glass."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "Red-orange liquid is visible inside the dispenser."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "No visible liquid stream appears between the spigot and the lower glass."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The spigot handle remains in the same angled position."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The visible liquid level in the lower glass appears unchanged."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The visible liquid level in the dispenser appears unchanged."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The camera framing remains essentially fixed on the centered dispenser and lower glass."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The arrangement remains static with the lower glass under the spigot and no visible pouring."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary on the woven stand"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains visible inside the dispenser with no apparent level change"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains fixed with no visible handle movement and no visible stream"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains stationary below the spigot"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "remains visible inside the lower glass with no apparent level change"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

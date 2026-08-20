@@ -1,0 +1,332 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small yellow round object appears near the upper part of a panel, moves downward through the arrangement of colored strips, and then remains on a central purple bent strip.",
+  "raw_event_description": "The scene begins with a vertical pale panel containing several colored flat strips and black side supports. After several still frames, a small yellow round object becomes visible below the upper green curved strip. It changes position downward and to the right, passes near the upper purple dotted horizontal strip, then moves lower toward the central purple bent strip. In the later frames the yellow object is visible on the purple bent strip and stays in the same visible place while the surrounding strips remain unchanged.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The panel, supports, and colored strips are visible in the first frame.",
+      "The small yellow moving object is not visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow round object",
+      "visible_form": "small round yellow object",
+      "material_description": "solid-looking yellow surface; exact material not visually identifiable",
+      "visible_properties": [
+        "yellow",
+        "small",
+        "round"
+      ],
+      "initial_motion_description": "not visible in the first frames; later appears and changes position across the panel",
+      "initial_integrity_description": "appears as one intact small round object when visible",
+      "event_role_hints": [
+        "main moving object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "vertical panel",
+      "visible_form": "large pale vertical rectangular panel with reflective areas",
+      "material_description": "smooth pale surface with glare and reflections",
+      "visible_properties": [
+        "large",
+        "vertical",
+        "pale",
+        "reflective"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "background surface for the visible event"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "upper green curved strip",
+      "visible_form": "short green curved flat strip near the upper part of the panel",
+      "material_description": "green patterned flat strip",
+      "visible_properties": [
+        "green",
+        "curved",
+        "patterned"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "near the first visible location of the yellow object"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "upper purple dotted strip",
+      "visible_form": "purple horizontal flat strip with dot pattern near the upper right",
+      "material_description": "purple dotted flat strip",
+      "visible_properties": [
+        "purple",
+        "horizontal",
+        "dotted"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "yellow object passes near it"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "blue slanted strip",
+      "visible_form": "blue rectangular flat strip slanting slightly downward toward the left",
+      "material_description": "blue striped flat strip",
+      "visible_properties": [
+        "blue",
+        "slanted",
+        "striped"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "located below the upper purple strip"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "central purple bent strip",
+      "visible_form": "purple angled or bent L-shaped flat strip near the center",
+      "material_description": "purple patterned flat strip",
+      "visible_properties": [
+        "purple",
+        "bent",
+        "angular"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "yellow object is later visible on it"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "lower green dotted strip",
+      "visible_form": "green horizontal dotted flat strip in the lower middle-left area",
+      "material_description": "green dotted flat strip",
+      "visible_properties": [
+        "green",
+        "horizontal",
+        "dotted"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_8",
+      "name": "bottom yellow striped strip",
+      "visible_form": "yellow horizontal striped flat strip near the bottom",
+      "material_description": "yellow striped flat strip",
+      "visible_properties": [
+        "yellow",
+        "horizontal",
+        "striped"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_9",
+      "name": "black side supports",
+      "visible_form": "black vertical frame pieces and handles on both sides of the panel",
+      "material_description": "dark rigid-looking frame surfaces",
+      "visible_properties": [
+        "black",
+        "vertical",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "surrounding support structure"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_3",
+      "relation_description": "attached or fixed-looking on the upper area of the vertical panel",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "positioned on the upper right area of the vertical panel",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "positioned near the center of the panel below the upper green strip and left of the blue slanted strip",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "not visible in the first visible scene",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The vertical panel, colored strips, and black side supports are visible and stationary."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "No small yellow round object is visible in the first frames."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "middle",
+      "observation": "A small yellow round object becomes visible below the upper green curved strip."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The small yellow round object changes position downward and to the right across the pale panel."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The small yellow round object is visible near the upper purple dotted horizontal strip."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The small yellow round object moves lower toward the central purple bent strip."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The small yellow round object is visible on the central purple bent strip."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The small yellow round object remains at the same visible location on the central purple bent strip through the final frames."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The colored strips and black side supports show no visible position change."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The camera view remains fixed without visible panning, tilting, or zooming."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ],
+      "observations": [
+        "The setup is visible before the yellow object appears."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "vertical panel remains stationary"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "not visible"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The yellow object appears and moves through the upper-to-central portion of the panel."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "appears below the upper green curved strip and changes position downward and to the right"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "passes near the upper purple dotted strip"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "moves toward the central purple bent strip"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The yellow object is visible on the purple bent strip and no longer changes visible position."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains at a fixed visible location on the central purple bent strip"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "central purple bent strip remains stationary and visibly intact"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The yellow object is not visible at the start, so its entry point before first appearance is not shown.",
+    "The exact surface contact between the yellow object and the colored strips is partly obscured by distance and glare."
+  ]
+}

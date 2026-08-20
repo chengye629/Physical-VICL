@@ -1,0 +1,281 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A yellow smiley-marked ball on a black circular platform stays in place while its visible markings gradually turn out of view.",
+  "raw_event_description": "The scene shows a yellow ball with black smiley markings sitting on a black circular platform on a wooden tabletop beside a vertical mirror. Across the video, the ball remains on the platform at the same scene location, while the smiley markings shift from facing the camera to the side and then become no longer visible on the front-facing surface. The mirror shows a reflected view of the same platform and ball throughout. The camera view remains steady.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The ball, platform, tabletop, mirror, and cord are clearly visible.",
+      "The visible change of the ball markings continues across the sequence rather than beginning from a distinct separate onset."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow smiley ball",
+      "visible_form": "small round yellow ball with black curved smile and eye markings visible at the start",
+      "material_description": "yellow textured-looking surface with black printed or drawn markings",
+      "visible_properties": [
+        "round",
+        "bright yellow",
+        "black face-like markings initially visible",
+        "surface texture visible"
+      ],
+      "initial_motion_description": "No separate pre-event motion interval is visible; at the start it is already on the platform.",
+      "initial_integrity_description": "Appears intact and undeformed.",
+      "event_role_hints": [
+        "object whose visible surface markings change orientation during the video"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black circular platform",
+      "visible_form": "low black round disk or base under the ball",
+      "material_description": "dark smooth-looking exterior",
+      "visible_properties": [
+        "circular",
+        "flat-topped",
+        "black"
+      ],
+      "initial_motion_description": "No visible translation at the start.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "supporting object under the ball"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "mirror",
+      "visible_form": "vertical reflective rectangular surface at the right side of the tabletop",
+      "material_description": "reflective surface with visible reflected scene",
+      "visible_properties": [
+        "vertical",
+        "reflective",
+        "rectangular edge visible"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "shows a reflected view of the ball and platform"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal brown wooden surface",
+      "material_description": "wood-grain colored surface",
+      "visible_properties": [
+        "horizontal",
+        "brown",
+        "flat"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "surface supporting the platform and mirror"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "black cord",
+      "visible_form": "thin black cable lying in a loose curve on the tabletop",
+      "material_description": "dark flexible-looking line",
+      "visible_properties": [
+        "thin",
+        "black",
+        "curved on tabletop"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears continuous and intact.",
+      "event_role_hints": [
+        "stationary scene object near the platform"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "white walls",
+      "visible_form": "two pale vertical wall surfaces meeting near the back corner",
+      "material_description": "plain matte-looking light surface",
+      "visible_properties": [
+        "light gray-white",
+        "vertical",
+        "plain"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "background"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned on top of",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is positioned on",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "reflects the ball and platform",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "lies on the tabletop near the platform",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A yellow ball with black smiley markings is visible on top of a black circular platform."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The black circular platform is on a wooden tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "A vertical mirror shows a reflected view of the ball and platform."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "A black cord lies across the tabletop near the platform."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The ball's black smiley markings face toward the camera."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The ball's black smiley markings appear shifted toward the left side of the visible ball surface."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The front-facing surface of the ball appears mostly yellow with the smiley markings no longer visible."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The ball remains seated on the platform throughout the visible sequence."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The platform, tabletop, mirror, cord, and walls keep fixed positions in the frame."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e5"
+      ],
+      "observations": [
+        "The setup is visible with the ball on the platform and its smiley markings facing the camera."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The ball is visible with black smiley markings on the camera-facing side."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The platform remains under the ball."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The mirror shows the reflected ball and platform."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The ball stays on the same platform while the visible marking position changes."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The smiley markings shift away from the center of the camera-facing side."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The platform remains in the same visible location on the tabletop."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The ball is still on the platform, and the visible front of the ball is mostly plain yellow."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The smiley markings are no longer visible on the front-facing surface."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The cord remains lying on the tabletop without visible displacement."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e9"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

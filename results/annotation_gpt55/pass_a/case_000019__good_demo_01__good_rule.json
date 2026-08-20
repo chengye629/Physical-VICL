@@ -1,0 +1,326 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A thin rod-like object moves near the right-side block row, after which the right-side blocks fall while the duck and left-side blocks remain upright.",
+  "raw_event_description": "The scene begins with a yellow duck-shaped toy centered on a wooden tabletop, with several small upright rectangular blocks arranged in a row on each side. A black round object sits behind the right-side blocks, and a thin light-colored rod is visible near it. During the video, the rod changes position toward the right-side row. The far-right black block on the right side tilts, followed by the neighboring right-side blocks leaning and falling into a cluster. By the end, the right-side blocks are slanted or lying on the tabletop, while the duck and the left-side row appear unchanged.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The duck, both block rows, the tabletop, and the black round object are visible.",
+      "The right-side blocks are upright before the visible falling event.",
+      "No scene cut is visible at the start."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow duck toy",
+      "visible_form": "Small duck-shaped toy with rounded body, head, side wings, orange beak, and black eyes.",
+      "material_description": "Smooth bright yellow surface with orange and black colored details.",
+      "visible_properties": [
+        "bright yellow",
+        "rounded",
+        "upright",
+        "centered in scene"
+      ],
+      "initial_motion_description": "No visible motion before the main event.",
+      "initial_integrity_description": "Appears intact and unchanged.",
+      "event_role_hints": [
+        "central stationary object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left-side block row",
+      "visible_form": "Several small upright rectangular blocks arranged in a row to the left of the duck.",
+      "material_description": "Alternating dark black and pale light-colored visible surfaces.",
+      "visible_properties": [
+        "rectangular",
+        "upright",
+        "spaced apart",
+        "black and pale-colored"
+      ],
+      "initial_motion_description": "No visible motion before the main event.",
+      "initial_integrity_description": "Blocks appear separate and upright.",
+      "event_role_hints": [
+        "remain upright during the visible event"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "right-side block row",
+      "visible_form": "Several small upright rectangular blocks arranged in a row to the right of the duck.",
+      "material_description": "Alternating dark black and pale light-colored visible surfaces.",
+      "visible_properties": [
+        "rectangular",
+        "upright at start",
+        "spaced apart",
+        "black and pale-colored"
+      ],
+      "initial_motion_description": "No visible motion before the main event.",
+      "initial_integrity_description": "Blocks appear separate and upright.",
+      "event_role_hints": [
+        "blocks change orientation and fall during the event"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "thin rod",
+      "visible_form": "Thin light-colored straight rod or stick near the black round object.",
+      "material_description": "Light tan visible surface.",
+      "visible_properties": [
+        "thin",
+        "straight",
+        "light-colored"
+      ],
+      "initial_motion_description": "Initially appears near or on the black round object; later its visible position changes.",
+      "initial_integrity_description": "Appears intact as a single straight piece.",
+      "event_role_hints": [
+        "moves near the right-side block row"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "black round object",
+      "visible_form": "Low black cylindrical or round object located at the rear right of the tabletop.",
+      "material_description": "Dark black surface with a flat round top.",
+      "visible_properties": [
+        "black",
+        "round",
+        "low cylindrical",
+        "rear right position"
+      ],
+      "initial_motion_description": "No visible motion before the main event.",
+      "initial_integrity_description": "Appears intact and stationary.",
+      "event_role_hints": [
+        "located near the moving rod"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "wooden tabletop",
+      "visible_form": "Flat horizontal tabletop surface spanning the scene.",
+      "material_description": "Light brown wood-grain visible surface.",
+      "visible_properties": [
+        "flat",
+        "light brown",
+        "wood-grain"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears continuous and unchanged.",
+      "event_role_hints": [
+        "supporting visible objects"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The duck toy is positioned between the left-side and right-side block rows.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The duck toy is positioned immediately left of the right-side block row.",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "The black round object is behind and to the right of the right-side block row.",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "The thin rod is visible near the black round object.",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A yellow duck-shaped toy is centered on the tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Several small rectangular blocks stand upright to the left of the duck."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Several small rectangular blocks stand upright to the right of the duck."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A black round object is visible at the rear right of the scene."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A thin light-colored rod is visible near the black round object."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The thin rod changes visible angle and extends diagonally toward the right-side block row."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The thin rod appears adjacent to the far-right black block in the right-side row."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The far-right black block in the right-side row tilts from its upright position."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "Neighboring right-side blocks lean and move out of their upright positions."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Multiple right-side blocks are slanted or lying on the tabletop."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The duck toy remains upright and centered."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The left-side blocks remain upright."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The camera view remains fixed with no visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The tabletop scene is arranged with the duck between two rows of upright blocks.",
+        "The black round object and thin rod are visible at the rear right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The duck toy is upright and still."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The left-side block row is upright and still."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The right-side block row is upright and still."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The rod is visible near the black round object."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The black round object is stationary at the rear right."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The thin rod changes position toward the right-side block row.",
+        "The right-side blocks begin changing orientation from upright to tilted."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The rod's visible angle and position change toward the far-right right-side block."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The far-right block tilts, and neighboring blocks lean and fall out of line."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The right-side row has changed from upright blocks into a fallen cluster.",
+        "The duck and left-side blocks remain upright."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "Several right-side blocks rest slanted or flat on the tabletop."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The duck toy remains upright with no visible displacement."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The left-side block row remains upright."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact attachment or connection between the thin rod and the black round object is not fully visible."
+  ]
+}

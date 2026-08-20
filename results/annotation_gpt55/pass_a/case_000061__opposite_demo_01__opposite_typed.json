@@ -1,0 +1,311 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A stacked arrangement of colored rectangular blocks changes from a still configuration into separated blocks on the tabletop while the red block stays upright.",
+  "raw_event_description": "At the start, a red rectangular block stands vertically on a wooden tabletop, a yellow rectangular block lies horizontally across its top area, and a blue rectangular block stands vertically on the right portion of the yellow block with orange prongs partly visible above it. The arrangement remains still for many frames. Then the blue and yellow blocks separate from the initial stack: the yellow block rotates from horizontal toward a diagonal/upright orientation and moves down and right, while the blue block moves down and right and changes angle. The red block remains standing. By the end, the red block is upright at left, the yellow block is separate near the middle, and the blue block is separate to the right, with all visible blocks on or near the tabletop.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The red, yellow, and blue blocks are clearly visible in the initial stacked arrangement.",
+      "The orange prongs are partly cropped by the top edge of the frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "red block",
+      "visible_form": "vertical rectangular prism",
+      "material_description": "smooth matte red-orange surface with flat faces",
+      "visible_properties": [
+        "red-orange color",
+        "rectangular shape",
+        "upright orientation at start",
+        "flat top face"
+      ],
+      "initial_motion_description": "No visible motion before the main event.",
+      "initial_integrity_description": "Appears intact as one solid block.",
+      "event_role_hints": [
+        "remains upright during the visible event"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "yellow block",
+      "visible_form": "long rectangular prism lying horizontally at the start",
+      "material_description": "smooth matte yellow surface with flat faces",
+      "visible_properties": [
+        "yellow color",
+        "long rectangular shape",
+        "horizontal orientation at start"
+      ],
+      "initial_motion_description": "No visible motion before the main event.",
+      "initial_integrity_description": "Appears intact as one solid block.",
+      "event_role_hints": [
+        "rotates and separates from the initial stack"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "blue block",
+      "visible_form": "vertical rectangular prism",
+      "material_description": "smooth matte blue surface with flat faces",
+      "visible_properties": [
+        "blue color",
+        "rectangular shape",
+        "upright orientation at start"
+      ],
+      "initial_motion_description": "No visible motion before the main event.",
+      "initial_integrity_description": "Appears intact as one solid block.",
+      "event_role_hints": [
+        "moves down and right during the event"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "orange prongs",
+      "visible_form": "two curved orange prong-like parts partly visible from the top of the frame",
+      "material_description": "orange surfaces with dark edging or adjacent dark parts",
+      "visible_properties": [
+        "orange color",
+        "curved prong shapes",
+        "partly cropped at top edge"
+      ],
+      "initial_motion_description": "No clear visible motion before the main event.",
+      "initial_integrity_description": "Visible as two separate curved parts.",
+      "event_role_hints": [
+        "positioned above the blue block early in the video"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "tabletop",
+      "visible_form": "flat horizontal surface",
+      "material_description": "light brown surface with visible wood grain",
+      "visible_properties": [
+        "flat surface",
+        "wood-grain appearance",
+        "light brown color"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears continuous and intact.",
+      "event_role_hints": [
+        "visible surface beneath the blocks"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "bottom face is on the tabletop",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "lies horizontally across the top area of the red block",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "stands vertically on or immediately above the right portion of the yellow block",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is partly visible above and around the upper area of the blue block",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The red block stands upright on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The yellow block is horizontal across the top area of the red block."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The blue block is vertical at the right side of the yellow block."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "Two orange prong-like parts are partly visible above the blue block."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The stacked blocks remain visually still across many early frames."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The blue block becomes separated from the orange prong area above it."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The yellow block rotates away from its initial horizontal orientation."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The yellow block moves downward and to the right relative to its initial position."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The blue block moves downward and to the right relative to its initial position."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The red block remains upright while the yellow and blue blocks move."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The yellow block ends separate from the red block near the middle of the frame."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The blue block ends separate from the yellow block to the right."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The red block is still upright at the left in the final frames."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The camera framing of the tabletop and wall remains essentially fixed."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The three colored blocks form a still stacked arrangement."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "stands upright on the tabletop"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "lies horizontally across the red block"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "stands vertically at the right side of the yellow block"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "is partly visible above the blue block"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The initial stacked arrangement breaks into moving yellow and blue blocks while the red block stays upright."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "rotates from horizontal and moves downward-right"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "moves downward-right and changes angle"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains upright"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains partly visible near the top of the frame as the blue block is no longer adjacent to it"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The visible blocks are separated on the tabletop area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "stands upright at the left"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "is separate near the middle of the frame"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "is separate to the right of the yellow block"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The orange prong-like parts are partly cropped, so their full shape and any complete motion are not visible."
+  ]
+}

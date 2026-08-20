@@ -1,0 +1,337 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "blue rectangular prism",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "circular base",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium",
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "illuminated wall patch",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "wall shadow",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "black cable",
+      "entity_kind": "deformable_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "rotation",
+      "raw_type": "gradual rotation or reorientation of the upright prism about a vertical axis",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "role": "target",
+          "evidence_refs": [
+            "e5",
+            "e6",
+            "e10"
+          ]
+        },
+        {
+          "object_id": "obj_2",
+          "role": "support",
+          "evidence_refs": [
+            "e1",
+            "e5"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "illumination_change",
+        "raw_type": "gradual change in visible face shading and projected wall shadow",
+        "participants": [
+          {
+            "object_id": "obj_1",
+            "role": "source",
+            "evidence_refs": [
+              "e6"
+            ]
+          },
+          {
+            "object_id": "obj_3",
+            "role": "medium",
+            "evidence_refs": [
+              "e3",
+              "e7",
+              "e8"
+            ]
+          },
+          {
+            "object_id": "obj_4",
+            "role": "medium",
+            "evidence_refs": [
+              "e9"
+            ]
+          },
+          {
+            "object_id": "obj_5",
+            "role": "product",
+            "evidence_refs": [
+              "e3",
+              "e7",
+              "e8"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e6",
+          "e7",
+          "e8",
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "visible face arrangement changes gradually while the prism remains upright and near the same position"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "color_change",
+        "raw_transition": "visible cyan and darker blue face areas shift over time"
+      },
+      "evidence_refs": [
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "wall shadow changes gradually in apparent width, edge placement, and end shape"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "shadow pattern on the lit wall changes gradually while the wall remains intact and stationary"
+      },
+      "evidence_refs": [
+        "e3",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "torque",
+      "raw_mechanism": "a turning moment about the upright axis drives the prism's gradual angular reorientation without visible translation",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "the prism's changing surface orientation relative to the light and camera changes the visible bright and dark face areas",
+      "object_ids": [
+        "obj_1",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": null,
+      "raw_mechanism": "the upright prism and base block part of the illuminated wall patch, so changing orientation alters the projected shadow shape on the wall",
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3",
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    }
+  ]
+}

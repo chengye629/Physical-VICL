@@ -1,0 +1,317 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "pendulum toy frame and base",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "reflective"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e4",
+        "e6"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left end ball",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "reflective"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e7",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "middle three balls",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "reflective"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "right end ball",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "reflective"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e9",
+        "e10",
+        "e14"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "thin suspension wires",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e3",
+        "e13"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "blue and black object on table",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "wooden tabletop",
+      "axes": {
+        "entity_kind": "surface_or_region",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "not_applicable",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e4",
+        "e6"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "oscillation",
+      "raw_type": "alternating pendulum-like oscillation of the two end balls",
+      "object_ids": [
+        "obj_2",
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e13",
+        "e14"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "contact_loading",
+        "type": "collision",
+        "raw_type": "brief contacts within the clustered ball row associated with opposite end-ball motion",
+        "object_ids": [
+          "obj_2",
+          "obj_3",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e8",
+          "e9",
+          "e10",
+          "e11",
+          "e12"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_ids": [],
+      "target_ids": [
+        "obj_2",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "extended",
+      "temporal_structure": "repeated",
+      "change_profile": "steady"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "left end ball changes from initially still in the row to repeated outward-left and inward-return motion"
+      },
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "right end ball repeatedly moves outward to the right and returns toward the row"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "middle three balls remain clustered near the center while showing small visible shifts"
+      },
+      "evidence_refs": [
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "suspension wires above the end balls change angle back and forth as the end balls move away from and toward the row"
+      },
+      "evidence_refs": [
+        "e13"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity contributes to the pendulum balls swinging back toward the lower aligned row position",
+      "object_ids": [
+        "obj_2",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e14"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "tension",
+      "raw_mechanism": "taut suspension wires constrain the end balls to swing along pendulum-like paths",
+      "object_ids": [
+        "obj_2",
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e13"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "brief contact impulses through the close row of balls are associated with alternating motion from one end ball to the other",
+      "object_ids": [
+        "obj_2",
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  ]
+}

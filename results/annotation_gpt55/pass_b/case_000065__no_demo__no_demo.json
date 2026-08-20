@@ -1,0 +1,433 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "left pillow",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e8",
+        "e9",
+        "e10",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "right pillow",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e11",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "black kettlebell",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e8",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "black kettlebell strap",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "green sheet",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e7",
+        "e11",
+        "e12",
+        "e14",
+        "e15"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "green sheet cord",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e15"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "wooden surface",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "object_id": "obj_8",
+      "name": "wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": []
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "contact_loading",
+      "type": "sustained_contact",
+      "raw_type": "descending suspended objects enter persistent contact with separate pillows and load the contact areas",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "downward translation of the hanging kettlebell and green sheet before contact",
+        "participant_object_ids": [
+          "obj_3",
+          "obj_5"
+        ],
+        "evidence_refs": [
+          "e6",
+          "e7"
+        ]
+      },
+      {
+        "family": "deformation",
+        "type": null,
+        "raw_type": "pillow surface compression and wrinkling together with bending and flattening of the green sheet",
+        "participant_object_ids": [
+          "obj_1",
+          "obj_2",
+          "obj_5"
+        ],
+        "evidence_refs": [
+          "e9",
+          "e10",
+          "e12",
+          "e14"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "unknown",
+      "raw_action": "the suspended objects move downward from off-frame supports, but the external intervention is not visible",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_3",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14",
+        "e16"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "black kettlebell begins moving downward from its suspended position"
+      },
+      "evidence_refs": [
+        "e2",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "black kettlebell changes from separated above the left pillow to seated contact on the pillow"
+      },
+      "evidence_refs": [
+        "e2",
+        "e8",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "black kettlebell stops descending and remains seated on the depressed pillow area"
+      },
+      "evidence_refs": [
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "compressed",
+        "raw_transition": "left pillow upper surface lowers and becomes wrinkled around the kettlebell contact area"
+      },
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "green sheet begins moving downward from its suspended position"
+      },
+      "evidence_refs": [
+        "e3",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "green sheet changes from separated above the right pillow to contact with the pillow surface"
+      },
+      "evidence_refs": [
+        "e3",
+        "e11",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "geometry",
+        "type": "bent",
+        "raw_transition": "green sheet changes from mostly vertical and flat to curved and partly horizontal on the right pillow"
+      },
+      "evidence_refs": [
+        "e12",
+        "e14",
+        "e15"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "geometry",
+        "type": "flattened",
+        "raw_transition": "green sheet remains partly flattened against the upper surface of the right pillow"
+      },
+      "evidence_refs": [
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "green sheet stops descending and stays bent on the pillow surface"
+      },
+      "evidence_refs": [
+        "e14",
+        "e15"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "right pillow receives contact from the descending green sheet"
+      },
+      "evidence_refs": [
+        "e11",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "geometry",
+        "type": "compressed",
+        "raw_transition": "right pillow upper surface is slightly indented where the green sheet rests"
+      },
+      "evidence_refs": [
+        "e11",
+        "e14"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "sustained_pressure",
+      "raw_mechanism": "persistent downward contact from the kettlebell loads the soft pillow surface and keeps it depressed",
+      "object_ids": [
+        "obj_3",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e13"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "sustained_pressure",
+      "raw_mechanism": "continued contact between the descending green sheet and pillow constrains the sheet against the support surface",
+      "object_ids": [
+        "obj_5",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e11",
+        "e12",
+        "e14"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "soft cushion material visibly changes shape under contact loading, producing local depression and wrinkles",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e13",
+        "e14"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "the thin sheet responds to contact by bending and lying partly flat instead of remaining vertical",
+      "object_ids": [
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e12",
+        "e14",
+        "e15"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "painted teapot",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "cream fabric",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "rear wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "relation_reconfiguration",
+      "type": "rearrangement",
+      "raw_type": "fabric moves into a covering arrangement over the teapot",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "deformation",
+        "type": "bending_deformation",
+        "raw_type": "flexible fabric drapes and folds into a peaked mound",
+        "object_ids": [
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e9",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external actor or intervention; the fabric begins moving in the scene",
+      "object_ids": [],
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "affected_object_ids": [
+        "obj_2"
+      ],
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "cream fabric changes from still backdrop to downward and forward motion"
+      },
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "affected_object_ids": [
+        "obj_1"
+      ],
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "teapot changes from fully visible to fully hidden under the fabric"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "affected_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "fabric reaches and covers the teapot area, establishing a covering contact arrangement"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "affected_object_ids": [
+        "obj_2"
+      ],
+      "transition": {
+        "axis": "geometry",
+        "type": "bent",
+        "raw_transition": "fabric changes from hanging backdrop shape to a folded peaked mound over the covered object"
+      },
+      "evidence_refs": [
+        "e4",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "affected_object_ids": [
+        "obj_2"
+      ],
+      "transition": {
+        "axis": "motion",
+        "type": "settling",
+        "raw_transition": "fabric mound has small fold shifts that decay into a mostly still configuration"
+      },
+      "evidence_refs": [
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "affected_object_ids": [
+        "obj_4"
+      ],
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "pale rear wall becomes visible behind the fabric mound"
+      },
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "downward draping and later settling of the fabric are driven by gravitational loading on the flexible sheet",
+      "object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "the fabric's flexible material response allows it to bend, fold, and conform around the hidden teapot shape",
+      "object_ids": [
+        "obj_2",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e9",
+        "e11"
+      ]
+    }
+  ]
+}

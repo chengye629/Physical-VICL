@@ -1,0 +1,255 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A colorful teapot-shaped object on a black circular base steadily rotated on a tabletop while its mirror reflection changed accordingly.",
+  "raw_event_description": "The scene shows a blue teapot-shaped object with red handle and spout, yellow trim, and floral patterns standing on a black circular base on a wooden tabletop near a mirror. From the start through the end, the teapot-shaped object changes orientation around its vertical axis: the red spout and handle move through different visible positions, while the base remains in the same location on the table. The mirror on the right shows a reflected view of the same rotating teapot-shaped object. The cord lying on the tabletop and the surrounding walls and furniture remain visually stationary.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The main teapot-shaped object, base, tabletop, cord, wall, and mirror are visible.",
+      "The object is already present in the scene at the start, with no separate visible onset."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "teapot-shaped object",
+      "visible_form": "rounded teapot form with protruding spout, loop handle, lid, and small footed lower section",
+      "material_description": "glossy painted surface with blue body, red spout and handle, yellow trim, and multicolored floral patterns",
+      "visible_properties": [
+        "upright",
+        "colorful",
+        "glossy",
+        "patterned",
+        "rigid-looking"
+      ],
+      "initial_motion_description": "No separate pre-event motion is visible; its orientation begins changing during the observed sequence.",
+      "initial_integrity_description": "Appears intact with spout, handle, lid, body, and trim visible.",
+      "event_role_hints": [
+        "main visibly changing object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black circular base",
+      "visible_form": "low black circular platform beneath the teapot-shaped object",
+      "material_description": "dark, smooth-looking surface with slight highlights",
+      "visible_properties": [
+        "circular",
+        "low",
+        "dark"
+      ],
+      "initial_motion_description": "No visible displacement at the start.",
+      "initial_integrity_description": "Appears intact and supports the teapot-shaped object.",
+      "event_role_hints": [
+        "supporting object"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "mirror",
+      "visible_form": "vertical reflective rectangular surface on the right side of the scene",
+      "material_description": "reflective glass-like surface with a dark frame or adjacent dark edge",
+      "visible_properties": [
+        "reflective",
+        "vertical",
+        "flat"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "shows reflected view of the rotating object"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal tabletop extending across the lower part of the scene",
+      "material_description": "light brown wood-like surface with visible grain and seams",
+      "visible_properties": [
+        "flat",
+        "horizontal",
+        "light brown"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "supporting surface"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "black cord",
+      "visible_form": "thin dark cable lying in a wavy line across the tabletop",
+      "material_description": "black flexible-looking cord",
+      "visible_properties": [
+        "thin",
+        "dark",
+        "curved path"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears continuous and intact.",
+      "event_role_hints": [
+        "nearby static object"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "walls and dark side structure",
+      "visible_form": "light-colored vertical walls in the background with a dark vertical structure at far right",
+      "material_description": "matte light wall surfaces and dark vertical surface",
+      "visible_properties": [
+        "stationary background",
+        "vertical surfaces"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears unchanged.",
+      "event_role_hints": [
+        "background reference"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned upright on top of",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "rests on",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "shows a reflected view of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "lies across the tabletop near the base",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The colorful teapot-shaped object is upright on a black circular base."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The black circular base is located on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The mirror on the right shows a reflected image of the teapot-shaped object and base."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A black cord lies in a wavy path across the tabletop near the base."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The red spout and red handle of the teapot-shaped object change positions relative to the camera view over time."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The teapot-shaped object remains upright while its visible side changes."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The black circular base stays in the same tabletop location relative to the wall and table edges."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The mirror reflection changes orientation in step with the visible teapot-shaped object."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The black cord remains visually still on the tabletop."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Near the end, the teapot-shaped object is still upright and intact on the base."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The wall, tabletop edges, mirror, and dark right-side structure keep fixed positions in the frame."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The scene contains one continuous visible process with no cut or separate start event."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The teapot-shaped object rotates around its upright axis, shown by the changing positions of its red spout and handle."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The base remains in the same visible location on the tabletop."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The mirror continues to show a changing reflected view of the teapot-shaped object."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The cord remains visually stationary."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

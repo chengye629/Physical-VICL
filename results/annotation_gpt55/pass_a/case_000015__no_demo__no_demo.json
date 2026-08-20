@@ -1,0 +1,271 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A green sheet between two scissor-like tools visibly splits into two separate green pieces.",
+  "raw_event_description": "At the start, a bright green rectangular sheet spans horizontally across a wooden tabletop between two black-and-blue scissor-like tools. For several moments the sheet appears intact and nearly still. A split then appears near the center of the sheet, the two green portions lift and curve into different shapes, and the gap between them grows. By the end, two separate green pieces are visible on the tabletop area, one toward the left tool and one toward the right tool.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The green sheet is fully visible across the center of the frame.",
+      "Both scissor-like tools are visible at the left and right edges.",
+      "The tabletop and background are visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "green sheet",
+      "visible_form": "thin bright green rectangular sheet spanning horizontally across the center of the frame",
+      "material_description": "matte green, thin, paper-like visual appearance",
+      "visible_properties": [
+        "bright green",
+        "flat at first",
+        "thin edge visible",
+        "able to bend visibly during the event"
+      ],
+      "initial_motion_description": "appears still before the split begins",
+      "initial_integrity_description": "appears as one continuous intact sheet",
+      "event_role_hints": [
+        "main object that changes shape and separates"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left scissor-like tool",
+      "visible_form": "black tool with blue inner handle loop, partly visible from the left side",
+      "material_description": "black and blue hard-looking surfaces with small metallic-looking fasteners",
+      "visible_properties": [
+        "black outer frame",
+        "blue handle insert",
+        "partially in frame",
+        "pointed end near the green sheet"
+      ],
+      "initial_motion_description": "appears still at the left side",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "positioned at left edge of the green sheet"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "right scissor-like tool",
+      "visible_form": "black tool with blue inner handle loop, partly visible from the right side",
+      "material_description": "black and blue hard-looking surfaces with small metallic-looking fasteners",
+      "visible_properties": [
+        "black outer frame",
+        "blue handle insert",
+        "partially in frame",
+        "pointed end near the green sheet"
+      ],
+      "initial_motion_description": "appears still at the right side",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "positioned at right edge of the green sheet"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal brown surface covering the lower and middle background",
+      "material_description": "wood-grain visual texture",
+      "visible_properties": [
+        "brown",
+        "wood-grain pattern",
+        "flat visible surface"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "unchanged visible surface",
+      "event_role_hints": [
+        "surface beneath the green sheet and tools"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "spans horizontally between the left and right scissor-like tools",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "spans horizontally between the left and right scissor-like tools",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1",
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned above or on the visible tabletop area",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The green sheet appears as one continuous horizontal piece."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The left black-and-blue scissor-like tool is positioned at the left edge of the green sheet."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The right black-and-blue scissor-like tool is positioned at the right edge of the green sheet."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A wood-grain tabletop is visible beneath the sheet and tools."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A visible break or gap appears near the center of the green sheet."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The left portion of the green sheet bends upward and toward the left."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The right portion of the green sheet bends upward and toward the right."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The central gap between the green portions becomes wider."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "Two separate green pieces are visible with open tabletop space between them."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The left green piece remains near the left scissor-like tool."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The right green piece remains near the right scissor-like tool."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The camera framing remains centered on the tabletop, green sheet area, and both side tools."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene begins with an intact green sheet across the center of the tabletop.",
+        "Both scissor-like tools are visible at opposite sides of the sheet."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "appears intact and nearly still"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "appears positioned at the left side of the green sheet"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "appears positioned at the right side of the green sheet"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "A central separation becomes visible.",
+        "The two green portions curve and move apart."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "develops a visible central break and changes from one continuous sheet into two separating portions"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "left and right portions visibly bend into curved shapes"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The sheet is no longer visible as a single continuous object.",
+        "Two separated green pieces remain apart on the tabletop area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "is visible as two separate green pieces with a gap between them"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains near the left separated green piece"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains near the right separated green piece"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact contact details between the scissor-like tool tips and the green sheet are partly obscured by distance and angle."
+  ]
+}

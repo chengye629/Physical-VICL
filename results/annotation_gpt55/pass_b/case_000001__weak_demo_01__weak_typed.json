@@ -1,0 +1,442 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "brown round object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e6",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "red rectangular object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e7",
+        "e8",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "blue holder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "orange-black holder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "left white cushion",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "right white cushion",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "white background surface",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e11"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "process_id": "p1",
+      "family": "rigid_motion",
+      "type": "free_fall",
+      "raw_type": "downward fall of two released objects",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    "secondary": [
+      {
+        "process_id": "p2",
+        "family": "contact_loading",
+        "type": "collision",
+        "raw_type": "landing contact with the cushion surfaces",
+        "participant_object_ids": [
+          "obj_1",
+          "obj_2",
+          "obj_5",
+          "obj_6"
+        ],
+        "evidence_refs": [
+          "e9",
+          "e10",
+          "e11"
+        ]
+      },
+      {
+        "process_id": "p3",
+        "family": "relation_reconfiguration",
+        "type": "support_change",
+        "raw_type": "support transfers from upper holders to lower cushions",
+        "participant_object_ids": [
+          "obj_1",
+          "obj_2",
+          "obj_3",
+          "obj_4",
+          "obj_5",
+          "obj_6"
+        ],
+        "evidence_refs": [
+          "e1",
+          "e2",
+          "e5",
+          "e6",
+          "e7",
+          "e9",
+          "e10",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "release",
+      "type": "release",
+      "raw_action": "upper objects are released from their holders",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "tool_object_ids": [
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "multi_stage",
+      "change_profile": "abrupt",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "impact_id": "i1",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "support_loss",
+        "raw_transition": "brown round object separates from the upper-left holder area"
+      },
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "impact_id": "i2",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "brown round object changes from stationary to downward moving"
+      },
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e6"
+      ]
+    },
+    {
+      "impact_id": "i3",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "support_gain",
+        "raw_transition": "brown round object becomes supported on the left cushion surface"
+      },
+      "evidence_refs": [
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "impact_id": "i4",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "brown round object comes to rest after reaching the left cushion"
+      },
+      "evidence_refs": [
+        "e6",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "impact_id": "i5",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "support_loss",
+        "raw_transition": "red rectangular object separates from the upper-right holder area"
+      },
+      "evidence_refs": [
+        "e2",
+        "e7"
+      ]
+    },
+    {
+      "impact_id": "i6",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "red rectangular object changes from stationary to downward moving"
+      },
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e7"
+      ]
+    },
+    {
+      "impact_id": "i7",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "red rectangular object changes orientation from upright above the cushion to tilted or lying on the cushion"
+      },
+      "evidence_refs": [
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "impact_id": "i8",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "support_gain",
+        "raw_transition": "red rectangular object becomes supported on the right cushion surface"
+      },
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "impact_id": "i9",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "red rectangular object comes to rest after reaching the right cushion"
+      },
+      "evidence_refs": [
+        "e7",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "impact_id": "i10",
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "left cushion gains contact with the brown round object on its upper surface"
+      },
+      "evidence_refs": [
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "impact_id": "i11",
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "right cushion gains contact with the red rectangular object on its upper surface"
+      },
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "mechanism_id": "m1",
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "unsupported objects move downward after release",
+      "process_refs": [
+        "p1"
+      ],
+      "impact_refs": [
+        "i2",
+        "i6"
+      ],
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "mechanism_id": "m2",
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "brief landing contact with the cushion surfaces arrests the downward motion",
+      "process_refs": [
+        "p2"
+      ],
+      "impact_refs": [
+        "i4",
+        "i9",
+        "i10",
+        "i11"
+      ],
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_5",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "mechanism_id": "m3",
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "landing contact changes the red rectangular object's orientation",
+      "process_refs": [
+        "p2"
+      ],
+      "impact_refs": [
+        "i7"
+      ],
+      "object_ids": [
+        "obj_2",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e10"
+      ]
+    }
+  ]
+}

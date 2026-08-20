@@ -1,0 +1,376 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small yellow ball appears near the top of a vertical obstacle board and moves through several staggered colored strips before reaching a purple U-shaped piece near the lower area.",
+  "raw_event_description": "The scene begins with a vertical glossy panel containing fixed colored strips and shaped pieces. For several frames no moving object is visible. A small yellow ball then appears below the upper green curved piece, moves rightward and downward near the upper purple strip, passes through the area above and along the yellow strip, continues near the blue strip, then travels near the lower green strip and finally reaches the purple U-shaped piece near the bottom.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The obstacle board and colored pieces are visible in the first frame.",
+      "The small yellow ball is not visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "vertical panel",
+      "visible_form": "tall rectangular glossy panel bordered by dark vertical frame pieces",
+      "material_description": "transparent or reflective glossy surface with visible glare",
+      "visible_properties": [
+        "vertical orientation",
+        "light-colored background",
+        "dark side borders",
+        "reflective highlights"
+      ],
+      "initial_motion_description": "stationary in the image",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "background support for the visible colored pieces"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "upper green curved piece",
+      "visible_form": "short curved green strip near the upper center",
+      "material_description": "green patterned surface",
+      "visible_properties": [
+        "curved shape",
+        "fixed position"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "near where the yellow ball first appears"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "upper purple strip",
+      "visible_form": "long narrow purple strip slanting slightly across the upper right area",
+      "material_description": "purple patterned surface",
+      "visible_properties": [
+        "straight elongated shape",
+        "fixed position"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "the yellow ball moves near this strip early in the event"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "yellow strip",
+      "visible_form": "long narrow yellow strip across the middle-left area",
+      "material_description": "yellow patterned surface with dark parallel markings",
+      "visible_properties": [
+        "straight elongated shape",
+        "fixed position"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "the yellow ball moves near this strip after passing the upper purple strip"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "blue strip",
+      "visible_form": "long narrow blue strip across the middle-right area",
+      "material_description": "blue patterned or lined surface",
+      "visible_properties": [
+        "straight elongated shape",
+        "fixed position"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "the yellow ball moves near this strip during the middle part of the event"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "lower green strip",
+      "visible_form": "long narrow green strip across the lower-left area",
+      "material_description": "green patterned surface with dark spots",
+      "visible_properties": [
+        "straight elongated shape",
+        "fixed position"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "the yellow ball moves near this strip late in the event"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "purple U-shaped piece",
+      "visible_form": "small purple U-shaped piece near the lower center-right",
+      "material_description": "purple patterned surface",
+      "visible_properties": [
+        "U shape",
+        "fixed position",
+        "open top"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "the yellow ball reaches this piece at the end"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "yellow ball",
+      "visible_form": "small round yellow object",
+      "material_description": "solid yellow visible surface",
+      "visible_properties": [
+        "small size",
+        "round outline",
+        "bright yellow color"
+      ],
+      "initial_motion_description": "not visible at the start; later appears moving",
+      "initial_integrity_description": "appears as one intact round object when visible",
+      "event_role_hints": [
+        "main moving object"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is positioned above the yellow strip and left of the upper purple strip",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is positioned above and to the right of the yellow strip",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is positioned below the upper purple strip and to the right of the yellow strip",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "is positioned below the yellow strip",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_7",
+      "relation_description": "is positioned below the blue strip and to the right of the lower green strip",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The first frames show a fixed vertical panel with several colored strips and no visible yellow ball."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A small yellow ball appears below the upper green curved piece."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The yellow ball moves rightward and downward from the upper green curved piece area."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The yellow ball is visible near the upper purple strip."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The yellow ball appears lower than the upper purple strip and above the yellow strip."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The yellow ball moves across the area near the yellow strip."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The yellow ball appears between the yellow strip and the blue strip."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The yellow ball moves near the blue strip."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The yellow ball appears below the blue strip."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The yellow ball moves near the lower green strip."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The yellow ball moves from the lower green strip area toward the purple U-shaped piece."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The yellow ball becomes visible at the opening or inside area of the purple U-shaped piece."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The colored strips remain in the same visible positions throughout the sequence."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The camera framing remains stable with no visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The board is already set up with colored strips before the moving object appears.",
+        "The yellow ball enters the visible area near the upper green curved piece."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_8",
+          "observation": "appears and moves rightward and downward in the upper part of the panel"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains fixed in the frame"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The yellow ball passes near the upper purple strip.",
+        "The yellow ball then appears in the area above and near the yellow strip.",
+        "The yellow ball later appears between the yellow and blue strips and near the blue strip."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_8",
+          "observation": "moves through the middle of the panel near the upper purple, yellow, and blue strips"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "stays fixed while the yellow ball moves nearby"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "stays fixed while the yellow ball moves nearby"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "stays fixed while the yellow ball moves nearby"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The yellow ball appears below the blue strip.",
+        "The yellow ball moves near the lower green strip.",
+        "The yellow ball reaches the purple U-shaped piece near the lower area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_8",
+          "observation": "moves from the lower green strip area toward and into the purple U-shaped piece area"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "stays fixed while the yellow ball moves nearby"
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "stays fixed as the yellow ball becomes visible at its opening or inside area"
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e13",
+        "e14"
+      ],
+      "observations": [
+        "The colored pieces do not visibly shift position during the event.",
+        "The view remains framed on the same panel."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary relative to the image frame"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The small yellow ball is sometimes difficult to distinguish against reflections and colored strips.",
+    "Exact contact moments between the yellow ball and the colored strips are not always clearly visible."
+  ]
+}

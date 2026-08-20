@@ -1,0 +1,285 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A silver wrench-shaped object moves across the front/top edge of a black circular object and then disappears from view.",
+  "raw_event_description": "The scene shows a wooden tabletop with a black circular device on the right, a tilted metallic object with a purple strip on the left, and a cable extending behind the black object. At the start, a silver wrench-shaped object is visible on the front-right/top edge of the black circular object. Over time, the silver object changes position leftward along the front/top edge of the black object, reaches the left/front side, and then is no longer visible. The other visible objects remain in place.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tabletop, black circular object, silver wrench-shaped object, left metallic object, purple strip, and cable are visible.",
+      "The silver wrench-shaped object is already positioned on the black circular object at the start."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "black circular object",
+      "visible_form": "low black round cylinder or disk-shaped object on the tabletop",
+      "material_description": "dark matte or semi-matte exterior; black top and side",
+      "visible_properties": [
+        "round",
+        "flat top",
+        "low cylindrical side",
+        "dark colored"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "silver wrench-shaped object moves along its front/top edge"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "silver wrench-shaped object",
+      "visible_form": "small pale metallic-looking open-ended wrench shape with a narrow handle",
+      "material_description": "light gray or silver reflective-looking surface",
+      "visible_properties": [
+        "elongated",
+        "open crescent end",
+        "flat tool-like outline"
+      ],
+      "initial_motion_description": "visible on the front-right/top edge of the black circular object; begins changing position during the sequence",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "main moving object"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "tilted metallic object",
+      "visible_form": "small tilted silver cylindrical or cup-like object standing on the tabletop",
+      "material_description": "silver reflective-looking surface with darker seams or markings",
+      "visible_properties": [
+        "tilted",
+        "metallic-looking",
+        "compact"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_4",
+      "name": "purple strip",
+      "visible_form": "thin vertical purple strip hanging from or near the tilted metallic object",
+      "material_description": "purple flexible-looking strip or ribbon",
+      "visible_properties": [
+        "purple",
+        "thin",
+        "hanging downward"
+      ],
+      "initial_motion_description": "no clear visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_5",
+      "name": "black cable",
+      "visible_form": "thin black cord extending from the rear/right area of the black circular object across the tabletop",
+      "material_description": "black flexible-looking cord",
+      "visible_properties": [
+        "thin",
+        "curved",
+        "dark"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_6",
+      "name": "wooden tabletop",
+      "visible_form": "flat tan wooden surface with visible grain",
+      "material_description": "wood-like surface with tan color and grain pattern",
+      "visible_properties": [
+        "flat",
+        "tan",
+        "wood-grain pattern"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "overlaps and rests visually on the front-right/top edge area of the black circular object",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "stands to the left of the black circular object with a visible gap between them",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "hangs downward from or immediately beside the tilted metallic object",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "extends from the rear/right area of the black circular object toward the back right of the scene",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A black circular low cylindrical object is on the right side of the tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A silver open-ended wrench-shaped object is visible on the front-right/top edge of the black circular object."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A tilted silver metallic object is positioned to the left of the black circular object."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A purple strip hangs downward next to the tilted metallic object."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A black cable extends from the rear/right area of the black circular object toward the back right."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The silver wrench-shaped object is visible farther left along the front/top edge of the black circular object than at the start."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The silver wrench-shaped object changes orientation while remaining near the front/top edge of the black circular object."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The silver wrench-shaped object reaches the left/front side of the black circular object with part of it near the object's left edge."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The silver wrench-shaped object is no longer visible after being seen near the left/front side of the black circular object."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The black circular object, tilted metallic object, purple strip, cable, and tabletop remain in the same visible positions."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The camera framing remains stable throughout the sequence."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The scene is a tabletop arrangement with the silver wrench-shaped object initially visible on the black circular object."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "is positioned on the front-right/top edge of the black circular object"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary on the tabletop"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The silver wrench-shaped object changes position and orientation along the visible front/top edge of the black circular object."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "moves leftward along the front/top edge of the black circular object"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The silver wrench-shaped object reaches the left/front side of the black circular object and then disappears from view."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "is last visible near the left/front side of the black circular object and then is no longer visible"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains in the same visible position after the silver object disappears"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains in the same visible position"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains hanging beside the tilted metallic object"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The silver wrench-shaped object's final location is not visible after it disappears near the left/front side of the black circular object."
+  ]
+}

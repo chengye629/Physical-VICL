@@ -1,0 +1,296 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A yellow-green ball moves from the left across a tabletop, reaches a brown inclined board, goes partway up it, then moves back left and exits the frame.",
+  "raw_event_description": "The video begins with a static tabletop setup: a brown slanted board rests on a blue block at the right, and a black cylindrical object is partly visible at the left edge. After several moments, a yellow-green ball appears from the left near the black cylinder and travels rightward across the tabletop. The ball reaches the lower left edge of the inclined board, moves onto the board, and rises along the board surface to a point partway up. It then reverses visible direction, moves back down/off the board area, travels leftward across the tabletop, and exits at the left side. The scene remains otherwise unchanged.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tabletop, inclined board, blue support block, and black cylinder are visible.",
+      "The moving yellow-green ball is not yet visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow-green ball",
+      "visible_form": "small round sphere",
+      "material_description": "bright yellow-green surface with faint seam-like curved markings visible in some frames",
+      "visible_properties": [
+        "spherical",
+        "bright colored",
+        "small relative to the board and tabletop"
+      ],
+      "initial_motion_description": "not visible at the start; later appears from the left and moves rightward",
+      "initial_integrity_description": "appears whole and unchanged when visible",
+      "event_role_hints": [
+        "moving object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "inclined board",
+      "visible_form": "rectangular flat board set at an angle",
+      "material_description": "brown surface with a visibly corrugated-looking edge",
+      "visible_properties": [
+        "rectangular",
+        "slanted",
+        "stationary throughout the visible event"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact and unchanged",
+      "event_role_hints": [
+        "inclined surface contacted by the ball"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "blue block",
+      "visible_form": "upright rectangular block under the right side of the board",
+      "material_description": "smooth bright blue surface",
+      "visible_properties": [
+        "rectangular",
+        "upright",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact and unchanged",
+      "event_role_hints": [
+        "supporting visible board position"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "black cylinder",
+      "visible_form": "short black cylindrical object partly visible at the left edge",
+      "material_description": "dark black surface with slight shine",
+      "visible_properties": [
+        "cylindrical",
+        "partially in frame",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact and unchanged",
+      "event_role_hints": [
+        "near the ball's entry and exit area"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "tabletop",
+      "visible_form": "large flat horizontal surface",
+      "material_description": "light wood-grain patterned surface",
+      "visible_properties": [
+        "flat",
+        "light colored",
+        "stationary background surface"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears unchanged throughout",
+      "event_role_hints": [
+        "surface across which the ball moves"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "the inclined board is positioned above the tabletop with its right side elevated",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "the blue block is located beneath the right portion of the inclined board",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "the black cylinder is partly visible at the left edge of the scene",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A brown rectangular board is visibly slanted on the right side of the tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A blue rectangular block is visible under the right side of the brown board."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A black cylindrical object is partly visible at the left edge of the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "No yellow-green ball is visible during the initial static portion."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A yellow-green ball appears near the left edge of the tabletop."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The yellow-green ball moves rightward across the tabletop toward the inclined board."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The yellow-green ball reaches the lower left edge of the inclined board."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The yellow-green ball is visible on the surface of the inclined board."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The yellow-green ball moves upward along the inclined board to a point partway up the board."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The yellow-green ball moves leftward away from the inclined board."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The yellow-green ball travels leftward across the tabletop."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The yellow-green ball exits the visible frame at the left side."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The board, blue block, black cylinder, and tabletop remain visibly stationary throughout the event."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The camera view remains fixed without visible panning, tilting, or zooming."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The tabletop setup is visible before the ball enters."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The inclined board remains stationary at the right."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The blue block remains stationary under the board."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The black cylinder remains partly visible at the left edge."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The ball is not visible."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The ball enters, moves rightward, and goes onto the inclined board."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The ball appears from the left, moves across the tabletop, reaches the board edge, and moves partway up the board."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The board remains in the same visible position while the ball moves on it."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The ball leaves the board area and moves back toward the left."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The ball moves leftward across the tabletop and exits the frame at the left side."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The board remains stationary."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The blue block remains stationary."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The black cylinder remains stationary."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

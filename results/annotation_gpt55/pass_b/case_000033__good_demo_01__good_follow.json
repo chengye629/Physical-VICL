@@ -1,0 +1,265 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "yellow smiley ball",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "clear box assembly",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e7",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "hanging connector and cord",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible",
+        "reflective"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "background wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e12"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "downward translation of the hanging clear box assembly",
+      "participants": [
+        {
+          "object_id": "obj_2",
+          "event_roles": [
+            "target",
+            "container"
+          ]
+        },
+        {
+          "object_id": "obj_3",
+          "event_roles": [
+            "support"
+          ]
+        },
+        {
+          "object_id": "obj_1",
+          "event_roles": [
+            "target"
+          ]
+        },
+        {
+          "object_id": "obj_4",
+          "event_roles": [
+            "support"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e3",
+        "e7",
+        "e9",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "relation_reconfiguration",
+        "type": null,
+        "raw_type": "transparent enclosure becomes positioned around the stationary ball",
+        "participants": [
+          {
+            "object_id": "obj_2",
+            "event_roles": [
+              "container"
+            ]
+          },
+          {
+            "object_id": "obj_1",
+            "event_roles": [
+              "target"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e8",
+          "e9",
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external actor or intervention; the hanging assembly descends into view",
+      "actors": [],
+      "targets": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e5",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e3",
+        "e7",
+        "e9",
+        "e11",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "impact_id": "impact_1",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the clear box assembly changes position downward from the upper frame area to a lower position around the ball"
+      },
+      "evidence_refs": [
+        "e3",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "impact_id": "impact_2",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "the descending box assembly comes to little or no visible movement near the end"
+      },
+      "evidence_refs": [
+        "e11"
+      ]
+    },
+    {
+      "impact_id": "impact_3",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "containment_gain",
+        "raw_transition": "the stationary ball becomes surrounded or bounded by the transparent side panels while remaining visible"
+      },
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "mechanism_id": "mechanism_1",
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "the attached hanging cord and connector provide supported mechanical control of the box assembly during its downward motion",
+      "object_ids": [
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "mechanism_id": "mechanism_2",
+      "family": "optical_electromagnetic",
+      "type": "light_transmission",
+      "raw_mechanism": "light passes through the transparent panels, leaving the ball visible through the enclosure",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,289 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "pale figurine",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e7",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black circular base",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e14"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "bright light",
+      "entity_kind": "unknown",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "unknown",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e15"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e15"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "black cord",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "projected shadow",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e9",
+        "e11",
+        "e13"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "circular light patch",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e5",
+        "e15"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "rotation",
+      "raw_type": "steady rotation of the figurine on its base",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10",
+        "e12"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "illumination_change",
+        "raw_type": "projected shadow outline changes within a fixed circular light patch",
+        "object_ids": [
+          "obj_1",
+          "obj_3",
+          "obj_4",
+          "obj_7",
+          "obj_8"
+        ],
+        "evidence_refs": [
+          "e4",
+          "e5",
+          "e9",
+          "e11",
+          "e13",
+          "e15"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the orientation change is already underway",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e12",
+        "e16"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e12",
+        "e13",
+        "e16"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "visible orientation changes smoothly from a mostly front-facing view through a side-profile view to a rear-facing draped view"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "shadow silhouette outline changes continuously, narrowing into a profile-like outline and later becoming a broad tall outline"
+      },
+      "evidence_refs": [
+        "e9",
+        "e11",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "the visible dark silhouette pattern on the illuminated wall changes shape while the circular light patch remains fixed"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e9",
+        "e11",
+        "e13",
+        "e15"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "the bright light source emits steady visible light that illuminates the wall and forms the circular light patch",
+      "object_ids": [
+        "obj_3",
+        "obj_4",
+        "obj_8"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e15"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": null,
+      "raw_mechanism": "the rotating figurine blocks part of the emitted light, so the projected silhouette on the wall changes with the figurine orientation",
+      "object_ids": [
+        "obj_1",
+        "obj_3",
+        "obj_4",
+        "obj_7"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e9",
+        "e11",
+        "e13"
+      ]
+    }
+  ]
+}

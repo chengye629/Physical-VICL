@@ -1,0 +1,334 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "clear bottle",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e6",
+        "e8",
+        "e9",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "red liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "product"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "reflective"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "blue nozzle",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e13",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "red upper dispenser part",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "black tray",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support",
+        "container",
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e10",
+        "e11",
+        "e12",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "woven basket",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "wooden table",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e14"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "bulk_flow",
+      "raw_type": "red liquid flows into a bottle, overflows at the mouth, runs down the exterior, and spreads across the tray",
+      "event_roles": {
+        "source": [
+          "obj_3"
+        ],
+        "target": [
+          "obj_2",
+          "obj_1",
+          "obj_5"
+        ],
+        "container": [
+          "obj_1",
+          "obj_5"
+        ],
+        "support": [
+          "obj_5"
+        ]
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "fluid_handling",
+      "type": "dispense",
+      "raw_action": "red liquid is dispensed from the nozzle area into the bottle opening",
+      "actor_ids": [],
+      "source_ids": [
+        "obj_3"
+      ],
+      "target_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e13"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e8",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e15"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "material_transfer",
+        "raw_transition": "red liquid transfers from the nozzle area into the clear bottle and later out onto the bottle exterior and tray"
+      },
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e8",
+        "e10",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "the red liquid expands from a confined stream and contained volume into exterior streaks and a spreading tray puddle"
+      },
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "the visible red liquid amount inside the bottle increases until the surface approaches the mouth"
+      },
+      "evidence_refs": [
+        "e4",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "red liquid becomes newly visible at the bottle mouth and on the outer bottle surface"
+      },
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "deposition",
+        "raw_transition": "the tray surface receives red liquid and becomes partly covered by a puddle"
+      },
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the red liquid downward into the bottle, down the bottle exterior after overflow, and onto the tray",
+      "linked_object_ids": [
+        "obj_2",
+        "obj_1",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "pressure_gradient",
+      "raw_mechanism": "a driving pressure difference through the nozzle area sustains the narrow red liquid stream into the bottle",
+      "linked_object_ids": [
+        "obj_2",
+        "obj_3",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e13"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "liquid surface effects are visible in the maintained free surface and small bubble or foam-like spots near the bottle mouth",
+      "linked_object_ids": [
+        "obj_2",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    }
+  ]
+}

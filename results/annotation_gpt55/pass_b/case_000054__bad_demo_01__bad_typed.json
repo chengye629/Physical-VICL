@@ -1,0 +1,262 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "metal support frame",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black base",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "hanging ball set",
+      "entity_kind": "articulated_object",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "left blue-and-black tabletop object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e12"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "oscillation",
+      "raw_type": "alternating pendulum-like side-to-side motion of the hanging outer balls",
+      "object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "contact_loading",
+        "type": "collision",
+        "raw_type": "brief ball-to-ball contact during the cradle-like motion",
+        "object_ids": [
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e6",
+          "e7",
+          "e9",
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention in the video",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e12"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "extended",
+      "temporal_structure": "repeated",
+      "change_profile": "steady",
+      "raw_temporal_description": "after an early still interval, the outer-ball displacement repeats on alternating sides over the middle and late frames",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e10",
+        "e11"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "the hanging ball set changes from a still compact row to visible motion of an outer ball"
+      },
+      "raw_impact": "outer balls begin moving after the early interval in which the row appears unchanged",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "direction_change",
+        "raw_transition": "the visible outer displacement alternates between left and right sides"
+      },
+      "raw_impact": "the moving side ball repeatedly reverses the side on which it is separated from the central row",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "relation",
+        "type": null,
+        "raw_transition": "the arrangement changes from five adjacent centered balls to one outer ball separated from the central row on alternating sides"
+      },
+      "raw_impact": "the central balls remain close together while an outer ball is displaced away from the row",
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e7",
+        "e9",
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "tension",
+      "raw_mechanism": "the suspension strings constrain the moving balls to swing from the frame rather than move freely",
+      "object_ids": [
+        "obj_1",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity provides the restoring influence for the suspended balls as they move away from and back toward the central row",
+      "object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e7",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "brief contacts among adjacent balls transfer motion through the compact central row, producing alternating outer-ball displacement",
+      "object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e7",
+        "e9",
+        "e10"
+      ]
+    }
+  ]
+}

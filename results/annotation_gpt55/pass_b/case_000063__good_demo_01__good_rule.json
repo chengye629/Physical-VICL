@@ -1,0 +1,219 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow mug",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_description": "upright glossy yellow mug with open top and right-side handle, initially stationary on the tabletop",
+      "evidence_refs": [
+        "e1",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black kettlebell",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "raw_description": "black rounded kettlebell with arched handle and visible blue 30 LB text, entering from above and moving downward",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_description": "flat light-brown wooden tabletop supporting the mug",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "plain wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_description": "plain light-colored wall behind the tabletop scene",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "contact_loading",
+      "type": "sustained_contact",
+      "raw_type": "sustained top contact as the kettlebell rests on the mug",
+      "involved_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "downward translation of the kettlebell into the frame toward the mug",
+        "involved_object_ids": [
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e4",
+          "e5",
+          "e8"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no external actor or hand is visible; only the kettlebell moving downward is observed",
+      "involved_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "raw_temporal_description": "the kettlebell first moves downward, then establishes contact and remains resting on the mug",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e9",
+        "e10",
+        "e13"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "impact_id": "impact_1",
+      "affected_object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "the kettlebell changes from downward motion to a stationary resting position after contact"
+      },
+      "evidence_refs": [
+        "e5",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "impact_id": "impact_2",
+      "affected_object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "support_gain",
+        "raw_transition": "the kettlebell becomes supported while positioned on the mug"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "impact_id": "impact_3",
+      "affected_object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "the mug gains top contact with the lower rounded part of the kettlebell"
+      },
+      "post_state": "the mug remains upright, with no visible fragments or spilled contents",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "mechanism_id": "mechanism_1",
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "contact at the top of the mug arrests the kettlebell's downward motion",
+      "involved_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "mechanism_id": "mechanism_2",
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "persistent normal contact force supports the kettlebell on the mug and loads the mug without visible collapse",
+      "involved_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  ]
+}

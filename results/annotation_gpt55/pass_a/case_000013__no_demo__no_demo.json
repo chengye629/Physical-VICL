@@ -1,0 +1,283 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A black round object attached to a dark upright stalk visibly increases in apparent size while the base and background remain stationary.",
+  "raw_event_description": "A black rounded object is positioned at the top of a narrow dark stalk rising from a bright green rectangular base on a darker support behind a wooden foreground edge. Across the video, the black rounded object's circular outline gradually becomes larger, with its top edge rising and its right side extending farther right. The object remains connected to the stalk, and the stalk stays connected to the green base while showing a slight bend. The green base, darker support, wall, and wooden foreground remain visually fixed, with no scene cut or visible emission.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The main black round object and the dark stalk are clearly visible.",
+      "The lower support area is partly hidden by the wooden foreground edge.",
+      "The event appears already underway as a continuous size change rather than a distinct sudden onset."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "black round object",
+      "visible_form": "Smooth dark rounded object with a near-circular silhouette attached at its lower area to the stalk.",
+      "material_description": "Black surface with visible glossy highlights.",
+      "visible_properties": [
+        "black",
+        "round",
+        "smooth surface",
+        "glossy highlights",
+        "apparent diameter increases over time"
+      ],
+      "initial_motion_description": "No distinct motion is visible in the first frame beyond being part of the continuing size-change event.",
+      "initial_integrity_description": "Appears intact as one continuous rounded surface.",
+      "event_role_hints": [
+        "main object with changing visible outline"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "dark stalk",
+      "visible_form": "Narrow upright dark strip or tube with a slight bend and a small blue band near its upper-middle area.",
+      "material_description": "Dark surface with segmented or wrinkled visible texture; small blue marking or band.",
+      "visible_properties": [
+        "slender",
+        "dark",
+        "slightly bent",
+        "attached to black round object",
+        "attached to green base"
+      ],
+      "initial_motion_description": "Initially appears upright with a slight bend and no separate motion from the attached round object.",
+      "initial_integrity_description": "Appears continuous from the green base toward the black round object.",
+      "event_role_hints": [
+        "supporting visible connection between round object and base"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "green base",
+      "visible_form": "Bright green rectangular plate or box surface beneath the stalk.",
+      "material_description": "Flat bright green surface with sharp rectangular edges.",
+      "visible_properties": [
+        "green",
+        "rectangular",
+        "stationary",
+        "partially occluded at lower edge"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "stationary reference object"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "dark support",
+      "visible_form": "Dark rectangular support or pad underneath and behind the green base.",
+      "material_description": "Dark matte-looking surface.",
+      "visible_properties": [
+        "dark",
+        "rectangular",
+        "stationary",
+        "partially visible"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact where visible.",
+      "event_role_hints": [
+        "stationary support surface"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "wooden foreground edge",
+      "visible_form": "Horizontal wooden surface edge spanning the bottom of the frame.",
+      "material_description": "Brown wood-like surface with visible grain.",
+      "visible_properties": [
+        "brown",
+        "horizontal",
+        "stationary",
+        "foreground occluder"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "foreground reference and partial occluder"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "wall background",
+      "visible_form": "Plain light-colored vertical background.",
+      "material_description": "Light gray-green matte wall surface.",
+      "visible_properties": [
+        "plain",
+        "stationary",
+        "light colored"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears continuous and unchanged.",
+      "event_role_hints": [
+        "stationary background reference"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The black round object is attached to or resting on the upper end of the dark stalk.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e7"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "The dark stalk rises from the green rectangular base.",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "The green base is positioned on or above a darker support surface.",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "The wooden foreground edge partially hides the lower portions of the base and support.",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A black round object is visible at the top of a dark slender stalk."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The dark stalk descends into a bright green rectangular base, with the lower area partly hidden by the wooden foreground."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "The green base, wooden foreground edge, and wall remain fixed in the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The black round object's visible circular silhouette is larger than in the early frames."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The top edge of the black round object rises over time."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The right edge of the black round object extends farther right over time."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The black round object remains connected to the dark stalk throughout the video."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The dark stalk remains slightly bent below the black round object."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "Near the end, the black round object has its largest visible outline in the video."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "No pieces detach from the visible objects."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "No visible material or light emission leaves the objects."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "No camera pan, tilt, zoom, or focus change is visible."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The main visible change is the increasing apparent size of the black round object while it remains attached to the stalk.",
+        "Stationary surrounding objects provide a fixed visual reference."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Its visible outline enlarges gradually, with the top edge rising and the right edge moving outward."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "It remains connected between the black round object and the green base while staying slightly bent."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "It remains stationary and partly occluded by the foreground edge."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "It remains stationary beneath or behind the green base."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "It remains fixed across the bottom of the frame."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "It remains unchanged as a plain background."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e3",
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

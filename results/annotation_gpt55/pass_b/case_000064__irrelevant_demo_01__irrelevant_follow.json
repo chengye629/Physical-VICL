@@ -1,0 +1,247 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": {
+    "items": [
+      {
+        "object_id": "obj_1",
+        "name": "white cup",
+        "entity_kind": "deformable_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "flexible"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact",
+        "evidence_refs": [
+          "e1",
+          "e9",
+          "e10",
+          "e11"
+        ]
+      },
+      {
+        "object_id": "obj_2",
+        "name": "black kettlebell",
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "tool"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "translating",
+        "initial_integrity_state": "intact",
+        "evidence_refs": [
+          "e2",
+          "e4",
+          "e5",
+          "e6",
+          "e12"
+        ]
+      },
+      {
+        "object_id": "obj_3",
+        "name": "wooden tabletop",
+        "entity_kind": "surface_or_region",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact",
+        "evidence_refs": [
+          "e1",
+          "e3",
+          "e14"
+        ]
+      },
+      {
+        "object_id": "obj_4",
+        "name": "black vertical band",
+        "entity_kind": "rigid_solid",
+        "event_roles": [],
+        "material_phase": "solid",
+        "physical_properties": [],
+        "initial_motion_state": "unknown",
+        "initial_integrity_state": "intact",
+        "evidence_refs": [
+          "e13"
+        ]
+      },
+      {
+        "object_id": "obj_5",
+        "name": "background wall",
+        "entity_kind": "surface_or_region",
+        "event_roles": [],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact",
+        "evidence_refs": [
+          "e3",
+          "e14"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "primary": {
+      "family": "deformation",
+      "type": "compression_deformation",
+      "raw_type": "cup is compressed and flattened under a descending kettlebell",
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "kettlebell moves downward toward the cup",
+        "object_ids": [
+          "obj_2",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e4",
+          "e7",
+          "e13"
+        ]
+      },
+      {
+        "family": "contact_loading",
+        "type": "compression_loading",
+        "raw_type": "kettlebell applies downward compressive contact loading to the cup against the tabletop",
+        "object_ids": [
+          "obj_1",
+          "obj_2",
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e7",
+          "e8",
+          "e9",
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "unknown",
+      "raw_action": "off-frame intervention causing the kettlebell descent is not visible or classifiable",
+      "object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e13"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "single",
+      "change_profile": "abrupt",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "flattened",
+        "raw_transition": "white cup changes from a rounded side-lying hollow shape into a flattened compressed form"
+      },
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "cup gains visible contact with the kettlebell during loading"
+      },
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_arrest",
+        "raw_transition": "kettlebell descends, then remains nearly still upright over the flattened cup"
+      },
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "kettlebell establishes visible contact with the cup"
+      },
+      "evidence_refs": [
+        "e8",
+        "e10",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "sustained_pressure",
+      "raw_mechanism": "downward contact force from the kettlebell presses the cup against the tabletop and drives compression",
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e12"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "thin-walled cup collapses and folds under the compressive load",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ]
+    }
+  ]
+}

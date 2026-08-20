@@ -1,0 +1,309 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "transparent bowl",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "clear liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e8",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "overhead claw",
+      "entity_kind": "articulated_object",
+      "event_roles": [
+        "actor",
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "crumpled paper wad",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "deformed",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "wooden table",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "free_fall",
+      "raw_type": "unsupported downward drop of the crumpled paper wad from the claw into the bowl",
+      "event_roles": [
+        {
+          "object_id": "obj_4",
+          "role": "target"
+        },
+        {
+          "object_id": "obj_3",
+          "role": "tool"
+        },
+        {
+          "object_id": "obj_1",
+          "role": "container"
+        },
+        {
+          "object_id": "obj_2",
+          "role": "medium"
+        }
+      ],
+      "evidence_refs": [
+        "e5",
+        "e7"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "contact_loading",
+        "type": "collision",
+        "raw_type": "brief contact between the falling paper wad and the liquid surface",
+        "event_roles": [
+          {
+            "object_id": "obj_4",
+            "role": "target"
+          },
+          {
+            "object_id": "obj_2",
+            "role": "target"
+          }
+        ],
+        "evidence_refs": [
+          "e7",
+          "e8"
+        ]
+      },
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "impact-induced liquid surface disturbance with splash-like motion and circular ripples",
+        "event_roles": [
+          {
+            "object_id": "obj_2",
+            "role": "target"
+          },
+          {
+            "object_id": "obj_4",
+            "role": "source"
+          }
+        ],
+        "evidence_refs": [
+          "e8",
+          "e9",
+          "e12"
+        ]
+      }
+    ],
+    "action": {
+      "family": "release",
+      "type": "drop",
+      "raw_action": "the overhead claw opens and releases the crumpled paper wad so it drops downward",
+      "actor_object_id": "obj_3",
+      "target_object_ids": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "crumpled paper wad changes from stationary in the claw to moving downward"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_loss",
+        "raw_transition": "crumpled paper wad separates from the claw prongs"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "relation",
+        "type": "containment_gain",
+        "raw_transition": "crumpled paper wad becomes located inside the bowl near the liquid surface"
+      },
+      "evidence_refs": [
+        "e7",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "liquid surface changes from mostly still to localized splash-like disturbance and circular ripples that later diminish"
+      },
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_loss",
+        "raw_transition": "claw changes from holding the paper wad to being open and empty above the bowl"
+      },
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "after release, gravity drives the unsupported paper wad downward",
+      "linked_object_ids": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "the paper wad contacting the liquid transfers momentum to the liquid surface, producing the visible disturbance",
+      "linked_object_ids": [
+        "obj_4",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "the liquid free surface responds to the impact by forming splash-like deformation and ripples",
+      "linked_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "viscosity",
+      "raw_mechanism": "liquid resistance damps the surface motion as the ripples become less pronounced",
+      "linked_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e12"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A clear stream exits a dispenser spout into a glass containing orange liquid, and the liquid level in the glass rises.",
+  "raw_event_description": "The clip begins with a transparent dispenser sitting on a woven stand above a small clear glass. A clear stream is already extending from the dispenser spout into the opening of the glass. The glass contains orange liquid. Throughout the clip the stream remains visible, the orange liquid surface shows bubbles and disturbance near the entry point, and the liquid level becomes higher in the glass by the later frames.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The dispenser, spout, falling stream, receiving glass, and liquid surface are all visible in the first frame.",
+      "The stream is already present at the start of the clip."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "drink dispenser",
+      "visible_form": "large transparent ribbed container with rounded upper portion and front-mounted spout",
+      "material_description": "clear glass-like body with reflective highlights",
+      "visible_properties": [
+        "transparent",
+        "ribbed sides",
+        "partly filled with clear liquid"
+      ],
+      "initial_motion_description": "no visible motion of the container",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "visible container above the receiving glass"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "spout",
+      "visible_form": "small protruding tap assembly on the front lower area of the dispenser",
+      "material_description": "dark and metallic-looking parts with reflective surfaces",
+      "visible_properties": [
+        "attached to dispenser front",
+        "positioned above the glass opening"
+      ],
+      "initial_motion_description": "no visible motion of the spout",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "clear stream is visible leaving this part"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "clear liquid stream",
+      "visible_form": "narrow transparent vertical stream extending downward from the spout",
+      "material_description": "clear, glossy, translucent liquid appearance",
+      "visible_properties": [
+        "continuous column-like shape",
+        "falls into glass opening",
+        "surface reflections visible"
+      ],
+      "initial_motion_description": "already moving downward from the spout into the glass at the first frame",
+      "initial_integrity_description": "continuous visible stream at the start",
+      "event_role_hints": [
+        "visible moving liquid between spout and glass"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "receiving glass",
+      "visible_form": "small clear cylindrical glass or jar positioned below the spout",
+      "material_description": "transparent glass-like walls with reflective edges",
+      "visible_properties": [
+        "open top",
+        "partly filled with orange liquid",
+        "vertical sides"
+      ],
+      "initial_motion_description": "no visible motion of the glass",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "positioned under the stream"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "orange liquid",
+      "visible_form": "opaque orange liquid inside the receiving glass",
+      "material_description": "orange-colored liquid with small bubbles at the upper surface",
+      "visible_properties": [
+        "orange",
+        "surface bubbles",
+        "disturbed surface beneath stream"
+      ],
+      "initial_motion_description": "surface shows visible disturbance where the clear stream enters",
+      "initial_integrity_description": "contained within the receiving glass",
+      "event_role_hints": [
+        "visible liquid level changes upward during the clip"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "woven stand",
+      "visible_form": "round woven platform or basket-like stand supporting the dispenser",
+      "material_description": "brown tan woven material with multicolored strands",
+      "visible_properties": [
+        "cylindrical woven sides",
+        "flat top surface"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the dispenser"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "wooden table",
+      "visible_form": "flat tabletop under the glass and stand",
+      "material_description": "wood-like surface with visible grain",
+      "visible_properties": [
+        "brown",
+        "flat",
+        "horizontal"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "surface holding the glass and stand"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned on top of",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is attached to the front of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is positioned below",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "extends from the spout into the receiving glass opening",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The transparent dispenser is seated on the woven stand."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A small tap-like spout is visible on the front of the dispenser."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The receiving glass is centered below the spout."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A clear narrow stream extends downward from the spout into the glass opening."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The receiving glass contains orange liquid below the rim."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The clear stream remains visible between the spout and the glass."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "Small bubbles are visible around the orange liquid surface near the stream entry area."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The orange liquid surface is higher than it was at the start."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The orange liquid surface is close to the upper portion of the glass."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The clear stream is still entering the glass near the end of the clip."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The dispenser, stand, glass, and table remain in stable positions within the scene."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The dispenser and spout are already aligned over the receiving glass.",
+        "The clear stream is already present at the first visible moment.",
+        "The receiving glass is partly filled with orange liquid."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "extends downward from the spout into the glass"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "has a visible upper surface below the rim of the glass"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The stream continues entering the glass.",
+        "The orange liquid surface shows bubbles and disturbance.",
+        "The visible liquid level has risen compared with the start."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "continues as a narrow downward stream"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "surface rises within the glass and shows bubbles near the entry area"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The orange liquid surface is near the upper part of the receiving glass.",
+        "The stream remains visible entering the glass.",
+        "The main objects remain in place."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "is still visible between spout and glass"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "occupies more of the glass height than at the beginning"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

@@ -1,0 +1,347 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A transparent cylinder is lowered over a flaming upright red object in a bowl of red liquid, after which the flame disappears, cloudy material appears, liquid is visible inside the cylinder, and the red object tilts.",
+  "raw_event_description": "At the start, a clear bowl on a wooden tabletop contains red liquid, with a red rectangular upright object near the center and a bright flame at its top. A transparent cylindrical container enters from above and moves downward around the flame and the red upright object. The flame changes shape inside the transparent cylinder, whitish-gray cloudy material becomes visible, and the flame then disappears from view. Later, red liquid is visible inside the lower part of the cylinder, the liquid level inside the cylinder shifts upward over time, and the red upright object tilts to the viewer's right.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The bowl, red liquid, upright red object, and flame are visible.",
+      "The transparent cylinder that later enters the scene is not yet fully visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "clear bowl",
+      "visible_form": "wide transparent round bowl with curved sides and a visible rim",
+      "material_description": "transparent, glossy, glass-like appearance",
+      "visible_properties": [
+        "transparent",
+        "round",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary on the tabletop",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "contains the red liquid"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red liquid",
+      "visible_form": "red fluid layer occupying the lower portion of the bowl",
+      "material_description": "opaque to translucent red liquid surface with reflections",
+      "visible_properties": [
+        "red",
+        "fluid surface",
+        "initially level-looking"
+      ],
+      "initial_motion_description": "no visible motion at the start",
+      "initial_integrity_description": "continuous liquid volume",
+      "event_role_hints": [
+        "later visible inside the transparent cylinder"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "upright red object",
+      "visible_form": "narrow red rectangular vertical object with a blue band near its upper part and small dark tips at the top",
+      "material_description": "solid-looking red body with colored band and dark top features",
+      "visible_properties": [
+        "red",
+        "rectangular",
+        "upright initially",
+        "partly submerged in red liquid"
+      ],
+      "initial_motion_description": "stationary and upright",
+      "initial_integrity_description": "appears intact before the cylinder descends",
+      "event_role_hints": [
+        "flame is located at its top"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "flame",
+      "visible_form": "bright yellow-white and orange luminous shape above the upright red object",
+      "material_description": "luminous visible emission with soft edges",
+      "visible_properties": [
+        "bright",
+        "yellow-white",
+        "orange",
+        "flickering"
+      ],
+      "initial_motion_description": "flickers in place above the red upright object",
+      "initial_integrity_description": "continuous visible flame at the start",
+      "event_role_hints": [
+        "later enclosed by the transparent cylinder and then disappears from view"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "transparent cylinder",
+      "visible_form": "tall clear cylindrical container entering from above, with curved transparent sides",
+      "material_description": "transparent, glossy, glass-like or plastic-like appearance",
+      "visible_properties": [
+        "transparent",
+        "cylindrical",
+        "vertical during descent"
+      ],
+      "initial_motion_description": "not visible in the first frame; later moves downward from the top of the frame",
+      "initial_integrity_description": "appears intact when visible",
+      "event_role_hints": [
+        "moves around the flame and red upright object"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "cloudy material",
+      "visible_form": "whitish-gray diffuse patches inside the transparent cylinder",
+      "material_description": "semi-transparent cloudy visual material",
+      "visible_properties": [
+        "whitish-gray",
+        "diffuse",
+        "semi-transparent"
+      ],
+      "initial_motion_description": "not visible at the start",
+      "initial_integrity_description": "not present visibly at the start",
+      "event_role_hints": [
+        "appears inside the cylinder after it covers the flame area"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "wooden tabletop",
+      "visible_form": "flat tan-brown horizontal surface beneath the bowl",
+      "material_description": "wood-grain visible surface",
+      "visible_properties": [
+        "flat",
+        "tan-brown",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the bowl"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "sits on",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "occupies the lower portion of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "stands near the center of the bowl and extends through the red liquid",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is visible at the top of",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A clear bowl sits on a wooden tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Red liquid fills the lower portion of the clear bowl."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A red rectangular upright object stands near the center of the bowl and extends upward above the red liquid."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A bright yellow-white flame is visible at the top of the red upright object."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A transparent cylindrical container enters from the top edge of the frame above the flame."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The transparent cylinder moves downward around the flame and the red upright object."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The flame is visible within the outline of the transparent cylinder."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The flame changes into a longer diagonal shape inside the transparent cylinder."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "Whitish-gray cloudy material appears inside the transparent cylinder."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The visible flame becomes smaller and then is no longer visible."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "Red liquid is visible inside the lower part of the transparent cylinder."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The red liquid surface inside the transparent cylinder shifts upward relative to the cylinder and bowl over later frames."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The red upright object tilts to the viewer's right inside the transparent cylinder."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "late",
+      "observation": "The transparent cylinder remains vertical with its lower portion inside the bowl."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "continuous",
+      "observation": "The camera view remains fixed on the bowl and central objects."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The bowl, red liquid, upright red object, and flame are visible before the cylinder enters."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary on the tabletop"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "appears as a still red liquid layer in the bowl"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "stands upright near the center of the bowl"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "flickers above the red upright object"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The transparent cylinder descends from above and surrounds the flame area.",
+        "The flame changes shape, cloudy material appears, and the flame then disappears from view."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "moves downward from the top of the frame around the flame and red upright object"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "changes shape inside the cylinder and then is no longer visible"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "appears as whitish-gray cloudy material inside the cylinder"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ],
+      "observations": [
+        "The transparent cylinder remains in the bowl.",
+        "Red liquid is visible inside the cylinder.",
+        "The red upright object is no longer upright."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "is visible inside the lower part of the transparent cylinder, with its surface shifting upward over time"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "tilts to the viewer's right inside the transparent cylinder"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "remains vertical with its lower portion inside the bowl"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e15"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

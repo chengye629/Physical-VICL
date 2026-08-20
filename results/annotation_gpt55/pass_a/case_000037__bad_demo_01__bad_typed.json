@@ -1,0 +1,293 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A lit thin stick is lowered into a clear liquid in a transparent tumbler, and the visible flame shrinks and disappears.",
+  "raw_event_description": "The scene begins with a transparent tumbler containing clear liquid on a wooden tabletop. A thin tan stick enters from the upper left and its blackened lower end carries a yellow-orange flame near the tumbler rim. The flame flickers while the stick end moves lower into the tumbler opening. As the blackened end reaches the liquid surface, the flame becomes smaller and lower. The bright flame then disappears, leaving the darkened stick end near the liquid surface inside the tumbler while the rest of the scene remains still.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "mid_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The flame is already visible at the first frame.",
+      "The stick, tumbler, clear liquid, tabletop, and background are all visible.",
+      "The first frame does not show the ignition or placement before the flame was present."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "transparent tumbler",
+      "visible_form": "upright cylindrical drinking glass with thick base and open top",
+      "material_description": "clear, glossy, transparent solid with specular highlights",
+      "visible_properties": [
+        "transparent",
+        "rigid-looking",
+        "upright",
+        "open at top"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact with continuous rim and sides",
+      "event_role_hints": [
+        "contains the clear liquid",
+        "receives the lowered stick end within its opening"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "clear liquid",
+      "visible_form": "transparent liquid volume filling most of the tumbler with a visible upper surface",
+      "material_description": "clear, transparent, reflective surface",
+      "visible_properties": [
+        "transparent",
+        "level upper surface",
+        "contained in tumbler"
+      ],
+      "initial_motion_description": "no visible bulk motion",
+      "initial_integrity_description": "continuous visible volume inside the tumbler",
+      "event_role_hints": [
+        "the stick tip reaches its surface during the event"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "thin stick",
+      "visible_form": "long slender tan rod entering diagonally from upper left toward the tumbler",
+      "material_description": "tan fibrous-looking surface with a blackened lower end",
+      "visible_properties": [
+        "slender",
+        "straight",
+        "diagonal orientation",
+        "blackened tip"
+      ],
+      "initial_motion_description": "initially angled over the tumbler opening; later visible motion is downward and rightward relative to the tumbler",
+      "initial_integrity_description": "appears as one continuous unbroken stick with a darkened end",
+      "event_role_hints": [
+        "carries the visible flame at its lower end",
+        "moves into the tumbler opening"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "flame",
+      "visible_form": "yellow-orange luminous shape at the blackened end of the stick",
+      "material_description": "bright yellow, orange, and pale luminous region without a solid boundary",
+      "visible_properties": [
+        "luminous",
+        "flickering",
+        "shape-changing",
+        "attached visually to stick end"
+      ],
+      "initial_motion_description": "flickers and changes outline while staying at the stick end",
+      "initial_integrity_description": "visible as a continuous bright flame shape at the start",
+      "event_role_hints": [
+        "visible light-emitting region that shrinks and disappears"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal surface beneath the tumbler",
+      "material_description": "brown surface with visible wood grain pattern",
+      "visible_properties": [
+        "flat",
+        "stationary",
+        "brown",
+        "wood-grain appearance"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous tabletop surface visible around the tumbler",
+      "event_role_hints": [
+        "supports the tumbler"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "clear liquid is inside the transparent tumbler and fills it close to the rim",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "thin stick extends diagonally from the upper left toward the tumbler opening",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "flame is visually contiguous with the blackened lower end of the stick near the tumbler rim",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "tumbler rests on the wooden tabletop",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A transparent tumbler filled near the top with clear liquid sits on a brown wooden tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A thin tan stick extends diagonally from the upper left toward the tumbler opening."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A yellow-orange flame is visible at the blackened lower end of the stick near the tumbler rim."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The flame changes height and outline across successive frames."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The lower end of the stick shifts downward and rightward relative to the tumbler rim."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The blackened stick end reaches the clear liquid surface inside the tumbler opening."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The visible flame becomes shorter and lower near the stick end."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The bright yellow-orange flame is no longer visible at the stick end."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "A small dark area remains at the stick end near the liquid surface."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The stick remains angled into the tumbler after the flame disappears."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The tumbler, tabletop, and background keep the same positions in the frame."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "A lit stick is already positioned near the tumbler rim at the beginning."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The flame flickers and changes shape while remaining at the blackened stick end."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The stick is held diagonally over the tumbler opening."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The tumbler remains stationary on the tabletop."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The stick end moves into the tumbler opening and toward the clear liquid."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The blackened lower end of the stick moves downward and rightward until it reaches the liquid surface."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The flame becomes visibly smaller and lower at the stick end."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The stick end is visible at the liquid surface inside the tumbler."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The bright flame disappears and the angled stick remains in the tumbler."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The flame changes from a visible luminous shape to no visible luminous shape."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The blackened end remains near the liquid surface after the flame is gone."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The tumbler remains upright and stationary."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The flame is already present at the first visible frame, so the start of the flame is not shown.",
+    "The lower stick end is partly obscured by the tumbler rim and reflections when it enters the opening."
+  ]
+}

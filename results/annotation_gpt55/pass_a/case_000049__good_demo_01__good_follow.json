@@ -1,0 +1,247 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small gray rounded object moves across a tabletop from left to right behind a stationary white open container.",
+  "raw_event_description": "The scene begins with a white, square-sided, open-top container standing on a light wooden tabletop. For many frames the container and table remain visually unchanged. A small gray rounded object then appears from the left side of the frame, moves rightward across the tabletop behind or partly beside the container, is briefly hidden by the container, reappears on the right side, continues rightward, and exits the visible frame. The container remains upright and visibly unchanged throughout.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The white container is fully visible near the center of the frame.",
+      "The tabletop and background are visible.",
+      "The moving gray object is not yet visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "white open container",
+      "visible_form": "upright open-top rectangular cup or box with four vertical sides and a square rim",
+      "material_description": "white opaque surface with visible fine diagonal textured pattern on the front face",
+      "visible_properties": [
+        "open top",
+        "hollow interior visible",
+        "straight vertical edges",
+        "textured front face",
+        "upright orientation"
+      ],
+      "initial_motion_description": "no visible motion before the gray object appears",
+      "initial_integrity_description": "appears intact with continuous sides and rim",
+      "event_role_hints": [
+        "central stationary object near the path of the moving gray object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "gray rounded object",
+      "visible_form": "small rounded object, appearing approximately spherical or ball-like",
+      "material_description": "gray matte-looking surface with slight motion blur during movement",
+      "visible_properties": [
+        "small compared with the container",
+        "rounded outline",
+        "gray color"
+      ],
+      "initial_motion_description": "not visible in the first frames; later enters from the left while moving rightward",
+      "initial_integrity_description": "appears as a single intact rounded object when visible",
+      "event_role_hints": [
+        "moving object crossing behind the container"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal light-colored surface extending across the frame",
+      "material_description": "light wood-like grain pattern",
+      "visible_properties": [
+        "flat visible surface",
+        "wood grain",
+        "supports visible objects"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "surface appears continuous and unchanged",
+      "event_role_hints": [
+        "surface on which the container stands and across which the gray object moves"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "dark left-edge object",
+      "visible_form": "partially visible dark rounded or wheeled object at the far left edge",
+      "material_description": "black or very dark surface",
+      "visible_properties": [
+        "partially cropped by frame edge",
+        "dark color"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "only partially visible; no change observed",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "stands upright on the tabletop near the center of the frame",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is partially visible at the far left edge of the frame, separated from the central container",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The white open container stands upright on the light wooden tabletop near the center of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A dark object is partially visible at the far left edge of the frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "No gray rounded object is visible in the first visible part of the sequence."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "A small gray rounded object appears on the tabletop from the left side of the frame."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The gray rounded object is seen to the left of the white container while moving rightward."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The gray rounded object becomes partly hidden by the white container as it passes behind or beside it."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The gray rounded object reappears to the right of the white container."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The gray rounded object continues rightward toward the right edge of the frame."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The gray rounded object leaves the visible frame on the right."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The white container remains upright with no visible deformation throughout the sequence."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The camera view remains fixed with no visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The scene is static with the white container centered on the tabletop.",
+        "The gray moving object is not yet visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The container stands upright and remains still."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The gray rounded object is outside the visible frame."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The gray rounded object enters from the left and crosses near the container."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The gray rounded object moves rightward across the tabletop."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The gray rounded object becomes briefly partly occluded by the container."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The container remains upright without visible displacement."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The gray rounded object passes to the right of the container and exits the frame."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The gray rounded object reappears on the right side of the container and continues rightward."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The gray rounded object exits the visible frame to the right."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The container remains upright and visibly unchanged."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

@@ -1,0 +1,320 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "transparent rectangular plate",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "small crumpled object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "combustible",
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "deformed",
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e8"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "smoke plume",
+      "entity_kind": "aerosol_or_smoke",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "translucent"
+      ],
+      "initial_motion_state": "dispersing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e6"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "blue flame-like luminous shapes",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [
+        "translucent",
+        "emissive"
+      ],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e7"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "bright yellow-white glow",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "wood-grain tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "combustion",
+      "type": "sustained_burning",
+      "raw_type": "ongoing burning of the small crumpled object with blue flame-like shapes, bright glow, and smoke",
+      "participant_object_ids": [
+        "obj_2",
+        "obj_3",
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "gas_particulate_motion",
+        "type": "plume_motion",
+        "raw_type": "rising and curling smoke plume above the burning object",
+        "participant_object_ids": [
+          "obj_3",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e6"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "light_emission",
+        "raw_type": "visible blue and yellow-white light emission from flame-like and glowing regions",
+        "participant_object_ids": [
+          "obj_4",
+          "obj_5",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e4",
+          "e5",
+          "e7",
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the emission is already ongoing at the start",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e10"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady"
+    }
+  },
+  "impacts": [
+    {
+      "id": "impact_1",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "thermal_reaction",
+        "type": null,
+        "raw_transition": "the crumpled object remains in an ongoing burning and glowing state; no ignition onset or extinguishing is visible"
+      },
+      "evidence_refs": [
+        "e2",
+        "e5",
+        "e7"
+      ]
+    },
+    {
+      "id": "impact_2",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "dispersion",
+        "raw_transition": "smoke rises upward from the source area and spreads into changing wispy curls"
+      },
+      "evidence_refs": [
+        "e3",
+        "e6"
+      ]
+    },
+    {
+      "id": "impact_3",
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "the blue flame-like luminous shapes flicker and change outline, height, and curvature while staying near the small object"
+      },
+      "evidence_refs": [
+        "e4",
+        "e7"
+      ]
+    },
+    {
+      "id": "impact_4",
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "the localized yellow-white glow remains visible and varies in brightness"
+      },
+      "evidence_refs": [
+        "e5",
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "id": "mechanism_1",
+      "family": "energy_reaction",
+      "type": "chemical_energy_release",
+      "raw_mechanism": "combustion releases chemical energy, producing visible flame-like emission, glow, and smoke",
+      "linked_processes": [
+        "primary"
+      ],
+      "object_ids": [
+        "obj_2",
+        "obj_3",
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e7"
+      ]
+    },
+    {
+      "id": "mechanism_2",
+      "family": "mechanical_forcing",
+      "type": "buoyancy",
+      "raw_mechanism": "heated smoke or aerosol rises upward through the surrounding air",
+      "linked_processes": [
+        "secondary"
+      ],
+      "object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e6"
+      ]
+    },
+    {
+      "id": "mechanism_3",
+      "family": "optical_electromagnetic",
+      "type": "light_emission",
+      "raw_mechanism": "the flame-like and glowing regions emit visible blue and yellow-white light",
+      "linked_processes": [
+        "primary",
+        "secondary"
+      ],
+      "object_ids": [
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e7"
+      ]
+    },
+    {
+      "id": "mechanism_4",
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "emitted light reflects from the nearby transparent plate surface",
+      "linked_processes": [
+        "secondary"
+      ],
+      "object_ids": [
+        "obj_1",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e9"
+      ]
+    }
+  ]
+}

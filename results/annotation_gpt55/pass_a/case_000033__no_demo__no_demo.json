@@ -1,0 +1,314 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A transparent rectangular container descends from above and comes to surround a yellow smiley ball on a wooden tabletop.",
+  "raw_event_description": "At the start, a yellow smiley ball sits near the center of a wooden tabletop while a clear rectangular container is partly visible near the top of the frame. The container moves downward in a mostly vertical path, with a shiny metal top, ring, black connector, and orange cord becoming visible above it. As it descends, the container aligns over the ball, its clear walls pass around the ball, and the ball remains visible inside the container. The container then stays lowered around the ball with only small visible settling or swaying while the ball remains in place.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The yellow smiley ball is clearly visible on the tabletop.",
+      "The transparent descending container is only partly visible near the upper edge.",
+      "The upper attachment is not yet fully visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow smiley ball",
+      "visible_form": "small round yellow ball with black smiley-face markings",
+      "material_description": "yellow textured surface with dark printed or drawn face features",
+      "visible_properties": [
+        "round",
+        "yellow",
+        "black facial markings",
+        "opaque"
+      ],
+      "initial_motion_description": "stationary on the tabletop",
+      "initial_integrity_description": "appears intact and unchanged",
+      "event_role_hints": [
+        "object later surrounded by the transparent container"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "transparent container",
+      "visible_form": "clear rectangular box-like container with vertical sides and a lower open-looking edge",
+      "material_description": "transparent, glossy, rigid-looking material with visible edges and reflections",
+      "visible_properties": [
+        "transparent",
+        "rectangular",
+        "box-like",
+        "rigid-looking"
+      ],
+      "initial_motion_description": "moves downward from above the ball",
+      "initial_integrity_description": "appears intact and unchanged",
+      "event_role_hints": [
+        "descends around the ball"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "metal top assembly",
+      "visible_form": "shiny dark and silver top plate with a cylindrical fitting and circular ring",
+      "material_description": "reflective metallic-looking surfaces",
+      "visible_properties": [
+        "shiny",
+        "dark plate",
+        "silver cylindrical part",
+        "circular ring"
+      ],
+      "initial_motion_description": "moves downward together with the transparent container after becoming visible",
+      "initial_integrity_description": "appears intact and unchanged",
+      "event_role_hints": [
+        "attached above the transparent container"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "cord and connector",
+      "visible_form": "vertical orange cord with darker connector links above the metal ring",
+      "material_description": "thin cord-like orange segment and dark link-like connector pieces",
+      "visible_properties": [
+        "thin",
+        "vertical",
+        "orange",
+        "dark connector links"
+      ],
+      "initial_motion_description": "not fully visible at the start; later visible above the metal ring while moving with the assembly",
+      "initial_integrity_description": "appears intact and continuous where visible",
+      "event_role_hints": [
+        "connected to the metal top assembly"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal brown tabletop",
+      "material_description": "wood-grain surface",
+      "visible_properties": [
+        "flat",
+        "brown",
+        "wood grain",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact and unchanged",
+      "event_role_hints": [
+        "supports the yellow ball"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "wall background",
+      "visible_form": "plain light-colored vertical wall behind the tabletop",
+      "material_description": "smooth light gray surface",
+      "visible_properties": [
+        "vertical",
+        "light-colored",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears unchanged",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests visibly on the tabletop near the center of the scene",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is above the yellow ball at the beginning",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is attached to the top of the transparent container when visible",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "extends upward from the metal ring when visible",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e6"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The yellow smiley ball is stationary on the wooden tabletop near the center of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A transparent rectangular container is visible above the ball near the top of the frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The transparent container moves downward toward the tabletop."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "More of the transparent container becomes visible as it descends."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A shiny top plate and circular metal ring are visible above the transparent container."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A vertical orange cord and dark connector links are visible above the metal ring."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The transparent container becomes horizontally aligned over the yellow ball."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The lower edges of the transparent container pass down around the sides of the ball."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The ball remains visible through the transparent container walls."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The transparent container remains lowered around the ball."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The top assembly shows small side-to-side changes in position or angle after lowering."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed on the tabletop and wall."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The ball is already on the tabletop.",
+        "The transparent container is above the ball and begins or continues descending."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary on the tabletop"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "moves downward from the upper part of the frame"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The descending container and its upper hardware become fully visible.",
+        "The container aligns over the ball and moves down around it."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "continues downward and surrounds the ball with its clear walls"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "moves downward together with the container"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "is visible above the ring and moves with the assembly"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains visible and largely in the same tabletop position"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The transparent container is lowered around the ball.",
+        "The assembly shows minor settling or swaying while the ball remains inside the clear-walled area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "stays around the ball after descending"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "shows small positional or angular changes while attached above the container"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains visible through the transparent container"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact contact state between the transparent container edges and the tabletop is not clearly visible.",
+    "The exact shape of the transparent container bottom or opening is difficult to determine from the view."
+  ]
+}

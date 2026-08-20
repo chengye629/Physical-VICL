@@ -1,0 +1,280 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A paintbrush moves across a transparent sheet, contacts a red spot, and leaves a curved red smear on the sheet.",
+  "raw_event_description": "A transparent rectangular sheet rests on a wooden tabletop with a small red circular spot near its upper central area. A paintbrush connected to a right-side holder moves from the right/front area over the sheet toward the red spot. The brush tip reaches and overlaps the red spot, after which the red spot becomes smeared into an elongated curved red mark. The brush continues moving away toward the right side while the curved red paint streak remains on the transparent sheet.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The transparent sheet, red spot, brush, and right-side holder are visible before the brush contacts the red spot.",
+      "The red spot is still compact and separate from the brush in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "transparent sheet",
+      "visible_form": "flat rectangular panel lying horizontally on the tabletop",
+      "material_description": "clear or translucent glossy sheet with visible edges",
+      "visible_properties": [
+        "transparent",
+        "rectangular",
+        "flat",
+        "glossy"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact flat sheet with no visible breakage",
+      "event_role_hints": [
+        "surface on which the red spot and later smear are visible"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "wooden tabletop",
+      "visible_form": "horizontal tabletop surface beneath the transparent sheet",
+      "material_description": "light brown surface with visible wood grain",
+      "visible_properties": [
+        "flat",
+        "wood-grain pattern",
+        "light brown"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "continuous visible tabletop surface",
+      "event_role_hints": [
+        "supporting surface under the sheet"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "red paint spot",
+      "visible_form": "small circular red mark on the transparent sheet",
+      "material_description": "opaque red colored substance or mark",
+      "visible_properties": [
+        "red",
+        "round at the start",
+        "opaque"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "compact circular spot before contact",
+      "event_role_hints": [
+        "red mark that becomes smeared during the event"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "paintbrush",
+      "visible_form": "long pale handle with metal ferrule and red-tipped bristles",
+      "material_description": "light-colored handle, shiny metal ferrule, red/orange brush tip",
+      "visible_properties": [
+        "elongated",
+        "tapered bristle end",
+        "rigid-looking handle"
+      ],
+      "initial_motion_description": "initially near the right/front side of the sheet, then moves over the sheet",
+      "initial_integrity_description": "intact brush with handle, ferrule, and bristles visible",
+      "event_role_hints": [
+        "moving object that contacts the red spot"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "right-side holder",
+      "visible_form": "black circular base with green and small wooden parts holding or guiding the brush handle",
+      "material_description": "black round base, green plastic-like pieces, small tan wooden pieces",
+      "visible_properties": [
+        "round base",
+        "partly cropped at right edge",
+        "connected to brush handle"
+      ],
+      "initial_motion_description": "stationary or nearly stationary in the visible frames",
+      "initial_integrity_description": "assembled holder remains intact",
+      "event_role_hints": [
+        "visible support connected to the moving brush"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "lies on top of the wooden tabletop",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is located on the upper central area of the transparent sheet",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is positioned to the right/front of the red spot before contact",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is visibly connected to the right-side holder",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A transparent rectangular sheet lies flat on a light wooden tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A small red circular spot is visible near the upper central area of the transparent sheet."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The paintbrush tip is near the right/front side of the sheet and is separated from the red spot."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The paintbrush handle is connected to a right-side black circular base with green and tan holder parts."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The paintbrush tip changes position across the transparent sheet toward the red spot."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The paintbrush tip overlaps the red circular spot."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The red circular spot becomes spread out at the location where the brush tip passes."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "An elongated curved red streak appears on the transparent sheet behind the brush tip."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The paintbrush moves away toward the right side of the frame."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "A curved red paint streak remains on the transparent sheet after the brush has moved away."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The sheet, tabletop, red spot, brush, and holder are visible before the main contact."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The transparent sheet remains flat and stationary."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The red spot is compact and circular."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The brush is positioned away from the red spot."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The holder is visible at the right side connected to the brush."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The brush tip travels over the transparent sheet, reaches the red spot, and a red smear forms."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The brush tip moves across the sheet and overlaps the red spot."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The red spot changes from a compact circle into a spread and elongated mark."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The transparent sheet continues to show the moving brush reflection and the developing red mark."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The brush leaves the marked area, and the red curved streak remains visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The brush moves toward the right side and out of the central working area."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The red material remains as a curved streak rather than the initial round spot."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The transparent sheet remains flat with the red streak on it."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

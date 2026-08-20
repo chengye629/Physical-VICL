@@ -1,0 +1,335 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A red-orange liquid stream appears from an overhead spout, lands on a yellow duck-shaped toy, and spreads across the black tray around it.",
+  "raw_event_description": "At the start, a yellow duck-shaped toy sits upright in the center area of a black rectangular tray beneath a red container with a blue spout. For many frames nothing visible changes in the scene. A thin red-orange stream then appears from the spout above, extends downward to the top/front of the duck, and continues flowing. The duck becomes progressively coated with red-orange liquid, especially on the head and upper body, while liquid gathers at its base and spreads outward across the tray into an irregular puddle. The puddle widens toward both sides of the tray and later covers much of the tray floor around the duck while the stream continues.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The duck-shaped toy, tray, overhead container edge, blue spout, woven cylinder, and tabletop are visible.",
+      "No liquid stream is visible at the first frame.",
+      "The duck-shaped toy is upright and unobstructed."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "duck-shaped toy",
+      "visible_form": "small upright yellow duck-shaped figure with round head, orange beak, black eyes, and rounded body",
+      "material_description": "glossy smooth surface with bright yellow and orange coloring",
+      "visible_properties": [
+        "yellow",
+        "orange beak",
+        "black eyes",
+        "shiny surface",
+        "small relative to tray"
+      ],
+      "initial_motion_description": "no visible motion before the liquid stream appears",
+      "initial_integrity_description": "appears intact and upright",
+      "event_role_hints": [
+        "located directly below the later visible liquid stream",
+        "surface becomes coated during the event"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black tray",
+      "visible_form": "rectangular shallow pan with raised sides and rounded corners",
+      "material_description": "dark matte-to-slightly-glossy surface",
+      "visible_properties": [
+        "black",
+        "shallow",
+        "raised rim",
+        "flat interior floor"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "receives and contains spreading liquid"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "red container",
+      "visible_form": "partially visible red cylindrical container positioned above the tray",
+      "material_description": "red ridged exterior with a blue protruding spout area",
+      "visible_properties": [
+        "red",
+        "cylindrical",
+        "upper portion partly outside frame",
+        "blue spout area visible"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "visible portion appears intact",
+      "event_role_hints": [
+        "liquid stream appears from its blue spout area"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "blue spout",
+      "visible_form": "small blue protrusion on lower visible side of the red container",
+      "material_description": "blue colored surface with shiny highlights",
+      "visible_properties": [
+        "blue",
+        "small",
+        "positioned above duck"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "red-orange stream becomes visible below it"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "red-orange liquid",
+      "visible_form": "thin vertical stream and spreading puddle with irregular edges",
+      "material_description": "glossy red-orange fluid appearance",
+      "visible_properties": [
+        "red-orange",
+        "shiny",
+        "forms stream",
+        "forms puddle",
+        "coats surfaces"
+      ],
+      "initial_motion_description": "not visible at the first frame",
+      "initial_integrity_description": "not visible before onset",
+      "event_role_hints": [
+        "appears from spout",
+        "contacts duck",
+        "spreads on tray"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "woven cylinder",
+      "visible_form": "round woven basket-like cylinder behind the tray",
+      "material_description": "brown and tan interlaced strands",
+      "visible_properties": [
+        "cylindrical",
+        "woven texture",
+        "stationary background object"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_7",
+      "name": "tabletop",
+      "visible_form": "flat wooden surface supporting the tray and background objects",
+      "material_description": "light brown wood-like surface",
+      "visible_properties": [
+        "flat",
+        "light brown",
+        "horizontal visible surface"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "duck-shaped toy is upright on the interior floor of the tray",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "blue spout is positioned above the duck-shaped toy in the image",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "red container is visible above the woven cylinder and above the tray area",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "tray rests on the wooden tabletop",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The yellow duck-shaped toy is upright on the black tray floor."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A blue spout-like protrusion is visible above the duck-shaped toy."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A red cylindrical container is partially visible above the tray."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The black tray is on a light brown tabletop."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "No red-orange liquid stream is visible at the start."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A thin red-orange vertical stream appears below the blue spout."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The red-orange stream reaches the top/front area of the duck-shaped toy."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "Red-orange liquid becomes visible on the duck-shaped toy's head and upper body."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "A red-orange puddle appears around the base of the duck-shaped toy."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The red-orange puddle spreads outward with irregular edges on the tray floor."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The red-orange liquid covers a broad area of the tray floor around the duck-shaped toy."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The red-orange stream remains visible between the spout and the duck-shaped toy."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The duck-shaped toy remains upright while partially coated in red-orange liquid."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The camera framing remains nearly unchanged throughout the clip."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The setup is static with the duck-shaped toy in the tray beneath the visible spout.",
+        "No red-orange stream or puddle is visible yet."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "duck-shaped toy remains upright and uncoated by red-orange liquid"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "red-orange liquid is not yet visible"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "A red-orange stream appears from the spout area and contacts the duck-shaped toy.",
+        "Liquid begins accumulating and spreading on the tray."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "red-orange liquid forms a vertical stream and then a spreading puddle"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "duck-shaped toy becomes visibly coated on the head and body"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "tray floor shows an expanding red-orange puddle"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The red-orange puddle occupies much of the visible tray floor around the duck-shaped toy.",
+        "The stream continues to connect the spout area and the duck-shaped toy."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "red-orange stream and broad puddle remain visible"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "duck-shaped toy remains upright and partially covered in red-orange liquid"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The upper part of the red container is outside the frame."
+  ]
+}

@@ -1,0 +1,369 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A lit flame on the end of a thin rod moves to the lower side of a black balloon, after which the balloon suddenly breaks apart and disappears from its original position.",
+  "raw_event_description": "The scene begins with an intact glossy black spherical balloon on the left side of a wood-grain table and a black circular base on the right with a thin light-colored rod attached on top. A small yellow-orange flame is visible at the free end of the rod. The rod and flame move in an arc from the lower right toward the balloon. The flame reaches the lower side of the balloon and overlaps that surface. Immediately afterward the flame is no longer visible, the balloon suddenly loses its spherical form, and dark pieces fly away from the balloon's previous position. The black base and attached rod remain on the table afterward, with the rod extended toward the left.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The intact black spherical balloon is clearly visible on the left.",
+      "The black circular base and attached rod are visible on the right.",
+      "A small flame is visible near the rod's free end."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "black balloon",
+      "visible_form": "large glossy black inflated sphere",
+      "material_description": "smooth dark reflective surface",
+      "visible_properties": [
+        "black",
+        "glossy",
+        "spherical",
+        "larger than the base"
+      ],
+      "initial_motion_description": "no visible motion before contact",
+      "initial_integrity_description": "intact continuous spherical form",
+      "event_role_hints": [
+        "object contacted by the visible flame",
+        "object that suddenly changes from intact sphere to separated pieces"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black circular base",
+      "visible_form": "short round black cylinder on the tabletop",
+      "material_description": "dark smooth-looking surface with a visible cord extending to the right",
+      "visible_properties": [
+        "black",
+        "round",
+        "flat-topped",
+        "corded"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "unchanged solid form",
+      "event_role_hints": [
+        "supporting object for the attached rod"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "thin rod",
+      "visible_form": "long slender light-colored stick or rod",
+      "material_description": "pale tan linear object with a small darkened-looking end visible late",
+      "visible_properties": [
+        "thin",
+        "straight",
+        "light-colored"
+      ],
+      "initial_motion_description": "its free end shifts across the frame in an arc while one end remains near the base",
+      "initial_integrity_description": "appears continuous and straight",
+      "event_role_hints": [
+        "carries the visible flame at its free end",
+        "remains visible after the balloon breaks apart"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "flame",
+      "visible_form": "small yellow-orange luminous teardrop shape",
+      "material_description": "bright yellow and orange light-emitting region",
+      "visible_properties": [
+        "yellow-orange",
+        "bright",
+        "small",
+        "flickering shape"
+      ],
+      "initial_motion_description": "moves with the free end of the rod toward the balloon",
+      "initial_integrity_description": "visible as a compact flame shape before reaching the balloon",
+      "event_role_hints": [
+        "visible object that overlaps the balloon surface before the balloon changes form"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "tabletop",
+      "visible_form": "flat horizontal wood-grain surface",
+      "material_description": "light brown wood-grain appearance",
+      "visible_properties": [
+        "flat",
+        "brown",
+        "wood-grain patterned"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "unchanged visible surface",
+      "event_role_hints": [
+        "surface supporting the visible objects"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "balloon fragments",
+      "visible_form": "small dark irregular pieces visible after the balloon loses its spherical form",
+      "material_description": "dark pieces with motion blur; one small pinkish piece is briefly visible among the moving pieces",
+      "visible_properties": [
+        "dark",
+        "irregular",
+        "small compared with the original balloon",
+        "motion-blurred"
+      ],
+      "initial_motion_description": "not visible at the start",
+      "initial_integrity_description": "not separately visible before the balloon breaks apart",
+      "event_role_hints": [
+        "pieces visible after the black balloon ceases to be a sphere"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "faint wisps",
+      "visible_form": "thin translucent gray streaks appearing briefly after the balloon breaks apart",
+      "material_description": "pale gray semi-transparent wispy traces",
+      "visible_properties": [
+        "translucent",
+        "gray",
+        "thin",
+        "briefly visible"
+      ],
+      "initial_motion_description": "not visible at the start",
+      "initial_integrity_description": "not visible before the main event",
+      "event_role_hints": [
+        "brief late visual trace near the balloon's former area"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the black balloon is positioned to the left of the black circular base",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "one end of the rod is located on top of the circular base",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "the flame is at the free end of the rod",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "the flame begins separated from the balloon by visible tabletop space",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1",
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A glossy black spherical balloon is visible on the left side of the table."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A short black circular base is visible on the right side of the table."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A thin light-colored rod is attached near the top of the black circular base with pink tape visible."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A small yellow-orange flame is visible at the rod's free end."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The rod's free end moves in an arc from the lower right toward the balloon."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The flame remains at the moving free end of the rod."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The flame reaches and visually overlaps the lower side of the black balloon."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "A small orange spot is visible on the lower front area of the balloon near the flame contact area."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "After the overlap with the balloon, the flame is no longer visible."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The black balloon suddenly no longer appears as a spherical object."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "Small dark pieces separate from the balloon's former position."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "Some separated pieces move upward and leftward with motion blur."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The rod remains attached to the black circular base after the balloon is gone."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "late",
+      "observation": "The rod's free end is left near the tabletop to the left of the base."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "late",
+      "observation": "Faint translucent gray wisps are briefly visible near the area where the balloon had been."
+    },
+    {
+      "evidence_id": "e16",
+      "stage": "continuous",
+      "observation": "The table, wall, and base remain in the same framing throughout the clip."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The intact black balloon, circular base, rod, and flame are all visible before the main change."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The balloon remains an intact glossy sphere."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The base remains stationary on the right side of the table."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The rod is attached to the top of the base."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The flame is visible at the rod's free end."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The rod and flame move toward the balloon and the flame overlaps the lower side of the balloon."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The rod's free end moves in an arc toward the balloon while the base end stays near the base."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The flame moves with the rod tip and then disappears from view after overlapping the balloon."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The balloon remains spherical until the moment after the flame overlaps its lower side."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14",
+        "e15"
+      ],
+      "observations": [
+        "The balloon is no longer a visible sphere, fragments move away, and the base and rod remain."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The balloon abruptly changes from an intact sphere to no longer being visible as a sphere."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "Small dark fragments move away from the balloon's former position."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The rod remains extended from the base with its free end near the tabletop."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The black circular base remains in place on the table."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "Faint translucent wisps are briefly visible near the former balloon area."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e16"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "A faint translucent rectangular surface or reflection becomes more apparent after the balloon is gone; its exact boundaries and whether it was present from the start are unclear.",
+    "The exact source of the rod's arcing motion is not visible."
+  ]
+}

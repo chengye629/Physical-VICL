@@ -1,0 +1,275 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e7",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "right-side sheet or panel",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e8",
+        "e10",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "blue round object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e11"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "blue round object translates rightward across the tabletop and beyond the tabletop edge",
+      "participants": [
+        {
+          "object_id": "obj_4",
+          "event_roles": [
+            "target"
+          ]
+        },
+        {
+          "object_id": "obj_1",
+          "event_roles": [
+            "support"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "relation_reconfiguration",
+        "type": "support_change",
+        "raw_type": "blue object passes off the visible tabletop support at the right edge",
+        "participants": [
+          {
+            "object_id": "obj_4",
+            "event_roles": [
+              "target"
+            ]
+          },
+          {
+            "object_id": "obj_1",
+            "event_roles": [
+              "support"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e7",
+          "e8",
+          "e9"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": "illumination_change",
+        "raw_type": "localized dark oval appears on the light right-side area while the blue object passes",
+        "participants": [
+          {
+            "object_id": "obj_3",
+            "event_roles": [
+              "target"
+            ]
+          },
+          {
+            "object_id": "obj_4",
+            "event_roles": [
+              "target"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the blue object enters the frame already moving",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e13"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e7",
+        "e8",
+        "e9",
+        "e11",
+        "e13"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "position changes rightward across the tabletop, then rightward beyond the tabletop edge"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "relation",
+        "type": "support_loss",
+        "raw_transition": "object moves past the visible tabletop edge and no longer appears on the tabletop surface"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "object exits the visible frame at the right edge"
+      },
+      "evidence_refs": [
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "intensity_decrease",
+        "raw_transition": "a dark oval area is visible on or near the light right-side area while the blue object passes"
+      },
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity acts on the blue object after it passes beyond the tabletop support edge, associated with its lower image position",
+      "linked_processes": [
+        "relation_reconfiguration"
+      ],
+      "linked_objects": [
+        "obj_4",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": null,
+      "raw_mechanism": "the passing blue object locally changes light visibility on the right-side surface, producing the observed dark oval area",
+      "linked_processes": [
+        "optical_interaction"
+      ],
+      "linked_objects": [
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ]
+}

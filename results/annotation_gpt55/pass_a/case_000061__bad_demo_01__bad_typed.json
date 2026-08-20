@@ -1,0 +1,327 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A stacked arrangement of red, yellow, and blue rectangular blocks changes when the yellow and blue blocks tip and move down to the tabletop while the red block stays upright.",
+  "raw_event_description": "At the start, a red rectangular block stands upright on a wood-grain tabletop, a yellow rectangular block lies horizontally across its top, and a blue rectangular block stands vertically near the right side of the yellow block below partially visible orange-and-black prongs. For many frames the blocks remain in this arrangement. Then the yellow block tilts downward on its right side and the blue block moves down and to the right; both separate from the initial stacked arrangement. The red block remains upright. The yellow and blue blocks come to rest on the tabletop near the red block, with the orange-and-black prongs still visible near the top edge of the frame.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The red, yellow, and blue blocks are visible in a stacked arrangement.",
+      "The orange-and-black prongs are only partly visible at the top edge of the frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "red block",
+      "visible_form": "upright rectangular prism",
+      "material_description": "solid red, matte-looking surface",
+      "visible_properties": [
+        "red",
+        "rectangular",
+        "upright",
+        "rigid-looking"
+      ],
+      "initial_motion_description": "stationary before the main visible change",
+      "initial_integrity_description": "appears whole and unbroken",
+      "event_role_hints": [
+        "remains upright while other blocks move"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "yellow block",
+      "visible_form": "horizontal rectangular prism",
+      "material_description": "solid yellow, matte-looking surface",
+      "visible_properties": [
+        "yellow",
+        "rectangular",
+        "horizontal",
+        "rigid-looking"
+      ],
+      "initial_motion_description": "stationary before the main visible change",
+      "initial_integrity_description": "appears whole and unbroken",
+      "event_role_hints": [
+        "tips and moves from the initial stacked position"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "blue block",
+      "visible_form": "vertical rectangular prism",
+      "material_description": "solid blue, matte-looking surface",
+      "visible_properties": [
+        "blue",
+        "rectangular",
+        "vertical",
+        "rigid-looking"
+      ],
+      "initial_motion_description": "stationary before the main visible change",
+      "initial_integrity_description": "appears whole and unbroken",
+      "event_role_hints": [
+        "moves down and to the right during the event"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "orange-and-black prongs",
+      "visible_form": "two curved orange prong-like parts with dark inner edges, partly cropped by the top of the frame",
+      "material_description": "orange exterior with black/dark trim or inner edge",
+      "visible_properties": [
+        "orange",
+        "black-edged",
+        "curved",
+        "partially visible"
+      ],
+      "initial_motion_description": "appears near the top of the blue block before the main event; any motion is slight or not clearly separable from the short sequence",
+      "initial_integrity_description": "visible portions appear whole",
+      "event_role_hints": [
+        "located above the blue block during the stacked setup"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "tabletop",
+      "visible_form": "flat horizontal surface",
+      "material_description": "wood-grain surface with light brown coloring",
+      "visible_properties": [
+        "light brown",
+        "flat",
+        "wood-grain pattern"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears continuous and unbroken",
+      "event_role_hints": [
+        "blocks are positioned on or above it"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "background wall",
+      "visible_form": "plain vertical background surface",
+      "material_description": "smooth light blue-gray wall",
+      "visible_properties": [
+        "light blue-gray",
+        "plain"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears continuous",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "stands upright on the tabletop",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "lies horizontally across the top area of the red block",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "stands vertically near the right side of the yellow block",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is partly visible above the blue block",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The red rectangular block stands upright on the wood-grain tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The yellow rectangular block is horizontal across the top area of the red block."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The blue rectangular block is vertical near the right end of the yellow block."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "Two orange-and-black prong-like parts are partially visible above the blue block."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The stacked red, yellow, and blue blocks remain visually stationary for several frames."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The yellow block tilts with its right side moving downward."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The blue block moves down and to the right from its initial vertical position."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The yellow and blue blocks separate from the initial stacked arrangement."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The red block remains upright while the yellow and blue blocks are moving."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The yellow block is on the tabletop near the red block."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The blue block is on the tabletop to the right of the yellow block."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The red block is still upright on the tabletop."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The orange-and-black prongs remain partially visible near the top of the frame."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "late",
+      "observation": "After the movement, the visible blocks remain in fixed positions for the rest of the sequence."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The initial arrangement is a vertical red block, a horizontal yellow block, and a vertical blue block near the yellow block's right side.",
+        "The orange-and-black prongs are partly visible above the blue block."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "stands upright without visible motion"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "rests horizontally without visible motion"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "stands vertically without visible motion"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains partly visible above the block arrangement"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The arrangement changes as the yellow and blue blocks move away from their initial positions."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains upright"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "tilts downward on the right side and moves toward the tabletop"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "moves down and to the right from the area above the yellow block"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ],
+      "observations": [
+        "The red, yellow, and blue blocks are separated on the tabletop area, and no further visible block motion occurs."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "stays upright on the tabletop"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "rests on the tabletop near the red block"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "rests on the tabletop to the right of the yellow block"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains partly visible near the top edge of the frame"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The top portions of the orange-and-black prongs are cropped by the frame edge."
+  ]
+}

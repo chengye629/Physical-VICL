@@ -1,0 +1,257 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A cream-colored fabric moves down and forward over a stationary teapot until the teapot is hidden beneath a fabric mound.",
+  "raw_event_description": "At the start, a colorful teapot stands upright on a wooden tabletop in front of a cream-colored hanging fabric. After a long still interval, the fabric moves downward and toward the foreground, first covering the top of the teapot, then the body, handle, and spout. A small lower part of the teapot remains briefly visible below the fabric, then the teapot becomes fully obscured. The final view shows a cream fabric mound on the tabletop with a plain gray wall visible above it.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The teapot is fully visible and upright.",
+      "The tabletop and hanging fabric backdrop are visible.",
+      "No object motion is visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "teapot",
+      "visible_form": "upright teapot with round body, lid, top knob, curved handle on the left, and spout on the right",
+      "material_description": "glossy painted surface with blue body, red handle and spout, green lid and base, floral decoration, and black-and-white pattern details",
+      "visible_properties": [
+        "upright",
+        "rigid-looking",
+        "decorated",
+        "shiny"
+      ],
+      "initial_motion_description": "No visible motion before the fabric begins moving.",
+      "initial_integrity_description": "Appears intact with lid, knob, handle, spout, body, and base visible.",
+      "event_role_hints": [
+        "becomes progressively obscured by the fabric"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "cream fabric",
+      "visible_form": "large cream-colored textile sheet initially hanging behind the teapot, later forming folds over the tabletop",
+      "material_description": "shiny woven cloth with visible wrinkles, folds, and reflective highlights",
+      "visible_properties": [
+        "flexible-looking",
+        "wrinkled",
+        "light-colored",
+        "shiny"
+      ],
+      "initial_motion_description": "Initially still as a hanging backdrop.",
+      "initial_integrity_description": "Appears continuous and unbroken.",
+      "event_role_hints": [
+        "moves down and forward into the foreground",
+        "covers the teapot"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal brown surface under the teapot and fabric",
+      "material_description": "brown surface with wood grain pattern",
+      "visible_properties": [
+        "flat",
+        "horizontal",
+        "brown"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact and continuous.",
+      "event_role_hints": [
+        "supports the visible objects"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "gray wall",
+      "visible_form": "plain vertical background visible after the fabric moves",
+      "material_description": "smooth-looking matte gray surface",
+      "visible_properties": [
+        "flat",
+        "plain",
+        "gray"
+      ],
+      "initial_motion_description": "Not clearly visible at the start because the fabric backdrop covers it.",
+      "initial_integrity_description": "Appears continuous where visible later.",
+      "event_role_hints": [
+        "becomes visible above the fabric mound"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "stands upright on",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "hangs behind",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is in front of",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The colorful teapot is upright near the center of the wooden tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A cream-colored wrinkled fabric hangs behind the teapot."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The teapot shows no visible displacement during the initial still interval."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The cream fabric moves downward from the upper background area."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The moving fabric covers the teapot lid and top knob."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The moving fabric covers most of the teapot body while parts of the handle and spout remain briefly visible."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "Only a small lower portion of the teapot remains visible below the fabric."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The teapot is fully hidden by the cream fabric."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The fabric forms a peaked mound on the tabletop."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "A plain gray wall is visible above the fabric mound."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The fabric surface shows folds, creases, and shiny woven texture."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The scene is still with the teapot visible in front of the hanging fabric."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The teapot remains upright and visibly unchanged."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The fabric remains hanging behind the teapot."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The fabric enters the foreground and progressively blocks the teapot from view."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The fabric moves downward and forward across the teapot."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The teapot becomes increasingly obscured, from top to lower body."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The final view is a fabric mound on the tabletop with the teapot no longer visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The fabric rests in a mound-like shape with visible folds."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The teapot is fully occluded by the fabric."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The gray wall is visible above the fabric."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e1",
+      "e8",
+      "e9"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "severe",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

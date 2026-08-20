@@ -1,0 +1,286 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small brown round object moves across a tabletop, contacts a yellow toy duck, and both objects change position afterward.",
+  "raw_event_description": "The scene begins with a yellow toy duck resting near the right side of a light wooden tabletop while the rest of the tabletop is mostly empty. After a long still interval, a small brown round object enters from the left side of the tabletop and moves rightward while its visible stripe changes orientation. It approaches the duck, reaches the duck's left side, and the two objects appear to touch. The duck then shifts slightly to the right and changes its facing angle, while the brown object continues toward the upper-right area of the tabletop and later remains near the back-right side.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tabletop and yellow duck are clearly visible before the moving object enters.",
+      "The brown moving object is not yet visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow toy duck",
+      "visible_form": "small duck-shaped toy with rounded body, raised head, orange beak, and black eye",
+      "material_description": "bright yellow glossy-looking surface with orange and black painted details",
+      "visible_properties": [
+        "yellow",
+        "duck-shaped",
+        "small compared with tabletop",
+        "upright"
+      ],
+      "initial_motion_description": "stationary on the right side of the tabletop",
+      "initial_integrity_description": "appears whole and unchanged",
+      "event_role_hints": [
+        "resting object contacted by the moving brown object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "brown round object",
+      "visible_form": "small round brown object with a lighter curved stripe or seam visible on its surface",
+      "material_description": "brown surface with a lighter stripe; surface appears smooth in the visible frames",
+      "visible_properties": [
+        "brown",
+        "round",
+        "small compared with tabletop",
+        "visible stripe orientation changes during motion"
+      ],
+      "initial_motion_description": "not visible at first, then enters from the left moving rightward across the tabletop",
+      "initial_integrity_description": "appears whole when it enters",
+      "event_role_hints": [
+        "moving object that reaches the duck"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "tabletop",
+      "visible_form": "large rectangular light wood-colored tabletop",
+      "material_description": "light wood grain pattern visible across the surface",
+      "visible_properties": [
+        "flat visible surface",
+        "rectangular",
+        "light wood color"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "surface on which the duck and brown object are visible"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "black cylinder",
+      "visible_form": "partially visible black cylindrical object at the far left edge of the scene",
+      "material_description": "dark black surface",
+      "visible_properties": [
+        "black",
+        "cylindrical",
+        "partially cropped by frame edge"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "static background-side object"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "sofa",
+      "visible_form": "yellow-green upholstered sofa back behind the table",
+      "material_description": "fabric-like yellow-green surface with seams",
+      "visible_properties": [
+        "large background object",
+        "yellow-green",
+        "seamed upholstery"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "background object"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on the right side of the tabletop",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is partially visible at the far left edge near the tabletop",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is behind the tabletop in the background",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A yellow duck-shaped toy is stationary near the right side of the tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A yellow-green sofa is visible behind the table."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A black cylindrical object is partially visible at the far left edge of the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "A small brown round object appears from the left side of the tabletop."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The brown round object moves rightward across the tabletop."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The light stripe on the brown object changes orientation as it moves."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The brown object reaches the left side of the yellow duck."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The brown object and the yellow duck appear to touch or overlap at their edges."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "After the apparent contact, the yellow duck is slightly farther right than before."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "After the apparent contact, the yellow duck's visible facing angle is changed."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The brown object continues toward the upper-right area of the tabletop after reaching the duck."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "Near the end, the brown object is visible near the back-right side of the tabletop."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "Near the end, the yellow duck remains upright on the tabletop."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The scene is still with the duck on the right side of the tabletop.",
+        "The brown moving object is not yet visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary and upright on the tabletop"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains stationary in view"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains partially visible at the far left edge"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "remains stationary in the background"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The brown object enters from the left and moves across the tabletop toward the duck.",
+        "The brown object reaches the duck and appears to make edge contact."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "moves rightward across the tabletop while its visible stripe changes orientation"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "is reached by the brown object at its left side"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The duck is seen in a slightly changed position and orientation after the apparent contact.",
+        "The brown object is later visible near the back-right side of the tabletop."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "shifts slightly rightward and changes facing angle while staying upright"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "continues toward the upper-right tabletop area and remains visible there near the end"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

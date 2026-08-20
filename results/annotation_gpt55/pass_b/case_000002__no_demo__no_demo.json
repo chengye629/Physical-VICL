@@ -1,0 +1,343 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "folded white card",
+      "entity_kind": "articulated_object",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e7",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black circular base",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "orange ball",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e6",
+        "e8",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "blue-and-black holder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "vertical rod",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": []
+    },
+    {
+      "id": "obj_7",
+      "name": "black cord",
+      "entity_kind": "deformable_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "rotation",
+      "raw_type": "rotation of the folded card around a vertical axis",
+      "participant_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e12"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "downward translation of the orange ball and holder",
+        "participant_object_ids": [
+          "obj_3",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e6",
+          "e10",
+          "e11"
+        ]
+      },
+      {
+        "family": "optical_interaction",
+        "type": null,
+        "raw_type": "line-of-sight occlusion of the ball and holder by the rotating card panel",
+        "participant_object_ids": [
+          "obj_1",
+          "obj_3",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e7",
+          "e8",
+          "e10",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention is shown",
+      "actor_object_ids": [],
+      "target_object_ids": [],
+      "evidence_refs": []
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "id": "impact_1",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the folded card changes orientation from a narrow angled A-frame view to a broad front-facing view and back toward an angled view"
+      },
+      "process_refs": [
+        "primary"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e12"
+      ]
+    },
+    {
+      "id": "impact_2",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the orange ball moves downward from above the folded card to a lower central position"
+      },
+      "process_refs": [
+        "secondary_1"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e11"
+      ]
+    },
+    {
+      "id": "impact_3",
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the blue-and-black holder moves downward with the orange ball between its arms"
+      },
+      "process_refs": [
+        "secondary_1"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "id": "impact_4",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "the orange ball becomes hidden behind the broad white card panel"
+      },
+      "process_refs": [
+        "secondary_2"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "id": "impact_5",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "the orange ball reappears lower and partly visible through the opening between the card panels"
+      },
+      "process_refs": [
+        "secondary_2"
+      ],
+      "evidence_refs": [
+        "e11"
+      ]
+    },
+    {
+      "id": "impact_6",
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "blue side portions of the holder reappear partly behind the folded card"
+      },
+      "process_refs": [
+        "secondary_2"
+      ],
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "id": "mechanism_1",
+      "family": "mechanical_forcing",
+      "type": "torque",
+      "raw_mechanism": "angular forcing about a vertical axis drives the folded card's rotation",
+      "process_refs": [
+        "primary"
+      ],
+      "impact_refs": [
+        "impact_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e12"
+      ]
+    },
+    {
+      "id": "mechanism_2",
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "the ball remains carried by the holder while both translate downward",
+      "process_refs": [
+        "secondary_1"
+      ],
+      "impact_refs": [
+        "impact_2",
+        "impact_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e6"
+      ]
+    },
+    {
+      "id": "mechanism_3",
+      "family": "optical_electromagnetic",
+      "type": null,
+      "raw_mechanism": "the opaque white card panel blocks the line of sight to the ball and holder as it rotates in front of them",
+      "process_refs": [
+        "secondary_2"
+      ],
+      "impact_refs": [
+        "impact_4",
+        "impact_5",
+        "impact_6"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10",
+        "e11"
+      ]
+    }
+  ]
+}

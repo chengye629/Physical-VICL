@@ -1,0 +1,296 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": {
+    "items": [
+      {
+        "object_id": "obj_1",
+        "name": "yellow duck toy",
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "reflective"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact",
+        "evidence_refs": [
+          "e1",
+          "e7",
+          "e8",
+          "e12"
+        ]
+      },
+      {
+        "object_id": "obj_2",
+        "name": "black tray",
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "container",
+          "support",
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact",
+        "evidence_refs": [
+          "e1",
+          "e4",
+          "e9",
+          "e10",
+          "e11"
+        ]
+      },
+      {
+        "object_id": "obj_3",
+        "name": "red container",
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "source"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact",
+        "evidence_refs": [
+          "e3"
+        ]
+      },
+      {
+        "object_id": "obj_4",
+        "name": "blue spout",
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "source"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "reflective"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact",
+        "evidence_refs": [
+          "e2",
+          "e6"
+        ]
+      },
+      {
+        "object_id": "obj_5",
+        "name": "red-orange liquid",
+        "entity_kind": "liquid_body",
+        "event_roles": [
+          "target",
+          "product"
+        ],
+        "material_phase": "liquid",
+        "physical_properties": [
+          "reflective"
+        ],
+        "initial_motion_state": "unknown",
+        "initial_integrity_state": "not_applicable",
+        "evidence_refs": [
+          "e5",
+          "e6",
+          "e8",
+          "e9",
+          "e10",
+          "e11"
+        ]
+      },
+      {
+        "object_id": "obj_6",
+        "name": "wicker support",
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact",
+        "evidence_refs": [
+          "e3"
+        ]
+      },
+      {
+        "object_id": "obj_7",
+        "name": "wood tabletop",
+        "entity_kind": "surface_or_region",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact",
+        "evidence_refs": [
+          "e4"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "pouring",
+      "raw_type": "red-orange liquid stream flows from the blue spout area onto the duck and into the tray",
+      "object_ids": [
+        "obj_5",
+        "obj_4",
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "fluid_motion",
+        "type": null,
+        "raw_type": "red-orange puddle spreads laterally across the tray surface",
+        "object_ids": [
+          "obj_5",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e10",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "fluid_handling",
+      "type": "dispense",
+      "raw_action": "red-orange liquid is dispensed from the blue spout area",
+      "actor_object_id": null,
+      "object_ids": [
+        "obj_3",
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  },
+  "impacts": {
+    "items": [
+      {
+        "object_id": "obj_5",
+        "transition": {
+          "axis": "emission_transport",
+          "type": "liquid_emission_onset",
+          "raw_transition": "red-orange liquid changes from not visible to a narrow emitted stream below the blue spout"
+        },
+        "evidence_refs": [
+          "e5",
+          "e6"
+        ]
+      },
+      {
+        "object_id": "obj_1",
+        "transition": {
+          "axis": "emission_transport",
+          "type": "deposition",
+          "raw_transition": "red-orange liquid is deposited on the duck's head and upper body"
+        },
+        "evidence_refs": [
+          "e7",
+          "e8"
+        ]
+      },
+      {
+        "object_id": "obj_2",
+        "transition": {
+          "axis": "emission_transport",
+          "type": "accumulation",
+          "raw_transition": "red-orange liquid accumulates in the tray around the duck"
+        },
+        "evidence_refs": [
+          "e9",
+          "e10",
+          "e11"
+        ]
+      },
+      {
+        "object_id": "obj_5",
+        "transition": {
+          "axis": "emission_transport",
+          "type": "dispersion",
+          "raw_transition": "the liquid redistributes outward as a spreading puddle across the tray surface"
+        },
+        "evidence_refs": [
+          "e10",
+          "e11"
+        ]
+      }
+    ]
+  },
+  "mechanisms": {
+    "items": [
+      {
+        "family": "mechanical_forcing",
+        "type": "gravity",
+        "raw_mechanism": "gravity drives the downward liquid stream from the spout area onto the duck and tray",
+        "object_ids": [
+          "obj_5",
+          "obj_4",
+          "obj_1",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e6",
+          "e7",
+          "e9"
+        ]
+      },
+      {
+        "family": "material_response",
+        "type": "viscosity",
+        "raw_mechanism": "the liquid's flow resistance contributes to smooth coating and gradual puddle spreading on the tray surface",
+        "object_ids": [
+          "obj_5",
+          "obj_1",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e8",
+          "e10",
+          "e11"
+        ]
+      }
+    ]
+  }
+}

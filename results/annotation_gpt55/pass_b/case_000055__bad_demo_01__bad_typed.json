@@ -1,0 +1,433 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "clear bowl",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "container",
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "transparent",
+          "reflective"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red liquid",
+      "axes": {
+        "entity_kind": "liquid_body",
+        "event_roles": [
+          "target",
+          "medium"
+        ],
+        "material_phase": "liquid",
+        "physical_properties": [
+          "reflective"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "not_applicable"
+      },
+      "evidence_refs": [
+        "e2",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "upright red object",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target",
+          "source"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "combustible"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e13"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "flame",
+      "axes": {
+        "entity_kind": "gas_or_vapor",
+        "event_roles": [
+          "target",
+          "source"
+        ],
+        "material_phase": "gas",
+        "physical_properties": [
+          "emissive"
+        ],
+        "initial_motion_state": "oscillating",
+        "initial_integrity_state": "not_applicable"
+      },
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "transparent cylinder",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "tool",
+          "container"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid",
+          "transparent",
+          "reflective"
+        ],
+        "initial_motion_state": "translating",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e14"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "cloudy material",
+      "axes": {
+        "entity_kind": "aerosol_or_smoke",
+        "event_roles": [
+          "product",
+          "medium"
+        ],
+        "material_phase": "mixed",
+        "physical_properties": [
+          "translucent"
+        ],
+        "initial_motion_state": "unknown",
+        "initial_integrity_state": "not_applicable"
+      },
+      "evidence_refs": [
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "wooden tabletop",
+      "axes": {
+        "entity_kind": "surface_or_region",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "combustion",
+      "type": null,
+      "raw_type": "enclosed flame diminishes and extinguishes",
+      "participant_object_ids": [
+        "obj_4",
+        "obj_3",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e8",
+        "e10"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "relation_reconfiguration",
+        "type": "insertion",
+        "raw_type": "transparent cylinder moves into the bowl region and surrounds the flame and upright red object",
+        "participant_object_ids": [
+          "obj_5",
+          "obj_1",
+          "obj_3",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6",
+          "e7",
+          "e14"
+        ]
+      },
+      {
+        "family": "gas_particulate_motion",
+        "type": null,
+        "raw_type": "whitish-gray cloudy material appears inside the transparent cylinder",
+        "participant_object_ids": [
+          "obj_6",
+          "obj_5"
+        ],
+        "evidence_refs": [
+          "e9"
+        ]
+      },
+      {
+        "family": "fluid_motion",
+        "type": "bulk_flow",
+        "raw_type": "red liquid rises into the lower part of the transparent cylinder",
+        "participant_object_ids": [
+          "obj_2",
+          "obj_5",
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e11",
+          "e12"
+        ]
+      },
+      {
+        "family": "rigid_motion",
+        "type": "rotation",
+        "raw_type": "upright red object tilts to the viewer's right",
+        "participant_object_ids": [
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e13"
+        ]
+      }
+    ],
+    "action": {
+      "family": "transport",
+      "type": "lower",
+      "raw_action": "external lowering of the transparent cylinder over the flame and upright red object",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "impact_id": "imp_1",
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "transparent cylinder enters from above and moves downward"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "impact_id": "imp_2",
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "relation",
+        "type": "containment_gain",
+        "raw_transition": "transparent cylinder comes to surround the flame and upright red object, with its lower portion inside the bowl"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e14"
+      ]
+    },
+    {
+      "impact_id": "imp_3",
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "flame changes into a longer diagonal shape inside the transparent cylinder"
+      },
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "impact_id": "imp_4",
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "thermal_reaction",
+        "type": "burning_to_extinguished",
+        "raw_transition": "visible flame becomes smaller and is no longer visible"
+      },
+      "evidence_refs": [
+        "e10"
+      ]
+    },
+    {
+      "impact_id": "imp_5",
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "emission_transport",
+        "type": null,
+        "raw_transition": "whitish-gray cloudy material appears inside the transparent cylinder"
+      },
+      "evidence_refs": [
+        "e9"
+      ]
+    },
+    {
+      "impact_id": "imp_6",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "containment_gain",
+        "raw_transition": "red liquid becomes visible inside the lower part of the transparent cylinder"
+      },
+      "evidence_refs": [
+        "e11"
+      ]
+    },
+    {
+      "impact_id": "imp_7",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "red liquid surface inside the transparent cylinder shifts upward over time"
+      },
+      "evidence_refs": [
+        "e12"
+      ]
+    },
+    {
+      "impact_id": "imp_8",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "rotation_onset",
+        "raw_transition": "upright red object tilts to the viewer's right inside the transparent cylinder"
+      },
+      "evidence_refs": [
+        "e13"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "mechanism_id": "mech_1",
+      "family": "energy_reaction",
+      "type": "chemical_energy_release",
+      "raw_mechanism": "combustion produces the initially visible emissive flame before the flame diminishes and stops being visible",
+      "linked_object_ids": [
+        "obj_3",
+        "obj_4"
+      ],
+      "linked_impact_ids": [
+        "imp_3",
+        "imp_4"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "mechanism_id": "mech_2",
+      "family": "mechanical_forcing",
+      "type": "pressure_gradient",
+      "raw_mechanism": "pressure difference associated with the enclosed cylinder drives red liquid upward inside the cylinder",
+      "linked_object_ids": [
+        "obj_2",
+        "obj_5"
+      ],
+      "linked_impact_ids": [
+        "imp_6",
+        "imp_7"
+      ],
+      "evidence_refs": [
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "mechanism_id": "mech_3",
+      "family": "optical_electromagnetic",
+      "type": "volumetric_scattering",
+      "raw_mechanism": "suspended cloudy material scatters light through the cylinder volume, making whitish-gray patches visible",
+      "linked_object_ids": [
+        "obj_6",
+        "obj_5"
+      ],
+      "linked_impact_ids": [
+        "imp_5"
+      ],
+      "evidence_refs": [
+        "e9"
+      ]
+    },
+    {
+      "mechanism_id": "mech_4",
+      "family": "mechanical_forcing",
+      "type": "torque",
+      "raw_mechanism": "an unbalanced mechanical moment rotates the upright red object away from vertical",
+      "linked_object_ids": [
+        "obj_3"
+      ],
+      "linked_impact_ids": [
+        "imp_8"
+      ],
+      "evidence_refs": [
+        "e13"
+      ]
+    }
+  ]
+}

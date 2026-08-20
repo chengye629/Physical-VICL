@@ -1,0 +1,347 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "clear dispenser",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source",
+        "container"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "spigot",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "source",
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e5"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "red liquid in dispenser",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "source"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "red liquid stream",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "clear bottle",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target",
+        "container",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e4",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "red liquid in bottle",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "product"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "flowing",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "woven stand",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e10"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "table",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fluid_motion",
+      "type": "bulk_flow",
+      "raw_type": "continuous red liquid flow from a dispenser spigot into a bottle",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "event_roles": [
+            "source",
+            "container"
+          ]
+        },
+        {
+          "object_id": "obj_2",
+          "event_roles": [
+            "source",
+            "tool"
+          ]
+        },
+        {
+          "object_id": "obj_4",
+          "event_roles": [
+            "target",
+            "medium"
+          ]
+        },
+        {
+          "object_id": "obj_5",
+          "event_roles": [
+            "target",
+            "container"
+          ]
+        },
+        {
+          "object_id": "obj_6",
+          "event_roles": [
+            "target",
+            "product"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "surface disturbance and small bubbles where the stream enters the collected liquid",
+        "participants": [
+          {
+            "object_id": "obj_4",
+            "event_roles": [
+              "target"
+            ]
+          },
+          {
+            "object_id": "obj_6",
+            "event_roles": [
+              "target"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e6",
+          "e7"
+        ]
+      }
+    ],
+    "action": {
+      "family": "fluid_handling",
+      "type": "dispense",
+      "raw_action": "ongoing dispensing of red liquid through the spigot",
+      "actor_object_id": null,
+      "tool_object_id": "obj_2",
+      "target_object_ids": [
+        "obj_4",
+        "obj_5",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e9"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "raw_temporal_description": "the transfer is already underway at the start, continues through the clip, and the bottle liquid level rises over time",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e8",
+        "e9"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "material_transfer",
+        "raw_transition": "red liquid moves as a continuous stream from the spigot into the bottle opening"
+      },
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "relation",
+        "type": "containment_gain",
+        "raw_transition": "the bottle gains contained red liquid as the stream enters it"
+      },
+      "evidence_refs": [
+        "e5",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "accumulation",
+        "raw_transition": "the amount and level of red liquid inside the bottle visibly increase"
+      },
+      "evidence_refs": [
+        "e4",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "the liquid surface in the bottle is disturbed near the entering stream, with small bubbles visible"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the downward liquid flow from the elevated spigot into the bottle opening",
+      "linked_process": "primary",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e5"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "sustained_pressure",
+      "raw_mechanism": "the continuous incoming stream applies sustained fluid forcing to the collected liquid surface",
+      "linked_process": "secondary",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "liquid free-surface response supports visible bubbles and surface variation near the stream impact area",
+      "linked_process": "secondary",
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    }
+  ]
+}

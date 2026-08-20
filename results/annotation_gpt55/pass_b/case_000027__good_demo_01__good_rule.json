@@ -1,0 +1,325 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow mug",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e14"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "blue rectangular block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e7",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "black circular platform",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e13"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e13"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "projected shadow regions",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "bright wall light patch",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "black cord",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e12"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "rotation",
+      "raw_type": "continuous rotation or angular reorientation of the mug and blue block while staying on the platform",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "event_roles": [
+            "target"
+          ]
+        },
+        {
+          "object_id": "obj_2",
+          "event_roles": [
+            "target"
+          ]
+        },
+        {
+          "object_id": "obj_3",
+          "event_roles": [
+            "support"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e10",
+        "e11",
+        "e14"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "illumination_change",
+        "raw_type": "projected shadows on the wall shift and change outline as the visible objects reorient",
+        "participants": [
+          {
+            "object_id": "obj_1",
+            "event_roles": [
+              "target"
+            ]
+          },
+          {
+            "object_id": "obj_2",
+            "event_roles": [
+              "target"
+            ]
+          },
+          {
+            "object_id": "obj_4",
+            "event_roles": [
+              "target"
+            ]
+          },
+          {
+            "object_id": "obj_6",
+            "event_roles": [
+              "target"
+            ]
+          },
+          {
+            "object_id": "obj_7",
+            "event_roles": [
+              "medium"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e3",
+          "e4",
+          "e8",
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the camera view remains fixed",
+      "evidence_refs": [
+        "e13"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "visible orientation changes, with the handle moving from the left side to hidden from view and later to the right side"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e10",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "visible position relative to the mug changes from the mug's right side to closer to the front-left side in the image"
+      },
+      "evidence_refs": [
+        "e7",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "the blue rectangular block becomes visible beside the mug after not being clearly visible in the earliest frames"
+      },
+      "evidence_refs": [
+        "e7",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "dark projected shadow regions shift across the wall and change outline, including mug-like and narrow rectangular silhouettes"
+      },
+      "evidence_refs": [
+        "e4",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "the wall's visible illumination pattern changes as shadow shapes move and change outline on it"
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e8",
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "optical_electromagnetic",
+      "type": "absorption",
+      "raw_mechanism": "opaque objects interrupt incident light, so their changing orientations alter the projected dark regions on the illuminated wall",
+      "process_refs": [
+        "secondary"
+      ],
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_4",
+        "obj_6",
+        "obj_7"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e8",
+        "e9",
+        "e14"
+      ]
+    }
+  ]
+}

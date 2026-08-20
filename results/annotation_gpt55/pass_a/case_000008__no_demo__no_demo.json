@@ -1,0 +1,258 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small light-colored sphere enters from the lower left, moves across the foreground surface toward the lower right, and leaves the frame.",
+  "raw_event_description": "The scene begins with a stationary couch in the background, a light flat surface in the foreground, a black cylindrical object at the lower left edge, and a lamp and cabinet at the right edge. After a static interval, a small pale sphere appears near the lower left beside the black cylindrical object. The sphere moves rightward across the foreground surface, passing through the lower center area, then continues to the lower right edge and disappears out of frame. The background furniture remains visually unchanged.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The moving sphere is not visible in the first frame.",
+      "The couch, foreground surface, black cylindrical object, and right-side furniture are visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "small pale sphere",
+      "visible_form": "small round ball-like object",
+      "material_description": "light gray or whitish surface with soft highlight; no visible markings",
+      "visible_properties": [
+        "spherical outline",
+        "small relative to the foreground surface",
+        "motion blur visible during movement"
+      ],
+      "initial_motion_description": "not visible at the start of the video",
+      "initial_integrity_description": "appears as one intact sphere when it enters view",
+      "event_role_hints": [
+        "moving object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "foreground surface",
+      "visible_form": "large flat pale rectangular surface spanning the bottom portion of the view",
+      "material_description": "light wood-like or laminated appearance with faint horizontal grain-like bands",
+      "visible_properties": [
+        "flat visible top plane",
+        "pale beige color",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "continuous flat surface with no visible change",
+      "event_role_hints": [
+        "surface across which the sphere moves"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "black cylindrical object",
+      "visible_form": "short black cylinder partly cut off by the lower left frame edge",
+      "material_description": "dark glossy exterior with a pale inner circular face visible",
+      "visible_properties": [
+        "cylindrical shape",
+        "partially out of frame",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact visible cylinder portion",
+      "event_role_hints": [
+        "near the sphere's entry area"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "yellow couch",
+      "visible_form": "large two-seat couch with arms and tufted back cushions",
+      "material_description": "mustard-yellow fabric-like upholstery with seams and button-like dimples",
+      "visible_properties": [
+        "large background object",
+        "stationary",
+        "two back sections"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact couch with no visible change",
+      "event_role_hints": [
+        "background reference object"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "right-side lamp and cabinet",
+      "visible_form": "dark lampshade above a small dark cabinet or side table at the right edge",
+      "material_description": "dark lampshade and dark wooden-looking cabinet surface",
+      "visible_properties": [
+        "partially visible at right edge",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "unchanged visible portions",
+      "event_role_hints": [
+        "background reference object"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is positioned at the lower left edge of the foreground surface",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is behind the foreground surface in the background",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is positioned near the right edge of the frame behind the foreground surface",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The yellow couch, foreground surface, black cylindrical object, and right-side lamp area are visible while the small sphere is absent."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "middle",
+      "observation": "A small pale sphere appears at the lower left near the black cylindrical object."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "middle",
+      "observation": "The small pale sphere is visible on or very near the foreground surface."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The small pale sphere changes position rightward across the lower part of the frame."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The small pale sphere passes through the lower center area of the foreground surface."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "late",
+      "observation": "The small pale sphere reaches the lower right edge of the frame."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The small pale sphere is no longer visible after reaching the right edge."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The couch, lamp area, foreground surface, and black cylindrical object remain fixed in the image throughout the clip."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The camera framing remains steady with no visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e8"
+      ],
+      "observations": [
+        "The room setup is static before the sphere appears."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The small pale sphere is not visible."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The foreground surface remains stationary."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The black cylindrical object remains stationary at the lower left."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The small pale sphere enters and moves across the foreground from left toward right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The small pale sphere appears near the lower left and travels rightward across the lower foreground."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The black cylindrical object remains in place as the sphere moves away from its area."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The small pale sphere leaves the visible frame at the lower right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The small pale sphere reaches the right edge and disappears from view."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The yellow couch remains visually unchanged."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The right-side lamp and cabinet remain visually unchanged."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e9"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

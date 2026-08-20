@@ -1,0 +1,273 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "green sheet",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target",
+        "product"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e4",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "left handled tool",
+      "entity_kind": "articulated_object",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "right handled tool",
+      "entity_kind": "articulated_object",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e10",
+        "e11"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fracture_separation",
+      "type": null,
+      "raw_type": "central separation of the green sheet into two pieces",
+      "participants": {
+        "target": [
+          "obj_1"
+        ],
+        "tool": [
+          "obj_2",
+          "obj_3"
+        ],
+        "support": [
+          "obj_4"
+        ]
+      },
+      "evidence_refs": [
+        "e5",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "deformation",
+        "type": null,
+        "raw_type": "bending and twisting of the green sheet portions during separation",
+        "participants": {
+          "target": [
+            "obj_1"
+          ]
+        },
+        "evidence_refs": [
+          "e6",
+          "e7",
+          "e8"
+        ]
+      },
+      {
+        "family": "rigid_motion",
+        "type": null,
+        "raw_type": "separated green portions tilt, move apart, and settle on the tabletop",
+        "participants": {
+          "target": [
+            "obj_1"
+          ],
+          "support": [
+            "obj_4"
+          ]
+        },
+        "evidence_refs": [
+          "e9",
+          "e10",
+          "e11"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no clear external intervention is visibly shown; handled tools remain near the sheet with little visible change",
+      "participants": {
+        "tool": [
+          "obj_2",
+          "obj_3"
+        ],
+        "target": [
+          "obj_1"
+        ]
+      },
+      "evidence_refs": [
+        "e2",
+        "e13"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "integrity",
+        "type": "broken",
+        "raw_transition": "initially continuous green sheet becomes two separate green pieces with a gap between them"
+      },
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "bent",
+        "raw_transition": "mostly flat sheet bends upward into raised curved portions"
+      },
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": "twisted",
+        "raw_transition": "the separating portions twist relative to the original flat sheet shape"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "green portions change from nearly still to visibly tilting and moving during separation"
+      },
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": "settling",
+        "raw_transition": "separated pieces come to rest on left and right sides of the tabletop"
+      },
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "mechanical loading bends the thin sheet and is associated with the central separation; exact contact points are partly obscured",
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "related_object_ids": [
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e13"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "the thin flexible solid bends before losing structural continuity into two pieces",
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    }
+  ]
+}

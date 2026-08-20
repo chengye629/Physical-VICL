@@ -1,0 +1,358 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A lit flame at the end of a slender stick approaches a black balloon on a tabletop, after which the balloon rapidly disappears and small dark fragments move away.",
+  "raw_event_description": "The scene begins with a glossy black balloon resting on a wooden tabletop near the left side, a round black base on the right, and a slender light-colored stick extending from the base with a small orange flame at its free end. The flame-bearing end moves in an arc from the lower right toward the balloon. The flame reaches the lower-right area of the balloon. Immediately after contact, the balloon is no longer present as a round object, and several small dark pieces appear blurred in motion above and to the left of where the balloon had been. In later frames the tabletop area where the balloon stood is empty, the stick remains extended from the round base, and faint wisps or marks are visible near the former balloon position.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The black balloon, tabletop, round base, and extended stick are visible.",
+      "The flame is visible near the lower-right edge but is partly close to the frame boundary."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "black balloon",
+      "visible_form": "large glossy black spherical object",
+      "material_description": "smooth dark reflective surface",
+      "visible_properties": [
+        "black",
+        "glossy",
+        "round",
+        "intact at start"
+      ],
+      "initial_motion_description": "stationary on the tabletop before the main event",
+      "initial_integrity_description": "appears whole and inflated before the main event",
+      "event_role_hints": [
+        "object that disappears as an intact sphere during the event"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "round black base",
+      "visible_form": "low circular black disk on the right side of the table",
+      "material_description": "dark smooth exterior with reflective top",
+      "visible_properties": [
+        "black",
+        "circular",
+        "low profile",
+        "has a cord exiting to the right"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact throughout the visible event",
+      "event_role_hints": [
+        "supporting or holding the slender stick"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "slender stick",
+      "visible_form": "long thin light-colored rod extending diagonally from the round base",
+      "material_description": "pale tan or beige visible surface",
+      "visible_properties": [
+        "thin",
+        "straight for most of its length",
+        "light-colored"
+      ],
+      "initial_motion_description": "its free end moves from the lower right toward the balloon in an arc",
+      "initial_integrity_description": "appears continuous and unbroken before and after the balloon disappears",
+      "event_role_hints": [
+        "carries the flame at its free end"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "flame",
+      "visible_form": "small bright orange-yellow teardrop-shaped glow at the stick tip",
+      "material_description": "luminous orange and yellow region",
+      "visible_properties": [
+        "bright",
+        "orange-yellow",
+        "flickering shape"
+      ],
+      "initial_motion_description": "moves with the free end of the slender stick toward the balloon",
+      "initial_integrity_description": "visible as a small flame before reaching the balloon",
+      "event_role_hints": [
+        "visibly contacts the balloon area"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "pink tape",
+      "visible_form": "small pink crossed pieces on top of the round base near the stick attachment",
+      "material_description": "pink matte strips",
+      "visible_properties": [
+        "pink",
+        "cross-shaped",
+        "flat"
+      ],
+      "initial_motion_description": "stationary with the round base",
+      "initial_integrity_description": "appears intact throughout",
+      "event_role_hints": [
+        "located where the stick meets the base"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "dark fragments",
+      "visible_form": "small irregular dark pieces visible after the balloon disappears",
+      "material_description": "dark thin-looking pieces with motion blur",
+      "visible_properties": [
+        "small",
+        "dark",
+        "irregular",
+        "blurred during motion"
+      ],
+      "initial_motion_description": "not visible before the balloon disappears",
+      "initial_integrity_description": "appear only after the balloon is no longer intact",
+      "event_role_hints": [
+        "pieces seen moving away from the former balloon location"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal wood-grain surface",
+      "material_description": "brown wood-grain visible surface",
+      "visible_properties": [
+        "brown",
+        "flat",
+        "wood-grain pattern"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears unchanged",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_8",
+      "name": "black cord",
+      "visible_form": "thin dark cable extending from the round base to the right",
+      "material_description": "dark flexible-looking line",
+      "visible_properties": [
+        "black",
+        "thin",
+        "curved"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on the wooden tabletop left of the round black base",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "sits on the wooden tabletop to the right of the balloon",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "extends from the top area of the round black base toward the lower-left area of the frame",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is located at the free end of the slender stick",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is on top of the round black base near the stick attachment point",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A large glossy black spherical object is on the left side of the wooden tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A low round black base is on the right side of the wooden tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A slender light-colored stick extends diagonally from the round black base."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A small orange-yellow flame is visible at the free end of the slender stick."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "Pink crossed tape-like strips are visible on top of the round black base near the stick."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The flame-bearing end of the stick moves closer to the lower-right side of the black balloon."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The flame reaches the lower-right edge area of the black balloon."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The black balloon is no longer visible as a round intact object immediately after the contact moment."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "Small dark blurred pieces appear above and left of the former balloon position."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The tabletop area where the balloon was located is empty."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The slender stick remains extended from the round base after the balloon disappears."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "A small dark mark or remnant is visible near the left end of the stick on the tabletop."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "Faint wispy marks are visible near the former balloon position."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The initial setup is visible with the balloon on the left and the round base on the right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The balloon remains intact and stationary."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The round base remains stationary on the tabletop."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The stick extends from the base with its free end carrying a flame."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The flame is visible at the stick tip."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The flame-bearing stick tip moves toward the balloon and reaches it."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The free end of the stick sweeps closer to the balloon."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The flame reaches the balloon's lower-right surface area."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The balloon changes from an intact round object to not visible as an intact sphere."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "Dark fragments appear in motion above and left of the balloon's former location."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The balloon is absent from the tabletop area after the rapid change."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The stick remains extended from the round base."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The round base remains in its original position."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "A small dark remnant or mark remains near the stick's left end."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "A faint translucent rectangular area is visible over the tabletop and wall in later frames; it is not identifiable as a physical scene object from the visible evidence alone."
+  ]
+}

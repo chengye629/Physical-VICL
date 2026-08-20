@@ -1,0 +1,315 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A moving thin stick at the rear right contacts the right-side domino row, causing several right-side pieces to topple while the duck and left-side pieces remain in place.",
+  "raw_event_description": "The scene starts with a yellow rubber duck centered on a wooden tabletop, with upright black and white rectangular pieces arranged in short rows on both sides. A black round object sits at the rear right with a thin tan stick extending from it toward the right-side row. After a period with no visible object motion, the stick changes angle toward the rightmost black piece on the duck's right. The rightmost black piece tips, and several neighboring right-side pieces topple and come to rest leaning or lying near the duck's right side. The duck remains upright and stationary, and the left-side row remains upright.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The duck, domino-like pieces, round black object, and thin stick are visible before the toppling begins.",
+      "The right-side and left-side rows are initially upright and separated by the duck."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow duck",
+      "visible_form": "small yellow duck-shaped toy with orange beak and black eyes",
+      "material_description": "smooth bright yellow surface with orange and black painted details",
+      "visible_properties": [
+        "upright",
+        "centered",
+        "rounded body"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "central stationary object between the two rows"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left domino row",
+      "visible_form": "five narrow upright rectangular pieces arranged in a row to the left of the duck",
+      "material_description": "alternating dark and light visible surfaces, rigid-looking rectangular blocks",
+      "visible_properties": [
+        "upright",
+        "spaced apart",
+        "vertical"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "all visible pieces appear intact and upright",
+      "event_role_hints": [
+        "remains upright during the visible event"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "right domino row",
+      "visible_form": "several narrow upright rectangular pieces arranged in a row to the right of the duck",
+      "material_description": "dark and light visible surfaces, rigid-looking rectangular blocks",
+      "visible_properties": [
+        "upright at the start",
+        "spaced apart",
+        "vertical at the start"
+      ],
+      "initial_motion_description": "no visible motion before the stick moves",
+      "initial_integrity_description": "all visible pieces appear intact and upright",
+      "event_role_hints": [
+        "pieces topple during the visible event"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "rightmost black piece",
+      "visible_form": "narrow upright black rectangular piece at the far right end of the right-side row",
+      "material_description": "dark rigid-looking rectangular block",
+      "visible_properties": [
+        "upright initially",
+        "at row end nearest the thin stick"
+      ],
+      "initial_motion_description": "no visible motion before contact-like approach of stick",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "first visibly tilting piece in the right-side row"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "thin tan stick",
+      "visible_form": "slender tan rod extending from the rear-right round object toward the right-side row",
+      "material_description": "light tan narrow rod-like object",
+      "visible_properties": [
+        "thin",
+        "straight",
+        "angled"
+      ],
+      "initial_motion_description": "initially still, later changes angle toward the right-side row",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "moves before the right-side pieces topple"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "black round object",
+      "visible_form": "low black circular cylindrical object on the rear-right tabletop",
+      "material_description": "dark smooth-looking circular body with dark pieces on top",
+      "visible_properties": [
+        "round",
+        "low profile",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible translation",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "located behind the moving thin stick"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "wooden tabletop",
+      "visible_form": "flat brown tabletop surface",
+      "material_description": "wood-grain visible surface",
+      "visible_properties": [
+        "flat",
+        "brown"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears continuous and intact",
+      "event_role_hints": [
+        "supports the visible objects"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned between the left domino row and the right domino row",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned immediately left of the right domino row with a gap between them",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "extends from the area of the black round object toward the far right end of the right domino row",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is the outermost visible piece at the far right of the right domino row",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A yellow duck-shaped toy is centered between two rows of upright rectangular pieces."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A thin tan stick is visible near a black round object at the rear right."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The right-side rectangular pieces are upright at the start."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The thin tan stick changes angle toward the far right piece of the right-side row."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The far right black rectangular piece on the right side tilts from vertical."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "Neighboring right-side rectangular pieces tilt in succession."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "Several right-side rectangular pieces are lying or leaning on the tabletop near the duck's right side."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The left-side rectangular pieces remain upright."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The yellow duck remains upright and in the same visible position."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The black round object stays in the rear-right area without visible translation."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The duck and both rows of rectangular pieces are arranged on the tabletop before the toppling."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The duck is upright and still."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The left-side pieces are upright and still."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The right-side pieces are upright and still."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The thin stick is visible near the black round object."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The visible change begins at the right side of the arrangement."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "The thin stick changes angle toward the right-side row."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The far right black piece tilts away from upright."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Several right-side pieces tilt and fall in sequence."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The visible motion stops with a changed arrangement on the right side."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "Multiple right-side pieces rest leaning or lying on the tabletop."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The left-side row remains upright."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The duck remains upright and stationary."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The black round object remains in the rear-right area."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact contact point between the thin stick and the far right piece is partly obscured by the viewing angle and distance."
+  ]
+}

@@ -1,0 +1,359 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "leftmost black block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e15"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left white block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e15"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "middle-left black block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e15"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "middle-left white block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e15"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "right-group left black block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e13",
+        "e14"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "right-group white block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e6",
+        "e12",
+        "e14"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "rightmost black block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e7",
+        "e10",
+        "e11",
+        "e14"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "black circular object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e8",
+        "e17"
+      ]
+    },
+    {
+      "id": "obj_9",
+      "name": "tan stick",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10",
+        "e16"
+      ]
+    },
+    {
+      "id": "obj_10",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e14",
+        "e17"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "toppling",
+      "raw_type": "three right-side upright blocks topple and fall onto the tabletop",
+      "participants": [
+        "obj_5",
+        "obj_6",
+        "obj_7"
+      ],
+      "evidence_refs": [
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "contact_loading",
+        "type": "collision",
+        "raw_type": "moving tan stick contacts or strikes the rightmost block before it tilts",
+        "participants": [
+          "obj_9",
+          "obj_7"
+        ],
+        "evidence_refs": [
+          "e9",
+          "e10",
+          "e11"
+        ]
+      },
+      {
+        "family": "rigid_motion",
+        "type": "rotation",
+        "raw_type": "tan stick changes orientation and sweeps leftward from the circular object",
+        "participants": [
+          "obj_9"
+        ],
+        "evidence_refs": [
+          "e9",
+          "e16"
+        ]
+      }
+    ],
+    "action": {
+      "family": "loading",
+      "type": "strike",
+      "raw_action": "tan stick sweeps into the area beside the rightmost block and initiates toppling",
+      "actors": [],
+      "tools": [
+        "obj_9"
+      ],
+      "targets": [
+        "obj_7"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "single",
+      "change_profile": "abrupt",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_7",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "rightmost black block changes from upright and stationary to tilted and then lying on the tabletop"
+      },
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "right-group white block changes from upright and stationary to tilted and then lying with the fallen right-side blocks"
+      },
+      "evidence_refs": [
+        "e12",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "right-group left black block changes from upright and stationary to tilted and then lying on the tabletop"
+      },
+      "evidence_refs": [
+        "e13",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_9",
+      "transition": {
+        "axis": "motion",
+        "type": "rotation_onset",
+        "raw_transition": "tan stick changes orientation and sweeps leftward toward the blocks"
+      },
+      "evidence_refs": [
+        "e9",
+        "e16"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "brief contact from the sweeping tan stick transfers mechanical impulse to the rightmost block",
+      "participants": [
+        "obj_9",
+        "obj_7"
+      ],
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "torque",
+      "raw_mechanism": "off-center contact and block instability produce overturning rotation of the upright blocks",
+      "participants": [
+        "obj_5",
+        "obj_6",
+        "obj_7"
+      ],
+      "evidence_refs": [
+        "e11",
+        "e12",
+        "e13"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the blocks downward after they lose their upright balance",
+      "participants": [
+        "obj_5",
+        "obj_6",
+        "obj_7",
+        "obj_10"
+      ],
+      "evidence_refs": [
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ]
+    }
+  ]
+}

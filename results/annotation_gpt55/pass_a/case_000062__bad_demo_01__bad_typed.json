@@ -1,0 +1,290 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A clear stream of orange liquid continuously falls from a glass dispenser tap into a transparent drinking glass, and the liquid level in the glass rises.",
+  "raw_event_description": "At the start, a ribbed transparent dispenser sits on a woven stand on a wooden tabletop with a dark tap centered above a transparent drinking glass. Orange liquid is already entering the glass from the tap as a continuous narrow stream. Over the video, the stream remains visible, the orange liquid surface inside the glass moves upward, and a band of small bubbles or foam appears around the surface near the inner wall. No separate scene cut occurs.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The dispenser, tap, stream, receiving glass, and liquid surface are visible in the first frame.",
+      "The liquid transfer is already in progress at the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "glass dispenser",
+      "visible_form": "large ribbed transparent container with rounded upper portion",
+      "material_description": "transparent glossy surface with vertical ribbing",
+      "visible_properties": [
+        "transparent",
+        "ribbed",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "visible source container above the tap"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "tap fixture",
+      "visible_form": "small dark spigot or tap attached to the front lower area of the dispenser",
+      "material_description": "dark glossy component with small metallic-looking parts",
+      "visible_properties": [
+        "dark",
+        "attached to dispenser",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "liquid stream exits from this area"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "drinking glass",
+      "visible_form": "clear cylindrical glass positioned below the tap",
+      "material_description": "transparent glossy walls",
+      "visible_properties": [
+        "transparent",
+        "open top",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "receives visible liquid stream"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "orange liquid",
+      "visible_form": "orange fluid in the drinking glass and a narrow falling stream below the tap",
+      "material_description": "opaque or cloudy orange appearance with light surface bubbles",
+      "visible_properties": [
+        "orange",
+        "fluid-looking",
+        "surface bubbles visible"
+      ],
+      "initial_motion_description": "a narrow stream is already moving from the tap area into the glass",
+      "initial_integrity_description": "continuous stream and pooled liquid are visible",
+      "event_role_hints": [
+        "fills the receiving glass"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "woven stand",
+      "visible_form": "round tan woven support beneath the dispenser",
+      "material_description": "tan and brown interlaced strands",
+      "visible_properties": [
+        "woven texture",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the dispenser"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "wooden tabletop",
+      "visible_form": "flat wooden surface beneath the glass and stand",
+      "material_description": "brown wood grain visible",
+      "visible_properties": [
+        "flat",
+        "wood-grain pattern",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "surface under the setup"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned above and behind the drinking glass",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is attached to the front of the dispenser and located above the open top of the drinking glass",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "forms a visible stream between the tap and the liquid surface inside the glass",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "rests on the wooden tabletop",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on the woven stand",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The transparent dispenser is centered above and behind the transparent drinking glass."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A dark tap fixture is visible on the front of the dispenser above the glass opening."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "A narrow orange liquid stream extends downward from the tap area into the drinking glass."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The drinking glass is standing on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The dispenser is positioned on top of a round woven stand."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The orange liquid surface inside the glass rises over time."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "Small light bubbles or foam are visible near the liquid surface in the glass."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "Near the end, the orange liquid level is higher than at the start."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The dispenser, stand, glass, and tabletop remain in fixed positions relative to each other."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The setup is already arranged with the dispenser above the glass.",
+        "The orange stream is already entering the glass."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "is visible as both a stream from the tap area and as liquid pooled in the glass"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "contains orange liquid below its rim"
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e7",
+        "e9"
+      ],
+      "observations": [
+        "The stream remains visible between the tap and glass.",
+        "The liquid surface in the glass moves upward.",
+        "Small bubbles or foam remain visible near the surface."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "continues flowing as a narrow stream into the glass"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "accumulates visibly inside the drinking glass as the surface rises"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary on the woven stand"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains stationary on the tabletop"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8"
+      ],
+      "observations": [
+        "The glass contains more orange liquid than earlier."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "has a higher visible surface level inside the glass than at the start"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e9"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

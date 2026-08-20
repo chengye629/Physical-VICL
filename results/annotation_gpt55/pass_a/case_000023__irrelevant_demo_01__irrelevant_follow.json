@@ -1,0 +1,303 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A red drink dispenser, spigot, and small jar remain visibly stationary with no visible pouring or level change.",
+  "raw_event_description": "The video shows a clear ribbed drink dispenser containing red fluid on a woven round stand, with a small clear jar below the spigot containing red fluid. Across the visible sequence, the dispenser, spigot, jar, stand, table, and fluid surfaces keep the same positions and appearances. No visible stream emerges from the spigot, and no object visibly moves or changes shape.",
+  "observed_scope": "unclear",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The dispenser, spigot, small jar, red contents, woven stand, and table are visible from the start.",
+      "The visible arrangement already appears established in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "drink dispenser",
+      "visible_form": "large clear ribbed cylindrical container with a short neck at the top and a spigot mounted near the lower front",
+      "material_description": "transparent rigid-looking container with reflective highlights",
+      "visible_properties": [
+        "clear",
+        "ribbed sides",
+        "partly filled with red fluid"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "holds red fluid",
+        "has spigot above the small jar"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red fluid in dispenser",
+      "visible_form": "red fluid volume inside the lower portion of the dispenser with a visible horizontal surface line",
+      "material_description": "opaque to translucent red fluid appearance",
+      "visible_properties": [
+        "red",
+        "flat upper surface",
+        "contained inside dispenser"
+      ],
+      "initial_motion_description": "no visible surface motion",
+      "initial_integrity_description": "continuous fluid volume visible",
+      "event_role_hints": [
+        "same-colored fluid is also visible in the jar"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "spigot",
+      "visible_form": "small tap protruding from the front of the dispenser with a short angled handle",
+      "material_description": "shiny dark and silver-toned reflective surface",
+      "visible_properties": [
+        "mounted on dispenser",
+        "no visible stream from outlet"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "positioned above jar opening"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "small jar",
+      "visible_form": "small clear cylindrical jar or glass with open-looking top, placed below the spigot",
+      "material_description": "transparent rigid-looking surface with reflections",
+      "visible_properties": [
+        "clear",
+        "partly filled with red fluid",
+        "upright"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "located under the spigot"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "red fluid in jar",
+      "visible_form": "red fluid volume occupying the lower portion of the small jar",
+      "material_description": "opaque to translucent red fluid appearance",
+      "visible_properties": [
+        "red",
+        "flat upper surface",
+        "contained inside small jar"
+      ],
+      "initial_motion_description": "no visible surface motion",
+      "initial_integrity_description": "continuous fluid volume visible",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_6",
+      "name": "woven stand",
+      "visible_form": "round low woven basket-like support under the dispenser",
+      "material_description": "tan and brown woven strands visible",
+      "visible_properties": [
+        "circular",
+        "layered woven texture",
+        "supports dispenser"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_7",
+      "name": "wooden table",
+      "visible_form": "flat tabletop surface beneath the jar and woven stand",
+      "material_description": "wood-grain patterned surface",
+      "visible_properties": [
+        "flat",
+        "brown",
+        "visible grain"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_8",
+      "name": "background wall",
+      "visible_form": "plain light-colored wall behind the setup",
+      "material_description": "smooth matte light surface",
+      "visible_properties": [
+        "light gray or white",
+        "plain"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears continuous",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on top of the woven stand",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is mounted on the lower front of the drink dispenser",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is positioned below the spigot",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is contained inside the drink dispenser",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is contained inside the small jar",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "stands on the wooden table",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e6"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "The clear ribbed dispenser remains on the round woven stand."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "continuous",
+      "observation": "The spigot remains attached to the lower front of the dispenser."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "The small clear jar remains directly below the spigot outlet area."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "Red fluid is visible in the lower portion of the dispenser."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "Red fluid is visible in the lower portion of the small jar."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The small jar remains upright on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "No visible fluid stream appears between the spigot and the small jar."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The visible red fluid levels in the dispenser and small jar appear unchanged."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The dispenser, spigot, jar, stand, and table keep fixed positions relative to one another."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The camera framing remains centered on the dispenser and jar."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The setup remains visually unchanged across the sequence."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The drink dispenser remains stationary on the woven stand."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The red fluid in the dispenser shows no visible level change or surface motion."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The spigot remains in the same visible position with no visible discharge."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The small jar remains upright below the spigot."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The red fluid in the jar shows no visible level change."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The woven stand remains stationary under the dispenser."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "The tabletop remains unchanged in view."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e10"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

@@ -1,0 +1,327 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A suspended shiny ball on the left swings into a row of balls, and a ball on the right swings outward and back while the frame and table remain stationary.",
+  "raw_event_description": "The scene shows a Newton's-cradle-like object on a wooden tabletop, with a black base, chrome-colored support frame, and several suspended shiny balls. At the start, the left end ball is displaced to the left with its string angled, while the other balls hang close together near the center. After a long still period, the left ball moves rightward toward the row and reaches the clustered balls. A right-side end ball then separates from the row and swings to the right, later returning toward the row. The left and right end balls continue alternating visible side-to-side motion, while the central balls stay close together with small visible shifts.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The cradle, base, suspended balls, and surrounding tabletop are visible.",
+      "The left end ball is already displaced left of the hanging row.",
+      "No main swinging exchange is visible yet in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "cradle frame and base",
+      "visible_form": "rectangular chrome-colored wire support standing on a glossy black rectangular base",
+      "material_description": "shiny chrome-colored rods and glossy black base",
+      "visible_properties": [
+        "upright",
+        "reflective",
+        "stationary",
+        "rectangular support shape"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact and assembled.",
+      "event_role_hints": [
+        "supports the hanging balls"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left end ball",
+      "visible_form": "small shiny spherical ball suspended by thin strings",
+      "material_description": "mirror-like chrome-colored surface",
+      "visible_properties": [
+        "spherical",
+        "reflective",
+        "suspended",
+        "initially offset left"
+      ],
+      "initial_motion_description": "Initially held or resting to the left of the row with its string angled.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "moves toward the central row",
+        "later swings back left"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "central ball row",
+      "visible_form": "cluster of shiny spherical balls hanging in a close horizontal row",
+      "material_description": "mirror-like chrome-colored surfaces",
+      "visible_properties": [
+        "spherical",
+        "reflective",
+        "suspended",
+        "closely spaced"
+      ],
+      "initial_motion_description": "No visible motion during the early still portion.",
+      "initial_integrity_description": "Balls appear intact and aligned close together.",
+      "event_role_hints": [
+        "receives visible contact from an end ball",
+        "remains mostly clustered"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "right end ball",
+      "visible_form": "small shiny spherical ball suspended by thin strings at the right side of the row",
+      "material_description": "mirror-like chrome-colored surface",
+      "visible_properties": [
+        "spherical",
+        "reflective",
+        "suspended",
+        "initially aligned with row"
+      ],
+      "initial_motion_description": "Initially stationary with the row.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "separates to the right after the left ball reaches the row",
+        "returns toward the row"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "scissors",
+      "visible_form": "black and blue handled scissors lying on the tabletop to the left of the cradle",
+      "material_description": "black and blue plastic-looking handle with darker tool body",
+      "visible_properties": [
+        "flat on table",
+        "partly behind left side of cradle",
+        "stationary"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "background tabletop object"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "wooden tabletop",
+      "visible_form": "flat light-brown horizontal surface beneath the objects",
+      "material_description": "wood-grain-like light brown surface",
+      "visible_properties": [
+        "flat",
+        "stationary",
+        "supports objects"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears continuous and intact.",
+      "event_role_hints": [
+        "surface under the cradle and scissors"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "The left end ball is positioned left of the clustered balls with its suspension string angled.",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "The central ball row hangs above the black base inside the chrome-colored frame.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "The scissors lie on the tabletop to the left of the cradle frame.",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The cradle base rests on the wooden tabletop.",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A glossy black rectangular base sits on a light-brown tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The left suspended ball is displaced to the left of the clustered balls."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Several shiny balls hang close together near the center of the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "Black and blue handled scissors are visible on the tabletop at the left side of the cradle."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The chrome-colored cradle frame remains upright and fixed in position."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The left end ball moves rightward from its left-offset position."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The left end ball reaches the clustered row of balls."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "A right-side end ball separates from the row and moves to the right."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The right-side end ball is visible at a rightward offset with its string angled."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The right-side end ball moves back toward the row."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The left end ball is again visible offset to the left after the right-side motion."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The central balls remain close together while the end balls alternate between offset positions."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The tabletop, wall background, scissors, base, and frame keep the same image positions throughout the clip."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The cradle is centered on the tabletop.",
+        "The left end ball is displaced left of the row.",
+        "The other balls are grouped near the center."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The left end ball remains left of the row with minimal visible motion."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The central balls hang in a close row with no visible separation."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The frame and base remain stationary."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The left end ball travels from the left toward the row.",
+        "The left end ball reaches the clustered balls.",
+        "A right-side ball moves away from the row to the right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The left end ball moves rightward until it reaches the clustered balls."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The central ball row stays clustered with small visible shifts."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The right end ball separates from the row and swings rightward."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The right end ball returns toward the row.",
+        "The left end ball becomes offset left again.",
+        "The alternating end-ball motion continues."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The right end ball moves back from the right-offset position toward the row."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The left end ball is visible again on the left side after the right ball's return."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The central balls remain close together during the repeated motion."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The thin suspension strings are faint and sometimes hard to distinguish against the background.",
+    "The left end ball is partly near the left support and scissors area during some frames."
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A blue round object and a yellow ball enter from opposite sides on a tabletop, meet near the center, then separate and stop apart.",
+  "raw_event_description": "The video begins with an empty light woodgrain tabletop framed by two black cylindrical objects near the left and right edges. After a still interval, a small blue round object appears from the left side and a yellow spherical ball appears from the right side. They move toward each other across the tabletop, come into contact or very close contact near the center, then move away from that meeting point. The blue object moves back toward the left side, while the yellow ball moves toward the upper-right area. Both objects remain visible and stationary at separated positions near the end.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tabletop and side black cylindrical objects are visible.",
+      "The blue and yellow moving objects are not visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "tabletop",
+      "visible_form": "flat rectangular light-colored surface with visible woodgrain pattern",
+      "material_description": "light woodgrain appearance",
+      "visible_properties": [
+        "flat",
+        "rectangular",
+        "light colored",
+        "woodgrain pattern"
+      ],
+      "initial_motion_description": "stationary throughout visible frames",
+      "initial_integrity_description": "continuous unbroken surface visible",
+      "event_role_hints": [
+        "surface across which the colored objects move"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left black cylinder",
+      "visible_form": "partially visible black cylindrical object at the left edge",
+      "material_description": "black opaque surface",
+      "visible_properties": [
+        "black",
+        "cylindrical",
+        "partly outside frame"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "located near the side where the blue object first appears"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "right black cylinder",
+      "visible_form": "partially visible black cylindrical object at the right edge",
+      "material_description": "black opaque surface",
+      "visible_properties": [
+        "black",
+        "cylindrical",
+        "partly outside frame"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "located near the side where the yellow ball first appears"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "blue round object",
+      "visible_form": "small blue round object with a circular face visible in many frames",
+      "material_description": "blue opaque surface",
+      "visible_properties": [
+        "blue",
+        "small",
+        "round outline",
+        "circular face visible"
+      ],
+      "initial_motion_description": "not visible at the start; later appears from the left and moves rightward",
+      "initial_integrity_description": "appears intact when first visible",
+      "event_role_hints": [
+        "moves toward the yellow ball",
+        "later moves away toward the left"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "yellow ball",
+      "visible_form": "small yellow spherical ball with a curved seam or stripe visible",
+      "material_description": "bright yellow surface",
+      "visible_properties": [
+        "yellow",
+        "spherical",
+        "small",
+        "curved seam or stripe visible"
+      ],
+      "initial_motion_description": "not visible at the start; later appears from the right and moves leftward",
+      "initial_integrity_description": "appears intact when first visible",
+      "event_role_hints": [
+        "moves toward the blue object",
+        "later moves away toward the upper-right area"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "partially visible at the left edge of the tabletop view",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "partially visible at the right edge of the tabletop view",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "not visible on the tabletop at the start",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "not visible on the tabletop at the start",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The tabletop is visible with no blue or yellow object on it."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A black cylindrical object is partially visible at each side edge of the frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed on the tabletop."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "A blue round object first becomes visible near the left side."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A yellow spherical ball first becomes visible near the right side."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The blue object occupies successive positions farther to the right."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The yellow ball occupies successive positions farther to the left."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The blue object and yellow ball meet at adjacent or touching positions near the center of the tabletop."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "After the meeting, the blue object occupies successive positions farther to the left."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "After the meeting, the yellow ball occupies successive positions toward the upper-right area."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The blue object remains at a separated position near the left side."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The yellow ball remains at a separated position in the upper-right area."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "No scene cut is visible."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The blue object and yellow ball remain visibly intact."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ],
+      "observations": [
+        "The tabletop is empty of the colored moving objects.",
+        "The black cylindrical objects are stationary at the side edges."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "visible as a stationary tabletop"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "stationary at the left frame edge"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "stationary at the right frame edge"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The blue object and yellow ball enter the visible tabletop area from opposite sides.",
+        "They move toward each other and meet near the center."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "appears from the left and moves rightward toward the yellow ball"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "appears from the right and moves leftward toward the blue object"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "reaches an adjacent or touching position with the yellow ball"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "reaches an adjacent or touching position with the blue object"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12",
+        "e14"
+      ],
+      "observations": [
+        "After meeting, the colored objects move apart and later remain separated."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "moves leftward after the meeting and then remains near the left side"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "moves toward the upper-right area after the meeting and then remains there"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains visibly intact"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "remains visibly intact"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e3"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

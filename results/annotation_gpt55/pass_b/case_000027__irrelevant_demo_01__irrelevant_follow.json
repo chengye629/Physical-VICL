@@ -1,0 +1,375 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow mug",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e14"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "blue upright block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "black circular base",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e15"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "bright wall light area",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "dark wall silhouettes",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e3",
+        "e10",
+        "e13",
+        "e15"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "black cable",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "rotation",
+      "raw_type": "slow rigid rotation or reorientation of the mug and upright block on the base",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "event_roles": [
+            "target"
+          ]
+        },
+        {
+          "object_id": "obj_2",
+          "event_roles": [
+            "target"
+          ]
+        },
+        {
+          "object_id": "obj_3",
+          "event_roles": [
+            "support"
+          ]
+        }
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e11",
+        "e12",
+        "e14"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "illumination_change",
+        "raw_type": "changing shadow silhouettes and reflected highlights caused by object reorientation in a fixed light area",
+        "participants": [
+          {
+            "object_id": "obj_1",
+            "event_roles": [
+              "target"
+            ]
+          },
+          {
+            "object_id": "obj_2",
+            "event_roles": [
+              "target"
+            ]
+          },
+          {
+            "object_id": "obj_4",
+            "event_roles": [
+              "medium"
+            ]
+          },
+          {
+            "object_id": "obj_5",
+            "event_roles": [
+              "medium"
+            ]
+          },
+          {
+            "object_id": "obj_6",
+            "event_roles": [
+              "target"
+            ]
+          }
+        ],
+        "evidence_refs": [
+          "e3",
+          "e10",
+          "e13",
+          "e14",
+          "e15"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the objects are already slowly changing orientation during the observed interval",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e15",
+        "e16"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e10",
+        "e14",
+        "e15",
+        "e16"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "visible orientation changes from handle on the left, to hidden or minimally visible, to handle on the right"
+      },
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "glossy highlight changes position on the mug surface as its orientation changes"
+      },
+      "evidence_refs": [
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "blue upright block becomes visible after being initially hidden or aligned behind the mug"
+      },
+      "evidence_refs": [
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "visible position relative to the camera changes from beside the mug to near the front-left side while remaining upright"
+      },
+      "evidence_refs": [
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "dark wall silhouettes shift within the bright wall area and change outline, including a mug-like shape with a handle-like feature"
+      },
+      "evidence_refs": [
+        "e10",
+        "e13",
+        "e15"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": null,
+        "raw_transition": "the visible shadow pattern on the wall changes position and shape while the wall itself remains fixed"
+      },
+      "evidence_refs": [
+        "e3",
+        "e10",
+        "e15"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "torque",
+      "raw_mechanism": "a torque drives the slow angular reorientation of the supported rigid objects",
+      "process_ref": "primary",
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "absorption",
+      "raw_mechanism": "opaque objects attenuate or block light, so their changing orientation changes the projected dark silhouettes on the illuminated wall",
+      "process_ref": "secondary",
+      "object_ids": [
+        "obj_1",
+        "obj_2",
+        "obj_4",
+        "obj_5",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e10",
+        "e13",
+        "e15"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "surface_reflection",
+      "raw_mechanism": "the glossy mug surface reflects light differently as its orientation changes",
+      "process_ref": "secondary",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e14"
+      ]
+    }
+  ]
+}

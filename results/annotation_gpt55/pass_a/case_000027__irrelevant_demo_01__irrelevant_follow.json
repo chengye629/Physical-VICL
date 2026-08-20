@@ -1,0 +1,380 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A yellow mug and a blue upright block on a black circular base slowly change orientation while their dark wall silhouettes move across a lit wall area.",
+  "raw_event_description": "The scene starts with a yellow mug on a black circular base on a tabletop, with the mug handle visible on the left side and a large dark silhouette on the wall to the left. Over time the mug's visible handle moves out of view, a blue upright rectangular block becomes visible beside the mug, and the wall silhouettes shift from leftward to more central positions. Later the mug handle becomes visible on the right side, the blue block appears near the front-left side of the mug, and the dark silhouettes on the wall continue changing shape and position within the bright circular light area.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The yellow mug and black circular base are clearly visible.",
+      "The blue upright block is not initially visible or is hidden by the mug.",
+      "A wall, tabletop, bright light patch, and dark silhouettes are visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow mug",
+      "visible_form": "cylindrical cup with a handle and dark open top",
+      "material_description": "glossy yellow exterior with dark rim/interior",
+      "visible_properties": [
+        "yellow",
+        "cylindrical",
+        "handled",
+        "glossy",
+        "open top"
+      ],
+      "initial_motion_description": "already slowly changing orientation relative to the camera at the start",
+      "initial_integrity_description": "appears intact with no visible breakage or deformation",
+      "event_role_hints": [
+        "main visible rotating object",
+        "produces a changing mug-shaped dark silhouette on the wall"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "blue upright block",
+      "visible_form": "narrow vertical rectangular prism",
+      "material_description": "bright blue visible face with darker side edge",
+      "visible_properties": [
+        "blue",
+        "upright",
+        "rectangular",
+        "straight-edged"
+      ],
+      "initial_motion_description": "not clearly visible at first; later appears beside the mug and changes position relative to the camera",
+      "initial_integrity_description": "appears intact when visible",
+      "event_role_hints": [
+        "secondary upright object on the same base",
+        "produces a changing rectangular dark silhouette on the wall"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "black circular base",
+      "visible_form": "flat round platform or disk under the mug and blue block",
+      "material_description": "dark, smooth-looking circular surface",
+      "visible_properties": [
+        "black",
+        "circular",
+        "flat",
+        "low-profile"
+      ],
+      "initial_motion_description": "visible objects on it change orientation through the sequence",
+      "initial_integrity_description": "appears intact and stable",
+      "event_role_hints": [
+        "supporting surface for the mug and blue block"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wall",
+      "visible_form": "vertical background surface",
+      "material_description": "plain light-colored wall surface",
+      "visible_properties": [
+        "vertical",
+        "light-colored",
+        "smooth-looking"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears unchanged",
+      "event_role_hints": [
+        "surface where dark silhouettes and bright light area are visible"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "bright wall light area",
+      "visible_form": "large circular or oval bright patch on the wall",
+      "material_description": "white-to-gray illuminated area with soft edges",
+      "visible_properties": [
+        "bright",
+        "circular",
+        "soft-edged"
+      ],
+      "initial_motion_description": "does not visibly translate relative to the wall",
+      "initial_integrity_description": "remains present throughout",
+      "event_role_hints": [
+        "background optical area containing changing dark silhouettes"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "dark wall silhouettes",
+      "visible_form": "large dark shapes on the wall resembling the mug, handle, block, and base outline",
+      "material_description": "dark optical silhouettes on the illuminated wall area",
+      "visible_properties": [
+        "dark",
+        "soft-edged in places",
+        "changing outline",
+        "wall-projected appearance"
+      ],
+      "initial_motion_description": "shapes are already present on the left side of the lit wall area",
+      "initial_integrity_description": "not a solid object; visible as changing dark shapes",
+      "event_role_hints": [
+        "visible optical change associated with the moving orientations of the objects"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "tabletop",
+      "visible_form": "horizontal surface beneath the base",
+      "material_description": "wood-toned surface with visible grain-like texture",
+      "visible_properties": [
+        "horizontal",
+        "wood-toned",
+        "flat"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears unchanged",
+      "event_role_hints": [
+        "supports the black circular base"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "black cable",
+      "visible_form": "thin dark cord extending from the base area toward the right",
+      "material_description": "dark flexible-looking line",
+      "visible_properties": [
+        "black",
+        "thin",
+        "curved"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "visible adjacent object not changing during the event"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "sits on top of",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "rests on",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "appears on",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "covers a large central area of",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_8",
+      "relation_description": "extends from the base area toward the right side of the tabletop",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The yellow mug is visible on top of the black circular base."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The black circular base is visible on the tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Large dark silhouettes are visible on the wall to the left of the mug."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "A large bright circular light area remains visible on the wall."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "A thin dark cable lies on the tabletop to the right of the base."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "early",
+      "observation": "The yellow mug handle is visible on the left side of the mug."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The yellow mug handle becomes hidden or only minimally visible."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "A blue upright rectangular block becomes visible beside the yellow mug."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The blue block appears to the right side of the mug from the camera view."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The dark wall silhouettes shift rightward within the bright wall area."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The yellow mug handle is visible on the right side of the mug."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The blue block appears near the front-left side of the mug from the camera view."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The wall silhouette includes a mug-like dark shape with a handle-like opening on its right side."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The yellow mug's glossy highlight changes position on its visible surface."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "continuous",
+      "observation": "The wall silhouettes change outline while the wall and tabletop remain fixed in the frame."
+    },
+    {
+      "evidence_id": "e16",
+      "stage": "continuous",
+      "observation": "No scene cut is visible during the sequence."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e6"
+      ],
+      "observations": [
+        "The mug is on the black circular base.",
+        "The mug handle is visible on the left side.",
+        "Large dark silhouettes occupy the left side of the lit wall area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The mug begins the observed interval with its handle on the left side from the camera view."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The dark wall silhouettes are positioned mostly left of the mug."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e14"
+      ],
+      "observations": [
+        "The mug orientation changes so the handle is no longer clearly visible.",
+        "The blue block becomes visible beside the mug.",
+        "The wall silhouettes move and change outline."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The mug's visible side changes, and the handle becomes hidden or partially hidden."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The blue upright block appears beside the mug and remains upright."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The dark silhouettes shift toward the center of the bright wall area."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e11",
+        "e12",
+        "e13",
+        "e15"
+      ],
+      "observations": [
+        "The mug handle becomes visible on the right side.",
+        "The blue block appears near the front-left side of the mug.",
+        "The wall silhouettes include a mug-like shape with a handle-like feature."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The mug continues changing orientation until the handle is visible on the right side."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The blue block remains upright and appears in front-left relation to the mug from the camera view."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The dark silhouettes continue changing shape and position on the wall."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e15",
+      "e16"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The blue block is not clearly visible at the beginning because it is hidden by or aligned behind the mug from the camera view.",
+    "The exact visible boundary between the mug and some wall silhouettes is difficult to distinguish in the darkest regions."
+  ]
+}

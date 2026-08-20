@@ -1,0 +1,296 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A suspended yellow cup-like object descends onto a gray block and breaks into scattered pieces.",
+  "raw_event_description": "At the start, a yellow cup-like object hangs near the upper center of the scene below a blue vertical strip, above a gray rectangular block on the floor. For several moments the visible objects remain nearly unchanged. The yellow object then moves rapidly downward while the blue strip remains near the top of the frame. The yellow object contacts the top area of the gray block, breaks into multiple yellow and light-colored pieces, and the pieces move outward across the floor. The gray block stays in place. The fragments then come to rest around the block, including a larger yellow piece near the lower left and smaller pieces near the center and right.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The yellow object, gray block, floor, and backdrop are visible.",
+      "The upper attachment or support for the blue strip extends out of the frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow cup-like object",
+      "visible_form": "small yellow hollow cup or mug-like form with a rounded body and handle-like opening visible after breakage",
+      "material_description": "glossy yellow outer surface with lighter interior surfaces visible in fragments",
+      "visible_properties": [
+        "yellow",
+        "glossy-looking",
+        "hollow-looking",
+        "rigid-looking before breakage"
+      ],
+      "initial_motion_description": "nearly stationary while suspended near the upper center before the rapid downward movement",
+      "initial_integrity_description": "appears whole before the main event",
+      "event_role_hints": [
+        "moves downward",
+        "contacts the gray block",
+        "separates into multiple visible pieces"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "gray block",
+      "visible_form": "rectangular block with rough uneven surfaces, placed horizontally on the floor",
+      "material_description": "gray rough granular-looking surface",
+      "visible_properties": [
+        "gray",
+        "rough-textured",
+        "rectangular",
+        "opaque"
+      ],
+      "initial_motion_description": "stationary on the floor",
+      "initial_integrity_description": "appears intact before and after the event",
+      "event_role_hints": [
+        "is contacted by the yellow object",
+        "remains in place"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "blue hanging strip",
+      "visible_form": "narrow blue vertical strip or strap entering from the top of the frame",
+      "material_description": "blue surface, partly visible",
+      "visible_properties": [
+        "blue",
+        "narrow",
+        "vertical",
+        "partly out of frame"
+      ],
+      "initial_motion_description": "nearly stationary above the yellow object",
+      "initial_integrity_description": "appears continuous where visible",
+      "event_role_hints": [
+        "remains near the top while the yellow object moves downward"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "floor",
+      "visible_form": "flat floor surface with diagonal plank-like lines and small dark markings",
+      "material_description": "brown and gray patterned surface",
+      "visible_properties": [
+        "flat",
+        "patterned",
+        "marked"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "unchanged",
+      "event_role_hints": [
+        "receives scattered fragments"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "white backdrop",
+      "visible_form": "large vertical white panel or sheet behind the objects",
+      "material_description": "plain white surface with slight tonal variations",
+      "visible_properties": [
+        "white",
+        "vertical",
+        "large"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "unchanged",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned above the gray block with vertical separation",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is located below the blue hanging strip near the upper center of the frame",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "rests on the floor near the lower center of the frame",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A whole yellow cup-like object is visible above a gray rectangular block."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A blue vertical strip is visible above the yellow object and continues out of the top of the frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The gray block is on the floor near the lower center of the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The yellow object remains nearly stationary for multiple frames before the rapid movement."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The yellow object moves rapidly downward from its suspended position."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The blue vertical strip remains near the top of the frame as the yellow object moves downward."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The yellow object reaches the top area of the gray block."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The yellow object separates into multiple pieces at the gray block."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "Yellow and light-colored fragments move outward from the block area."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "A larger yellow fragment is visible near the lower left of the frame."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "Smaller yellow and light-colored fragments are visible near the block and to the right of it."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The gray block remains near its original position after the yellow object breaks."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The fragments remain on the floor with little or no visible motion at the end."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene shows a suspended yellow cup-like object above a gray block on the floor.",
+        "The visible objects are nearly still."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "hangs near the upper center above the block and appears whole"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "rests on the floor near the lower center"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "extends down from the top of the frame above the yellow object"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The yellow object rapidly moves downward.",
+        "The yellow object reaches the block and breaks into pieces.",
+        "Fragments move away from the block area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "moves downward, contacts the block area, and separates into multiple visible pieces"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains visible beneath the contact area"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains near the top of the frame while the yellow object moves downward"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The gray block remains in place.",
+        "Fragments are scattered on the floor around the block.",
+        "The final frames show little or no remaining fragment motion."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "exists as separated fragments distributed around the block"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "stays near its original location and appears intact"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "has fragments lying on it near the block and at the lower left"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The upper end of the blue strip and any support above it are outside the frame."
+  ]
+}

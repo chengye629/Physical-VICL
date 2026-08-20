@@ -1,0 +1,384 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A beige stick mounted on a black circular object sweeps toward upright blocks, and the three nearby blocks end up fallen while the left group remains upright.",
+  "raw_event_description": "The scene begins with several small upright rectangular blocks on a wooden tabletop, arranged in two separated groups. At the back right is a black circular cylinder with a green connector and a beige stick extending from it. The stick changes orientation over time, sweeping from the right side toward the nearby upright blocks. The stick reaches the rightmost block in the right group. The rightmost black block tilts and falls, followed by the adjacent white block and the adjacent black block in that right group. By the end, the three right-group blocks are down or leaning on the tabletop, while the four blocks in the left group remain upright.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The upright blocks are visible before the falling begins.",
+      "The black circular object, green connector, and beige stick are visible at the right side.",
+      "The tabletop and spacing between the two block groups are visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "wood tabletop",
+      "visible_form": "flat horizontal tabletop surface",
+      "material_description": "light brown wood-grain surface",
+      "visible_properties": [
+        "flat",
+        "horizontal",
+        "light brown",
+        "wood-grain pattern"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "continuous visible tabletop surface",
+      "event_role_hints": [
+        "surface supporting the visible objects"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black circular cylinder",
+      "visible_form": "low round black cylinder at the back right of the table",
+      "material_description": "matte black surface with hard-edged circular form",
+      "visible_properties": [
+        "black",
+        "round",
+        "cylindrical",
+        "stationary in the scene"
+      ],
+      "initial_motion_description": "no visible translation",
+      "initial_integrity_description": "appears intact throughout",
+      "event_role_hints": [
+        "holds the green connector and beige stick"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "green connector",
+      "visible_form": "small green piece on top of the black circular cylinder",
+      "material_description": "green solid-looking piece",
+      "visible_properties": [
+        "green",
+        "small",
+        "attached-looking"
+      ],
+      "initial_motion_description": "changes orientation together with the beige stick area",
+      "initial_integrity_description": "appears intact throughout",
+      "event_role_hints": [
+        "visible junction between cylinder and stick"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "beige stick",
+      "visible_form": "thin straight beige rod extending from the green connector",
+      "material_description": "light tan wood-like appearance",
+      "visible_properties": [
+        "thin",
+        "straight",
+        "beige",
+        "rod-like"
+      ],
+      "initial_motion_description": "its angle changes gradually, sweeping toward the upright blocks",
+      "initial_integrity_description": "appears intact throughout",
+      "event_role_hints": [
+        "moving object nearest the right group of blocks"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "rightmost black block",
+      "visible_form": "small upright black rectangular block at the right end of the right group",
+      "material_description": "black solid-looking rectangular piece",
+      "visible_properties": [
+        "black",
+        "rectangular",
+        "upright at start"
+      ],
+      "initial_motion_description": "no visible motion before the stick reaches it",
+      "initial_integrity_description": "upright and intact at start",
+      "event_role_hints": [
+        "first block in the right group seen changing orientation"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "right-group white block",
+      "visible_form": "small upright white rectangular block between two black blocks in the right group",
+      "material_description": "white solid-looking rectangular piece",
+      "visible_properties": [
+        "white",
+        "rectangular",
+        "upright at start"
+      ],
+      "initial_motion_description": "no visible motion before the right-group blocks start falling",
+      "initial_integrity_description": "upright and intact at start",
+      "event_role_hints": [
+        "middle block in the right group"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "left black block of right group",
+      "visible_form": "small upright black rectangular block at the left side of the right group",
+      "material_description": "black solid-looking rectangular piece",
+      "visible_properties": [
+        "black",
+        "rectangular",
+        "upright at start"
+      ],
+      "initial_motion_description": "no visible motion before the right-group blocks start falling",
+      "initial_integrity_description": "upright and intact at start",
+      "event_role_hints": [
+        "leftmost block in the right group"
+      ]
+    },
+    {
+      "id": "obj_8",
+      "name": "left group of blocks",
+      "visible_form": "four small upright rectangular blocks arranged in a separated line on the left side",
+      "material_description": "alternating black and white solid-looking rectangular pieces",
+      "visible_properties": [
+        "four blocks",
+        "upright at start",
+        "black and white",
+        "spaced apart"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "upright and intact at start",
+      "event_role_hints": [
+        "unmoved group visible throughout"
+      ]
+    },
+    {
+      "id": "obj_9",
+      "name": "rear cable",
+      "visible_form": "dark curved cable partly visible behind the black circular cylinder",
+      "material_description": "dark flexible-looking cord",
+      "visible_properties": [
+        "dark",
+        "curved",
+        "partially visible"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears continuous where visible",
+      "event_role_hints": [
+        "background object"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_4",
+      "relation_description": "attached or closely connected to the green connector on the black circular cylinder",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "stands closest to the beige stick among the upright blocks",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "stands immediately left of the rightmost black block in the right group",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_7",
+      "relation_description": "stands immediately left of the white block in the right group",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_8",
+      "relation_description": "is separated by a visible gap from the right group of three blocks",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A light brown tabletop fills the lower part of the view."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Four upright blocks are visible on the left and three upright blocks are visible nearer the right."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A black circular cylinder with a small green connector is visible at the back right."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A thin beige stick connected near the green piece changes angle across successive frames."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The beige stick reaches the area of the rightmost black upright block."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The rightmost black block in the right group tilts away from its initial vertical posture."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The white block in the right group tilts from vertical."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The left black block of the right group tilts from vertical."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The three blocks in the right group are no longer upright and are lying or leaning on the tabletop."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The four blocks in the left group remain upright."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The camera view remains fixed without a visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The tabletop, two separated groups of upright blocks, and the black circular cylinder are visible.",
+        "The beige stick changes orientation while the blocks remain upright."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The beige stick sweeps from the right side toward the nearby blocks."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The rightmost black block remains upright."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The right-group white block remains upright."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "The left black block of the right group remains upright."
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "The left group of four blocks remains upright."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The beige stick reaches the right end of the right group.",
+        "The three blocks in the right group change from upright to tilted positions."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The beige stick is seen near the rightmost black block."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The rightmost black block tilts and falls from its upright position."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The right-group white block tilts and falls from its upright position."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "The left black block of the right group tilts and falls from its upright position."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The right group remains down or leaning on the tabletop.",
+        "The left group remains upright.",
+        "The camera remains still."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "The rightmost black block rests down on the tabletop."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The right-group white block rests tilted or down against nearby fallen blocks."
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "The left black block of the right group rests down on the tabletop."
+        },
+        {
+          "object_id": "obj_8",
+          "observation": "The four left-group blocks remain upright and unchanged in position."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The beige stick remains extended from the black circular cylinder."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

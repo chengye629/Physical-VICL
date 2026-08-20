@@ -1,0 +1,306 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A white vertical strip above a red-filled blue mug is released into the red liquid, after which the liquid surface splashes and ripples before settling.",
+  "raw_event_description": "A blue mug containing dark red liquid sits on a wooden tabletop. A white rectangular strip is initially vertical over the mug opening, with its lower end at or just inside the red liquid and its upper end between a partially visible blue tool at the top of the frame. The strip remains nearly still for several moments. The blue tool opens or separates around the strip, and the white strip moves downward into the mug. A splash and bright ripples appear on the red liquid surface. The strip is no longer visible above the surface, and the red liquid continues to show surface motion that gradually becomes smoother.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The mug, red liquid, and white strip are visible clearly.",
+      "The upper blue tool is only partially visible because it is cropped by the top edge of the frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "blue mug",
+      "visible_form": "cup-shaped vessel with a curved handle on the right side",
+      "material_description": "glossy dark blue surface with reflective highlights",
+      "visible_properties": [
+        "dark blue",
+        "cylindrical cup body",
+        "right-side handle",
+        "open top"
+      ],
+      "initial_motion_description": "stationary on the tabletop",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "contains the red liquid",
+        "receives the descending white strip"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "red liquid",
+      "visible_form": "dark red surface filling most of the mug opening",
+      "material_description": "glossy reflective red fluid-like surface",
+      "visible_properties": [
+        "dark red",
+        "smooth surface early",
+        "reflective highlights"
+      ],
+      "initial_motion_description": "surface appears mostly still before the strip drops",
+      "initial_integrity_description": "continuous visible surface inside the mug",
+      "event_role_hints": [
+        "surface changes when the strip enters"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "white strip",
+      "visible_form": "narrow flat rectangular vertical strip",
+      "material_description": "plain white surface with straight edges",
+      "visible_properties": [
+        "white",
+        "flat-looking",
+        "vertical orientation",
+        "narrow rectangular shape"
+      ],
+      "initial_motion_description": "nearly stationary, held vertically above and into the mug opening",
+      "initial_integrity_description": "appears intact as one continuous strip before release",
+      "event_role_hints": [
+        "moves downward into the mug"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "blue upper tool",
+      "visible_form": "partially visible blue two-sided tool or prongs at the top edge of the frame",
+      "material_description": "bright blue surfaces with darker edges; partially cropped",
+      "visible_properties": [
+        "blue",
+        "two visible side pieces",
+        "positioned above the mug",
+        "partially out of frame"
+      ],
+      "initial_motion_description": "nearly stationary while the white strip is vertical",
+      "initial_integrity_description": "visible parts appear intact",
+      "event_role_hints": [
+        "initially positioned around the upper part of the white strip",
+        "separates around the time the strip descends"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal surface beneath the mug",
+      "material_description": "light brown surface with visible grain-like lines",
+      "visible_properties": [
+        "light brown",
+        "flat",
+        "wood-grain appearance"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears continuous and intact",
+      "event_role_hints": [
+        "supports the mug"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "sits on",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is inside the open top of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is vertical over the mug opening with its lower end at or inside the red surface",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is positioned above the mug and around the upper part of the white strip",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The blue mug is resting on a light brown tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A dark red reflective surface fills the visible opening of the blue mug."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A white rectangular strip is vertical over the mug opening with its lower end at or inside the red surface."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A partially cropped blue upper tool is visible around the upper part of the white strip."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The mug, red surface, white strip, and upper blue tool remain nearly unchanged in position for several frames."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The blue upper tool appears separated with a visible gap around the white strip."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The white strip moves downward into the mug opening."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "A raised splash and bright disturbed patches appear on the red liquid surface near the center of the mug."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The white strip is no longer visible above the red liquid surface."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The red liquid surface shows ripples and shifting highlights after the strip disappears."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The visible ripples on the red liquid surface become smaller over time."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The blue upper tool remains partially visible near the top edge after the strip has disappeared."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The camera framing stays centered on the mug without a visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The setup is stable: mug on table, red liquid in mug, white strip vertical, and blue upper tool partly visible above."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The blue mug remains stationary on the tabletop."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The red liquid surface appears mostly smooth and still."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The white strip remains nearly stationary in a vertical orientation."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The blue upper tool remains near the top of the strip."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The upper tool separates around the strip, the strip descends into the mug, and the liquid surface becomes disturbed."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The visible blue tool pieces are separated with a gap."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The white strip moves downward and disappears from view above the liquid surface."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The red liquid surface forms a splash and visible ripples."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "After the strip is no longer visible, the liquid surface continues moving and gradually smooths."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The red liquid surface shows diminishing ripples and shifting reflections."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The blue upper tool remains partially visible above the mug."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The blue mug remains stationary."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The full shape and handling of the upper blue tool are not visible because it is cropped by the top edge of the frame.",
+    "The white strip is not visible after entering the red liquid, so its later position is not directly observable."
+  ]
+}

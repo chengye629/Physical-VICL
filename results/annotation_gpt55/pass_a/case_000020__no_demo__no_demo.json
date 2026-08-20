@@ -1,0 +1,261 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small yellow hanging object moves downward from near the top of the frame toward a dark green box and then disappears from view while the box remains visibly unchanged.",
+  "raw_event_description": "The scene begins with a dark green cube-like box centered on a wooden tabletop against a plain wall. A small yellow object is visible near the top center, associated with two orange hanging straps. For many frames the arrangement remains still. Near the later part of the video, the yellow object is seen lower than before, separated from the straps, then as a blurred yellow shape just above the top of the green box, and then it is no longer visible. The orange straps remain hanging near the top, and the green box on the table shows no obvious visible displacement or deformation.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The green box and tabletop are clearly visible.",
+      "The yellow object is visible near the top edge but partly close to the frame boundary.",
+      "The orange straps are visible above the yellow object."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "dark green box",
+      "visible_form": "cube-like or rectangular fabric-covered box with a flat front face and a dark rim around the top",
+      "material_description": "dark green textured surface with darker trim; fabric-like visual texture",
+      "visible_properties": [
+        "opaque",
+        "dark green",
+        "box-shaped",
+        "open or recessed dark top area"
+      ],
+      "initial_motion_description": "stationary on the tabletop",
+      "initial_integrity_description": "appears intact with no visible damage or deformation",
+      "event_role_hints": [
+        "located below the yellow object",
+        "yellow object approaches the area above its top later in the video"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "yellow hanging object",
+      "visible_form": "small yellow rounded object with a wider lower portion and narrower upper portion",
+      "material_description": "smooth-looking yellow surface",
+      "visible_properties": [
+        "yellow",
+        "small relative to the box",
+        "opaque"
+      ],
+      "initial_motion_description": "initially stationary near the top center",
+      "initial_integrity_description": "appears intact before it moves",
+      "event_role_hints": [
+        "moves downward later in the video",
+        "becomes motion-blurred during descent",
+        "disappears from view near the top area of the box"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "orange straps",
+      "visible_form": "two narrow orange-red hanging strips above the yellow object",
+      "material_description": "orange-red flexible-looking strips",
+      "visible_properties": [
+        "thin",
+        "orange-red",
+        "hanging vertically"
+      ],
+      "initial_motion_description": "stationary near the top center",
+      "initial_integrity_description": "appear continuous and intact",
+      "event_role_hints": [
+        "remain visible near the top after the yellow object moves downward"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal tabletop occupying the lower part of the frame",
+      "material_description": "light brown wood-like surface",
+      "visible_properties": [
+        "flat",
+        "light brown",
+        "wood-grain appearance"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the green box"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "background wall",
+      "visible_form": "plain vertical wall behind the objects",
+      "material_description": "smooth light gray wall surface",
+      "visible_properties": [
+        "light gray",
+        "plain",
+        "matte-looking"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears unchanged",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on the tabletop near the horizontal center of the frame",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is positioned above the green box near the top center of the frame",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "hangs above and adjacent to the yellow object at the start",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A dark green cube-like box is centered on a light wooden tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A small yellow object is visible near the top center below two orange hanging straps."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "The wall, tabletop, and green box remain aligned in the same frame positions across the video."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "One sampled frame shows an additional dark green cuboid-like form above the main green box."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "late",
+      "observation": "The yellow object appears below the orange straps with a visible gap between them."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "late",
+      "observation": "The yellow object appears as a blurred yellow shape above the top of the green box."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The orange straps remain visible near the top after the yellow object is no longer attached to their lower end."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The yellow object is no longer visible after appearing near the top of the green box."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The green box shows no obvious visible shift or deformation after the yellow object disappears."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ],
+      "observations": [
+        "The tabletop, green box, yellow object, and orange straps are visible in a stable arrangement."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The green box is stationary on the tabletop."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The yellow object is stationary near the top center below the straps."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The orange straps hang near the top center."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "Most visible elements remain in fixed positions; one frame contains a second dark green cuboid-like form above the main box."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The main green box remains centered on the table."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The yellow object moves downward from the strap area toward the green box and then disappears from view."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The yellow object is seen lower than its initial position, then blurred above the box, then not visible."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The orange straps remain hanging near the top of the frame."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The green box remains visibly unchanged after the yellow object disappears."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e3"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "partially_clear",
+    "entity_trackability": "intermittent",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "One frame shows an additional dark green cuboid-like form above the main box; the visible frames do not resolve whether it is a separate object, a transient visual artifact, or another view of the box.",
+    "After the yellow object disappears near the top of the green box, its exact final visible location is not shown."
+  ]
+}

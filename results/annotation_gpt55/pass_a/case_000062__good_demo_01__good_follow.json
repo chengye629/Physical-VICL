@@ -1,0 +1,275 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "An orange liquid stream exits a glass dispenser spout and enters a clear jar, with the liquid level in the jar rising over time.",
+  "raw_event_description": "At the start, a clear ribbed glass dispenser sits on a woven stand on a wooden table, and a narrow orange liquid stream is already falling from a small spout into a clear jar below. As the video continues, the stream remains continuous, the orange liquid inside the jar rises, and small bubbles and foam collect along the surface near the jar opening. The dispenser, stand, jar, and table remain in fixed visible positions relative to one another.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The liquid stream is already visible in the first frame.",
+      "The dispenser, spout, receiving jar, and liquid surface are visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "glass dispenser",
+      "visible_form": "clear ribbed container with rounded upper body and a small front spout",
+      "material_description": "transparent reflective glass-like surface with vertical ridges",
+      "visible_properties": [
+        "transparent",
+        "ribbed",
+        "stationary"
+      ],
+      "initial_motion_description": "No visible motion of the dispenser.",
+      "initial_integrity_description": "The dispenser is intact and upright.",
+      "event_role_hints": [
+        "orange liquid stream exits from its front spout"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "spout",
+      "visible_form": "small protruding outlet with a dark handle or knob at the front of the dispenser",
+      "material_description": "dark and metallic-looking parts with reflective highlights",
+      "visible_properties": [
+        "fixed to dispenser",
+        "projecting forward"
+      ],
+      "initial_motion_description": "No visible motion of the spout assembly.",
+      "initial_integrity_description": "The spout is intact and attached.",
+      "event_role_hints": [
+        "liquid stream emerges from its lower outlet"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "receiving jar",
+      "visible_form": "clear cylindrical jar or cup positioned beneath the spout",
+      "material_description": "transparent glass-like walls with reflective highlights",
+      "visible_properties": [
+        "transparent",
+        "open top",
+        "stationary"
+      ],
+      "initial_motion_description": "No visible motion of the jar.",
+      "initial_integrity_description": "The jar is intact and upright.",
+      "event_role_hints": [
+        "orange liquid collects inside it"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "orange liquid",
+      "visible_form": "opaque orange liquid in the receiving jar and a narrow stream between spout and jar",
+      "material_description": "orange fluid with small pale bubbles on the surface",
+      "visible_properties": [
+        "orange",
+        "opaque",
+        "surface bubbles visible",
+        "continuous stream visible"
+      ],
+      "initial_motion_description": "A narrow stream is already moving from the spout into the jar at the first visible moment.",
+      "initial_integrity_description": "The liquid is continuous as a stream and collected volume; no separate solid pieces are visible.",
+      "event_role_hints": [
+        "moves from dispenser spout into receiving jar",
+        "rising surface inside jar"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "woven stand",
+      "visible_form": "round woven basket-like platform supporting the dispenser",
+      "material_description": "brown and tan woven strands",
+      "visible_properties": [
+        "woven texture",
+        "stationary"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "The stand is intact.",
+      "event_role_hints": [
+        "supports the dispenser above the jar"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "wooden table",
+      "visible_form": "flat tabletop surface under the jar and stand",
+      "material_description": "light brown wood-like surface with visible grain",
+      "visible_properties": [
+        "flat",
+        "stationary"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "The table surface is intact.",
+      "event_role_hints": [
+        "supports the jar and woven stand"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned on top of",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is positioned below the spout opening",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "forms a visible stream between the spout and the jar opening",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "rests on the wooden table",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "continuous",
+      "observation": "The clear ribbed dispenser remains seated on the woven stand."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The receiving jar is directly below the dispenser spout."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A narrow orange liquid stream is visible from the spout into the jar at the start."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "The receiving jar remains upright on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The orange liquid surface in the jar is higher than at the start."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "Small pale bubbles are visible along the orange liquid surface in the jar."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The orange liquid surface is near the upper portion of the jar."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The dispenser, stand, jar, and table keep the same relative positions."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The camera framing remains centered on the dispenser, spout, and jar."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The event is already underway when the video begins."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The orange liquid is visible as a narrow stream entering the jar."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The jar contains orange liquid below its upper portion."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The visible stream continues and the collected liquid occupies more of the jar."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The orange liquid level in the jar rises."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Small bubbles remain visible on the liquid surface."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The stream continues near the end while the jar is more filled than earlier."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The orange liquid surface sits near the upper part of the jar."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The dispenser remains stationary on the woven stand."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The jar remains stationary and upright."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e9"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

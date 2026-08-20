@@ -1,0 +1,211 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "green sheet",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_object_description": "bright green thin rectangular sheet spanning between two handled tools, initially continuous and mostly flat",
+      "evidence_refs": [
+        "e1",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "left handled tool",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_object_description": "black-and-blue rigid-looking handled tool partly visible at the left side of the sheet",
+      "evidence_refs": [
+        "e1",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "right handled tool",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_object_description": "black-and-blue rigid-looking handled tool partly visible at the right side of the sheet",
+      "evidence_refs": [
+        "e1",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "wooden tabletop",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "raw_object_description": "flat brown wooden tabletop surface underneath the scene",
+      "evidence_refs": [
+        "e2"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fracture_separation",
+      "type": "breaking",
+      "raw_type": "central split of the green sheet into two separated pieces",
+      "participants": [
+        {
+          "object_id": "obj_1",
+          "role": "target"
+        }
+      ],
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "deformation",
+        "type": null,
+        "raw_type": "bending and twisting of the sheet around the central area before and during separation",
+        "participants": [
+          {
+            "object_id": "obj_1",
+            "role": "target"
+          }
+        ],
+        "evidence_refs": [
+          "e5",
+          "e7",
+          "e8"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external actor or intervention; the sheet changes while spanning between the handled tools",
+      "participants": [],
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "impact_id": "impact_1",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "integrity",
+        "type": "broken",
+        "raw_transition": "the initially continuous green sheet develops a central opening and becomes two separated green pieces"
+      },
+      "evidence_refs": [
+        "e3",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "impact_id": "impact_2",
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "geometry",
+        "type": null,
+        "raw_transition": "the sheet center rises and twists while the left and right portions bend upward and away from each other"
+      },
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e8"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "mechanism_id": "mechanism_1",
+      "family": "mechanical_forcing",
+      "type": "tension",
+      "raw_mechanism": "mechanical loading across the span pulls the sheet material apart near the center",
+      "linked_processes": [
+        "primary"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "mechanism_id": "mechanism_2",
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "the thin flexible solid bends and twists before losing structural connectedness",
+      "linked_processes": [
+        "primary",
+        "secondary"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    }
+  ]
+}

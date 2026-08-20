@@ -1,0 +1,318 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A yellow-green tennis ball rolls across a wooden tabletop toward a black kettlebell and comes to rest against its front.",
+  "raw_event_description": "The scene begins with a wooden tabletop beside pale walls, two black kettlebells standing near the back, and a reflective vertical panel at the right. After a static interval, a yellow-green tennis ball enters from the lower edge of the image, moves across the tabletop toward the nearer left kettlebell, and its reflection appears in the right-side panel. The ball slows and stops at the front lower edge of the left kettlebell while the kettlebells, table, wall, and panel remain visibly unchanged.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tabletop, walls, two kettlebells, and reflective panel are visible.",
+      "The yellow-green ball involved later is not yet visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal light-brown surface with visible grain lines",
+      "material_description": "wood-like surface with light-brown color and linear grain pattern",
+      "visible_properties": [
+        "flat",
+        "horizontal",
+        "light brown"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "continuous visible surface with no visible breakage",
+      "event_role_hints": [
+        "surface crossed by the ball"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left kettlebell",
+      "visible_form": "black round lower body with arched handle above",
+      "material_description": "dark matte-to-slightly-reflective surface with highlights on the handle",
+      "visible_properties": [
+        "black",
+        "upright",
+        "rounded body",
+        "arched handle"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact and rigid throughout the visible segment",
+      "event_role_hints": [
+        "ball stops at its front lower side"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "right kettlebell",
+      "visible_form": "black round lower body with arched handle above, placed farther back and to the right",
+      "material_description": "dark surface with highlights on the handle",
+      "visible_properties": [
+        "black",
+        "upright",
+        "rounded body",
+        "arched handle"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact and unchanged",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_4",
+      "name": "wall corner",
+      "visible_form": "two pale vertical wall surfaces meeting at a corner behind the tabletop",
+      "material_description": "plain pale wall surfaces",
+      "visible_properties": [
+        "vertical",
+        "pale"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "unchanged continuous background surfaces",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_5",
+      "name": "reflective side panel",
+      "visible_form": "vertical reflective panel on the right side showing reflected tabletop and objects",
+      "material_description": "mirror-like reflective surface",
+      "visible_properties": [
+        "vertical",
+        "reflective"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact and unchanged",
+      "event_role_hints": [
+        "shows reflected image of the ball after it appears"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "tennis ball",
+      "visible_form": "small bright yellow-green sphere with curved lighter seam markings",
+      "material_description": "fuzzy-looking bright yellow-green surface with pale seam lines",
+      "visible_properties": [
+        "round",
+        "bright yellow-green",
+        "curved seam markings"
+      ],
+      "initial_motion_description": "not visible at the beginning; later enters from the lower edge",
+      "initial_integrity_description": "appears intact when visible",
+      "event_role_hints": [
+        "moves across tabletop",
+        "comes to rest against the left kettlebell"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "ball reflection",
+      "visible_form": "yellow-green round image visible in the reflective side panel",
+      "material_description": "reflected image with similar color and shape to the tennis ball",
+      "visible_properties": [
+        "reflected",
+        "round",
+        "yellow-green"
+      ],
+      "initial_motion_description": "not visible before the tennis ball appears; later shifts within the reflective panel",
+      "initial_integrity_description": "reflection remains visually continuous while visible",
+      "event_role_hints": [
+        "corresponds visually to the moving tennis ball"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "stands upright near the back-left area of the tabletop, close to the wall corner",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "stands upright farther right and farther back on the tabletop",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is positioned vertically along the right side of the scene and shows reflected objects",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The left black kettlebell is upright on the wooden tabletop near the wall corner."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The right black kettlebell is upright on the tabletop farther back and to the right."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A vertical reflective panel is visible along the right edge of the tabletop."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "No yellow-green ball is visible during the initial static portion."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A bright yellow-green ball first appears partially from the lower edge near the center of the image."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The ball becomes fully visible on the tabletop with curved seam markings."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The ball moves from the lower foreground area toward the left kettlebell."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "A yellow-green round reflection appears in the reflective panel on the right."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The ball is positioned directly in front of the lower body of the left kettlebell."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The ball remains in contact with or immediately adjacent to the front lower edge of the left kettlebell."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The left kettlebell does not visibly change position during or after the ball arrives."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The right kettlebell remains stationary throughout the ball movement."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed with no visible pan, tilt, or zoom."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The tabletop, wall corner, kettlebells, and reflective panel are visible and still.",
+        "The yellow-green ball is not yet visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "stationary upright on the tabletop"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "stationary upright on the tabletop"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "stationary reflective panel at the right side"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The yellow-green ball enters the visible frame from the lower edge.",
+        "The ball moves across the tabletop toward the left kettlebell.",
+        "A corresponding yellow-green round image appears in the reflective panel."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_6",
+          "observation": "enters from the lower edge and moves toward the left kettlebell"
+        },
+        {
+          "object_id": "obj_7",
+          "observation": "appears in the reflective panel and shifts as the ball moves"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The ball reaches the front lower side of the left kettlebell.",
+        "The ball stays at that location through the remaining frames.",
+        "Both kettlebells remain visibly unchanged."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_6",
+          "observation": "comes to rest against or immediately beside the front lower edge of the left kettlebell"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains stationary after the ball arrives"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains stationary"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact instant of contact between the ball and the kettlebell is partly obscured by overlapping silhouettes."
+  ]
+}

@@ -1,0 +1,366 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "shallow white dish",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "blue liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "medium",
+        "target"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e2",
+        "e8",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "white textured sheet",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e6",
+        "e7",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "orange-black overhead object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "deformation",
+      "type": "bending_deformation",
+      "raw_type": "flexible sheet bends and folds into a low arched shape while entering the liquid",
+      "participants": [
+        "obj_3",
+        "obj_2",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "sheet moves downward toward the dish before folding",
+        "participants": [
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6"
+        ]
+      },
+      {
+        "family": "contact_loading",
+        "type": "penetration",
+        "raw_type": "lower part of the sheet enters the blue liquid",
+        "participants": [
+          "obj_3",
+          "obj_2"
+        ],
+        "evidence_refs": [
+          "e6"
+        ]
+      },
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "blue liquid surface is disturbed near the entering sheet",
+        "participants": [
+          "obj_2",
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e8"
+        ]
+      },
+      {
+        "family": "relation_reconfiguration",
+        "type": "insertion",
+        "raw_type": "sheet changes from overhead position to being on or in the liquid within the dish",
+        "participants": [
+          "obj_3",
+          "obj_2",
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e3",
+          "e6",
+          "e10",
+          "e12"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "unknown",
+      "raw_action": "external intervention is not visible; the sheet begins descending from the cropped overhead area",
+      "actors": [],
+      "targets": [
+        "obj_3"
+      ],
+      "tools": [],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e13"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e14"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "impact_id": "impact_1",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "sheet changes from suspended and still to downward motion"
+      },
+      "evidence_refs": [
+        "e3",
+        "e5"
+      ]
+    },
+    {
+      "impact_id": "impact_2",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "sheet gains contact with the blue liquid"
+      },
+      "related_objects": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6"
+      ]
+    },
+    {
+      "impact_id": "impact_3",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "geometry",
+        "type": "bent",
+        "raw_transition": "sheet changes from a rectangular hanging form to a bent low arched shape"
+      },
+      "evidence_refs": [
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "impact_id": "impact_4",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "geometry",
+        "type": "flattened",
+        "raw_transition": "sheet settles mostly flat on or in the liquid with a small raised portion remaining"
+      },
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    {
+      "impact_id": "impact_5",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": "settling",
+        "raw_transition": "sheet motion decays into a mostly resting configuration in the dish"
+      },
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "impact_id": "impact_6",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "blue liquid surface changes from smooth to locally disturbed near the contacting sheet"
+      },
+      "related_objects": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e8"
+      ]
+    },
+    {
+      "impact_id": "impact_7",
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "blue liquid surface appears smoother again with the sheet visible at or under the surface"
+      },
+      "related_objects": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e10",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "mechanism_id": "mech_1",
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the sheet's downward motion and later settling into the dish",
+      "objects": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "mechanism_id": "mech_2",
+      "family": "mechanical_forcing",
+      "type": "sustained_pressure",
+      "raw_mechanism": "distributed contact forces from the liquid and dish act on the sheet as it enters, producing bending and collapse",
+      "objects": [
+        "obj_3",
+        "obj_2",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "mechanism_id": "mech_3",
+      "family": "mechanical_forcing",
+      "type": "drag",
+      "raw_mechanism": "liquid resistance opposes the sheet's motion through the blue liquid and contributes to the surface disturbance and settling",
+      "objects": [
+        "obj_3",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "mechanism_id": "mech_4",
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "the sheet's flexible material response allows visible bending and folding without visible fracture",
+      "objects": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ]
+    }
+  ]
+}

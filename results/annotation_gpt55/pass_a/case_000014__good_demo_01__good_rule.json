@@ -1,0 +1,251 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A knife blade cuts through a small orange citrus piece on a glass cutting board, separating it into two pieces.",
+  "raw_event_description": "A small orange citrus piece sits upright near the center of a textured transparent cutting board while a narrow metal knife blade is aligned through its middle. Over time the blade moves through the citrus piece, a central split becomes visible, and the right portion tips and moves to the right. By the end, two separate orange pieces are visible on opposite sides of the blade, with the left piece closer to the blade and the right piece farther to the right.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "onset",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The citrus piece, knife blade, and cutting board are visible.",
+      "The blade is already aligned with and touching or entering the citrus piece.",
+      "The camera view is unobstructed aside from the blade partially covering the fruit center."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "orange citrus piece",
+      "visible_form": "small upright orange fruit piece with peel around the outside and segmented orange interior",
+      "material_description": "orange peel exterior with glossy orange pulp and pale internal membranes visible",
+      "visible_properties": [
+        "orange",
+        "rounded wedge-like form",
+        "moist-looking interior",
+        "pale white membrane lines"
+      ],
+      "initial_motion_description": "stationary on the cutting board before visible separation",
+      "initial_integrity_description": "appears as one connected citrus piece around the blade at the start",
+      "event_role_hints": [
+        "object being cut",
+        "object later separates into two pieces"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "knife blade",
+      "visible_form": "thin vertical metal blade extending from the top edge of the frame down through the citrus piece",
+      "material_description": "reflective metallic surface with a narrow sharp-looking edge",
+      "visible_properties": [
+        "silver-gray",
+        "straight",
+        "thin",
+        "reflective"
+      ],
+      "initial_motion_description": "positioned vertically at the center of the citrus piece; visible blade position changes during the event",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "blade passes through citrus piece"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "cutting board",
+      "visible_form": "flat rectangular transparent or translucent board covering most of the frame",
+      "material_description": "textured clear surface with glossy wet-looking areas",
+      "visible_properties": [
+        "rectangular",
+        "transparent or translucent",
+        "textured",
+        "shiny patches"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supporting surface"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "tabletop",
+      "visible_form": "flat brown surface visible around and beneath the transparent board",
+      "material_description": "brown wood-like surface",
+      "visible_properties": [
+        "brown",
+        "flat",
+        "wood-grain-like appearance"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "background support surface"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on top of the cutting board near its center",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is vertically aligned through the center area of the citrus piece",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "lies on the brown tabletop",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A small orange citrus piece is upright near the center of the transparent cutting board."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A narrow metal blade is positioned vertically along the citrus piece's center."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The transparent cutting board is on a brown tabletop."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "Glossy wet-looking streaks and patches are visible on the cutting board surface."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A dark central split line is visible in the citrus piece along the blade."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The right side of the citrus piece begins to lean away from the blade toward the right."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The citrus piece is separated into two visible pieces."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The right citrus piece is positioned to the right of the blade."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The left citrus piece remains to the left of the blade."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The knife blade remains visible between the separated citrus pieces."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The citrus piece is upright on the cutting board.",
+        "The blade is aligned at the citrus piece's middle."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The citrus piece appears connected while the blade is at its center."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The blade is vertical and partly overlaps the citrus piece."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The cutting board remains stationary with wet-looking streaks visible."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The central split in the citrus piece becomes more apparent.",
+        "The right portion starts moving away from the central blade line."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The citrus piece visibly divides along the blade line."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The blade remains in contact with the central split region."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "Two separate citrus pieces are visible.",
+        "The pieces are on opposite sides of the blade."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The original citrus piece is now visible as a left piece and a right piece."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The blade remains between the two citrus pieces."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

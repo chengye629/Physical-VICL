@@ -1,0 +1,285 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "An orange ball hanging from a cord moves downward beside a wall and mirror until it reaches the tabletop and then remains nearly still.",
+  "raw_event_description": "The video shows an orange spherical hanging object with metal hardware above it, attached to an orange cord extending out of the top of the frame. It begins near the upper part of the view and steadily changes position downward while staying near the same horizontal location. A mirror on the right shows a reflected version of the hanging object making the same downward visual change. Dark soft shadows on the wall and tabletop shift lower as the object descends. Near the end, the orange ball reaches the tabletop, the lower edge of the ball becomes visually aligned with the table surface, and the hanging assembly remains nearly stationary.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The orange ball and metal hardware are visible, while the upper cord continues out of the top frame edge.",
+      "The tabletop, wall, and mirror are visible from the start.",
+      "The hanging object is already present near the upper part of the frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "orange hanging ball assembly",
+      "visible_form": "small orange spherical ball attached below shiny metal hardware and a looped connector, with an orange cord extending upward out of frame",
+      "material_description": "orange ball surface with visible seams or grooves; shiny silver-colored metal parts; thin orange cord",
+      "visible_properties": [
+        "orange",
+        "spherical lower part",
+        "shiny metal upper parts",
+        "thin cord",
+        "vertically hanging arrangement"
+      ],
+      "initial_motion_description": "at the beginning it is near the top of the frame and changes position downward over successive frames",
+      "initial_integrity_description": "the ball, metal hardware, connector loop, and cord appear intact and connected",
+      "event_role_hints": [
+        "main moving visible object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "tabletop",
+      "visible_form": "flat horizontal wooden surface occupying the lower part of the scene",
+      "material_description": "light brown wood-like surface with subtle grain lines",
+      "visible_properties": [
+        "flat",
+        "horizontal",
+        "light brown",
+        "wood-grain appearance"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears continuous and intact",
+      "event_role_hints": [
+        "surface approached by the hanging ball"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wall",
+      "visible_form": "plain vertical light gray wall behind the hanging object",
+      "material_description": "matte light gray surface",
+      "visible_properties": [
+        "vertical",
+        "light gray",
+        "matte",
+        "plain"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears continuous and intact",
+      "event_role_hints": [
+        "background receiving visible shadow"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "mirror panel",
+      "visible_form": "vertical reflective rectangular panel at the right side of the scene",
+      "material_description": "reflective surface showing the tabletop, wall, and the hanging object",
+      "visible_properties": [
+        "vertical",
+        "reflective",
+        "rectangular visible edge"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "shows reflected image of the hanging assembly"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "soft shadows",
+      "visible_form": "blurred dark patches visible on the wall and later lower near the tabletop",
+      "material_description": "darkened areas on visible surfaces with soft edges",
+      "visible_properties": [
+        "dark",
+        "blurred",
+        "soft-edged",
+        "position changes during the video"
+      ],
+      "initial_motion_description": "a blurred shadow patch is visible on the wall and shifts lower during the event",
+      "initial_integrity_description": "appears as continuous soft-edged dark patches",
+      "event_role_hints": [
+        "visible optical change accompanying the moving hanging object"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the hanging ball assembly is above the tabletop and in front of the wall",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the hanging ball assembly is positioned left of the mirror panel, and its reflected image is visible in the mirror",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "a soft dark shadow patch is visible on the wall left of the hanging ball assembly",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The orange ball assembly is visible above the wooden tabletop near the upper part of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A reflected image of the orange ball assembly is visible in the vertical mirror on the right."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A blurred dark patch is visible on the wall to the left of the hanging ball assembly."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "The orange ball assembly is lower than its earlier position while remaining near the same horizontal location."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "More of the orange cord is visible between the top frame edge and the metal connector than at the beginning."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The reflected image in the mirror appears lower than before."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The soft dark patch on the wall appears lower than its earlier position."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "late",
+      "observation": "The orange ball reaches the tabletop, with its lower edge visually meeting the wooden surface."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "After reaching the tabletop, the orange ball assembly remains nearly stationary."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The mirror continues to show the reflected ball assembly near the tabletop."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The camera view remains fixed with no visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The hanging ball assembly is high in the frame above the tabletop.",
+        "The mirror shows the hanging assembly's reflected image.",
+        "A soft shadow patch is visible on the wall."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The orange ball assembly is already visible and intact, hanging from the cord."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The mirror shows a reflected image of the hanging assembly."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The wall shadow is visible as a blurred dark patch."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The hanging ball assembly changes position downward.",
+        "The reflected image in the mirror changes position downward.",
+        "The wall shadow patch shifts lower."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The orange ball assembly descends while staying nearly vertically aligned with its earlier horizontal position."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The mirror displays the reflected image lower than before."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The soft dark wall patch shifts lower."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The orange ball is at the tabletop.",
+        "The hanging assembly remains nearly still after reaching the tabletop.",
+        "The mirror shows the reflected ball assembly near the tabletop."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The lower part of the orange ball visually meets the tabletop and then remains nearly stationary."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The mirror continues to show the reflected hanging assembly near the tabletop."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The point where the orange cord is attached above the frame is not visible.",
+    "The top of the cord remains outside the frame throughout the event."
+  ]
+}

@@ -1,0 +1,348 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small gray rounded object enters from the left on a tabletop, moves rightward, reverses direction before the black ring-shaped object, and exits left while other visible objects stay still.",
+  "raw_event_description": "The scene begins with a light wood tabletop, a black object with a vertical loop near the right side, a yellow duck-shaped object to its right, and a partial black cylindrical object at the left edge. For several moments nothing in the scene changes. A small gray rounded object then appears from the left edge of the table and moves rightward across the left half of the tabletop. It approaches the area left of the black looped object, remains visibly separated from it, then changes direction and moves back leftward. The gray object continues to the left edge and disappears from view. The black looped object, yellow duck, table, and partial black object at the left edge remain stationary throughout.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tabletop and stationary objects are visible at the start.",
+      "The later-moving gray object is not yet visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "table",
+      "visible_form": "large rectangular light-colored tabletop occupying most of the frame",
+      "material_description": "light wood-like surface with visible grain pattern",
+      "visible_properties": [
+        "flat top surface",
+        "rectangular outline",
+        "pale beige color"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact and continuous visible tabletop",
+      "event_role_hints": [
+        "surface on which the gray object moves"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black looped object",
+      "visible_form": "dark round base with a vertical curved loop or handle above it",
+      "material_description": "black matte-looking base and darker shiny curved loop",
+      "visible_properties": [
+        "upright",
+        "dark colored",
+        "cylindrical lower portion",
+        "arched upper loop"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "stationary object near the path of the gray object"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "yellow duck",
+      "visible_form": "small yellow duck-shaped figure with orange beak",
+      "material_description": "bright yellow smooth-looking surface with orange beak detail",
+      "visible_properties": [
+        "small",
+        "yellow",
+        "duck-shaped",
+        "upright"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "stationary reference object on the right side"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "gray rounded object",
+      "visible_form": "small gray rounded object, appearing ball-like or short cylinder-like due to blur",
+      "material_description": "smooth gray visible surface",
+      "visible_properties": [
+        "small",
+        "gray",
+        "rounded",
+        "motion blur during movement"
+      ],
+      "initial_motion_description": "not visible at the start; later enters moving from the left",
+      "initial_integrity_description": "appears as one intact small object when visible",
+      "event_role_hints": [
+        "main moving object"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "partial black cylinder",
+      "visible_form": "partly visible dark cylindrical object at the far left edge of the frame",
+      "material_description": "black smooth-looking visible surface",
+      "visible_properties": [
+        "partially cropped by frame edge",
+        "dark colored",
+        "cylindrical visible end"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "partially visible; no visible change",
+      "event_role_hints": [
+        "stationary object near left frame edge"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "sofa",
+      "visible_form": "yellow-green upholstered seating behind the table",
+      "material_description": "fabric-like or upholstered visible surface",
+      "visible_properties": [
+        "large background object",
+        "yellow-green color",
+        "cushioned panels"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact in the visible area",
+      "event_role_hints": [
+        "background reference"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is on the tabletop near the right side of the frame",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is on the tabletop to the right of the black looped object",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is partially visible at the far left edge near the tabletop",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "is behind the table in the background",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A black object with a round base and vertical curved loop stands on the right half of the tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A yellow duck-shaped object sits to the right of the black looped object."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A dark cylindrical object is partially visible at the far left edge of the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A yellow-green sofa is visible behind the table."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The tabletop is empty across the left and middle areas before the gray object appears."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A small gray rounded object appears at the left edge of the tabletop."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The gray rounded object moves rightward across the left half of the tabletop."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The gray rounded object is visibly blurred while moving."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The gray rounded object reaches a position left of the black looped object with visible space between them."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The gray rounded object changes from rightward movement to leftward movement."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The gray rounded object moves leftward toward the left edge of the tabletop."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The gray rounded object disappears out of the left side of the frame."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The black looped object remains in the same visible position throughout the video."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The yellow duck-shaped object remains in the same visible position throughout the video."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "continuous",
+      "observation": "The table and background sofa remain visually stationary throughout the video."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The scene is static before the moving gray object appears."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The table is stationary."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The black looped object stands still on the tabletop."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The yellow duck remains still to the right of the black looped object."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The gray rounded object is not visible."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The partial black cylinder remains still at the left edge."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The sofa remains still in the background."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The gray rounded object enters and travels across part of the tabletop."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The gray rounded object appears from the left, moves rightward, becomes visibly blurred during motion, reaches a position left of the black looped object, and then begins moving leftward."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The black looped object remains stationary while the gray object approaches the area to its left."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The yellow duck remains stationary."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e11",
+        "e12",
+        "e13",
+        "e14",
+        "e15"
+      ],
+      "observations": [
+        "The gray rounded object leaves the visible area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The gray rounded object moves leftward and exits the frame on the left."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The black looped object remains stationary."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The yellow duck remains stationary."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The table remains stationary."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The sofa remains stationary in the background."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e15"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact shape of the moving gray object is not fully distinguishable because of motion blur."
+  ]
+}

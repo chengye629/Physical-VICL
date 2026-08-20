@@ -1,0 +1,305 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A continuous orange liquid stream extends from a front tap into a clear glass, and the liquid level in the glass rises during the clip.",
+  "raw_event_description": "The scene shows a ribbed transparent beverage dispenser containing orange liquid on a woven stand, with a dark front tap above a clear drinking glass. At the start, a narrow orange stream is already visible from the tap into the glass, which contains a shallow amount of cloudy orange liquid. Through the clip, the stream remains continuous, the liquid surface in the glass rises, and small bubbles collect along the surface. The dispenser, stand, table, and background remain visually stationary.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tap, stream, glass, dispenser, and stand are all visible in the first frame.",
+      "The liquid stream is already present at the first frame.",
+      "The glass contents are visible through the transparent glass."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "beverage dispenser",
+      "visible_form": "large round ribbed transparent container with a front tap and orange liquid inside",
+      "material_description": "transparent glass-like ribbed upper container with visible orange liquid",
+      "visible_properties": [
+        "transparent upper wall",
+        "ribbed surface",
+        "orange liquid visible inside"
+      ],
+      "initial_motion_description": "no visible motion of the container",
+      "initial_integrity_description": "container appears intact with no visible cracks or breaks",
+      "event_role_hints": [
+        "visible container holding orange liquid above the glass"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "front tap",
+      "visible_form": "small dark tap protruding from the front of the dispenser with a short outlet",
+      "material_description": "dark reflective metal-like surface",
+      "visible_properties": [
+        "dark",
+        "reflective",
+        "mounted on dispenser front"
+      ],
+      "initial_motion_description": "no visible motion of the tap body or handle",
+      "initial_integrity_description": "tap appears intact and attached to the dispenser",
+      "event_role_hints": [
+        "upper end of the visible liquid stream is at the tap outlet"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "drinking glass",
+      "visible_form": "clear cylindrical drinking glass positioned below the tap",
+      "material_description": "transparent glass-like cup",
+      "visible_properties": [
+        "transparent",
+        "cylindrical",
+        "open top"
+      ],
+      "initial_motion_description": "no visible motion of the glass",
+      "initial_integrity_description": "glass appears intact with no visible cracks or breaks",
+      "event_role_hints": [
+        "receives the visible liquid stream"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "liquid stream",
+      "visible_form": "narrow continuous orange column extending from the tap outlet into the glass",
+      "material_description": "cloudy orange liquid",
+      "visible_properties": [
+        "narrow",
+        "continuous",
+        "orange",
+        "slightly translucent"
+      ],
+      "initial_motion_description": "stream is already present and visibly changing along its length",
+      "initial_integrity_description": "stream appears continuous from tap to glass at the start",
+      "event_role_hints": [
+        "visible moving liquid between tap and glass"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "liquid in glass",
+      "visible_form": "cloudy orange liquid collected inside the clear drinking glass",
+      "material_description": "cloudy orange liquid with small bright bubbles on the surface",
+      "visible_properties": [
+        "orange",
+        "cloudy",
+        "surface level visible",
+        "small bubbles visible"
+      ],
+      "initial_motion_description": "surface shows small disturbances and bubbles while the stream enters",
+      "initial_integrity_description": "liquid appears continuous as a collected volume in the lower part of the glass",
+      "event_role_hints": [
+        "visible amount increases during the clip"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "woven stand",
+      "visible_form": "round tan and brown woven stand beneath the dispenser",
+      "material_description": "woven fiber-like texture with tan and darker bands",
+      "visible_properties": [
+        "woven texture",
+        "round shape",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "stand appears intact",
+      "event_role_hints": [
+        "supports the visible dispenser"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "tabletop",
+      "visible_form": "flat wooden-looking tabletop under the glass and stand",
+      "material_description": "light brown wood-like surface",
+      "visible_properties": [
+        "flat",
+        "light brown",
+        "wood-grain appearance"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "surface appears intact",
+      "event_role_hints": [
+        "base surface for the glass and stand"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned on top of the woven stand",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is positioned below the front tap",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "extends between the tap outlet and the inside of the drinking glass",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is inside the drinking glass",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The ribbed transparent dispenser sits on a round woven stand."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The clear drinking glass is centered below the front tap."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "A narrow orange stream is visible from the tap outlet into the glass."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The glass initially contains a shallow amount of cloudy orange liquid near the bottom."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The visible liquid surface in the glass is higher than at the start."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "Small bubbles are visible on the liquid surface inside the glass."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "late",
+      "observation": "The liquid in the glass reaches around the middle portion of the glass height."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The stream remains visually continuous without a visible break."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "The dispenser, stand, glass, table, and background keep the same framing positions."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Orange liquid remains visible inside the dispenser behind the tap."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The setup is already arranged with the glass below the tap and the stream already present."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The liquid stream is already extending from the tap into the glass."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The collected liquid occupies only the lower part of the glass."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e6",
+        "e8"
+      ],
+      "observations": [
+        "The stream continues while the visible liquid level in the glass increases."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The stream remains narrow and continuous between the tap and the glass."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The liquid surface rises and shows small bubbles."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e10"
+      ],
+      "observations": [
+        "The glass contains more orange liquid than at the start, and the stream is still visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The stream is still present from the tap into the glass."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The collected liquid reaches around the middle portion of the glass height."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "Orange liquid remains visible inside the dispenser."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e9"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

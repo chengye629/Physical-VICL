@@ -1,0 +1,346 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A blue round object and a yellow round object move toward each other on a tabletop, touch near the middle, then move apart and become still at opposite sides.",
+  "raw_event_description": "The video begins with a light wooden tabletop visible and black cylindrical objects partly visible at the left and right edges. For several frames no colored moving objects are visible. A small blue round object then enters from the left side while a small yellow round object enters from the right side. The two colored objects travel toward each other across the tabletop, meet and touch near the central upper area, then separate. After separation the blue object moves back toward the left side and the yellow object moves toward the upper right area. Both colored objects remain visible and appear still near the end.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tabletop and two black edge objects are visible.",
+      "The blue and yellow moving objects are not yet visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "blue round object",
+      "visible_form": "small blue round object with a circular outline and a lighter curved marking or highlight",
+      "material_description": "blue opaque surface; no material type directly identifiable",
+      "visible_properties": [
+        "blue",
+        "small",
+        "round"
+      ],
+      "initial_motion_description": "not visible at the very beginning; later enters from the left and moves rightward",
+      "initial_integrity_description": "appears intact when first visible",
+      "event_role_hints": [
+        "one of the two moving colored objects"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "yellow round object",
+      "visible_form": "small yellow spherical object with a curved seam-like marking",
+      "material_description": "bright yellow opaque surface; seam-like line visible",
+      "visible_properties": [
+        "yellow",
+        "small",
+        "round"
+      ],
+      "initial_motion_description": "not visible at the very beginning; later enters from the right and moves leftward",
+      "initial_integrity_description": "appears intact when first visible",
+      "event_role_hints": [
+        "one of the two moving colored objects"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "tabletop",
+      "visible_form": "flat rectangular light wood-colored surface",
+      "material_description": "visible wood grain pattern and pale wooden color",
+      "visible_properties": [
+        "flat",
+        "light-colored",
+        "wood-grain pattern"
+      ],
+      "initial_motion_description": "stationary throughout the visible clip",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "surface on which the colored objects move"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "left black cylinder",
+      "visible_form": "partly visible black cylindrical object at the left edge",
+      "material_description": "black opaque surface",
+      "visible_properties": [
+        "black",
+        "cylindrical",
+        "partially visible"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_5",
+      "name": "right black cylinder",
+      "visible_form": "partly visible black cylindrical object at the right edge",
+      "material_description": "black opaque surface",
+      "visible_properties": [
+        "black",
+        "cylindrical",
+        "partially visible"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_6",
+      "name": "yellow-green background",
+      "visible_form": "vertical yellow-green background panel or wall behind the tabletop",
+      "material_description": "yellow-green opaque surface",
+      "visible_properties": [
+        "yellow-green",
+        "vertical",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is partly visible at the left edge of the tabletop view",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is partly visible at the right edge of the tabletop view",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is left of the yellow round object when both are first clearly visible",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e5"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is on the tabletop when visible",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is on the tabletop when visible",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A black cylindrical object is partly visible at the left edge of the frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A black cylindrical object is partly visible at the right edge of the frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The light wooden tabletop is visible with no colored moving objects on it."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "middle",
+      "observation": "A blue round object and a yellow round object are both visible on the tabletop."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The blue round object is to the left of the yellow round object."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The blue round object moves rightward from the left side."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The yellow round object moves leftward from the right side."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The blue round object and the yellow round object touch near the central upper area of the tabletop."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "After touching, the blue round object is seen moving leftward."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "After touching, the yellow round object is seen moving toward the upper right area."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "Near the end, the blue round object is near the left side of the tabletop and appears still."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "Near the end, the yellow round object is near the upper right area of the tabletop and appears still."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The black cylindrical objects at the left and right edges remain in the same visible positions."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The camera view remains fixed on the tabletop."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "observations": [
+        "The tabletop is visible before the colored objects appear."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The tabletop remains stationary in view."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The left black cylindrical object remains partly visible at the left edge."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The right black cylindrical object remains partly visible at the right edge."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "observations": [
+        "The two colored round objects enter the tabletop view from opposite sides and approach each other."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The blue round object enters from the left and moves rightward."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The yellow round object enters from the right and moves leftward."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e8"
+      ],
+      "observations": [
+        "The two colored round objects meet near the central upper area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The blue round object touches the yellow round object."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The yellow round object touches the blue round object."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The colored round objects separate and later appear still in different areas."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The blue round object moves leftward after the contact and later appears still near the left side."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The yellow round object moves toward the upper right area after the contact and later appears still there."
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e13"
+      ],
+      "observations": [
+        "The black edge objects do not visibly change position."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The left black cylindrical object remains stationary."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The right black cylindrical object remains stationary."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

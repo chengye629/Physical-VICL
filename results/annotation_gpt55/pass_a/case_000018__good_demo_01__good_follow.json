@@ -1,0 +1,367 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A Newton's-cradle-like set of suspended metal balls is seen with an outer ball moving back and forth while the opposite outer ball moves outward in alternating intervals.",
+  "raw_event_description": "The scene shows a metal-framed desktop cradle on a wooden table, with shiny suspended balls hanging over a black base and a blue-and-black scissors-like object lying to the left. At the beginning, the left outer ball is held or positioned to the left with its string angled, while four balls hang close together near the center-right. The left outer ball then moves inward toward the clustered balls. After visible contact among the balls, the right outer ball separates to the right and later returns. The outer balls continue alternating between outward positions and the central cluster, with the central balls mostly remaining close together. The camera view stays fixed throughout.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The suspended balls, frame, base, strings, tabletop, and left-side scissors-like object are visible.",
+      "The left outer ball is already displaced leftward before the repeated motion begins."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "cradle frame and base",
+      "visible_form": "rectangular chrome-colored frame with vertical side supports and a glossy black rectangular base",
+      "material_description": "shiny metallic-looking rods and a black reflective base",
+      "visible_properties": [
+        "upright",
+        "stationary",
+        "reflective"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact as a single supporting structure",
+      "event_role_hints": [
+        "supports the suspended balls"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left outer ball",
+      "visible_form": "small shiny spherical ball suspended by thin visible strings",
+      "material_description": "mirror-like metallic-looking surface",
+      "visible_properties": [
+        "reflective",
+        "suspended",
+        "initially offset leftward"
+      ],
+      "initial_motion_description": "initially appears still or nearly still at a leftward offset",
+      "initial_integrity_description": "appears intact and round",
+      "event_role_hints": [
+        "moves inward toward the other suspended balls",
+        "later appears near the left side again"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "middle suspended balls",
+      "visible_form": "three shiny spherical balls hanging close together near the center",
+      "material_description": "mirror-like metallic-looking surfaces",
+      "visible_properties": [
+        "reflective",
+        "suspended",
+        "clustered"
+      ],
+      "initial_motion_description": "no visible motion before the outer-ball movement",
+      "initial_integrity_description": "appear intact and round",
+      "event_role_hints": [
+        "remain close together during most of the observed motion"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "right outer ball",
+      "visible_form": "small shiny spherical ball suspended by thin visible strings at the right side of the ball row",
+      "material_description": "mirror-like metallic-looking surface",
+      "visible_properties": [
+        "reflective",
+        "suspended",
+        "moves outward to the right during the event"
+      ],
+      "initial_motion_description": "initially hangs close to the middle suspended balls",
+      "initial_integrity_description": "appears intact and round",
+      "event_role_hints": [
+        "separates rightward from the cluster during repeated intervals"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "thin suspension strings",
+      "visible_form": "multiple thin vertical or angled lines running from the top frame to the balls",
+      "material_description": "thin light-colored or translucent-looking lines",
+      "visible_properties": [
+        "thin",
+        "taut-looking",
+        "attached to balls"
+      ],
+      "initial_motion_description": "strings attached to the left outer ball are angled leftward; most other strings hang nearly vertical",
+      "initial_integrity_description": "appear continuous and unbroken",
+      "event_role_hints": [
+        "move with the suspended balls"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "scissors-like object",
+      "visible_form": "blue-and-black handled object lying on the table to the left of the cradle",
+      "material_description": "blue and black plastic-looking handles with darker body portions",
+      "visible_properties": [
+        "flat on tabletop",
+        "stationary",
+        "partly behind the cradle frame from the camera view"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_7",
+      "name": "wooden tabletop",
+      "visible_form": "flat tan wooden surface under the cradle and scissors-like object",
+      "material_description": "wood-grain surface",
+      "visible_properties": [
+        "flat",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears continuous",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "stands on the tabletop",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "hangs from the upper frame with its string angled leftward",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "hangs close together above the black base",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "hangs adjacent to the middle balls at the right side of the row",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "lies on the tabletop to the left of the cradle frame",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The metal frame and black base are stationary on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The left outer shiny ball is positioned left of the clustered balls with its suspension line angled."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Several shiny balls hang close together near the center-right above the black base."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The rightmost shiny ball initially appears adjacent to the central group."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A blue-and-black scissors-like object lies motionless to the left of the cradle."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The left outer ball moves rightward toward the clustered balls."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The left outer ball reaches the row of clustered balls."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The right outer ball separates from the row and is visible to the right of the other balls."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The right outer ball reaches a far-right outward position with its strings angled."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The right outer ball moves back leftward toward the clustered balls."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "middle",
+      "observation": "The left outer ball becomes visible offset leftward again after the right-side motion."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The central balls remain close together for most of the repeated motion."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The outer balls continue alternating between outward positions and positions near the central cluster."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed with no visible pan, tilt, or zoom."
+    },
+    {
+      "evidence_id": "e15",
+      "stage": "continuous",
+      "observation": "Reflections of the shiny balls are visible on the glossy black base."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e15"
+      ],
+      "observations": [
+        "The cradle is centered in the frame on a wooden tabletop.",
+        "The left outer ball is displaced to the left while the other balls are close together.",
+        "The scissors-like object remains on the left side of the scene."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "is visible left of the clustered balls with angled strings"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "hangs in a close cluster"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "hangs adjacent to the central cluster"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "lies motionless on the table"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The left outer ball moves inward and reaches the row.",
+        "A right outer ball then moves outward to the right and later returns toward the row.",
+        "The left outer ball later appears offset to the left again."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "moves between a leftward offset and the clustered row"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "mostly stays grouped near the center"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "moves between the clustered row and a rightward outward position"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "strings attached to the moving outer balls change angle as those balls move"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e12",
+        "e13",
+        "e14"
+      ],
+      "observations": [
+        "The alternating outward motion continues with the same fixed camera view.",
+        "The central balls remain visibly close together while the outer balls move."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "appears again on the left side during the repeated motion"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "appears again on the right side during the repeated motion"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary and intact"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "remains stationary"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The individual identities of the shiny balls are visually difficult to distinguish when they are touching or closely clustered."
+  ]
+}

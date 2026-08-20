@@ -1,0 +1,229 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "wooden tabletop",
+      "axes": {
+        "entity_kind": "surface_or_region",
+        "event_roles": [
+          "support"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "blue round object",
+      "axes": {
+        "entity_kind": "rigid_solid",
+        "event_roles": [
+          "target"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "unknown",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "wall",
+      "axes": {
+        "entity_kind": "surface_or_region",
+        "event_roles": [
+          "medium"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [
+          "rigid"
+        ],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "pale sheet or panel",
+      "axes": {
+        "entity_kind": "surface_or_region",
+        "event_roles": [
+          "medium"
+        ],
+        "material_phase": "solid",
+        "physical_properties": [],
+        "initial_motion_state": "stationary",
+        "initial_integrity_state": "intact"
+      },
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e7"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "blue round object translates rightward across the tabletop and out of frame",
+      "participants": {
+        "target": [
+          "obj_2"
+        ],
+        "support": [
+          "obj_1"
+        ],
+        "medium": [
+          "obj_3",
+          "obj_4"
+        ]
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "relation_reconfiguration",
+        "type": "support_change",
+        "raw_type": "blue object passes beyond the tabletop edge",
+        "participants": {
+          "target": [
+            "obj_2"
+          ],
+          "support": [
+            "obj_1"
+          ]
+        },
+        "evidence_refs": [
+          "e6",
+          "e7"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the blue object enters already moving",
+      "actor_object_ids": [],
+      "target_object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6",
+        "e7",
+        "e9",
+        "e10"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the blue object changes position rightward from the left side, across the tabletop, beyond the edge, and out of the frame"
+      },
+      "event_roles": {
+        "target": [
+          "obj_2"
+        ],
+        "support": [
+          "obj_1"
+        ],
+        "medium": [
+          "obj_3",
+          "obj_4"
+        ]
+      },
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e6",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "support_loss",
+        "raw_transition": "the blue object leaves the tabletop support after reaching the right edge"
+      },
+      "event_roles": {
+        "target": [
+          "obj_2"
+        ],
+        "support": [
+          "obj_1"
+        ]
+      },
+      "evidence_refs": [
+        "e6",
+        "e7"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "the cause of the rightward motion is not visible; the object continues moving after entering the frame",
+      "linked_process": "primary",
+      "object_ids": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4",
+        "e5"
+      ]
+    }
+  ]
+}

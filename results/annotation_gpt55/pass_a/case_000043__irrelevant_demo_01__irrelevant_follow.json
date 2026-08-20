@@ -1,0 +1,320 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A white textured sheet moves down into a shallow dish of blue liquid, folds over, and becomes mostly lying in the liquid.",
+  "raw_event_description": "The scene begins with a white shallow dish containing blue liquid on a wooden tabletop, while a white textured sheet is suspended above it from a partly visible orange-and-black holder. After an interval with little visible change, the sheet descends into the dish, contacts the blue liquid, stands partly upright, then bends and folds down across the liquid surface. The orange-and-black holder remains above the dish after the sheet separates from it. Later, most of the sheet appears flat and partly covered by the blue liquid, with only pale edges or corners still clearly visible.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "partial",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The dish and blue liquid are clearly visible.",
+      "The suspended white sheet is visible but its upper part is cropped by the top edge of the frame.",
+      "The orange-and-black holder is only partly visible near the top edge."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "white dish",
+      "visible_form": "shallow round dish or plate with raised rim",
+      "material_description": "white smooth glossy-looking surface",
+      "visible_properties": [
+        "round",
+        "shallow",
+        "raised rim",
+        "stationary on tabletop"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "contains the blue liquid",
+        "receives the descending sheet"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "blue liquid",
+      "visible_form": "shallow pool filling the central area of the dish",
+      "material_description": "light blue, smooth, glossy surface",
+      "visible_properties": [
+        "flat surface before contact",
+        "contained within dish"
+      ],
+      "initial_motion_description": "surface appears still before the sheet enters",
+      "initial_integrity_description": "continuous visible pool",
+      "event_role_hints": [
+        "is contacted by the white sheet",
+        "later covers parts of the sheet"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "white textured sheet",
+      "visible_form": "thin rectangular flexible sheet with visible patterned texture",
+      "material_description": "white fibrous or paper-like visual texture",
+      "visible_properties": [
+        "thin",
+        "rectangular",
+        "textured",
+        "flexes and folds during the event"
+      ],
+      "initial_motion_description": "initially suspended above the dish with little visible motion",
+      "initial_integrity_description": "appears intact as one sheet",
+      "event_role_hints": [
+        "starts above the liquid",
+        "moves into the liquid",
+        "changes shape after contact"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "orange-and-black holder",
+      "visible_form": "small elongated orange object with dark central area, partly cropped at the top",
+      "material_description": "orange and black smooth-looking surfaces",
+      "visible_properties": [
+        "partly cropped",
+        "above the dish",
+        "near the top of the sheet at the start"
+      ],
+      "initial_motion_description": "initially near the top of the suspended sheet",
+      "initial_integrity_description": "visible portion appears intact",
+      "event_role_hints": [
+        "initially adjacent to or holding the sheet",
+        "later remains above after the sheet is in the dish"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal table surface",
+      "material_description": "brown wood-grain visual texture",
+      "visible_properties": [
+        "flat",
+        "stationary",
+        "supports dish"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the dish during the event"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on the tabletop",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is inside the white dish",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is suspended above the dish and blue liquid",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is partly visible near the upper part of the sheet",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A white shallow dish sits on a wooden tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Light blue liquid fills the central area of the dish."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A white textured sheet hangs above the dish with its lower edge above the blue liquid."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A partly cropped orange-and-black holder is visible near the top of the suspended sheet."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The white textured sheet moves downward toward the dish."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The lower part of the sheet enters the blue liquid."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The sheet is partly upright in the dish after entering the liquid."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The orange-and-black holder is above the sheet and no longer visibly attached to it."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The sheet bends and folds downward across the blue liquid."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "Small surface disturbances are visible in the blue liquid near the sheet."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The sheet lies flatter across the liquid surface and inside the dish."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "Blue liquid visibly covers much of the sheet, leaving pale portions visible near the left side and a faint straight edge on the right."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "The dish remains in the same position on the tabletop."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "late",
+      "observation": "The orange-and-black holder remains suspended above the dish."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The dish, blue liquid, suspended sheet, and holder are visible before contact."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The dish remains stationary on the tabletop."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The blue liquid surface appears smooth and still."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The sheet hangs above the liquid."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The holder is partly visible near the sheet."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The main visible change occurs as the sheet enters the dish and changes shape."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The sheet moves downward into the blue liquid."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The sheet is briefly partly upright and then folds downward."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The blue liquid surface shows small disturbances around the sheet."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The holder remains above the dish after the sheet is in the liquid."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e11",
+        "e12",
+        "e13",
+        "e14"
+      ],
+      "observations": [
+        "The sheet becomes mostly flat and partly covered by blue liquid."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The sheet lies mostly within the dish and appears partly covered by the blue liquid."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The blue liquid surface appears smoother again with pale sheet portions visible beneath or at the surface."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The dish remains stationary."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The holder remains above the dish."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The upper part of the holder and sheet are cropped by the frame at the start."
+  ]
+}

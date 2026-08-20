@@ -1,0 +1,324 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "shallow white dish",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "container",
+        "support"
+      ],
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "blue liquid",
+      "entity_kind": "liquid_body",
+      "material_phase": "liquid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "event_roles": [
+        "medium",
+        "target"
+      ],
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "white textured sheet",
+      "entity_kind": "deformable_solid",
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "target"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "orange-and-black overhead object",
+      "entity_kind": "rigid_solid",
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [],
+      "evidence_refs": [
+        "e4",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "event_roles": [
+        "support"
+      ],
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "relation_reconfiguration",
+      "type": "insertion",
+      "raw_type": "flexible sheet enters the liquid-filled dish and becomes partly submerged",
+      "event_roles": {
+        "target": [
+          "obj_3"
+        ],
+        "medium": [
+          "obj_2"
+        ],
+        "container": [
+          "obj_1"
+        ],
+        "support": [
+          "obj_5"
+        ]
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "deformation",
+        "type": "bending_deformation",
+        "raw_type": "sheet bends and folds while entering the liquid",
+        "event_roles": {
+          "target": [
+            "obj_3"
+          ],
+          "medium": [
+            "obj_2"
+          ]
+        },
+        "evidence_refs": [
+          "e8",
+          "e9"
+        ]
+      },
+      {
+        "family": "fluid_motion",
+        "type": "free_surface_motion",
+        "raw_type": "blue liquid surface is disturbed around the entering sheet",
+        "event_roles": {
+          "target": [
+            "obj_2"
+          ],
+          "medium": [
+            "obj_2"
+          ]
+        },
+        "evidence_refs": [
+          "e7"
+        ]
+      }
+    ],
+    "action": {
+      "family": "release",
+      "type": "drop",
+      "raw_action": "sheet drops from a hanging position toward the dish; no actor is visible",
+      "actor_ids": [],
+      "target_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e5"
+      ]
+    },
+    "temporal": {
+      "process_scope": "scene_physics",
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_3",
+      "transitions": [
+        {
+          "axis": "motion",
+          "type": "motion_onset",
+          "raw_transition": "nearly still hanging sheet begins moving downward",
+          "evidence_refs": [
+            "e3",
+            "e5"
+          ]
+        },
+        {
+          "axis": "relation",
+          "type": "contact_gain",
+          "raw_transition": "lower part of the sheet gains contact with the blue liquid",
+          "evidence_refs": [
+            "e6"
+          ]
+        },
+        {
+          "axis": "relation",
+          "type": "containment_gain",
+          "raw_transition": "sheet becomes partly contained and submerged in the liquid-filled dish",
+          "evidence_refs": [
+            "e9",
+            "e10",
+            "e11",
+            "e12"
+          ]
+        },
+        {
+          "axis": "geometry",
+          "type": "bent",
+          "raw_transition": "sheet bends into a tent-like folded shape",
+          "evidence_refs": [
+            "e8"
+          ]
+        },
+        {
+          "axis": "geometry",
+          "type": "flattened",
+          "raw_transition": "sheet lowers and lies flatter across the liquid surface",
+          "evidence_refs": [
+            "e9"
+          ]
+        },
+        {
+          "axis": "optical_visibility",
+          "type": "visibility_decrease",
+          "raw_transition": "visible white portions of the sheet decrease until only a small patch and faint outlines remain",
+          "evidence_refs": [
+            "e10",
+            "e11",
+            "e12"
+          ]
+        }
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transitions": [
+        {
+          "axis": "emission_transport",
+          "type": "free_surface_change",
+          "raw_transition": "liquid free surface becomes visibly disturbed around the entering sheet",
+          "evidence_refs": [
+            "e7"
+          ]
+        },
+        {
+          "axis": "motion",
+          "type": "settling",
+          "raw_transition": "disturbed liquid surface later appears smooth again with faint sheet outlines visible",
+          "evidence_refs": [
+            "e12"
+          ]
+        }
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "gravity drives the released sheet downward toward the dish and liquid",
+      "object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "drag",
+      "raw_mechanism": "liquid resistance acts on the entering sheet and contributes to surface disturbance and folding",
+      "object_ids": [
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "the thin flexible sheet responds to contact with the liquid by bending and folding rather than remaining shape-preserving",
+      "object_ids": [
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "family": "optical_electromagnetic",
+      "type": "light_transmission",
+      "raw_mechanism": "partial light transmission through the blue liquid leaves only small white areas and faint sheet outlines visible",
+      "object_ids": [
+        "obj_2",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ]
+    }
+  ]
+}

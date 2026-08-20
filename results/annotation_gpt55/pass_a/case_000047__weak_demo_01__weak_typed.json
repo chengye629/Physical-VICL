@@ -1,0 +1,303 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small crumpled object on a rectangular glass plate continuously shows blue luminous flames and a pale smoke plume rising above it.",
+  "raw_event_description": "The video begins with a small crumpled silver-white object already positioned near the center of a textured rectangular glass plate on a wooden tabletop. Thin blue luminous flame shapes and pale gray-white smoke are already rising from the object. Across the sequence the plate and tabletop remain fixed, while the flame shapes flicker and shift around the object and the smoke column wavers upward, becoming thicker and more diffuse in some moments. The crumpled object remains in roughly the same location, with bright glowing highlights visible near its lower right area.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The central object, glass plate, tabletop, blue flame shapes, and smoke plume are visible from the first frame.",
+      "The visible event is already underway at the start."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "rectangular glass plate",
+      "visible_form": "flat rectangular pane with greenish edges and a textured or frosted surface",
+      "material_description": "transparent or translucent glass-like sheet with reflective highlights",
+      "visible_properties": [
+        "rectangular",
+        "flat",
+        "green-edged",
+        "textured surface"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "intact rectangular sheet",
+      "event_role_hints": [
+        "supports the central crumpled object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "crumpled central object",
+      "visible_form": "small irregular crumpled piece or cluster",
+      "material_description": "silver-white, shiny, reflective, sheet-like visible surfaces with some darkened areas",
+      "visible_properties": [
+        "small",
+        "irregular",
+        "crumpled",
+        "reflective",
+        "partly bright"
+      ],
+      "initial_motion_description": "stationary relative to the glass plate",
+      "initial_integrity_description": "irregular crumpled mass already present",
+      "event_role_hints": [
+        "source region for visible flame and smoke"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "blue flame shapes",
+      "visible_form": "thin vertical and curved luminous blue shapes around and above the crumpled object",
+      "material_description": "glowing translucent blue-white light regions",
+      "visible_properties": [
+        "blue",
+        "luminous",
+        "thin",
+        "flickering",
+        "translucent"
+      ],
+      "initial_motion_description": "already flickering and extending upward",
+      "initial_integrity_description": "non-solid changing luminous forms",
+      "event_role_hints": [
+        "visible emission near the central object"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "smoke plume",
+      "visible_form": "pale gray-white translucent plume rising above the crumpled object",
+      "material_description": "semi-transparent vapor-like visible column",
+      "visible_properties": [
+        "pale gray",
+        "white",
+        "translucent",
+        "wispy",
+        "diffuse"
+      ],
+      "initial_motion_description": "already rising and wavering upward",
+      "initial_integrity_description": "diffuse plume with changing edges",
+      "event_role_hints": [
+        "visible emission above the central object"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "wooden tabletop",
+      "visible_form": "flat brown surface under the glass plate",
+      "material_description": "wood-grain patterned surface",
+      "visible_properties": [
+        "brown",
+        "flat",
+        "wood-grain pattern"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "continuous tabletop surface visible around the plate",
+      "event_role_hints": [
+        "background support surface"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "rests near the center of the rectangular glass plate",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is visible immediately around and above the crumpled object",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "extends upward from the region of the crumpled object",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "lies flat on the wooden tabletop",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A small crumpled silver-white object is visible near the center of the rectangular glass plate."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Thin blue luminous shapes extend upward from the central object area."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A pale translucent plume is visible above the central object."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The rectangular glass plate lies flat on a brown wooden tabletop."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "continuous",
+      "observation": "The central crumpled object remains in approximately the same position on the plate."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The blue luminous flame shapes change width and curvature from frame to frame."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The smoke plume rises upward and wavers sideways."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The smoke plume appears taller and more diffuse above the flame region."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "continuous",
+      "observation": "Bright yellow-white highlights are visible near the lower right side of the crumpled object."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The flame remains visible as narrow blue streaks near and above the crumpled object."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The smoke continues upward as a pale wispy column."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The glass plate and tabletop show no visible displacement."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The event is already underway at the beginning."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The crumpled object is stationary near the center of the plate."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Blue luminous flame shapes are already present around and above the crumpled object."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "A pale smoke plume is already extending upward."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The visible event continues without a scene cut."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The crumpled object remains in place with bright highlights near one side."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The flame forms flicker and change shape."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The smoke plume rises and spreads into a more diffuse shape above the object."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The same central arrangement remains visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The glass plate remains flat and stationary."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The crumpled object remains at the center area of the plate."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Narrow blue flame streaks remain visible."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The pale smoke continues moving upward."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The full beginning before the visible flame and smoke is not shown.",
+    "The exact identity of the crumpled central object is not visually determined."
+  ]
+}

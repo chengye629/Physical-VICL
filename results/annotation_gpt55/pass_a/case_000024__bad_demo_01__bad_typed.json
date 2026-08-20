@@ -1,0 +1,324 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "An orange liquid stream runs from a spigot into a clear glass, and the liquid level in the glass rises.",
+  "raw_event_description": "The video begins with a ribbed glass beverage dispenser on a woven stand and a clear drinking glass positioned below its spigot. An orange liquid stream is already extending from the spigot into the glass. Over the video, the collected orange liquid in the glass rises from a low level to a much higher level, with small bubbles and a pale foamy band visible near the surface. The dispenser, stand, glass, and table remain in the same visible positions.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The dispenser, spigot, liquid stream, and receiving glass are visible at the start.",
+      "The stream is already present in the first frame.",
+      "The glass contains a small amount of liquid at the start."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "beverage dispenser",
+      "visible_form": "large ribbed transparent container with rounded body",
+      "material_description": "transparent glossy surface with vertical ridges; orange liquid visible inside",
+      "visible_properties": [
+        "transparent upper container",
+        "ribbed texture",
+        "contains orange liquid"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "visible source container above the receiving glass"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "spigot",
+      "visible_form": "small dark tap fixture attached to the lower front of the dispenser",
+      "material_description": "dark glossy and reflective surface with a small outlet",
+      "visible_properties": [
+        "mounted on dispenser front",
+        "outlet aligned over the glass"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "orange liquid stream is visible below it"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "drinking glass",
+      "visible_form": "clear cylindrical glass with open top",
+      "material_description": "transparent glossy glass with reflective highlights",
+      "visible_properties": [
+        "transparent",
+        "upright",
+        "open top",
+        "partly filled at start"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "receives the visible liquid stream"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "orange liquid stream",
+      "visible_form": "narrow continuous vertical stream between spigot and glass",
+      "material_description": "orange translucent liquid appearance",
+      "visible_properties": [
+        "continuous stream",
+        "narrow column",
+        "orange color"
+      ],
+      "initial_motion_description": "moving downward from the spigot into the glass",
+      "initial_integrity_description": "continuous from spigot to inside the glass",
+      "event_role_hints": [
+        "connects spigot outlet to liquid in the glass"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "collected liquid",
+      "visible_form": "orange liquid volume inside the drinking glass",
+      "material_description": "orange cloudy or translucent liquid with visible small bubbles and pale foam",
+      "visible_properties": [
+        "orange color",
+        "liquid surface visible",
+        "small bubbles",
+        "foamy band near surface"
+      ],
+      "initial_motion_description": "surface and bubbles show small visible agitation while the stream enters",
+      "initial_integrity_description": "contained within the glass",
+      "event_role_hints": [
+        "visible level increases over time"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "woven stand",
+      "visible_form": "round woven platform or basket-like support behind and under the dispenser",
+      "material_description": "tan and brown woven strips with multicolored bands",
+      "visible_properties": [
+        "woven texture",
+        "round shape",
+        "supports dispenser"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the dispenser"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "wooden tabletop",
+      "visible_form": "flat rectangular table surface",
+      "material_description": "light brown wood-like surface with visible grain",
+      "visible_properties": [
+        "flat surface",
+        "light brown color",
+        "visible grain"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the glass and stand"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned on top of the woven stand",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is attached to the front lower area of the dispenser",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is placed below the spigot outlet",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "extends from the spigot outlet into the drinking glass",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "stands on the wooden tabletop",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The ribbed transparent dispenser is resting on a round woven stand."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A dark spigot is mounted on the lower front of the dispenser."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A clear upright glass is centered below the spigot."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A narrow orange stream is visible between the spigot and the inside of the glass."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The receiving glass stands on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "early",
+      "observation": "The glass contains a shallow amount of orange liquid at the start."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The orange liquid level in the glass is higher than at the start."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "Small bubbles are visible in the liquid inside the glass."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "A pale foamy band is visible near the liquid surface inside the glass."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The orange liquid level in the glass is near the upper half of the glass."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The stream remains visible from the spigot into the glass."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The dispenser, stand, drinking glass, and tabletop remain fixed in their visible positions."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The framing remains centered on the dispenser, spigot, and glass without a visible scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The scene begins with the stream already present and the glass partly filled."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The orange stream extends from the spigot into the glass."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The collected liquid occupies a low portion of the glass."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The glass contains more orange liquid than earlier, and bubbles and foam are visible near the surface."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "The visible liquid surface rises inside the glass."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "Small bubbles and a pale foamy band appear near the surface."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The glass is filled to a higher level while the stream remains visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The stream continues to connect the spigot area to the liquid inside the glass."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The collected orange liquid occupies much more of the glass than at the start."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

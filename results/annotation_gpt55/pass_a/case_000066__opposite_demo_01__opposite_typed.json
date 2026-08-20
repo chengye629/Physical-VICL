@@ -1,0 +1,308 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small gray object enters from the left, moves across the tabletop toward the center-right area, then turns back left and exits the frame.",
+  "raw_event_description": "The video begins with a light wood tabletop holding a black object with a shiny curved handle near the right side, a yellow duck-shaped toy to its right, and a partially visible black cylindrical object at the far left edge. After a still interval, a small gray rounded object appears from the left side of the tabletop, moves rightward with visible blur, passes in front of the black handled object without visibly contacting it, then changes direction and moves back leftward until it leaves the frame at the left edge. The other visible objects remain in place.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The tabletop and stationary objects are visible before the moving gray object appears.",
+      "The black handled object and yellow duck-shaped toy are clearly visible.",
+      "The later moving gray object is not yet visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "tabletop",
+      "visible_form": "large flat rectangular light-colored wooden surface",
+      "material_description": "visible pale wood grain pattern",
+      "visible_properties": [
+        "flat upper surface",
+        "light wood tone",
+        "horizontal orientation in frame"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "surface on which the small gray object moves"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black handled object",
+      "visible_form": "dark round base with a shiny curved upright loop or handle",
+      "material_description": "black matte-looking base and shiny dark metallic-looking handle",
+      "visible_properties": [
+        "upright",
+        "near right half of tabletop",
+        "larger than the gray moving object"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "stationary object near the gray object's path"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "yellow duck toy",
+      "visible_form": "small duck-shaped figure with rounded body and head",
+      "material_description": "bright yellow surface with orange beak and dark eye markings",
+      "visible_properties": [
+        "small",
+        "bright yellow",
+        "positioned to the right of the black handled object"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "stationary reference object"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "small gray object",
+      "visible_form": "small rounded gray object, appearing roughly cylindrical or cap-like in some frames",
+      "material_description": "smooth gray surface",
+      "visible_properties": [
+        "small",
+        "gray",
+        "rounded outline",
+        "motion blur while moving"
+      ],
+      "initial_motion_description": "not visible at the start; later enters from the left while moving",
+      "initial_integrity_description": "appears intact when visible",
+      "event_role_hints": [
+        "main moving object"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "left black cylinder",
+      "visible_form": "partially visible black cylindrical object at the far left edge",
+      "material_description": "dark black surface",
+      "visible_properties": [
+        "partly outside frame",
+        "cylindrical visible end"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "partially visible, no visible damage",
+      "event_role_hints": [
+        "stationary edge object"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "sofa",
+      "visible_form": "upholstered backrest behind the table",
+      "material_description": "yellow-green fabric-like visible surface",
+      "visible_properties": [
+        "background object",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "background reference"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "rests on or stands on the tabletop near the right half of the frame",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "sits on the tabletop to the right of the black handled object",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is partially visible at the far left edge of the frame near the tabletop",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A black object with a shiny curved handle is stationary on the right half of the tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A yellow duck-shaped toy is stationary on the tabletop to the right of the black handled object."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A black cylindrical object is partially visible at the far left edge."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The small gray object is not visible during the initial still portion."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A small gray object appears from the left side of the frame on the tabletop."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The small gray object moves rightward across the tabletop with visible blur."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The small gray object reaches an area in front-left of the black handled object."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "No visible contact occurs between the gray object and the black handled object."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The small gray object changes its path from rightward motion to leftward motion."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The small gray object moves leftward across the tabletop."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The small gray object exits the frame at the left edge."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The black handled object remains stationary throughout the visible event."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The yellow duck-shaped toy remains stationary throughout the visible event."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The camera view remains fixed with no visible pan, tilt, or zoom."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The tabletop scene is still before the moving gray object appears."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The black handled object is stationary on the tabletop."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The yellow duck-shaped toy is stationary on the tabletop."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The small gray object is not yet visible."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The small gray object enters and travels across the tabletop near the stationary objects."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The small gray object appears from the left, moves rightward, approaches the area in front-left of the black handled object, and then changes to leftward motion."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The black handled object shows no visible displacement while the gray object passes nearby."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The yellow duck-shaped toy shows no visible displacement."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12",
+        "e13"
+      ],
+      "observations": [
+        "The small gray object leaves the scene while the other objects remain in place."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The small gray object moves leftward and exits at the left edge of the frame."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The black handled object remains stationary."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The yellow duck-shaped toy remains stationary."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

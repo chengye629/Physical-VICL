@@ -1,0 +1,282 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A crumpled paper piece is released from an overhead gripper, moves downward into a clear liquid-filled bowl, and remains in the bowl as the liquid surface ripples.",
+  "raw_event_description": "At the start, a black-and-orange overhead gripper holds a crumpled white paper piece above a transparent bowl containing clear liquid on a wooden table. The gripper opens and the paper separates from it, moving downward into the bowl. The paper contacts the liquid, visible splashing and surface ripples appear, and then the paper remains near the center of the bowl while the liquid surface continues to show smaller ripples.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The gripper, crumpled paper, bowl, liquid, and tabletop are visible before the main motion begins.",
+      "The paper is visibly positioned above the bowl and held between the gripper arms."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "overhead gripper",
+      "visible_form": "black vertical handle with two curved orange-and-black jaws",
+      "material_description": "smooth dark and orange surfaces; material not otherwise identifiable from appearance",
+      "visible_properties": [
+        "suspended above bowl",
+        "two-pronged jaw shape",
+        "opens during event"
+      ],
+      "initial_motion_description": "appears stationary before the paper separates",
+      "initial_integrity_description": "appears intact as one gripper assembly",
+      "event_role_hints": [
+        "initially holds the crumpled paper",
+        "later appears open and empty"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "crumpled paper",
+      "visible_form": "small irregular crumpled white and gray piece",
+      "material_description": "wrinkled paper-like surface with printed or gray markings",
+      "visible_properties": [
+        "irregular crumpled shape",
+        "light colored",
+        "small relative to bowl"
+      ],
+      "initial_motion_description": "appears stationary while held in the gripper",
+      "initial_integrity_description": "appears as a single crumpled piece before release",
+      "event_role_hints": [
+        "separates from gripper",
+        "enters bowl"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "bowl",
+      "visible_form": "round transparent bowl with raised rim and curved sides",
+      "material_description": "clear transparent surface with bright reflections",
+      "visible_properties": [
+        "open top",
+        "transparent",
+        "stationary on tabletop"
+      ],
+      "initial_motion_description": "stationary throughout visible sequence",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "contains clear liquid",
+        "receives the crumpled paper"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "clear liquid",
+      "visible_form": "transparent liquid volume inside the bowl with visible surface line and reflections",
+      "material_description": "clear, transparent, reflective liquid appearance",
+      "visible_properties": [
+        "fills lower portion of bowl",
+        "surface becomes disturbed after paper enters"
+      ],
+      "initial_motion_description": "surface appears mostly still before paper enters",
+      "initial_integrity_description": "continuous visible liquid surface",
+      "event_role_hints": [
+        "shows splash and ripples when paper enters"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "table",
+      "visible_form": "flat wooden tabletop",
+      "material_description": "light brown wood-like surface with grain pattern",
+      "visible_properties": [
+        "horizontal support surface",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the bowl"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is held between the jaws of the overhead gripper",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is positioned above the open top of the bowl",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "rests on the wooden tabletop",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is contained inside the transparent bowl",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The crumpled paper is visibly between the two orange gripper jaws."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The crumpled paper is vertically above the bowl opening."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The transparent bowl is positioned on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "Clear liquid is visible inside the bowl."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The gripper jaws are open and the crumpled paper is no longer between them."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The crumpled paper appears blurred below the gripper and above the bowl."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The crumpled paper contacts the liquid inside the bowl."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "A raised splash and disturbed liquid surface are visible around the paper."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The crumpled paper remains near the center of the bowl."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Ripples are visible on the liquid surface after the paper enters."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The gripper remains open above the bowl."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene is set with the paper held above the liquid-filled bowl."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The gripper holds the crumpled paper above the bowl."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The crumpled paper remains stationary relative to the gripper."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The liquid surface appears mostly smooth."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The paper separates from the gripper and enters the bowl."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The gripper jaws are open with no paper between them."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The crumpled paper moves downward from the gripper into the bowl."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The liquid surface becomes disturbed with a visible splash."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The paper remains in the bowl while surface motion decreases."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The crumpled paper stays near the center area of the bowl."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Smaller ripples remain visible on the liquid surface."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The gripper stays open above the bowl."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

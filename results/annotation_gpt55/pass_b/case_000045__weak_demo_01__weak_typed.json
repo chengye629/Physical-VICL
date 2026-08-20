@@ -1,0 +1,341 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "overhead gripper",
+      "entity_kind": "articulated_object",
+      "event_roles": [
+        "actor",
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "crumpled paper",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "deformed",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e6",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "bowl",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "clear liquid",
+      "entity_kind": "liquid_body",
+      "event_roles": [
+        "target",
+        "medium"
+      ],
+      "material_phase": "liquid",
+      "physical_properties": [
+        "transparent",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e7",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "table",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "free_fall",
+      "raw_type": "crumpled paper released from gripper and moving downward into bowl",
+      "participants": [
+        {
+          "object_id": "obj_2",
+          "role": "target"
+        },
+        {
+          "object_id": "obj_1",
+          "role": "source"
+        },
+        {
+          "object_id": "obj_3",
+          "role": "container"
+        },
+        {
+          "object_id": "obj_4",
+          "role": "medium"
+        }
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "fluid_motion",
+        "type": "splashing",
+        "raw_type": "liquid splash and surface ripples after paper entry",
+        "participants": [
+          {
+            "object_id": "obj_4",
+            "role": "target"
+          },
+          {
+            "object_id": "obj_2",
+            "role": "target"
+          },
+          {
+            "object_id": "obj_3",
+            "role": "container"
+          }
+        ],
+        "evidence_refs": [
+          "e7",
+          "e8",
+          "e10"
+        ]
+      },
+      {
+        "family": "relation_reconfiguration",
+        "type": "insertion",
+        "raw_type": "paper enters and remains inside the bowl",
+        "participants": [
+          {
+            "object_id": "obj_2",
+            "role": "target"
+          },
+          {
+            "object_id": "obj_3",
+            "role": "container"
+          },
+          {
+            "object_id": "obj_4",
+            "role": "medium"
+          }
+        ],
+        "evidence_refs": [
+          "e7",
+          "e9"
+        ]
+      }
+    ],
+    "action": {
+      "family": "release",
+      "type": "drop",
+      "raw_action": "gripper opens and drops the crumpled paper",
+      "actor_object_id": "obj_1",
+      "target_object_id": "obj_2",
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "support_loss",
+        "raw_transition": "crumpled paper changes from being held by the gripper to no longer being between the gripper jaws"
+      },
+      "evidence_refs": [
+        "e1",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "crumpled paper changes from stationary while held to moving downward below the gripper"
+      },
+      "evidence_refs": [
+        "e1",
+        "e6"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "relation",
+        "type": "containment_gain",
+        "raw_transition": "crumpled paper enters the bowl and remains near the center area inside it"
+      },
+      "evidence_refs": [
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "free_surface_change",
+        "raw_transition": "liquid surface changes from mostly smooth to disturbed with a raised splash and ripples"
+      },
+      "evidence_refs": [
+        "e4",
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": "settling",
+        "raw_transition": "liquid surface motion changes from splash disturbance to smaller remaining ripples"
+      },
+      "evidence_refs": [
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_loss",
+        "raw_transition": "gripper jaws open and no longer contact or hold the paper"
+      },
+      "evidence_refs": [
+        "e1",
+        "e5",
+        "e11"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "after support is removed, gravity drives the paper's downward motion",
+      "linked_processes": [
+        "primary"
+      ],
+      "linked_objects": [
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "paper contact with the liquid transfers momentum and disturbs the liquid surface",
+      "linked_processes": [
+        "secondary"
+      ],
+      "linked_objects": [
+        "obj_2",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "surface_tension",
+      "raw_mechanism": "the liquid free surface responds to disturbance by forming splash features and ripples",
+      "linked_processes": [
+        "secondary"
+      ],
+      "linked_objects": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e10"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": "viscosity",
+      "raw_mechanism": "internal liquid resistance damps the surface disturbance into smaller ripples",
+      "linked_processes": [
+        "secondary"
+      ],
+      "linked_objects": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ]
+}

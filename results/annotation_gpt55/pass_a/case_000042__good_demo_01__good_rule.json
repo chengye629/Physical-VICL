@@ -1,0 +1,304 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A yellow handled cup starts suspended above a gray block, moves downward, strikes the block, breaks apart, and its pieces scatter onto the floor.",
+  "raw_event_description": "At the start, a yellow cup with a handle hangs near the upper center from a blue hanging element, above a gray rectangular block placed on a slatted floor in front of a white backdrop. The cup remains nearly still for many frames. It then moves downward from the hanging point toward the block. On contact with the block, the yellow cup visibly separates into multiple pieces, including larger curved yellow pieces and smaller light fragments. Pieces move away from the block, with a large yellow piece traveling to the lower left and smaller pieces landing around the block and to the right. The block and backdrop remain in place after the impact.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The suspended yellow cup, gray block, floor, and backdrop are visible before the main event.",
+      "The cup is visible above the block with no fragmentation at the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow cup",
+      "visible_form": "small yellow cylindrical cup or mug with a handle-like loop on one side",
+      "material_description": "smooth yellow exterior with lighter inner surfaces visible after breakage",
+      "visible_properties": [
+        "yellow",
+        "cylindrical",
+        "handled",
+        "hollow"
+      ],
+      "initial_motion_description": "nearly stationary while hanging near the upper center of the frame",
+      "initial_integrity_description": "appears intact before descending",
+      "event_role_hints": [
+        "moving object",
+        "object that fragments during the event"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "blue hanging element",
+      "visible_form": "narrow blue vertical strap or cord extending down from the top edge",
+      "material_description": "blue flexible-looking strip or cord, directly visible only near the top center",
+      "visible_properties": [
+        "blue",
+        "vertical",
+        "narrow"
+      ],
+      "initial_motion_description": "stationary at the top center",
+      "initial_integrity_description": "appears continuous and intact in the visible portion",
+      "event_role_hints": [
+        "initially adjacent to or connected with the yellow cup"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "gray block",
+      "visible_form": "rectangular gray block with rough texture, placed horizontally on the floor",
+      "material_description": "gray rough-surfaced solid-looking block",
+      "visible_properties": [
+        "gray",
+        "rectangular",
+        "rough-textured",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary throughout the visible sequence",
+      "initial_integrity_description": "appears intact before and after the cup breaks",
+      "event_role_hints": [
+        "stationary object contacted by the yellow cup"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "slatted floor",
+      "visible_form": "brownish floor with long parallel slats and dark grooves",
+      "material_description": "wood-like or composite slatted surface with visible texture and grooves",
+      "visible_properties": [
+        "flat",
+        "slatted",
+        "brownish"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "unchanged during the event",
+      "event_role_hints": [
+        "surface where fragments come to rest"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "white backdrop",
+      "visible_form": "large pale vertical background panel or sheet behind the objects",
+      "material_description": "smooth light-colored surface",
+      "visible_properties": [
+        "white",
+        "vertical",
+        "large"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "unchanged during the event",
+      "event_role_hints": [
+        "background for the event"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "yellow and light fragments",
+      "visible_form": "multiple broken curved yellow pieces and small light-colored pieces appearing after impact",
+      "material_description": "yellow outer surfaces and light inner surfaces matching the broken cup pieces",
+      "visible_properties": [
+        "fragmented",
+        "irregular shapes",
+        "yellow and light-colored"
+      ],
+      "initial_motion_description": "not visible as separate pieces before the cup breaks",
+      "initial_integrity_description": "appear only after obj_1 separates into pieces",
+      "event_role_hints": [
+        "post-impact pieces from the yellow cup"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is suspended below or adjacent to the visible blue hanging element",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned above the gray block with a visible vertical gap",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "rests on the slatted floor",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The intact yellow cup is visible near the upper center directly below a blue vertical hanging element."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The yellow cup is above the gray rectangular block with clear space between them."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The gray rectangular block is on the slatted floor near the lower center of the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The yellow cup remains intact and nearly fixed in position for several frames."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The yellow cup moves downward from near the hanging element toward the gray block."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The yellow cup reaches the top region of the gray block."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The yellow cup separates into multiple visible pieces at the block."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "A large yellow curved piece moves toward the lower left side of the frame."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "Several smaller yellow and light-colored pieces move outward around the block."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "A large yellow cup fragment lies near the lower left edge of the frame."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "Small fragments are visible on the floor near and to the right of the gray block."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The gray block remains in approximately the same position after the cup breaks."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The camera view remains fixed on the same backdrop, floor, block, and central area."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene is set with the yellow cup hanging above the gray block.",
+        "The cup appears intact before the main motion."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The yellow cup is intact and nearly stationary above the block."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The blue hanging element remains stationary above the cup."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The gray block remains stationary on the floor."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The yellow cup moves downward, reaches the block, and becomes multiple pieces.",
+        "Pieces spread outward from the block area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The yellow cup moves downward and then visibly breaks apart at the block."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "Newly visible fragments move away from the block in several directions."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The gray block remains present and stationary while pieces move around it."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The broken pieces are spread across the floor.",
+        "No further large motion is visible near the end."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_6",
+          "observation": "Fragments lie on the floor, including a large yellow piece at lower left and smaller pieces near the block."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The gray block remains in its original area."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

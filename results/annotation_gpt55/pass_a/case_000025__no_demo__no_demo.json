@@ -1,0 +1,334 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "An upright blue rectangular prism on a circular base visibly changes its facing while its wall shadow and the surrounding light patch remain mostly steady.",
+  "raw_event_description": "The video shows a blue vertical rectangular prism standing on a round metallic-looking base on a tabletop in front of a wall. A large bright circular light patch is projected onto the wall, with a dark vertical rectangular shadow and a horizontal shadow band near the lower wall. Across the sequence, the blue prism stays upright and in the same image location, while the visible faces, edge highlights, and apparent width of the prism change gradually. The wall shadow remains in approximately the same position and keeps a similar vertical-and-horizontal shape. The camera view appears fixed.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The upright blue prism, circular base, tabletop, wall, projected light patch, and shadow are all visible at the start.",
+      "The visible change appears already in progress rather than beginning from a distinct onset."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "blue upright prism",
+      "visible_form": "tall narrow rectangular prism standing vertically",
+      "material_description": "bright cyan-blue visible faces with darker blue side edges; surface appears smooth",
+      "visible_properties": [
+        "upright",
+        "rectangular",
+        "blue",
+        "narrow",
+        "vertical"
+      ],
+      "initial_motion_description": "no translation visible at the start; its visible face orientation begins changing gradually",
+      "initial_integrity_description": "appears whole, rigid, and unbroken",
+      "event_role_hints": [
+        "main changing visible object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "circular base",
+      "visible_form": "low round platform or disk under the prism",
+      "material_description": "dark top surface with metallic-looking silver side",
+      "visible_properties": [
+        "round",
+        "low",
+        "stationary in frame"
+      ],
+      "initial_motion_description": "no visible translation",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the blue prism"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wall",
+      "visible_form": "flat vertical background surface",
+      "material_description": "light-colored wall surface with visible illumination gradients",
+      "visible_properties": [
+        "vertical",
+        "flat",
+        "background"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears continuous and unbroken",
+      "event_role_hints": [
+        "receives visible light and shadow patterns"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "bright light patch",
+      "visible_form": "large circular or oval illuminated area on the wall",
+      "material_description": "white-gray bright region with softer darker border",
+      "visible_properties": [
+        "large",
+        "round-edged",
+        "bright",
+        "projected on wall"
+      ],
+      "initial_motion_description": "no visible displacement",
+      "initial_integrity_description": "continuous projected light area",
+      "event_role_hints": [
+        "background optical pattern"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "dark wall shadow",
+      "visible_form": "dark vertical rectangular shadow with a horizontal dark band near its lower part",
+      "material_description": "dark projected silhouette on the wall",
+      "visible_properties": [
+        "dark",
+        "rectangular vertical section",
+        "horizontal lower band",
+        "on wall"
+      ],
+      "initial_motion_description": "no clear displacement visible",
+      "initial_integrity_description": "shape appears continuous",
+      "event_role_hints": [
+        "visible shadow pattern"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "tabletop",
+      "visible_form": "horizontal wooden-looking surface below the base",
+      "material_description": "brown wood-grain appearance",
+      "visible_properties": [
+        "horizontal",
+        "brown",
+        "wood-grain texture"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supporting surface"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "black cable",
+      "visible_form": "thin dark cord extending from the right side of the base area",
+      "material_description": "black flexible-looking line",
+      "visible_properties": [
+        "thin",
+        "dark",
+        "curved"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears continuous",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "stands vertically on top of",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "rests on",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is visible across",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "is visible on",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_7",
+      "relation_description": "extends from the right side near",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A blue upright rectangular prism is visible on a circular base."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The circular base is positioned on a horizontal tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "continuous",
+      "observation": "A large bright circular or oval light patch is visible on the wall behind the objects."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "continuous",
+      "observation": "A dark vertical rectangular shadow and a horizontal dark band are visible on the wall."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "A thin black cable is visible extending from the right side near the base."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "continuous",
+      "observation": "The blue prism remains upright throughout the sequence."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "continuous",
+      "observation": "The image position of the blue prism and circular base remains nearly unchanged."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "continuous",
+      "observation": "The visible faces and edge highlights of the blue prism change gradually over time."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The blue prism appears narrower from the camera view than it did at the start."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "continuous",
+      "observation": "The wall shadow remains in approximately the same wall position."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The large wall light patch remains in approximately the same wall position."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "Near the end, the blue prism is still upright on the circular base."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The tabletop setup is already established.",
+        "The blue prism, circular base, wall light patch, wall shadow, and cable are visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The blue prism is upright on the base with a broad cyan face and darker side edge visible."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The wall shadow shows a vertical rectangular section and a horizontal band."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The central objects stay in the same image area.",
+        "The prism's visible face arrangement changes while the wall shadow and light patch remain mostly steady."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The prism's visible width, bright face, and dark edge positions change gradually."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The circular base remains in a fixed image position."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The wall shadow remains approximately fixed in shape and position."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The prism remains upright on the circular base.",
+        "The background light patch and shadow are still visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The prism shows a different face orientation than at the start while remaining upright."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The bright light patch remains on the wall."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The dark wall shadow remains visible."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e7",
+      "e10",
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

@@ -1,0 +1,308 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A crumpled white paper-like object is released from an overhead claw and drops into a clear liquid in a transparent bowl.",
+  "raw_event_description": "At the start, a black-and-orange claw holds a crumpled white paper-like object above a transparent bowl containing clear liquid on a wooden table. The claw opens, the crumpled object separates from it and moves downward into the bowl. On contact with the liquid, the liquid surface is disturbed with visible splashing and ripples. The crumpled object remains in the bowl while the claw stays open above it.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The bowl, liquid, overhead claw, and crumpled object are all visible before release.",
+      "The crumpled object is held above the bowl at the start."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "overhead claw",
+      "visible_form": "U-shaped gripping tool with two curved orange inner arms and a black upper stem",
+      "material_description": "black and orange smooth solid surfaces",
+      "visible_properties": [
+        "suspended from top of frame",
+        "two-pronged opening",
+        "orange inner gripping surfaces"
+      ],
+      "initial_motion_description": "appears stationary before the release",
+      "initial_integrity_description": "intact visible claw structure",
+      "event_role_hints": [
+        "initially surrounds and holds the crumpled object",
+        "later appears open above the bowl"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "crumpled paper-like object",
+      "visible_form": "small irregular crumpled white ball with gray printed markings",
+      "material_description": "white paper-like wrinkled surface with darker markings",
+      "visible_properties": [
+        "crumpled",
+        "irregular outline",
+        "light colored",
+        "smaller than bowl opening"
+      ],
+      "initial_motion_description": "appears stationary while held by the claw",
+      "initial_integrity_description": "one crumpled piece, visibly intact",
+      "event_role_hints": [
+        "released from the claw",
+        "moves downward into the bowl",
+        "remains in the liquid after contact"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "transparent bowl",
+      "visible_form": "clear round bowl with raised rim and curved sides",
+      "material_description": "transparent rigid-looking surface with bright reflections",
+      "visible_properties": [
+        "round",
+        "open top",
+        "transparent",
+        "reflective highlights"
+      ],
+      "initial_motion_description": "stationary on the table",
+      "initial_integrity_description": "intact bowl with continuous rim and sides",
+      "event_role_hints": [
+        "contains the clear liquid",
+        "receives the crumpled object"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "clear liquid",
+      "visible_form": "transparent liquid filling the lower portion of the bowl",
+      "material_description": "clear, reflective fluid surface",
+      "visible_properties": [
+        "transparent",
+        "horizontal surface before impact",
+        "visible ripples after contact"
+      ],
+      "initial_motion_description": "surface appears calm before the crumpled object enters",
+      "initial_integrity_description": "continuous liquid volume in the bowl",
+      "event_role_hints": [
+        "surface is disturbed when the crumpled object enters"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "wooden table",
+      "visible_form": "flat rectangular tabletop beneath the bowl",
+      "material_description": "light brown surface with wood grain pattern",
+      "visible_properties": [
+        "flat",
+        "light brown",
+        "wood-grain appearance"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "continuous tabletop surface visible",
+      "event_role_hints": [
+        "supports the bowl"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the claw is positioned above the bowl opening",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "the crumpled object is held within the opening of the claw",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "the bowl is resting on the tabletop",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "the clear liquid is inside the bowl",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "the crumpled object is above the liquid surface",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e5"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The black-and-orange claw is centered above the bowl opening."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A crumpled white paper-like object is enclosed between the claw arms."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The transparent bowl rests on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "Clear liquid is visible inside the bowl."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The crumpled object is positioned above the liquid surface."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The claw arms are open and the crumpled object is no longer held between them."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The crumpled object is visible moving downward toward the bowl."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The crumpled object contacts the liquid inside the bowl."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The liquid surface shows a splash-like disturbance around the crumpled object."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Ripples are visible across the liquid surface after contact."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The crumpled object remains in the bowl near the center of the liquid surface."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The claw remains open above the bowl after the crumpled object is in the liquid."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed with the bowl centered and the claw near the top of the frame."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The scene shows the claw holding the crumpled object above a bowl of clear liquid."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The claw is closed around the crumpled object."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The crumpled object is suspended above the liquid while held by the claw."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The liquid surface appears calm."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The held object separates from the claw and enters the bowl."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The claw opens."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The crumpled object moves downward from the claw into the bowl."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The liquid surface becomes visibly disturbed when the crumpled object enters."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "After entry, the crumpled object remains in the liquid while the claw stays open above."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "The crumpled object stays near the center of the bowl in the liquid."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Ripples remain visible and then appear less pronounced."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The claw remains open and separated from the crumpled object."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

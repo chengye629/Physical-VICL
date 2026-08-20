@@ -1,0 +1,293 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A crumpled paper ball is released from an overhead gripper and moves downward into a clear bowl containing clear liquid.",
+  "raw_event_description": "At the start, a black-and-orange U-shaped gripper is centered above a clear bowl on a wooden tabletop, holding a crumpled gray-white paper ball. The setup remains still for a short interval. The gripper then opens, and the paper ball separates from it, appearing blurred while moving downward. The paper enters the bowl and contacts the clear liquid, after which visible ripples spread across the liquid surface. The paper remains inside the bowl while the ripples gradually reduce.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The gripper, paper ball, bowl, liquid surface, and tabletop are all visible.",
+      "The paper ball is visibly held above the bowl before the main motion begins."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "overhead gripper",
+      "visible_form": "U-shaped tool with two curved prongs suspended from above",
+      "material_description": "black and orange smooth surfaces",
+      "visible_properties": [
+        "two-pronged",
+        "open lower end",
+        "centered above bowl"
+      ],
+      "initial_motion_description": "stationary before the release",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "initially surrounds the paper ball",
+        "opens before the paper ball moves away"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "crumpled paper ball",
+      "visible_form": "irregular crumpled ball-like shape",
+      "material_description": "gray-white folded sheet-like surface with darker printed or shadowed markings",
+      "visible_properties": [
+        "wrinkled",
+        "compact",
+        "light-colored"
+      ],
+      "initial_motion_description": "stationary while held by the gripper",
+      "initial_integrity_description": "appears as one crumpled piece before and after release",
+      "event_role_hints": [
+        "released object",
+        "enters bowl"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "clear bowl",
+      "visible_form": "round transparent bowl with raised rim",
+      "material_description": "transparent glossy surface",
+      "visible_properties": [
+        "circular rim",
+        "transparent",
+        "open top"
+      ],
+      "initial_motion_description": "stationary on tabletop",
+      "initial_integrity_description": "appears intact throughout",
+      "event_role_hints": [
+        "located below released paper ball",
+        "contains clear liquid"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "clear liquid",
+      "visible_form": "transparent fill inside bowl with visible surface",
+      "material_description": "clear reflective fluid-like surface",
+      "visible_properties": [
+        "transparent",
+        "reflective surface",
+        "surface ripples after contact"
+      ],
+      "initial_motion_description": "surface appears still before the paper enters",
+      "initial_integrity_description": "continuous visible surface inside bowl",
+      "event_role_hints": [
+        "surface is disturbed after the paper enters the bowl"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "wooden tabletop",
+      "visible_form": "flat horizontal rectangular surface",
+      "material_description": "brown wood-grain appearance",
+      "visible_properties": [
+        "flat",
+        "horizontal",
+        "supports bowl"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears unchanged",
+      "event_role_hints": [
+        "supports the bowl"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned above and around the crumpled paper ball",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is positioned above the bowl opening",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "contains a clear liquid surface",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "rests on the tabletop",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A clear round bowl is on a brown wooden tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A clear liquid surface is visible inside the bowl."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A black-and-orange U-shaped gripper surrounds a crumpled gray-white paper ball."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The crumpled paper ball is centered above the bowl opening."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The gripper prongs are visibly open with the paper ball no longer between them."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The paper ball appears blurred while positioned between the gripper and the bowl."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The paper ball is inside the bowl near the liquid surface."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "Circular ripples are visible on the liquid surface around the paper ball."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The paper ball remains inside the bowl."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The liquid surface shows smaller remaining ripples."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "The camera view remains centered on the gripper and bowl without visible reframing."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The gripper holds the crumpled paper ball above the bowl.",
+        "The bowl and liquid surface are still."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary while surrounding the paper ball"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains stationary above the bowl"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains stationary on the tabletop"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "surface appears still"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The gripper opens.",
+        "The paper ball separates from the gripper and moves downward into the bowl.",
+        "Ripples appear on the liquid surface."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "prongs are open after the paper ball leaves"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "moves downward from the gripper into the bowl"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "surface changes from still to rippled around the paper ball"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The paper ball stays in the bowl.",
+        "The visible ripples reduce in size."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "remains inside the bowl"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "continues showing diminishing ripples"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "remains open above the bowl"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e11"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

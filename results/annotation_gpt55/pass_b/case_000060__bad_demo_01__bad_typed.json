@@ -1,0 +1,207 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support",
+        "medium"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e4",
+        "e13"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left black cylinder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e4"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "right black cylinder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "brown sphere",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e11"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "light gray sphere",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e12"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "partial hand",
+      "entity_kind": "agent",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "unknown",
+      "evidence_refs": [
+        "e14"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "two intact spheres translate horizontally across the tabletop on separate paths",
+      "participant_object_ids": [
+        "obj_4",
+        "obj_5",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ]
+    },
+    "secondary": [],
+    "action": {
+      "family": "special",
+      "type": "unknown",
+      "raw_action": "brief partial hand appearance near the right edge around sphere onset; external intervention is not classifiable from the visible record",
+      "actor_object_ids": [
+        "obj_6"
+      ],
+      "target_object_ids": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e14"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "single",
+      "change_profile": "steady",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e11",
+        "e12",
+        "e13"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "brown sphere changes visible position leftward across the upper tabletop and leaves the frame near the upper-left side"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "light gray sphere changes visible position rightward across the lower tabletop and leaves the frame at the right side"
+      },
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e12"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "shape-preserving spherical objects move with horizontal motion while the tabletop serves as the supporting surface; no visible contact occurs between the two spheres",
+      "object_ids": [
+        "obj_1",
+        "obj_4",
+        "obj_5"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,365 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A set of shiny hanging balls starts still, then the end balls alternately move outward to the left and right while the middle balls remain mostly grouped.",
+  "raw_event_description": "The video shows a tabletop apparatus with a chrome-colored frame, a black base, and five shiny suspended balls initially aligned in a close horizontal row. For many frames the apparatus and balls appear still. Later, a left-side ball is visible displaced outward and then comes back toward the row; afterward a right-side ball moves outward to the right. The motion repeats with the left and right end balls alternately separated from the row and returning, while the central balls remain close together near the center. The clip ends while a right-side ball is still visibly separated to the right.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The frame, base, strings, and five shiny balls are visible.",
+      "The balls are initially aligned in a close row.",
+      "No visible object motion is present in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "support frame and base",
+      "visible_form": "rectangular chrome-colored support frame mounted on a glossy black rectangular base",
+      "material_description": "shiny metallic-looking frame with black reflective base",
+      "visible_properties": [
+        "upright",
+        "reflective",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the hanging balls"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left end ball",
+      "visible_form": "small shiny sphere suspended by thin line or lines",
+      "material_description": "mirror-like metallic surface",
+      "visible_properties": [
+        "reflective",
+        "spherical",
+        "suspended"
+      ],
+      "initial_motion_description": "initially still and aligned with the other balls",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "later separates to the left of the row"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "middle balls",
+      "visible_form": "three small shiny spheres suspended in the center of the row",
+      "material_description": "mirror-like metallic surfaces",
+      "visible_properties": [
+        "reflective",
+        "spherical",
+        "suspended",
+        "closely grouped"
+      ],
+      "initial_motion_description": "initially still and aligned with the end balls",
+      "initial_integrity_description": "appear intact",
+      "event_role_hints": [
+        "remain mostly grouped near the center during the visible event"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "right end ball",
+      "visible_form": "small shiny sphere suspended by thin line or lines",
+      "material_description": "mirror-like metallic surface",
+      "visible_properties": [
+        "reflective",
+        "spherical",
+        "suspended"
+      ],
+      "initial_motion_description": "initially still and aligned with the other balls",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "later separates to the right of the row"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "thin suspension lines",
+      "visible_form": "multiple thin vertical lines descending from the upper frame to the balls",
+      "material_description": "thin light-colored or translucent-looking lines",
+      "visible_properties": [
+        "thin",
+        "vertical",
+        "attached to balls"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appear continuous",
+      "event_role_hints": [
+        "visible connectors between the balls and top frame"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "blue and black tabletop item",
+      "visible_form": "flat curved blue-and-black object lying to the left of the apparatus",
+      "material_description": "blue and black surfaces with a small shiny part",
+      "visible_properties": [
+        "stationary",
+        "partly cropped by left frame edge"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "background tabletop object"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "wooden tabletop",
+      "visible_form": "flat light-brown table surface",
+      "material_description": "wood-grain-like surface",
+      "visible_properties": [
+        "horizontal",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "surface under the apparatus"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is aligned at the left end of the close row of suspended balls",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is aligned at the right end of the close row of suspended balls",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "hangs below the upper part of the support frame",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "hangs below the upper part of the support frame",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on the tabletop",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "lies to the left of the apparatus on the same tabletop",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "Five shiny spheres are aligned in a close horizontal row near the lower center of the apparatus."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Thin vertical lines connect the shiny spheres to the upper part of the chrome-colored frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The black rectangular base is on a light-brown tabletop."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A blue-and-black object lies on the tabletop to the left of the apparatus."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The balls remain visibly still for an initial interval."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A shiny ball is visible separated to the left of the central row."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The left separated ball moves back toward the row."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "A shiny ball on the right side moves outward and becomes separated from the row."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The middle balls remain close together near the center while an end ball is separated."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "The right separated ball moves back toward the row."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "middle",
+      "observation": "A shiny ball on the left side again moves outward and becomes separated from the row."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "Left-side and right-side outward separations recur in alternating positions."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "Near the end, a shiny ball is visible separated to the right of the row."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The support frame, black base, tabletop, and blue-and-black object do not visibly change position."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The apparatus is fully visible on the tabletop.",
+        "The five balls are aligned and still."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary on the tabletop"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "remains aligned with the other balls"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains grouped in the center"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains aligned with the other balls"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "remains still on the left side of the tabletop"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "An end ball separates to the left and later an end ball separates to the right.",
+        "The separated end balls return toward the row between outward positions.",
+        "The central balls remain close together during the visible alternation."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "moves outward to the left and later back toward the row"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "stays mostly grouped near the center"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "moves outward to the right and later back toward the row"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "the visible lines attached to moving end balls change angle as the end balls move side to side"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e13",
+        "e14"
+      ],
+      "observations": [
+        "The alternating end-ball motion is still visible near the end of the clip.",
+        "The apparatus and surrounding tabletop objects remain in place."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "is visible separated to the right near the end"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "shows no visible translation or deformation"
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "shows no visible motion"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "partial",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact identity of the separated left or right end ball is intermittently hard to distinguish when the balls are close together."
+  ]
+}

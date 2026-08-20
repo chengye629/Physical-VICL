@@ -1,0 +1,359 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "black balloon",
+      "entity_kind": "deformable_solid",
+      "event_roles": [
+        "target",
+        "source"
+      ],
+      "material_phase": "mixed",
+      "physical_properties": [
+        "flexible",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e7",
+        "e9",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "pale stick",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e5",
+        "e11"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "flame",
+      "entity_kind": "gas_or_vapor",
+      "event_roles": [
+        "tool",
+        "source"
+      ],
+      "material_phase": "gas",
+      "physical_properties": [
+        "emissive"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "black circular base",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e14"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "pink tape",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "adhesive"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "dark fragments",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "product"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "wooden tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e12"
+      ]
+    },
+    {
+      "object_id": "obj_8",
+      "name": "cord",
+      "entity_kind": "deformable_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": []
+    },
+    {
+      "object_id": "obj_9",
+      "name": "transparent rectangular panel",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "transparent"
+      ],
+      "initial_motion_state": "unknown",
+      "initial_integrity_state": "unknown",
+      "evidence_refs": [
+        "e13"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "fracture_separation",
+      "type": "rupture",
+      "raw_type": "flame-induced balloon rupture with fragment ejection",
+      "participant_object_ids": [
+        "obj_1",
+        "obj_3",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e9",
+        "e10",
+        "e12"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "rotation",
+        "raw_type": "stick tip arcs toward the balloon",
+        "participant_object_ids": [
+          "obj_2",
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e5",
+          "e6"
+        ]
+      },
+      {
+        "family": "combustion",
+        "type": "sustained_burning",
+        "raw_type": "small flame burns at the stick tip",
+        "participant_object_ids": [
+          "obj_3"
+        ],
+        "evidence_refs": [
+          "e4",
+          "e6",
+          "e8"
+        ]
+      }
+    ],
+    "action": {
+      "family": "thermal",
+      "type": "heat",
+      "raw_action": "a lit stick is moved so its flame contacts or closely heats the balloon surface",
+      "actor_object_ids": [],
+      "tool_object_ids": [
+        "obj_2",
+        "obj_3"
+      ],
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transition": {
+        "axis": "integrity",
+        "type": "ruptured",
+        "raw_transition": "the intact spherical balloon abruptly loses integrity and is no longer present in its prior whole form",
+        "evidence_refs": [
+          "e7",
+          "e8",
+          "e9",
+          "e12"
+        ]
+      }
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "emission_transport",
+        "type": "particle_emission_onset",
+        "raw_transition": "small dark pieces appear after the balloon disappears and are emitted from the former balloon area",
+        "evidence_refs": [
+          "e10"
+        ]
+      }
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "motion",
+        "type": "motion_onset",
+        "raw_transition": "the newly visible dark fragments move upward and leftward",
+        "evidence_refs": [
+          "e10"
+        ]
+      }
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "relation",
+        "type": "contact_gain",
+        "raw_transition": "the flame reaches the lower-right edge of the balloon",
+        "evidence_refs": [
+          "e7",
+          "e8"
+        ]
+      }
+    },
+    {
+      "object_id": "obj_2",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the free end of the stick moves leftward and upward toward the balloon while the base area remains in place",
+        "evidence_refs": [
+          "e5",
+          "e11"
+        ]
+      }
+    },
+    {
+      "object_id": "obj_9",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_increase",
+        "raw_transition": "the transparent rectangular panel-like shape becomes visible after the balloon is gone",
+        "evidence_refs": [
+          "e13"
+        ]
+      }
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "energy_reaction",
+      "type": "heat_transfer",
+      "raw_mechanism": "thermal energy from the flame is applied locally at the balloon surface before the rupture",
+      "object_ids": [
+        "obj_3",
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "pressure_gradient",
+      "raw_mechanism": "pressure difference across the balloon enclosure drives the abrupt burst and outward motion of fragments",
+      "object_ids": [
+        "obj_1",
+        "obj_6"
+      ],
+      "evidence_refs": [
+        "e9",
+        "e10"
+      ]
+    },
+    {
+      "family": "material_response",
+      "type": null,
+      "raw_mechanism": "the balloon membrane loses structural integrity after localized heating, allowing rapid rupture",
+      "object_ids": [
+        "obj_1",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e8",
+        "e9",
+        "e10"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A reddish-orange liquid stream appears above a yellow rubber duck and spreads across the black tray around it.",
+  "raw_event_description": "At the start, a yellow rubber duck sits upright in a black rectangular tray beneath a red container with a blue spout-like feature, with no visible liquid stream or pool. Later, a reddish-orange vertical stream becomes visible between the blue feature and the top of the duck, the liquid covers parts of the duck, and a reddish-orange pool forms around the duck in the tray. The pool continues spreading outward across the tray while the duck stays upright in about the same place.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The duck, tray, red container, blue spout-like feature, woven stand, and tabletop are visible.",
+      "No reddish-orange stream or tray pool is visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow rubber duck",
+      "visible_form": "small duck-shaped toy with rounded body, head, orange beak, and black eyes",
+      "material_description": "smooth glossy yellow surface with orange beak",
+      "visible_properties": [
+        "bright yellow",
+        "glossy",
+        "upright",
+        "duck-shaped"
+      ],
+      "initial_motion_description": "no visible motion before the liquid appears",
+      "initial_integrity_description": "appears intact and upright",
+      "event_role_hints": [
+        "later becomes contacted and coated by reddish-orange liquid"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "black tray",
+      "visible_form": "rectangular shallow tray with raised edges",
+      "material_description": "dark, smooth, slightly reflective surface",
+      "visible_properties": [
+        "black",
+        "rectangular",
+        "raised rim",
+        "shallow basin"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "later contains a spreading reddish-orange pool"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "red container",
+      "visible_form": "red cylindrical container partly visible near the top of the frame",
+      "material_description": "red exterior with vertical ridges or grooves",
+      "visible_properties": [
+        "red",
+        "cylindrical",
+        "partially visible"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact where visible",
+      "event_role_hints": [
+        "positioned above the duck"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "blue spout-like feature",
+      "visible_form": "small blue protruding shape on the lower front of the red container",
+      "material_description": "blue glossy-looking surface",
+      "visible_properties": [
+        "blue",
+        "small",
+        "centered above duck"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "later aligned with the visible liquid stream"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "reddish-orange liquid",
+      "visible_form": "later appears as a narrow vertical stream and a spreading irregular pool",
+      "material_description": "opaque glossy reddish-orange fluid appearance",
+      "visible_properties": [
+        "reddish-orange",
+        "glossy",
+        "forms stream",
+        "forms pool"
+      ],
+      "initial_motion_description": "not visible before onset",
+      "initial_integrity_description": "not visible at the start",
+      "event_role_hints": [
+        "contacts the duck",
+        "spreads on the tray"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "woven stand",
+      "visible_form": "round woven basket-like support behind the tray",
+      "material_description": "brown woven texture with multicolored strands",
+      "visible_properties": [
+        "brown",
+        "woven",
+        "round"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the red container in the background"
+      ]
+    },
+    {
+      "id": "obj_7",
+      "name": "tabletop",
+      "visible_form": "flat wooden tabletop beneath the tray and stand",
+      "material_description": "light brown wood-like surface",
+      "visible_properties": [
+        "flat",
+        "light brown"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "sits upright inside the tray near the center-right area",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is positioned above the duck near the vertical centerline of the scene",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "rests above or behind the woven stand in the background",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "rests on the tabletop",
+      "object_id": "obj_7",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The yellow duck is upright inside the black tray."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The blue spout-like feature is above the duck."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The red container is visible above the woven stand."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The black tray is on the light brown tabletop."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "No reddish-orange stream or pool is visible in the tray."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "A narrow reddish-orange vertical stream is visible between the blue spout-like feature and the duck's head."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "Reddish-orange liquid is visible on the top and front of the duck."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "A reddish-orange pool forms around the duck's base in the tray."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "The reddish-orange pool extends outward across a wider area of the tray."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The reddish-orange pool reaches broadly toward both left and right sides of the tray interior."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The duck remains upright while the liquid stream continues onto its head."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The camera viewpoint remains fixed with no visible pan, tilt, zoom, or focus change."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "observations": [
+        "The scene is arranged with the duck in the tray and the red container with blue spout-like feature above it.",
+        "No reddish-orange liquid is visible yet."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The duck stays upright and still."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The tray is empty of visible reddish-orange liquid."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The red container remains still in the background."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The blue spout-like feature remains above the duck."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "A reddish-orange stream appears aligned above the duck.",
+        "Reddish-orange liquid becomes visible on the duck and in the tray around it."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "The liquid appears as a vertical stream and begins collecting as an irregular pool."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The duck becomes partly covered by reddish-orange liquid while remaining upright."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The tray contains a growing reddish-orange pool."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The reddish-orange pool spreads wider across the tray.",
+        "The stream remains visible above the duck."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_5",
+          "observation": "The liquid pool expands into a broad, irregular shape across the tray interior."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The duck stays upright in approximately the same location."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "More of the tray floor is covered by reddish-orange liquid."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

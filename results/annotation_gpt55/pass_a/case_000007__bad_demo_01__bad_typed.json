@@ -1,0 +1,316 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A yellow ball appears from the left, moves across the tabletop to the cardboard incline, goes onto it, then moves back left and exits the frame.",
+  "raw_event_description": "The scene begins with a stationary tabletop setup: a brown cardboard piece is inclined on the right with a blue block beneath its raised end, and a black cylindrical object is partly visible at the left edge. After a period with no moving object visible, a yellow ball enters from the left, travels rightward across the tabletop, reaches the lower edge of the cardboard incline, and moves onto the incline. The ball then changes visible direction, moves leftward away from the incline across the tabletop, and exits at the left side. The cardboard, blue block, black cylinder, and table remain visibly stationary throughout.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The cardboard incline, blue block, tabletop, and partial black cylinder are visible before the ball appears.",
+      "No moving ball is visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "yellow ball",
+      "visible_form": "small round ball",
+      "material_description": "bright yellow-green surface with a faint curved seam-like marking visible in some frames",
+      "visible_properties": [
+        "round",
+        "bright yellow-green",
+        "small relative to the cardboard incline"
+      ],
+      "initial_motion_description": "not visible at the start; later enters from the left moving rightward",
+      "initial_integrity_description": "appears intact and round when first visible",
+      "event_role_hints": [
+        "moving object"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "cardboard incline",
+      "visible_form": "flat rectangular brown sheet positioned diagonally, with its left edge lower and its right side raised",
+      "material_description": "brown cardboard-like sheet with visible corrugated edge texture",
+      "visible_properties": [
+        "flat",
+        "rectangular",
+        "inclined",
+        "brown"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact and undeformed",
+      "event_role_hints": [
+        "stationary inclined surface"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "blue block",
+      "visible_form": "upright rectangular block under the right side of the cardboard",
+      "material_description": "solid-looking bright blue surface",
+      "visible_properties": [
+        "rectangular",
+        "blue",
+        "stationary"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supporting visible object"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "black cylinder",
+      "visible_form": "partially visible black cylindrical object at the left edge of the frame",
+      "material_description": "dark glossy or semi-gloss black surface",
+      "visible_properties": [
+        "cylindrical",
+        "black",
+        "partially visible"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "stationary object near where the ball first appears"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "tabletop",
+      "visible_form": "large flat horizontal surface covering most of the frame",
+      "material_description": "light wood-grain patterned surface",
+      "visible_properties": [
+        "flat",
+        "light colored",
+        "wood-grain pattern"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "surface traversed by the ball"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is positioned diagonally with its right side raised above the tabletop",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is located under the raised right side of the cardboard incline",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is partly visible at the left edge of the tabletop scene",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A brown rectangular sheet is inclined on the right side of the tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A blue rectangular block is visible beneath the raised right portion of the brown sheet."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A black cylindrical object is partially visible at the left edge of the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "No yellow ball is visible during the initial still portion of the scene."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A yellow ball appears near the left edge beside the black cylindrical object."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The yellow ball moves rightward across the tabletop."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The yellow ball reaches the lower left edge area of the cardboard incline."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The yellow ball is visible on top of the brown cardboard incline."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The yellow ball changes from rightward travel to leftward travel."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The yellow ball moves leftward away from the cardboard incline across the tabletop."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The yellow ball exits the frame at the left edge."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The cardboard incline remains in the same visible position throughout the clip."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The blue block remains in the same visible position throughout the clip."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The black cylindrical object remains in the same visible position throughout the clip."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The tabletop setup is visible and stationary before the moving ball appears."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "remains stationary in an inclined position"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remains stationary under the raised side of the cardboard"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "remains stationary at the left edge"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "is not yet visible"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The yellow ball enters, moves rightward, reaches the cardboard incline, appears on it, and then reverses visible direction."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "appears from the left and travels rightward across the tabletop"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "moves onto the brown cardboard incline"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "changes visible travel direction from rightward to leftward"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The yellow ball travels leftward and leaves the visible scene."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "moves leftward away from the incline across the tabletop"
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "exits the frame at the left edge"
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e12",
+        "e13",
+        "e14"
+      ],
+      "observations": [
+        "Stationary setup objects do not visibly translate or deform."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "shows no visible change in position or shape"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "shows no visible change in position or shape"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "shows no visible change in position or shape"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The black cylindrical object is only partly visible at the left edge, so its full shape and relation to the ball are not fully shown."
+  ]
+}

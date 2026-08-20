@@ -1,0 +1,279 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A small blue rounded object moves from the left across a wooden surface, passes the right edge area, and exits the frame to the right.",
+  "raw_event_description": "The scene starts with a light-brown wooden tabletop or cabinet surface beside a pale wall and a translucent pale sheet or panel on the right. After a static interval, a small blue rounded object appears at the left edge on the wooden surface. It moves rightward across the wooden surface with visible blur, reaches the area near the right edge of the wood, continues rightward in front of the pale wall/panel area, and then leaves the frame on the right. The remaining scene stays still after the blue object exits.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "partial",
+    "reasons": [
+      "The wooden surface, pale wall, and translucent right-side panel are visible before the moving object appears.",
+      "The later moving blue object is not yet visible in the first frame."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "wooden surface",
+      "visible_form": "flat horizontal light-brown rectangular tabletop or cabinet top with rounded front-right corner",
+      "material_description": "wood-grain pattern and light-brown finish are visible",
+      "visible_properties": [
+        "flat top",
+        "straight right edge",
+        "rounded corner",
+        "wood-grain texture"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "appears intact with no visible breakage or deformation",
+      "event_role_hints": [
+        "the blue object is first seen moving across this surface"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "pale wall",
+      "visible_form": "smooth vertical pale background surface",
+      "material_description": "matte light-gray or white visible surface",
+      "visible_properties": [
+        "vertical",
+        "smooth-looking",
+        "pale colored"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "appears continuous and unchanged",
+      "event_role_hints": [
+        "background behind the moving blue object near the right side"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "translucent panel",
+      "visible_form": "pale semi-translucent sheet or panel positioned on the right with a straight top edge and a horizontal line across it",
+      "material_description": "frosted or semi-translucent pale surface with visible edge lines",
+      "visible_properties": [
+        "semi-translucent appearance",
+        "straight top edge",
+        "horizontal seam or line",
+        "vertical sheet-like form"
+      ],
+      "initial_motion_description": "stationary in the frame",
+      "initial_integrity_description": "appears intact with no visible tearing or deformation",
+      "event_role_hints": [
+        "the blue object passes in front of or near this right-side area"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "blue rounded object",
+      "visible_form": "small opaque blue rounded object with a circular silhouette in many frames",
+      "material_description": "smooth-looking bright blue visible exterior",
+      "visible_properties": [
+        "small",
+        "blue",
+        "rounded",
+        "motion-blurred during movement"
+      ],
+      "initial_motion_description": "not visible at the start; first visible entering from the left while moving rightward",
+      "initial_integrity_description": "when first visible, it appears as one intact object",
+      "event_role_hints": [
+        "main moving object"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "the wooden surface occupies the left and lower part of the scene",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "the translucent panel is positioned to the right of the wooden surface",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2",
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A light-brown wooden horizontal surface fills much of the left and lower frame."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A pale vertical wall is visible behind the wooden surface."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A pale translucent sheet or panel is visible on the right side of the frame."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "No blue rounded object is visible at the start of the video."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A small blue rounded object appears from the left side on the wooden surface."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The blue rounded object occupies progressively farther-right positions on the wooden surface across successive frames."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The blue rounded object appears visibly blurred while moving."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The blue rounded object reaches the area near the right edge of the wooden surface."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The blue rounded object is visible to the right of the wooden surface against the pale wall or panel area."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "A darker rounded mark is visible near the blue object on the pale right-side surface while the object is in that area."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The blue rounded object exits beyond the right edge of the frame."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "After the blue object exits, the wooden surface, wall, and translucent panel remain visible and still."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The main background edges and surfaces remain fixed relative to the frame."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The scene is static before the blue object appears."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The wooden surface remains stationary."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The pale wall remains stationary."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The translucent panel remains stationary."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The blue rounded object is not visible."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "The moving blue object crosses the visible scene from left toward right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The blue rounded object appears at the left on the wooden surface and moves rightward."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The blue rounded object passes near the right edge of the wooden surface."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The blue rounded object continues rightward in the pale wall or panel area."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "A darker rounded mark is visible on or near the panel area while the blue object is nearby."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The blue object is no longer visible after exiting right."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "The blue rounded object leaves the frame to the right."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "The wooden surface remains unchanged after the blue object exits."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The pale wall remains unchanged after the blue object exits."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The translucent panel remains unchanged after the blue object exits."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

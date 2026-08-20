@@ -1,0 +1,286 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A crumpled white paper wad is released from an overhead claw and drops into a clear liquid-filled bowl, disturbing the liquid surface.",
+  "raw_event_description": "The scene begins with a transparent bowl containing clear liquid on a wooden table, with a black-and-orange claw-like holder above it holding a crumpled white paper wad. For many frames the setup remains still. The paper wad then separates from the claw and moves downward into the bowl. It contacts the liquid near the bowl center, producing visible surface disturbance and small splashes or ripples. Afterward the claw remains open above the bowl while the crumpled paper stays in the liquid near the center and the surface disturbance diminishes.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The bowl, liquid surface, overhead claw, and crumpled paper wad are all visible.",
+      "The paper wad is already positioned above the bowl before any release is visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "transparent bowl",
+      "visible_form": "round clear bowl with raised rim and curved sides",
+      "material_description": "transparent glossy solid surface",
+      "visible_properties": [
+        "clear",
+        "reflective",
+        "round",
+        "open top"
+      ],
+      "initial_motion_description": "No visible motion before the main event.",
+      "initial_integrity_description": "Appears whole and unchanged throughout the visible sequence.",
+      "event_role_hints": [
+        "contains the clear liquid",
+        "receives the descending paper wad"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "clear liquid",
+      "visible_form": "transparent liquid surface inside the bowl",
+      "material_description": "clear reflective liquid with visible surface highlights",
+      "visible_properties": [
+        "transparent",
+        "reflective",
+        "surface visibly deforming during contact"
+      ],
+      "initial_motion_description": "Surface appears mostly still before the paper wad enters.",
+      "initial_integrity_description": "Continuous liquid volume visible inside the bowl.",
+      "event_role_hints": [
+        "surface is disturbed when the paper wad enters"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "overhead claw",
+      "visible_form": "black vertical handle with two curved orange-and-black prongs",
+      "material_description": "dark and orange solid-looking parts with smooth surfaces",
+      "visible_properties": [
+        "two-pronged",
+        "suspended above bowl",
+        "opens during the event"
+      ],
+      "initial_motion_description": "No visible motion for most of the pre-event interval.",
+      "initial_integrity_description": "Appears whole with two visible prongs.",
+      "event_role_hints": [
+        "initially holds the crumpled paper wad",
+        "later appears open and empty"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "crumpled paper wad",
+      "visible_form": "small irregular crumpled white and gray wad",
+      "material_description": "white-gray wrinkled sheet-like material",
+      "visible_properties": [
+        "crumpled",
+        "irregular",
+        "light colored"
+      ],
+      "initial_motion_description": "Initially stationary between the claw prongs.",
+      "initial_integrity_description": "Visible as one crumpled wad before release and remains one visible wad after entering the liquid.",
+      "event_role_hints": [
+        "moves from the claw into the bowl"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "wooden table",
+      "visible_form": "flat rectangular tabletop",
+      "material_description": "light brown surface with wood-like grain",
+      "visible_properties": [
+        "flat",
+        "brown",
+        "wood-grain appearance"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears unchanged.",
+      "event_role_hints": [
+        "supports the bowl"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is positioned between the two prongs of the overhead claw",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "is above the bowl opening",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is inside the transparent bowl",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is on the tabletop",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A transparent bowl sits on a light brown tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Clear liquid is visible inside the bowl."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A black-and-orange two-pronged claw is suspended above the bowl opening."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A crumpled white-gray paper wad is held between the claw prongs."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The crumpled paper wad separates from the claw and moves downward."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The claw prongs are visible open with no paper wad between them."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The crumpled paper wad reaches the liquid area inside the bowl."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The liquid surface shows a localized splash or upward disturbance around the paper wad."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "Circular ripples are visible on the liquid surface around the paper wad."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The crumpled paper wad remains in the bowl near the center of the liquid surface."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The overhead claw remains open above the bowl."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The visible ripples become less pronounced after the paper wad is in the bowl."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The setup is still, with the paper wad held above the liquid-filled bowl."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "Crumpled paper wad remains held between the claw prongs."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Liquid surface appears mostly undisturbed."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "observations": [
+        "The paper wad moves from the claw toward the liquid and enters the bowl."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "Crumpled paper wad separates from the claw, moves downward, and reaches the liquid area."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Claw appears open and empty after the paper wad leaves it."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Liquid surface changes shape visibly near the paper wad."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The paper wad stays in the bowl while visible ripples diminish."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "Crumpled paper wad remains near the center area of the bowl."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Ripples remain visible for several frames and then become less pronounced."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Claw remains open above the bowl."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": []
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

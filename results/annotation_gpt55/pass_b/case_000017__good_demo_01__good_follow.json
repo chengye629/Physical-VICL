@@ -1,0 +1,372 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "wood tabletop",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "black circular cylinder",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "green connector",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "beige stick",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "tool"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "rotating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "rightmost black block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "name": "right-group white block",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "name": "left black block of right group",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e8",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_8",
+      "name": "left group of blocks",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e10"
+      ]
+    },
+    {
+      "object_id": "obj_9",
+      "name": "rear cable",
+      "entity_kind": "deformable_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "flexible"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "toppling",
+      "raw_type": "toppling of the three right-group blocks after the sweeping stick reaches the nearest block",
+      "participants": {
+        "targets": [
+          "obj_5",
+          "obj_6",
+          "obj_7"
+        ],
+        "tool": [
+          "obj_4"
+        ],
+        "support": [
+          "obj_1"
+        ]
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "rotation",
+        "raw_type": "beige stick changes angle and sweeps toward the blocks",
+        "participants": {
+          "moving_objects": [
+            "obj_4",
+            "obj_3"
+          ],
+          "support": [
+            "obj_2"
+          ]
+        },
+        "evidence_refs": [
+          "e3",
+          "e4",
+          "e5"
+        ]
+      },
+      {
+        "family": "contact_loading",
+        "type": null,
+        "raw_type": "contact loading from the sweeping stick and adjacent falling blocks in the right group",
+        "participants": {
+          "loading_objects": [
+            "obj_4",
+            "obj_5",
+            "obj_6",
+            "obj_7"
+          ],
+          "targets": [
+            "obj_5",
+            "obj_6",
+            "obj_7"
+          ]
+        },
+        "evidence_refs": [
+          "e5",
+          "e6",
+          "e7",
+          "e8"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external actor; the beige stick motion is observed as part of the scene",
+      "evidence_refs": [
+        "e4",
+        "e11"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "multi_stage",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e11"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "beige stick changes orientation and sweeps toward the right group of blocks"
+      },
+      "final_state": "extended from the black circular cylinder after sweeping toward the blocks",
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "green connector changes orientation together with the stick area"
+      },
+      "final_state": "remains intact on the black circular cylinder",
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "rightmost black block changes from upright and stationary to tilted, fallen, and down on the tabletop"
+      },
+      "final_state": "no longer upright, lying or leaning on the tabletop",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_6",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "right-group white block changes from upright and stationary to tilted, fallen, and down or leaning"
+      },
+      "final_state": "no longer upright, tilted or down against nearby fallen blocks",
+      "evidence_refs": [
+        "e7",
+        "e9"
+      ]
+    },
+    {
+      "object_id": "obj_7",
+      "transition": {
+        "axis": "motion",
+        "type": "toppling",
+        "raw_transition": "left black block of the right group changes from upright and stationary to tilted, fallen, and down on the tabletop"
+      },
+      "final_state": "no longer upright, lying or leaning on the tabletop",
+      "evidence_refs": [
+        "e8",
+        "e9"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "torque",
+      "raw_mechanism": "rotation of the stick about the connector drives its sweeping angular motion",
+      "applies_to": [
+        "obj_4",
+        "obj_3"
+      ],
+      "evidence_refs": [
+        "e3",
+        "e4"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "contact_impulse",
+      "raw_mechanism": "brief contact loading transfers motion from the sweeping stick into the nearest block and through the right-group blocks",
+      "applies_to": [
+        "obj_5",
+        "obj_6",
+        "obj_7"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "after the upright blocks lose stability, gravity drives their falling rotation toward the tabletop",
+      "applies_to": [
+        "obj_5",
+        "obj_6",
+        "obj_7"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ]
+    }
+  ]
+}

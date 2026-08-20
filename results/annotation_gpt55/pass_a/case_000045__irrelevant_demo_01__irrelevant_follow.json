@@ -1,0 +1,310 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A suspended gripper opens above a clear bowl, and a crumpled paper wad drops into the liquid, making a splash and ripples.",
+  "raw_event_description": "At the start, a black and orange suspended gripper holds a crumpled white and gray paper wad above a clear bowl containing transparent liquid on a wooden table. After a long still interval, the gripper tips separate and the paper wad moves downward into the bowl. The wad strikes the liquid surface, a splash and circular ripples appear, and the wad remains visible in the liquid near the center of the bowl while the open gripper stays above.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The gripper, paper wad, bowl, liquid, and table are all visible before the release.",
+      "The paper wad is visibly held above the bowl opening."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "suspended gripper",
+      "visible_form": "black vertical handle with two curved orange inner tips forming an openable fork or claw shape",
+      "material_description": "black and orange smooth solid surfaces",
+      "visible_properties": [
+        "suspended from top of frame",
+        "two opposing curved tips",
+        "opens during the event"
+      ],
+      "initial_motion_description": "appears stationary above the bowl before the main event",
+      "initial_integrity_description": "appears intact with both tips visible",
+      "event_role_hints": [
+        "paper wad is initially positioned between its tips",
+        "tips are visibly separated after the release"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "crumpled paper wad",
+      "visible_form": "irregular crumpled ball-like wad",
+      "material_description": "white and gray thin sheet-like material with dark printed or marked areas",
+      "visible_properties": [
+        "crumpled",
+        "irregular surface",
+        "light colored"
+      ],
+      "initial_motion_description": "appears stationary while held in the gripper",
+      "initial_integrity_description": "remains one crumpled wad before release",
+      "event_role_hints": [
+        "moves downward after the gripper opens",
+        "enters the liquid in the bowl"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "clear bowl",
+      "visible_form": "round transparent bowl with raised rim",
+      "material_description": "transparent glossy solid material",
+      "visible_properties": [
+        "round",
+        "transparent",
+        "open top",
+        "reflective highlights"
+      ],
+      "initial_motion_description": "stationary on the table",
+      "initial_integrity_description": "appears intact throughout the clip",
+      "event_role_hints": [
+        "contains the transparent liquid",
+        "receives the paper wad"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "transparent liquid",
+      "visible_form": "clear liquid filling the lower portion of the bowl",
+      "material_description": "transparent fluid with reflective surface",
+      "visible_properties": [
+        "clear",
+        "reflective surface",
+        "surface becomes disturbed after impact"
+      ],
+      "initial_motion_description": "surface appears mostly calm before the paper enters",
+      "initial_integrity_description": "continuous liquid surface visible in the bowl",
+      "event_role_hints": [
+        "surface is disturbed when the paper wad enters",
+        "ripples are visible after contact"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "wooden table",
+      "visible_form": "flat rectangular tabletop",
+      "material_description": "light brown surface with wood grain pattern",
+      "visible_properties": [
+        "flat",
+        "light brown",
+        "supports the bowl"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears unchanged throughout",
+      "event_role_hints": [
+        "bowl rests on it"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "background wall",
+      "visible_form": "plain vertical wall behind the setup",
+      "material_description": "smooth light gray surface",
+      "visible_properties": [
+        "plain",
+        "light colored"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears unchanged throughout",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is held between the curved tips of",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is positioned above the bowl opening and above the liquid surface in",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is contained inside",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_3",
+      "relation_description": "rests on",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A clear round bowl containing transparent liquid sits on a light brown tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "A black and orange suspended gripper is visible above the bowl."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A crumpled white and gray paper wad is positioned between the gripper tips."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The paper wad is above the bowl opening and above the liquid surface."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The gripper tips are separated and the paper wad is no longer between them."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The paper wad moves downward through the air toward the bowl."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The paper wad contacts the liquid surface inside the bowl."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The liquid surface rises and splashes around the paper wad at contact."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "Ripples spread across the liquid surface after the paper wad enters."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The paper wad remains visible in the liquid near the center area of the bowl."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The gripper remains above the bowl with its tips open."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The camera view remains fixed on the tabletop setup without a scene cut."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The setup is still before the release."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Suspended gripper holds position above the bowl."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Crumpled paper wad is held between the gripper tips."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "Clear bowl remains stationary on the tabletop."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Liquid surface appears mostly calm."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The main visible event occurs as the paper wad enters the bowl."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "Gripper tips separate, leaving an open gap."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "Paper wad moves downward from the gripper into the bowl."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Liquid surface splashes and then shows spreading ripples."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The motion settles after the splash."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "Paper wad remains visible in the liquid near the center of the bowl."
+        },
+        {
+          "object_id": "obj_1",
+          "observation": "Open gripper remains suspended above the bowl."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "Liquid surface shows reduced rippling compared with the impact moment."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "none",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": []
+}

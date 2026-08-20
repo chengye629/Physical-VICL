@@ -1,0 +1,231 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "wooden surface",
+      "entity_kind": "surface_or_region",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e6",
+        "e8",
+        "e12",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "pale wall",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e2",
+        "e9",
+        "e12",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "translucent panel",
+      "entity_kind": "rigid_solid",
+      "event_roles": [],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "translucent"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e9",
+        "e10",
+        "e12",
+        "e13"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "blue rounded object",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "translating",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e4",
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e11"
+      ]
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "rigid_motion",
+      "type": "translation",
+      "raw_type": "blue rounded object translates rightward across the visible scene",
+      "participants": [
+        "obj_4"
+      ],
+      "event_roles": {
+        "target": [
+          "obj_4"
+        ],
+        "support": [
+          "obj_1"
+        ]
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e11"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "optical_interaction",
+        "type": "illumination_change",
+        "raw_type": "transient darker rounded mark appears near the moving blue object on the pale right-side area",
+        "participants": [
+          "obj_3",
+          "obj_4"
+        ],
+        "evidence_refs": [
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention; the blue object enters the frame already moving",
+      "actor_objects": [],
+      "target_objects": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e4",
+        "e5"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "extended",
+      "temporal_structure": "single",
+      "change_profile": "gradual",
+      "process_scope": "scene_physics",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8",
+        "e9",
+        "e11",
+        "e12"
+      ]
+    }
+  },
+  "impacts": [
+    {
+      "impact_id": "impact_1",
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "motion",
+        "type": null,
+        "raw_transition": "the blue rounded object changes visible position from the left side, across the wooden surface, toward and beyond the right side of the frame"
+      },
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e8",
+        "e9",
+        "e11"
+      ]
+    },
+    {
+      "impact_id": "impact_2",
+      "object_id": "obj_4",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "visibility_decrease",
+        "raw_transition": "the blue rounded object leaves the visible frame to the right"
+      },
+      "evidence_refs": [
+        "e11"
+      ]
+    },
+    {
+      "impact_id": "impact_3",
+      "object_id": "obj_3",
+      "transition": {
+        "axis": "optical_visibility",
+        "type": "intensity_decrease",
+        "raw_transition": "a darker rounded mark is visible near the blue object on or near the pale right-side panel area"
+      },
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "mechanism_id": "mech_1",
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "the blue object has rightward motion when it first becomes visible; the visible source of that motion is not shown",
+      "linked_processes": [
+        "primary"
+      ],
+      "involved_objects": [
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "mechanism_id": "mech_2",
+      "family": "optical_electromagnetic",
+      "type": null,
+      "raw_mechanism": "light interaction associated with the moving blue object and the pale right-side surface produces a transient darker rounded mark",
+      "linked_processes": [
+        "secondary"
+      ],
+      "involved_objects": [
+        "obj_3",
+        "obj_4"
+      ],
+      "evidence_refs": [
+        "e10"
+      ]
+    }
+  ]
+}

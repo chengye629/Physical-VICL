@@ -1,0 +1,251 @@
+{
+  "schema_version": "physics_card_v7_alpha3",
+  "objects": [
+    {
+      "object_id": "obj_1",
+      "name": "orange ball",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "target"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e5",
+        "e16"
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "name": "black crate",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "container",
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid",
+        "reflective"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e7",
+        "e8",
+        "e14",
+        "e17"
+      ]
+    },
+    {
+      "object_id": "obj_3",
+      "name": "wooden table",
+      "entity_kind": "rigid_solid",
+      "event_roles": [
+        "support"
+      ],
+      "material_phase": "solid",
+      "physical_properties": [
+        "rigid"
+      ],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "intact",
+      "evidence_refs": [
+        "e3",
+        "e15"
+      ]
+    },
+    {
+      "object_id": "obj_4",
+      "name": "background panel",
+      "entity_kind": "surface_or_region",
+      "event_roles": [],
+      "material_phase": "not_applicable",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "not_applicable",
+      "evidence_refs": [
+        "e4"
+      ]
+    },
+    {
+      "object_id": "obj_5",
+      "name": "thin vertical line",
+      "entity_kind": "unknown",
+      "event_roles": [],
+      "material_phase": "unknown",
+      "physical_properties": [],
+      "initial_motion_state": "stationary",
+      "initial_integrity_state": "unknown",
+      "evidence_refs": []
+    }
+  ],
+  "process": {
+    "primary": {
+      "family": "relation_reconfiguration",
+      "type": "insertion",
+      "raw_type": "ball enters the open crate and ends mostly inside it",
+      "participants": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e7",
+        "e8",
+        "e10",
+        "e11",
+        "e12",
+        "e13",
+        "e17"
+      ]
+    },
+    "secondary": [
+      {
+        "family": "rigid_motion",
+        "type": "translation",
+        "raw_type": "ball translates downward, briefly upward, then downward again",
+        "participants": [
+          "obj_1"
+        ],
+        "evidence_refs": [
+          "e6",
+          "e9",
+          "e10"
+        ]
+      }
+    ],
+    "action": {
+      "family": "special",
+      "type": "none",
+      "raw_action": "no visible external intervention",
+      "actor_object_id": null,
+      "target_object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e5",
+        "e6"
+      ]
+    },
+    "temporal": {
+      "temporal_extent": "brief",
+      "temporal_structure": "single",
+      "change_profile": "mixed",
+      "process_scope": "scene_physics"
+    }
+  },
+  "impacts": [
+    {
+      "object_id": "obj_1",
+      "transitions": [
+        {
+          "axis": "motion",
+          "type": "motion_onset",
+          "raw_transition": "ball changes from stationary above the crate to moving downward",
+          "evidence_refs": [
+            "e5",
+            "e6"
+          ]
+        },
+        {
+          "axis": "relation",
+          "type": "containment_gain",
+          "raw_transition": "ball becomes mostly contained inside the crate",
+          "evidence_refs": [
+            "e7",
+            "e8",
+            "e11",
+            "e12",
+            "e13"
+          ]
+        },
+        {
+          "axis": "motion",
+          "type": "direction_change",
+          "raw_transition": "ball reverses from downward motion to a slight upward rise, then lowers again",
+          "evidence_refs": [
+            "e9",
+            "e10"
+          ]
+        },
+        {
+          "axis": "motion",
+          "type": "motion_arrest",
+          "raw_transition": "ball comes to a mostly stationary position inside the crate",
+          "evidence_refs": [
+            "e11",
+            "e12",
+            "e13"
+          ]
+        },
+        {
+          "axis": "optical_visibility",
+          "type": "visibility_decrease",
+          "raw_transition": "ball becomes partly hidden by the crate wall, handle opening, and front lattice",
+          "evidence_refs": [
+            "e7",
+            "e8",
+            "e12",
+            "e13",
+            "e17"
+          ]
+        }
+      ]
+    },
+    {
+      "object_id": "obj_2",
+      "transitions": [
+        {
+          "axis": "relation",
+          "type": "containment_gain",
+          "raw_transition": "crate comes to contain the ball within its open interior",
+          "evidence_refs": [
+            "e7",
+            "e8",
+            "e11",
+            "e13"
+          ]
+        }
+      ]
+    }
+  ],
+  "mechanisms": [
+    {
+      "family": "mechanical_forcing",
+      "type": "gravity",
+      "raw_mechanism": "downward motion of the ball is consistent with gravity acting on it",
+      "object_ids": [
+        "obj_1"
+      ],
+      "evidence_refs": [
+        "e6",
+        "e10",
+        "e11"
+      ]
+    },
+    {
+      "family": "mechanical_forcing",
+      "type": null,
+      "raw_mechanism": "interaction with the crate interior supports the ball and brings it to rest mostly inside the crate",
+      "object_ids": [
+        "obj_1",
+        "obj_2"
+      ],
+      "evidence_refs": [
+        "e7",
+        "e9",
+        "e10",
+        "e11"
+      ]
+    }
+  ]
+}

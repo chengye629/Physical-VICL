@@ -1,0 +1,299 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A blue spherical object moves downward from a holder and comes to rest partly embedded in a green mound on a tabletop.",
+  "raw_event_description": "At the start, a blue sphere is held near the top of the frame by a blue-and-black U-shaped holder above a green mound on a wooden tabletop. The scene remains still for many frames. Later, the sphere separates from the holder, moves downward through the air, contacts the green mound, and settles with its lower portion surrounded by the green material. The mound surface changes shape where the sphere contacts it, forming a visible depression and raised surrounding material.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The blue sphere, holder, green mound, tabletop, and background wall are visible before the motion begins.",
+      "The lower part of the holder is near the top edge but its relation to the sphere is visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "blue sphere",
+      "visible_form": "round blue ball-like object with a pale curved stripe or seam",
+      "material_description": "blue textured-looking surface with a lighter stripe; material type not directly identifiable",
+      "visible_properties": [
+        "spherical",
+        "blue",
+        "light stripe or seam",
+        "small compared with tabletop"
+      ],
+      "initial_motion_description": "stationary near the top center of the frame",
+      "initial_integrity_description": "appears intact as one continuous sphere",
+      "event_role_hints": [
+        "moves downward",
+        "contacts green mound",
+        "comes to rest on mound"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "green mound",
+      "visible_form": "low irregular pile of green granular or crumbly material",
+      "material_description": "bright green, rough, clumped surface texture",
+      "visible_properties": [
+        "irregular mound",
+        "rough surface",
+        "green",
+        "spread horizontally on tabletop"
+      ],
+      "initial_motion_description": "stationary on the tabletop",
+      "initial_integrity_description": "appears as a single loose mound with uneven edges",
+      "event_role_hints": [
+        "surface changes shape during contact with sphere",
+        "partly surrounds lower portion of sphere after contact"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "holder",
+      "visible_form": "blue-and-black U-shaped object hanging from above",
+      "material_description": "smooth blue and black visible surfaces; material type not directly identifiable",
+      "visible_properties": [
+        "U-shaped",
+        "blue outer parts",
+        "black edge or band",
+        "partly cropped by top frame edge"
+      ],
+      "initial_motion_description": "stationary at the top center holding or surrounding the sphere",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "sphere separates from it during the event",
+        "remains above after the sphere moves downward"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "tabletop",
+      "visible_form": "flat horizontal wooden surface",
+      "material_description": "brown wood-like surface with visible grain",
+      "visible_properties": [
+        "flat",
+        "horizontal",
+        "brown",
+        "wood-grain pattern"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears intact and unchanged",
+      "event_role_hints": [
+        "supports the green mound"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "background wall",
+      "visible_form": "plain vertical light-colored background",
+      "material_description": "light gray or off-white matte-looking surface",
+      "visible_properties": [
+        "flat",
+        "vertical",
+        "plain"
+      ],
+      "initial_motion_description": "stationary",
+      "initial_integrity_description": "appears unchanged",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is positioned above the green mound",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "is adjacent to and partly within the opening of the holder",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "rests on the tabletop",
+      "object_id": "obj_4",
+      "evidence_refs": [
+        "e3"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "The blue sphere is centered above the green mound with empty space visible between them."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The blue-and-black U-shaped holder surrounds the upper sides of the blue sphere near the top of the frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "The green mound lies on the wooden tabletop."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The blue sphere, green mound, and holder remain in the same visible positions for multiple frames."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "The blue sphere is no longer enclosed by the lower part of the holder."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The blue sphere appears lower in the frame than before."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The blue sphere appears motion-blurred during its downward movement."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The blue sphere contacts the top of the green mound."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The green mound surface is visibly displaced around the sphere at the contact area."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "The blue sphere is stationary on the green mound with its lower part surrounded by green material."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "late",
+      "observation": "The green mound has a depression beneath the blue sphere and raised uneven edges around it."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "late",
+      "observation": "The holder remains above the sphere after the sphere has settled on the mound."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed relative to the tabletop and background wall."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The sphere is held above the mound.",
+        "The mound is stationary on the tabletop."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The blue sphere remains stationary above the mound."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The green mound remains stationary with an uneven top surface."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The holder remains at the top of the frame around the sphere."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "observations": [
+        "The sphere separates from the holder and moves downward.",
+        "The sphere contacts the green mound.",
+        "The green mound changes shape at the contact area."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The blue sphere moves downward from the holder toward the mound."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The green mound surface deforms around the contacting sphere."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The holder remains above while the sphere moves away from it."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e10",
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The sphere is at rest on the mound.",
+        "The mound remains altered around the sphere.",
+        "The holder is still visible above."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The blue sphere remains stationary on the green mound."
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "The green mound holds a visible depression around the sphere."
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "The holder remains suspended above the resting sphere."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e13"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The exact connection between the sphere and the holder before separation is not fully visible because the top of the setup is partly cropped."
+  ]
+}

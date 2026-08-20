@@ -1,0 +1,324 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "An illuminated figurine slowly changes orientation on a tabletop while its dark wall shadow changes shape.",
+  "raw_event_description": "At the start, a bright white figurine is centered on a dark circular base in front of a wall, with a large dark shadow visible inside a circular light patch on the wall. Over the video, the figurine's visible side changes from a front-facing view to a side view and then toward a back-facing view. The wall shadow changes at the same time, shifting from a more symmetric outline to a profile-like outline and then to a broader back-like outline. The camera view remains fixed.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "continuous",
+    "key_object_visibility": "partial",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The central figurine, base, tabletop, wall, bright light area, and shadow are visible.",
+      "Bright illumination overexposes parts of the figurine and hides some surface detail.",
+      "The first frame already shows the ongoing orientation-change process rather than a distinct onset."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "white figurine",
+      "visible_form": "Small seated or kneeling robed human-like figurine with head, arms, and draped lower shape.",
+      "material_description": "Bright white, glossy or reflective-looking surface with strong highlights.",
+      "visible_properties": [
+        "rigid-looking outline",
+        "three-dimensional relief details",
+        "brightly illuminated",
+        "overexposed in lower front areas"
+      ],
+      "initial_motion_description": "Already slowly changing visible orientation at the beginning.",
+      "initial_integrity_description": "Appears intact with no visible breakage or separation.",
+      "event_role_hints": [
+        "main changing object",
+        "casts or accompanies changing wall silhouette"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "dark circular base",
+      "visible_form": "Low dark round platform beneath the figurine with a bright light source visible near the front.",
+      "material_description": "Dark, smooth-looking base; bright white luminous area at front center.",
+      "visible_properties": [
+        "circular top edge",
+        "low profile",
+        "supports figurine",
+        "front portion brightly lit"
+      ],
+      "initial_motion_description": "No separate motion of the base is clearly distinguishable from the figurine's changing orientation.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "supporting platform",
+        "contains or holds visible bright light"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "wall",
+      "visible_form": "Flat vertical background surface behind the tabletop.",
+      "material_description": "Light-colored matte-looking surface.",
+      "visible_properties": [
+        "receives circular illuminated area",
+        "receives dark silhouette"
+      ],
+      "initial_motion_description": "Stationary.",
+      "initial_integrity_description": "Appears continuous and intact.",
+      "event_role_hints": [
+        "background for visible shadow"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "wall shadow",
+      "visible_form": "Large dark silhouette on the wall behind the figurine, much taller than the figurine.",
+      "material_description": "Dark projected region with no material surface cues of its own.",
+      "visible_properties": [
+        "soft-edged in places",
+        "changes outline over time",
+        "located within a circular bright patch on the wall"
+      ],
+      "initial_motion_description": "Its outline is already changing at the beginning.",
+      "initial_integrity_description": "Continuous dark silhouette region.",
+      "event_role_hints": [
+        "visible optical change associated with figurine orientation"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "tabletop",
+      "visible_form": "Horizontal wooden-looking surface under the base.",
+      "material_description": "Brown surface with visible linear grain-like markings.",
+      "visible_properties": [
+        "flat",
+        "stationary",
+        "supports base"
+      ],
+      "initial_motion_description": "Stationary.",
+      "initial_integrity_description": "Appears intact.",
+      "event_role_hints": [
+        "support surface"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "black cord",
+      "visible_form": "Thin dark cable extending from the base toward the right side of the frame.",
+      "material_description": "Dark flexible-looking line.",
+      "visible_properties": [
+        "thin",
+        "curved",
+        "stationary-looking"
+      ],
+      "initial_motion_description": "No visible motion.",
+      "initial_integrity_description": "Appears continuous.",
+      "event_role_hints": [
+        "attached or adjacent to base"
+      ]
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_1",
+      "relation_description": "The figurine is positioned on top of the circular base.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_2",
+      "relation_description": "The base rests on the tabletop.",
+      "object_id": "obj_5",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "The shadow is visible on the wall behind the figurine.",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_6",
+      "relation_description": "The cord extends from the base area toward the right side of the frame.",
+      "object_id": "obj_2",
+      "evidence_refs": [
+        "e4"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A bright white figurine is centered on a dark circular base."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "The dark circular base is on a brown tabletop."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "A large dark silhouette is visible on the wall behind the figurine."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "A thin dark cord extends from the base area toward the right."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "early",
+      "observation": "The figurine initially shows a mostly frontal view with a relatively symmetric visible outline."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "early",
+      "observation": "The wall shadow initially has a tall, relatively symmetric outline above the figurine."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "The figurine later shows a side-facing view with the head and body profile more visible."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The wall shadow later forms a profile-like human outline with a protruding front-side shape."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "late",
+      "observation": "Near the end, the figurine shows more of its back, including a draped rear surface."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "late",
+      "observation": "Near the end, the wall shadow becomes broader and more centered behind the figurine."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "A circular bright patch remains visible on the wall throughout the video."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The camera framing remains fixed on the tabletop, figurine, base, wall, and shadow."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "observations": [
+        "The setup is already illuminated and the shadow is already present."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The figurine presents a mostly frontal view."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The shadow appears tall and relatively symmetric on the wall."
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e7",
+        "e8",
+        "e11"
+      ],
+      "observations": [
+        "The visible orientation of the figurine has changed from the early frontal view."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The figurine presents a side-facing profile."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The shadow outline changes into a profile-like shape."
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "observations": [
+        "The figurine continues changing orientation until more of its rear side is visible."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "The figurine presents a back-facing view with a draped rear surface."
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "The shadow becomes broader and more centered behind the figurine."
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The bright circular wall patch remains present while the figurine and shadow outlines change."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_3",
+          "observation": "The wall remains stationary in the frame."
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "The tabletop remains stationary in the frame."
+        },
+        {
+          "object_id": "obj_6",
+          "observation": "The cord remains in the same visible position."
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e12"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "The very bright light obscures fine details on the lower front of the figurine.",
+    "The base and figurine overlap visually, so separate motion of the base is not clearly distinguishable."
+  ]
+}

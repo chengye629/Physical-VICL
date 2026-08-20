@@ -1,0 +1,363 @@
+{
+  "schema_version": "observable_record_v7",
+  "event_summary": "A tabletop Newton-cradle-like object remains still at first, then its end metal spheres alternately swing away from and back toward the central row.",
+  "raw_event_description": "The scene opens on a metal-frame cradle with five shiny hanging spheres aligned above a black base on a wooden table. For an extended early interval the spheres appear still and closely aligned. Later, a left-side sphere is visible separated to the left and moving toward the row; after it reaches the row, the right-side sphere is visible separated to the right. The right-side sphere moves outward and then back toward the row. The left-side and right-side end spheres then continue alternating between separated side positions and positions near the central row for several visible cycles, while the central spheres remain close together near the bottom of the frame.",
+  "observed_scope": "scene_physics",
+  "first_frame": {
+    "phase": "pre_event",
+    "key_object_visibility": "clear",
+    "setup_clarity": "clear",
+    "reasons": [
+      "The cradle frame, base, hanging strings, and aligned metal spheres are visible.",
+      "The spheres appear still in the first frame.",
+      "The tabletop and surrounding scene are visible."
+    ]
+  },
+  "objects": [
+    {
+      "id": "obj_1",
+      "name": "cradle frame and base",
+      "visible_form": "rectangular chrome-colored support frame mounted on a glossy black rectangular base",
+      "material_description": "shiny metal-looking frame with reflective black base",
+      "visible_properties": [
+        "upright",
+        "rectangular",
+        "reflective",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "supports the hanging spheres"
+      ]
+    },
+    {
+      "id": "obj_2",
+      "name": "left outer sphere",
+      "visible_form": "polished metal sphere suspended by thin vertical lines at the left end of the sphere row",
+      "material_description": "shiny mirror-like metallic surface",
+      "visible_properties": [
+        "round",
+        "reflective",
+        "suspended"
+      ],
+      "initial_motion_description": "initially appears still as part of the aligned row",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "later appears separated to the left of the row"
+      ]
+    },
+    {
+      "id": "obj_3",
+      "name": "central spheres",
+      "visible_form": "three polished metal spheres suspended in the middle of the row",
+      "material_description": "shiny mirror-like metallic surfaces",
+      "visible_properties": [
+        "round",
+        "reflective",
+        "suspended",
+        "closely spaced"
+      ],
+      "initial_motion_description": "initially appear still",
+      "initial_integrity_description": "appear intact",
+      "event_role_hints": [
+        "remain near the center during the visible alternation of the end spheres"
+      ]
+    },
+    {
+      "id": "obj_4",
+      "name": "right outer sphere",
+      "visible_form": "polished metal sphere suspended by thin vertical lines at the right end of the sphere row",
+      "material_description": "shiny mirror-like metallic surface",
+      "visible_properties": [
+        "round",
+        "reflective",
+        "suspended"
+      ],
+      "initial_motion_description": "initially appears still as part of the aligned row",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": [
+        "later appears separated to the right of the row"
+      ]
+    },
+    {
+      "id": "obj_5",
+      "name": "suspension lines",
+      "visible_form": "thin vertical lines extending from the upper frame to the metal spheres",
+      "material_description": "thin pale or translucent-looking strands",
+      "visible_properties": [
+        "thin",
+        "vertical",
+        "attached to spheres"
+      ],
+      "initial_motion_description": "no visible motion distinct from the spheres",
+      "initial_integrity_description": "appear intact",
+      "event_role_hints": [
+        "move with the suspended spheres when the end spheres separate"
+      ]
+    },
+    {
+      "id": "obj_6",
+      "name": "wooden tabletop",
+      "visible_form": "flat tan wooden surface beneath the cradle",
+      "material_description": "wood grain visible",
+      "visible_properties": [
+        "flat",
+        "tan",
+        "stationary"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    },
+    {
+      "id": "obj_7",
+      "name": "blue and black item",
+      "visible_form": "blue and black object lying on the tabletop to the left of the cradle",
+      "material_description": "blue surface with black edging or adjacent black piece",
+      "visible_properties": [
+        "flat-looking",
+        "stationary",
+        "partially visible"
+      ],
+      "initial_motion_description": "no visible motion",
+      "initial_integrity_description": "appears intact",
+      "event_role_hints": []
+    }
+  ],
+  "initial_relation_observations": [
+    {
+      "subject_id": "obj_2",
+      "relation_description": "is aligned with and adjacent to the central spheres at the left side of the row",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_4",
+      "relation_description": "is aligned with and adjacent to the central spheres at the right side of the row",
+      "object_id": "obj_3",
+      "evidence_refs": [
+        "e2"
+      ]
+    },
+    {
+      "subject_id": "obj_5",
+      "relation_description": "extends between the upper frame and the hanging spheres",
+      "object_id": "obj_1",
+      "evidence_refs": [
+        "e3"
+      ]
+    },
+    {
+      "subject_id": "obj_1",
+      "relation_description": "rests on the wooden tabletop",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e1"
+      ]
+    },
+    {
+      "subject_id": "obj_7",
+      "relation_description": "lies on the tabletop to the left of the cradle",
+      "object_id": "obj_6",
+      "evidence_refs": [
+        "e1"
+      ]
+    }
+  ],
+  "evidence_bank": [
+    {
+      "evidence_id": "e1",
+      "stage": "early",
+      "observation": "A metal-frame cradle with a glossy black base sits on a wooden tabletop."
+    },
+    {
+      "evidence_id": "e2",
+      "stage": "early",
+      "observation": "Five shiny metal spheres hang in a close horizontal row near the bottom of the cradle frame."
+    },
+    {
+      "evidence_id": "e3",
+      "stage": "early",
+      "observation": "Thin suspension lines run downward from the top of the frame to the hanging spheres."
+    },
+    {
+      "evidence_id": "e4",
+      "stage": "early",
+      "observation": "The five spheres remain visually still for many early frames."
+    },
+    {
+      "evidence_id": "e5",
+      "stage": "middle",
+      "observation": "A metal sphere is visible separated to the left of the central row."
+    },
+    {
+      "evidence_id": "e6",
+      "stage": "middle",
+      "observation": "The left-side separated sphere moves rightward toward the aligned spheres."
+    },
+    {
+      "evidence_id": "e7",
+      "stage": "middle",
+      "observation": "A metal sphere is visible separated to the right of the row."
+    },
+    {
+      "evidence_id": "e8",
+      "stage": "middle",
+      "observation": "The right-side separated sphere appears farther right and higher than the row."
+    },
+    {
+      "evidence_id": "e9",
+      "stage": "middle",
+      "observation": "The right-side separated sphere later moves back toward the row."
+    },
+    {
+      "evidence_id": "e10",
+      "stage": "middle",
+      "observation": "A metal sphere is again visible separated to the left of the row."
+    },
+    {
+      "evidence_id": "e11",
+      "stage": "continuous",
+      "observation": "Separated side positions alternate between the left side and the right side over several cycles."
+    },
+    {
+      "evidence_id": "e12",
+      "stage": "continuous",
+      "observation": "The central visible spheres remain close together near the bottom of the frame while end-sphere separations occur."
+    },
+    {
+      "evidence_id": "e13",
+      "stage": "late",
+      "observation": "Near the end, a metal sphere is visible separated to the right of the row."
+    },
+    {
+      "evidence_id": "e14",
+      "stage": "continuous",
+      "observation": "The camera viewpoint remains fixed relative to the tabletop and cradle."
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "early",
+      "evidence_refs": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "observations": [
+        "The cradle and tabletop are clearly visible.",
+        "The hanging spheres are aligned and still."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_1",
+          "observation": "remains stationary on the tabletop"
+        },
+        {
+          "object_id": "obj_2",
+          "observation": "appears still at the left end of the row"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "appear still in the center of the row"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "appears still at the right end of the row"
+        }
+      ]
+    },
+    {
+      "stage": "middle",
+      "evidence_refs": [
+        "e5",
+        "e6",
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "observations": [
+        "A left-side sphere separates from the row and moves toward it.",
+        "A right-side sphere separates from the row and moves outward, then back toward the row.",
+        "A left-side separated sphere appears again after the right-side sphere returns toward the row."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "is visible away from the row on the left, then moves toward the central row"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "is visible away from the row on the right, moves farther right and higher, then moves back toward the row"
+        },
+        {
+          "object_id": "obj_3",
+          "observation": "remain close together near the bottom while the end spheres change side positions"
+        }
+      ]
+    },
+    {
+      "stage": "continuous",
+      "evidence_refs": [
+        "e11",
+        "e12"
+      ],
+      "observations": [
+        "The side-separated sphere alternates between left and right sides for multiple visible cycles.",
+        "The central spheres remain grouped near the center."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_2",
+          "observation": "repeatedly appears separated to the left and then near the central row"
+        },
+        {
+          "object_id": "obj_4",
+          "observation": "repeatedly appears separated to the right and then near the central row"
+        },
+        {
+          "object_id": "obj_5",
+          "observation": "the suspension lines attached to separated end spheres tilt with those spheres during sideward positions"
+        }
+      ]
+    },
+    {
+      "stage": "late",
+      "evidence_refs": [
+        "e13"
+      ],
+      "observations": [
+        "The alternating end-sphere motion is still visible near the end."
+      ],
+      "object_events": [
+        {
+          "object_id": "obj_4",
+          "observation": "is visible separated on the right side near the end of the clip"
+        }
+      ]
+    }
+  ],
+  "camera_behavior": {
+    "motion_type": "static",
+    "focus_change": "none",
+    "evidence_refs": [
+      "e14"
+    ]
+  },
+  "technical_quality": {
+    "temporal_coverage": "complete",
+    "event_clarity": "clear",
+    "entity_trackability": "good",
+    "occlusion": "partial",
+    "scene_cut": "no",
+    "camera_motion": "low"
+  },
+  "unresolved_observations": [
+    "Exact contact moments between adjacent shiny spheres are difficult to separate visually because the spheres overlap and reflect the surroundings."
+  ]
+}
