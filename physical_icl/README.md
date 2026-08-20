@@ -37,6 +37,96 @@ The 5000-target run used for the current pair pool has:
 
 Copy-risk / near-duplicate labeling is still pending. Therefore the current pair pool is suitable for retrieval analysis and training-pipeline smoke tests, but should not yet be used to claim final generalization results or to construct a leakage-sensitive validation split.
 
+## WISA data preparation and pair resolution
+
+### Step 1 — Pilot annotation on `wisa_test100`
+
+Before downloading and processing the full WISA-80K data pool, first read the videos in [`data/wisa_test100`](https://huggingface.co/datasets/Vincwng/Physical-ICL/tree/main/data/wisa_test100) and use them for pilot annotation.
+
+### WISA-80K Data Download
+
+The WISA-80K videos used in this project are downloaded from the **historical snapshot of the official Hugging Face repository `qihoo360/WISA-80K`**, since the current `main` branch no longer contains the video archives. We pin revision `8fbd4a1d1a83bdd9e1f58187d1974c3fbb3a0d37`. The original metadata is `data/wisa-80k.json`, where `video_name` is used to derive the sample ID and `captions` provides the original TI2V instruction. Our current data pool uses video shards `7, 18, 29, 43, 54, 67, 76, 80, 91, 98, 101–106`. Large ZIP files are downloaded with `aria2c` from the pinned revision, e.g.:
+
+```bash
+REV=8fbd4a1d1a83bdd9e1f58187d1974c3fbb3a0d37
+
+# metadata
+HF_ENDPOINT=https://hf-mirror.com hf download \
+  qihoo360/WISA-80K data/wisa-80k.json \
+  --repo-type dataset \
+  --revision "$REV" \
+  --local-dir hf_download/wisa80k_8fbd4a1
+
+# example video shard
+aria2c -c -x 8 -s 8 \
+  -o 101.zip \
+  "https://hf-mirror.com/datasets/qihoo360/WISA-80K/resolve/${REV}/data/videos/101.zip"
+```
+
+When extracting multiple shards, keep them in separate shard directories rather than merging them into one flat directory. A small number of identical filenames occur across official shards; therefore, dataset construction checks duplicate `sample_id`s by SHA256, keeps one copy when the bytes are identical, and excludes IDs whose corresponding files have different contents.
+
+### Mapping WISA Videos to Query–Demo Pairs
+
+All mappings use the WISA video filename as the stable identifier. For each WISA metadata entry,
+
+```text
+sample_id = Path(video_name).stem
+```
+
+For example,
+
+```text
+video_name:
+1a4303595cd4c801f8ed99abeb75dd5acf58328a22950f120ec047fd3209189d.mp4
+
+sample_id:
+1a4303595cd4c801f8ed99abeb75dd5acf58328a22950f120ec047fd3209189d
+```
+
+The final pair files reference videos only by these IDs:
+
+```text
+query_id -> query video's sample_id
+demo_id  -> demo video's sample_id
+```
+
+Therefore, to resolve a pair, first build a local lookup from the downloaded WISA videos:
+
+```python
+sample_id_to_path = {
+    Path(video_path).stem: video_path
+}
+```
+
+and then retrieve the two videos with:
+
+```python
+query_video = sample_id_to_path[row["query_id"]]
+demo_video  = sample_id_to_path[row["demo_id"]]
+```
+
+The corresponding original TI2V instruction is obtained by joining the same `sample_id` with `wisa-80k.json`, where `video_name` provides the ID and `captions` provides the original caption.
+
+In the provided processed metadata, `video_metadata.jsonl` already performs this join:
+
+```text
+sample_id
+instruction          # original WISA caption
+physics_card         # full Physics Card v7
+```
+
+while `train_pairs.jsonl` and `test100_1demo.jsonl` contain the Query–Demo relations:
+
+```text
+query_id
+demo_id
+retrieval scores / split metadata
+```
+
+Thus the common key across **WISA videos, original captions, Physics Cards, and Query–Demo mappings is `sample_id`**. No machine-specific video path is required.
+
+Note: in the older raw retrieval file `pairs_clean_v21.jsonl`, the demo endpoint is stored under `sample_id` rather than `demo_id`. In the final exported training/test data, this has been normalized to `demo_id`.
+
 ## Pipeline
 
 ### Stage 1 — Pass A: observable video evidence
