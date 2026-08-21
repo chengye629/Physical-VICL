@@ -261,7 +261,7 @@ STRICT RULES:
 9. A camera-only video must use scope="camera_only", primary family="special", type="none", and no scene impacts.
 10. Use exact object IDs and evidence IDs from Pass A.
 11. Do not output object relation triples. Use event_roles such as support, container, and medium instead.
-12. Prefer one clear primary process family. Use secondary processes only for distinct co-occurring processes.
+12. Choose the primary process from the core event described by Pass A, prioritizing the event summary and its supporting temporal evidence. Do not promote a brief, background, preparatory, or incidental event merely because it maps cleanly to an ontology label. Use secondary processes only for distinct co-occurring processes that materially affect the core event.
 13. multi_stage means two or more qualitatively different important physical stages, not ordinary before/during/after.
 14. Static is not a process family. If no scene physics occurs, use primary special/none and temporal static/not_applicable/none.
 15. Separate combustion from explosive release:

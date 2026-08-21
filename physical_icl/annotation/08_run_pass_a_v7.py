@@ -51,7 +51,9 @@ def build_prompt(previous_errors: list[str] | None) -> str:
     return f"""
 You are creating the observable evidence record for Physics Card v7.
 
-Inspect the full video once. Record only visible facts. Do not normalize them into a physics ontology and do not infer hidden mechanisms such as gravity, pressure, friction, elasticity, heat transfer, or chemical energy release.
+Inspect the full video once. Before writing, identify the core visible event: the interaction or state change that best explains the clip as a whole. Center the event summary, description, objects, evidence, and timeline on that core event; include brief, background, preparatory, or incidental events only when they affect or contextualize it.
+
+Record only visible facts. Do not normalize them into a physics ontology and do not infer hidden mechanisms such as gravity, pressure, friction, elasticity, heat transfer, or chemical energy release.
 
 Do not use captions, filenames, dataset labels, or external metadata.
 Do not output confidence, probability, certainty, likelihood, or confidence scores.
