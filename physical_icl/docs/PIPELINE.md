@@ -14,6 +14,13 @@ Purpose: map Pass A evidence into Object / Process / Impact / Mechanism using th
 
 Pass B uses an LLM, then deterministic code normalizes and validates the generated card.
 
+Two explicit protocols are shipped:
+
+- legacy V7 alpha-3: `09_run_pass_b_v7_alpha3.py`;
+- recommended enhanced v1: `09_run_pass_b_v7_alpha3_enhanced.py`, identified in cards and provenance as `pass_b_v7_alpha3_enhanced_v1`.
+
+They share the ontology and base schema but must use separate output directories. See the README version table before running annotation.
+
 ## 3. Audit
 
 Purpose: expose schema failures, unresolved fields, inconsistent primary process choices, and technical-quality issues.

@@ -10,6 +10,8 @@ Minimum fields:
 
 Additional metadata may exist but Pass A does not use it in the prompt.
 
+For WISA, build this file with `tools/build_wisa_annotation_manifest.py`. The generated `annotation_manifest.jsonl` contains machine-local absolute video paths, while the accompanying `wisa_metadata.jsonl` keeps the portable `sample_id` to original-caption join. Captions are not copied into the runtime manifest.
+
 ## Physics Card payload
 
 One JSON file per sample. Successful payloads contain:
@@ -18,6 +20,8 @@ One JSON file per sample. Successful payloads contain:
 - `observable/pass_a source`
 - `physics_card`
 - deterministic derived/audit fields
+
+For `pass_b_v7_alpha3_enhanced_v1`, `physics_card.schema_version` remains `physics_card_v7_alpha3` for field compatibility, while `physics_card.annotation_protocol_version` identifies the enhanced annotation behavior. Legacy cards do not contain this protocol field. Never merge legacy and enhanced card files into one annotation root.
 
 ## Retrieval index
 
