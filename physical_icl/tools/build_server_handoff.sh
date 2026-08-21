@@ -176,7 +176,7 @@ x={
  'schema':'Physics Card v7 alpha-3',
  'historical_primary_annotator':'Qwen3-VL-8B-Instruct',
  'historical_model_revision':'not recorded in card payloads',
- 'current_recommended_32b_protocol':'same 32B Qwen3-VL checkpoint for Pass A and Pass B; optional Pass-A-only ablation',
+ 'current_annotation_protocol':'GPT-5.5 Agent for Pass A and enhanced Pass B; exact model revision recorded per run',
  'retrieval_thresholds':{'language':0.84,'process':0.55,'physical':0.55},
  'retrieval':{'language_top_k':500,'demo_max':10,'mmr_lambda':0.85},
  'copy_risk':'pending; not included in clean_v21 semantics',

@@ -10,7 +10,7 @@ def read_jsonl(p):
         if line.strip(): out.append(json.loads(line))
     return out
 
-ap=argparse.ArgumentParser(description='Build process-family / resolution-level balanced overlap subset for 8B-vs-32B comparison.')
+ap=argparse.ArgumentParser(description='Build a process-family / resolution-level balanced overlap subset for annotator comparison.')
 ap.add_argument('--manifest',type=Path,required=True); ap.add_argument('--eligible-index',type=Path,required=True); ap.add_argument('--output',type=Path,required=True); ap.add_argument('--count',type=int,default=500); ap.add_argument('--seed',type=int,default=20260808); args=ap.parse_args()
 manifest={str(r['sample_id']):r for r in read_jsonl(args.manifest)}; idx=read_jsonl(args.eligible_index); rng=random.Random(args.seed)
 groups=defaultdict(list)

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""Enhanced Pass B protocol reference plus a historical local-Qwen CLI."""
+
 from __future__ import annotations
 
 import argparse

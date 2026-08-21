@@ -23,44 +23,43 @@ The core scientific stages are **not** merged into one monolithic program becaus
 The package does simplify historical implementation details:
 
 - the frozen alpha-3 ontology is shipped directly as `annotation/physics_ontology_v7_alpha3.yaml`; ontology-builder chains are moved to `legacy_reference/` and are not needed for normal use;
-- Pass A/B no longer depend on an external `scripts/annotation/v6_3/` directory; Qwen3-VL model I/O is centralized in `annotation/qwen3vl_runner.py`;
+- the historical local-model implementation no longer depends on an external `scripts/annotation/v6_3/` directory; the current WISA campaign is run by the colleague's GPT-5.5 Agent;
 - machine-specific `/mnt/...` paths are removed from launchers and mappings;
-- the main workflow uses two main entry points: 4-GPU annotation and retrieval;
+- the current annotation workflow uses the checked-in Pass A/Pass B protocol code as the GPT-5.5 Agent's specification;
 - the training mapping builder is included and derives query/demo mode from each endpoint's own retrieval-index row.
 
 ## Annotation protocol versions — read before running
 
 This package intentionally keeps two Pass B protocols. They share the frozen Physics Card V7 alpha-3 ontology and common card fields, but they are different annotation protocols and must not share an output directory.
 
-| Protocol | Pass B script | Launcher | Output identification | Intended use |
-| --- | --- | --- | --- | --- |
-| Legacy V7 alpha-3 | `annotation/09_run_pass_b_v7_alpha3.py` | `annotation/run_annotation_4gpu.sh` | no `annotation_protocol_version` field | Reproduce or continue an explicitly legacy run only |
-| Enhanced V7 alpha-3 v1 | `annotation/09_run_pass_b_v7_alpha3_enhanced.py` | `annotation/run_annotation_4gpu_enhanced.sh` | `annotation_protocol_version: pass_b_v7_alpha3_enhanced_v1` | **Recommended for all new annotation runs** |
+| Protocol | Pass B protocol source | Output identification | Intended use |
+| --- | --- | --- | --- |
+| Legacy V7 alpha-3 | `annotation/09_run_pass_b_v7_alpha3.py` | no `annotation_protocol_version` field | Optional GPT-5.5 comparison only |
+| Enhanced V7 alpha-3 v1 | `annotation/09_run_pass_b_v7_alpha3_enhanced.py` | `annotation_protocol_version: pass_b_v7_alpha3_enhanced_v1` | **Current GPT-5.5 annotation protocol** |
 
 The package release is recorded in `VERSION`; the card schema remains `physics_card_v7_alpha3`; the annotation behavior is identified separately by `annotation_protocol_version`. Do not infer the annotation protocol from the schema version alone.
 
-For enhanced runs:
+For current GPT-5.5 enhanced runs:
 
-- use a new `ANNOTATION_ROOT`, preferably ending in `annotation_v7_alpha3_enhanced_v1`;
-- never point the enhanced launcher at a legacy or unmarked annotation directory;
-- keep the generated `PASS_B_PROTOCOL` and `PROVENANCE.json` with the output;
+- use separate result directories for legacy and enhanced cards;
+- keep `PROVENANCE.json` with the output;
 - verify that every successful card contains `annotation_protocol_version: pass_b_v7_alpha3_enhanced_v1`.
 
-The enhanced launcher refuses to use a non-empty unmarked output directory or a directory marked with a different protocol. Detailed field semantics and compatibility rules are in `docs/PASS_B_ENHANCED_PROTOCOL.md`.
+Detailed field semantics and compatibility rules are in `docs/PASS_B_ENHANCED_PROTOCOL.md`.
 
 ## Current WISA annotation task
 
-This is a new annotation task. It replaces the old `wisa_test100` pilot, historical 5,000-video status, and existing training/Query-Demo files as instructions for what to annotate.
+This is a new **GPT-5.5 annotation task**. It replaces the old `wisa_test100` pilot, historical 5,000-video status, existing training/Query-Demo files, and local Qwen experiments as instructions for what to annotate.
 
 Run the task in this order:
 
-1. annotate `data/wisa_test100_v2`;
-2. download and annotate the selected official WISA ZIP shards;
+1. annotate `data/wisa_test100_v2` with GPT-5.5;
+2. download and annotate the selected official WISA ZIP shards with GPT-5.5;
 3. optionally download more official ZIP shards and annotate them using the same preparation rules.
 
-The recommended protocol for all new outputs is `pass_b_v7_alpha3_enhanced_v1`.
+The annotation protocol is `pass_b_v7_alpha3_enhanced_v1`. The model is GPT-5.5 for both Pass A and Pass B. Record the exact GPT-5.5 model/revision exposed by the colleague's Agent in the run provenance.
 
-### Step 1 — annotate `wisa_test100_v2`
+### Step 1 — prepare `wisa_test100_v2`
 
 The current test set is frozen at:
 
@@ -102,42 +101,48 @@ python tools/build_wisa_test_v2_manifest.py \
 
 The builder requires exactly the frozen 100 IDs and writes `annotation_manifest.jsonl`, `test_v2_metadata.jsonl`, `build_report.json`, and `build_summary.json`. Confirm that `manifest_rows=100`, `count_matches=true`, and `id_set_matches=true`.
 
-Create a config with a new output root:
+### Step 2 — annotate test_v2 with GPT-5.5
 
-```bash
-cp config/example.env config/test_v2.enhanced.env
-```
+The colleague's GPT-5.5 Agent should read this README and the protocol code, then process every row in `annotation_manifest.jsonl`:
+
+1. inspect the video at `video_path`;
+2. produce Pass A using the prompt and `observable_record_v7` schema in `annotation/08_run_pass_a_v7.py`;
+3. produce Pass B from that Pass A using `annotation/09_run_pass_b_v7_alpha3_enhanced.py` and `annotation/physics_ontology_v7_alpha3.yaml`;
+4. write one JSON file per `sample_id`.
+
+Use:
 
 ```text
-PROJECT_ROOT=/absolute/path/to/your/workspace
-QWEN_MODEL=/absolute/path/to/Qwen3-VL-32B-Instruct
-MANIFEST=/absolute/path/to/physical_icl/data/campaign_wisa_test100_v2/annotation_manifest.jsonl
-ANNOTATION_ROOT=/absolute/path/to/outputs/wisa_test100_v2_enhanced_v1
-GPU_LIST="0 1 2 3"
+results/annotation_gpt55_wisa_test_v2/
+├── pass_a/<sample_id>.json
+├── pass_b/<sample_id>.json
+└── PROVENANCE.json
 ```
 
-Run the test_v2 annotation:
+The Agent must use GPT-5.5, not the local Qwen runner or a Qwen 4-GPU launcher. Captions are not annotation input. Pass A and Pass B must focus on the video's central physical event rather than incidental secondary motion.
 
-```bash
-bash annotation/run_annotation_4gpu_enhanced.sh config/test_v2.enhanced.env
+Each enhanced Pass B result must contain:
+
+```text
+schema_version: physics_card_v7_alpha3
+annotation_protocol_version: pass_b_v7_alpha3_enhanced_v1
 ```
 
-### Optional — also run legacy alpha-3 on the same Pass A
+The existing `results/annotation_gpt55_wisa/` directory is an older GPT-5.5 output-format example, not the input set for this new task.
 
-The legacy alpha-3 Pass B can reuse the completed test_v2 Pass A, so the video does not need to be processed twice:
+### Optional — also produce legacy alpha-3 Pass B
 
-```bash
-bash annotation/run_legacy_pass_b_4gpu_from_pass_a.sh \
-  config/test_v2.enhanced.env \
-  /absolute/path/to/outputs/wisa_test100_v2_enhanced_v1/combined/pass_a \
-  /absolute/path/to/outputs/wisa_test100_v2_legacy_alpha3
+The Agent can reuse the completed GPT-5.5 Pass A files and apply the original Pass B protocol in `annotation/09_run_pass_b_v7_alpha3.py`. The videos do not need to be inspected again.
+
+Write this optional comparison separately:
+
+```text
+results/annotation_gpt55_wisa_test_v2/pass_b_legacy_alpha3/<sample_id>.json
 ```
 
-This runs only the original `09_run_pass_b_v7_alpha3.py` and writes a separate legacy result. Legacy and enhanced cards must use separate output roots. They may be part of the same test_v2 experiment, but do not run both Pass B jobs concurrently on the same GPUs.
+Do not mix legacy cards with enhanced `pass_b/` cards. For the full pool, produce enhanced Pass B only unless a full legacy comparison is explicitly requested.
 
-This comparison is optional. For the full pool, use enhanced only unless a full legacy comparison is explicitly requested, because running both protocols approximately doubles Pass B inference.
-
-### Step 2 — download the initial full WISA shards
+### Step 3 — download the initial full WISA shards
 
 Use the historical official WISA snapshot:
 
@@ -181,7 +186,7 @@ done
 
 Keep every shard in its own extracted directory. Do not flatten them: a small number of identical filenames occur across official shards.
 
-### Step 3 — join videos with metadata and run full annotation
+### Step 4 — join full-pool videos with metadata
 
 For official WISA archives, the stable join is:
 
@@ -191,7 +196,7 @@ sample_id = Path(local_video_path).stem
 instruction = first non-empty caption in metadata.captions
 ```
 
-Build the full annotation manifest:
+Build the annotation-ready manifest:
 
 ```bash
 python tools/build_wisa_annotation_manifest.py \
@@ -204,37 +209,31 @@ The outputs are:
 
 | File | Purpose |
 | --- | --- |
-| `annotation_manifest.jsonl` | Runtime `sample_id` and absolute local `video_path` used by Pass A |
+| `annotation_manifest.jsonl` | Runtime `sample_id` and absolute local `video_path` |
 | `wisa_metadata.jsonl` | Portable `sample_id`, original caption, filename, and source-shard join |
 | `duplicate_report.json` | Identical/conflicting filenames, missing videos, and orphan videos |
 | `build_summary.json` | Counts and SHA256 hashes |
 
-The runtime manifest deliberately excludes captions, so annotation remains based on video evidence. Duplicate IDs are checked by SHA256: identical bytes keep one path; different bytes under the same ID are excluded.
+The runtime manifest deliberately excludes captions, so GPT-5.5 annotation remains based on video evidence. Duplicate IDs are checked by SHA256: identical bytes keep one path; different bytes under the same ID are excluded.
 
-Create a separate full-run config and output root:
+### Step 5 — annotate the full manifest with GPT-5.5
 
-```bash
-cp config/example.env config/wisa_full.enhanced.env
-```
+Run the same GPT-5.5 Agent procedure used for test_v2 over every full-manifest row and write:
 
 ```text
-MANIFEST=/absolute/path/to/physical_icl/data/campaign_wisa_full_initial/annotation_manifest.jsonl
-ANNOTATION_ROOT=/absolute/path/to/outputs/wisa_full_initial_enhanced_v1
+results/annotation_gpt55_wisa_full/
+├── pass_a/<sample_id>.json
+├── pass_b/<sample_id>.json
+└── PROVENANCE.json
 ```
 
-Then run:
-
-```bash
-bash annotation/run_annotation_4gpu_enhanced.sh config/wisa_full.enhanced.env
-```
-
-Keep the manifest, build reports, exact shard list, Hugging Face revisions, `PASS_B_PROTOCOL`, `PROVENANCE.json`, merged Pass A/cards, and audit outputs together.
+Keep the manifest, build reports, exact shard list, Hugging Face revisions, GPT-5.5 model revision, protocol version, and annotation outputs together.
 
 ### Downloading more ZIPs
 
 More official WISA ZIPs can be annotated. Pin the same WISA revision and extract every added ZIP into its own shard directory.
 
-If the full run has not started, add the new shard directories and rebuild the full manifest before running. If annotation has already started, do not change its frozen manifest or reuse its output root; build a delta manifest from only the newly added shard directories and use a new `ANNOTATION_ROOT`.
+If the full run has not started, add the new shard directories and rebuild the full manifest before running. If annotation has already started, do not silently change its frozen manifest; build a delta manifest from only the newly added shard directories and write its GPT-5.5 outputs to a new result directory.
 
 Record the added shard numbers and new manifest SHA256.
 
@@ -282,24 +281,13 @@ The frozen schema combines closed coarse families/axes with optional canonical s
 
 For new runs, use the enhanced v1 protocol. It preserves the existing schema while adding an explicit primary-process selection rationale and evidence-calibrated mechanism metadata. The legacy script remains available and is not silently redirected.
 
-### Qwen 32B protocol
+### Current annotator
 
-For the main 32B validation experiment, use the **same Qwen3-VL 32B checkpoint for Pass A and Pass B** unless there is a deliberate ablation.
-
-The launcher supports independent models:
-
-```bash
-PASS_A_MODEL=/path/to/model_A
-PASS_B_MODEL=/path/to/model_B
-```
-
-If these are unset, both default to `QWEN_MODEL`.
-
-Before large-scale 32B labeling, build a 500-sample overlap subset with `tools/make_overlap_manifest.py`, run `annotation/run_overlap_32b_enhanced.sh`, and compare against the existing 8B cards with `tools/compare_32b_annotations.py` plus manual review.
+The current WISA task uses GPT-5.5 for both Pass A and Pass B. The Python files in `annotation/` define the prompts, schemas, normalization, and validation behavior; their local Qwen command-line path is historical tooling and is not the current campaign command.
 
 ### Stage 3 — audit
 
-Both launchers merge worker outputs and invoke `10_audit_v7_alpha3.py` automatically. The enhanced launcher additionally records and checks the Pass B protocol marker.
+Use the deterministic checks in `10_audit_v7_alpha3.py` when auditing exported GPT-5.5 cards.
 
 ### Stage 4 — retrieval
 
@@ -345,33 +333,9 @@ for the query and demo separately.
 
 ## Configuration
 
-For a new enhanced annotation run, create a dedicated config:
+The current WISA annotation task does not require a local-model config file. The colleague's Agent uses GPT-5.5 and follows the current-task instructions above. Record the exact GPT-5.5 model revision and output paths in `PROVENANCE.json`.
 
-```bash
-cp config/example.env config/local.enhanced.env
-```
-
-Edit the paths for the current machine and set a fresh output root, for example:
-
-```bash
-ANNOTATION_ROOT=/path/to/output/annotation_v7_alpha3_enhanced_v1
-```
-
-No launcher assumes the original author's filesystem.
-
-Activate your Python/conda environment yourself, then run the recommended enhanced protocol:
-
-```bash
-bash annotation/run_annotation_4gpu_enhanced.sh config/local.enhanced.env
-```
-
-The legacy command remains available only when an explicitly legacy run is required:
-
-```bash
-bash annotation/run_annotation_4gpu.sh config/local.env
-```
-
-Do not use the same `ANNOTATION_ROOT` for these two commands.
+`config/example.env` and the local GPU launchers are retained only for historical local-model reproducibility; do not use them for the current GPT-5.5 campaign.
 
 For retrieval, set `CARDS_ROOT`, `EMBED_MODEL`, and `RETRIEVAL_ROOT` in the environment/config, then run:
 
@@ -379,17 +343,9 @@ For retrieval, set `CARDS_ROOT`, `EMBED_MODEL`, and `RETRIEVAL_ROOT` in the envi
 bash retrieval/run_retrieval.sh config/local.env
 ```
 
-## 4-GPU annotation
+## Historical local-model tooling
 
-The recommended enhanced annotation launcher performs independent data-parallel annotation workers. With:
-
-```text
-GPU_LIST="0 1 2 3"
-```
-
-it splits the manifest into four shards. Each worker runs Pass A and then Pass B. No keepalive process is used; workers exit naturally when their shard completes.
-
-A 32B model may require substantial VRAM. The package does not assume a particular GPU type. If one 32B copy does not fit on a single visible GPU, change the deployment strategy on that machine rather than silently changing the annotation schema.
+The scripts `annotation/run_annotation_4gpu.sh` and `annotation/qwen3vl_runner.py` are retained to reproduce historical local-model runs. They are not the execution path for the current GPT-5.5 task.
 
 ## Environment and provenance
 
@@ -403,7 +359,7 @@ bash environment/record_environment.sh environment_snapshot.txt
 
 for every new annotation run.
 
-Both launchers record model references, sampling settings, and code/ontology hashes in `PROVENANCE.json`. The enhanced launcher additionally records `annotation_protocol`, the package version, and the hash of `09_run_pass_b_v7_alpha3_enhanced.py`.
+For the current campaign, `PROVENANCE.json` must record GPT-5.5 as the annotator, its exact available revision, the manifest SHA256, the Pass A/Pass B protocol versions, and the code/ontology hashes.
 
 ## Building a full server-side handoff
 
